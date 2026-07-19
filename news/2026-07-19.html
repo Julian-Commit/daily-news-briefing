@@ -3,19 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>陆先生日报 | 2026年7月19日</title>
+<title>陆先生日报 | Luxiansheng Daily | 2026-07-19</title>
 <style>
-/* ===== Reset ===== */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,sans-serif;color:#2c3e50;line-height:1.8;-webkit-font-smoothing:antialiased}
-
-/* ===== Container ===== */
 .wrap{max-width:560px;margin:0 auto}
 @media(min-width:768px){.wrap{max-width:720px}}
 @media(min-width:1024px){.wrap{max-width:880px}}
 
-/* ===== Header (一体化紧凑) ===== */
 .hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;border-bottom:3px solid #c0392b}
 .hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
 .hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
@@ -23,27 +19,25 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 .hd .hd-meta .no{font-size:13px;color:#c0392b;font-weight:700;opacity:1}
 @media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
 
-/* ===== TOC ===== */
+.langbar{background:#fff;padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e8e8e8}
+.langbar .lang-label{font-size:11px;color:#999;letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid #d0d0d0;background:#fff;color:#999;cursor:pointer;transition:all .15s}
+.lang-btn.active{background:#1a1a2e;color:#fff;border-color:#1a1a2e}
+.lang-btn:hover:not(.active){border-color:#c0392b;color:#c0392b}
+
 .toc{background:#fff;padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid #e8e8e8}
 .toc .toc-label{font-size:11px;font-weight:700;color:#999;letter-spacing:2px;margin-right:8px;flex-shrink:0}
 .toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:#555;text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
-.toc a:hover,.toc a:focus{color:#c0392b;border-color:#c0392b;background:#fef5f5}
+.toc a:hover{color:#c0392b;border-color:#c0392b;background:#fef5f5}
 
-/* ===== 内容区 ===== */
 .ct{padding:0}
-
-/* ===== 前言 (独立卡片) ===== */
 .preface{background:#fff;border-bottom:1px solid #e8e8e8;padding:24px 24px 28px}
 .preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:#1a1a2e;padding:4px 14px;border:1px solid #1a1a2e;border-radius:4px;margin-bottom:12px}
 .preface p{font-size:14px;color:#555;line-height:2}
 @media(min-width:768px){.preface{padding:28px 36px 32px}}
 
-/* ===== Section Block ===== */
 .sec{scroll-margin-top:60px}
-.sec:nth-child(odd) .sec-inner{background:#fff}
-.sec:nth-child(even) .sec-inner{background:#f8f9fb}
-
-/* ===== Section Header (大幅加强) ===== */
 .sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
 .sec-hd .sec-num{font-size:36px;font-weight:900;color:#c0392b;line-height:1;min-width:44px}
 .sec-hd .sec-text{flex:1}
@@ -51,18 +45,16 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 .sec-hd .sec-en{font-size:10px;color:#999;letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
 .sec-hd .sec-line{flex:1;height:1px;background:#d0d0d0;align-self:flex-end;margin-bottom:6px}
 @media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
-
-/* ===== Section Inner ===== */
-.sec-inner{padding:16px 24px 28px}
+.sec-inner{padding:16px 24px 28px;background:#f8f9fb}
+.sec:nth-child(even) .sec-inner{background:#fff}
 @media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
 
-/* ===== Headline ===== */
 .hl{border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;margin-bottom:14px;background:#fff;transition:box-shadow .2s}
 .hl:hover{box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .hl .hl-img{width:100%;aspect-ratio:2/1;object-fit:cover;background:#eef1f5;display:block}
 .hl .hl-body{padding:18px}
 .hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
-.hl .hl-tag.pol{background:#2471a3}.hl .hl-tag.biz{background:#b9770e}.hl .hl-tag.tec{background:#1e8449}
+.hl .hl-tag.pol{background:#2471a3}.hl .hl-tag.env{background:#138d75}.hl .hl-tag.tec{background:#1e8449}
 .hl .hl-title{font-size:16px;font-weight:800;color:#1a1a2e;line-height:1.6;margin-bottom:6px}
 .hl .hl-meta{font-size:11px;color:#999;margin-bottom:8px}
 .hl .hl-meta .src{font-weight:700;color:#c0392b}
@@ -76,13 +68,12 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 }
 @media(min-width:1024px){.hl .hl-img{width:260px}}
 
-/* ===== Feature ===== */
 .ft{border:1px solid #d8dce3;border-radius:10px;overflow:hidden;margin-bottom:18px;background:#fff}
 .ft .ft-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#dde1e8;display:block}
 .ft .ft-body{padding:22px}
 .ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
 .ft .ft-label.pol{color:#1a5276;border-color:#2980b9;background:#d6eaf8}
-.ft .ft-label.biz{color:#7d6608;border-color:#e67e22;background:#fdebd0}
+.ft .ft-label.env{color:#0e6251;border-color:#138d75;background:#d1f2eb}
 .ft .ft-label.tec{color:#145a32;border-color:#27ae60;background:#d5f5e3}
 .ft .ft-title{font-size:17px;font-weight:800;color:#1a1a2e;line-height:1.5;margin-bottom:8px}
 .ft .ft-meta{font-size:11px;color:#999;margin-bottom:12px}
@@ -94,10 +85,8 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
   .ft .ft-body{flex:1}
 }
 
-/* ===== News Grid ===== */
 .ngrid{display:grid;gap:12px}
 @media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
-
 .ni{border:1px solid #eee;border-radius:8px;padding:14px 16px;background:#fff;transition:box-shadow .15s}
 .ni:hover{box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .ni .ni-title{font-size:14px;font-weight:700;color:#1a1a2e;line-height:1.6;margin-bottom:4px}
@@ -106,11 +95,16 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 .ni .ni-desc{font-size:13px;color:#666;line-height:1.8}
 .ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:#c0392b;text-decoration:none;font-weight:600}
 
-/* ===== Footer ===== */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.preface .pf-label-en{display:none}
+
 .ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
 .ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
-
-/* ===== BTT ===== */
 .btt{position:fixed;bottom:20px;right:20px;width:38px;height:38px;background:#1a1a2e;color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.2);z-index:99}
 .btt.on{opacity:.8}
 .btt:hover{opacity:1}
@@ -120,254 +114,360 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 
 <div class="wrap">
 
-<!-- ====== Header ====== -->
 <header class="hd">
   <div>
     <span class="hd-brand">陆先生日报</span>
     <span class="hd-sub">LUXIANSHENG DAILY</span>
   </div>
   <div class="hd-meta">
-    <div class="no">No. 001</div>
-    <div>2026.07.19 周日</div>
+    <div class="no">NO.001</div>
+    <div>2026.07.19 Sunday</div>
   </div>
 </header>
 
-<!-- ====== 目录 ====== -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
 <nav class="toc">
-  <span class="toc-label">目录</span>
-  <a href="#headlines">今日头条</a>
-  <a href="#politics">全球政治</a>
-  <a href="#tech">科技</a>
-  <a href="#business">财经</a>
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
 </nav>
 
 <main class="ct">
 
-  <!-- ====== 前言 ====== -->
   <section class="preface">
-    <div class="pf-label">编者按</div>
-    <p>今日全球焦点集中于持续升级的美伊冲突——美军第八夜空袭伊朗，两名美军在约旦阵亡，停火备忘录名存实亡；霍尔木兹海峡局势推升布伦特原油周涨近16%至88美元，全球市场随之剧烈震荡。与此同时，中国AI模型Kimi K3横空出世，英伟达Vera Rubin七芯片平台正式投产。以下报道均交叉核验至少两个独立信源。</p>
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">2026年7月19日，全球地缘政治局势急剧恶化。美军连续第八夜空袭伊朗，伊朗以打击海湾地区美军设施作为回应——双方在6月签署的初步停火协议不到一个月即告破裂，霍尔木兹海峡的航行自由面临严重威胁。与此同时，俄罗斯向乌克兰首都基辅发射了自2022年全面入侵以来最大规模的弹道导弹，乌克兰防空系统在爱国者导弹持续短缺中艰难拦截。在科技领域，中国AI初创公司月之暗面（Moonshot）发布全球最大开源权重模型Kimi K3——2.8万亿参数的模型在多项目基准测试中逼近甚至超越美国前沿闭源系统，引发华盛顿方面的警觉与争论。环境方面，西班牙正遭遇本年度最严重的山火季，三场大火同时在东北部和中部燃烧，超过28,000公顷土地被毁；墨西哥湾加速升温，已沦为全球变暖最快的海域之一；一项发表在《自然·通讯》的最新研究警告，大西洋经向翻转环流（AMOC）的减弱将重塑全球大气河流的分布格局。</p>
+    <p class="en-content">On July 19, 2026, the global geopolitical landscape deteriorated sharply. The United States struck Iran for an eighth consecutive night, with Tehran retaliating against US facilities across the Gulf — a preliminary ceasefire signed less than a month ago has collapsed, and freedom of navigation in the Strait of Hormuz is under severe threat. Simultaneously, Russia launched the largest barrage of ballistic missiles against Kyiv since its full-scale invasion of Ukraine began in 2022, testing Kyiv's depleted Patriot interceptor stockpile. In technology, Chinese AI startup Moonshot unveiled Kimi K3, a 2.8-trillion-parameter open-weight model that matches or surpasses leading US closed-source systems on multiple benchmarks, triggering alarm and debate in Washington. On the environment front, Spain is enduring its worst wildfire season of the year, with three major blazes burning simultaneously and consuming over 28,000 hectares. The Gulf of Mexico is now among the fastest-warming bodies of water on Earth. A new study published in Nature Communications warns that the weakening Atlantic Meridional Overturning Circulation (AMOC) will reshape the global distribution of atmospheric rivers.</p>
   </section>
 
-  <!-- ====== 今日头条 ====== -->
   <section class="sec" id="headlines">
     <div class="sec-hd">
       <span class="sec-num">01</span>
       <div class="sec-text">
-        <span class="sec-name">今日头条</span>
-        <span class="sec-en">Headlines</span>
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
       </div>
       <span class="sec-line"></span>
     </div>
     <div class="sec-inner">
 
-    <article class="hl">
-      <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
-      <div class="hl-body">
-        <span class="hl-tag pol">全球政治</span>
-        <h3 class="hl-title">美伊冲突急剧升级：两名美军约旦阵亡，美军第八夜连续空袭伊朗革命卫队</h3>
-        <div class="hl-meta">📍 <span class="src">BBC News</span> · 2026.07.19 &nbsp;|&nbsp; 交叉核验：AP News · Al Jazeera</div>
-        <p class="hl-desc">美国中央司令部周六宣布对伊朗发动第八夜连续空袭，目标包括沿海监视设施、防空系统及革命卫队军事资产。此前一天伊朗向约旦美军基地发射弹道导弹与无人机，致两名美军阵亡、一人失踪、四人受伤。防长赫格塞斯回应"英雄的牺牲只会坚定我们的决心"。伊朗军方随后宣布对科威特两处美军基地发动大规模无人机攻击。自2月28日冲突爆发，美军累计阵亡升至16人。上月签署的伊斯兰堡停火备忘录——特朗普已于7月8日宣布其"终结"。</p>
-        <a class="hl-link" href="https://www.bbc.com/news/articles/cgk417jp83po" target="_blank">BBC 原文 →</a>
-      </div>
-    </article>
+<article class="hl">
+  <img class="hl-img" src="https://images.unsplash.com/photo-1517245386806-688b8cf42c89?w=600&q=80" alt="" loading="lazy" onerror="this.style.display='none'">
+  <div class="hl-body">
+    <span class="hl-tag pol">POLITICS</span>
+    <div class="hl-title zh-content">美军连续第八夜空袭伊朗，伊朗反击海湾美军基地，停火协议彻底破裂</div>
+    <div class="hl-title en-content">US Strikes Iran for 8th Night as Tehran Retaliates Against Gulf Bases; Ceasefire Collapses</div>
+    <div class="hl-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">BBC · Al Jazeera · Middle East Eye</span> · 2026.07.19</div>
+    <p class="hl-desc zh-content">美军连续第八夜空袭伊朗，目标包括沿海监视设施、防空系统、导弹与无人机储存点，并轰炸了胡齐斯坦省在建的达尔霍文核电站。伊朗随即以无人机和导弹打击科威特两处美军设施及巴林，科威特一座发电海水淡化厂连续两天遭袭起火。6月签署的初步停火协议于7月8日被特朗普宣布"终止"后全面崩溃，伊朗最高领袖哈梅内伊称美国总统的签字"毫无价值"。自2月底冲突爆发以来，美军已有16人死亡、430余人受伤；伊朗至少50人死亡、500余人受伤。</p>
+    <p class="hl-desc en-content">The US military struck Iran for the eighth consecutive night, targeting coastal surveillance, air defense facilities, missile and drone storage sites, and the under-construction Darkhovin nuclear power plant in Khuzestan province. Iran retaliated with drone and missile strikes on two US military facilities in Kuwait and Bahrain; a Kuwaiti power and desalination plant was hit for the second time in two days. The preliminary ceasefire signed in June collapsed after Trump declared it "over" on July 8. Iran's Supreme Leader Khamenei called the US president's signature "utterly worthless." Since fighting began in late February, 16 US service members have been killed with over 430 wounded; Iran reports at least 50 killed and over 500 injured.</p>
+    <a class="hl-link" href="https://www.bbc.com/news/articles/cgk417jp83po" target="_blank" rel="noopener">BBC News →</a>
+  </div>
+</article>
 
-    <article class="hl">
-      <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
-      <div class="hl-body">
-        <span class="hl-tag biz">财经</span>
-        <h3 class="hl-title">AI明星股遭遇全球抛售：英伟达盘中失市值王座，台积电暴跌7.3%，油价一周飙涨16%</h3>
-        <div class="hl-meta">📍 <span class="src">DNYUZ</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：EasternEye · AP News</div>
-        <p class="hl-desc">周五抛售加剧：标普500跌1%至7,457.69，纳指重挫1.4%。英伟达跌2.2%盘中一度让出全球市值第一。台积电暴跌7.3%，台北股市跌6.5%、日经跌4%、上证跌3%。中国月之暗面Kimi K3被视为低成本挑战西方AI巨头的最新信号。布伦特原油跳涨4.6%至88.10美元/桶，一周前仅76美元。Netflix跌7.3%，SpaceX触上市以来新低。</p>
-        <a class="hl-link" href="https://dnyuz.com/2026/07/18/the-sell-off-for-ai-stars-worsens-while-oil-prices-keep-jumping/" target="_blank">DNYUZ 原文 →</a>
-      </div>
-    </article>
+<article class="hl">
+  <img class="hl-img" src="https://images.unsplash.com/photo-1559827291-22f7393b1e4a?w=600&q=80" alt="" loading="lazy" onerror="this.style.display='none'">
+  <div class="hl-body">
+    <span class="hl-tag pol">POLITICS</span>
+    <div class="hl-title zh-content">俄罗斯发射开战以来最大规模弹道导弹袭击基辅与哈尔科夫</div>
+    <div class="hl-title en-content">Russia Launches Largest Ballistic Missile Barrage on Kyiv Since Start of War</div>
+    <div class="hl-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">Al Jazeera · BBC · CBS News</span> · 2026.07.19</div>
+    <p class="hl-desc zh-content">俄罗斯于7月19日凌晨向乌克兰发动大规模空袭，发射41枚导弹（含25枚弹道导弹）和125架攻击无人机，重点打击首都基辅和东北部城市哈尔科夫。乌克兰外长瑟比加称这是自2022年全面入侵以来规模最大的一次弹道导弹攻击。基辅1人死亡、16人受伤；哈尔科夫3人死亡、20人受伤。乌克兰防空系统拦截了18枚导弹和108架无人机。泽连斯基表示"弹道导弹防护是当前最优先事项"，并称乌克兰在同期袭击了黑海三艘俄罗斯油轮及斯塔夫罗波尔地区三座油库。</p>
+    <p class="hl-desc en-content">Russia launched a massive overnight assault on Ukraine on July 19, firing 41 missiles — including 25 ballistic missiles — and 125 attack drones at Kyiv and the northeastern city of Kharkiv. Ukrainian Foreign Minister Sybiha called it the largest ballistic missile barrage since the 2022 full-scale invasion. Kyiv reported 1 dead and 16 wounded; Kharkiv reported 3 dead and 20 injured. Ukrainian air defenses intercepted 18 missiles and 108 drones. Zelenskyy stated that "protection against ballistic missiles is our constant and top priority" and confirmed Ukrainian strikes on three Russian oil tankers in the Black Sea and three oil depots in Stavropol region.</p>
+    <a class="hl-link" href="https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war" target="_blank" rel="noopener">Al Jazeera →</a>
+  </div>
+</article>
 
-    <article class="hl">
-      <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
-      <div class="hl-body">
-        <span class="hl-tag tec">科技</span>
-        <h3 class="hl-title">中国月之暗面发布 Kimi K3：前端编码能力登顶，性能直逼 Claude 与 ChatGPT</h3>
-        <div class="hl-meta">📍 <span class="src">TechXplore</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：Bank of America Research · Arena</div>
-        <p class="hl-desc">北京月之暗面（Moonshot）发布Kimi K3模型，在Arena平台"前端编码能力"登顶。创始人杨植麟2019年获CMU博士学位。K3使用成本仅为GPT-5.6的一半。美银分析师称这是继DeepSeek之后的又一次"中国AI时刻"。Anthropic此前指控月之暗面等通过"蒸馏"技术获取Claude能力，中方否认。</p>
-        <a class="hl-link" href="https://techxplore.com/news/2026-07/chinese-ai-tech-industry-abilities.html" target="_blank">TechXplore 原文 →</a>
-      </div>
-    </article>
+<article class="hl">
+  <img class="hl-img" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="" loading="lazy" onerror="this.style.display='none'">
+  <div class="hl-body">
+    <span class="hl-tag tec">TECH</span>
+    <div class="hl-title zh-content">中国发布全球最大开源AI模型Kimi K3，性能逼近美国前沿系统</div>
+    <div class="hl-title en-content">China Unveils World's Largest Open-Weight AI Model Kimi K3, Matching US Frontier Systems</div>
+    <div class="hl-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">NDTV · Aju Press · Times of India</span> · 2026.07.19</div>
+    <p class="hl-desc zh-content">中国AI初创公司月之暗面（Moonshot）于7月17日发布Kimi K3——参数规模达2.8万亿的全球最大开源权重AI模型，支持100万token上下文窗口。在Arena.ai前端代码评测中排名第一，对Anthropic Claude Fable 5的胜率达76%；Vals AI综合排名第二，仅次于Fable 5。美方AI主管David Sacks称此进展"令人担忧"，马斯克表示认同。月之暗面正在以300亿美元估值寻求20亿美元融资。发布当日，谷歌再度推迟Gemini 3.5 Pro，Alphabet股价下跌约4%；中国竞争对手Z.ai在港交所暴跌30%。</p>
+    <p class="hl-desc en-content">Chinese AI startup Moonshot unveiled Kimi K3 on July 17 — a 2.8-trillion-parameter model, the world's largest open-weight AI system, with a 1-million-token context window. It ranked #1 on Arena.ai's frontend code benchmark with a 76% win rate against Anthropic Claude Fable 5, and placed second overall on Vals AI behind Fable 5. US AI Czar David Sacks called the development "concerning"; Elon Musk concurred. Moonshot is seeking $2 billion at a $30 billion valuation. The launch coincided with Google again delaying Gemini 3.5 Pro, sending Alphabet shares down ~4%; Chinese rival Z.ai plunged 30% on the Hong Kong exchange.</p>
+    <a class="hl-link" href="https://www.ndtv.com/artificial-intelligence/moonshot-kimi-k3-china-launches-worlds-largest-open-ai-model-to-rival-us-tech-giants-11790652" target="_blank" rel="noopener">NDTV →</a>
+  </div>
+</article>
 
-    <article class="hl">
-      <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
-      <div class="hl-body">
-        <span class="hl-tag pol">全球政治</span>
-        <h3 class="hl-title">伊朗全面中止停火备忘录：50人死于美方空袭，最高领袖警告"难忘教训"</h3>
-        <div class="hl-meta">📍 <span class="src">Al Jazeera</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：Fars News · NHK</div>
-        <p class="hl-desc">伊朗副外长加里巴巴迪宣布因美方"违反并中止备忘录所有承诺"，德黑兰同样中止全部义务。卫生部报告7月来至少50人死亡、500余人受伤。第七夜打击摧毁邦吉淡化厂致万人断水。伊朗向科威特、巴林、约旦等多国美军基地发动导弹与无人机协同攻击，科威特被迫关闭领空。最高领袖穆杰塔巴·哈梅内伊声明将让美国"汲取难忘教训"。</p>
-        <a class="hl-link" href="https://www.aljazeera.com/news/2026/7/18/iran-accuses-us-of-striking-critical-infrastructure-as-war-intensifies" target="_blank">Al Jazeera 原文 →</a>
-      </div>
-    </article>
+<article class="hl">
+  <img class="hl-img" src="https://images.unsplash.com/photo-1542314303-9d46a8bf8ac3?w=600&q=80" alt="" loading="lazy" onerror="this.style.display='none'">
+  <div class="hl-body">
+    <span class="hl-tag env">ENVIRONMENT</span>
+    <div class="hl-title zh-content">西班牙三场山火同时肆虐，28,000公顷土地被毁，上千人紧急疏散</div>
+    <div class="hl-title en-content">Three Wildfires Rage Across Spain, 28,000 Hectares Burned, Over 1,100 Evacuated</div>
+    <div class="hl-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">France 24 · Times of India · AFP</span> · 2026.07.19</div>
+    <p class="hl-desc zh-content">西班牙正面临本年度最严重山火季。萨拉戈萨省Cinco Villas地区的火灾已成为今年最大火灾，烧毁约16,000公顷，迫使1,100多人撤离，火线周长约60公里。瓜达拉哈拉省（马德里以北约100公里）山火烧毁12,000公顷，火场位于濒危物种栖息的森林山区。本月初阿尔梅里亚省火灾已致13人死亡、7,000公顷被毁。当局称多变的风向是灭火最大挑战。约400名地面人员和19架飞机参与灭火。</p>
+    <p class="hl-desc en-content">Spain is facing its worst wildfire season of 2026. The blaze in Zaragoza's Cinco Villas region has become the country's largest this year, burning approximately 16,000 hectares with a 60-kilometer perimeter and forcing over 1,100 evacuations. A second fire in Guadalajara province, 100 km north of Madrid, has scorched 12,000 hectares in a forested mountain region home to endangered species. Earlier this month, a fire in Almeria province killed 13 people and destroyed 7,000 hectares. Around 400 ground personnel and 19 aircraft have been deployed.</p>
+    <a class="hl-link" href="https://www.france24.com/en/europe/20260719-wildfire-scorches-12-000-hectares-in-central-spain-s-guadalajara-province" target="_blank" rel="noopener">France 24 →</a>
+  </div>
+</article>
 
-    <article class="hl">
-      <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
-      <div class="hl-body">
-        <span class="hl-tag biz">财经</span>
-        <h3 class="hl-title">美国五大银行创纪录盈利：摩根大通单季169亿美元，战争波动反成利润引擎</h3>
-        <div class="hl-meta">📍 <span class="src">Associated Press</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：FactSet · 各行财报</div>
-        <p class="hl-desc">五大银行二季度全部超预期。摩根大通净利169亿美元，股权交易收入同比暴涨86%；高盛银行与市场部收入155.2亿美元增53%；美银利润增27%至91亿美元。银行高管强调消费者支出仍然强劲、违约率下降。但油价上涨或将侵蚀后续季度的消费韧性。</p>
-        <a class="hl-link" href="https://www.vindy.com/news/business-news/2026/07/banks-rake-in-big-profits-as-both-wall-street-and-the-us-consumer-stay-strong/" target="_blank">AP News 原文 →</a>
-      </div>
-    </article>
+<article class="hl">
+  <img class="hl-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="" loading="lazy" onerror="this.style.display='none'">
+  <div class="hl-body">
+    <span class="hl-tag env">ENVIRONMENT</span>
+    <div class="hl-title zh-content">《自然·通讯》研究：大西洋环流减弱将加剧美国西海岸风暴</div>
+    <div class="hl-title en-content">Nature Communications: Weakening AMOC to Intensify Storms on US West Coast</div>
+    <div class="hl-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">ScienceAlert · Nature Communications · The Advocate</span> · 2026.07.19</div>
+    <p class="hl-desc zh-content">加州大学河滨分校研究团队在《自然·通讯》发表研究，利用NASA大气数据和气候模拟预测AMOC减弱的影响。研究发现AMOC减弱将导致北美西海岸——从下加利福尼亚到阿拉斯加——大气河流（atmospheric rivers）频次和降水强度显著增加，而格陵兰和北极地区则减少。全球大气河流平均频率可能增加约50%。研究同时揭示了与墨西哥湾加速升温（自1970年以来升温速度是全球海洋平均水平的两倍）的深层关联。</p>
+    <p class="hl-desc en-content">A UC Riverside research team published in Nature Communications, using decades of NASA atmospheric data and climate simulations to project AMOC weakening impacts. The study finds that a weakening AMOC will significantly increase atmospheric river frequency and intensity along North America's west coast — from Baja California to Alaska — while reducing them over Greenland and the Arctic. Global mean AR frequency may increase by ~50%. These findings align with separate research showing the Gulf of Mexico warming at twice the global ocean average since 1970.</p>
+    <a class="hl-link" href="https://www.sciencealert.com/a-major-ocean-current-is-weakening-scientists-say-the-effects-may-reach-california" target="_blank" rel="noopener">ScienceAlert →</a>
+  </div>
+</article>
     </div>
   </section>
 
-  <!-- ====== 全球政治 ====== -->
   <section class="sec" id="politics">
     <div class="sec-hd">
       <span class="sec-num">02</span>
       <div class="sec-text">
-        <span class="sec-name">全球政治</span>
-        <span class="sec-en">Politics</span>
-      </div>
-      <span class="sec-line"></span>
-    </div>
-    <div class="sec-inner" style="background:#f8f9fb">
-
-    <article class="ft">
-      <img class="ft-img" src="" alt="" onerror="this.style.display='none'">
-      <div class="ft-body">
-        <span class="ft-label pol">深度解读</span>
-        <h3 class="ft-title">一场无人认输的战争：美伊冲突五个月全景回顾与当前态势</h3>
-        <div class="ft-meta">核验信源：<span class="src">BBC · AP News · Al Jazeera · NHK · AA · ABC News</span></div>
-        <p class="ft-desc">自2月28日美以联合对伊朗发动首轮打击以来，这场冲突已持续近五个月。关键节点：4月中旬美国首次实施对伊海军封锁，持续九周；6月中旬双方在伊斯兰堡签署临时停火备忘录，伊朗旋即出口数千万桶积压原油；7月8日特朗普宣布备忘录"终结"，重新封锁伊朗港口；7月11日起美军连续八夜空袭。截至目前：美军16人阵亡，伊朗至少50名平民死亡、500余人受伤。冲突范围已从霍尔木兹海峡扩展至科威特、巴林、约旦、沙特等海湾国家民用基础设施。联合国秘书长表达严重关切，安理会迄今未能通过任何决议。</p>
-      </div>
-    </article>
-
-    <div class="ngrid">
-      <div class="ni">
-        <div class="ni-title">伊朗大规模攻击多国美军基地，海合会谴责攻击民用设施构成"战争罪"</div>
-        <div class="ni-meta">📍 <span class="src">ABC News · AP News</span> · 2026.07.19</div>
-        <div class="ni-desc">伊朗革命卫队对科威特、巴林、约旦、沙特和卡塔尔美军基地发动协同攻击。科威特两座水电厂受损，多名消防员受伤。海合会秘书长声明"攻击民用基础设施构成战争罪"。</div>
-        <a class="ni-link" href="https://www.abc.net.au/news/2026-07-19/blog-us-warns-of-middle-east-travel/106932620" target="_blank">ABC News →</a>
-      </div>
-      <div class="ni">
-        <div class="ni-title">美军摧毁伊朗南部关键基础设施：桥梁、铁路、淡化厂遭重创，万人断水</div>
-        <div class="ni-meta">📍 <span class="src">AP News · Al Jazeera</span> · 2026.07.18</div>
-        <div class="ni-desc">第七夜空袭系统性打击：邦吉淡化厂完全摧毁致20村万人断水，通往阿巴斯港的两条隧道和多座桥梁炸毁。对沿海基础设施的系统性打击或为潜在地面登陆做准备。</div>
-        <a class="ni-link" href="https://apnews.com/article/iran-us-hormuz-strait-war-july-18-2026-5adfef67554652580963684d9a663af2" target="_blank">AP News →</a>
-      </div>
-      <div class="ni">
-        <div class="ni-title">俄罗斯对基辅发动开战以来最大规模弹道导弹袭击，至少1死15伤</div>
-        <div class="ni-meta">📍 <span class="src">NHK · AA.com.tr</span> · 2026.07.19</div>
-        <div class="ni-desc">乌克兰当局通报俄罗斯周末对基辅发动2022年以来最大规模弹道导弹攻击。乌防空系统拦截大部分来袭导弹，残骸仍造成多处地面破坏。</div>
-        <a class="ni-link" href="https://www.aa.com.tr/en/americas/us-forces-launch-new-strikes-on-iran-targeting-irgc-units-centcom/4002538" target="_blank">AA →</a>
-      </div>
-      <div class="ni">
-        <div class="ni-title">日本防卫大臣罕见呼吁就核武器展开全国辩论，战后安保政策或迎重大转向</div>
-        <div class="ni-meta">📍 <span class="src">AA.com.tr</span> · 2026.07.19</div>
-        <div class="ni-desc">日本防卫大臣表示鉴于朝鲜导弹试射、台海紧张及美伊战争，日本需就核武器议题展开全国辩论。该表态在战后"无核三原则"传统中极为罕见。</div>
-        <a class="ni-link" href="https://www.aa.com.tr/en/americas/us-forces-launch-new-strikes-on-iran-targeting-irgc-units-centcom/4002538" target="_blank">AA →</a>
-      </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- ====== 科技 ====== -->
-  <section class="sec" id="tech">
-    <div class="sec-hd">
-      <span class="sec-num">03</span>
-      <div class="sec-text">
-        <span class="sec-name">科技</span>
-        <span class="sec-en">Technology</span>
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
       </div>
       <span class="sec-line"></span>
     </div>
     <div class="sec-inner">
 
-    <article class="ft">
-      <img class="ft-img" src="" alt="" onerror="this.style.display='none'">
-      <div class="ft-body">
-        <span class="ft-label tec">深度解读</span>
-        <h3 class="ft-title">2026 AI军备竞赛年中盘点：中国模型逼近、硬件换代、开源生态重塑格局</h3>
-        <div class="ft-meta">核验信源：<span class="src">TechXplore · TechTimes · Bank of America Research · NVIDIA Blog</span></div>
-        <p class="ft-desc">2026年上半年AI领域三条主线交织。一是中国开源模型加速追赶——继DeepSeek之后，月之暗面Kimi K3与智谱GLM-5.2在关键基准上逼近甚至超越美国闭源模型，使用成本仅为其一半。二是硬件代际跃迁——英伟达Vera Rubin七芯片平台6月全面投产，宣称训练GPU需求降至四分之一、推理成本降至十分之一；AMD MI400、Google Ironwood TPU v7同期推进。三是"开源vs闭源"争议升级——Anthropic和OpenAI指控中国公司通过"蒸馏"获取技术，而旧金山Anysphere承认产品基于中国模型构建。技术竞赛与地缘政治深度纠缠的格局短期内不会改变。</p>
-      </div>
-    </article>
-
-    <div class="ngrid">
-      <div class="ni">
-        <div class="ni-title">英伟达Vera Rubin七芯片平台投产：推理成本降至十分之一，训练仅需四分之一GPU</div>
-        <div class="ni-meta">📍 <span class="src">TechTimes · NVIDIA Blog</span> · 2026.07.18</div>
-        <div class="ni-desc">Rubin GPU搭载288GB HBM4，带宽22TB/s（Blackwell的2.8倍），NVLink 6达3.6TB/s。第七颗芯片Groq 3 LPX专为Agent解码设计。CoreWeave率先完成NVL72验证。</div>
-        <a class="ni-link" href="https://www.techtimes.com/articles/320933/20260718/nvidia-vera-rubin-cuts-post-training-token-costs-seven-chip-codesign.htm" target="_blank">TechTimes →</a>
-      </div>
-      <div class="ni">
-        <div class="ni-title">日本Sakana AI实现仿脑学习里程碑：首次不用反向传播训练卷积网络与强化学习</div>
-        <div class="ni-meta">📍 <span class="src">TechTimes · arXiv</span> · 2026.07.18</div>
-        <div class="ni-desc">基于Dale原理的"错误扩散"算法，MNIST达96.7%、CIFAR-10达61.7%。训练后自动实现37.3%权重稀疏化，天然适配神经形态芯片和光子计算硬件。</div>
-        <a class="ni-link" href="https://www.techtimes.com/articles/320902/20260718/brain-like-learning-rule-cracks-convolutional-networks-sakana-ai-measures-biology-tax.htm" target="_blank">TechTimes →</a>
-      </div>
-      <div class="ni">
-        <div class="ni-title">印度实现全球首次核能制氢：快堆驱动零排放氢生产，效率达电解法两倍</div>
-        <div class="ni-meta">📍 <span class="src">Modern Diplomacy</span> · 2026.07.19</div>
-        <div class="ni-desc">印度原子能部在泰米尔纳德邦启用全球首个核能制氢设施，以快中子增殖试验堆核热驱动铜-氯热化学循环分解水，零排放制氢效率50%，全链条100%国产化。</div>
-        <a class="ni-link" href="https://moderndiplomacy.eu/2026/07/19/indias-nuclear-hydrogen-moment-a-world-first-in-search-of-a-strategy/" target="_blank">Modern Diplomacy →</a>
-      </div>
-      <div class="ni">
-        <div class="ni-title">科学家确认灭绝恐龙的小行星是极罕见的CO型球粒陨石，来自太阳系外围</div>
-        <div class="ni-meta">📍 <span class="src">ScienceDaily · Science Advances</span> · 2026.07.19</div>
-        <div class="ni-desc">UBC国际团队通过分析全球K-Pg界线粘土层镍同位素，确定希克苏鲁伯撞击体是CO型碳质球粒陨石。低硫特性表明灭绝主因可能并非硫化物，而是尘埃抛射导致的全球变冷。</div>
-        <a class="ni-link" href="http://www.sciencedaily.com/releases/2026/07/260718010142.htm" target="_blank">ScienceDaily →</a>
-      </div>
+<article class="ft">
+  <div class="ft-body" style="flex:1">
+    <span class="ft-label pol">深度解读</span>
+    <div class="ft-title zh-content">停火协议仅存续三周：美伊冲突缘何急剧升级？</div>
+    <div class="ft-title en-content">A Ceasefire That Lasted Three Weeks: Why the US-Iran Conflict Is Spiraling</div>
+    <div class="ft-meta"><span class="zh-content">综合信源：</span><span class="en-content">Sources: </span><span class="src">BBC · Al Jazeera · Middle East Eye · Reuters · AP</span></div>
+    <div class="ft-desc zh-content">
+      <p><strong>时间线梳理：</strong></p>
+      <p>2026年2月底——美国与以色列联合对伊朗发动军事打击，旨在削弱伊朗核能力和革命卫队军事设施。</p>
+      <p>6月中旬——双方在伊斯兰堡签署初步谅解备忘录（MoU），同意停火并承诺确保霍尔木兹海峡航行自由。</p>
+      <p>7月8日——特朗普总统宣布协议"终止"，指责伊朗违反条款。美国恢复对伊朗港口的封锁。</p>
+      <p>7月11日——美军恢复对伊朗境内目标的空袭，连续七夜打击军事基础设施。</p>
+      <p>7月17日——伊朗向约旦穆瓦法克·萨尔蒂空军基地发射弹道导弹和无人机，造成两名美军死亡、一人失踪。</p>
+      <p>7月18-19日——美军实施第八夜空袭，目标包括沿海监视、防空设施、海上能力以及在建造中的达尔霍文核电反应堆。伊朗以无人机和导弹打击科威特美军弹药库和空军基地。</p>
+      <p><strong>冲突的核心演变：</strong>本轮升级与前期冲突有三个关键区别。其一，打击范围已从军事目标扩展至民用基础设施——美军轰炸了伊朗桥梁和海水淡化厂，切断约一万人饮用水供应；伊朗则打击了科威特发电与海水淡化联合设施（连续两天遭袭），巴林多次响起空袭警报。其二，霍尔木兹海峡事实上已被封锁：伊朗革命卫队宣布海峡关闭。其三，外交窗口急剧收窄：伊朗最高领袖哈梅内伊称美国"屡次违反"协议"揭示了一个基本事实——美国总统的签字毫无价值"；特朗普则称对伊朗声明"毫不在意"。</p>
+      <p><strong>前线数字：</strong>美军方面，自2月底以来16人死亡、430余人受伤。伊朗方面，卫生部称至少50人死亡、500余人受伤。海湾合作委员会（GCC）谴责伊朗攻击民用基础设施，阿拉伯联盟秘书长呼吁双方降级并重返谈判。分析人士指出，特朗普在"结束战争"和"施加军事压力"之间摇摆，两国均已深陷升级螺旋。</p>
     </div>
+    <div class="ft-desc en-content">
+      <p><strong>Timeline:</strong></p>
+      <p>Late February 2026 — The US and Israel launched joint military strikes on Iran, aiming to degrade nuclear capabilities and IRGC military infrastructure.</p>
+      <p>Mid-June — Both sides signed a preliminary Memorandum of Understanding (MoU) in Islamabad, agreeing to a ceasefire and committing to freedom of navigation in the Strait of Hormuz.</p>
+      <p>July 8 — President Trump declared the agreement "over," accusing Iran of violating terms. The US reimposed its blockade of Iranian ports.</p>
+      <p>July 11 — US forces resumed strikes on targets inside Iran, bombarding military infrastructure for seven consecutive nights.</p>
+      <p>July 17 — Iran launched ballistic missiles and drones at Jordan's Muwaffaq Salti Airbase, killing two US service members and leaving one missing.</p>
+      <p>July 18–19 — The US conducted an eighth night of strikes, targeting coastal surveillance, air defense facilities, maritime capabilities, and the under-construction Darkhovin nuclear reactor. Iran retaliated with drone and missile attacks on US ammunition depots and airbases in Kuwait.</p>
+      <p><strong>Key shifts:</strong> This escalation differs from earlier rounds in three critical ways. First, the scope has expanded from military to civilian infrastructure — US strikes have damaged Iranian bridges and desalination plants, cutting water to ~10,000 people, while Iran has hit Kuwait's power-water cogeneration plant twice. Second, the Strait of Hormuz is effectively closed with the IRGC declaring the strait shut. Third, the diplomatic window has narrowed sharply: Supreme Leader Khamenei said US "repeated breaches" of the MoU revealed that "the signature of the US president is utterly worthless"; Trump said he "couldn't care less."</p>
+      <p><strong>Casualties:</strong> US: 16 dead, 430+ wounded since late February. Iran: at least 50 dead, 500+ injured per the health ministry. The Gulf Cooperation Council condemned attacks on civilian infrastructure; the Arab League chief called for de-escalation and return to negotiations. Analysts note both sides are now locked in an escalatory spiral.</p>
+    </div>
+  </div>
+</article>
+
+      <div class="ngrid">
+
+<div class="ni">
+  <div class="ni-title zh-content">泽连斯基撤换国防部长引发基辅大规模抗议</div>
+  <div class="ni-title en-content">Zelenskyy's Dismissal of Defense Minister Sparks Mass Protests in Kyiv</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">Al Jazeera · BBC</span></div>
+  <p class="ni-desc zh-content">乌克兰总统泽连斯基因撤换广受欢迎的国防部长米哈伊洛·费多罗夫（Mykhailo Fedorov）引发国内政治危机。数百名抗议者连续第三日在基辅街头集会，许多乌克兰士兵公开表达不满。批评者称，在乌克兰刚刚取得战场进展之际撤换防长是泽连斯基总统任期内的"最大错误"。</p>
+  <p class="ni-desc en-content">President Zelenskyy's removal of popular Defense Minister Mykhailo Fedorov has triggered a domestic political crisis. Hundreds of protesters gathered in Kyiv for a third consecutive day, with many Ukrainian soldiers publicly expressing dismay. Critics called the dismissal the "worst mistake" of Zelenskyy's presidency.</p>
+  <a class="ni-link" href="https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war" target="_blank" rel="noopener">Al Jazeera →</a>
+</div>
+
+<div class="ni">
+  <div class="ni-title zh-content">乌克兰无人艇袭击黑海三艘俄罗斯油轮，打击斯塔夫罗波尔油库</div>
+  <div class="ni-title en-content">Ukraine Strikes Three Russian Oil Tankers in Black Sea, Hits Oil Depots in Stavropol</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">BBC · CBS News</span></div>
+  <p class="ni-desc zh-content">乌克兰持续扩大对俄罗斯能源基础设施的远程打击。泽连斯基证实，乌安全局部队同时打击斯塔夫罗波尔地区三座油库，乌军精确命中黑海三艘俄罗斯"影子舰队"油轮。基辅方面此前称已"瘫痪"俄罗斯约43%的炼油能力，表示油气设施是合法军事目标。</p>
+  <p class="ni-desc en-content">Ukraine continues expanding long-range strikes on Russian energy infrastructure. Zelenskyy confirmed SBU units simultaneously struck three oil depots in Stavropol region, while armed forces scored precise hits on three Russian "shadow fleet" tankers in the Black Sea. Kyiv previously stated that nearly 43% of Russia's refining capacity had been "disabled."</p>
+  <a class="ni-link" href="https://www.bbc.com/news/articles/c2el7xpnzrpo" target="_blank" rel="noopener">BBC News →</a>
+</div>
+
+<div class="ni">
+  <div class="ni-title zh-content">阿拉伯联盟秘书长警告美伊冲突可能导致地区经济衰退</div>
+  <div class="ni-title en-content">Arab League Chief Warns US-Iran Conflict Could Trigger Regional Economic Decline</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">Al Jazeera · Middle East Eye</span></div>
+  <p class="ni-desc zh-content">阿拉伯联盟秘书长纳比勒·法赫米发表声明警告美伊紧张局势可能导致中东陷入更严重的暴力和经济衰退。他谴责伊朗对阿拉伯国家的攻击，称这些国家不应为冲突承担代价，呼吁双方恪守备忘录、重返谈判。卡塔尔和伊拉克领导人也共同强调对话与外交的重要性。</p>
+  <p class="ni-desc en-content">Arab League Secretary-General Nabil Fahmy warned that escalating US-Iran tensions risk plunging the Middle East into further violence and economic decline. He condemned Iranian attacks on Arab countries and called on both sides to uphold their MoU and return to negotiations. Leaders of Qatar and Iraq stressed the importance of dialogue and diplomacy.</p>
+  <a class="ni-link" href="https://www.aljazeera.com/news/liveblog/2026/7/19/iran-war-live-us-launches-new-strikes-trump-mourns-killed-soldiers" target="_blank" rel="noopener">Al Jazeera →</a>
+</div>
+
+<div class="ni">
+  <div class="ni-title zh-content">伊朗处决两名反政府抗议者，战争与热浪叠加引发国内危机</div>
+  <div class="ni-title en-content">Iran Executes Two Anti-Government Protesters as War and Heatwave Compound Crisis</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">Al Jazeera · BBC</span></div>
+  <p class="ni-desc zh-content">伊朗官方宣布处决两名反政府抗议者。与此同时，战争和极端高温导致伊朗全国性停电从零星事件变为日常现象。医院已被疏散，学校考试推迟，南部多省桥梁、公路、铁路和机场遭美军空袭损毁。伊朗原子能组织谴责美军轰炸在建达尔霍文核电站违反国际法。</p>
+  <p class="ni-desc en-content">Iranian authorities announced the execution of two anti-government protesters. Meanwhile, war and a punishing heatwave have turned sporadic power outages into a daily reality. Hospitals have been evacuated, school exams postponed, and bridges, roads, railways, and airports damaged by US strikes. The Atomic Energy Organization condemned the US strike on the under-construction Darkhovin nuclear plant as a violation of international law.</p>
+  <a class="ni-link" href="https://www.bbc.com/news/articles/cgk417jp83po" target="_blank" rel="noopener">BBC News →</a>
+</div>
+
+      </div>
     </div>
   </section>
 
-  <!-- ====== 财经 ====== -->
-  <section class="sec" id="business">
+  <section class="sec" id="tech">
     <div class="sec-hd">
-      <span class="sec-num">04</span>
+      <span class="sec-num">03</span>
       <div class="sec-text">
-        <span class="sec-name">财经</span>
-        <span class="sec-en">Business</span>
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
       </div>
       <span class="sec-line"></span>
     </div>
-    <div class="sec-inner" style="background:#f8f9fb">
+    <div class="sec-inner">
 
-    <article class="ft">
-      <img class="ft-img" src="" alt="" onerror="this.style.display='none'">
-      <div class="ft-body">
-        <span class="ft-label biz">深度解读</span>
-        <h3 class="ft-title">战争经济学：油价、军费与市场的三重绞杀</h3>
-        <div class="ft-meta">核验信源：<span class="src">Al Jazeera · CHOSUNBIZ · Mott Capital · DNYUZ · AP News</span></div>
-        <p class="ft-desc">美伊冲突在全球市场制造三重压力。其一，海军封锁导致日均150万桶伊朗原油退出，布伦特从76飙至88美元，伊朗里亚尔跌至193万兑1美元历史新低。其二，弹药消耗惊人——前40天消耗超13,000枚精确打击弹药、约半数爱国者和过半THAAD拦截弹，五角大楼申请1.5万亿美元2027财年预算，库存重建至少四年。其三，T-Bill结算进入年度最密集期，标普500在结算日上涨概率仅45%，9月前流动性持续收紧。60%选民认为对伊战争"不值代价"，11月中期选举临近。</p>
-      </div>
-    </article>
+<article class="ft">
+  <div class="ft-body" style="flex:1">
+    <span class="ft-label tec">深度解读</span>
+    <div class="ft-title zh-content">Kimi K3冲击波：开源模型如何改写全球AI竞争格局</div>
+    <div class="ft-title en-content">The Kimi K3 Shockwave: How Open-Weight Models Are Rewriting the Global AI Race</div>
+    <div class="ft-meta"><span class="zh-content">综合信源：</span><span class="en-content">Sources: </span><span class="src">NDTV · Aju Press · Times of India · CGTN · Reuters</span></div>
+    <div class="ft-desc zh-content">
+      <p>中国AI初创公司月之暗面（Moonshot）7月17日发布的Kimi K3模型，以2.8万亿参数规模成为全球最大开源权重AI系统的同时，在多项基准测试中展现出逼近甚至超越美国前沿闭源模型的性能——这不仅是一次技术突破，更折射出全球AI竞争格局正在发生结构性变化。</p>
+      <p><strong>参数之争的新高度：</strong>Kimi K3是首个逼近3万亿参数门槛的开源权重模型。作为对比，此前的中国最大模型美团LongCat-2.0和DeepSeek V4-Pro均为1.6万亿参数。港交所上市的MiniMax也在开发2.7万亿参数模型，计划2026年第三季度发布。短短数月间，中国开源模型的参数规模近乎翻倍。</p>
+      <p><strong>性能与成本的双重挑战：</strong>Kimi K3在Arena.ai的前端代码测评中以76%的胜率击败Anthropic Claude Fable 5，登顶排行榜；Vals AI综合排名第二（仅次于Fable 5，领先GPT-5.6 Sol）；Artificial Analysis评估其在高复杂度多步任务上的表现与GPT-5.5和Claude Opus 4.8相当。这些成就是在先进芯片受限条件下、通过训练和架构创新实现的——美银分析师将此描述为"方法论突破"。</p>
+      <p><strong>华盛顿的回应与连锁反应：</strong>美国AI事务主管David Sacks称Kimi K3的表现"令人担忧"，警告美国过度监管正在导致"领导地位蒸发"，马斯克表示认同。市场反应剧烈：Z.ai在港交所暴跌30%、MiniMax下跌16%、阿里巴巴下跌4%；谷歌再度推迟Gemini 3.5 Pro，Alphabet股价下跌4%；台积电尽管Q2营业利润同比增长77%，股价仍下跌7%。市场正在重新定价"闭源优势"。</p>
+      <p><strong>中国AI战略进入制度建设阶段：</strong>同一天，2026世界人工智能大会（WAIC）在上海开幕，习近平主席发表主旨演讲，宣布成立总部设在上海的世界人工智能合作组织（WAICO），创始成员国29个，承诺未来五年为发展中国家提供5,000人次AI培训，向30个国家开放AI气象预警系统。"开源模型+国际合作+治理框架"的三位一体策略，标志中国AI战略已从技术追赶进入制度建设阶段。</p>
+    </div>
+    <div class="ft-desc en-content">
+      <p>Moonshot AI's Kimi K3, released on July 17, is not just the world's largest open-weight AI system at 2.8 trillion parameters — its performance on multiple benchmarks, matching or surpassing leading US closed-source models, signals a structural shift in global AI competition.</p>
+      <p><strong>A new scale:</strong> Kimi K3 is the first open-weight model approaching the 3-trillion-parameter threshold. By comparison, China's previous largest models — Meituan's LongCat-2.0 and DeepSeek's V4-Pro — each topped out at 1.6 trillion. Hong Kong-listed MiniMax is developing a 2.7-trillion-parameter model for Q3 2026 release. In months, the parameter ceiling for Chinese open models has nearly doubled.</p>
+      <p><strong>Performance:</strong> Kimi K3 achieved a 76% win rate against Anthropic's Claude Fable 5 on Arena.ai's frontend coding benchmark (#1). Vals AI placed it second overall behind Fable 5 and ahead of GPT-5.6 Sol. Artificial Analysis found it comparable to GPT-5.5 and Claude Opus 4.8 on complex multi-step tasks. These results were achieved under chip export restrictions through training methodology and architectural innovations — Bank of America called it a "methodological breakthrough."</p>
+      <p><strong>Washington reacts:</strong> US AI Czar David Sacks called Kimi K3's performance "concerning," warning that US over-regulation was causing its "lead to evaporate." Elon Musk concurred. Markets reacted sharply: Z.ai plunged 30%, MiniMax fell 16%, Alibaba dropped 4%. Google delayed Gemini 3.5 Pro again, sending Alphabet down ~4%. TSMC fell 7% despite a 77% YoY Q2 operating profit increase. Markets appear to be repricing the "closed-source advantage."</p>
+      <p><strong>China's institution-building phase:</strong> On the same day, the 2026 World AI Conference (WAIC) opened in Shanghai. President Xi announced the World AI Cooperation Organization (WAICO), headquartered in Shanghai with 29 founding member countries, pledging AI training for 5,000 individuals from developing countries over five years and access to China's AI meteorological warning system for 30 nations. The three-pronged strategy — open models, international cooperation, and governance frameworks — signals China's AI strategy is moving from technology catch-up to institution-building.</p>
+    </div>
+  </div>
+</article>
 
-    <div class="ngrid">
-      <div class="ni">
-        <div class="ni-title">美军重新封锁伊朗港口：日失150万桶石油供应，全球能源市场再受冲击</div>
-        <div class="ni-meta">📍 <span class="src">Al Jazeera</span> · 2026.07.18</div>
-        <div class="ni-desc">美军重新实施对伊朗南部港口海上封锁，撤销停火备忘录石油与银行豁免。伊朗议长承认上次封锁期间"一滴油也未能出口"。里亚尔续创历史新低，德黑兰证交所再跌2.4%。</div>
-        <a class="ni-link" href="https://www.aljazeera.com/economy/2026/7/18/what-to-expect-after-the-us-reimposes-naval-blockade-on-irans-ports" target="_blank">Al Jazeera →</a>
-      </div>
-      <div class="ni">
-        <div class="ni-title">特朗普全面战争风险：弹药库存告急、通胀飙升、海湾盟友日益离心</div>
-        <div class="ni-meta">📍 <span class="src">CHOSUNBIZ</span> · 2026.07.19</div>
-        <div class="ni-desc">美媒披露特朗普正考虑扩大对伊行动——包括出动地面部队夺取伊朗岛屿和轰炸核设施。弹药严重不足，重建库存至少四年。战略石油储备处历史低位。</div>
-        <a class="ni-link" href="https://biz.chosun.com/en/en-international/2026/07/19/72ZXW7NYERDZRA3HOPGRGKLR5A/" target="_blank">CHOSUNBIZ →</a>
-      </div>
-      <div class="ni">
-        <div class="ni-title">现代汽车会长增持波士顿动力至25%股权，人形机器人Atlas加速纳斯达克IPO</div>
-        <div class="ni-meta">📍 <span class="src">The Korea Times</span> · 2026.07.19</div>
-        <div class="ni-desc">郑义宣拟追加投资1200亿韩元将个人持股提升至25%，同时收购软银所持9.65%股份。Atlas计划2028年部署零件分拣、2030年扩展至组件装配。上市估值有望突破100万亿韩元。</div>
-        <a class="ni-link" href="https://www.koreatimes.co.kr/business/companies/20260719/hyundai-motor-chief-to-raise-boston-dynamics-stake-fueling-nasdaq-ipo-prospect" target="_blank">Korea Times →</a>
-      </div>
-      <div class="ni">
-        <div class="ni-title">美国T-Bill结算进入年度密集期：流动性持续抽干，9月前股市承压难解</div>
-        <div class="ni-meta">📍 <span class="src">Mott Capital Management</span> · 2026.07.18</div>
-        <div class="ni-desc">上周净结算约650亿美元，本周再增560亿和370亿美元。近九月统计标普500结算日上涨概率仅45%，科技板块XLK结算日平均下跌41个基点。流动性紧张至少持续至9月初。</div>
-        <a class="ni-link" href="https://mottcapitalmanagement.com/the-markets-liquidity-drain-is-reaching-its-heaviest-stretch/" target="_blank">Mott Capital →</a>
+      <div class="ngrid">
+
+<div class="ni">
+  <div class="ni-title zh-content">Google DeepMind：视频生成器可充当计算机视觉"世界模型"</div>
+  <div class="ni-title en-content">Google DeepMind: Video Generators Can Serve as "World Models" for Computer Vision</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">The Decoder · Google DeepMind</span></div>
+  <p class="ni-desc zh-content">DeepMind推出GenCeption——利用阿里巴巴开源视频模型Wan2.1执行深度估计、语义分割和3D姿态估计等视觉任务，仅需7,500个合成视频训练数据即可匹配甚至超越专用模型。该研究支持了一个争议性论点：视频生成模型已内嵌可泛化的空间与物理理解能力。</p>
+  <p class="ni-desc en-content">DeepMind unveiled GenCeption, repurposing Alibaba's open-source Wan2.1 video model for depth estimation, segmentation, and 3D pose estimation. Training on just 7,500 synthetic videos, it matched or beat specialized models, supporting the contested idea that video generators contain generalizable spatial and physical understanding.</p>
+  <a class="ni-link" href="https://the-decoder.com/google-deepmind-argues-video-generators-already-contain-the-world-models-computer-vision-has-been-missing/" target="_blank" rel="noopener">The Decoder →</a>
+</div>
+
+<div class="ni">
+  <div class="ni-title zh-content">Anthropic与Meta谈判高达100亿美元的AI算力租赁协议</div>
+  <div class="ni-title en-content">Anthropic and Meta Negotiate Up to $10 Billion AI Compute Lease Deal</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">The Chosun · Reuters</span></div>
+  <p class="ni-desc zh-content">Anthropic上月向Meta提议为期两年的算力租赁合同，规模最高达100亿美元。若成交，Meta将首次涉足云计算业务。此前Anthropic已与SpaceX签署Colossus 1数据中心租赁协议（月付12.5亿美元），并与TeraWulf签订200亿美元的肯塔基州数据中心20年租约。</p>
+  <p class="ni-desc en-content">Anthropic proposed a two-year compute lease from Meta last month, worth up to $10 billion. If finalized, Meta would enter the cloud business for the first time. Anthropic had already signed a lease for SpaceX's Colossus 1 data center ($1.25B/month) and a 20-year, $19B deal with TeraWulf for a Kentucky data center.</p>
+  <a class="ni-link" href="https://www.chosun.com/english/industry-en/2026/07/19/U7KIC576F5HT3E45SQ5X7T2LIY/" target="_blank" rel="noopener">The Chosun →</a>
+</div>
+
+<div class="ni">
+  <div class="ni-title zh-content">Perplexity发布WANDR基准：评估AI研究智能体"广而深"搜索能力</div>
+  <div class="ni-title en-content">Perplexity Releases WANDR Benchmark for "Wide and Deep" Research Agent Evaluation</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">MarkTechPost · Perplexity</span></div>
+  <p class="ni-desc zh-content">Perplexity推出WANDR开源基准测试，包含500个真实知识工作数据收集任务。Perplexity自有的Search as Code系统以0.363 F1分数领先，但没有任何系统接近"解决"该基准。"发现"环节是第一瓶颈——系统普遍能检索到相关页面，但将其转化为完整证据链的能力严重不足。</p>
+  <p class="ni-desc en-content">Perplexity released WANDR, an open benchmark with 500 realistic knowledge-work data-collection tasks. Perplexity's own Search as Code system leads with 0.363 F1, but no system comes close to solving the benchmark. "Discovery" is the first bottleneck: systems can find relevant pages but struggle to convert them into complete evidence chains.</p>
+  <a class="ni-link" href="https://www.marktechpost.com/2026/07/19/perplexity-ai-releases-wandr-an-open-benchmark-evaluating-research-agents-that-must-search-wide-and-deep/" target="_blank" rel="noopener">MarkTechPost →</a>
+</div>
+
+<div class="ni">
+  <div class="ni-title zh-content">优必选发布全球首款量产全尺寸仿生陪伴机器人</div>
+  <div class="ni-title en-content">Ubtech Launches World's First Mass-Produced Full-Size Bionic Companion Robot</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">New Atlas · Ubtech</span></div>
+  <p class="ni-desc zh-content">优必选发布Uworld U1系列仿生陪伴机器人，配备88个伺服关节、可展示300种微表情，覆盖硅胶皮肤，售价11.98万至99万元人民币。发布当天即收到超13,000份订单，但多数来自展示厅和政府采购。发布会演示中，机器人在对话响应上存在数十秒延迟，引发实用性质疑。</p>
+  <p class="ni-desc en-content">Ubtech launched its Uworld U1 series of bionic companion robots, featuring 88 servo joints, 300 micro-expressions, and silicone skin. Priced 119,800–990,000 RMB (~$17,655–$145,717), it received over 13,000 orders on launch day — though most came from exhibition halls and government procurement. Demonstration delays of tens of seconds in conversation responses raised practical concerns.</p>
+  <a class="ni-link" href="https://newatlas.com/robotics/u1-worlds-first-mass-produced-humanoid-robot/" target="_blank" rel="noopener">New Atlas →</a>
+</div>
+
       </div>
     </div>
+  </section>
+
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+
+<article class="ft">
+  <div class="ft-body" style="flex:1">
+    <span class="ft-label env">深度解读</span>
+    <div class="ft-title zh-content">同一条物理定律，三种灾难：气候危机如何在美国和西班牙同时上演</div>
+    <div class="ft-title en-content">One Law of Physics, Three Disasters: How the Climate Crisis Is Unfolding Simultaneously Across the US and Spain</div>
+    <div class="ft-meta"><span class="zh-content">综合信源：</span><span class="en-content">Sources: </span><span class="src">France 24 · Times of India · TechTimes · The Advocate · ScienceAlert · NIFC · NOAA</span></div>
+    <div class="ft-desc zh-content">
+      <p>2026年7月的第三周，三种看似无关的极端事件在全球几乎同步展开：西班牙三场山火吞噬28,000公顷土地；美国68场大火在15个州同时燃烧；德克萨斯州丘陵地带三天内降雨超过27英寸（约686毫米）。科学家指出，这并非巧合，而是同一条物理定律——克劳修斯-克拉佩龙方程——在不同地理环境下的三种表现。</p>
+      <p><strong>西班牙的三线作战：</strong>萨拉戈萨省Cinco Villas大火已成为西班牙年度最大火灾，约16,000公顷被毁，火线周长约60公里，1,100余人疏散。瓜达拉哈拉省（马德里以北）火灾烧毁12,000公顷，火场位于濒危鹰、狼和蝴蝶栖息地。本月早些时候，阿尔梅里亚省火灾已致13人死亡。当局将多变的风向列为灭火最大挑战——约400名地面人员和19架飞机正在三条火线同时作战。</p>
+      <p><strong>美国的三重打击：</strong>国家跨部门消防中心（NIFC）报告，太平洋西北地区一夜之间雷击引发17起新火灾，全国大型火灾达68起（分布15个州），17,482名消防员投入灭火。截至7月中旬，美国2026年过火面积已达370万英亩，比去年同期多100万英亩，为十年均值的157%。同时，德克萨斯州丘陵地带瓜达卢佩河在4小时内上涨32英尺（约9.8米），230余人获救，2人死亡。加拿大和明尼苏达州野火烟雾覆盖从芝加哥到华盛顿特区的超过1亿美国人。</p>
+      <p><strong>准谐振放大效应：</strong>宾夕法尼亚大学气候学家Michael Mann的研究解释了烟雾为何反常地持续笼罩美国——被称为"准谐振放大"的大气波被困机制，使极端天气系统长期停滞在同一区域。自1950年代以来，此类事件的频率增加了近三倍，与北极加速变暖直接相关。</p>
+      <p><strong>更大尺度的变化：</strong>同期发表的AMOC研究（Nature Communications）和墨西哥湾快速升温研究揭示了更深层的系统性变化。墨西哥湾自1970年以来升温速度是全球海洋平均水平的两倍，不仅加速飓风强化，还加速海平面上升——路易斯安那州海岸上升速度已是全球平均水平的六倍。联邦政府削减了多个海洋观测项目的资金，包括国家科学基金会3.68亿美元的深海浮标网络。</p>
+      <p>三项研究共同指出了一个结论：全球气候系统中看似分散的极端事件之间，存在可量化的物理联系。从西班牙山火到加州大气河流再到德克萨斯洪水，背后是同一组正在加速运转的热力学引擎。</p>
+    </div>
+    <div class="ft-desc en-content">
+      <p>During the third week of July 2026, three seemingly unrelated extreme events unfolded nearly simultaneously: three wildfires consuming 28,000 hectares in Spain; 68 large fires burning across 15 US states; and over 27 inches of rain drowning the Texas Hill Country. Scientists say this is not coincidence — it is the Clausius-Clapeyron equation manifesting in three different geographies.</p>
+      <p><strong>Spain's three-front battle:</strong> The Cinco Villas fire in Zaragoza has become Spain's largest at ~16,000 hectares with a 60-kilometer perimeter; 1,100+ evacuated. The Guadalajara blaze north of Madrid has burned 12,000 hectares in endangered species habitat. Earlier this month, Almeria's fire killed 13. ~400 ground personnel and 19 aircraft are fighting on three fronts.</p>
+      <p><strong>America's triple strike:</strong> The NIFC reports 68 large blazes across 15 states, with 17,482 firefighters deployed. As of mid-July, 3.7 million acres had burned — 1 million more than the same point last year and 157% of the ten-year average. Simultaneously, Texas Hill Country's Guadalupe River rose 32 feet in four hours; 230+ rescued, 2 dead. Wildfire smoke from Canada and Minnesota blanketed over 100 million Americans.</p>
+      <p><strong>Quasi-resonant amplification:</strong> Penn climatologist Michael Mann's research explains the smoke's unusual persistence — a mechanism called quasi-resonant amplification traps jet-stream wave patterns in place for extended periods. These events have nearly tripled since the 1950s, directly linked to amplified Arctic warming.</p>
+      <p><strong>Larger-scale transformations:</strong> The AMOC study (Nature Communications) and Gulf of Mexico warming research reveal deeper systemic changes. The Gulf has warmed at twice the global ocean average since 1970, supercharging hurricane intensification and accelerating sea level rise — Louisiana's coast is sinking six times faster than the global average. Federal funding cuts have compromised key ocean observation networks.</p>
+      <p>Taken together, these studies point to a single conclusion: the seemingly disparate extreme events unfolding across the global climate system share quantifiable physical connections. From Spanish wildfires to California atmospheric rivers to Texas floods, the same accelerating thermodynamic engine drives them all.</p>
+    </div>
+  </div>
+</article>
+
+      <div class="ngrid">
+
+<div class="ni">
+  <div class="ni-title zh-content">墨西哥湾已成为全球升温最快海域之一，威胁美国墨西哥湾沿岸</div>
+  <div class="ni-title en-content">Gulf of Mexico Among Fastest-Warming Bodies of Water, Threatening US Gulf Coast</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">The Advocate · NOAA · Times of India</span></div>
+  <p class="ni-desc zh-content">最新研究显示，墨西哥湾自1970年以来表层水温上升速度是全球海洋平均水平的两倍（升高近1.1°C），升温已扩展至超过11,000英尺的深海底部。2025年夏季缺氧"死亡区"面积达约7,900平方英里。气候变化与密西西比河流域农业养分径流的叠加效应正使问题加速恶化。</p>
+  <p class="ni-desc en-content">New research shows the Gulf of Mexico's surface has warmed at twice the global ocean average since 1970 (up ~1.1°C), with warming now extending to depths beyond 11,000 feet. The summer 2025 hypoxic "dead zone" reached ~7,900 square miles. The compounding effects of climate change and nutrient runoff from the Mississippi River Basin are accelerating the crisis.</p>
+  <a class="ni-link" href="https://www.theadvocate.com/baton_rouge/news/environment/gulf-of-mexico-warming-hurricanes-louisiana/article_4d588ed0-3e15-5101-8803-74d599f176a4.html" target="_blank" rel="noopener">The Advocate →</a>
+</div>
+
+<div class="ni">
+  <div class="ni-title zh-content">重庆彭水县山体滑坡致8死34人失踪，救援仍在进行</div>
+  <div class="ni-title en-content">Chongqing Landslide Kills 8, 34 Missing as Rescue Operations Continue</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">CNA · CCTV</span></div>
+  <p class="ni-desc zh-content">7月17日上午，重庆市彭水县发生山体滑坡，约18,000立方米岩土冲毁超过10栋居民楼。截至7月18日，已确认8人死亡、34人失踪，1,100余人被转移安置。持续降雨增加了救援难度。国家发改委已拨付3,000万元救灾资金。救援队计划在完成外围搜索后对巨石实施钻孔爆破。</p>
+  <p class="ni-desc en-content">On July 17 morning, a landslide struck Pengshui County in Chongqing, with ~18,000 cubic meters of rock and debris burying over 10 residential buildings. By July 18, 8 were confirmed dead and 34 missing; 1,100+ relocated. The NDRC allocated 30 million yuan in relief funds. Rescue teams plan to drill and blast massive boulders after perimeter searches.</p>
+  <a class="ni-link" href="https://www.channelnewsasia.com/east-asia/china-chongqing-landslide-rescue-operation-weather-challenging-6263526" target="_blank" rel="noopener">CNA →</a>
+</div>
+
+<div class="ni">
+  <div class="ni-title zh-content">印度查谟-克什米尔暴雨引发山洪：至少10人恐遇难，朝圣活动暂停</div>
+  <div class="ni-title en-content">Jammu & Kashmir Flash Floods: 10 Feared Dead, Pilgrimages Suspended</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">The Hindu · PTI</span></div>
+  <p class="ni-desc zh-content">7月19日，印度查谟-克什米尔地区暴雨引发山洪和山体滑坡，在旁切和拉朱里县造成至少8人死亡、6人失踪。印度内政部长沙阿与地方官员通话承诺中央援助。当局已暂停阿马尔纳特朝圣、Mata Vaishno Devi和Shiv Khori圣地朝圣活动。SDRF从暴涨河水中救出14名被困人员。</p>
+  <p class="ni-desc en-content">On July 19, torrential rains triggered flash floods across Jammu & Kashmir's Poonch and Rajouri districts, killing at least 8 with 6 missing. Union Home Minister Amit Shah pledged central assistance. Authorities suspended the Amarnath Yatra and pilgrimages to Mata Vaishno Devi and Shiv Khori shrines. The SDRF rescued 14 people from swollen rivers.</p>
+  <a class="ni-link" href="https://www.thehindu.com/news/national/jammu-and-kashmir/amarnath-yatra-2026-live-updates-temporary-suspension-pahalgam-baltal-routes-jammu-and-kashmir-heavy-rains/article71240667.ece" target="_blank" rel="noopener">The Hindu →</a>
+</div>
+
+<div class="ni">
+  <div class="ni-title zh-content">德克萨斯州丘陵地带暴洪：三天降雨超27英寸，2人死亡</div>
+  <div class="ni-title en-content">Texas Hill Country Flash Floods: Over 27 Inches of Rain in 3 Days, 2 Dead</div>
+  <div class="ni-meta"><span class="zh-content">交叉核验：</span><span class="en-content">Cross-verified: </span><span class="src">TechTimes · ABC13 · Fox4</span></div>
+  <p class="ni-desc zh-content">7月14日至17日，德克萨斯州丘陵地带遭遇极端降雨，乌瓦尔德县部分地区三天内降雨超27英寸（约686毫米）。瓜达卢佩河在Center Point站点4小时内上涨32英尺。截至7月18日，已有2人死亡，230余人获救，2,350名应急人员投入救援。州长阿博特警告河流水位将继续上涨。</p>
+  <p class="ni-desc en-content">From July 14 to 17, the Texas Hill Country experienced extreme rainfall, with parts of Uvalde County receiving over 27 inches in three days. The Guadalupe River at Center Point rose 32 feet in four hours. By July 18, two people had died, over 230 had been rescued, and 2,350 first responders were deployed. Gov. Abbott warned rivers would continue to rise.</p>
+  <a class="ni-link" href="https://www.techtimes.com/articles/320947/20260718/wildfire-smoke-texas-floods-68-blazes-same-climate-force-drives-all-three.htm" target="_blank" rel="noopener">TechTimes →</a>
+</div>
+
+      </div>
     </div>
   </section>
 
@@ -375,17 +475,26 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 
 <footer class="ftr">
   <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
-  交叉核验 · 事实优先 · 拒绝噪音<br>
-  <span style="opacity:.4">由 CherryClaw AI 自动生成 · 内容仅供参考</span>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content">Cross-verified · Facts First · No Noise</span>
+  <br><span style="opacity:.4">Powered by CherryClaw AI · Content for reference only</span>
 </footer>
 
 </div>
 
 <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
 <script>
+function switchLang(lang){
+  document.body.classList.toggle('show-en', lang==='en');
+  document.querySelectorAll('.lang-btn').forEach(function(b,i){
+    b.classList.toggle('active', (lang==='zh' && i===0) || (lang==='en' && i===1));
+  });
+}
 window.addEventListener('scroll',function(){
-  document.getElementById('btt').classList.toggle('on',window.scrollY>500)
-})
+  document.getElementById('btt').classList.toggle('on',window.scrollY>500);
+});
 </script>
+
 </body>
 </html>
