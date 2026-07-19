@@ -3,253 +3,377 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全球新闻早报 | 2026年7月19日</title>
+<title>陆先生日报 | 2026年7月19日</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#f0f0f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",sans-serif;color:#333;line-height:1.8}
-.container{max-width:680px;margin:0 auto;padding:12px}
+/* ===== Reset & Base ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#e8ecf1;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,sans-serif;color:#2c3e50;line-height:1.8;-webkit-font-smoothing:antialiased}
 
-.header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:36px 28px 28px;text-align:center;border-radius:16px 16px 0 0;margin-top:20px}
-.header .date{font-size:14px;opacity:0.7;letter-spacing:2px;margin-bottom:8px}
-.header h1{font-size:28px;font-weight:700;letter-spacing:1px;margin-bottom:6px}
-.header .subtitle{font-size:13px;opacity:0.6}
-.header .divider{width:40px;height:3px;background:#e74c3c;margin:16px auto;border-radius:2px}
+/* ===== Container ===== */
+.page{max-width:560px;margin:0 auto;padding:0}
+@media(min-width:768px){.page{max-width:720px}}
+@media(min-width:1024px){.page{max-width:900px}}
 
-.cover{background:linear-gradient(135deg,#2c3e50,#e74c3c,#f39c12,#2980b9);height:200px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
-.cover::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.45)}
-.cover .cover-text{position:relative;color:#fff;text-align:center}
-.cover .cover-title{font-size:32px;font-weight:700;letter-spacing:4px}
-.cover .cover-sub{font-size:14px;opacity:0.8;margin-top:8px;letter-spacing:2px}
+/* ===== Top Nav Bar ===== */
+.topbar{background:#1a1a2e;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.6)}
+.topbar .brand{font-weight:700;color:#fff;font-size:15px;letter-spacing:1px}
+.topbar .issue{font-size:12px}
 
-.content{background:#fff;padding:28px 24px;border-radius:0 0 16px 16px;margin-bottom:16px}
+/* ===== Header ===== */
+.header{background:linear-gradient(160deg,#0f0c29 0%,#1a1a2e 40%,#24243e 100%);color:#fff;padding:48px 32px 40px;text-align:center}
+.header .kicker{font-size:12px;text-transform:uppercase;letter-spacing:4px;opacity:.5;margin-bottom:12px}
+.header h1{font-size:32px;font-weight:800;letter-spacing:2px;margin-bottom:4px}
+.header .tagline{font-size:14px;opacity:.45;margin-top:8px;letter-spacing:1px}
+.header .rule{width:48px;height:2px;background:#c0392b;margin:18px auto 0;border-radius:1px}
+@media(min-width:768px){.header h1{font-size:40px}.header{padding:56px 40px 48px}}
 
-.section-title{font-size:20px;font-weight:700;color:#1a1a2e;margin:32px 0 18px;padding-left:14px;border-left:4px solid #e74c3c;line-height:1.4}
-.section-title:first-child{margin-top:0}
+/* ===== Cover Image ===== */
+.cover{margin:0;overflow:hidden;background:#d5dbe3;min-height:180px;display:flex;align-items:center;justify-content:center;position:relative}
+.cover img{width:100%;display:block;max-height:420px;object-fit:cover}
+.cover .cover-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;padding:16px 20px;font-size:12px;opacity:.85}
+@media(min-width:768px){.cover{min-height:240px}}
 
-.editor-note{background:#fef9f4;border-left:4px solid #e67e22;padding:14px 18px;margin-bottom:24px;font-size:14px;color:#666;border-radius:0 8px 8px 0;line-height:1.9}
+/* ===== Content Area ===== */
+.content{background:#fff;padding:32px 24px 40px}
+@media(min-width:768px){.content{padding:40px 36px 48px}}
 
-.headline-card{background:#fff;border-radius:12px;overflow:hidden;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid #eee;transition:transform .2s}
-.headline-card:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,0.12)}
-.headline-card .card-body{padding:18px 20px}
-.headline-card .card-tag{display:inline-block;color:#fff;font-size:11px;padding:3px 12px;border-radius:10px;margin-bottom:10px;letter-spacing:1px;font-weight:600}
-.headline-card .card-tag.politics{background:#2980b9}
-.headline-card .card-tag.business{background:#e67e22}
-.headline-card .card-tag.tech{background:#27ae60}
-.headline-card .card-title{font-size:18px;font-weight:700;color:#1a1a2e;margin-bottom:6px;line-height:1.6}
-.headline-card .card-meta{font-size:12px;color:#999;margin-bottom:10px}
-.headline-card .card-meta .source{color:#e74c3c;font-weight:600}
-.headline-card .card-summary{font-size:14px;color:#555;line-height:1.9;margin-bottom:14px}
-.headline-card .card-link{display:inline-block;color:#e74c3c;font-size:13px;text-decoration:none;font-weight:600;border-bottom:1px solid transparent;transition:border .2s}
-.headline-card .card-link:hover{border-bottom-color:#e74c3c}
+/* ===== 前言 ===== */
+.preface{margin-bottom:36px;padding:20px 24px;background:#f8f9fb;border-radius:8px;border-left:3px solid #1a1a2e}
+.preface .preface-label{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:#999;margin-bottom:8px;font-weight:600}
+.preface p{font-size:15px;color:#555;line-height:2}
 
-.sub-news{border-bottom:1px solid #f0f0f0;padding:16px 0}
-.sub-news:last-child{border-bottom:none}
-.sub-news .sn-title{font-size:16px;font-weight:600;color:#1a1a2e;margin-bottom:4px;line-height:1.5}
-.sub-news .sn-meta{font-size:12px;color:#999;margin-bottom:6px}
-.sub-news .sn-meta .source{color:#e74c3c;font-weight:600}
-.sub-news .sn-summary{font-size:13px;color:#666;line-height:1.8}
-.sub-news .sn-link{color:#e74c3c;font-size:12px;text-decoration:none;display:inline-block;margin-top:4px}
+/* ===== Section Title ===== */
+.section-head{margin:40px 0 20px;display:flex;align-items:center;gap:12px}
+.section-head .section-label{font-size:13px;font-weight:700;color:#c0392b;letter-spacing:2px;text-transform:uppercase}
+.section-head .section-line{flex:1;height:1px;background:#e0e0e0}
+.section-head .section-name{font-size:20px;font-weight:800;color:#1a1a2e;white-space:nowrap}
+@media(min-width:768px){.section-head .section-name{font-size:22px}}
 
-.footer{background:#1a1a2e;color:#fff;text-align:center;padding:28px 20px;border-radius:16px;margin:0 12px 30px;font-size:13px;opacity:0.85}
-.footer .foot-brand{font-size:16px;font-weight:700;margin-bottom:6px}
-.footer .foot-info{opacity:0.5;font-size:11px;margin-top:8px;line-height:1.8}
-
-@media(max-width:480px){
-  .container{padding:8px}
-  .header{padding:24px 18px 20px;border-radius:12px 12px 0 0}
-  .header h1{font-size:22px}
-  .cover{height:150px}
-  .cover .cover-title{font-size:24px}
-  .content{padding:18px 14px;border-radius:0 0 12px 12px}
-  .headline-card .card-body{padding:14px}
-  .headline-card .card-title{font-size:16px}
-  .footer{margin:0 8px 20px;padding:20px 14px}
+/* ===== 深度解读 (Featured Article) ===== */
+.feature{display:flex;flex-direction:column;background:#fff;border:1px solid #e8e8e8;border-radius:10px;overflow:hidden;margin-bottom:24px;transition:box-shadow .25s}
+.feature:hover{box-shadow:0 4px 24px rgba(0,0,0,.08)}
+.feature .feature-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eef1f5;display:block}
+.feature .feature-body{padding:24px}
+.feature .feature-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1px;color:#c0392b;text-transform:uppercase;margin-bottom:10px;padding:2px 10px;background:#fdf0f0;border-radius:4px}
+.feature .feature-label.politics{color:#2471a3;background:#ebf5fb}
+.feature .feature-label.business{color:#b9770e;background:#fef5e7}
+.feature .feature-label.tech{color:#1e8449;background:#eafaf1}
+.feature .feature-title{font-size:20px;font-weight:800;color:#1a1a2e;line-height:1.5;margin-bottom:8px}
+.feature .feature-meta{font-size:12px;color:#999;margin-bottom:14px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.feature .feature-meta .src{font-weight:700;color:#c0392b}
+.feature .feature-desc{font-size:15px;color:#444;line-height:2}
+.feature .feature-link{display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#c0392b;text-decoration:none;border-bottom:1px solid transparent;transition:border .2s}
+.feature .feature-link:hover{border-bottom-color:#c0392b}
+@media(min-width:768px){
+  .feature{flex-direction:row}
+  .feature .feature-img{width:40%;aspect-ratio:auto;min-height:240px}
+  .feature .feature-body{flex:1}
 }
+
+/* ===== Headline Card ===== */
+.headline{display:flex;flex-direction:column;background:#fff;border:1px solid #eee;border-radius:10px;overflow:hidden;margin-bottom:20px;transition:box-shadow .2s}
+.headline:hover{box-shadow:0 2px 16px rgba(0,0,0,.06)}
+.headline .hl-img{width:100%;aspect-ratio:2/1;object-fit:cover;background:#eef1f5;display:block}
+.headline .hl-body{padding:20px}
+.headline .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:4px;margin-bottom:8px;text-transform:uppercase}
+.headline .hl-tag.pol{background:#2471a3}
+.headline .hl-tag.biz{background:#b9770e}
+.headline .hl-tag.tec{background:#1e8449}
+.headline .hl-title{font-size:17px;font-weight:800;color:#1a1a2e;line-height:1.6;margin-bottom:6px}
+.headline .hl-meta{font-size:12px;color:#999;margin-bottom:10px}
+.headline .hl-meta .src{font-weight:700;color:#c0392b}
+.headline .hl-desc{font-size:14px;color:#555;line-height:1.9;margin-bottom:12px}
+.headline .hl-link{display:inline-block;font-size:13px;font-weight:600;color:#c0392b;text-decoration:none}
+.headline .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .headline{flex-direction:row}
+  .headline .hl-img{width:200px;aspect-ratio:auto;min-height:180px;flex-shrink:0}
+  .headline .hl-body{flex:1}
+}
+@media(min-width:1024px){
+  .headline .hl-img{width:280px}
+}
+
+/* ===== 快讯 Grid (for tablet/desktop) ===== */
+.news-grid{display:grid;gap:16px}
+@media(min-width:768px){.news-grid{grid-template-columns:1fr 1fr}}
+
+/* ===== News Item (sub news) ===== */
+.news-item{border-bottom:1px solid #f0f0f0;padding:16px 0}
+.news-item:last-child{border-bottom:none}
+.news-grid .news-item{border:1px solid #f0f0f0;border-radius:8px;padding:16px;border-bottom:1px solid #f0f0f0}
+.news-item .ni-title{font-size:15px;font-weight:700;color:#1a1a2e;line-height:1.6;margin-bottom:4px}
+.news-item .ni-meta{font-size:11px;color:#999;margin-bottom:6px}
+.news-item .ni-meta .src{font-weight:700;color:#c0392b}
+.news-item .ni-desc{font-size:13px;color:#666;line-height:1.8}
+.news-item .ni-link{display:inline-block;margin-top:6px;font-size:12px;color:#c0392b;text-decoration:none;font-weight:600}
+
+/* ===== Quote / Data highlight ===== */
+.datapoint{background:#f8f9fb;border-left:3px solid #1a1a2e;padding:14px 18px;margin:20px 0;font-size:14px;color:#555;border-radius:0 6px 6px 0;line-height:1.9}
+.datapoint strong{color:#1a1a2e}
+
+/* ===== Footer ===== */
+.footer{background:#1a1a2e;color:rgba(255,255,255,.6);text-align:center;padding:32px 24px;font-size:12px;line-height:2}
+.footer .ft-brand{font-size:16px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.footer .ft-note{font-size:11px;opacity:.4}
+
+/* ===== Back to top ===== */
+.btt{position:fixed;bottom:24px;right:24px;width:40px;height:40px;background:#1a1a2e;color:#fff;border:none;border-radius:50%;font-size:18px;cursor:pointer;opacity:0;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.2);z-index:100}
+.btt.visible{opacity:.8}
+.btt:hover{opacity:1}
 </style>
 </head>
 <body>
-<div class="container">
 
-<div class="header">
-  <div class="date">星期日 · 2026年7月19日</div>
-  <h1>🌍 全球新闻早报</h1>
-  <div class="divider"></div>
-  <div class="subtitle">每日精选 · 深度摘要 · 英文源译中</div>
+<!-- Top Bar -->
+<div class="topbar">
+  <span class="brand">陆先生日报</span>
+  <span class="issue">No.001 · 2026.07.19</span>
 </div>
 
+<!-- Header -->
+<header class="header">
+  <div class="kicker">LUXIANSHENG DAILY</div>
+  <h1>陆先生日报</h1>
+  <p class="tagline">交叉信源 · 事实优先 · 拒绝噪音</p>
+  <div class="rule"></div>
+</header>
+
+<!-- Cover Image -->
 <div class="cover">
-  <div class="cover-text">
-    <div class="cover-title">GLOBAL BRIEFING</div>
-    <div class="cover-sub">July 19, 2026 Edition</div>
-  </div>
+  <img src="" alt="今日封面" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a1a2e,#2c3e50,#c0392b)';this.remove()">
 </div>
 
-<div class="content">
+<!-- Content -->
+<main class="content">
 
-  <div class="editor-note">
-    📋 <strong>本期导读：</strong>美伊停火协议彻底破裂——美军第八夜空袭伊朗，两名美军士兵在约旦阵亡，伊朗最高领袖发出"难忘教训"警告；AI概念股遭遇全球血洗，油价飙升至88美元；中国发射全球首个太空计算网络，月之暗面 Kimi K3 模型震动硅谷；英伟达 Vera Rubin 七芯片平台正式投产。地缘政治与科技变革深度交织的动荡一周。
+  <!-- ===== 前言 ===== -->
+  <section class="preface">
+    <div class="preface-label">编辑部前言</div>
+    <p>今日全球焦点集中于持续升级的美伊冲突——美军连续第八夜空袭伊朗，两名美军在约旦阵亡，停火备忘录名存实亡；霍尔木兹海峡局势推升布伦特原油周涨近16%至88美元，全球市场随之剧烈震荡。与此同时，中国AI模型Kimi K3横空出世震惊硅谷，英伟达Vera Rubin七芯片平台正式投产，科技赛道的竞速非但未因战争放缓，反而加速。以下报道均交叉核验至少两个独立信源，力求准确、克制、不给结论。</p>
+  </section>
+
+  <!-- ===== 今日头条 ===== -->
+  <div class="section-head">
+    <span class="section-label">HEADLINES</span>
+    <span class="section-line"></span>
+    <span class="section-name">今日头条</span>
   </div>
 
-  <!-- ============ 今日头条 ============ -->
-  <div class="section-title">📌 今日头条</div>
+  <!-- 头条 1 -->
+  <article class="headline">
+    <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
+    <div class="hl-body">
+      <span class="hl-tag pol">全球政治</span>
+      <h2 class="hl-title">美伊冲突急剧升级：两名美军约旦阵亡，美军第八夜连续空袭伊朗革命卫队</h2>
+      <div class="hl-meta">📍 <span class="src">BBC News</span> · 2026.07.19 05:10 UTC &nbsp;|&nbsp; 交叉核验：AP News · Al Jazeera</div>
+      <p class="hl-desc">美国中央司令部（CENTCOM）周六宣布对伊朗发动第八夜连续空袭，目标包括沿海监视设施、防空系统及革命卫队军事资产。此前一天，伊朗向约旦美军基地发射弹道导弹与无人机，致两名美军阵亡、一人失踪、四人受伤。防长赫格塞斯回应称"英雄的牺牲只会坚定我们的决心"。伊朗军方随后宣布对科威特两处美军基地发动大规模无人机攻击。自2月28日冲突爆发，美军累计阵亡升至16人。上月签署的伊斯兰堡停火备忘录——特朗普总统已于7月8日宣布其"终结"。</p>
+      <a class="hl-link" href="https://www.bbc.com/news/articles/cgk417jp83po" target="_blank">BBC 原文 →</a>
+    </div>
+  </article>
 
-  <!-- 头条 #1 -->
-  <div class="headline-card">
-    <div class="card-body">
-      <span class="card-tag politics">🌐 全球政治</span>
-      <div class="card-title">美伊冲突急剧升级：两名美军约旦阵亡，美军第八夜连续空袭伊朗革命卫队</div>
-      <div class="card-meta">📍 <span class="source">BBC News</span> · 2026年7月19日 05:10 UTC</div>
-      <div class="card-summary">美国中央司令部（CENTCOM）周六宣布对伊朗发动第八夜连续空袭，目标包括伊朗沿海监视设施、防空系统以及革命卫队军事资产。此前一天，伊朗弹道导弹与无人机袭击约旦美军基地，造成两名美军阵亡、一人失踪、四人受伤送医。美防长赫格塞斯回应称"英雄的牺牲只会坚定我们的决心"。作为报复，伊朗军方随即宣布对科威特两处美军基地发动大规模无人机袭击。自2月28日冲突爆发以来，美军累计阵亡人数已升至16人。上月签署的伊斯兰堡停火备忘录名存实亡——特朗普总统已于7月8日宣布协议"终结"。</div>
-      <a class="card-link" href="https://www.bbc.com/news/articles/cgk417jp83po" target="_blank">📎 阅读原文（BBC）→</a>
+  <!-- 头条 2 -->
+  <article class="headline">
+    <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
+    <div class="hl-body">
+      <span class="hl-tag biz">财经</span>
+      <h2 class="hl-title">AI明星股遭遇全球抛售：英伟达盘中失市值王座，台积电暴跌7.3%，油价一周飙涨16%</h2>
+      <div class="hl-meta">📍 <span class="src">DNYUZ</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：EasternEye · AP News</div>
+      <p class="hl-desc">周五抛售加剧：标普500跌1%至7,457.69，纳指重挫1.4%。英伟达跌2.2%盘中一度让出全球市值第一。台积电暴跌7.3%，拖累台北股市跌6.5%、日经跌4%、上证跌3%。中国月之暗面Kimi K3被视为低成本挑战西方AI巨头的最新信号，令市场重新审视万亿级AI投资的可持续性。布伦特原油跳涨4.6%至88.10美元/桶——一周前仅76美元。Netflix因营收展望不及预期跌7.3%，SpaceX触及上市以来新低。</p>
+      <a class="hl-link" href="https://dnyuz.com/2026/07/18/the-sell-off-for-ai-stars-worsens-while-oil-prices-keep-jumping/" target="_blank">DNYUZ 原文 →</a>
+    </div>
+  </article>
+
+  <!-- 头条 3 -->
+  <article class="headline">
+    <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
+    <div class="hl-body">
+      <span class="hl-tag tec">科技</span>
+      <h2 class="hl-title">中国月之暗面发布 Kimi K3：前端编码能力登顶，性能直逼 Claude 与 ChatGPT</h2>
+      <div class="hl-meta">📍 <span class="src">TechXplore</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：Bank of America Research · Arena</div>
+      <p class="hl-desc">北京初创公司月之暗面（Moonshot）发布Kimi K3模型，在Arena平台"前端编码能力"榜单登顶，被评价为"本年度最大发布"。创始人杨植麟2019年获卡内基梅隆大学博士学位，师从前苹果AI研究总监。K3使用成本仅为OpenAI GPT-5.6的一半。美银分析师称这是继2025年初DeepSeek之后的又一次"中国AI时刻"。Anthropic此前指控月之暗面等通过"蒸馏"技术不当获取Claude能力，中方否认。旧金山Anysphere（Cursor母公司）已承认其产品基于月之暗面K2.5模型构建。</p>
+      <a class="hl-link" href="https://techxplore.com/news/2026-07/chinese-ai-tech-industry-abilities.html" target="_blank">TechXplore 原文 →</a>
+    </div>
+  </article>
+
+  <!-- 头条 4 -->
+  <article class="headline">
+    <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
+    <div class="hl-body">
+      <span class="hl-tag pol">全球政治</span>
+      <h2 class="hl-title">伊朗全面中止停火备忘录：50人死于7月美方空袭，最高领袖警告"难忘教训"</h2>
+      <div class="hl-meta">📍 <span class="src">Al Jazeera</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：Fars News · NHK</div>
+      <p class="hl-desc">伊朗副外长加里巴巴迪宣布因美方"违反并中止备忘录所有承诺"，德黑兰同样中止全部义务。卫生部报告7月6日以来至少50人死亡、500余人受伤。第七夜打击摧毁邦吉海水淡化厂致万人断水。作为报复，伊朗向科威特、巴林、约旦等多国美军基地发动导弹与无人机协同攻击，科威特被迫关闭领空。最高领袖穆杰塔巴·哈梅内伊声明称特朗普签字"毫无信誉"，将让美国"汲取难忘教训"。</p>
+      <a class="hl-link" href="https://www.aljazeera.com/news/2026/7/18/iran-accuses-us-of-striking-critical-infrastructure-as-war-intensifies" target="_blank">Al Jazeera 原文 →</a>
+    </div>
+  </article>
+
+  <!-- 头条 5 -->
+  <article class="headline">
+    <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
+    <div class="hl-body">
+      <span class="hl-tag biz">财经</span>
+      <h2 class="hl-title">美国五大银行创纪录盈利：摩根大通单季169亿美元，战争波动反成利润引擎</h2>
+      <div class="hl-meta">📍 <span class="src">Associated Press</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：FactSet · 各行财报</div>
+      <p class="hl-desc">五大银行二季度全部超预期。摩根大通净利169亿美元，股权交易收入同比暴涨86%；高盛银行与市场部收入155.2亿美元，同比增长53%；美银利润增27%至91亿美元。银行高管强调消费者支出仍然强劲、违约率下降。SpaceX 6月IPO募资750亿美元，超过2024-2025年所有美国IPO总和。但油价上涨或将侵蚀后续季度的消费韧性。</p>
+      <a class="hl-link" href="https://www.vindy.com/news/business-news/2026/07/banks-rake-in-big-profits-as-both-wall-street-and-the-us-consumer-stay-strong/" target="_blank">AP News 原文 →</a>
+    </div>
+  </article>
+
+  <!-- ===== 全球政治 ===== -->
+  <div class="section-head">
+    <span class="section-label">POLITICS</span>
+    <span class="section-line"></span>
+    <span class="section-name">全球政治</span>
+  </div>
+
+  <!-- 政治 · 深度解读 -->
+  <article class="feature">
+    <img class="feature-img" src="" alt="" onerror="this.style.display='none'">
+    <div class="feature-body">
+      <span class="feature-label politics">深度解读</span>
+      <h2 class="feature-title">一场无人认输的战争：美伊冲突五个月全景回顾与当前态势</h2>
+      <div class="feature-meta">核验信源：<span class="src">BBC · AP News · Al Jazeera · NHK · AA · ABC News</span></div>
+      <p class="feature-desc">自2月28日美以联合对伊朗发动首轮打击以来，这场冲突已经持续近五个月。关键节点：4月中旬美国首次实施对伊海军封锁，持续九周；6月中旬双方在伊斯兰堡签署临时停火备忘录，伊朗旋即出口数千万桶积压原油；7月8日特朗普宣布备忘录"终结"，重新封锁伊朗港口；7月11日起美军连续八夜空袭。截至目前：美军16人阵亡，伊朗方面至少50名平民死亡、500余人受伤。冲突范围已从霍尔木兹海峡扩展至科威特、巴林、约旦、沙特等海湾国家民用基础设施。联合国秘书长表达严重关切，但安理会迄今未能通过任何决议。</p>
+    </div>
+  </article>
+
+  <div class="news-grid">
+    <div class="news-item">
+      <div class="ni-title">伊朗大规模攻击多国美军基地，海合会谴责攻击民用设施构成"战争罪"</div>
+      <div class="ni-meta">📍 <span class="src">ABC News · AP News</span> · 2026.07.19</div>
+      <div class="ni-desc">伊朗革命卫队声称对科威特、巴林、约旦、沙特和卡塔尔美军基地发动协同攻击。科威特Arifjan营地和Ali Al Salem基地雷达遭命中，巴林Sheikh Isa基地战机装配点被毁，约旦Azraq基地至少两架美军战机被摧毁。科威特两座水电厂受损，多名消防员受伤。海合会秘书长声明"攻击民用基础设施构成战争罪"。</div>
+      <a class="ni-link" href="https://www.abc.net.au/news/2026-07-19/blog-us-warns-of-middle-east-travel/106932620" target="_blank">ABC News 原文 →</a>
+    </div>
+    <div class="news-item">
+      <div class="ni-title">美军摧毁伊朗南部关键基础设施：桥梁、铁路、淡化厂遭重创，万人断水</div>
+      <div class="ni-meta">📍 <span class="src">AP News · Al Jazeera</span> · 2026.07.18</div>
+      <div class="ni-desc">第七夜空袭系统性打击伊朗南部：邦吉淡化厂完全摧毁致20村万人断水，通往阿巴斯港的两条隧道和多座桥梁炸毁。分析人士指对沿海基础设施的系统性打击或为潜在地面登陆做准备。伊朗谴责美方犯战争罪，警告将攻击海湾地区类似目标进行对等报复。</div>
+      <a class="ni-link" href="https://apnews.com/article/iran-us-hormuz-strait-war-july-18-2026-5adfef67554652580963684d9a663af2" target="_blank">AP News 原文 →</a>
+    </div>
+    <div class="news-item">
+      <div class="ni-title">俄罗斯对基辅发动开战以来最大规模弹道导弹袭击，至少1死15伤</div>
+      <div class="ni-meta">📍 <span class="src">NHK · AA.com.tr</span> · 2026.07.19</div>
+      <div class="ni-desc">乌克兰当局通报俄罗斯周末对基辅发动2022年全面入侵以来最大规模弹道导弹攻击。乌防空系统拦截大部分来袭导弹，残骸仍造成多处地面破坏。此轮袭击在美伊冲突占据全球注意力之际发动。</div>
+      <a class="ni-link" href="https://www.aa.com.tr/en/americas/us-forces-launch-new-strikes-on-iran-targeting-irgc-units-centcom/4002538" target="_blank">AA 原文 →</a>
+    </div>
+    <div class="news-item">
+      <div class="ni-title">日本防卫大臣罕见呼吁就核武器展开全国辩论，战后安保政策或迎重大转向</div>
+      <div class="ni-meta">📍 <span class="src">AA.com.tr</span> · 2026.07.19</div>
+      <div class="ni-desc">日本防卫大臣表示鉴于朝鲜持续导弹试射、台海紧张及美伊全面战争，日本需就核武器议题展开全国辩论。该表态在战后"无核三原则"传统中极为罕见，反映东亚安全格局深层次重塑。</div>
+      <a class="ni-link" href="https://www.aa.com.tr/en/americas/us-forces-launch-new-strikes-on-iran-targeting-irgc-units-centcom/4002538" target="_blank">AA 原文 →</a>
     </div>
   </div>
 
-  <!-- 头条 #2 -->
-  <div class="headline-card">
-    <div class="card-body">
-      <span class="card-tag business">💰 财经</span>
-      <div class="card-title">AI明星股遭遇全球血洗：英伟达短暂失市值王座，台积电暴跌7.3%，油价飙至88美元</div>
-      <div class="card-meta">📍 <span class="source">DNYUZ</span> · 2026年7月18日</div>
-      <div class="card-summary">AI概念股抛售潮周五进一步加剧：标普500下跌1%至7,457.69点，道琼斯跌406点，纳斯达克重挫1.4%。英伟达下跌2.2%，盘中一度让出华尔街市值第一宝座。台积电大跌7.3%，拖累台北股市重挫6.5%、日经跌4%、上海跌3%。中国AI初创月之暗面（Moonshot）发布的Kimi K3模型，被视为低成本挑战西方AI巨头的又一信号，令市场重新审视万亿美元AI投资的可持续性。此外，受美伊战事升级推动，布伦特原油跳涨4.6%至每桶88.10美元——一周前仅为76美元——能源成本飙升进一步打压全球股市。Netflix因营收展望不及预期暴跌7.3%，SpaceX触及上市以来新低。</div>
-      <a class="card-link" href="https://dnyuz.com/2026/07/18/the-sell-off-for-ai-stars-worsens-while-oil-prices-keep-jumping/" target="_blank">📎 阅读原文 →</a>
+  <!-- ===== 科技 ===== -->
+  <div class="section-head">
+    <span class="section-label">TECHNOLOGY</span>
+    <span class="section-line"></span>
+    <span class="section-name">科技</span>
+  </div>
+
+  <!-- 科技 · 深度解读 -->
+  <article class="feature">
+    <img class="feature-img" src="" alt="" onerror="this.style.display='none'">
+    <div class="feature-body">
+      <span class="feature-label tech">深度解读</span>
+      <h2 class="feature-title">2026 AI军备竞赛年中盘点：中国模型逼近、硬件换代、开源生态重塑格局</h2>
+      <div class="feature-meta">核验信源：<span class="src">TechXplore · TechTimes · Bank of America Research · NVIDIA Blog</span></div>
+      <p class="feature-desc">2026年上半年AI领域三条主线交织：一是中国开源模型加速追赶——继DeepSeek之后，月之暗面Kimi K3与智谱GLM-5.2在关键基准上逼近甚至超越美国闭源模型，使用成本仅为其一半。二是硬件代际跃迁——英伟达Vera Rubin七芯片平台6月全面投产，宣称训练GPU需求降至四分之一、推理成本降至十分之一；AMD MI400、Google Ironwood TPU v7同期推进，定制ASIC出货量年增长约44%。三是"开源vs闭源"争议升级——Anthropic和OpenAI指控中国公司通过"蒸馏"不当获取技术，而旧金山Anysphere（Cursor）承认产品基于中国模型构建。技术竞赛与地缘政治深度纠缠的格局短期内不会改变。</p>
+    </div>
+  </article>
+
+  <div class="news-grid">
+    <div class="news-item">
+      <div class="ni-title">英伟达Vera Rubin七芯片平台投产：大模型训练GPU只需四分之一，推理成本降至十分之一</div>
+      <div class="ni-meta">📍 <span class="src">TechTimes · NVIDIA Blog</span> · 2026.07.18</div>
+      <div class="ni-desc">Rubin GPU搭载288GB HBM4，聚合带宽22TB/s（Blackwell的2.8倍），NVLink 6达3.6TB/s。第七颗芯片Groq 3 LPX专为AI Agent解码阶段设计。CoreWeave率先完成NVL72验证，主流云厂商下半年陆续部署。</div>
+      <a class="ni-link" href="https://www.techtimes.com/articles/320933/20260718/nvidia-vera-rubin-cuts-post-training-token-costs-seven-chip-codesign.htm" target="_blank">TechTimes 原文 →</a>
+    </div>
+    <div class="news-item">
+      <div class="ni-title">日本Sakana AI实现仿脑学习里程碑：首次不用反向传播训练卷积网络与强化学习</div>
+      <div class="ni-meta">📍 <span class="src">TechTimes · arXiv</span> · 2026.07.18</div>
+      <div class="ni-desc">估值26.5亿美元的东京Sakana AI基于Dale原理的"错误扩散"算法，MNIST达96.7%、CIFAR-10达61.7%，首次在卷积网络和PPO强化学习上成功应用。训练后自动实现37.3%权重稀疏化，天然适配神经形态芯片。</div>
+      <a class="ni-link" href="https://www.techtimes.com/articles/320902/20260718/brain-like-learning-rule-cracks-convolutional-networks-sakana-ai-measures-biology-tax.htm" target="_blank">TechTimes 原文 →</a>
+    </div>
+    <div class="news-item">
+      <div class="ni-title">印度实现全球首次核能制氢：快堆驱动零排放氢生产，效率达电解法两倍</div>
+      <div class="ni-meta">📍 <span class="src">Modern Diplomacy</span> · 2026.07.19</div>
+      <div class="ni-desc">印度原子能部在泰米尔纳德邦启用全球首个核能制氢设施，以快中子增殖试验堆核热驱动铜-氯热化学循环分解水，零排放制氢效率50%。全链条从反应堆到制氢工艺100%国产化。</div>
+      <a class="ni-link" href="https://moderndiplomacy.eu/2026/07/19/indias-nuclear-hydrogen-moment-a-world-first-in-search-of-a-strategy/" target="_blank">Modern Diplomacy 原文 →</a>
+    </div>
+    <div class="news-item">
+      <div class="ni-title">科学家确认灭绝恐龙的小行星是极罕见的CO型球粒陨石，来自太阳系外围</div>
+      <div class="ni-meta">📍 <span class="src">ScienceDaily · Science Advances</span> · 2026.07.19</div>
+      <div class="ni-desc">UBC国际团队通过分析全球K-Pg界线粘土层镍同位素，确定希克苏鲁伯撞击体是CO型碳质球粒陨石。其低硫特性表明灭绝主因可能并非硫化物，而是巨量尘埃抛射导致的全球变冷。</div>
+      <a class="ni-link" href="http://www.sciencedaily.com/releases/2026/07/260718010142.htm" target="_blank">ScienceDaily 原文 →</a>
     </div>
   </div>
 
-  <!-- 头条 #3 -->
-  <div class="headline-card">
-    <div class="card-body">
-      <span class="card-tag tech">💻 科技</span>
-      <div class="card-title">中国发射全球首个太空计算网络，千颗算力卫星计划直指AI制高点</div>
-      <div class="card-meta">📍 <span class="source">Reuters / Sada Elbalad</span> · 2026年7月19日</div>
-      <div class="card-summary">上海星烁天算空间技术公司成功发射首批卫星，启动全球首个商业太空计算网络建设。该计划最终将在轨部署1000颗具备AI算力的卫星，实现数据处理直接在太空完成，无需依赖地面数据中心。此举可大幅降低地面基础设施压力，同时为下一代AI应用、云服务和通信提供全新算力平台。发射恰逢习近平主席出席上海世界人工智能大会并重申中国构建全球AI发展新框架的承诺。SpaceX在年初与xAI合并后也在推进类似计划，中美太空计算竞争正式打响。</div>
-      <a class="card-link" href="https://see.news/china-launches-first-space-computing-network-in-major-push-for-ai-leadership" target="_blank">📎 阅读原文 →</a>
+  <!-- ===== 财经 ===== -->
+  <div class="section-head">
+    <span class="section-label">BUSINESS</span>
+    <span class="section-line"></span>
+    <span class="section-name">财经</span>
+  </div>
+
+  <!-- 财经 · 深度解读 -->
+  <article class="feature">
+    <img class="feature-img" src="" alt="" onerror="this.style.display='none'">
+    <div class="feature-body">
+      <span class="feature-label business">深度解读</span>
+      <h2 class="feature-title">战争经济学：油价、军费与市场的三重绞杀</h2>
+      <div class="feature-meta">核验信源：<span class="src">Al Jazeera · CHOSUNBIZ · Mott Capital · DNYUZ · AP News</span></div>
+      <p class="feature-desc">美伊冲突正在全球市场制造三重压力：其一，美国海军封锁导致每日至少150万桶伊朗原油退出市场，布伦特原油从76美元飙升至88美元，伊朗里亚尔跌至193万兑1美元历史新低；其二，美军弹药消耗惊人——冲突前40天消耗超13,000枚精确打击弹药、约半数爱国者导弹和过半THAAD拦截弹，五角大楼申请创纪录的1.5万亿美元2027财年预算，但弹药库存重建至少需四年；其三，T-Bill结算正进入年度最密集期，9月前市场流动性持续收紧。标普500在结算日上涨概率仅45%。60%选民认为对伊战争"不值代价"，11月中期选举前局势将愈加复杂。</p>
+    </div>
+  </article>
+
+  <div class="news-grid">
+    <div class="news-item">
+      <div class="ni-title">美军重新封锁伊朗港口：日失150万桶石油供应，全球能源市场再受冲击</div>
+      <div class="ni-meta">📍 <span class="src">Al Jazeera</span> · 2026.07.18</div>
+      <div class="ni-desc">美军重新实施对伊朗南部港口海上封锁，撤销停火备忘录石油与银行豁免。伊朗议长加利巴夫承认上次封锁期间"一滴油也未能出口"。里亚尔续创历史新低，德黑兰证交所一周再跌2.4%。</div>
+      <a class="ni-link" href="https://www.aljazeera.com/economy/2026/7/18/what-to-expect-after-the-us-reimposes-naval-blockade-on-irans-ports" target="_blank">Al Jazeera 原文 →</a>
+    </div>
+    <div class="news-item">
+      <div class="ni-title">特朗普全面战争风险：弹药库存告急、通胀飙升、海湾盟友日益离心</div>
+      <div class="ni-meta">📍 <span class="src">CHOSUNBIZ</span> · 2026.07.19</div>
+      <div class="ni-desc">美媒披露特朗普正考虑扩大对伊行动——包括出动地面部队夺取伊朗岛屿和轰炸核设施。然而弹药严重不足，国防部申请创纪录预算，重建库存至少四年。战略石油储备处历史低位。</div>
+      <a class="ni-link" href="https://biz.chosun.com/en/en-international/2026/07/19/72ZXW7NYERDZRA3HOPGRGKLR5A/" target="_blank">CHOSUNBIZ 原文 →</a>
+    </div>
+    <div class="news-item">
+      <div class="ni-title">现代汽车会长增持波士顿动力至25%股权，人形机器人Atlas加速纳斯达克IPO</div>
+      <div class="ni-meta">📍 <span class="src">The Korea Times</span> · 2026.07.19</div>
+      <div class="ni-desc">郑义宣拟追加投资1200亿韩元将个人持股提升至25%，同时收购软银所持9.65%股份，交易完成后集团将全资控股。Atlas计划2028年部署零件分拣、2030年扩展至组件装配。上市估值有望突破100万亿韩元。</div>
+      <a class="ni-link" href="https://www.koreatimes.co.kr/business/companies/20260719/hyundai-motor-chief-to-raise-boston-dynamics-stake-fueling-nasdaq-ipo-prospect" target="_blank">Korea Times 原文 →</a>
+    </div>
+    <div class="news-item">
+      <div class="ni-title">美国T-Bill结算进入年度密集期：流动性持续抽干，9月前股市承压难解</div>
+      <div class="ni-meta">📍 <span class="src">Mott Capital Management</span> · 2026.07.18</div>
+      <div class="ni-desc">上周净结算约650亿美元，本周增加560亿和370亿美元。近九月统计：标普500结算日上涨概率仅45%，科技板块XLK结算日平均下跌41个基点。流动性紧张至少持续至9月初。</div>
+      <a class="ni-link" href="https://mottcapitalmanagement.com/the-markets-liquidity-drain-is-reaching-its-heaviest-stretch/" target="_blank">Mott Capital 原文 →</a>
     </div>
   </div>
 
-  <!-- 头条 #4 -->
-  <div class="headline-card">
-    <div class="card-body">
-      <span class="card-tag politics">🌐 全球政治</span>
-      <div class="card-title">伊朗宣布全面中止停火备忘录，50人死于美方空袭，最高领袖发出"难忘教训"警告</div>
-      <div class="card-meta">📍 <span class="source">Al Jazeera</span> · 2026年7月18日</div>
-      <div class="card-summary">伊朗副外长加里巴巴迪周六宣布，因美国"违反并中止了伊斯兰堡备忘录中的所有承诺"，德黑兰同样中止所有自身义务。伊朗卫生部报告称，7月6日以来已有至少50人死于美军空袭、超过500人受伤。美军第七夜打击完全摧毁了邦吉海水淡化厂，导致约1万人断水。作为报复，伊朗向科威特、巴林、约旦和沙特多国美军基地发动大规模导弹与无人机协同攻击，科威特被迫关闭领空。伊朗最高领袖穆杰塔巴·哈梅内伊发表声明，称特朗普的签字"毫无价值、毫无信誉"，并警告将让美国"汲取难忘的教训"。</div>
-      <a class="card-link" href="https://www.aljazeera.com/news/2026/7/18/iran-accuses-us-of-striking-critical-infrastructure-as-war-intensifies" target="_blank">📎 阅读原文（Al Jazeera）→</a>
-    </div>
-  </div>
+</main>
 
-  <!-- 头条 #5 -->
-  <div class="headline-card">
-    <div class="card-body">
-      <span class="card-tag tech">💻 科技</span>
-      <div class="card-title">英伟达Vera Rubin七芯片平台投产：大模型训练只需四分之一GPU，推理成本降至十分之一</div>
-      <div class="card-meta">📍 <span class="source">TechTimes</span> · 2026年7月18日</div>
-      <div class="card-summary">英伟达发布Vera Rubin平台技术白皮书，披露"极限协同设计"的七芯片架构细节。每颗Rubin GPU搭载288GB HBM4显存，聚合带宽达22TB/s（较Blackwell提升2.8倍）；NVLink 6互连带宽3.6TB/s（翻倍）。据NVIDIA官方数据，大模型训练所需GPU数量降至Blackwell的四分之一，推理Token成本降至十分之一。第七颗芯片Groq 3 LPX专为AI Agent的解码阶段设计。该平台已于6月全面投产，CoreWeave率先完成首个NVL72机架验证，AWS、Google Cloud、Azure等主流云厂商下半年陆续部署。</div>
-      <a class="card-link" href="https://www.techtimes.com/articles/320933/20260718/nvidia-vera-rubin-cuts-post-training-token-costs-seven-chip-codesign.htm" target="_blank">📎 阅读原文 →</a>
-    </div>
-  </div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="ft-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  交叉核验 · 事实优先 · 拒绝噪音<br>
+  本日报由 CherryClaw AI 自动生成，每日更新<br>
+  <span class="ft-note">所有新闻原文为英文，中文翻译由AI辅助完成 · 内容仅供参考，不代表本平台立场</span>
+</footer>
 
-  <!-- ============ 科技速览 ============ -->
-  <div class="section-title">💻 科技速览</div>
+<!-- Back to top -->
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-  <div class="sub-news">
-    <div class="sn-title">DARPA成功将AI飞行员装上老旧F-16，无需改写飞机核心飞控软件</div>
-    <div class="sn-meta">📍 <span class="source">Interesting Engineering</span> · 2026年7月18日</div>
-    <div class="sn-summary">DARPA与美国空军完成VENOM自主套件改装的F-16首飞。人类飞行员完成起飞后将控制权移交AI，AI全程操控飞行并自主管理传感器与任务系统——关键突破在于无需重写F-16核心软件，大幅降低老旧战机AI化改造成本。该计划最终目标是由人类飞行员指挥AI战机编队执行超视距自主作战。</div>
-    <a class="sn-link" href="https://interestingengineering.com/innovation/us-darpa-retrofit-f16-for-autonomous-flight" target="_blank">阅读原文 →</a>
-  </div>
+<script>
+// Back to top visibility
+window.addEventListener('scroll',function(){
+  document.getElementById('btt').classList.toggle('visible',window.scrollY>600)
+})
+</script>
 
-  <div class="sub-news">
-    <div class="sn-title">日本Sakana AI实现仿脑学习里程碑：首次成功训练卷积网络和强化学习</div>
-    <div class="sn-meta">📍 <span class="source">TechTimes</span> · 2026年7月18日</div>
-    <div class="sn-summary">估值26.5亿美元的东京Sakana AI在arXiv发表突破性论文，利用基于Dale原理的"错误扩散"算法，在完全不用反向传播的情况下，在MNIST上达96.7%准确率、CIFAR-10上达61.7%。这是仿脑学习首次在卷积网络和PPO强化学习上成功应用。该技术天然适配神经形态芯片和光子计算硬件，且训练后自动实现37.3%权重稀疏化。</div>
-    <a class="sn-link" href="https://www.techtimes.com/articles/320902/20260718/brain-like-learning-rule-cracks-convolutional-networks-sakana-ai-measures-biology-tax.htm" target="_blank">阅读原文 →</a>
-  </div>
-
-  <div class="sub-news">
-    <div class="sn-title">印度实现全球首次核能制氢：快中子增殖堆驱动零排放氢生产，效率达电解法两倍</div>
-    <div class="sn-meta">📍 <span class="source">Modern Diplomacy</span> · 2026年7月19日</div>
-    <div class="sn-summary">印度原子能部在泰米尔纳德邦卡尔帕卡姆启用全球首个核能制氢设施。该设施利用自主研制的铜-氯（Cu-Cl）热化学循环，以快中子增殖试验堆的核工艺热直接分解水，实现零排放制氢，效率达50%（传统电解法两倍）。全链条从反应堆到制氢工艺100%国产化，为印度突破85%原油进口依赖、实现能源自主提供战略支撑。</div>
-    <a class="sn-link" href="https://moderndiplomacy.eu/2026/07/19/indias-nuclear-hydrogen-moment-a-world-first-in-search-of-a-strategy/" target="_blank">阅读原文 →</a>
-  </div>
-
-  <div class="sub-news">
-    <div class="sn-title">科学家确认6600万年前灭绝恐龙的是一颗极罕见的CO型球粒陨石</div>
-    <div class="sn-meta">📍 <span class="source">ScienceDaily · Science Advances</span> · 2026年7月19日</div>
-    <div class="sn-summary">不列颠哥伦比亚大学联合国际团队通过分析全球白垩纪-古近纪界线粘土层中的镍同位素特征，确定灭绝恐龙的小行星是极为罕见的CO型碳质球粒陨石，可能来自太阳系外围或小行星带远端。其含硫量极低的特性表明：导致全球物种大灭绝的主要元凶可能并非硫化物，而是撞击抛射入大气的巨量碎屑和尘埃引发的全球变冷。</div>
-    <a class="sn-link" href="http://www.sciencedaily.com/releases/2026/07/260718010142.htm" target="_blank">阅读原文 →</a>
-  </div>
-
-  <!-- ============ 财经观察 ============ -->
-  <div class="section-title">💰 财经观察</div>
-
-  <div class="sub-news">
-    <div class="sn-title">美军重新封锁伊朗港口：日失150万桶石油供应，伊朗里亚尔跌至历史新低</div>
-    <div class="sn-meta">📍 <span class="source">Al Jazeera</span> · 2026年7月18日</div>
-    <div class="sn-summary">美军在冲突升级后重新实施对伊朗南部港口的海上封锁，撤销停火备忘录中的石油与银行豁免。能源分析师估计每日至少150万桶伊朗原油将退出国际市场，推动布伦特原油逼近90美元/桶。伊朗议长加利巴夫承认上次封锁期间"一滴油也未能出口"。伊朗里亚尔兑美元跌至193万里亚尔历史新低，德黑兰证交所一周再跌2.4%。分析警告若冲突持续，全球经济将面临更严重的能源供给冲击。</div>
-    <a class="sn-link" href="https://www.aljazeera.com/economy/2026/7/18/what-to-expect-after-the-us-reimposes-naval-blockade-on-irans-ports" target="_blank">阅读原文 →</a>
-  </div>
-
-  <div class="sub-news">
-    <div class="sn-title">现代汽车会长增持波士顿动力至25%股权，人形机器人Atlas加速纳斯达克IPO</div>
-    <div class="sn-meta">📍 <span class="source">The Korea Times</span> · 2026年7月19日</div>
-    <div class="sn-summary">现代汽车集团会长郑义宣拟追加投资1200亿韩元（约8050万美元），将个人持股从22.6%提升至25%，同时收购软银所持9.65%股份。交易完成后集团将全资控股波士顿动力。Atlas人形机器人计划于2028年在乔治亚州Metaplant工厂部署零件分拣，2030年扩展至组件装配。市场预期公司上市后估值有望突破100万亿韩元。</div>
-    <a class="sn-link" href="https://www.koreatimes.co.kr/business/companies/20260719/hyundai-motor-chief-to-raise-boston-dynamics-stake-fueling-nasdaq-ipo-prospect" target="_blank">阅读原文 →</a>
-  </div>
-
-  <div class="sub-news">
-    <div class="sn-title">美国国债结算进入年度密集期：市场流动性持续抽干，9月前股市承压难解</div>
-    <div class="sn-meta">📍 <span class="source">Mott Capital Management</span> · 2026年7月18日</div>
-    <div class="sn-summary">分析指出美国国债净结算正进入年度最高峰期。上周净结算约650亿美元，本周还将增加560亿和370亿美元。近九个月的统计显示标普500在T-Bill结算日上涨概率仅45%，科技板块XLK结算日平均下跌41个基点。模型预测这种流动性紧张至少持续至9月初，届时随结算转为还款才可能迎来阶段性缓解。</div>
-    <a class="sn-link" href="https://mottcapitalmanagement.com/the-markets-liquidity-drain-is-reaching-its-heaviest-stretch/" target="_blank">阅读原文 →</a>
-  </div>
-
-  <div class="sub-news">
-    <div class="sn-title">特朗普全面战争风险：美军弹药库存告急、通胀飙升、海湾盟友日益离心</div>
-    <div class="sn-meta">📍 <span class="source">CHOSUNBIZ</span> · 2026年7月19日</div>
-    <div class="sn-summary">多家美媒披露特朗普正考虑扩大对伊军事行动——包括出动地面部队夺取伊朗岛屿和轰炸核设施。然而美军弹药已严重不足：战争前40天消耗超13000枚精确打击弹药、约50%爱国者导弹和过半THAAD拦截弹。国防部申请创纪录1.5万亿美元2027财年预算，但重建库存至少需要四年。战略石油储备处于历史低位，11月中期选举前60%选民认为对伊战争"不值代价"。</div>
-    <a class="sn-link" href="https://biz.chosun.com/en/en-international/2026/07/19/72ZXW7NYERDZRA3HOPGRGKLR5A/" target="_blank">阅读原文 →</a>
-  </div>
-
-  <!-- ============ 全球政治 ============ -->
-  <div class="section-title">🗺️ 全球政治</div>
-
-  <div class="sub-news">
-    <div class="sn-title">伊朗大规模攻击多国美军基地，海合会谴责攻击民用设施构成"战争罪"</div>
-    <div class="sn-meta">📍 <span class="source">ABC News · AP News</span> · 2026年7月19日</div>
-    <div class="sn-summary">伊朗革命卫队声称对科威特、巴林、约旦、沙特和卡塔尔的美军基地发动协同攻击：摧毁了科威特Arifjan营地和Ali Al Salem空军基地的雷达设施，命中巴林Sheikh Isa空军基地战机装配点，并在约旦Azraq基地摧毁至少两架美军战机和多架飞机。科威特被迫关闭领空，两座电力和海水淡化厂被击中，多名消防员在灭火中受伤。海合会秘书长布代维声明"攻击民用基础设施构成战争罪"，联合国秘书长古特雷斯表达严重关切。</div>
-    <a class="sn-link" href="https://www.abc.net.au/news/2026-07-19/blog-us-warns-of-middle-east-travel/106932620" target="_blank">📎 阅读原文（ABC News 滚动直播）→</a>
-  </div>
-
-  <div class="sub-news">
-    <div class="sn-title">美军打击摧毁伊朗南部关键民用基础设施：桥梁、铁路、海水淡化厂均遭重创</div>
-    <div class="sn-meta">📍 <span class="source">AP News · Al Jazeera</span> · 2026年7月18日</div>
-    <div class="sn-summary">美军第七夜连续空袭覆盖伊朗南部"侦察站点、军事物流基础设施、地下武器库和海上能力"。邦吉淡化厂被完全摧毁，20个村庄约1万人断水；通往阿巴斯港的两条隧道和多座桥梁被炸毁，主要公路交通中断。分析人士认为对伊朗南部沿岸基础设施的系统性打击可能是在为潜在的地面部队登陆做准备。伊朗方面谴责美方犯下战争罪，并警告将以打击海湾地区类似目标进行对等报复。</div>
-    <a class="sn-link" href="https://apnews.com/article/iran-us-hormuz-strait-war-july-18-2026-5adfef67554652580963684d9a663af2" target="_blank">📎 阅读原文（AP News）→</a>
-  </div>
-
-  <div class="sub-news">
-    <div class="sn-title">俄罗斯对基辅发动开战以来最大规模弹道导弹袭击，至少1死15伤</div>
-    <div class="sn-meta">📍 <span class="source">NHK · AA.com.tr</span> · 2026年7月19日</div>
-    <div class="sn-summary">乌克兰当局通报，俄罗斯于周末对首都基辅发动了自2022年全面入侵以来最大规模的弹道导弹攻击，造成至少1人死亡、15人受伤。乌克兰防空系统拦截了大部分来袭导弹，但残骸仍造成多处地面破坏。此轮袭击在全球注意力集中于美伊冲突之际发动，显示俄罗斯持续的战略打击能力与意图。</div>
-    <a class="sn-link" href="https://www.aa.com.tr/en/americas/us-forces-launch-new-strikes-on-iran-targeting-irgc-units-centcom/4002538" target="_blank">阅读原文 →</a>
-  </div>
-
-  <div class="sub-news">
-    <div class="sn-title">日本防卫大臣罕见呼吁就核武器展开全国辩论，战后安保政策或迎重大转向</div>
-    <div class="sn-meta">📍 <span class="source">AA.com.tr</span> · 2026年7月19日</div>
-    <div class="sn-summary">日本防卫大臣在接受采访时表示，鉴于日益严峻的地区安全环境——朝鲜持续试射导弹、台海紧张局势以及美伊全面战争——日本需要就核武器议题展开全国性辩论。这一表态在日本战后"无核三原则"的政治传统中极为罕见，反映出东亚安全格局正在经历深层次重塑，日本核政策或将迎来历史性转折。</div>
-    <a class="sn-link" href="https://www.aa.com.tr/en/americas/us-forces-launch-new-strikes-on-iran-targeting-irgc-units-centcom/4002538" target="_blank">阅读原文 →</a>
-  </div>
-
-</div><!-- /content -->
-
-<div class="footer">
-  <div class="foot-brand">🌍 全球新闻早报</div>
-  由 CherryClaw AI 自动生成 | 2026年7月19日<br>
-  新闻来源：BBC · Reuters · AP News · Al Jazeera · ABC News · DNYUZ · TechTimes · ScienceDaily · Korea Times · Modern Diplomacy 等国际媒体<br>
-  <div class="foot-info">每日自动更新 · 内容仅供参考，不代表本平台立场<br>所有新闻原文为英文，中文翻译由 AI 辅助完成，力求准确但不构成专业建议</div>
-</div>
-
-</div><!-- /container -->
 </body>
 </html>
