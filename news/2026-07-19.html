@@ -15,47 +15,53 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 @media(min-width:768px){.wrap{max-width:720px}}
 @media(min-width:1024px){.wrap{max-width:880px}}
 
-/* ===== Header (紧凑) ===== */
-.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:24px 24px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.hd .hd-left{display:flex;align-items:baseline;gap:10px}
-.hd .hd-brand{font-size:24px;font-weight:800;letter-spacing:1px}
-.hd .hd-sub{font-size:12px;opacity:.4;letter-spacing:2px}
-.hd .hd-right{text-align:right;font-size:12px;opacity:.5;line-height:1.6}
-.hd .hd-right .no{font-size:14px;color:#c0392b;font-weight:700;opacity:1}
-@media(min-width:768px){.hd{padding:28px 36px 24px}.hd .hd-brand{font-size:28px}}
+/* ===== Header (一体化紧凑) ===== */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;border-bottom:3px solid #c0392b}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.5;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#c0392b;font-weight:700;opacity:1}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
 
-/* ===== TOC 目录导航 ===== */
-.toc{background:#fff;border-bottom:1px solid #e8e8e8;padding:12px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+/* ===== TOC ===== */
+.toc{background:#fff;padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid #e8e8e8}
 .toc .toc-label{font-size:11px;font-weight:700;color:#999;letter-spacing:2px;margin-right:8px;flex-shrink:0}
 .toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:#555;text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
-.toc a:hover,.toc a:focus{color:#c0392b;border-color:#e74c3c;background:#fef5f5}
+.toc a:hover,.toc a:focus{color:#c0392b;border-color:#c0392b;background:#fef5f5}
 
-/* ===== Content ===== */
-.ct{background:#fff;padding:28px 20px 40px}
-@media(min-width:768px){.ct{padding:36px 32px 48px}}
+/* ===== 内容区 ===== */
+.ct{padding:0}
 
-/* ===== 前言 ===== */
-.preface{border:1px solid #d5dbe3;border-radius:10px;padding:20px 22px;margin-bottom:36px;position:relative}
-.preface::before{content:'编者按';position:absolute;top:-11px;left:20px;background:#1a1a2e;color:#fff;font-size:11px;font-weight:700;padding:2px 14px;border-radius:4px;letter-spacing:1px}
-.preface p{font-size:14px;color:#555;line-height:2;margin-top:4px}
+/* ===== 前言 (独立卡片) ===== */
+.preface{background:#fff;border-bottom:1px solid #e8e8e8;padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:#1a1a2e;padding:4px 14px;border:1px solid #1a1a2e;border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14px;color:#555;line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}}
 
-/* ===== Section Block (每个板块整体) ===== */
-.section-block{margin-bottom:40px;scroll-margin-top:60px}
-.section-block:last-child{margin-bottom:0}
+/* ===== Section Block ===== */
+.sec{scroll-margin-top:60px}
+.sec:nth-child(odd) .sec-inner{background:#fff}
+.sec:nth-child(even) .sec-inner{background:#f8f9fb}
 
-/* ===== Section Header ===== */
-.sec-hd{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid #1a1a2e}
-.sec-hd .sec-num{font-size:28px;font-weight:900;color:#c0392b;opacity:.25;line-height:1}
-.sec-hd .sec-name{font-size:18px;font-weight:800;color:#1a1a2e;letter-spacing:.5px}
-.sec-hd .sec-en{font-size:11px;color:#999;letter-spacing:2px;margin-left:4px}
-@media(min-width:768px){.sec-hd .sec-name{font-size:20px}}
+/* ===== Section Header (大幅加强) ===== */
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:#c0392b;line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:#1a1a2e;display:block}
+.sec-hd .sec-en{font-size:10px;color:#999;letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:#d0d0d0;align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
 
-/* ===== Headline Card ===== */
-.hl{display:flex;flex-direction:column;border:1px solid #eee;border-radius:10px;overflow:hidden;margin-bottom:16px;background:#fff;transition:box-shadow .2s}
+/* ===== Section Inner ===== */
+.sec-inner{padding:16px 24px 28px}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* ===== Headline ===== */
+.hl{border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;margin-bottom:14px;background:#fff;transition:box-shadow .2s}
 .hl:hover{box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.hl .hl-img{width:100%;aspect-ratio:2/1;object-fit:cover;background:#eef1f5}
+.hl .hl-img{width:100%;aspect-ratio:2/1;object-fit:cover;background:#eef1f5;display:block}
 .hl .hl-body{padding:18px}
-.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:4px;margin-bottom:8px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
 .hl .hl-tag.pol{background:#2471a3}.hl .hl-tag.biz{background:#b9770e}.hl .hl-tag.tec{background:#1e8449}
 .hl .hl-title{font-size:16px;font-weight:800;color:#1a1a2e;line-height:1.6;margin-bottom:6px}
 .hl .hl-meta{font-size:11px;color:#999;margin-bottom:8px}
@@ -64,18 +70,20 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 .hl .hl-link{font-size:12px;font-weight:600;color:#c0392b;text-decoration:none}
 .hl .hl-link:hover{text-decoration:underline}
 @media(min-width:768px){
-  .hl{flex-direction:row}
+  .hl{display:flex}
   .hl .hl-img{width:220px;aspect-ratio:auto;min-height:200px;flex-shrink:0}
   .hl .hl-body{flex:1;padding:20px}
 }
 @media(min-width:1024px){.hl .hl-img{width:260px}}
 
-/* ===== Feature (深度解读) ===== */
-.ft{border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;margin-bottom:20px;background:#fafbfc}
-.ft .ft-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#dde1e8}
+/* ===== Feature ===== */
+.ft{border:1px solid #d8dce3;border-radius:10px;overflow:hidden;margin-bottom:18px;background:#fff}
+.ft .ft-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#dde1e8;display:block}
 .ft .ft-body{padding:22px}
-.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:4px;margin-bottom:10px}
-.ft .ft-label.pol{color:#1a5276;background:#d6eaf8}.ft .ft-label.biz{color:#7d6608;background:#fdebd0}.ft .ft-label.tec{color:#145a32;background:#d5f5e3}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:#1a5276;border-color:#2980b9;background:#d6eaf8}
+.ft .ft-label.biz{color:#7d6608;border-color:#e67e22;background:#fdebd0}
+.ft .ft-label.tec{color:#145a32;border-color:#27ae60;background:#d5f5e3}
 .ft .ft-title{font-size:17px;font-weight:800;color:#1a1a2e;line-height:1.5;margin-bottom:8px}
 .ft .ft-meta{font-size:11px;color:#999;margin-bottom:12px}
 .ft .ft-meta .src{font-weight:700;color:#c0392b}
@@ -90,8 +98,8 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 .ngrid{display:grid;gap:12px}
 @media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
 
-.ni{border:1px solid #f0f0f0;border-radius:8px;padding:14px 16px;transition:border-color .2s}
-.ni:hover{border-color:#d0d0d0}
+.ni{border:1px solid #eee;border-radius:8px;padding:14px 16px;background:#fff;transition:box-shadow .15s}
+.ni:hover{box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .ni .ni-title{font-size:14px;font-weight:700;color:#1a1a2e;line-height:1.6;margin-bottom:4px}
 .ni .ni-meta{font-size:11px;color:#999;margin-bottom:6px}
 .ni .ni-meta .src{font-weight:700;color:#c0392b}
@@ -102,7 +110,7 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 .ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
 .ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
 
-/* ===== Back to top ===== */
+/* ===== BTT ===== */
 .btt{position:fixed;bottom:20px;right:20px;width:38px;height:38px;background:#1a1a2e;color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.2);z-index:99}
 .btt.on{opacity:.8}
 .btt:hover{opacity:1}
@@ -114,18 +122,18 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 
 <!-- ====== Header ====== -->
 <header class="hd">
-  <div class="hd-left">
+  <div>
     <span class="hd-brand">陆先生日报</span>
     <span class="hd-sub">LUXIANSHENG DAILY</span>
   </div>
-  <div class="hd-right">
-    <div class="no">No.001</div>
+  <div class="hd-meta">
+    <div class="no">No. 001</div>
     <div>2026.07.19 周日</div>
   </div>
 </header>
 
-<!-- ====== 目录导航 ====== -->
-<nav class="toc" id="toc">
+<!-- ====== 目录 ====== -->
+<nav class="toc">
   <span class="toc-label">目录</span>
   <a href="#headlines">今日头条</a>
   <a href="#politics">全球政治</a>
@@ -133,47 +141,48 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
   <a href="#business">财经</a>
 </nav>
 
-<!-- ====== 内容区 ====== -->
 <main class="ct">
 
-  <!-- 前言 -->
+  <!-- ====== 前言 ====== -->
   <section class="preface">
+    <div class="pf-label">编者按</div>
     <p>今日全球焦点集中于持续升级的美伊冲突——美军第八夜空袭伊朗，两名美军在约旦阵亡，停火备忘录名存实亡；霍尔木兹海峡局势推升布伦特原油周涨近16%至88美元，全球市场随之剧烈震荡。与此同时，中国AI模型Kimi K3横空出世，英伟达Vera Rubin七芯片平台正式投产。以下报道均交叉核验至少两个独立信源。</p>
   </section>
 
   <!-- ====== 今日头条 ====== -->
-  <section class="section-block" id="headlines">
+  <section class="sec" id="headlines">
     <div class="sec-hd">
       <span class="sec-num">01</span>
-      <span class="sec-name">今日头条</span>
-      <span class="sec-en">HEADLINES</span>
+      <div class="sec-text">
+        <span class="sec-name">今日头条</span>
+        <span class="sec-en">Headlines</span>
+      </div>
+      <span class="sec-line"></span>
     </div>
+    <div class="sec-inner">
 
-    <!-- 头条 1 -->
     <article class="hl">
       <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
       <div class="hl-body">
         <span class="hl-tag pol">全球政治</span>
         <h3 class="hl-title">美伊冲突急剧升级：两名美军约旦阵亡，美军第八夜连续空袭伊朗革命卫队</h3>
-        <div class="hl-meta">📍 <span class="src">BBC News</span> · 2026.07.19 05:10 UTC &nbsp;|&nbsp; 交叉核验：AP News · Al Jazeera</div>
-        <p class="hl-desc">美国中央司令部周六宣布对伊朗发动第八夜连续空袭，目标包括沿海监视设施、防空系统及革命卫队军事资产。此前一天伊朗向约旦美军基地发射弹道导弹与无人机，致两名美军阵亡、一人失踪、四人受伤。防长赫格塞斯回应"英雄的牺牲只会坚定我们的决心"。伊朗军方随后宣布对科威特两处美军基地发动大规模无人机攻击。自2月28日冲突爆发，美军累计阵亡升至16人。</p>
+        <div class="hl-meta">📍 <span class="src">BBC News</span> · 2026.07.19 &nbsp;|&nbsp; 交叉核验：AP News · Al Jazeera</div>
+        <p class="hl-desc">美国中央司令部周六宣布对伊朗发动第八夜连续空袭，目标包括沿海监视设施、防空系统及革命卫队军事资产。此前一天伊朗向约旦美军基地发射弹道导弹与无人机，致两名美军阵亡、一人失踪、四人受伤。防长赫格塞斯回应"英雄的牺牲只会坚定我们的决心"。伊朗军方随后宣布对科威特两处美军基地发动大规模无人机攻击。自2月28日冲突爆发，美军累计阵亡升至16人。上月签署的伊斯兰堡停火备忘录——特朗普已于7月8日宣布其"终结"。</p>
         <a class="hl-link" href="https://www.bbc.com/news/articles/cgk417jp83po" target="_blank">BBC 原文 →</a>
       </div>
     </article>
 
-    <!-- 头条 2 -->
     <article class="hl">
       <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
       <div class="hl-body">
         <span class="hl-tag biz">财经</span>
         <h3 class="hl-title">AI明星股遭遇全球抛售：英伟达盘中失市值王座，台积电暴跌7.3%，油价一周飙涨16%</h3>
         <div class="hl-meta">📍 <span class="src">DNYUZ</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：EasternEye · AP News</div>
-        <p class="hl-desc">周五抛售加剧：标普500跌1%至7,457.69，纳指重挫1.4%。英伟达跌2.2%盘中一度让出全球市值第一。台积电暴跌7.3%，台北股市跌6.5%、日经跌4%、上证跌3%。中国月之暗面Kimi K3被视为低成本挑战西方AI巨头的最新信号。布伦特原油跳涨4.6%至88.10美元/桶。Netflix跌7.3%，SpaceX触上市以来新低。</p>
+        <p class="hl-desc">周五抛售加剧：标普500跌1%至7,457.69，纳指重挫1.4%。英伟达跌2.2%盘中一度让出全球市值第一。台积电暴跌7.3%，台北股市跌6.5%、日经跌4%、上证跌3%。中国月之暗面Kimi K3被视为低成本挑战西方AI巨头的最新信号。布伦特原油跳涨4.6%至88.10美元/桶，一周前仅76美元。Netflix跌7.3%，SpaceX触上市以来新低。</p>
         <a class="hl-link" href="https://dnyuz.com/2026/07/18/the-sell-off-for-ai-stars-worsens-while-oil-prices-keep-jumping/" target="_blank">DNYUZ 原文 →</a>
       </div>
     </article>
 
-    <!-- 头条 3 -->
     <article class="hl">
       <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
       <div class="hl-body">
@@ -185,19 +194,17 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
       </div>
     </article>
 
-    <!-- 头条 4 -->
     <article class="hl">
       <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
       <div class="hl-body">
         <span class="hl-tag pol">全球政治</span>
         <h3 class="hl-title">伊朗全面中止停火备忘录：50人死于美方空袭，最高领袖警告"难忘教训"</h3>
         <div class="hl-meta">📍 <span class="src">Al Jazeera</span> · 2026.07.18 &nbsp;|&nbsp; 交叉核验：Fars News · NHK</div>
-        <p class="hl-desc">伊朗副外长加里巴巴迪宣布因美方"违反并中止备忘录所有承诺"，德黑兰同样中止全部义务。卫生部报告7月来至少50人死亡、500余人受伤。第七夜打击摧毁邦吉海水淡化厂致万人断水。伊朗向科威特、巴林、约旦等多国美军基地发动协同攻击，科威特被迫关闭领空。最高领袖声明将让美国"汲取难忘教训"。</p>
+        <p class="hl-desc">伊朗副外长加里巴巴迪宣布因美方"违反并中止备忘录所有承诺"，德黑兰同样中止全部义务。卫生部报告7月来至少50人死亡、500余人受伤。第七夜打击摧毁邦吉淡化厂致万人断水。伊朗向科威特、巴林、约旦等多国美军基地发动导弹与无人机协同攻击，科威特被迫关闭领空。最高领袖穆杰塔巴·哈梅内伊声明将让美国"汲取难忘教训"。</p>
         <a class="hl-link" href="https://www.aljazeera.com/news/2026/7/18/iran-accuses-us-of-striking-critical-infrastructure-as-war-intensifies" target="_blank">Al Jazeera 原文 →</a>
       </div>
     </article>
 
-    <!-- 头条 5 -->
     <article class="hl">
       <img class="hl-img" src="" alt="" onerror="this.style.display='none'">
       <div class="hl-body">
@@ -208,24 +215,28 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
         <a class="hl-link" href="https://www.vindy.com/news/business-news/2026/07/banks-rake-in-big-profits-as-both-wall-street-and-the-us-consumer-stay-strong/" target="_blank">AP News 原文 →</a>
       </div>
     </article>
+    </div>
   </section>
 
   <!-- ====== 全球政治 ====== -->
-  <section class="section-block" id="politics">
+  <section class="sec" id="politics">
     <div class="sec-hd">
       <span class="sec-num">02</span>
-      <span class="sec-name">全球政治</span>
-      <span class="sec-en">POLITICS</span>
+      <div class="sec-text">
+        <span class="sec-name">全球政治</span>
+        <span class="sec-en">Politics</span>
+      </div>
+      <span class="sec-line"></span>
     </div>
+    <div class="sec-inner" style="background:#f8f9fb">
 
-    <!-- 深度解读 -->
     <article class="ft">
       <img class="ft-img" src="" alt="" onerror="this.style.display='none'">
       <div class="ft-body">
         <span class="ft-label pol">深度解读</span>
         <h3 class="ft-title">一场无人认输的战争：美伊冲突五个月全景回顾与当前态势</h3>
         <div class="ft-meta">核验信源：<span class="src">BBC · AP News · Al Jazeera · NHK · AA · ABC News</span></div>
-        <p class="ft-desc">自2月28日美以联合对伊朗发动首轮打击以来，这场冲突已经持续近五个月。关键节点：4月中旬美国首次实施对伊海军封锁，持续九周；6月中旬双方在伊斯兰堡签署临时停火备忘录，伊朗旋即出口数千万桶积压原油；7月8日特朗普宣布备忘录"终结"，重新封锁伊朗港口；7月11日起美军连续八夜空袭。截至目前：美军16人阵亡，伊朗方面至少50名平民死亡、500余人受伤。冲突范围已从霍尔木兹海峡扩展至科威特、巴林、约旦、沙特等海湾国家民用基础设施。联合国秘书长表达严重关切，安理会迄今未能通过任何决议。</p>
+        <p class="ft-desc">自2月28日美以联合对伊朗发动首轮打击以来，这场冲突已持续近五个月。关键节点：4月中旬美国首次实施对伊海军封锁，持续九周；6月中旬双方在伊斯兰堡签署临时停火备忘录，伊朗旋即出口数千万桶积压原油；7月8日特朗普宣布备忘录"终结"，重新封锁伊朗港口；7月11日起美军连续八夜空袭。截至目前：美军16人阵亡，伊朗至少50名平民死亡、500余人受伤。冲突范围已从霍尔木兹海峡扩展至科威特、巴林、约旦、沙特等海湾国家民用基础设施。联合国秘书长表达严重关切，安理会迄今未能通过任何决议。</p>
       </div>
     </article>
 
@@ -239,7 +250,7 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
       <div class="ni">
         <div class="ni-title">美军摧毁伊朗南部关键基础设施：桥梁、铁路、淡化厂遭重创，万人断水</div>
         <div class="ni-meta">📍 <span class="src">AP News · Al Jazeera</span> · 2026.07.18</div>
-        <div class="ni-desc">第七夜空袭系统性打击伊朗南部：邦吉淡化厂完全摧毁致20村万人断水，通往阿巴斯港的两条隧道和多座桥梁炸毁。分析人士指对沿海基础设施的系统性打击或为潜在地面登陆做准备。</div>
+        <div class="ni-desc">第七夜空袭系统性打击：邦吉淡化厂完全摧毁致20村万人断水，通往阿巴斯港的两条隧道和多座桥梁炸毁。对沿海基础设施的系统性打击或为潜在地面登陆做准备。</div>
         <a class="ni-link" href="https://apnews.com/article/iran-us-hormuz-strait-war-july-18-2026-5adfef67554652580963684d9a663af2" target="_blank">AP News →</a>
       </div>
       <div class="ni">
@@ -255,15 +266,20 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
         <a class="ni-link" href="https://www.aa.com.tr/en/americas/us-forces-launch-new-strikes-on-iran-targeting-irgc-units-centcom/4002538" target="_blank">AA →</a>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- ====== 科技 ====== -->
-  <section class="section-block" id="tech">
+  <section class="sec" id="tech">
     <div class="sec-hd">
       <span class="sec-num">03</span>
-      <span class="sec-name">科技</span>
-      <span class="sec-en">TECHNOLOGY</span>
+      <div class="sec-text">
+        <span class="sec-name">科技</span>
+        <span class="sec-en">Technology</span>
+      </div>
+      <span class="sec-line"></span>
     </div>
+    <div class="sec-inner">
 
     <article class="ft">
       <img class="ft-img" src="" alt="" onerror="this.style.display='none'">
@@ -271,15 +287,15 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
         <span class="ft-label tec">深度解读</span>
         <h3 class="ft-title">2026 AI军备竞赛年中盘点：中国模型逼近、硬件换代、开源生态重塑格局</h3>
         <div class="ft-meta">核验信源：<span class="src">TechXplore · TechTimes · Bank of America Research · NVIDIA Blog</span></div>
-        <p class="ft-desc">2026年上半年AI领域三条主线交织。一是中国开源模型加速追赶——继DeepSeek之后，月之暗面Kimi K3与智谱GLM-5.2在关键基准上逼近甚至超越美国闭源模型，使用成本仅为其一半。二是硬件代际跃迁——英伟达Vera Rubin七芯片平台6月全面投产，宣称训练GPU需求降至四分之一、推理成本降至十分之一；AMD MI400、Google Ironwood TPU v7同期推进，定制ASIC出货量年增长约44%。三是"开源vs闭源"争议升级——Anthropic和OpenAI指控中国公司通过"蒸馏"不当获取技术，而旧金山Anysphere（Cursor）承认产品基于中国模型构建。技术竞赛与地缘政治深度纠缠的格局短期内不会改变。</p>
+        <p class="ft-desc">2026年上半年AI领域三条主线交织。一是中国开源模型加速追赶——继DeepSeek之后，月之暗面Kimi K3与智谱GLM-5.2在关键基准上逼近甚至超越美国闭源模型，使用成本仅为其一半。二是硬件代际跃迁——英伟达Vera Rubin七芯片平台6月全面投产，宣称训练GPU需求降至四分之一、推理成本降至十分之一；AMD MI400、Google Ironwood TPU v7同期推进。三是"开源vs闭源"争议升级——Anthropic和OpenAI指控中国公司通过"蒸馏"获取技术，而旧金山Anysphere承认产品基于中国模型构建。技术竞赛与地缘政治深度纠缠的格局短期内不会改变。</p>
       </div>
     </article>
 
     <div class="ngrid">
       <div class="ni">
-        <div class="ni-title">英伟达Vera Rubin七芯片平台投产：推理成本降至十分之一，大模型训练仅需四分之一GPU</div>
+        <div class="ni-title">英伟达Vera Rubin七芯片平台投产：推理成本降至十分之一，训练仅需四分之一GPU</div>
         <div class="ni-meta">📍 <span class="src">TechTimes · NVIDIA Blog</span> · 2026.07.18</div>
-        <div class="ni-desc">Rubin GPU搭载288GB HBM4，聚合带宽22TB/s（Blackwell的2.8倍），NVLink 6达3.6TB/s。第七颗芯片Groq 3 LPX专为Agent解码设计。CoreWeave率先完成NVL72验证。</div>
+        <div class="ni-desc">Rubin GPU搭载288GB HBM4，带宽22TB/s（Blackwell的2.8倍），NVLink 6达3.6TB/s。第七颗芯片Groq 3 LPX专为Agent解码设计。CoreWeave率先完成NVL72验证。</div>
         <a class="ni-link" href="https://www.techtimes.com/articles/320933/20260718/nvidia-vera-rubin-cuts-post-training-token-costs-seven-chip-codesign.htm" target="_blank">TechTimes →</a>
       </div>
       <div class="ni">
@@ -291,7 +307,7 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
       <div class="ni">
         <div class="ni-title">印度实现全球首次核能制氢：快堆驱动零排放氢生产，效率达电解法两倍</div>
         <div class="ni-meta">📍 <span class="src">Modern Diplomacy</span> · 2026.07.19</div>
-        <div class="ni-desc">印度原子能部在泰米尔纳德邦启用全球首个核能制氢设施，以快中子增殖试验堆核热驱动铜-氯热化学循环分解水，零排放制氢效率50%。</div>
+        <div class="ni-desc">印度原子能部在泰米尔纳德邦启用全球首个核能制氢设施，以快中子增殖试验堆核热驱动铜-氯热化学循环分解水，零排放制氢效率50%，全链条100%国产化。</div>
         <a class="ni-link" href="https://moderndiplomacy.eu/2026/07/19/indias-nuclear-hydrogen-moment-a-world-first-in-search-of-a-strategy/" target="_blank">Modern Diplomacy →</a>
       </div>
       <div class="ni">
@@ -301,15 +317,20 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
         <a class="ni-link" href="http://www.sciencedaily.com/releases/2026/07/260718010142.htm" target="_blank">ScienceDaily →</a>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- ====== 财经 ====== -->
-  <section class="section-block" id="business">
+  <section class="sec" id="business">
     <div class="sec-hd">
       <span class="sec-num">04</span>
-      <span class="sec-name">财经</span>
-      <span class="sec-en">BUSINESS</span>
+      <div class="sec-text">
+        <span class="sec-name">财经</span>
+        <span class="sec-en">Business</span>
+      </div>
+      <span class="sec-line"></span>
     </div>
+    <div class="sec-inner" style="background:#f8f9fb">
 
     <article class="ft">
       <img class="ft-img" src="" alt="" onerror="this.style.display='none'">
@@ -317,7 +338,7 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
         <span class="ft-label biz">深度解读</span>
         <h3 class="ft-title">战争经济学：油价、军费与市场的三重绞杀</h3>
         <div class="ft-meta">核验信源：<span class="src">Al Jazeera · CHOSUNBIZ · Mott Capital · DNYUZ · AP News</span></div>
-        <p class="ft-desc">美伊冲突正在全球市场制造三重压力。其一，美国海军封锁导致每日至少150万桶伊朗原油退出市场，布伦特原油从76美元飙升至88美元，伊朗里亚尔跌至193万兑1美元历史新低。其二，美军弹药消耗惊人——冲突前40天消耗超13,000枚精确打击弹药、约半数爱国者导弹和过半THAAD拦截弹，五角大楼申请创纪录1.5万亿美元2027财年预算，但弹药库存重建至少需四年。其三，T-Bill结算正进入年度最密集期，9月前市场流动性持续收紧，标普500在结算日上涨概率仅45%。60%选民认为对伊战争"不值代价"，11月中期选举前局势愈加复杂。</p>
+        <p class="ft-desc">美伊冲突在全球市场制造三重压力。其一，海军封锁导致日均150万桶伊朗原油退出，布伦特从76飙至88美元，伊朗里亚尔跌至193万兑1美元历史新低。其二，弹药消耗惊人——前40天消耗超13,000枚精确打击弹药、约半数爱国者和过半THAAD拦截弹，五角大楼申请1.5万亿美元2027财年预算，库存重建至少四年。其三，T-Bill结算进入年度最密集期，标普500在结算日上涨概率仅45%，9月前流动性持续收紧。60%选民认为对伊战争"不值代价"，11月中期选举临近。</p>
       </div>
     </article>
 
@@ -325,13 +346,13 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
       <div class="ni">
         <div class="ni-title">美军重新封锁伊朗港口：日失150万桶石油供应，全球能源市场再受冲击</div>
         <div class="ni-meta">📍 <span class="src">Al Jazeera</span> · 2026.07.18</div>
-        <div class="ni-desc">美军重新实施对伊朗南部港口海上封锁，撤销停火备忘录石油与银行豁免。伊朗议长承认上次封锁期间"一滴油也未能出口"。里亚尔续创历史新低，德黑兰证交所一周再跌2.4%。</div>
+        <div class="ni-desc">美军重新实施对伊朗南部港口海上封锁，撤销停火备忘录石油与银行豁免。伊朗议长承认上次封锁期间"一滴油也未能出口"。里亚尔续创历史新低，德黑兰证交所再跌2.4%。</div>
         <a class="ni-link" href="https://www.aljazeera.com/economy/2026/7/18/what-to-expect-after-the-us-reimposes-naval-blockade-on-irans-ports" target="_blank">Al Jazeera →</a>
       </div>
       <div class="ni">
         <div class="ni-title">特朗普全面战争风险：弹药库存告急、通胀飙升、海湾盟友日益离心</div>
         <div class="ni-meta">📍 <span class="src">CHOSUNBIZ</span> · 2026.07.19</div>
-        <div class="ni-desc">美媒披露特朗普正考虑扩大对伊行动——包括出动地面部队夺取伊朗岛屿和轰炸核设施。然而弹药严重不足，重建库存至少四年。战略石油储备处历史低位。</div>
+        <div class="ni-desc">美媒披露特朗普正考虑扩大对伊行动——包括出动地面部队夺取伊朗岛屿和轰炸核设施。弹药严重不足，重建库存至少四年。战略石油储备处历史低位。</div>
         <a class="ni-link" href="https://biz.chosun.com/en/en-international/2026/07/19/72ZXW7NYERDZRA3HOPGRGKLR5A/" target="_blank">CHOSUNBIZ →</a>
       </div>
       <div class="ni">
@@ -343,30 +364,28 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
       <div class="ni">
         <div class="ni-title">美国T-Bill结算进入年度密集期：流动性持续抽干，9月前股市承压难解</div>
         <div class="ni-meta">📍 <span class="src">Mott Capital Management</span> · 2026.07.18</div>
-        <div class="ni-desc">上周净结算约650亿美元，本周增加560亿和370亿美元。近九月统计标普500结算日上涨概率仅45%，科技板块XLK结算日平均下跌41个基点。流动性紧张至少持续至9月初。</div>
+        <div class="ni-desc">上周净结算约650亿美元，本周再增560亿和370亿美元。近九月统计标普500结算日上涨概率仅45%，科技板块XLK结算日平均下跌41个基点。流动性紧张至少持续至9月初。</div>
         <a class="ni-link" href="https://mottcapitalmanagement.com/the-markets-liquidity-drain-is-reaching-its-heaviest-stretch/" target="_blank">Mott Capital →</a>
       </div>
+    </div>
     </div>
   </section>
 
 </main>
 
-<!-- ====== Footer ====== -->
 <footer class="ftr">
   <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
   交叉核验 · 事实优先 · 拒绝噪音<br>
   <span style="opacity:.4">由 CherryClaw AI 自动生成 · 内容仅供参考</span>
 </footer>
 
-</div><!-- /wrap -->
+</div>
 
-<!-- Back to top -->
 <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
 window.addEventListener('scroll',function(){
   document.getElementById('btt').classList.toggle('on',window.scrollY>500)
 })
 </script>
-
 </body>
 </html>
