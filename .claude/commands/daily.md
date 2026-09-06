@@ -72,14 +72,34 @@ node scripts/build-index.js
 git add -A && git commit -m "陆先生日报 YYYY-MM-DD (#NNN)" && git push
 ```
 
-**8. Discord 通知**
+**8. Discord 通知（发卡片，不要发裸链接）**
 
-写一段纯文本（标题 + 5 条头条一句话摘要 + 链接，不展开全文），先 `--dry-run` 预览：
+写一个 `card.json`（放临时目录），字段说明见 `scripts/notify-discord.js` 顶部注释：
+
+```json
+{
+  "author": "陆先生日报 · LUXIANSHENG DAILY",
+  "title": "NO.003 · 2026年9月6日 星期日",
+  "url": "https://julian-commit.github.io/daily-news-briefing/news/2026-09-06.html",
+  "description": "编辑部前言压缩成两三句，不展开全文",
+  "headlines": ["头条一", "头条二", "头条三", "头条四", "头条五"],
+  "image": "https://…（头条配图，必须 https）",
+  "color": "#c0392b",
+  "footer": "交叉核验 · 事实优先 · 拒绝噪音",
+  "buttons": [
+    { "label": "阅读全文", "url": "https://…/news/2026-09-06.html" },
+    { "label": "往期目录", "url": "https://julian-commit.github.io/daily-news-briefing/news/" }
+  ]
+}
+```
 
 ```bash
-node scripts/notify-discord.js --file <discord.txt> --dry-run
-node scripts/notify-discord.js --file <discord.txt>
+node scripts/notify-discord.js --card <card.json> --dry-run
+node scripts/notify-discord.js --card <card.json>
 ```
+
+**为什么不发纯文本**：一段文字后面跟一条裸露的长 URL，视觉上跟诈骗短信一模一样。
+卡片把链接藏进可点的标题和按钮里，左侧有品牌色竖条，是 Discord 的原生样式。
 
 **9. 记账**
 

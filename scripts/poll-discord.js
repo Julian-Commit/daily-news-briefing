@@ -168,6 +168,43 @@ function resolveClaude() {
   throw new Error('找不到 claude.exe，无法生成 AI 回复');
 }
 
+// 出口过滤：绝不让"内部工作过程"漏进频道。
+// 历史教训：Cherry Studio 时代把 agent 的整个输出流直接当消息发，
+// 于是"好的，陆先生。我开始执行今日日报流程。## 第一步..."这种东西进了频道。
+// 这里只放行"像一句人话回复"的内容，任何像工作日志/路径/密钥的一律拦下。
+const LEAK_MARKERS = [
+  /^\s*#{1,6}\s/m,            // markdown 标题
+  /```/,                       // 代码块
+  /第[一二三四五六七八九]步/,
+  /\b(Let me|I'll|I will|Now let me)\b/i,
+  /(我先|接下来我|让我)(去|来|检查|看看|试)/,
+  /(执行|工作)(流程|日志)/,
+  /[A-Za-z]:\\[^\s]|\/c\/Users|scripts\/[a-z-]+\.js|\.md\b|node_modules/,  // 路径痕迹
+  /token|Bot\s+[A-Za-z0-9._-]{20,}|\.env\b/i,
+  /github\.com\/[A-Za-z0-9-]+\/(daily-news|architecture-daily)/i, // 仓库地址
+];
+
+function sanitizeReply(raw) {
+  let t = String(raw || '').trim();
+  if (!t) return null;
+
+  // 只留第一段，且去掉常见的开场白
+  t = t.split(/\n{2,}/)[0].trim();
+  t = t.replace(/^(好的|OK|Okay|Sure)[，,：:]\s*/i, '').trim();
+
+  for (const re of LEAK_MARKERS) {
+    if (re.test(t)) {
+      log('  ⚠ 生成的回复里出现了内部痕迹，已拦下改用固定引导语');
+      return null;
+    }
+  }
+  if (t.length > 300) {
+    log('  ⚠ 生成的回复过长（' + t.length + ' 字），像在写日志而不是回话，已拦下');
+    return null;
+  }
+  return t;
+}
+
 function aiReply(author, content) {
   const prompt = [
     '你是「陆先生日报」的自动主编。有人在 Discord 频道里发了一条消息，请写一句简短回复。',
@@ -227,8 +264,9 @@ async function handleChannel(channel, state) {
     let reply = null;
     if (AI_ALLOWLIST.includes(m.author.id)) {
       try {
-        reply = aiReply(who, String(m.content).slice(0, 2000));
-        log('  AI 回复：' + reply.replace(/\s+/g, ' ').slice(0, 80));
+        reply = sanitizeReply(aiReply(who, String(m.content).slice(0, 2000)));
+        if (reply) log('  AI 回复：' + reply.replace(/\s+/g, ' ').slice(0, 80));
+        else if (CANNED_REPLY) { reply = CANNED_REPLY; log('  已退回固定引导语'); }
       } catch (err) {
         log('  AI 生成失败：' + String(err.message).split('\n')[0]);
       }
