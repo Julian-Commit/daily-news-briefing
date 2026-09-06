@@ -31,6 +31,8 @@ scripts/            无第三方依赖，Node 18+ 直接跑
   today         按北京时间给出各种日期格式
   check-secrets 密钥扫描 / 装 pre-commit 钩子
   journal       运行日志
+  setup-tasks   用 XML 建/改四个计划任务（含「错过就补跑」）
+  schedule-gui  定时设置窗口，由根目录的「定时设置.cmd」双击启动
 memory/JOURNAL.jsonl  运行日志，每期发布后追加一条
 SOUL.md / USER.md   人格与用户档案
 ```
