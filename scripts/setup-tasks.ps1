@@ -27,8 +27,8 @@ $ROOT_NEWS = Split-Path -Parent $PSScriptRoot
 $ROOT_ARCH = Join-Path (Split-Path -Parent $ROOT_NEWS) 'News Agent Architecture'
 
 $TASKS = @(
-    @{ Name = 'Luxiansheng-Daily-News'; Cmd = (Join-Path $ROOT_NEWS 'scripts\run-daily.cmd');           Kind = 'daily';  Default = '15:00'; Desc = '陆先生日报：每天自动出刊（本机时间，= 北京 21:00）' }
-    @{ Name = 'Luxiansheng-Daily-Arch'; Cmd = (Join-Path $ROOT_ARCH 'scripts\run-daily.cmd');           Kind = 'daily';  Default = '15:20'; Desc = '陆先生建筑日报：每天自动出刊（本机时间，= 北京 21:20）' }
+    @{ Name = 'Luxiansheng-Daily-News'; Cmd = (Join-Path $ROOT_NEWS 'scripts\run-daily.vbs');           Kind = 'daily';  Default = '15:00'; Desc = '陆先生日报：每天自动出刊（本机时间，= 北京 21:00）' }
+    @{ Name = 'Luxiansheng-Daily-Arch'; Cmd = (Join-Path $ROOT_ARCH 'scripts\run-daily.vbs');           Kind = 'daily';  Default = '15:20'; Desc = '陆先生建筑日报：每天自动出刊（本机时间，= 北京 21:20）' }
     @{ Name = 'Luxiansheng-Discord-Poll-News'; Cmd = (Join-Path $ROOT_NEWS 'scripts\poll-discord.vbs'); Kind = 'minute'; Desc = '新闻日报：定时看一眼 Discord 频道' }
     @{ Name = 'Luxiansheng-Discord-Poll-Arch'; Cmd = (Join-Path $ROOT_ARCH 'scripts\poll-discord.vbs'); Kind = 'minute'; Desc = '建筑日报：定时看一眼 Discord 频道' }
 )

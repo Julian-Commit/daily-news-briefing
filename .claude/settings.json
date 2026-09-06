@@ -15,7 +15,11 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(ls:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(node scripts/finalize.js:*)",
+      "Bash(node scripts/make-card.js:*)",
+      "Bash(node scripts/today.js)",
+      "Bash(node scripts/build-index.js:*)"
     ]
   }
 }
