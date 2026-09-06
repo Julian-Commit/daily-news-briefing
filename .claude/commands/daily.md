@@ -55,6 +55,16 @@ node scripts/render.js template.html <issue.json> news/YYYY-MM-DD.html
 `render.js` 会校验占位符是否填齐、有没有残留 `{{...}}`、图片 src 是否为空。
 **报错就必须修好再继续**，不要用 `--allow-missing` 绕过。
 
+**4.5 收尾（注入分享信息 + 同步样式）**
+
+```bash
+node scripts/finalize.js news/YYYY-MM-DD.html
+```
+
+它会从刚生成的刊物里解析标题、摘要和封面图，写进 og:/twitter: 标签和 JSON-LD。
+**这一步不能省**：没有这些标签，链接发到 Discord/微信里就是一条干巴巴的裸 URL。
+输出里若提示「没有封面图」，说明这期一张图都没抓到，回头补图。
+
 **5. 重建索引**
 
 ```bash
@@ -74,7 +84,15 @@ git add -A && git commit -m "陆先生日报 YYYY-MM-DD (#NNN)" && git push
 
 **8. Discord 通知（发卡片，不要发裸链接）**
 
-写一个 `card.json`（放临时目录），字段说明见 `scripts/notify-discord.js` 顶部注释：
+卡片不用手写，从刊物直接生成，保证和正文一致、刊号不会抄错：
+
+```bash
+node scripts/make-card.js news/YYYY-MM-DD.html <card.json>
+node scripts/notify-discord.js --card <card.json> --dry-run
+node scripts/notify-discord.js --card <card.json>
+```
+
+需要微调时再改那份 JSON，字段说明见 `scripts/notify-discord.js` 顶部注释：
 
 ```json
 {

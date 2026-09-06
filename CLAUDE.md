@@ -22,6 +22,15 @@ template.html       日报模板，中英双语同页切换，占位符为 {{...
 news/YYYY-MM-DD.html  每期日报
 news/index.html     往期目录（由脚本生成，不要手写）
 scripts/            无第三方依赖，Node 18+ 直接跑
+  render        填模板 + 硬校验
+  finalize      注入 og/twitter/JSON-LD，并把模板样式同步给旧刊
+  build-index   重建首页与往期目录
+  make-card     从刊物生成 Discord 卡片 JSON
+  notify-discord 发卡片或纯文本到频道
+  poll-discord  每分钟看一眼频道有没有人说话
+  today         按北京时间给出各种日期格式
+  check-secrets 密钥扫描 / 装 pre-commit 钩子
+  journal       运行日志
 memory/JOURNAL.jsonl  运行日志，每期发布后追加一条
 SOUL.md / USER.md   人格与用户档案
 ```
