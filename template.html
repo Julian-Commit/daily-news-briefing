@@ -61,7 +61,7 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 .hl .hl-img{width:100%;aspect-ratio:2/1;object-fit:cover;background:#eef1f5;display:block}
 .hl .hl-body{padding:18px}
 .hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
-.hl .hl-tag.pol{background:#2471a3}.hl .hl-tag.biz{background:#b9770e}.hl .hl-tag.tec{background:#1e8449}
+.hl .hl-tag.pol{background:#2471a3}.hl .hl-tag.env{background:#138d75}.hl .hl-tag.tec{background:#1e8449}
 .hl .hl-title{font-size:16px;font-weight:800;color:#1a1a2e;line-height:1.6;margin-bottom:6px}
 .hl .hl-meta{font-size:11px;color:#999;margin-bottom:8px}
 .hl .hl-meta .src{font-weight:700;color:#c0392b}
@@ -81,7 +81,7 @@ body{background:#e9ecf0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft 
 .ft .ft-body{padding:22px}
 .ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
 .ft .ft-label.pol{color:#1a5276;border-color:#2980b9;background:#d6eaf8}
-.ft .ft-label.biz{color:#7d6608;border-color:#e67e22;background:#fdebd0}
+.ft .ft-label.env{color:#0e6251;border-color:#138d75;background:#d1f2eb}
 .ft .ft-label.tec{color:#145a32;border-color:#27ae60;background:#d5f5e3}
 .ft .ft-title{font-size:17px;font-weight:800;color:#1a1a2e;line-height:1.5;margin-bottom:8px}
 .ft .ft-meta{font-size:11px;color:#999;margin-bottom:12px}
@@ -151,7 +151,7 @@ body.show-en .preface .pf-label-zh{display:none}
   <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
   <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
   <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
-  <a href="#business"><span class="zh-content">财经</span><span class="en-content">Business</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
 </nav>
 
 <main class="ct">
@@ -213,20 +213,20 @@ body.show-en .preface .pf-label-zh{display:none}
     </div>
   </section>
 
-  <!-- ====== BUSINESS ====== -->
-  <section class="sec" id="business">
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
     <div class="sec-hd">
       <span class="sec-num">04</span>
       <div class="sec-text">
-        <span class="sec-name zh-content">财经</span>
-        <span class="sec-name en-content">Business</span>
-        <span class="sec-en">BUSINESS</span>
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
       </div>
       <span class="sec-line"></span>
     </div>
     <div class="sec-inner">
-      {{BUSINESS_FEATURE}}
-      <div class="ngrid">{{BUSINESS_NEWS}}</div>
+      {{ENVIRONMENT_FEATURE}}
+      <div class="ngrid">{{ENVIRONMENT_NEWS}}</div>
     </div>
   </section>
 
@@ -236,7 +236,8 @@ body.show-en .preface .pf-label-zh{display:none}
   <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
   <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
   <span class="en-content">Cross-verified · Facts First · No Noise</span>
-  <br><span style="opacity:.4">Powered by CherryClaw AI · Content for reference only</span>
+  <div style="margin-top:12px"><a href="index.html" style="color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)"><span class="zh-content">往期目录</span><span class="en-content">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
 </footer>
 
 </div>

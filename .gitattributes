@@ -1,0 +1,8 @@
+# 仓库内统一用 LF，避免在 Windows 上产生整文件 CRLF 改动
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary

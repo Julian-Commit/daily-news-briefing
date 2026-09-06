@@ -2,7 +2,7 @@
 
 > 交叉信源 · 事实优先 · 拒绝噪音
 
-每日自动生成的全球新闻早报，覆盖国际政治、财经、科技三大领域。
+每日自动生成的全球新闻早报，覆盖国际政治、科技、地理与环境三大板块。
 
 ## 访问
 
@@ -12,14 +12,41 @@
 
 - 📰 每日精选 5 条头条 + 三大板块深度解读
 - 🔍 每条重要新闻交叉核验至少两个独立信源
-- 🌐 英文原文 → 高质量中文翻译
+- 🌐 英文原文 → 高质量中文翻译，中英双语同页切换
 - 📱 响应式设计，手机/平板/桌面完美显示
-- ⏰ 每日北京时间 21:00 自动更新
+- ⏰ 每日北京时间 21:00 更新
 
 ## 新闻来源
 
 Reuters · BBC · AP News · Al Jazeera · NHK · TechXplore · TechTimes · 等国际媒体
 
+## 怎么出一期
+
+在 Claude Code 里打开本目录，输入 `/daily`。人格与流程定义在
+[CLAUDE.md](CLAUDE.md) / [SOUL.md](SOUL.md) / [USER.md](USER.md)。
+
+手动跑或排查时用得到的命令（Node 18+，无第三方依赖）：
+
+```bash
+node scripts/today.js                                                  # 北京时间日期（模板要的格式全给）
+node scripts/render.js template.html issue.json news/2026-09-06.html  # 填模板 + 校验
+node scripts/build-index.js                                           # 重建首页与往期目录
+node scripts/notify-discord.js --file discord.txt --dry-run           # 预览通知
+node scripts/journal.js --tail 3                                      # 看最近几次运行记录
+```
+
+Discord 推送需要在仓库根目录建 `.env`（参考 `.env.example`）。
+
+## 目录
+
+| 路径 | 说明 |
+|---|---|
+| `template.html` | 日报模板，占位符 `{{...}}` |
+| `news/YYYY-MM-DD.html` | 每期日报 |
+| `index.html` · `news/index.html` | 首页与往期目录，**由脚本生成，勿手改** |
+| `scripts/` | 渲染 / 建索引 / 推送 / 记账 |
+| `memory/JOURNAL.jsonl` | 运行日志 |
+
 ---
 
-由 CherryClaw AI 驱动 · 内容仅供参考
+内容仅供参考

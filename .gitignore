@@ -1,2 +1,8 @@
-.claude/
-.claude
+# Cherry Studio 装的技能在 .claude/skills 下是软链接，不进仓库
+.claude/skills/
+.claude/settings.local.json
+
+# 凭据（Discord bot token 等），绝不提交
+.env
+
+node_modules/
