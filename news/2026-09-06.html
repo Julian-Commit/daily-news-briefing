@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-06</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;aspect-ratio:2/1;object-fit:cover;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:220px;aspect-ratio:auto;min-height:200px;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:270px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:35%;aspect-ratio:auto;min-height:220px;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+</style>
+<!-- share:start -->
+<meta name="description" content="美国特使维特科夫与库什纳抵达基辅会见泽连斯基，前一日在莫斯科与普京会谈逾三小时；伊朗革命卫队称袭击霍尔木兹海峡三艘油轮及三艘美方关联船只，议长称&quot;对等回应时代已结束&quot;；OpenAI 发布 GPT-6 Astra，称在推理基准取得满分或接近满分，同时面临安全审视">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.003 · 2026-09-06 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="美国特使维特科夫与库什纳抵达基辅会见泽连斯基，前一日在莫斯科与普京会谈逾三小时；伊朗革命卫队称袭击霍尔木兹海峡三艘油轮及三艘美方关联船只，议长称&quot;对等回应时代已结束&quot;；OpenAI 发布 GPT-6 Astra，称在推理基准取得满分或接近满分，同时面临安全审视">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-06.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aje.news/wp-content/uploads/2026/09/AFP__20260906__C7GG3ZT__v1__HighRes__UkraineUsRussiaConflictWarDiplomacy-1788693038.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.003 · 2026-09-06 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="美国特使维特科夫与库什纳抵达基辅会见泽连斯基，前一日在莫斯科与普京会谈逾三小时；伊朗革命卫队称袭击霍尔木兹海峡三艘油轮及三艘美方关联船只，议长称&quot;对等回应时代已结束&quot;；OpenAI 发布 GPT-6 Astra，称在推理基准取得满分或接近满分，同时面临安全审视">
+<meta name="twitter:image" content="https://aje.news/wp-content/uploads/2026/09/AFP__20260906__C7GG3ZT__v1__HighRes__UkraineUsRussiaConflictWarDiplomacy-1788693038.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.003 · 2026-09-06 · 陆先生日报 | Luxiansheng Daily","description":"美国特使维特科夫与库什纳抵达基辅会见泽连斯基，前一日在莫斯科与普京会谈逾三小时；伊朗革命卫队称袭击霍尔木兹海峡三艘油轮及三艘美方关联船只，议长称\"对等回应时代已结束\"；OpenAI 发布 GPT-6 Astra，称在推理基准取得满分或接近满分，同时面临安全审视","datePublished":"2026-09-06","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-06.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://aje.news/wp-content/uploads/2026/09/AFP__20260906__C7GG3ZT__v1__HighRes__UkraineUsRussiaConflictWarDiplomacy-1788693038.jpg"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.003</div>
+    <div>2026.09.06 SUNDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">今天是2026年9月6日，星期日。美国总统特使史蒂夫·维特科夫与贾里德·库什纳9月5日在莫斯科与普京会谈逾三小时，次日乘火车抵达基辅会见泽连斯基——这是两人开战以来首次访问乌克兰首都；俄乌为此就互不袭击对方首都达成一项为期数日的安排。霍尔木兹海峡同日再度升级：伊朗伊斯兰革命卫队称袭击三艘取道"未经授权"航路的油轮及三艘美方关联船只，美方称已打击三艘伊朗油轮，伊朗议会议长加利巴夫称"对等回应的时代已经结束"。中东伤亡数字继续累积：加沙城宰敦区从废墟中挖出约100人遗骸并下葬，其中60名儿童；以色列9月6日凌晨空袭黎巴嫩南部四地，致至少4人死亡、20人受伤。科技方面，OpenAI于9月3日发布GPT-6 Astra并称其为"最智能、最对齐"的模型，同期各国监管路线出现分岔：欧盟委员会已向30余家AI企业发出信息问询，美方在G20技术部长会上推销"卡罗莱纳原则"。地理与环境方面，印尼喀拉喀托之子火山9月5日至6日连续喷发，雅加达苏加诺-哈达机场等六座机场停运、301架次航班受影响；尼泊尔冰川崩塌洪灾进入第十日，官方数字为至少1,342人死亡、4,886人失踪；世界气象组织同期警告本轮厄尔尼诺可能强于四十年监测记录中的任何一次。</p>
+    <p class="en-content" lang="en">Today is Sunday, September 6, 2026. US presidential envoys Steve Witkoff and Jared Kushner met Vladimir Putin in Moscow for more than three hours on September 5, then travelled by train to Kyiv the following day to meet Volodymyr Zelenskyy — their first visit to the Ukrainian capital since the war began. Russia and Ukraine agreed to hold off strikes on each other's capitals for the duration of the diplomacy. The Strait of Hormuz escalated the same day: Iran's Islamic Revolutionary Guard Corps said it struck three oil tankers using an "unauthorised" route plus three US-affiliated vessels, while the US said it hit three Iranian tankers. Iranian parliament speaker Mohammad Bagher Ghalibaf declared "the era of proportionate responses is over." Casualty counts across the Middle East continued to accumulate: roughly 100 sets of remains, including 60 children, were recovered from rubble in Gaza City's Zeitoun neighbourhood and buried, and Israeli airstrikes on four locations in southern Lebanon before dawn on September 6 killed at least four people and wounded 20. In technology, OpenAI released GPT-6 Astra on September 3, calling it the "world's most intelligent and aligned" model, as regulatory approaches diverged: the European Commission has sent information requests to more than 30 AI companies, while US officials promoted the "Carolina Principles" at a G20 technology ministerial. In geography and environment, Indonesia's Anak Krakatau erupted repeatedly on September 5-6, suspending operations at six airports including Jakarta's Soekarno-Hatta and affecting 301 flights; Nepal's glacier-collapse flood disaster entered its tenth day with an official toll of at least 1,342 dead and 4,886 missing; and the World Meteorological Organization warned that the current El Niño may be stronger than any in its four decades of monitoring.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl">
+        <img class="hl-img" src="https://aje.news/wp-content/uploads/2026/09/AFP__20260906__C7GG3ZT__v1__HighRes__UkraineUsRussiaConflictWarDiplomacy-1788693038.jpg" alt="美国特使抵达基辅火车站" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">美国特使维特科夫与库什纳抵达基辅会见泽连斯基，前一日在莫斯科与普京会谈逾三小时</h2>
+            <div class="hl-meta"><span class="src">NPR</span> · CNN · Al Jazeera · NBC News · CBS News · 2026-09-06</div>
+            <p class="hl-desc">美国总统特朗普的特使史蒂夫·维特科夫（Steve Witkoff）与贾里德·库什纳（Jared Kushner）9月6日在基辅市中心会见乌克兰总统泽连斯基。这是两人自战争爆发以来首次访问基辅——此前他们曾多次前往莫斯科。因俄方空袭，两人无法飞行，改乘火车抵达。9月5日，两人在莫斯科与普京及俄方官员基里尔·德米特里耶夫会谈逾三小时；克里姆林宫外交政策顾问尤里·乌沙科夫称会谈"实质、非常坦诚且富有建设性"，并称已就和平方案形成"一整套想法"。普京同时表示双方并未就更广泛的停火达成一致。为配合特使行程，俄方同意自周六零时起三天不袭击基辅，乌方同意在周一之前不袭击莫斯科。泽连斯基表示"我们已准备好谈判"，并称"需要和平，需要安全保障"；他表示愿以西方安全保障为交换放弃加入北约，但拒绝了美方提出的乌军撤出顿涅茨克并在当地设立非军事化自由经济区的方案。交叉核验：NPR · CNN · Al Jazeera · NBC News · CBS News</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">US Envoys Witkoff and Kushner Reach Kyiv to Meet Zelenskyy, a Day After Three-Hour Putin Talks in Moscow</h2>
+            <div class="hl-meta"><span class="src">NPR</span> · CNN · Al Jazeera · NBC News · CBS News · 2026-09-06</div>
+            <p class="hl-desc">President Trump's envoys Steve Witkoff and Jared Kushner met Ukrainian President Volodymyr Zelenskyy in central Kyiv on September 6 — their first visit to the Ukrainian capital since the war began, after repeated trips to Moscow. Unable to fly because of Russian airstrikes, the two arrived by train. On September 5 they had met Putin and Russian official Kirill Dmitriev in Moscow for more than three hours. Kremlin foreign policy adviser Yuri Ushakov called the talks "substantive, very frank and constructive" and said "a whole series of ideas for a peace settlement" had been formulated. Putin indicated the two sides had not agreed to a broader ceasefire. To accommodate the visits, Russia agreed not to strike Kyiv for three days from midnight Saturday, and Ukraine agreed to refrain from strikes on Moscow through Monday. Zelenskyy said "We are ready for talks" and that "Peace is needed. Security guarantees are needed." He signalled willingness to drop Ukraine's NATO bid in exchange for Western security guarantees, but rejected a US proposal for Ukrainian withdrawal from Donetsk and the creation of a demilitarised free economic zone there. Cross-verified: NPR · CNN · Al Jazeera · NBC News · CBS News</p>
+          </div>
+          <a class="hl-link" href="https://www.npr.org/2026/09/06/nx-s1-5959657/us-envoys-witkoff-kushner-talks-in-kyiv-putin-moscow" target="_blank" rel="noopener">NPR →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://aje.news/wp-content/uploads/2026/09/AP26249358408858-1-1788689139.jpg?resize=730%2C410&amp;quality=80" alt="霍尔木兹海峡阿巴斯港外锚泊的商船" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">伊朗革命卫队称袭击霍尔木兹海峡三艘油轮及三艘美方关联船只，议长称"对等回应时代已结束"</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Gulf News · Euronews · Bloomberg · Fox News · 2026-09-06</div>
+            <p class="hl-desc">伊朗伊斯兰革命卫队（IRGC）海军9月6日称，已袭击三艘取道霍尔木兹海峡"未经授权航路"的油轮，并在其他海域袭击三艘与美国有关联的船只。IRGC随后表示还袭击了一架美军海上无人机和一艘试图进入海峡的美军无人水面艇。伊朗方面称此举是对周末美方袭击伊朗油轮的报复；美方称已打击三艘伊朗油轮，并称一艘伊朗船只在阿曼湾沉没。伊朗议会议长、首席谈判代表穆罕默德·巴盖尔·加利巴夫（Mohammad Bagher Ghalibaf）在讲话中称"对等回应的时代已经结束"，"游戏规则已经改变，今后任何侵犯伊朗利益与安全的行为都将遭到更快、更重、更痛的回应"。本轮霍尔木兹危机始于2026年2月28日美以对伊朗发动打击；6月17日特朗普与伊朗总统佩泽什基安曾签署谅解备忘录，宣布解除美方海上封锁并安排商船60天免费安全通行，该安排在7月8日临时休战破裂后失效，美方于8月初重新实施封锁。交叉核验：Al Jazeera · Gulf News · Euronews · Bloomberg · Fox News · ABC News</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">IRGC Says It Struck Three Tankers and Three US-Linked Vessels in Hormuz; Speaker Says "Era of Proportionate Responses Is Over"</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Gulf News · Euronews · Bloomberg · Fox News · 2026-09-06</div>
+            <p class="hl-desc">Iran's Islamic Revolutionary Guard Corps navy said on September 6 that it had attacked three oil tankers transiting an "unauthorised route" through the Strait of Hormuz, along with three US-affiliated vessels in other areas. The IRGC later said it also struck a US naval drone and an American military unmanned surface vessel attempting to enter the strait. Iran described the strikes as retaliation for US attacks on Iranian tankers over the weekend; the US said it had hit three Iranian oil tankers and that an Iranian vessel sank in the Gulf of Oman. Parliament speaker and chief negotiator Mohammad Bagher Ghalibaf said "the era of 'proportionate responses' is over" and that "the rules of the game have changed, and from now on, any transgression against the interests and security of Iran will receive a 'faster, heavier, and more painful' response." The current Hormuz crisis began on February 28, 2026 with US-Israeli strikes on Iran. On June 17, Trump and Iranian President Masoud Pezeshkian signed a memorandum of understanding lifting the US naval blockade and providing 60 days of free safe passage for commercial vessels; that arrangement lapsed after the interim truce collapsed on July 8, and the US reimposed the blockade in early August. Cross-verified: Al Jazeera · Gulf News · Euronews · Bloomberg · Fox News · ABC News</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/liveblog/2026/9/6/iran-war-live-irgc-claims-new-attacks-on-us-warships-over-naval-blockade" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://aje.news/wp-content/uploads/2026/09/2026-09-03T171416Z_1469135381_RC2QRLANB0GV_RTRMADP_3_TECH-AI-OPENAI-1788480833.jpg" alt="OpenAI 发布 GPT-6 Astra" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">OpenAI 发布 GPT-6 Astra，称在推理基准取得满分或接近满分，同时面临安全审视</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Fortune · Silicon Republic · Fox Business · 2026-09-06</div>
+            <p class="hl-desc">OpenAI于9月3日发布GPT-6 Astra，最初以有限预览形式向合作机构开放。该公司称这一"世界上最智能、最对齐"的模型在多项AI推理关键基准上取得满分或接近满分，表现超过其前一代GPT-5.6 Sol以及Anthropic的Claude Fable 5。OpenAI表示模型将在"未来数日内"向所有ChatGPT Plus、Pro、Business与Enterprise用户开放，并通过OpenAI API、微软Azure与AWS Bedrock提供。Astra的标志性功能被称为"计算机使用"（computer use），即像人一样操作计算机；OpenAI称其在计算机使用、浏览器使用、软件工程、网络安全、科学与专业工作方面达到当前最佳水平。公司总裁格雷格·布罗克曼（Greg Brockman）在媒体沟通会上表示，Astra的发布或可被视为通用人工智能时代的开端。OpenAI当前估值为8,520亿美元。发布公告同时以显著篇幅列出潜在危害与安全机制。新南威尔士大学的托比·沃尔什（Toby Walsh）评论称"人工智能中的智能到今天仍然非常参差不齐"；路易斯维尔大学的罗曼·扬波尔斯基（Roman Yampolskiy）质疑"能力提升的速度是否快于我们可靠理解、预测和控制这些系统的能力"。交叉核验：Al Jazeera · Fortune · Silicon Republic · Fox Business · OpenAI 官方公告</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">OpenAI Releases GPT-6 Astra, Claiming Perfect or Near-Perfect Reasoning Benchmarks, Amid Safety Scrutiny</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Fortune · Silicon Republic · Fox Business · 2026-09-06</div>
+            <p class="hl-desc">OpenAI released GPT-6 Astra on September 3, initially as a limited preview for trusted partners. The company said the "world's most intelligent and aligned" AI model earned perfect or near-perfect scores on key AI reasoning benchmarks, beating its prior release GPT-5.6 Sol and rival Anthropic's Claude Fable 5. OpenAI said the model would become available "over the coming days" to all ChatGPT Plus, Pro, Business and Enterprise users, as well as through the OpenAI API, Microsoft Azure and AWS Bedrock. Astra's hallmark feature is "computer use," in which the model navigates a computer as a human would; OpenAI says it is state-of-the-art on computer use, browser use, software engineering, cybersecurity, science and professional work. Company president Greg Brockman told reporters in a briefing that Astra's launch could perhaps be viewed as the beginning of an era of artificial general intelligence. OpenAI is currently valued at $852 billion. The announcement devoted substantial space to potential harms and safety mechanisms. Toby Walsh of UNSW commented that "the intelligence in artificial intelligence is still today very jagged," while Roman Yampolskiy of the University of Louisville questioned whether "capabilities are improving faster than our ability to reliably understand, predict and control these systems." Cross-verified: Al Jazeera · Fortune · Silicon Republic · Fox Business · OpenAI announcement</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/economy/2026/9/4/openai-unveils-gpt-6-astra-amid-rising-scrutiny-and-safety" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://aje.news/wp-content/uploads/2026/09/ap_6a9cc78f613ee-1788659599.jpg?resize=770%2C513&amp;quality=80" alt="旅客在雅加达苏加诺-哈达国际机场等候航班" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">印尼喀拉喀托之子火山连续喷发，六座机场停运、301架次航班受影响</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · The Washington Post · U.S. News · WTOP · 2026-09-06</div>
+            <p class="hl-desc">位于爪哇岛与苏门答腊岛之间巽他海峡的喀拉喀托之子火山（Anak Krakatau）自9月5日晚开始喷发，9月6日又记录到两次喷发。印尼地质机构称该火山自周五起显现活动迹象，并于周日凌晨3时53分喷发持续30秒。火山灰柱在爪哇一侧升至6,000米（约20,000英尺），在苏门答腊一侧及万丹省方向升至最高15,000米（约50,000英尺）；喷发声在700公里外可闻。印尼六座机场停运，其中距火山逾150公里的雅加达苏加诺-哈达国际机场停运至当地时间下午5时30分（格林尼治时间10时30分），机场运营方Angkasa Pura称共301架次航班受影响，其中58架次为国际航班；万隆胡塞因·萨斯特拉内加拉机场、楠榜省拉丁·因丹二号机场亦停运，三宝垄与泗水机场被指定为备降点。新加坡航空取消当日往返雅加达的全部航班。印尼国家灾害管理局（BNPB）称无迫近的海啸风险，未发布疏散令，亦未报告人员伤亡，并宣布将采取人工增雨等措施促使降雨冲洗火山灰；当地学校停课、渔业活动暂停。交叉核验：Al Jazeera · The Washington Post · U.S. News · WTOP · Emirates 24|7</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Indonesia's Anak Krakatau Erupts Repeatedly; Six Airports Halt Operations and 301 Flights Affected</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · The Washington Post · U.S. News · WTOP · 2026-09-06</div>
+            <p class="hl-desc">Anak Krakatau, the volcanic island in the Sunda Strait between Java and Sumatra, began erupting late on September 5, with two further eruptions recorded on September 6. Indonesia's Geological Agency said the volcano had shown signs of activity since Friday before erupting for 30 seconds at 3:53am on Sunday. Ash columns rose to 6,000 metres (20,000 feet) on the Java side and up to 15,000 metres (50,000 feet) toward Sumatra and Banten province; the eruption was audible up to 700km away. Six Indonesian airports suspended operations. Jakarta's Soekarno-Hatta International, more than 150km from the volcano, halted operations until 5:30pm local time (10:30 GMT); airport operator Angkasa Pura said 301 flights were affected, including 58 international services. Husein Sastranegara airport in Bandung and Radin Inten II in Bandar Lampung also suspended flights, with Semarang and Surabaya designated as alternates. Singapore Airlines cancelled all flights to and from Jakarta for the rest of the day. Indonesia's disaster mitigation agency BNPB said there was no imminent tsunami risk, issued no evacuation order and reported no casualties, and announced cloud-seeding to encourage rain to wash away the ash. Schools and fishing activities were suspended locally. Cross-verified: Al Jazeera · The Washington Post · U.S. News · WTOP · Emirates 24|7</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/6/indonesias-main-airport-suspends-flights-due-to-anak-krakatoa-eruption" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://aje.news/wp-content/uploads/2026/09/AP26248319556650-1788623299.jpg?resize=770%2C513&amp;quality=80" alt="尼泊尔军队从特里苏里3A水电站救出一名中国籍工人" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">尼泊尔冰川崩塌洪灾第十日：两人被救出，官方数字为1,342人死亡、4,886人失踪</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · NBC News · CNN · 2026-09-06</div>
+            <p class="hl-desc">8月26日喜马拉雅山区兰塘里壤（Langtang Lirung）冰川崩塌引发的洪灾进入第十日。9月5日，中国籍工人卢海涛在特里苏里3A水电站（Trishuli-3A）被淹隧道内深处225米处被救出；同日，64岁尼泊尔妇女钱迪卡·库马里·什雷斯塔（Chandika Kumari Shrestha）在努瓦阔特（Nuwakot）从倒塌的房屋中被救出。此前数日另有两名尼泊尔隧道工人获救。获救者称隧道更深处仍有工人存活。据截至9月5日的统计，尼泊尔至少1,342人死亡、4,886人失踪，其中失踪者包括来自39个国家的583名外籍人员；中国西藏方面报告31人死亡、531人失踪，失踪者含来自23个国家的261名外籍人员。水电项目工地上约900名工人下落不明，其中约500人被认为困在十余个项目的隧道内。来自印度、中国、韩国、美国与澳大利亚的救援队已加入尼泊尔的搜救行动。交叉核验：Al Jazeera · NBC News · CNN</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Day Ten of Nepal's Glacier-Collapse Flood: Two More Rescued as Official Toll Reaches 1,342 Dead and 4,886 Missing</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · NBC News · CNN · 2026-09-06</div>
+            <p class="hl-desc">The disaster triggered by the August 26 collapse of the Langtang Lirung glacier in the Himalayas entered its tenth day. On September 5, Chinese worker Lu Haitao was extracted from 225 metres inside a flooded tunnel at the Trishuli-3A hydropower plant, and 64-year-old Nepali woman Chandika Kumari Shrestha was freed from her collapsed home in Nuwakot the same day. Two additional Nepali tunnel workers had been rescued days earlier. One survivor reported that other workers were still alive further inside the tunnel. As of September 5, Nepal recorded at least 1,342 dead and 4,886 missing, the latter including 583 foreign nationals from 39 countries; Tibet reported 31 dead and 531 missing, including 261 foreign nationals from 23 countries. About 900 workers remain unaccounted for at hydropower sites, with roughly 500 believed trapped in tunnels across a dozen projects. Rescue teams from India, China, South Korea, the United States and Australia have joined Nepal's operation. Cross-verified: Al Jazeera · NBC News · CNN</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/5/rescuers-pull-chinese-worker-nepali-woman-from-flood-wreckage-alive" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://aje.news/wp-content/uploads/2026/09/AP26249324848188-1788685807.jpg?resize=770%2C513&amp;quality=80" alt="加沙城居民为从废墟中挖出的遗骸送葬" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label pol">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">停火框架之下仍在累积的数字：加沙的遗骸清理与黎巴嫩南部的持续空袭</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera（三篇）· 加沙卫生部 · 加沙民防部门 · 黎巴嫩官方统计 · 6月美伊谅解备忘录文本</span></div>
+            <div class="ft-desc">
+              <p><strong>宰敦区的一次集中下葬</strong></p>
+              <p>9月6日，加沙城宰敦区（Zeitoun）的民防人员与遇难者家属从废墟中清出约100人的遗骸，随后在马马达尼（al-Ma'madani）墓地下葬。据加沙民防部门负责人拉伊德·达赫沙恩（Raed al-Dahshan）介绍，这批遗骸中包括60名儿童，且多为碎片而非完整遗体；仅马拉卡（Malaka）一个家族就在这一处遗址失去55名成员。达赫沙恩表示，废墟下仍约有8,000具遗体，若有足够设备，可在90天内完成挖掘；目前重型机械与防护装备均短缺，作业进度受限。</p>
+              <p><strong>累计伤亡口径</strong></p>
+              <p>加沙卫生部的统计为：自2023年10月以来至少73,651名巴勒斯坦人死亡、174,592人受伤。这一数字不含仍埋在废墟下、尚未确认身份的遗体。</p>
+              <p><strong>黎巴嫩：9月6日凌晨的四处空袭</strong></p>
+              <p>同一天凌晨，以色列对黎巴嫩南部纳巴提耶（Nabatieh）、阿拉伯萨利姆（Arab Salim）、上纳巴提耶（Nabatieh al-Fawqa）与卡法尔雷曼（Kfar Reman）实施空袭，造成至少4人死亡、20人受伤。其中阿拉伯萨利姆有两名女性死亡、另有六人受伤；上纳巴提耶两人死亡。纳巴提耶一座历史建筑被摧毁，赛义达·马苏梅花园（Sayyida Masouma Garden）市政公园被击中，卡法尔雷曼多处民宅被毁。以方称此次空袭是对真主党向以军发射两架无人机的回应，称后者构成"公然违反"。</p>
+              <p><strong>停火框架的实际状态</strong></p>
+              <p>今年6月，美伊签署谅解备忘录后地区袭击频率一度下降，以色列与黎巴嫩也在同月签署框架协议。但以方空袭持续，同时在其自行划定的、深入黎巴嫩境内约10公里的"安全区"内维持地面行动。黎巴嫩方面表示，这些袭击发生在停火安排仍然有效的情况下。</p>
+              <p><strong>黎巴嫩一侧的累计口径</strong></p>
+              <p>黎巴嫩官方统计显示，自2023年以来以色列的袭击已造成近9,000人死亡。加沙与黎巴嫩两处的共同点是：在被称为"停火"或"框架协议"的时期内，伤亡统计仍在逐日增加，而其中相当一部分来自尚未完成的废墟清理工作。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Counts That Keep Rising Under a Ceasefire Framework: Gaza's Rubble Recovery and Continued Strikes in South Lebanon</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera (three reports) · Gaza Health Ministry · Gaza Civil Defence · Lebanese official tallies · June US-Iran memorandum of understanding</span></div>
+            <div class="ft-desc">
+              <p><strong>A mass burial in Zeitoun</strong></p>
+              <p>On September 6, civil defence crews and relatives in Gaza City's Zeitoun neighbourhood recovered the remains of roughly 100 people from rubble and buried them at al-Ma'madani cemetery. Raed al-Dahshan, head of Gaza's civil defence, said the remains included 60 children and consisted largely of fragments rather than complete bodies; the Malaka family alone lost 55 members at this single site. Al-Dahshan said approximately 8,000 bodies remain under rubble and could be recovered within 90 days given adequate equipment; shortages of heavy machinery and protective gear are limiting the work.</p>
+              <p><strong>Cumulative casualty figures</strong></p>
+              <p>Gaza's Health Ministry reports at least 73,651 Palestinians killed and 174,592 wounded since October 2023. That figure does not include bodies still buried under rubble and not yet identified.</p>
+              <p><strong>Lebanon: four strike locations before dawn on September 6</strong></p>
+              <p>Before dawn the same day, Israel struck Nabatieh, Arab Salim, Nabatieh al-Fawqa and Kfar Reman in southern Lebanon, killing at least four people and wounding 20. Two women were killed in Arab Salim, where six others were wounded; two people were killed in Nabatieh al-Fawqa. A historical building in Nabatieh was destroyed, the Sayyida Masouma Garden municipal park was hit, and civilian homes were destroyed in Kfar Reman. Israel said the strikes responded to Hezbollah launching two drones toward Israeli forces, calling that a "blatant violation."</p>
+              <p><strong>The state of the ceasefire framework</strong></p>
+              <p>A US-Iran memorandum of understanding in June reduced the frequency of attacks across the region, and Israel and Lebanon signed a framework agreement the same month. Israeli strikes have nonetheless continued alongside ground operations inside a self-declared "security zone" roughly 10km into Lebanon. Lebanon says the attacks occurred while truce arrangements remained in force.</p>
+              <p><strong>The cumulative count on the Lebanese side</strong></p>
+              <p>Lebanese official tallies record nearly 9,000 deaths from Israeli attacks since 2023. What Gaza and Lebanon share is this: during a period described as a ceasefire or framework agreement, casualty counts continue to rise daily — and a substantial share of that increase comes from rubble clearance that is still unfinished.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">克里姆林宫称普京与美方特使会谈"实质、坦诚"，但未就全面停火达成一致</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · The Washington Post · U.S. News</span> · 2026-09-05</div>
+            <p class="ni-desc">普京9月5日在莫斯科与美国特使维特科夫、库什纳及俄方官员基里尔·德米特里耶夫会谈逾三小时。克里姆林宫外交政策顾问乌沙科夫称会谈"实质、非常坦诚且富有建设性"，并称双方形成了"一整套和平方案的想法"，将在"未来数周内"公布下一步具体计划。普京同时表示俄方对在乌克兰东部实现其军事目标仍有信心，双方并未就更广泛的停火达成一致。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Kremlin Calls Putin's Talks with US Envoys "Substantive, Frank" but No Broader Ceasefire Agreed</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · The Washington Post · U.S. News</span> · 2026-09-05</div>
+            <p class="ni-desc">Putin met US envoys Witkoff and Kushner, along with Russian official Kirill Dmitriev, for more than three hours in Moscow on September 5. Kremlin foreign policy adviser Yuri Ushakov called the talks "substantive, very frank and constructive" and said the two sides had formulated "a whole series of ideas for a peace settlement," with substantive next steps to be announced "in the coming weeks." Putin also said Russia remains confident of achieving its military objectives in eastern Ukraine, and no broader ceasefire was agreed.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/5/russias-putin-meets-us-envoys-to-discuss-trump-proposal-to-end-ukraine-war" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">也门政府军称控制荷台达以南海斯区，塔伊兹交火逾60人死亡</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-06</div>
+            <p class="ni-desc">也门国际承认政府的军队9月6日称已控制荷台达以南的海斯区（Hais），该区连接荷台达、塔伊兹与伊卜三省；交火同时波及塔伊兹省的贾拉希区（al-Jarahi）。据报道，周六塔伊兹的冲突造成60余人死亡，其中包括平民；胡塞武装对塔伊兹—亚丁公路的炮击另造成4名平民死亡、9人受伤。两天内近1,800户家庭流离失所。总统领导委员会主席拉沙德·阿利米（Rashad al-Alimi）称胡塞武装"将承担后果"，并称"塔伊兹不会成为通道"。政府方面亦警告胡塞武装不得向曼德海峡方向移动。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Yemeni Government Forces Claim Hais District South of Hodeidah; 60+ Killed in Taiz Clashes</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-06</div>
+            <p class="ni-desc">Forces of Yemen's internationally recognised government said on September 6 they had taken Hais district south of Hodeidah, which connects the Hodeidah, Taiz and Ibb provinces; fighting also extended to al-Jarahi district in Taiz province. More than 60 people, including civilians, were reported killed in Taiz clashes on Saturday, while Houthi shelling of the Taiz-Aden road killed four civilians and injured nine. Nearly 1,800 families were displaced over two days. Presidential Leadership Council chairman Rashad al-Alimi said the Houthis "will bear the consequences" and that "Taiz will not be a corridor." The government also warned against any Houthi movement toward the Bab al-Mandeb strait.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/6/yemeni-forces-claim-strategic-district-amid-intensified-houthi-clashes" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">俄乌就特使访问期间互不袭击对方首都达成短期安排</h4>
+            <div class="ni-meta"><span class="src">CNN · NPR · Al Jazeera · i24NEWS</span> · 2026-09-06</div>
+            <p class="ni-desc">为配合美国特使先后访问莫斯科与基辅，俄方同意自周六零时起三天不对基辅实施空袭，乌方同意在周一之前不袭击莫斯科。多家媒体将其描述为覆盖本周末外交行程的72小时临时安排。在此之前，基辅长期处于近乎持续的俄方导弹与无人机袭击之下；9月3日乌克兰有十人在袭击中受伤，9月5日俄方袭击造成至少5人死亡。该安排未涉及前线其他区域。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Russia and Ukraine Agree Short-Term Halt on Strikes Against Each Other's Capitals During Envoy Visits</h4>
+            <div class="ni-meta"><span class="src">CNN · NPR · Al Jazeera · i24NEWS</span> · 2026-09-06</div>
+            <p class="ni-desc">To accommodate the US envoys' consecutive visits to Moscow and Kyiv, Russia agreed not to strike Kyiv for three days from midnight Saturday, and Ukraine agreed to refrain from strikes on Moscow through Monday. Multiple outlets described it as a 72-hour arrangement covering the weekend of diplomacy. Kyiv had been under near-constant Russian missile and drone attack: ten people were injured in Ukraine on September 3, and Russian attacks killed at least five on September 5. The arrangement did not cover other areas of the front.</p>
+          </div>
+          <a class="ni-link" href="https://www.cnn.com/2026/09/06/europe/witkoff-kushner-visit-kyiv-intl" target="_blank" rel="noopener">CNN →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">黎巴嫩官方统计：2023年以来以色列袭击致近9,000人死亡</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-06</div>
+            <p class="ni-desc">黎巴嫩方面9月6日公布的累计统计显示，自2023年以来以色列在黎巴嫩境内的袭击已造成近9,000人死亡。该数字与当日凌晨南部四地空袭致至少4人死亡、20人受伤的报告同期发布。以色列目前在其自行划定、深入黎巴嫩约10公里的"安全区"内维持地面行动，同时持续实施空袭；今年6月双方曾签署一项框架协议。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Lebanese Tallies: Nearly 9,000 Killed by Israeli Attacks Since 2023</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-06</div>
+            <p class="ni-desc">Cumulative figures released in Lebanon on September 6 record nearly 9,000 deaths from Israeli attacks inside Lebanon since 2023. The figure was published the same day as reports that pre-dawn strikes on four locations in the south killed at least four people and wounded 20. Israel maintains ground operations inside a self-declared "security zone" roughly 10km into Lebanon while continuing airstrikes; the two sides signed a framework agreement in June.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/6/nearly-9000-killed-in-israeli-attacks-on-lebanon-since-2023" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <div class="ft-img" style="background:linear-gradient(135deg,#0f0c29,#24243e);display:flex;align-items:center;justify-content:center;font-size:64px;color:rgba(255,255,255,.1)">&#x2696;</div>
+        <div class="ft-body">
+          <span class="ft-label tec">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">同一周内的两条监管路线：欧盟向30余家AI企业发函，美方在G20推销"技术中立"</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera（四篇）· 欧盟委员会 · G20 技术部长会 · Brookings Institution · OpenAI 公告 · 美国国会提案</span></div>
+            <div class="ft-desc">
+              <p><strong>时间线：9月1日至9月6日</strong></p>
+              <p>9月1日，二十国集团技术部长会议在美国北卡罗来纳州教堂山（Chapel Hill）举行。特朗普的技术顾问迈克尔·克拉齐奥斯（Michael Kratsios）在会上推销"卡罗莱纳原则"（Carolina Principles），主张采用技术中立的监管方式，而非针对AI的专门约束。克拉齐奥斯称"政策制定者不需要孤立地看待每一项创新"。Meta的马克·扎克伯格与埃隆·马斯克在同一会议上以基础设施与能源需求为由主张放松监管。</p>
+              <p>同一天，欧盟委员会执行副主席亨娜·维尔库宁（Henna Virkkunen）宣布，委员会已向全球30余家AI企业发出信息问询，内容涉及安全与版权合规——这是启动正式调查的前置步骤。</p>
+              <p>9月3日，OpenAI首席执行官萨姆·奥尔特曼在G20场合表示，AI将变得如电力一般不可或缺。同日，OpenAI发布GPT-6 Astra。</p>
+              <p><strong>欧盟：从生效到执法</strong></p>
+              <p>欧盟《人工智能法案》禁止构成"不可接受风险"的AI活动并设定透明度标准，其透明度规则已于2026年8月生效，要求特定AI系统告知用户其正在与AI交互、以及内容是否由AI生成或修改。委员会向企业发函，标志着该法案由文本进入实际执行阶段。</p>
+              <p><strong>美国：联邦层面偏向宽松，地方层面自行设限</strong></p>
+              <p>与联邦层面的宽松取向并行的是地方管制的收紧。9月3日，纽约市市长佐赫兰·马姆达尼（Zohran Mamdani）与公立学校总监卡马尔·塞缪尔斯（Kamar Samuels）宣布，在2026-2027学年对全市学生禁用40款教育类AI工具，范围覆盖小学与初中（至八年级），"伴侣型聊天机器人"（companion chatbots）的禁令延伸至高中；高中另设有限使用的试点项目。该学区为全美最大，涉及60万名学生。教师仍可使用AI备课。残障学生、多语言学习者及计算机科学与职业准备课程的学生属例外。配套措施包括每日屏幕时间限制在45分钟以内、每年两门AI素养课程。马姆达尼称"孩子需要教师和人与人的联系才能学习和成长"。援引的研究包括布鲁金斯学会对400项研究的综述（结论为生成式AI的负面影响超过正面影响）、学生学习中出现"数字性遗忘"的报告，以及2025年阅读能力测评下降6%的数据。</p>
+              <p><strong>产业界的自陈</strong></p>
+              <p>在GPT-6 Astra的发布公告中，OpenAI以显著篇幅列出潜在危害与安全机制。新南威尔士大学的托比·沃尔什评论称"人工智能中的智能到今天仍然非常参差不齐"；路易斯维尔大学的罗曼·扬波尔斯基质疑能力提升的速度是否快于人类可靠理解、预测和控制这些系统的能力。美国参议员伯尼·桑德斯与众议员格雷格·卡萨尔（Greg Casar）已提出立法，要求在联邦安全规则出台前暂停先进AI开发，并禁止超级智能AI。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Two Regulatory Paths in One Week: Brussels Writes to 30+ AI Firms as Washington Sells "Technology Neutrality" at the G20</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera (four reports) · European Commission · G20 technology ministerial · Brookings Institution · OpenAI announcement · US congressional bill</span></div>
+            <div class="ft-desc">
+              <p><strong>Timeline: September 1-6</strong></p>
+              <p>On September 1, the G20 technology ministerial met in Chapel Hill, North Carolina. Michael Kratsios, President Trump's technology adviser, promoted the "Carolina Principles," advocating technology-neutral regulation rather than AI-specific constraints. Kratsios said "policymakers do not need to approach each innovation in isolation." Meta's Mark Zuckerberg and Elon Musk argued at the same meeting for deregulation, citing infrastructure and energy requirements.</p>
+              <p>The same day, European Commission Executive Vice-President Henna Virkkunen announced that the Commission had sent information requests to more than 30 AI companies worldwide regarding safety and copyright compliance — a preliminary step toward formal investigations.</p>
+              <p>On September 3, OpenAI CEO Sam Altman told a G20 audience that AI would become as essential as electricity. OpenAI released GPT-6 Astra the same day.</p>
+              <p><strong>The EU: from entry into force to enforcement</strong></p>
+              <p>The EU's AI Act prohibits AI activities posing "unacceptable risk" and imposes transparency standards. Its transparency rules took effect in August 2026, requiring certain AI systems to tell users when they are interacting with AI and when content has been generated or altered by it. The Commission's letters to companies mark the Act's shift from text to active enforcement.</p>
+              <p><strong>The US: looser at federal level, tighter locally</strong></p>
+              <p>Running alongside the lighter federal posture is a tightening of local controls. On September 3, New York City Mayor Zohran Mamdani and Public Schools Chancellor Kamar Samuels announced a ban on 40 educational AI tools for direct student use in the 2026-2027 school year, covering elementary and middle school through grade 8, with the ban on "companion chatbots" extending through high school; a pilot will test limited AI use in high schools. The district is the nation's largest, with 600,000 students. Teachers may still use AI for lesson planning. Students with disabilities, multilingual learners and those in computer science and career readiness programmes are exempt. Accompanying measures limit screen time to under 45 minutes daily and require two AI literacy courses per year. Mamdani said "children need teachers and human connection in order to learn and grow." Research cited includes a Brookings Institution review of 400 studies concluding that generative AI's negatives outweigh its positives, reports of "digitally induced amnesia" in student learning, and a 6% decline in reading proficiency scores in 2025.</p>
+              <p><strong>What the industry says about itself</strong></p>
+              <p>OpenAI's GPT-6 Astra announcement devoted substantial space to potential harms and safety mechanisms. Toby Walsh of UNSW commented that "the intelligence in artificial intelligence is still today very jagged," while Roman Yampolskiy of the University of Louisville questioned whether capabilities are improving faster than the ability to reliably understand, predict and control these systems. US Senator Bernie Sanders and Representative Greg Casar have introduced legislation to pause advanced AI development pending federal safety rules and to ban superintelligent AI.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">谷歌 Gemini Spark 接入 Google Photos，可代为检索、修图与分享</h4>
+            <div class="ni-meta"><span class="src">TechCrunch · 9to5Google · PetaPixel</span> · 2026-09-04</div>
+            <p class="ni-desc">谷歌宣布其付费功能 Gemini Spark（用于在后台执行多步骤复杂任务）接入 Google Photos。用户可要求其检索照片、批量修图、整理相册、通过邮件发送，或设定定时的照片处理流程；谷歌给出的示例包括找出全部度假自拍、消除背景人群并将主体居中。该功能面向 Google AI Pro 与 AI Ultra 订阅用户，将在"未来几周"内逐步推出，照片能力先在美国上线。安全设计方面，Gemini Spark 在编辑前会先创建图像副本，新建相册默认为私密。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Google's Gemini Spark Connects to Google Photos for Search, Editing and Sharing</h4>
+            <div class="ni-meta"><span class="src">TechCrunch · 9to5Google · PetaPixel</span> · 2026-09-04</div>
+            <p class="ni-desc">Google announced that Gemini Spark — its paid feature for running complex, multi-step tasks in the background — now integrates with Google Photos. Users can ask it to search their library, edit images in bulk, curate albums, send photos by email, or run scheduled photo workflows. Google's examples included finding all vacation selfies, erasing background crowds and centring the subject. The feature is for Google AI Pro and AI Ultra subscribers, rolling out over the "next few weeks," with the Photos capability starting in the US. On safety, Gemini Spark creates an image copy before editing, and new albums are private by default.</p>
+          </div>
+          <a class="ni-link" href="https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library/" target="_blank" rel="noopener">TechCrunch →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">纽约市对八年级及以下学生禁用40款教育AI工具，涉60万学生</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-03</div>
+            <p class="ni-desc">纽约市市长佐赫兰·马姆达尼与公立学校总监卡马尔·塞缪尔斯宣布，2026-2027学年在全美最大学区内禁止学生直接使用40款教育类AI工具，范围覆盖小学与初中（至八年级），"伴侣型聊天机器人"禁令延伸至高中；高中设有限使用试点。该学区共60万名学生。教师仍可用AI备课；残障学生、多语言学习者及计算机科学与职业准备课程学生属例外。配套措施包括每日屏幕时间限制45分钟以内、每年两门AI素养课程。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">New York City Bans 40 Educational AI Tools Through Grade 8, Affecting 600,000 Students</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-03</div>
+            <p class="ni-desc">NYC Mayor Zohran Mamdani and Public Schools Chancellor Kamar Samuels announced that in the 2026-2027 school year the nation's largest school district will ban direct student use of 40 educational AI tools across elementary and middle school through grade 8, with the ban on "companion chatbots" extending through high school and a pilot testing limited high-school use. The district has 600,000 students. Teachers may still use AI for lesson planning; students with disabilities, multilingual learners and those in computer science and career readiness programmes are exempt. Screen time is capped under 45 minutes daily and two AI literacy courses per year are required.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/economy/2026/9/3/nycs-ai-ban-through-grade-8-sets-stage-for-rest-of-us-experts-say" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">中美AI竞赛延伸至开罗，埃及面临技术路线抉择</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-04</div>
+            <p class="ni-desc">半岛电视台9月4日报道，中美两国在人工智能领域的竞争已延伸至埃及，开罗在基础设施、模型供应与技术标准的选择上面临战略取舍。报道将埃及置于更广泛的图景中：多国政府正在两套技术栈之间作出选择，而这一选择同时牵涉数据中心投资、能源供给与监管对接。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The China-US AI Race Reaches Cairo as Egypt Faces a Strategic Decision</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-04</div>
+            <p class="ni-desc">Al Jazeera reported on September 4 that the China-US competition in artificial intelligence has extended to Egypt, with Cairo facing strategic trade-offs over infrastructure, model supply and technical standards. The report places Egypt within a broader pattern of governments choosing between two technology stacks — a choice that simultaneously involves data centre investment, energy supply and regulatory alignment.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/4/as-the-china-us-ai-race-reaches-cairo-egypt-faces-a-strategic-decision" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">香港便利店出现首批人形机器人店员</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-05</div>
+            <p class="ni-desc">半岛电视台9月5日报道，人形机器人已开始在香港的便利店为顾客提供服务，这是当地首次出现机器人店员。报道记录了顾客与机器人互动的场景。就公开信息而言，尚无关于门店数量、部署规模或运营成本的具体数据。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Hong Kong Sees Its First Humanoid Robot Shopkeepers</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-05</div>
+            <p class="ni-desc">Al Jazeera reported on September 5 that humanoid robots have begun serving shoppers at convenience stores in Hong Kong — the city's first robot shopkeepers. The report documented customers interacting with the machines. No public figures were given for the number of stores, deployment scale or operating costs.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/video/newsfeed/2026/9/5/shoppers-interact-with-hong-kongs-first-robot-shopkeeper" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <div class="ft-img" style="background:linear-gradient(135deg,#0b5345,#138d75);display:flex;align-items:center;justify-content:center;font-size:64px;color:rgba(255,255,255,.1)">&#x1F30A;</div>
+        <div class="ft-body">
+          <span class="ft-label env">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">世界气象组织：本轮厄尔尼诺可能"超出四十年来使用的图表范围"</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera（三篇）· 世界气象组织（WMO）· 联合国粮农组织（FAO）· 世界粮食计划署（WFP）· 联合国秘书长办公室 · 联合国环境规划署（UNEP）</span></div>
+            <div class="ft-desc">
+              <p><strong>9月3日的预测更新</strong></p>
+              <p>世界气象组织9月3日发布厄尔尼诺/拉尼娜最新通报，给出该机构在此类通报中迄今表达过的最强确定性：厄尔尼诺持续至明年2月的可能性接近100%。WMO秘书长塞莱斯特·索罗（Celeste Saulo）表示"厄尔尼诺已牢固建立，并将强化为一次非常强的事件"，并称这次事件"可能强于我们开始监测以来的任何一次——也就是说，字面意义上超出了我们过去四十年所使用的图表范围"。联合国秘书长古特雷斯表示"地球正处于未知水域，而这些水正在变热"。</p>
+              <p><strong>具体数值</strong></p>
+              <p>5月至7月平均海表温度较常年偏高1.5°C。7月下旬至8月中旬的周值偏高2.2°C至2.6°C。7月至8月初，部分区域的次表层海水温度较常年偏高超过8°C。WMO预计厄尔尼诺将在2026年年末达到峰值，气候影响延续至2027年。</p>
+              <p><strong>海洋背景：8月创下的记录</strong></p>
+              <p>2026年上半年全球大部分海域持续呈现偏高的海表温度与大范围海洋热浪。8月下旬，全球平均海表温度升至21.1°C，为有记录以来最高，超过2024年3月创下的21.09°C。海水变暖通过热膨胀推高海平面，并提高海洋热浪的发生概率与强度，可能损害珊瑚礁与海草床、扰乱食物链。</p>
+              <p><strong>已经出现的传导：食品价格</strong></p>
+              <p>联合国粮农组织9月4日公布，8月食品价格指数达133.3点，为四年新高，且为连续第三个月上涨；谷物、植物油、糖、肉类与乳制品五个分类全部上涨，其中糖价较7月上涨近12%、达一年来最高，谷物价格上涨逾2%、为两年来最高。粮农组织首席经济学家马克西莫·托雷罗（Maximo Torero）表示"气候冲击、地缘政治紧张与物流中断正在汇合，收紧供应预期"。具体扰动包括黑海军事打击影响俄罗斯与乌克兰的小麦与玉米出口，以及霍尔木兹海峡封锁对全球化肥供应的挤压。欧洲夏季热浪造成作物单产下降，亚洲则面临厄尔尼诺威胁。世界粮食计划署警告，厄尔尼诺可能在明年年底前使额外5,000万人陷入严重饥饿。</p>
+              <p><strong>并行发生的事件</strong></p>
+              <p>与此同时，印尼加里曼丹与苏门答腊的林火产生的跨境烟霾促使马来西亚在砂拉越宣布紧急状态；8月，格陵兰彼得曼冰川崩解出一座面积逾76平方公里的冰山，为北极自2020年以来最大的冰川崩解事件。联合国环境规划署此前表示，世界将越过1.5°C升温线，但仍可限制、适应并从更高的温度回落。第31届联合国气候变化大会（COP31）定于11月9日至20日在土耳其安塔利亚会展中心举行，海洋议题已被多国列为诉求之一。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">WMO: This El Niño May Be "Off the Charts We Have Used for the Past Four Decades"</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera (three reports) · World Meteorological Organization · FAO · World Food Programme · UN Secretary-General's office · UNEP</span></div>
+            <div class="ft-desc">
+              <p><strong>The September 3 forecast update</strong></p>
+              <p>The World Meteorological Organization issued its latest El Niño/La Niña update on September 3, expressing what it called the strongest certainty level it has ever stated in such an update: a nearly 100% likelihood that El Niño continues through February. WMO Secretary-General Celeste Saulo said "El Nino is firmly established and will intensify into a very strong event," and that the event "may be stronger than anything since our monitoring began — so literally off the charts we have used for the past four decades." UN Secretary-General António Guterres said "the planet is in uncharted waters, and those waters are heating up."</p>
+              <p><strong>The figures</strong></p>
+              <p>Sea surface temperatures averaged 1.5°C above normal from May to July. Weekly values from late July to mid-August ran 2.2°C to 2.6°C above average. From July to early August, subsurface ocean temperatures in some areas exceeded 8°C above average. WMO expects El Niño to peak in late 2026, with climate impacts extending into 2027.</p>
+              <p><strong>Ocean context: a record set in August</strong></p>
+              <p>The first half of 2026 was characterised by persistently elevated sea-surface temperatures and widespread marine heatwaves across much of the global ocean. In late August, the average global sea surface temperature reached 21.1°C, the highest on record, surpassing the previous record of 21.09°C set in March 2024. Warmer oceans raise sea levels through thermal expansion and increase the likelihood and intensity of marine heatwaves, which can damage coral reefs and seagrass beds and disrupt food chains.</p>
+              <p><strong>A transmission already visible: food prices</strong></p>
+              <p>The UN Food and Agriculture Organization reported on September 4 that its Food Price Index reached 133.3 points in August, a four-year high and a third consecutive monthly increase. All five tracked categories rose — cereals, vegetable oils, sugar, meat and dairy — with sugar up nearly 12% from July to its highest in a year and cereals up more than 2% to a two-year high. FAO chief economist Maximo Torero said "climate shocks, geopolitical tensions and disrupted trade logistics are converging to tighten supply expectations." Specific disruptions included Black Sea military strikes affecting wheat and maize shipments from Russia and Ukraine, and the Strait of Hormuz blockade straining global fertiliser supplies. European crop yields fell after summer heatwaves, while Asia faces El Niño risk. The World Food Programme warned that El Niño could push an additional 50 million people into acute hunger by the end of next year.</p>
+              <p><strong>Events running in parallel</strong></p>
+              <p>Meanwhile, transboundary haze from wildfires in Indonesia's Kalimantan and Sumatra prompted Malaysia to declare an emergency in Sarawak. In August, a giant iceberg measuring more than 76 square kilometres broke from Greenland's Petermann Glacier, the Arctic's largest glacier calving event since 2020. UNEP has said the world is set to cross 1.5°C of warming but can still limit, adapt to and return from higher temperatures. COP31 is scheduled for November 9-20 at the Antalya Expo Center in Turkey, with ocean issues among the demands several countries have tabled.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">印尼林火烟霾加重，马来西亚在砂拉越宣布紧急状态，647所学校停课</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-05</div>
+            <p class="ni-desc">马来西亚9月5日在婆罗洲北部砂拉越州的西连省（Serian Division）宣布紧急状态，起因是印尼加里曼丹与苏门答腊林火产生的跨境烟霾达到"危险"级别。西连省647所学校自周一起停课至少一周；政府机关、私营企业、种植园、建筑工地与采石场一并关闭，仅保留必要服务。首相安瓦尔·易卜拉欣推动该决定，国王苏丹易卜拉欣予以同意，砂拉越州灾害管理委员会主席道格拉斯·乌加·恩巴斯负责执行。烟霾同时影响沙巴、马来西亚半岛、文莱、新加坡与菲律宾；新加坡24小时读数自2023年以来首次进入"不健康"区间。周四启动的为期三天人工增雨作业已延长至至少周一。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Malaysia Declares Emergency in Sarawak as Indonesian Wildfire Haze Worsens; 647 Schools Closed</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-09-05</div>
+            <p class="ni-desc">Malaysia declared an emergency on September 5 in Serian Division, Sarawak state, on northern Borneo, after transboundary haze from wildfires in Indonesia's Kalimantan and Sumatra reached "hazardous" levels. All 647 schools in Serian close from Monday for at least a week; government offices, private businesses, plantations, construction sites and quarries were also ordered shut, leaving only essential services. Prime Minister Anwar Ibrahim drove the decision, King Sultan Ibrahim gave consent, and Sarawak State Disaster Management Committee chairman Douglas Uggah Embas is overseeing implementation. The haze also affects Sabah, Peninsular Malaysia, Brunei, Singapore and the Philippines; Singapore's 24-hour readings entered the "unhealthy" range for the first time since 2023. A three-day cloud-seeding operation launched Thursday was extended to at least Monday.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/5/malaysia-declares-emergency-in-sarawak-as-haze-from-indonesia-worsens" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">粮农组织：8月全球食品价格指数升至133.3点，创四年新高</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · FAO</span> · 2026-09-04</div>
+            <p class="ni-desc">联合国粮农组织9月4日公布，8月食品价格指数达133.3点，为四年来最高，并且是连续第三个月上涨。谷物、植物油、糖、肉类与乳制品五个分类全部上涨：糖价较7月上涨近12%，为一年来最高；谷物价格上涨逾2%，为两年来最高。粮农组织首席经济学家托雷罗表示，气候冲击、地缘政治紧张与物流中断正在汇合并收紧供应预期。具体扰动包括黑海军事打击影响俄乌小麦与玉米出口、霍尔木兹海峡封锁挤压全球化肥供应，以及欧洲夏季热浪造成的作物单产下降。世界粮食计划署警告，厄尔尼诺可能在明年年底前使额外5,000万人陷入严重饥饿。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">FAO: August Global Food Price Index Rises to 133.3 Points, a Four-Year High</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · FAO</span> · 2026-09-04</div>
+            <p class="ni-desc">The UN Food and Agriculture Organization reported on September 4 that its Food Price Index reached 133.3 points in August, the highest in four years and a third consecutive monthly rise. All five tracked categories increased — cereals, vegetable oils, sugar, meat and dairy — with sugar up nearly 12% from July to a one-year high and cereals up more than 2% to a two-year high. FAO chief economist Maximo Torero said climate shocks, geopolitical tensions and disrupted trade logistics are converging to tighten supply expectations. Specific disruptions include Black Sea military strikes affecting Russian and Ukrainian wheat and maize shipments, the Strait of Hormuz blockade straining global fertiliser supplies, and European crop yield losses from summer heatwaves. The World Food Programme warned El Niño could push an additional 50 million people into acute hunger by the end of next year.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/4/conflicts-and-extreme-weather-pushing-global-food-prices-higher-warns-un" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">全球平均海表温度升至21.1°C，创有记录以来最高</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-08-25</div>
+            <p class="ni-desc">8月下旬，全球平均海表温度连续两日达到21.1°C，超过2024年3月创下的21.09°C，为有记录以来最高值。2026年上半年全球大部分海域持续呈现偏高海表温度与大范围海洋热浪。海水变暖通过热膨胀推高海平面，并提高海洋热浪的发生概率与强度，可能损害珊瑚礁与海草床、扰乱食物链，并影响渔业与水产养殖。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Average Global Sea Surface Temperature Hits Record 21.1°C</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-08-25</div>
+            <p class="ni-desc">In late August, the average global sea surface temperature reached 21.1°C on two consecutive days, surpassing the previous record of 21.09°C set in March 2024 — the highest on record. The first half of 2026 saw persistently elevated sea-surface temperatures and widespread marine heatwaves across much of the global ocean. Warmer oceans raise sea levels through thermal expansion and increase the likelihood and intensity of marine heatwaves, which can damage coral reefs and seagrass beds, disrupt food chains and affect fishing and aquaculture.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/8/25/global-ocean-temperatures-hit-record-high-as-el-nino-intensifies" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">格陵兰彼得曼冰川崩解出逾76平方公里冰山，为北极2020年以来最大</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-08</div>
+            <p class="ni-desc">2026年8月，格陵兰彼得曼冰川（Petermann Glacier）崩解出一座面积逾76平方公里的冰山，为北极自2020年以来最大的冰川崩解事件。该事件与本年度持续偏高的海表温度、海洋热浪记录同期发生。联合国环境规划署此前表示，世界将越过1.5°C升温线，但仍可限制、适应并从更高的温度回落。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Iceberg of More Than 76 Square Kilometres Calves from Greenland's Petermann Glacier — Arctic's Largest Since 2020</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · 2026-08</div>
+            <p class="ni-desc">In August 2026, a giant iceberg measuring more than 76 square kilometres broke from Greenland's Petermann Glacier, marking the Arctic's largest glacier calving event since 2020. The event coincided with a year of persistently elevated sea surface temperatures and record marine heat. UNEP has said the world is set to cross 1.5°C of warming but can still limit, adapt to and return from higher temperatures.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/climate-crisis/" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+})();
+</script>
+
+</body>
+</html>
