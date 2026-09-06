@@ -32,7 +32,9 @@ const { execFileSync } = require('child_process');
 
 // ── 可调配置 ────────────────────────────────────────────────
 // 允许触发 AI 回复的 Discord user id。不在名单里的人只会收到固定引导语。
-const AI_ALLOWLIST = [
+// 这里是兜底默认值；实际以 .env 里的 DISCORD_AI_ALLOWLIST 为准（控制板改的就是它）：
+//   DISCORD_AI_ALLOWLIST=1381233053397028936,另一个id
+let AI_ALLOWLIST = [
   '1381233053397028936', // 陆先生 (kris_10022_11)
 ];
 
@@ -43,14 +45,33 @@ const DISCORD_PROCESS_NAMES = ['Discord.exe', 'DiscordPTB.exe', 'DiscordCanary.e
 // 不在白名单里的人说话时的固定回复。设为 null 表示完全不理。
 const CANNED_REPLY = '本频道是日报推送专用，不在这里展开对话。有事请私信陆先生。';
 
+// 下面三个是默认值，可在 .env 里覆盖（控制板改的就是 .env）：
+//   DISCORD_MAX_REPLIES_PER_HOUR=6
+//   DISCORD_CANNED_COOLDOWN_MIN=60
+//   DISCORD_STALE_AFTER_MIN=30
+
 // 同一个人多久内只回一次固定引导语（分钟），避免刷屏
-const CANNED_COOLDOWN_MIN = 60;
+let CANNED_COOLDOWN_MIN = 60;
 
 // 每小时最多回复多少条（所有类型合计），兜底防循环
-const MAX_REPLIES_PER_HOUR = 6;
+let MAX_REPLIES_PER_HOUR = 6;
 
 // 超过这么久的消息只推进水位线、不再回复（比如 Discord 关了一整天再打开）
-const STALE_AFTER_MIN = 30;
+let STALE_AFTER_MIN = 30;
+
+function applyEnvOverrides() {
+  const num = (key, min, max) => {
+    const v = Number(process.env[key]);
+    return Number.isFinite(v) && v >= min && v <= max ? v : null;
+  };
+  MAX_REPLIES_PER_HOUR = num('DISCORD_MAX_REPLIES_PER_HOUR', 1, 60) || MAX_REPLIES_PER_HOUR;
+  if (typeof process.env.DISCORD_AI_ALLOWLIST === 'string') {
+    // 显式写了空值 = 谁都不给 AI 回复，只发固定引导语
+    AI_ALLOWLIST = process.env.DISCORD_AI_ALLOWLIST.split(',').map(s => s.trim()).filter(Boolean);
+  }
+  CANNED_COOLDOWN_MIN = num('DISCORD_CANNED_COOLDOWN_MIN', 0, 1440) || CANNED_COOLDOWN_MIN;
+  STALE_AFTER_MIN = num('DISCORD_STALE_AFTER_MIN', 1, 1440) || STALE_AFTER_MIN;
+}
 
 // AI 回复的模型；留空用默认
 const AI_MODEL = '';
@@ -123,6 +144,7 @@ function readState() {
   s.channels = s.channels || {};
   s.replies = s.replies || [];
   s.cooldowns = s.cooldowns || {};
+  s.seen = s.seen || {};
   return s;
 }
 
@@ -254,6 +276,16 @@ async function handleChannel(channel, state) {
   for (const m of humans) {
     const who = m.author.username + ' (id=' + m.author.id + ')';
     const preview = String(m.content).replace(/\s+/g, ' ').slice(0, 80);
+
+    // 记下最近发言的人，控制板加白名单时可以直接从这份名单里挑，
+    // 免得还要去 Discord 里开开发者模式复制 user id
+    state.seen = state.seen || {};
+    state.seen[m.author.id] = { name: m.author.username, ts: Date.now() };
+    const seenIds = Object.keys(state.seen);
+    if (seenIds.length > 30) {
+      seenIds.sort((a, b) => state.seen[a].ts - state.seen[b].ts).slice(0, seenIds.length - 30)
+        .forEach(id => { delete state.seen[id]; });
+    }
     const ageMin = (Date.now() - Date.parse(m.timestamp)) / 60000;
     log('新消息 ← ' + who + ' 在 ' + channel + ' «' + preview + '»');
 
@@ -294,6 +326,7 @@ async function handleChannel(channel, state) {
 
 async function main() {
   loadEnv();
+  applyEnvOverrides();
   const state = readState();
   const channels = watchList();
 
@@ -305,6 +338,8 @@ async function main() {
     console.log('Discord 现在:    ' + (discordRunning() ? '在跑' : '没在跑'));
     for (const c of channels) console.log('  水位线 ' + c + ': ' + (state.channels[c] || '(还没记录)'));
     console.log('最近一小时回复:  ' + state.replies.filter(t => t > Date.now() - 3600e3).length + ' / ' + MAX_REPLIES_PER_HOUR);
+    console.log('旧消息不回:      超过 ' + STALE_AFTER_MIN + ' 分钟');
+    console.log('引导语冷却:      同一人 ' + CANNED_COOLDOWN_MIN + ' 分钟内不重复');
     return;
   }
 
