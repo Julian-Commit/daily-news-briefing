@@ -58,13 +58,14 @@ function loadEnv() {
 }
 
 function parseArgs(argv) {
-  const out = { files: [], texts: [], cards: [], dryRun: false, channel: null };
+  const out = { files: [], texts: [], cards: [], dryRun: false, channel: null, edit: null };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--file') out.files.push(argv[++i]);
     else if (a === '--text') out.texts.push(argv[++i]);
     else if (a === '--card') out.cards.push(argv[++i]);
     else if (a === '--channel') out.channel = argv[++i];
+    else if (a === '--edit') out.edit = argv[++i];   // 改一条已发出的消息
     else if (a === '--dry-run') out.dryRun = true;
     else { console.error('未知参数: ' + a); process.exit(1); }
   }
@@ -249,6 +250,19 @@ async function main() {
     console.error('✗ 缺少 DISCORD_BOT_TOKEN 或 DISCORD_CHANNEL_ID。');
     console.error('  在仓库根目录建 .env（参考 .env.example），或先用 --dry-run 检查内容。');
     process.exit(1);
+  }
+
+  if (args.edit) {
+    if (payloads.length !== 1) { console.error('✗ --edit 一次只能改一条'); process.exit(1); }
+    const res = await fetch(API + '/channels/' + channel + '/messages/' + args.edit, {
+      method: 'PATCH',
+      headers: { Authorization: 'Bot ' + token, 'Content-Type': 'application/json', 'User-Agent': 'luxiansheng-daily' },
+      body: JSON.stringify(payloads[0].payload),
+    });
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error('Discord ' + res.status + ' ' + (body.message || '') + '（只能改本机器人自己发的消息）');
+    console.log('✓ 已更新消息 ' + args.edit);
+    return;
   }
 
   for (let i = 0; i < payloads.length; i++) {
