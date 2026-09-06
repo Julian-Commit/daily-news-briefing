@@ -9,3 +9,7 @@ node_modules/
 
 # 计划任务日志
 logs/
+
+# 轮询器的状态与锁
+.discord-poll-state.json
+.discord-poll.lock
