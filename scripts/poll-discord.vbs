@@ -1,6 +1,13 @@
 Option Explicit
-' 隐藏窗口启动 poll-discord.js，避免计划任务每分钟弹一次黑框。
-' 计划任务里的调用方式：wscript.exe "<本文件完整路径>"
+' Scheduled-task entry point. Runs poll-discord.js with a hidden window so the
+' every-minute poll never flashes a console on screen.
+'
+' ASCII only on purpose: VBScript reads .vbs files using the system ANSI code page,
+' so UTF-8 Chinese text in here would be decoded as garbage and can break parsing
+' (a compile error makes Windows Script Host pop up a modal dialog -- once a minute
+' for this task). Keep this file ASCII; put the explanations in the .js instead.
+'
+' Task action:  wscript.exe "<full path to this file>"
 Dim fso, sh, baseDir, nodeExe, cmd
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set sh = CreateObject("WScript.Shell")
