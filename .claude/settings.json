@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Bash(node scripts/today.js:*)",
+      "Bash(node scripts/render.js:*)",
+      "Bash(node scripts/build-index.js)",
+      "Bash(node scripts/notify-discord.js:*)",
+      "Bash(node scripts/journal.js:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}

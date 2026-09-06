@@ -6,3 +6,6 @@
 .env
 
 node_modules/
+
+# 计划任务日志
+logs/

@@ -6,3 +6,7 @@
 *.jpeg binary
 *.webp binary
 *.ico binary
+
+# Windows 脚本保持 CRLF
+*.cmd text eol=crlf
+*.ps1 text eol=crlf

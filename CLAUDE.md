@@ -93,12 +93,27 @@ DISCORD_CHANNEL_ID=...
 
 ## 定时
 
-Cherry Studio 的常驻 Cron 没有等价物。两个选择：
+已配好 Windows 计划任务 `Luxiansheng-Daily-News`：每天本机 15:00 触发（= 北京时间 21:00），
+执行 `scripts\run-daily.cmd` → `run-daily.ps1` → `claude -p "/daily 全自动"`。
+用订阅额度跑，不需要 API key；日志写在 `logs/daily-<北京日期>.log`（已 gitignore）。
 
-- **Claude 计划任务**：会话里说"每天北京时间 21:00 跑一次 /daily"即可，但依赖客户端在运行。
-- **GitHub Actions**：真正无人值守，需要把 `DISCORD_BOT_TOKEN` 存成仓库 Secret。目前尚未配置。
+```powershell
+schtasks /Query  /TN Luxiansheng-Daily-News /V /FO LIST   # 看状态与下次触发时间
+schtasks /Run    /TN Luxiansheng-Daily-News               # 立刻手动跑一次
+schtasks /Change /TN Luxiansheng-Daily-News /DISABLE      # 暂停
+schtasks /Change /TN Luxiansheng-Daily-News /ENABLE       # 恢复
+```
 
-注意：上一期是 2026-07-20（NO.002），此后定时任务已停。重新开跑时期号从 NO.003 续。
+**两个前提，缺一就会在日志里失败：**
+
+1. 这个目录必须被信任过——先交互式跑一次 `claude` 并接受信任对话框，
+   否则 `.claude/settings.json` 里的权限白名单会被整个忽略，无头模式下工具调用会被拒。
+2. CLI 登录态有效——OAuth 过期时 `claude -p` 直接退出，同样要交互式登录一次。
+
+时区提醒：本机是欧洲中部时间。2026-10-25 欧洲夏令时结束后，本机 15:00 会变成北京 22:00，
+仍是同一个北京日期，不影响刊号；想精确对齐就把触发时间往前挪一小时。
+
+注意：上一期是 2026-07-20（NO.002），中间停更近两个月。重新开跑时期号从 NO.003 续。
 
 ## 一个容易踩的坑：日期
 
