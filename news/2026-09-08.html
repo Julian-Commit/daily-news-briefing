@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-08</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;aspect-ratio:2/1;object-fit:cover;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:220px;aspect-ratio:auto;min-height:200px;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:270px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:35%;aspect-ratio:auto;min-height:220px;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+</style>
+<!-- share:start -->
+<meta name="description" content="英国宣布禁止进口以色列约旦河西岸定居点商品，六至九个月内生效；以色列与美方相继表态；伊朗称将在霍尔木兹海峡外划设海上「禁区」，布伦特原油升至七周高位99美元；德国选择党在萨克森-安哈尔特州选举获43.8%，为该党州选举最高得票率，仍未过半">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.004 · 2026-09-08 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="英国宣布禁止进口以色列约旦河西岸定居点商品，六至九个月内生效；以色列与美方相继表态；伊朗称将在霍尔木兹海峡外划设海上「禁区」，布伦特原油升至七周高位99美元；德国选择党在萨克森-安哈尔特州选举获43.8%，为该党州选举最高得票率，仍未过半">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-08.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2026-09/260908-west-bank-rs-78b2d7.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.004 · 2026-09-08 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="英国宣布禁止进口以色列约旦河西岸定居点商品，六至九个月内生效；以色列与美方相继表态；伊朗称将在霍尔木兹海峡外划设海上「禁区」，布伦特原油升至七周高位99美元；德国选择党在萨克森-安哈尔特州选举获43.8%，为该党州选举最高得票率，仍未过半">
+<meta name="twitter:image" content="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2026-09/260908-west-bank-rs-78b2d7.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.004 · 2026-09-08 · 陆先生日报 | Luxiansheng Daily","description":"英国宣布禁止进口以色列约旦河西岸定居点商品，六至九个月内生效；以色列与美方相继表态；伊朗称将在霍尔木兹海峡外划设海上「禁区」，布伦特原油升至七周高位99美元；德国选择党在萨克森-安哈尔特州选举获43.8%，为该党州选举最高得票率，仍未过半","datePublished":"2026-09-08","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-08.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2026-09/260908-west-bank-rs-78b2d7.jpg"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.004</div>
+    <div>2026.09.08 TUESDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">9月8日，英国外交大臣米利班德在下议院宣布，英国将禁止进口以色列在被占约旦河西岸定居点生产的全部商品，并限制融资、建筑、基础设施、房地产与广告等服务；以色列总统赫尔佐格、外长萨尔与美国驻以大使哈克比先后作出反应。波斯湾方向，伊朗最高国家安全委员会秘书表示将在霍尔木兹海峡外划设海上「禁区」，布伦特原油当日升至每桶99美元的七周高位。乌克兰方面，为配合美国特使行程而形成的三日互不袭击首都安排到期，基辅当夜遭导弹与无人机袭击，造成2人死亡、10人受伤。德国萨克森-安哈尔特州议会选举中，德国选择党（AfD）获43.8%选票，为该党在州选举中的最高得票率，但未过半数。科技方面，法国Mistral宣布完成30亿欧元D轮融资，投后估值超过210亿欧元，三星电子领投；中国工信部发布信息通信业「十五五」规划，提出2030年智能算力达到9,800 EFLOPS。环境方面，世界气象组织发布《空气质量与气候公报》，指出极端野火烟雾事件自1990年代以来增至三倍；印尼婆罗洲与苏门答腊的林火烟霾持续第三个月，其8月28日至9月3日的碳排放量已高于2015年同期。</p>
+    <p class="en-content" lang="en">On September 8, UK Foreign Secretary Ed Miliband told the House of Commons that Britain will ban imports of all goods from Israeli settlements in the occupied West Bank and restrict services including financing, construction, infrastructure, real estate and advertising; Israeli President Isaac Herzog, Foreign Minister Gideon Saar and US Ambassador Mike Huckabee responded in turn. In the Gulf, the secretary of Iran's Supreme National Security Council said Tehran will designate a maritime "exclusion zone" outside the Strait of Hormuz, and Brent crude reached a seven-week high of $99 a barrel. In Ukraine, the three-day arrangement under which Moscow and Kyiv refrained from striking each other's capitals during the US envoys' visits expired; Kyiv was hit overnight by missiles and drones, killing two and wounding ten. In Germany's Saxony-Anhalt state election, the Alternative for Germany (AfD) took 43.8% — its highest state-election result — but fell short of a majority. In technology, France's Mistral announced a €3 billion Series D at a post-money valuation above €21 billion, led by Samsung Electronics; China's MIIT published its 15th Five-Year Plan for the information and communications industry, targeting 9,800 EFLOPS of intelligent computing capacity by 2030. On the environment, the World Meteorological Organization released its Air Quality and Climate Bulletin, reporting that extreme fire-smoke events have tripled since the 1990s; haze from fires on Borneo and Sumatra entered a third month, with carbon emissions between August 28 and September 3 exceeding those of the same period in 2015.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl">
+        <img class="hl-img" src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/rockcms/2026-09/260908-west-bank-rs-78b2d7.jpg" alt="约旦河西岸的以色列定居点" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">英国宣布禁止进口以色列约旦河西岸定居点商品，六至九个月内生效；以色列与美方相继表态</h2>
+            <div class="hl-meta"><span class="src">NPR</span> · BBC · Reuters · Al Jazeera · NBC News · AP · 2026-09-08</div>
+            <p class="hl-desc">英国外交大臣埃德·米利班德（Ed Miliband）9月8日在下议院宣布，英国将禁止进口以色列在被占约旦河西岸定居点生产的全部商品，并限制向定居点提供融资、建筑、基础设施、房地产与广告等服务。米利班德表示此举旨在维护两国方案的可能性，并称定居点内存在针对巴勒斯坦人的种族清洗行为。措施将在六至九个月内落地。内阁大臣帕特·麦克法登（Pat McFadden）向媒体强调，这不是「对全部以色列商品的抵制」。背景方面，以色列于2026年8月为E1定居点项目的1,234套住房单元启动招标；超过140名工党议员此前曾呼吁实施贸易限制。以色列总统艾萨克·赫尔佐格（Isaac Herzog）称该决定是「严重误判」，「将站在历史错误的一边」，并指其构成对以色列选举的「粗暴干涉」；外长吉迪恩·萨尔（Gideon Saar）称「若英国对以色列采取行动，以色列也将对英国采取行动」；财政部长贝扎莱尔·斯莫特里赫（Bezalel Smotrich）要求驱逐英国驻特拉维夫大使。美国驻以色列大使迈克·哈克比（Mike Huckabee）称此举「不理性」、构成「对犹太人的歧视」，并提及可能出现「后果或报复」。据报道，法国与加拿大亦将禁止定居点商品贸易，爱尔兰、西班牙、挪威、比利时与荷兰已采取或正在推进相关限制。交叉核验：NPR · BBC · Reuters · Al Jazeera · NBC News · AP · Arab News</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">UK Bans Imports from Israeli West Bank Settlements, Effective Within Six to Nine Months; Israeli and US Officials Respond</h2>
+            <div class="hl-meta"><span class="src">NPR</span> · BBC · Reuters · Al Jazeera · NBC News · AP · 2026-09-08</div>
+            <p class="hl-desc">UK Foreign Secretary Ed Miliband told the House of Commons on September 8 that Britain will ban imports of all goods produced in Israeli settlements in the occupied West Bank, and restrict services to settlements including financing, construction, infrastructure, real estate and advertising. Miliband said the measures were intended to preserve the possibility of a two-state solution and said settlers were carrying out ethnic cleansing of Palestinians. The ban is to be in place within six to nine months. Cabinet minister Pat McFadden told media it was not "a boycott of all Israeli goods." In August 2026 Israel opened bidding for 1,234 housing units in the E1 settlement project; more than 140 Labour MPs had previously called for trade restrictions. Israeli President Isaac Herzog called the decision "a grave miscalculation, a decision that will fall on the wrong side of history" and "gross interference in the democratic elections." Foreign Minister Gideon Saar said "if Britain acts against Israel, Israel will act against Britain." Finance Minister Bezalel Smotrich called for the British ambassador in Tel Aviv to be expelled. US Ambassador to Israel Mike Huckabee called the move "an irrational action" and "discrimination against the Jewish people," warning of possible "repercussions or retaliations." France and Canada are also reported to be moving to ban trade in settlement goods, while Ireland, Spain, Norway, Belgium and the Netherlands have already taken or are taking similar steps. Cross-verified: NPR · BBC · Reuters · Al Jazeera · NBC News · AP · Arab News</p>
+          </div>
+          <a class="hl-link" href="https://www.npr.org/2026/09/08/nx-s1-5961044/uk-occcupied-west-bank-goods-israel" target="_blank" rel="noopener">NPR →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://aje.news/wp-content/uploads/2026/09/afp_6a9ef7b27129-1788802994.jpg?resize=770%2C513&amp;quality=80" alt="霍尔木兹海峡附近的油轮" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">伊朗称将在霍尔木兹海峡外划设海上「禁区」，布伦特原油升至七周高位99美元</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Reuters · CBS News · CNBC · NPR · 2026-09-08</div>
+            <p class="hl-desc">伊朗最高国家安全委员会秘书穆赫辛·礼萨伊（Mohsen Rezaei）9月7日表示，德黑兰计划在霍尔木兹海峡外宣布一处海上「禁区」（exclusion zone），拟在该区域拦截未经伊朗许可通行的船只。伊朗9月6日曾威胁将作出「更强烈、更痛苦」的报复。此前的9月5日，美国中央司令部（CENTCOM）在伊朗伊斯兰革命卫队（IRGC）向两艘美国海军舰艇发射弹道导弹后，打击了三艘伊朗原油运输船；CENTCOM称已在哈尔克岛海域与贾斯克附近各永久瘫痪一艘原油船，另一艘在阿曼湾遇袭，美方一艘航空母舰与一艘导弹驱逐舰均躲过攻击，无人员伤亡。CENTCOM司令、海军上将布拉德·库珀（Brad Cooper）称：「让革命卫队清楚地听到这条信息：你们向我们两艘船开火，我们就以更高的经济代价回敬——干掉你们三艘。」伊朗议会议长穆罕默德·巴盖尔·加利巴夫（Mohammad Baqer Qalibaf）威胁袭击波斯湾沿岸能源设施。阿联酋总统外交顾问安瓦尔·加尔加什（Anwar Gargash）表示该国正在建设替代性贸易与能源通道；卡塔尔外交部表示海湾国家不应仅依赖与美国的安全伙伴关系。海峡通行量下降，美方坚称水道「完全开放」；布伦特原油9月8日上午报每桶99美元，为七周高位。交叉核验：Al Jazeera · Reuters · CBS News · CNBC · NPR · USNI News</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Iran Says It Will Declare a Maritime "Exclusion Zone" Outside Hormuz; Brent Hits Seven-Week High of $99</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Reuters · CBS News · CNBC · NPR · 2026-09-08</div>
+            <p class="hl-desc">Mohsen Rezaei, secretary of Iran's Supreme National Security Council, said on September 7 that Tehran plans to announce a maritime "exclusion zone" outside the Strait of Hormuz, where it intends to stop vessels transiting without Iranian permission. Iran had threatened on September 6 to deliver a "more intense and more painful" retaliation. On September 5, US Central Command struck three Iranian crude oil carriers after the Islamic Revolutionary Guard Corps launched ballistic missiles at two US Navy warships; CENTCOM said it permanently disabled one carrier off Kharg Island and one near Jask, with a third tanker attacked in the Gulf of Oman, and that a US aircraft carrier and a guided-missile destroyer evaded the attacks with no personnel harmed. CENTCOM commander Admiral Brad Cooper said: "Let the message to the IRGC be clear: If you shoot at two of our ships, we will impose an even higher economic cost — taking out three of yours." Iranian parliament speaker Mohammad Baqer Qalibaf threatened attacks on Gulf energy infrastructure. UAE presidential adviser Anwar Gargash said the country is building alternative trade and energy routes, and Qatar's foreign ministry said Gulf states should not rely solely on security partnerships with the United States. Traffic through the strait has fallen while the US insists the waterway is "fully open"; Brent crude traded at $99 a barrel on the morning of September 8, a seven-week high. Cross-verified: Al Jazeera · Reuters · CBS News · CNBC · NPR · USNI News</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/liveblog/2026/9/7/iran-war-live-tehran-to-announce-new-hormuz-shipping-route-in-coming-days" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://aje.news/wp-content/uploads/2026/09/AFP__20260906__C7GU69V__v1__HighRes__GermanyPoliticsVoteStateSaxonyAnhalt-1788762509.jpg?resize=770%2C513&amp;quality=80" alt="德国萨克森-安哈尔特州议会选举之夜" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">德国选择党在萨克森-安哈尔特州选举获43.8%，为该党州选举最高得票率，仍未过半</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · CNN · NPR · CBS News · Axios · Reuters · 2026-09-06</div>
+            <p class="hl-desc">德国萨克森-安哈尔特州9月6日举行州议会选举。据初步官方结果，德国选择党（AfD）获得43.8%选票，为该党在德国州级选举中的最高得票率；执政的基督教民主联盟（CDU）获17.2%。AfD在83个议席中获得39席，距绝对多数所需的42席差3席。包括CDU在内的其他获得较多选票的政党均已明确拒绝与AfD组建联合政府。AfD州总理候选人乌尔里希·西格蒙德（Ulrich Siegmund）称：「我们实现了我们想要实现的目标，我们在这个州创造了历史。」AfD联邦联合主席蒂诺·克鲁帕拉（Tino Chrupalla）称「『防火墙』今天已被选民明确否决」。现任CDU籍州总理斯文·舒尔策（Sven Schulze）表示「我们将不得不接受这个结果」。据报道，本次投票率为77%。AfD副主席贝亚特丽克丝·冯·施托希（Beatrix von Storch）称该党距离执政「非常、非常近」。交叉核验：Al Jazeera · CNN · NPR · CBS News · Axios · Reuters · BBC</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">AfD Takes 43.8% in Saxony-Anhalt, Its Best State-Election Result, but Falls Short of a Majority</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · CNN · NPR · CBS News · Axios · Reuters · 2026-09-06</div>
+            <p class="hl-desc">Saxony-Anhalt held its state election on September 6. According to preliminary official results, the Alternative for Germany (AfD) won 43.8% — its highest result in any German state election — while the governing Christian Democratic Union (CDU) took 17.2%. The AfD won 39 of 83 seats, three short of the 42 needed for an absolute majority. Other parties with significant vote shares, including the CDU, have flatly rejected joining a coalition with the AfD. AfD lead candidate Ulrich Siegmund said: "We have achieved exactly what we wanted to achieve. We have made history in this state." AfD national co-leader Tino Chrupalla said "the 'firewall' has been definitively rejected by the voters today." Incumbent CDU state premier Sven Schulze said "we're going to have to live with this result." Turnout was reported at 77%. AfD deputy leader Beatrix von Storch said the party is "very, very close" to power. Cross-verified: Al Jazeera · CNN · NPR · CBS News · Axios · Reuters · BBC</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/6/far-right-afd-wins-vote-in-germanys-saxony-anhalt-state-exit-polls" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-2264771189.jpg?w=1024" alt="Mistral AI" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">Mistral 完成30亿欧元D轮融资，投后估值超210亿欧元，三星电子领投</h2>
+            <div class="hl-meta"><span class="src">TechCrunch</span> · Reuters · The Register · Yahoo Finance · 2026-09-08</div>
+            <p class="hl-desc">法国人工智能公司Mistral于9月8日宣布完成30亿欧元（约35.8亿美元）D轮融资，投后估值超过210亿欧元（约244亿美元）。该公司称这是欧洲科技公司迄今完成的最大一笔股权融资。本轮由三星电子领投，EQT管理的Scaleup Europe Fund与现有投资方PSG Equity共同领投；Advent、贝莱德（BlackRock）管理的基金与账户、卢森堡大公国作为新投资方加入。现有投资方a16z、ASML、Belfius、法国巴黎银行企业与机构银行、Bpifrance、Carmignac、DST Global、Eurazeo、General Catalyst、Headline、Hillspire、Index Ventures、Korelya Capital、Lightspeed、英伟达（NVIDIA）、Phoenix Court旗下Solar基金与Salesforce Ventures参与跟投。Mistral表示资金将用于扩大算力规模、建设基础设施、加速商业化增长与拓展海外业务。该估值较2025年9月由ASML领投的C轮117亿欧元估值接近翻倍。交叉核验：TechCrunch · Reuters · The Register · Yahoo Finance · TechBriefly · Mistral 官方公告</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Mistral Closes €3B Series D at a Post-Money Valuation Above €21B, Led by Samsung Electronics</h2>
+            <div class="hl-meta"><span class="src">TechCrunch</span> · Reuters · The Register · Yahoo Finance · 2026-09-08</div>
+            <p class="hl-desc">French AI company Mistral announced on September 8 that it had raised €3 billion (about $3.58 billion) in a Series D round at a post-money valuation of more than €21 billion (about $24.4 billion). The company said it is the largest equity fundraising round ever completed by a European technology company. Samsung Electronics led the round, with co-leads Scaleup Europe Fund — managed by EQT — and existing investor PSG Equity. Advent, funds and accounts managed by BlackRock, and the Grand Duchy of Luxembourg joined as new investors. Existing investors a16z, ASML, Belfius, BNP Paribas CIB, Bpifrance, Carmignac, DST Global, Eurazeo, General Catalyst, Headline, Hillspire, Index Ventures, Korelya Capital, Lightspeed, NVIDIA, Phoenix Court's Solar fund and Salesforce Ventures also participated. Mistral said the funds will scale compute capacity, build infrastructure, accelerate commercial growth and expand its international footprint. The valuation is close to double the €11.7 billion set in its September 2025 Series C, which was led by ASML. Cross-verified: TechCrunch · Reuters · The Register · Yahoo Finance · TechBriefly · Mistral announcement</p>
+          </div>
+          <a class="hl-link" href="https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/" target="_blank" rel="noopener">TechCrunch →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://wmo.int/sites/default/files/styles/featured_image_x1_768x512/public/2026-09/Thumbnails%202026_0.jpg" alt="世界气象组织《空气质量与气候公报》" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">世界气象组织：极端野火烟雾事件自1990年代以来增至三倍，热浪推高地面臭氧</h2>
+            <div class="hl-meta"><span class="src">WMO</span> · Reuters · AFP · Phys.org · PreventionWeb · 2026-09-07</div>
+            <p class="hl-desc">世界气象组织（WMO）9月7日发布年度《空气质量与气候公报》。公报援引一项研究指出，全球极端火灾烟雾事件自1990年代以来已增至三倍，在2010年至2018年间每年造成近10万例额外死亡；由于野火烟雾的毒性，现有死亡率模型对相关死亡的低估幅度可能高达93%。WMO指出，欧洲与北美的法规已降低工业与交通来源的PM2.5排放，但与火灾相关的PM2.5暴露反而上升。地面臭氧方面，公报指出气温升高、大气停滞与强太阳辐射会促进臭氧生成，美国东南部、欧洲与中国的热浪期间研究均观察到这一现象，可能导致数万例额外过早死亡，其中以呼吸系统疾病为主。公报同时指出，黑碳与微塑料等物质缺乏充分监测——陆地上的微塑料估计为5,100万吨，海洋中为2,200万吨。公报表示：「由于极端火险天气预计将增加，达到世界卫生组织空气质量准则值将变得越来越困难。」交叉核验：WMO 官方公报 · Reuters · AFP（Dawn / Oman Observer）· Phys.org · PreventionWeb</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">WMO: Extreme Fire-Smoke Events Have Tripled Since the 1990s, and Heatwaves Are Driving Up Ground-Level Ozone</h2>
+            <div class="hl-meta"><span class="src">WMO</span> · Reuters · AFP · Phys.org · PreventionWeb · 2026-09-07</div>
+            <p class="hl-desc">The World Meteorological Organization published its annual Air Quality and Climate Bulletin on September 7. Citing one study, the bulletin says extreme fire-smoke events have tripled globally since the 1990s, contributing to nearly 100,000 additional deaths per year between 2010 and 2018; because of the toxicity of wildfire smoke, existing mortality models may underestimate related deaths by up to 93%. The WMO notes that regulations in Europe and North America have reduced industrial and transport PM2.5 emissions, while exposure to fire-related PM2.5 has increased. On ground-level ozone, the bulletin says rising temperatures, stagnant atmospheric conditions and intense solar radiation promote ozone formation — as observed in studies during heatwaves in the south-eastern United States, Europe and China — with the potential for tens of thousands of additional premature deaths, particularly from respiratory disease. The bulletin also notes that substances such as black carbon and microplastics are insufficiently monitored; microplastics are estimated at 51 million tonnes on land and 22 million tonnes in the oceans. The bulletin states: "Meeting the World Health Organization air quality guidelines will become progressively more difficult, since extreme fire weather is expected to increase." Cross-verified: WMO bulletin · Reuters · AFP (Dawn / Oman Observer) · Phys.org · PreventionWeb</p>
+          </div>
+          <a class="hl-link" href="https://wmo.int/media/news/wmo-bulletin-shows-air-quality-and-climate-interlinkages" target="_blank" rel="noopener">WMO →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://aje.news/wp-content/uploads/2026/09/2026-09-08T082102Z_1634685237_RC2UENA3A2FT_RTRMADP_3_UKRAINE-CRISIS-ATTACK-KYIV-1-1788855956.jpg?resize=770%2C513&amp;quality=80" alt="基辅遭袭后的现场" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label pol">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">72小时窗口关闭之后：基辅的这一夜，与仍未成形的三方会谈</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera · AP News · The Washington Post · CNN · NBC News · Reuters · Axios · POLITICO</span></div>
+            <div class="ft-desc">
+              <p><strong>时间线：从莫斯科到基辅，再到9月8日凌晨</strong></p>
+              <p>9月5日，美国总统特使史蒂夫·维特科夫（Steve Witkoff）与贾里德·库什纳（Jared Kushner）在莫斯科与普京会谈逾三小时，这是双方在近八个月僵局后重启接触。9月6日，两人乘火车抵达基辅会见泽连斯基，为特使级别首次访问乌克兰首都。为配合两段行程，俄方同意自9月5日零时起三天不袭击基辅，乌方同意在9月7日之前不袭击莫斯科。这一安排不覆盖前线其他区域。</p>
+              <p><strong>9月8日凌晨的袭击构成</strong></p>
+              <p>窗口期结束后的当夜，基辅遭到导弹与无人机袭击。基辅市长维塔利·克利奇科（Vitali Klitschko）通报至少2人死亡、10人受伤。据乌克兰空军数据，防空击落142架无人机、32枚巡航导弹中的31枚以及2枚弹道导弹；俄方发射的弹道导弹总数未披露。达尔尼茨基、戈洛西夫斯基、波迪尔斯基、舍甫琴科夫斯基与索洛缅斯基五个市区，以及市郊的鲍里斯波尔与法斯季夫地区出现损毁。基辅市军事管理局在Telegram通报称，至少16处民用基础设施受损。泽连斯基称此次袭击为复合式打击，动用了弹道导弹、巡航导弹、反舰导弹与「见证者」无人机。乌克兰外长安德烈·瑟比加（Andrii Sybiha）称：「美国总统的和平特使刚一离开，（普京）就对基辅发动了又一次大规模的、可怕的袭击。」</p>
+              <p><strong>谈判方的表述</strong></p>
+              <p>维特科夫在基辅表示：「我们进行了非常有意义的讨论，实质、重要，我们受到很大鼓舞。」美方在会后推动举行俄乌美三方会谈，但会谈时间与形式均未宣布。克里姆林宫发言人德米特里·佩斯科夫未排除恢复谈判的可能。泽连斯基在接受Axios采访时表示，美方正在探讨冬季期间的降级措施。克里姆林宫外交政策顾问尤里·乌沙科夫此前称莫斯科会谈「实质、非常坦诚且富有建设性」，并称已形成「一整套和平方案的想法」；普京同时表示双方并未就更广泛的停火达成一致。</p>
+              <p><strong>同期的两条乌克兰内部与外部消息</strong></p>
+              <p>乌克兰总检察长鲁斯兰·克拉夫琴科（Ruslan Kravchenko）9月8日提交辞呈。此前乌克兰国家反腐败局（NABU）搜查了总检察长办公室，该办公室国际合作部门副主任谢尔盖·克罗皮瓦（Serhiy Kropyva）被指控经营一个为诈骗性呼叫中心提供庇护的网络。克拉夫琴科否认与该案有关，称辞职是「一个深思熟虑的政治决定」，并表示「我不希望总检察长这一职位被用作政治斗争的工具」。另据POLITICO获得的航运单据，一家中国国有企业向俄罗斯供应了用于自杀式无人机的材料。</p>
+              <p><strong>可核验的部分与不可核验的部分</strong></p>
+              <p>目前可核验的是：会谈发生了、临时安排存在过、袭击在窗口期结束后随即发生、伤亡与拦截数字由乌方官方渠道发布。尚未可核验的是：所谓「和平方案的一整套想法」的具体内容，以及三方会谈是否会举行。俄乌双方均未公布任何书面文本。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">After the 72-Hour Window Closed: One Night in Kyiv, and Trilateral Talks That Have Yet to Take Shape</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera · AP News · The Washington Post · CNN · NBC News · Reuters · Axios · POLITICO</span></div>
+            <div class="ft-desc">
+              <p><strong>Timeline: Moscow to Kyiv, then the early hours of September 8</strong></p>
+              <p>On September 5, US presidential envoys Steve Witkoff and Jared Kushner met Putin in Moscow for more than three hours, resuming contact after nearly eight months of deep freeze. On September 6 they travelled by train to Kyiv to meet Zelenskyy — the first envoy-level visit to the Ukrainian capital. To accommodate both legs, Russia agreed not to strike Kyiv for three days from midnight on September 5, and Ukraine agreed to refrain from strikes on Moscow through September 7. The arrangement did not cover other areas of the front.</p>
+              <p><strong>The composition of the September 8 attack</strong></p>
+              <p>On the night the window expired, Kyiv was struck by missiles and drones. Kyiv Mayor Vitali Klitschko reported at least two killed and ten wounded. According to Ukraine's air force, air defences downed 142 drones, 31 of 32 cruise missiles and two ballistic missiles; the total number of ballistic missiles Russia launched was not disclosed. Damage was recorded in the Darnytskyi, Holosiivskyi, Podilskyi, Shevchenkivskyi and Solomianskyi districts, along with the Boryspil and Fastiv areas on the city's outskirts. The Kyiv City Military Administration said on Telegram that civilian infrastructure was damaged in at least 16 locations. Zelenskyy said the strike was a complex one involving ballistic and cruise missiles, anti-ship missiles and Shahed drones. Ukrainian Foreign Minister Andrii Sybiha said: "The moment the US president's peace envoys left, [Putin] launched another massive, horrific attack against Kyiv."</p>
+              <p><strong>What the negotiators said</strong></p>
+              <p>Witkoff said in Kyiv: "We've had a very meaningful discussion, substantive, important, and we are very encouraged." Washington is pressing for trilateral talks between Russia, Ukraine and the United States, but no date or format has been announced. Kremlin spokesman Dmitry Peskov did not rule out resuming talks. Zelenskyy told Axios the United States is exploring de-escalation steps for the winter. Kremlin foreign policy adviser Yuri Ushakov had earlier called the Moscow meeting "substantive, very frank and constructive" and said "a whole series of ideas for a peace settlement" had been formulated; Putin said the two sides had not agreed on a broader ceasefire.</p>
+              <p><strong>Two related developments the same week</strong></p>
+              <p>Ukraine's Prosecutor General Ruslan Kravchenko submitted his resignation on September 8. Ukraine's National Anti-Corruption Bureau (NABU) had searched the Prosecutor General's Office, where Serhiy Kropyva, deputy head of its International Cooperation Department, was accused of running a network that provided cover for fraudulent call centres. Kravchenko denied involvement, calling his resignation "a deliberate political decision" and saying "I don't want the role of prosecutor general used as a tool in a political conflict." Separately, shipping documents obtained by POLITICO indicate a Chinese state-owned firm supplied Russia with materials used in one-way attack drones.</p>
+              <p><strong>What can and cannot be verified</strong></p>
+              <p>Verifiable at present: the meetings took place, the temporary arrangement existed, the strike followed immediately after the window closed, and the casualty and interception figures were issued through official Ukrainian channels. Not yet verifiable: the specific content of the "series of ideas for a peace settlement," and whether trilateral talks will be held. Neither Moscow nor Kyiv has published any written text.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">以色列空袭黎巴嫩南部卡法尔鲁曼村，黎方称至少12人死亡</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · The Washington Post · Reuters · The Times of Israel</span> · 2026-09-07</div>
+            <p class="ni-desc">以色列空军9月7日凌晨对黎巴嫩南部卡法尔鲁曼村（Kfar Rumman）实施两次空袭。据黎巴嫩卫生部，袭击造成至少12人死亡，其中一次击中一栋建筑造成11人死亡，包括2名儿童与4名女性；另一次袭击造成1名救援人员死亡、另1人受伤。以色列国防军称此次行动针对真主党设施，是对无人机袭击的回应。此时距双方达成停火安排已逾两个月。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Israeli Airstrikes on Kfar Rumman in South Lebanon; Lebanon Says at Least 12 Killed</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · The Washington Post · Reuters · The Times of Israel</span> · 2026-09-07</div>
+            <p class="ni-desc">Israel's air force carried out two strikes on the southern Lebanese village of Kfar Rumman early on September 7. Lebanon's Health Ministry said at least 12 people were killed: one strike hit a building and killed 11, including two children and four women, while a separate attack killed a rescuer and wounded another. The Israeli military said it targeted Hezbollah infrastructure in response to drone attacks. The strikes came more than two months after a truce was reached.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/7/israeli-air-attack-kills-at-least-10-people-in-southern-lebanon" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">加拿大对约200亿美元美国商品的报复性关税生效，特朗普威胁禁止庞巴迪飞机在美销售</h4>
+            <div class="ni-meta"><span class="src">CNN · The Washington Post · CNBC · Reuters</span> · 2026-09-08</div>
+            <p class="ni-desc">加拿大对约200亿美元美国商品加征15%至50%关税的措施，于美国东部时间9月8日凌晨0时01分生效，对应美方上月对加拿大商品加征的关税。措施包括将美国铝与钢铁的税率提高一倍至50%，与美方对加拿大金属征收的税率持平；纸制品、建材、家电与农产品亦被加征。特朗普9月7日在Truth Social发帖称，若庞巴迪不在美国生产，其飞机将不得在美销售，并写道「他们若想要我们的市场，就必须在这里生产，别再把美国当成『存钱罐』」。总部位于蒙特利尔的庞巴迪回应称其在美国保有大量制造业务并持续扩张。加拿大总理马克·卡尼（Mark Carney）表示将维持反制措施。CNBC对加方关税规模的口径为276亿美元。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Canada's Retaliatory Tariffs on About $20bn of US Goods Take Effect; Trump Threatens to Bar Bombardier Jet Sales</h4>
+            <div class="ni-meta"><span class="src">CNN · The Washington Post · CNBC · Reuters</span> · 2026-09-08</div>
+            <p class="ni-desc">Canada's 15% to 50% duties on roughly $20 billion of American goods took effect at 12:01 a.m. ET on September 8, matching tariffs the United States imposed on Canadian goods last month. The measures double duties on American aluminium and steel to 50%, the rate the US charges on Canadian metals, and add levies on paper products, construction materials, home appliances and agricultural goods. Trump wrote on Truth Social on September 7 that Bombardier jets could not be sold in the US unless built there, adding: "If they want our Market, they must build here, and stop treating America like a 'piggybank.'" Montreal-based Bombardier responded that it maintains a significant US manufacturing presence and continues to expand there. Canadian Prime Minister Mark Carney said he would maintain the countermeasures. CNBC put the value of the Canadian tariffs at $27.6 billion.</p>
+          </div>
+          <a class="ni-link" href="https://www.cnn.com/2026/09/07/economy/trump-carney-canada-us-trade-war" target="_blank" rel="noopener">CNN →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">乌克兰总检察长克拉夫琴科提交辞呈，此前反腐机构搜查其办公室</h4>
+            <div class="ni-meta"><span class="src">Reuters · Meduza · UNN</span> · 2026-09-08</div>
+            <p class="ni-desc">乌克兰总检察长鲁斯兰·克拉夫琴科（Ruslan Kravchenko）9月8日提交辞呈。此前乌克兰国家反腐败局（NABU）搜查总检察长办公室，该办公室国际合作部门副主任谢尔盖·克罗皮瓦（Serhiy Kropyva）被指控经营一个为诈骗性呼叫中心提供庇护的网络。克拉夫琴科否认与该案有关，称辞职是「一个深思熟虑的政治决定」，并表示「我不希望总检察长这一职位被用作政治斗争的工具」，同时表示其对相关指控的立场没有改变。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Ukraine's Prosecutor General Kravchenko Submits Resignation After Anti-Graft Searches at His Office</h4>
+            <div class="ni-meta"><span class="src">Reuters · Meduza · UNN</span> · 2026-09-08</div>
+            <p class="ni-desc">Ukraine's Prosecutor General Ruslan Kravchenko submitted his resignation on September 8. Ukraine's National Anti-Corruption Bureau (NABU) had searched the Prosecutor General's Office, where Serhiy Kropyva, deputy head of the office's International Cooperation Department, was accused of running a network that provided cover for fraudulent call centres. Kravchenko denied involvement, calling the move "a deliberate political decision" and saying "I don't want the role of prosecutor general used as a tool in a political conflict," adding that his position on the allegations had not changed.</p>
+          </div>
+          <a class="ni-link" href="https://meduza.io/en/news/2026/09/08/ukraine-s-prosecutor-general-submits-resignation-after-senior-subordinate-is-accused-of-shielding-fraudulent-call-centers" target="_blank" rel="noopener">Meduza →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">海湾国家表态：阿联酋称建设替代通道，卡塔尔称不应仅依赖对美安全伙伴关系</h4>
+            <div class="ni-meta"><span class="src">Reuters</span> · Al Jazeera · 2026-09-08</div>
+            <p class="ni-desc">在霍尔木兹海峡局势升级的背景下，阿联酋总统外交顾问安瓦尔·加尔加什（Anwar Gargash）表示，该国正在建设替代性的贸易与能源运输通道。卡塔尔外交部则表示，海湾国家不应仅仅依赖与美国的安全伙伴关系。同期，伊朗议会议长加利巴夫威胁将袭击波斯湾沿岸包括美国油气利益在内的能源基础设施；也门胡塞武装袭击沙特能源设施与城市，造成至少73人受伤。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Gulf States Speak Up: UAE Says It Is Building Alternative Routes, Qatar Says Reliance on US Security Ties Is Not Enough</h4>
+            <div class="ni-meta"><span class="src">Reuters</span> · Al Jazeera · 2026-09-08</div>
+            <p class="ni-desc">Against the backdrop of escalation around the Strait of Hormuz, UAE presidential adviser Anwar Gargash said the country is building alternative trade and energy routes. Qatar's foreign ministry said Gulf states should not rely solely on security partnerships with the United States. Over the same period, Iranian parliament speaker Qalibaf threatened attacks on Gulf energy infrastructure including US oil and gas interests, and Yemen's Houthis attacked Saudi energy facilities and cities, wounding at least 73 people.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/liveblog/2026/9/7/iran-war-live-tehran-to-announce-new-hormuz-shipping-route-in-coming-days" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2026/09/08/348af22c-e723-4886-ae46-c6ccc4b22d97_4b888848.jpg?itok=f41bM8UB&amp;v=1788846918" alt="数据中心与算力基础设施" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label tec">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">同一天里的四笔账：算力、光刻机、开源治理与一桩没做成的收购</h3>
+            <div class="ft-meta"><span class="src">综合信源：TechCrunch · The Register · 新华社 · South China Morning Post · CNBC · Engadget · PyTorch 基金会 · Bloomberg（经 Globes / Verdict 转述）</span></div>
+            <div class="ft-desc">
+              <p><strong>一、资本：欧洲最大一笔科技股权融资</strong></p>
+              <p>9月8日，Mistral宣布完成30亿欧元D轮，投后估值超过210亿欧元，由三星电子领投。这一估值较2025年9月由ASML领投的C轮117亿欧元接近翻倍。值得注意的是投资人构成：三星电子、EQT管理的Scaleup Europe Fund、卢森堡大公国、Bpifrance、法国巴黎银行企业与机构银行、Belfius与ASML同时出现在名单上——既有产业资本，也有国家与准国家资本。Mistral称资金用途的第一项是「扩大算力规模」。</p>
+              <p><strong>二、产能：中国的五年算力目标</strong></p>
+              <p>中国工业和信息化部于9月7日公开发布信息通信业「十五五」规划（2026—2030年）。规划提出到2030年智能算力达到9,800 EFLOPS。据南华早报，截至2026年6月末中国智能算力为2,185 EFLOPS（FP16口径），同比增长177%，到7月末约为2,450 EFLOPS；Unite.AI引述的2025年基线为1,590 EFLOPS。规划提出五年内信息基础设施累计投资3.8万亿元人民币（约5,320亿美元），并要求「有序部署」万卡级与十万卡级智能算力集群，以及面向不同应用的推理算力设施。</p>
+              <p><strong>三、设备：High-NA EUV 的采用时间表</strong></p>
+              <p>ASML宣布，三星与台积电将加入英特尔，采用其High-NA极紫外光刻设备。据CNBC与Engadget，三星计划在2028年前将该技术用于DRAM存储产品，台积电则表示自2030年起将其用于先进制程；单台设备价格约4亿美元。三方同时公布了一项将光罩尺寸从6英寸转向12英寸的行业倡议，相关工厂测试计划于2031年开始，2033年进入生产。ASML首席技术官马尔科·彼得斯（Marco Pieters）表示：「如果我们能作为一个行业做成这件事，你会看到这些系统的生产率将提升40%。」英特尔方面，据Tom's Hardware，其High-NA EUV晶圆处理量已在不到两年半内突破100万片。</p>
+              <p><strong>四、治理：PyTorch 基金会的中国席位</strong></p>
+              <p>9月8日，在上海举行的PyTorch Conference China 2026上，PyTorch基金会宣布阿里云与寒武纪加入为白金会员，蚂蚁集团加入为黄金会员。白金会员各获得一个基金会理事会席位与一个技术咨询委员会席位。寒武纪为中国AI芯片与加速器设计企业，其机器学习处理器生态托管有开源工具链、驱动与机器学习流水线。本次会议是KubeCon、CloudNativeCon、OpenInfra Summit与PyTorch Conference首次在中国合并举办，会期为9月7日至9日。</p>
+              <p><strong>五、一桩没做成的收购</strong></p>
+              <p>据彭博社报道，Anthropic在完成尽职调查后终止了对以色列人工智能公司Decart的收购谈判。该交易估值约60亿美元，主要以股票而非现金结构，谈判在2026年8月中旬已进入后期阶段。报道称双方未来可能探索其他形式的合作。Decart的业务方向为「世界模型」——即对物理世界的模拟——以及提升硬件效率、降低AI训练成本的软件。</p>
+              <p><strong>把四件事放在一起看</strong></p>
+              <p>这一天公开的四份数字分别落在资本、产能、设备与开源治理四个环节上。它们由不同主体在不同时区各自宣布，彼此没有直接因果关系；共同点是都以「算力」为计量单位——欧元、EFLOPS、美元每台、理事会席位。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Four Ledgers in a Single Day: Compute, Lithography, Open-Source Governance and an Acquisition That Did Not Happen</h3>
+            <div class="ft-meta"><span class="src">Sources: TechCrunch · The Register · Xinhua · South China Morning Post · CNBC · Engadget · PyTorch Foundation · Bloomberg (via Globes / Verdict)</span></div>
+            <div class="ft-desc">
+              <p><strong>1. Capital: Europe's largest tech equity round</strong></p>
+              <p>On September 8, Mistral announced a €3 billion Series D at a post-money valuation above €21 billion, led by Samsung Electronics. That is close to double the €11.7 billion set in its September 2025 Series C, which ASML led. The investor list is notable: Samsung Electronics, the EQT-managed Scaleup Europe Fund, the Grand Duchy of Luxembourg, Bpifrance, BNP Paribas CIB, Belfius and ASML all appear together — industrial capital alongside state and quasi-state capital. The first stated use of proceeds is to scale compute capacity.</p>
+              <p><strong>2. Capacity: China's five-year compute target</strong></p>
+              <p>China's Ministry of Industry and Information Technology published its 15th Five-Year Plan for the information and communications industry (2026–2030) on September 7. It targets 9,800 EFLOPS of intelligent computing capacity by 2030. According to the South China Morning Post, China's intelligent computing capacity stood at 2,185 EFLOPS (FP16) at the end of June 2026, up 177% year on year, and around 2,450 EFLOPS by the end of July; Unite.AI cites a 2025 baseline of 1,590 EFLOPS. The plan calls for 3.8 trillion yuan (about $532 billion) in cumulative information infrastructure investment over the period and the "orderly deployment" of intelligent computing clusters with 10,000 or 100,000-plus accelerator cards, alongside inference facilities for different applications.</p>
+              <p><strong>3. Equipment: the High-NA EUV adoption timetable</strong></p>
+              <p>ASML announced that Samsung and TSMC will join Intel in adopting its High-NA extreme ultraviolet lithography systems. Per CNBC and Engadget, Samsung plans to use the technology for DRAM memory products by 2028, while TSMC said it will deploy it in advanced nodes from 2030; each machine costs around $400 million. The three also unveiled an industry initiative to move from 6-inch to 12-inch photomasks, with facility testing planned from 2031 and production from 2033. ASML Chief Technology Officer Marco Pieters said: "If we're going to pull it off as an industry, then you'll actually see that the productivity of those systems will go up by 40 percent." Intel, per Tom's Hardware, has processed more than one million High-NA EUV wafers in under two and a half years.</p>
+              <p><strong>4. Governance: Chinese seats at the PyTorch Foundation</strong></p>
+              <p>On September 8, at PyTorch Conference China 2026 in Shanghai, the PyTorch Foundation announced that Alibaba Cloud and Cambricon had joined as Platinum members and Ant Group as a Gold member. Each Platinum member receives one seat on the Governing Board and one on the Technical Advisory Council. Cambricon is a China-based designer of AI chips and accelerators whose Machine Learning Unit ecosystem hosts open-source toolkits, drivers and machine learning pipelines. The event was the first combined KubeCon, CloudNativeCon, OpenInfra Summit and PyTorch Conference held in China, running September 7–9.</p>
+              <p><strong>5. An acquisition that did not happen</strong></p>
+              <p>Bloomberg reported that Anthropic ended talks to acquire Israeli AI company Decart after conducting due diligence. The deal valued Decart at roughly $6 billion and was structured primarily in stock rather than cash; talks had reached an advanced stage by mid-August 2026. The report said the two companies might explore other forms of collaboration in future. Decart works on "world models" — simulations of the physical world — and on software to improve hardware efficiency and reduce AI training costs.</p>
+              <p><strong>Reading the four together</strong></p>
+              <p>The four sets of figures disclosed that day fall on capital, capacity, equipment and open-source governance respectively. They were announced separately by different parties in different time zones, with no direct causal link between them. What they share is a unit of account: compute — measured in euros, EFLOPS, dollars per machine, and board seats.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">Anthropic 终止对以色列公司 Decart 约60亿美元的收购谈判</h4>
+            <div class="ni-meta"><span class="src">Bloomberg（经 Globes / Verdict / Yahoo Finance 转述）</span> · 2026-09-08</div>
+            <p class="ni-desc">据彭博社报道，Anthropic在完成尽职调查后决定不推进对以色列人工智能公司Decart的收购。该交易对Decart的估值约为60亿美元，报价主要以股票而非现金构成，谈判在2026年8月中旬已进入后期阶段。若达成，这将是Anthropic已知规模最大的一笔收购。报道称，收购虽已搁置，双方未来仍可能探索其他形式的合作。Decart的业务方向包括「世界模型」与提升硬件效率、降低AI训练成本的软件。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Anthropic Ends Talks on a Roughly $6bn Acquisition of Israel's Decart</h4>
+            <div class="ni-meta"><span class="src">Bloomberg (via Globes / Verdict / Yahoo Finance)</span> · 2026-09-08</div>
+            <p class="ni-desc">Bloomberg reported that Anthropic decided not to proceed with acquiring Israeli AI company Decart after conducting due diligence. The deal valued Decart at approximately $6 billion, with the offer structured primarily in stock rather than cash, and talks had reached an advanced stage by mid-August 2026. It would have been Anthropic's largest known acquisition. The report said the two companies might still explore other forms of collaboration. Decart works on "world models" and on software to improve hardware efficiency and reduce AI training costs.</p>
+          </div>
+          <a class="ni-link" href="https://en.globes.co.il/en/article-anthropic-decides-against-6b-decart-acquisition-report-1001554747" target="_blank" rel="noopener">Globes →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">谷歌依《数字市场法》改版欧洲搜索结果页，高管称为搜索质量的最大幅度下降</h4>
+            <div class="ni-meta"><span class="src">Reuters</span> · Search Engine Journal · Android Authority · 2026-09-08</div>
+            <p class="ni-desc">谷歌9月8日在欧洲上线搜索结果页改版，给予竞争对手服务更靠前的位置。用户搜索机票、酒店等垂直服务时，结果页将先展示第三方垂直搜索引擎——顶部为一家专业第三方搜索引擎，两侧各有一家。谷歌同时移除了酒店与航班服务轮播中的实时报价。此前欧盟委员会对谷歌处以4.6亿欧元罚款。谷歌一名高级副总裁称，这是该公司搜索业务近三十年历史上「服务质量的最大幅度下降」，并称相关补救措施将从结果中移除有用信息、使用户更多经由中介网站访问。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Google Redesigns European Search Results Under the DMA; Executive Calls It the Largest Quality Reduction in Its History</h4>
+            <div class="ni-meta"><span class="src">Reuters</span> · Search Engine Journal · Android Authority · 2026-09-08</div>
+            <p class="ni-desc">Google rolled out a redesign of its European search results pages on September 8, giving rival services more prominent placement. For vertical search queries such as flights and hotels, results now lead with third-party vertical search engines — one specialist engine at the top, flanked by two others. Google also removed real-time pricing from hotel and flight carousels. The European Commission had previously fined Google €460 million. A Google senior vice-president called the overhaul the largest reduction in quality of service in the search product's nearly three-decade history, saying the remedies strip useful information from results and route more users through intermediary sites.</p>
+          </div>
+          <a class="ni-link" href="https://www.searchenginejournal.com/google-to-test-search-changes-in-eu-after-dma-charges-per-report/568275/" target="_blank" rel="noopener">Search Engine Journal →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">阿里云与寒武纪加入 PyTorch 基金会白金会员，蚂蚁集团为黄金会员</h4>
+            <div class="ni-meta"><span class="src">PyTorch 基金会</span> · PR Newswire · Unite.AI · ChannelLife · 2026-09-08</div>
+            <p class="ni-desc">PyTorch基金会9月8日在上海举行的PyTorch Conference China 2026上宣布，阿里云与寒武纪加入为白金会员，蚂蚁集团加入为黄金会员。白金会员各获得一个基金会理事会席位与一个技术咨询委员会席位。寒武纪为中国AI芯片与加速器设计企业，面向大规模模型训练与推理，其机器学习处理器生态托管有开源工具链、驱动与机器学习流水线。本次会议是KubeCon、CloudNativeCon、OpenInfra Summit与PyTorch Conference首次在中国合并举办，会期9月7日至9日。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Alibaba Cloud and Cambricon Join the PyTorch Foundation as Platinum Members; Ant Group Joins as Gold</h4>
+            <div class="ni-meta"><span class="src">PyTorch Foundation</span> · PR Newswire · Unite.AI · ChannelLife · 2026-09-08</div>
+            <p class="ni-desc">The PyTorch Foundation announced on September 8 at PyTorch Conference China 2026 in Shanghai that Alibaba Cloud and Cambricon had joined as Platinum members and Ant Group as a Gold member. Each Platinum member receives one seat on the Governing Board and one on the Technical Advisory Council. Cambricon is a China-based designer of AI chips and accelerators for large-scale model training and inference, and hosts open-source toolkits, drivers and machine learning pipelines for its Machine Learning Unit ecosystem. The event was the first combined KubeCon, CloudNativeCon, OpenInfra Summit and PyTorch Conference held in China, running September 7–9.</p>
+          </div>
+          <a class="ni-link" href="https://pytorch.org/blog/alibaba-cloud-ant-group-cambricon-and-huawei-come-together-in-shanghai-to-advance-the-open-source-ai-stack-at-pytorch-conference-china/" target="_blank" rel="noopener">PyTorch →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">台积电与三星将采用 ASML High-NA EUV 设备，并推动12英寸光罩标准</h4>
+            <div class="ni-meta"><span class="src">CNBC</span> · Engadget · Techzine · Reuters · 2026-09-08</div>
+            <p class="ni-desc">ASML宣布三星与台积电将加入英特尔，采用其High-NA极紫外光刻设备。三星计划在2028年前将该技术用于DRAM存储产品，台积电表示自2030年起用于先进制程；单台设备价格约4亿美元。三方同时公布将光罩从6英寸转向12英寸的行业倡议，SK海力士正在评估是否参与；相关工厂测试计划2031年开始，2033年进入生产。ASML首席技术官马尔科·彼得斯（Marco Pieters）称，若行业能够实现这一转换，「这些系统的生产率将提升40%」。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">TSMC and Samsung to Adopt ASML High-NA EUV Tools and Back a 12-Inch Photomask Standard</h4>
+            <div class="ni-meta"><span class="src">CNBC</span> · Engadget · Techzine · Reuters · 2026-09-08</div>
+            <p class="ni-desc">ASML announced that Samsung and TSMC will join Intel in adopting its High-NA extreme ultraviolet lithography systems. Samsung plans to use the technology for DRAM memory products by 2028, while TSMC said it will deploy it in advanced nodes from 2030; each machine costs around $400 million. The three also unveiled an industry initiative to move from 6-inch to 12-inch photomasks, with SK Hynix evaluating participation; facility testing is planned from 2031 and production from 2033. ASML Chief Technology Officer Marco Pieters said that if the industry pulls off the transition, "the productivity of those systems will go up by 40 percent."</p>
+          </div>
+          <a class="ni-link" href="https://www.cnbc.com/2026/09/08/tsmc-samsung-asml-high-na-euv-machine-ai-chips.html" target="_blank" rel="noopener">CNBC →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://live-production.wcms.abc-cdn.net.au/87c123c63c0296042ca76ecc56a17c54?impolicy=wcms_crop_resize&amp;cropH=2104&amp;cropW=3741&amp;xPos=0&amp;yPos=350&amp;width=862&amp;height=485" alt="印尼林火造成的烟霾" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label env">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">婆罗洲与苏门答腊的第三个月：一场已超过2015年同期排放量的火</h3>
+            <div class="ft-meta"><span class="src">综合信源：ABC News（澳大利亚）· The Japan Times · Philstar · Malay Mail · The Manila Times · Reuters（经 Yahoo 转述）· 哥白尼大气监测服务 CAMS · Nusantara Atlas · 世界气象组织</span></div>
+            <div class="ft-desc">
+              <p><strong>燃烧的规模</strong></p>
+              <p>印尼婆罗洲与苏门答腊两岛的林火已持续燃烧约三个月。据独立监测平台Nusantara Atlas的估算，今年以来印尼过火面积接近30万公顷；ABC News（澳大利亚）9月7日引述的另一组数据为至少20万公顷（不含8月数据），约为新加坡国土面积的三倍。哥白尼大气监测服务（CAMS）的火灾排放监测显示，8月28日至9月3日期间印尼火灾释放碳排放超过2,300万公吨，高于2015年同期的2,070万公吨——2015年是一个强厄尔尼诺年份。</p>
+              <p><strong>空气质量读数</strong></p>
+              <p>西加里曼丹省首府坤甸（Pontianak）的空气质量指数（AQI）读数一度超过900，为「有害」阈值的三倍；PM2.5进入「危险」区间。当地清晨能见度低至200至500米，全天平均低于1公里。该地区已两个月无降雨。</p>
+              <p><strong>健康与教育影响</strong></p>
+              <p>印尼卫生部记录到数万例呼吸道感染病例。婆罗洲与苏门答腊有逾500万人直接暴露于烟霾健康风险中，超过140万名学生转为远程上课，多所学校因空气质量恶化停课。马来西亚在8月下旬报告哮喘病例上升259%。当地医生穆罕默德·阿里夫·特里·哈普索罗（Muhammad Arief Tri Hapsoro）表示，患者数量「大约是前一年的两倍」，并称「今年可能是迄今最糟糕的一年……情况正在变坏」。</p>
+              <p><strong>跨境扩散与执法</strong></p>
+              <p>烟霾已飘向马来西亚、新加坡与菲律宾。印尼方面在8月以涉嫌纵火为由逮捕72人。参与灭火的消防员安德里·苏桑托（Andri Susanto）称：「2026年的情况确实比2015年更糟。厄尔尼诺的影响非常严重。」</p>
+              <p><strong>与同日发布的 WMO 公报对照</strong></p>
+              <p>世界气象组织9月7日发布的《空气质量与气候公报》指出，全球极端火灾烟雾事件自1990年代以来增至三倍，2010至2018年间每年造成近10万例额外死亡；公报同时指出，由于野火烟雾毒性较高，现有模型对相关死亡的低估幅度可能达到93%。公报的结论是，随着极端火险天气增加，达到世界卫生组织空气质量准则值将变得越来越困难。印尼此轮火情提供了这一结论的一组同期实测数据：欧洲与北美通过法规压低了工业与交通源PM2.5，而火源PM2.5的暴露在其他区域继续上升。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">A Third Month on Borneo and Sumatra: Fires Whose Emissions Have Already Passed the Same Period in 2015</h3>
+            <div class="ft-meta"><span class="src">Sources: ABC News (Australia) · The Japan Times · Philstar · Malay Mail · The Manila Times · Reuters (via Yahoo) · Copernicus Atmosphere Monitoring Service · Nusantara Atlas · World Meteorological Organization</span></div>
+            <div class="ft-desc">
+              <p><strong>The scale of the burn</strong></p>
+              <p>Fires on the Indonesian islands of Borneo and Sumatra have burned for roughly three months. The independent monitoring platform Nusantara Atlas estimates that nearly 300,000 hectares have burned in Indonesia this year; a separate figure cited by ABC News (Australia) on September 7 puts it at at least 200,000 hectares excluding August data — about three times the land area of Singapore. Fire emissions tracking by the Copernicus Atmosphere Monitoring Service (CAMS) shows Indonesian fires released more than 23 million tonnes of carbon between August 28 and September 3, above the 20.7 million tonnes over the same period in 2015, a strong El Niño year.</p>
+              <p><strong>Air quality readings</strong></p>
+              <p>The Air Quality Index in Pontianak, capital of West Kalimantan, exceeded 900 — three times the hazardous threshold — with PM2.5 in the "dangerous" category. Morning visibility fell to 200–500 metres, averaging below one kilometre. The region has had no rainfall for two months.</p>
+              <p><strong>Health and schooling</strong></p>
+              <p>Indonesia's Health Ministry has recorded tens of thousands of respiratory infection cases. More than five million people across Borneo and Sumatra are directly exposed to haze-related health risks, and over 1.4 million students moved to remote classes, with many schools closed. Malaysia reported a 259% rise in asthma cases in late August. Local doctor Muhammad Arief Tri Hapsoro said patient numbers were "roughly doubled from the year before," adding: "This may be the worst year yet … it is getting worse."</p>
+              <p><strong>Cross-border spread and enforcement</strong></p>
+              <p>The haze has drifted to Malaysia, Singapore and the Philippines. Indonesian authorities arrested 72 people in August on suspicion of starting fires. Firefighter Andri Susanto said: "Conditions in 2026 are indeed worse than in 2015. The impact of El Niño has been so severe."</p>
+              <p><strong>Read against the WMO bulletin published the same day</strong></p>
+              <p>The World Meteorological Organization's Air Quality and Climate Bulletin, published September 7, reports that extreme fire-smoke events have tripled globally since the 1990s, contributing to nearly 100,000 additional deaths per year between 2010 and 2018, and that because of the toxicity of wildfire smoke existing models may underestimate related deaths by up to 93%. Its conclusion is that meeting WHO air quality guidelines will become progressively harder as extreme fire weather increases. Indonesia's current fire season supplies a concurrent set of measurements for that conclusion: Europe and North America have driven down industrial and transport PM2.5 through regulation, while exposure to fire-source PM2.5 keeps rising elsewhere.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">联合国环境署《限制超调》报告：1.5℃将在数年内被突破，最乐观情景下峰值仍达1.8℃</h4>
+            <div class="ni-meta"><span class="src">UNEP</span> · Nature · UN News · Phys.org · 2026-09-02</div>
+            <p class="ni-desc">联合国环境规划署（UNEP）9月2日发布《限制超调：应对1.5℃的突破与回归路径》报告，指出全球升温将在未来数年内越过1.5℃。报告将现有政府承诺下的最乐观峰值升温定为1.8℃；在现行政策下，2100年升温中位数约为2.6℃，区间为1.9℃至3.6℃。报告提出「超调—达峰—回落」路径是尽可能缩小超调幅度与持续时间的现实选项，该路径依赖立即且持续的温室气体（含甲烷）减排，以及长期的净负排放。联合国秘书长安东尼奥·古特雷斯（António Guterres）在报告发布致辞中表示，今夏的酷热、野火与洪水是对未来的警示。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">UNEP's "Limiting Overshoot": 1.5°C Will Be Breached Within Years, With Peak Warming at 1.8°C Even in the Best Case</h4>
+            <div class="ni-meta"><span class="src">UNEP</span> · Nature · UN News · Phys.org · 2026-09-02</div>
+            <p class="ni-desc">The UN Environment Programme published "Limiting Overshoot — Navigating exceedance of 1.5°C and pathways towards return" on September 2, finding that global warming will cross 1.5°C within the next few years. The report puts best-case peak warming under current government pledges at 1.8°C; under current policies it gives a median of about 2.6°C by 2100, with a range of 1.9°C to 3.6°C. It identifies an "overshoot, peak and decline" pathway as the realistic option for minimising the magnitude and duration of overshoot, relying on immediate and sustained cuts to greenhouse gases including methane, plus long-term net-negative emissions. UN Secretary-General António Guterres said in his launch message that this summer's heat, wildfires and floods are a warning of what lies ahead.</p>
+          </div>
+          <a class="ni-link" href="https://www.unep.org/news-and-stories/press-release/unep-world-set-cross-15degc-global-warming-can-still-limit-adapt-and" target="_blank" rel="noopener">UNEP →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">英国夏季太阳能发电8.8太瓦时创纪录，同比增长23%</h4>
+            <div class="ni-meta"><span class="src">Carbon Brief</span> · Solar Energy UK · 英国气象局 · 谢菲尔德大学 · 2026-09-04</div>
+            <p class="ni-desc">据Carbon Brief分析，英国太阳能电站与屋顶光伏在2026年6月至8月合计发电8.8太瓦时，创同期纪录，较2025年同期增长23%，为2021年夏季的两倍；7月单月3.3太瓦时，满足当月全国用电需求的15%。谢菲尔德大学数据显示装机容量已达约24吉瓦，2026年初以来新增约17.2万套装置，其中7月一个月新增19,800套；家庭屋顶光伏约占总发电量的29%，全英约170万户家庭安装了光伏。英国气象局数据显示，2026年夏季为英国有记录以来最热的夏季，日照超过620小时，为第六多；5月至8月出现五次热浪、26个热浪日，8月13日邱园录得38.1℃。Solar Energy UK首席执行官克里斯·休伊特（Chris Hewett）将纪录归因于「晴朗的天空与持续增长的装机」。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">UK Solar Generation Hits a Record 8.8TWh Over Summer, Up 23% Year on Year</h4>
+            <div class="ni-meta"><span class="src">Carbon Brief</span> · Solar Energy UK · Met Office · University of Sheffield · 2026-09-04</div>
+            <p class="ni-desc">Carbon Brief analysis found UK solar farms and rooftops generated 8.8TWh between June and August 2026 — a record for the period, up 23% on summer 2025 and double the summer 2021 level. July alone produced 3.3TWh, meeting 15% of the month's electricity demand. University of Sheffield data puts installed capacity at about 24GW, with roughly 172,000 installations added since the start of 2026, including 19,800 in July alone; domestic rooftop panels account for around 29% of total generation, and about 1.7 million UK households now have solar. Met Office data show summer 2026 was the UK's hottest on record and its sixth sunniest, with more than 620 hours of sunshine, five heatwaves and 26 heatwave days between May and August, and a peak of 38.1°C at Kew Gardens on August 13. Solar Energy UK chief executive Chris Hewett attributed the record to "clear skies and continued growth in deployment."</p>
+          </div>
+          <a class="ni-link" href="https://www.carbonbrief.org/analysis-uk-solar-power-hits-record-high-over-summer-2026" target="_blank" rel="noopener">Carbon Brief →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">美国环保署与陆军工程兵团就「美国水域」定义发布补充提案</h4>
+            <div class="ni-meta"><span class="src">Agri-Pulse</span> · The New York Times · 2026-09</div>
+            <p class="ni-desc">美国环境保护署（EPA）与陆军工程兵团于9月初发布关于《清洁水法》「美国水域」（WOTUS）定义的补充拟议规则，就「相对永久性」水体、「连续地表连接」与「支流」等关键术语的新定义再次公开征求意见。此前的11月版提案已收到逾2.2万条意见。补充提案要求湿地须与受管辖水体有连续地表连接、并逐年在规定时长内保有地表水，同时新增地下水排除条款。批评意见认为，按此解释将有数百万英亩湿地失去联邦保护；湿地具有蓄洪、过滤径流、分解污染物与提供物种栖息地的功能。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">EPA and Army Corps Issue a Supplemental Proposal on the "Waters of the United States" Definition</h4>
+            <div class="ni-meta"><span class="src">Agri-Pulse</span> · The New York Times · 2026-09</div>
+            <p class="ni-desc">The US Environmental Protection Agency and the Army Corps of Engineers issued a supplemental notice of proposed rulemaking in early September on the Clean Water Act's "waters of the United States" (WOTUS) definition, seeking further comment on new definitions for key terms including "relatively permanent," "continuous surface connection" and "tributary." The earlier November proposal had drawn more than 22,000 comments. The supplemental proposal would require wetlands to have a continuous surface connection to jurisdictional waters and to hold surface water for a requisite duration year after year, and adds a new exclusion for groundwater. Critics say the interpretation would strip federal protection from millions of acres of wetlands, which control flooding, filter runoff, break down pollutants and provide habitat.</p>
+          </div>
+          <a class="ni-link" href="https://www.agri-pulse.com/articles/25198-epa-corps-issue-supplemental-wotus-proposal" target="_blank" rel="noopener">Agri-Pulse →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">尼泊尔冰川崩塌洪灾：8月26日至今官方伤亡数字仍在变动</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · CNN · EarthSky · 2026-09</div>
+            <p class="ni-desc">8月26日，尼泊尔朗塘国家公园内朗塘里壤峰（Langtang Lirung）顶部冰川部分崩塌，引发山洪与泥石流，冲毁下游村庄。此后各方发布的伤亡口径持续变动：8月27日的通报为至少300人死亡、逾900人失踪；尼泊尔国家灾害风险削减与管理局其后将死亡人数上调至903人。搜救与遗体辨认工作仍在进行，最终数字尚未确定。多名科学家表示，气候变化很可能是此次冰川崩塌的促成因素之一。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Nepal's Glacier-Collapse Flood: Official Casualty Figures Still Shifting Since August 26</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · CNN · EarthSky · 2026-09</div>
+            <p class="ni-desc">On August 26, part of the glacier atop Langtang Lirung peak in Nepal's Langtang National Park collapsed, triggering a flash flood and debris flow that destroyed villages downstream. Casualty figures reported since have continued to change: an August 27 tally recorded at least 300 dead and more than 900 missing, and Nepal's National Disaster Risk Reduction and Management Authority later raised the death toll to 903. Search, recovery and identification work continues and final figures are not settled. Scientists have said climate change likely contributed to the glacier collapse.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/8/30/nepal-china-flood-disaster-whats-the-latest-toll-how-many-are-missing" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+})();
+</script>
+
+</body>
+</html>
