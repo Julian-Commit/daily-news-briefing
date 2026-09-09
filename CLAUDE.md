@@ -23,6 +23,7 @@ news/YYYY-MM-DD.html  每期日报
 news/index.html     往期目录（由脚本生成，不要手写）
 scripts/            无第三方依赖，Node 18+ 直接跑
   render        填模板 + 硬校验
+  extract-images 抓 og:image（纯 HTTP，不开浏览器）
   finalize      注入 og/twitter/JSON-LD，并把模板样式同步给旧刊
   build-index   重建首页与往期目录
   make-card     从刊物生成 Discord 卡片 JSON
@@ -105,7 +106,7 @@ DISCORD_CHANNEL_ID=...
 ## 定时
 
 已配好 Windows 计划任务 `Luxiansheng-Daily-News`：每天本机 15:00 触发（= 北京时间 21:00），
-执行 `scripts\run-daily.cmd` → `run-daily.ps1` → `claude -p "/daily 全自动"`。
+执行 `scripts\run-daily.vbs`（隐藏窗口）→ `run-daily.ps1` → `claude.exe -p "/daily 全自动"`。
 用订阅额度跑，不需要 API key；日志写在 `logs/daily-<北京日期>.log`（已 gitignore）。
 
 ```powershell
