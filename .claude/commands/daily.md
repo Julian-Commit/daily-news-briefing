@@ -55,6 +55,20 @@ node scripts/render.js template.html <issue.json> news/YYYY-MM-DD.html
 `render.js` 会校验占位符是否填齐、有没有残留 `{{...}}`、图片 src 是否为空。
 **报错就必须修好再继续**，不要用 `--allow-missing` 绕过。
 
+**4.4 校验配图（必做）**
+
+```bash
+node scripts/check-images.js news/YYYY-MM-DD.html
+```
+
+它会带上本站 Referer 去真实请求每张图。**URL 能打开 ≠ 页面上能显示**：
+不少图床开了防盗链（半岛电视台的 `aje.news` 就是），直接访问 200，
+带 Referer 就 403，读者看到的是一片空白。2026-09-09 那期 8 张图里有 3 张栽在这上面。
+
+报错的图：换同一条新闻里**别的信源**的图；实在找不到就不配图。
+**绝不要为了凑图随便挂一张别的照片**——配错图和编造事实是一个性质。
+确认没救了可以 `--fix-remove` 把坏的 img 整个删掉。
+
 **4.5 收尾（注入分享信息 + 同步样式）**
 
 ```bash

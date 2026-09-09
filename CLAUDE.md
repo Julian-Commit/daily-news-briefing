@@ -24,6 +24,7 @@ news/index.html     往期目录（由脚本生成，不要手写）
 scripts/            无第三方依赖，Node 18+ 直接跑
   render        填模板 + 硬校验
   extract-images 抓 og:image（纯 HTTP，不开浏览器）
+  check-images  校验配图在本站能否显示（防盗链会 403）
   finalize      注入 og/twitter/JSON-LD，并把模板样式同步给旧刊
   build-index   重建首页与往期目录
   make-card     从刊物生成 Discord 卡片 JSON

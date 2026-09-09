@@ -278,7 +278,7 @@ body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd
       </article>
 
       <article class="hl">
-        <img class="hl-img" src="https://aje.news/wp-content/uploads/2026/09/2026-09-08T075323Z_1822650518_RC2VENAKVDYF_RTRMADP_3_ISRAEL-PALESTINIANS-SETTLERS-BRITAIN-1788856280.jpg?resize=770%2C513&amp;quality=80" alt="约旦河西岸的以色列定居点" loading="lazy" onerror="this.style.display='none'">
+        
         <div class="hl-body">
           <span class="hl-tag pol">国际政治</span>
           <div class="zh-content">
@@ -364,7 +364,7 @@ body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd
     </div>
     <div class="sec-inner">
       <article class="ft">
-        <img class="ft-img" src="https://aje.news/wp-content/uploads/2026/09/2026-09-08T230056Z_1478579696_RC2AFNAQJA7C_RTRMADP_3_IRAN-CRISIS-USA-NAVY-CARRIERS-1788908805.jpg?resize=770%2C513&amp;quality=80" alt="波斯湾海域的美国海军舰艇" loading="lazy" onerror="this.style.display='none'">
+        
         <div class="ft-body">
           <span class="ft-label pol">深度解读 · IN-DEPTH</span>
           <div class="zh-content">
@@ -588,7 +588,7 @@ body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd
     </div>
     <div class="sec-inner">
       <article class="ft">
-        <img class="ft-img" src="https://aje.news/wp-content/uploads/2026/09/2026-09-01T102008Z_2457438_RC25ANACGFQO_RTRMADP_3_NEPAL-FLOODS-1788258112.jpg?resize=770%2C513&amp;quality=80" alt="尼泊尔波特科西流域的洪水灾区" loading="lazy" onerror="this.style.display='none'">
+        
         <div class="ft-body">
           <span class="ft-label env">深度解读 · IN-DEPTH</span>
           <div class="zh-content">
@@ -757,6 +757,25 @@ body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd
     }, { rootMargin: '-64px 0px -70% 0px' });
     Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
   }
+
+  // 点图看大图（原图通常比版面里的大得多）
+  var lbx = document.createElement('div');
+  lbx.className = 'lbx';
+  lbx.innerHTML = '<img alt=""><div class="lbx-tip">点击任意处关闭 · Click anywhere to close</div>';
+  document.body.appendChild(lbx);
+  var lbxImg = lbx.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IMG' && /\b(hl-img|ft-img)\b/.test(t.className || '') && t.naturalWidth > 0) {
+      lbxImg.src = t.currentSrc || t.src;
+      lbx.classList.add('on');
+    } else if (lbx.classList.contains('on')) {
+      lbx.classList.remove('on');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lbx.classList.remove('on');
+  });
 })();
 </script>
 
