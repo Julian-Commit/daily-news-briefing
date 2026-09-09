@@ -94,7 +94,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 /* Headline */
 .hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
 .hl:hover{box-shadow:var(--shadow)}
-.hl .hl-img{width:100%;aspect-ratio:2/1;object-fit:cover;background:var(--tint);display:block}
+.hl .hl-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
 .hl .hl-body{padding:18px}
 .hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
 .hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
@@ -106,14 +106,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .hl .hl-link:hover{text-decoration:underline}
 @media(min-width:768px){
   .hl{display:flex}
-  .hl .hl-img{width:220px;aspect-ratio:auto;min-height:200px;flex-shrink:0}
+  .hl .hl-img{width:300px;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
   .hl .hl-body{flex:1;padding:20px}
 }
-@media(min-width:1024px){.hl .hl-img{width:270px}}
+@media(min-width:1024px){.hl .hl-img{width:340px}}
 
 /* Feature */
 .ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
-.ft .ft-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--tint);display:block}
+.ft .ft-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
 .ft .ft-body{padding:22px}
 .ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
 .ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
@@ -125,7 +125,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
 @media(min-width:768px){
   .ft{display:flex}
-  .ft .ft-img{width:35%;aspect-ratio:auto;min-height:220px;flex-shrink:0}
+  .ft .ft-img{width:40%;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
   .ft .ft-body{flex:1}
 }
 
@@ -177,6 +177,14 @@ body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd
   .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
   a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
 }
+
+/* 图片：完整显示，不裁切。点一下看大图 */
+.hl .hl-img,.ft .ft-img{cursor:zoom-in}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:24px;cursor:zoom-out}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+.lbx .lbx-tip{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+@media print{.lbx{display:none!important}}
 </style>
 <!-- share:start -->
 <meta name="description" content="美军击毁五艘伊朗油轮，革命卫队向约旦阿兹拉克基地发射20枚弹道导弹；布伦特原油盘中触及99.46美元；十余国宣布限制与以色列定居点的货物贸易，以色列令英国驻东耶路撒冷领事馆30天内关闭；高通与AWS达成多代定制AI推理芯片合作，向亚马逊发行2,500万股认股权证，行权挂钩最高600亿美元采购">
