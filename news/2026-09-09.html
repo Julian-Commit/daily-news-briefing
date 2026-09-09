@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-09</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;aspect-ratio:2/1;object-fit:cover;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:220px;aspect-ratio:auto;min-height:200px;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:270px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:35%;aspect-ratio:auto;min-height:220px;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+</style>
+<!-- share:start -->
+<meta name="description" content="美军击毁五艘伊朗油轮，革命卫队向约旦阿兹拉克基地发射20枚弹道导弹；布伦特原油盘中触及99.46美元；十余国宣布限制与以色列定居点的货物贸易，以色列令英国驻东耶路撒冷领事馆30天内关闭；高通与AWS达成多代定制AI推理芯片合作，向亚马逊发行2,500万股认股权证，行权挂钩最高600亿美元采购">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.005 · 2026-09-09 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="美军击毁五艘伊朗油轮，革命卫队向约旦阿兹拉克基地发射20枚弹道导弹；布伦特原油盘中触及99.46美元；十余国宣布限制与以色列定居点的货物贸易，以色列令英国驻东耶路撒冷领事馆30天内关闭；高通与AWS达成多代定制AI推理芯片合作，向亚马逊发行2,500万股认股权证，行权挂钩最高600亿美元采购">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-09.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.abcnewsfe.com/a/db02d115-0c89-483e-8cc4-feae0547a496/iran-strike-01-gty-jt-260905_1788620458650_hpMain_16x9.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.005 · 2026-09-09 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="美军击毁五艘伊朗油轮，革命卫队向约旦阿兹拉克基地发射20枚弹道导弹；布伦特原油盘中触及99.46美元；十余国宣布限制与以色列定居点的货物贸易，以色列令英国驻东耶路撒冷领事馆30天内关闭；高通与AWS达成多代定制AI推理芯片合作，向亚马逊发行2,500万股认股权证，行权挂钩最高600亿美元采购">
+<meta name="twitter:image" content="https://i.abcnewsfe.com/a/db02d115-0c89-483e-8cc4-feae0547a496/iran-strike-01-gty-jt-260905_1788620458650_hpMain_16x9.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.005 · 2026-09-09 · 陆先生日报 | Luxiansheng Daily","description":"美军击毁五艘伊朗油轮，革命卫队向约旦阿兹拉克基地发射20枚弹道导弹；布伦特原油盘中触及99.46美元；十余国宣布限制与以色列定居点的货物贸易，以色列令英国驻东耶路撒冷领事馆30天内关闭；高通与AWS达成多代定制AI推理芯片合作，向亚马逊发行2,500万股认股权证，行权挂钩最高600亿美元采购","datePublished":"2026-09-09","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-09.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://i.abcnewsfe.com/a/db02d115-0c89-483e-8cc4-feae0547a496/iran-strike-01-gty-jt-260905_1788620458650_hpMain_16x9.jpg"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.005</div>
+    <div>2026.09.09 WEDNESDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">9月9日，波斯湾方向的对等打击进入新一轮。美国中央司令部（CENTCOM）称，在伊朗伊斯兰革命卫队（IRGC）两日内两次以弹道导弹瞄准一艘美国海军舰艇后，美军于9月8日击毁五艘与革命卫队关联的伊朗原油运输船，其中四艘在阿曼湾、一艘在哈尔克岛附近；革命卫队随后向约旦阿兹拉克（Al Azraq）附近的美军基地发射20枚弹道导弹，约旦称拦截18枚、另两枚落于无人区，无人员伤亡，同时称袭击了霍尔木兹海峡附近10艘船只。布伦特原油9月8日盘中触及每桶99.46美元。约旦河西岸方向，在英国9月8日宣布定居点商品进口禁令后，法国与加拿大同日宣布同类措施，另有多个欧洲国家宣布将实施或支持限制；以色列外长萨尔宣布关闭英国驻东耶路撒冷领事馆，并禁止12名英国政界人士入境。俄乌方向，俄罗斯克拉斯诺达尔边疆区新罗西斯克9月9日遇袭致4人死亡、29人受伤，俄国防部称一夜击落596架无人机。科技方面，高通宣布与亚马逊云科技（AWS）就多代定制AI推理芯片达成合作，并向亚马逊发行2,500万股认股权证，行权与最高600亿美元的商业采购挂钩；苹果「Surprise and Shine」发布会定于太平洋时间9月9日10时举行，本报截稿时尚未开始。环境方面，美国能源部完成对内克斯特拉能源（NextEra Energy）19亿美元贷款的交割，用于重启爱奥瓦州杜安·阿诺德核电站，其615兆瓦电力已由谷歌以25年购电协议锁定；尼泊尔波特科西洪水的死亡人数升至至少1,377人，5,326人仍失踪，尼方称重建需40亿至50亿美元，并计划申请「损失与损害基金」。</p>
+    <p class="en-content" lang="en">On September 9, the tit-for-tat exchange in the Gulf entered a new round. US Central Command said that after Iran's Islamic Revolutionary Guard Corps (IRGC) twice targeted a US Navy warship with ballistic missiles over two days, American forces destroyed five Iranian crude carriers linked to the IRGC on September 8 — four in the Gulf of Oman and one near Kharg Island. The IRGC then fired 20 ballistic missiles at a US military base near Al Azraq, Jordan; Jordan said it intercepted 18 and that the other two fell in unpopulated areas with no casualties, and the IRGC said it had attacked 10 vessels near the Strait of Hormuz. Brent crude touched $99.46 a barrel intraday on September 8. On the West Bank, after Britain announced its ban on settlement goods on September 8, France and Canada announced comparable measures the same day, and several other European states said they would introduce or support restrictions; Israeli Foreign Minister Gideon Saar ordered Britain's consulate in East Jerusalem closed and barred 12 UK politicians from entry. In the Russia-Ukraine war, an attack on Novorossiysk in Russia's Krasnodar region on September 9 killed four and wounded 29, and Russia's Defence Ministry said it downed 596 drones overnight. In technology, Qualcomm announced a multi-generation custom AI inference chip partnership with Amazon Web Services, issuing Amazon warrants for 25 million shares whose vesting is tied to up to $60 billion in commercial orders; Apple's "Surprise and Shine" event is set for 10 a.m. Pacific on September 9 and had not begun as this issue closed. On the environment, the US Department of Energy reached financial close on a loan of up to $1.9 billion to NextEra Energy to restart the Duane Arnold nuclear plant in Iowa, whose 615 MW output is contracted to Google under a 25-year power purchase agreement; the death toll from Nepal's Bhotekoshi flood rose to at least 1,377 with 5,326 still missing, and Kathmandu says rebuilding will cost $4 billion to $5 billion and plans to apply to the Loss and Damage Fund.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl">
+        <img class="hl-img" src="https://i.abcnewsfe.com/a/db02d115-0c89-483e-8cc4-feae0547a496/iran-strike-01-gty-jt-260905_1788620458650_hpMain_16x9.jpg" alt="美军对伊朗油轮的打击" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">美军击毁五艘伊朗油轮，革命卫队向约旦阿兹拉克基地发射20枚弹道导弹；布伦特原油盘中触及99.46美元</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Reuters · NBC News · CBS News · ABC News · 2026-09-09</div>
+            <p class="hl-desc">美国中央司令部（CENTCOM）称，美军于9月8日击毁五艘与伊朗伊斯兰革命卫队（IRGC）关联的原油运输船。据半岛电视台列出的船名，其中「Kaviz」「Charminar」「Horizon 1」「Riesco」四艘在阿曼湾遇袭，「Derya」一艘在哈尔克岛附近遇袭。CENTCOM表示：「美军在船只被击中并致其失去航行能力之前，已指示船员弃船。」美方称此举系回应革命卫队在此前两日内两次以弹道导弹瞄准一艘美国海军舰艇，两次袭击均未命中，该舰规避后继续在区域海域巡逻，无美方人员受伤；美方称这些船只属于伊朗的「影子船队」。美国国务卿马尔科·鲁比奥（Marco Rubio）称：「伊朗仍在试图打击美国海军舰艇，他们每这样做一次或试图这样做一次，就会损失油轮。」伊朗外交部称此次袭击构成「战争罪」并违反《联合国宪章》。革命卫队随后向约旦阿兹拉克（Al Azraq）附近的美军基地发射20枚弹道导弹，并称摧毁了美军战机使用的机库；约旦方面称拦截18枚，另两枚落于无人区，无人员伤亡；一名美国官员称此次袭击「无效」，全部美军人员均已清点。革命卫队海军部队另称袭击了霍尔木兹海峡附近10艘船只，包括两艘美国驱逐舰（伊方标明为DDG-119与DDG-53）与八艘油轮；CENTCOM否认美军驱逐舰遭击中。油价方面，布伦特原油9月8日报每桶97.54美元，盘中一度触及99.46美元，10月交割的西德克萨斯中质原油（WTI）在92美元上方；美国常规汽油全国均价为每加仑4.15美元。海峡通行量降至5月以来最低，日均约10艘，战前基准约为每日130艘。交叉核验：Al Jazeera · Reuters · NBC News · CBS News · ABC News · Outlook India · Just Security</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">US Destroys Five Iranian Tankers; IRGC Fires 20 Ballistic Missiles at Jordan's Al Azraq Base; Brent Touches $99.46</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Reuters · NBC News · CBS News · ABC News · 2026-09-09</div>
+            <p class="hl-desc">US Central Command said American forces destroyed five crude carriers linked to Iran's Islamic Revolutionary Guard Corps (IRGC) on September 8. Al Jazeera named the vessels as the Kaviz, Charminar, Horizon 1 and Riesco, struck in the Gulf of Oman, and the Derya, struck near Kharg Island. CENTCOM said: “American forces directed the crews to abandon ship before the vessels were struck and rendered inoperable.” Washington said the strikes answered two IRGC ballistic missile attempts against a US Navy warship over the preceding two days; both failed, the warship evaded and continued to patrol regional waters, and no American personnel were harmed. The US described the vessels as part of Iran's “shadow fleet.” Secretary of State Marco Rubio said: “Iran continues to try to hit US naval ships, and for every time they do that or try to do that, they're going to lose tankers.” Iran's Foreign Ministry called the attacks a “war crime” and a violation of the UN Charter. The IRGC then fired 20 ballistic missiles at a US military base near Al Azraq, Jordan, and said it had destroyed hangars used by US fighter jets; Jordan said its air defences intercepted 18, with the other two falling in unpopulated areas and no casualties. A US official said the Iranian strikes were ineffective and all American troops were accounted for. IRGC naval forces separately said they attacked 10 vessels near the Strait of Hormuz — two US destroyers, identified by Iran as DDG-119 and DDG-53, and eight tankers; CENTCOM denied that US destroyers were hit. On prices, Brent traded at $97.54 a barrel on September 8 after briefly reaching $99.46, and West Texas Intermediate for October delivery held above $92; the US national average for regular gasoline was $4.15 a gallon. Traffic through the strait fell to about 10 ships a day, the lowest since May, against a pre-war baseline of roughly 130 a day. Cross-verified: Al Jazeera · Reuters · NBC News · CBS News · ABC News · Outlook India · Just Security</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/9/us-destroys-five-iranian-tankers-iran-retaliates-with-attacks-on-jordan-base" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://aje.news/wp-content/uploads/2026/09/2026-09-08T075323Z_1822650518_RC2VENAKVDYF_RTRMADP_3_ISRAEL-PALESTINIANS-SETTLERS-BRITAIN-1788856280.jpg?resize=770%2C513&amp;quality=80" alt="约旦河西岸的以色列定居点" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">十余国宣布限制与以色列定居点的货物贸易，以色列令英国驻东耶路撒冷领事馆30天内关闭</h2>
+            <div class="hl-meta"><span class="src">Reuters</span> · The New York Times · ABC News (Australia) · Haaretz · UPI · Axios · 2026-09-09</div>
+            <p class="hl-desc">继英国外交大臣埃德·米利班德（Ed Miliband）9月8日在下议院宣布禁止进口以色列约旦河西岸定居点商品之后，法国与加拿大同日宣布同类措施，丹麦、芬兰、爱尔兰、挪威、波兰、葡萄牙、西班牙、瑞典等国宣布将在国家层面实施或支持对定居点货物贸易的限制。各家报道对参与国总数的口径为11至12国（韩国SBS与UPI称12国，《国土报》一处报道称11国）。英国同时正式宣布以色列对巴勒斯坦领土的占领为非法，并宣布对与定居点扩张相关的企业与个人、以及五名被指对巴勒斯坦人实施或支持暴力的定居者实施制裁。法国外长让-诺埃尔·巴罗（Jean-Noël Barrot）写道：「因为约旦河西岸已接近爆炸——定居点狂热扩张、极端定居者对巴勒斯坦人的暴力激增，以及连以色列当局自己都予以谴责的恐怖行为。」澳大利亚外长黄英贤（Penny Wong）表示，政府「此时不追求全面式进口禁令」，但会考虑「有针对性的措施」。以色列外长吉迪恩·萨尔（Gideon Saar）宣布反制：令英国驻东耶路撒冷领事馆（对口被占巴勒斯坦领土）在30天内关闭，撤出以方在加沙一处支援中心与约旦河西岸一项培训项目中的代表，并禁止12名被其称为「反犹」的英国政界人士入境；英国驻特拉维夫大使馆不受影响。据Axios报道，特朗普政府未反对这项由英国牵头的举措，同时向英方表达了对约旦河西岸政策的关切。交叉核验：Reuters · The New York Times · ABC News (Australia) · Haaretz · UPI · Axios · SBS · Just Security</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">A Dozen Countries Announce Trade Curbs on Israeli Settlements; Israel Orders Britain's East Jerusalem Consulate Shut Within 30 Days</h2>
+            <div class="hl-meta"><span class="src">Reuters</span> · The New York Times · ABC News (Australia) · Haaretz · UPI · Axios · 2026-09-09</div>
+            <p class="hl-desc">After UK Foreign Secretary Ed Miliband told the House of Commons on September 8 that Britain would ban imports from Israeli settlements in the occupied West Bank, France and Canada announced comparable measures the same day, and Denmark, Finland, Ireland, Norway, Poland, Portugal, Spain and Sweden said they would impose or support national-level restrictions on trade in goods with settlements. Outlets differ on the total number of participating states, reporting between 11 and 12 (South Korea's SBS and UPI say 12; one Haaretz report says 11). Britain also formally declared Israel's occupation of the Palestinian territories unlawful and announced sanctions on companies and individuals tied to settlement expansion, along with five settlers accused of carrying out or supporting violence against Palestinians. French Foreign Minister Jean-Noël Barrot wrote: “Because the West Bank is close to exploding — there is frenzied expansion of the settlements, a flare-up of violence against Palestinians by extremist settlers, and acts of terror which have been attacked by Israeli authorities themselves.” Australian Foreign Minister Penny Wong said her government was “not at this time pursuing a blanket-style import ban,” but would consider “targeted measures.” Israeli Foreign Minister Gideon Saar announced retaliation: Britain's consulate in East Jerusalem, which serves the occupied Palestinian territories, is to close within 30 days; Israeli representatives will be withdrawn from a support centre in Gaza and a training programme in the West Bank; and 12 UK politicians Israel described as antisemitic are barred from entry. The UK embassy in Tel Aviv is unaffected. Axios reported that the Trump administration did not oppose the British-led initiative while sharing concerns with London about West Bank policy. Cross-verified: Reuters · The New York Times · ABC News (Australia) · Haaretz · UPI · Axios · SBS · Just Security</p>
+          </div>
+          <a class="hl-link" href="https://www.abc.net.au/news/2026-09-08/three-g7-countries-announce-import-ban-on-goods-from-settlements/107130998" target="_blank" rel="noopener">ABC News →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://blog.tipranks.com/wp-content/uploads/2026/09/shutterstock_2582113357-750x406.jpg" alt="数据中心的AI推理芯片" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">高通与AWS达成多代定制AI推理芯片合作，向亚马逊发行2,500万股认股权证，行权挂钩最高600亿美元采购</h2>
+            <div class="hl-meta"><span class="src">CNBC</span> · Bloomberg · Reuters · TipRanks · Quartz · 2026-09-08</div>
+            <p class="hl-desc">高通9月8日宣布与亚马逊云科技（AWS）合作，跨多代定制芯片为AWS的AI基础设施提供硅片，重点为推理（inference）工作负载与集群内部的光互连，官方口径的光互连速率达每秒1.6太比特。根据监管文件，高通向亚马逊发行认股权证，可按每股161.26美元购买2,500万股高通股票，对应约40亿美元；其中375万股基于亚马逊的初始采购承诺立即归属，其余按商业承诺分批归属，归属条件挂钩至多600亿美元的采购规模；该权证可无现金行权，到期日为2036年。高通表示相关芯片已在生产，收入将自其2027财年第一财季（即2026年12月季度）起确认。产品线方面，高通在2026年6月投资者日发布了Dragonfly C1000 CPU与高带宽计算（High Bandwidth Compute）架构，并另行发布了AI200与AI250推理加速器。这是高通首次拿下西方超大规模云厂商的数据中心订单。股价方面，各家报道口径不一：CNBC与TipRanks称高通股价9月8日涨超5%，Invezz称约4%，另有报道称涨9%至10%。交叉核验：CNBC · Bloomberg · Reuters · TipRanks · Quartz · HotHardware · Tech Times</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Qualcomm and AWS Strike a Multi-Generation Custom AI Inference Chip Deal; 25 Million Share Warrant Vests Against Up to $60 Billion in Orders</h2>
+            <div class="hl-meta"><span class="src">CNBC</span> · Bloomberg · Reuters · TipRanks · Quartz · 2026-09-08</div>
+            <p class="hl-desc">Qualcomm said on September 8 that it will work with Amazon Web Services across multiple generations of customised silicon for AWS's AI infrastructure, focused on inference workloads and on in-cluster optical interconnect, which the companies put at up to 1.6 terabits per second. According to regulatory filings, Qualcomm issued Amazon warrants to acquire 25 million Qualcomm shares at $161.26 apiece, worth roughly $4 billion. Of those, 3.75 million vested immediately against Amazon's initial purchase commitments, with the remainder vesting on further commercial commitments tied to as much as $60 billion in payments to Qualcomm; the warrant permits cashless exercise and expires in 2036. Qualcomm said the chips are already in production and that revenue will begin in its fiscal first quarter of 2027 — the December 2026 quarter. On products, Qualcomm introduced the Dragonfly C1000 CPU and its High Bandwidth Compute architecture at its June 2026 Investor Day, and separately announced the AI200 and AI250 inference accelerators. It is Qualcomm's first data-centre win with a Western hyperscaler. Reported share moves differ: CNBC and TipRanks put Qualcomm's September 8 gain at more than 5%, Invezz at about 4%, and other outlets at 9% to 10%. Cross-verified: CNBC · Bloomberg · Reuters · TipRanks · Quartz · HotHardware · Tech Times</p>
+          </div>
+          <a class="hl-link" href="https://www.cnbc.com/2026/09/08/qualcomm-amazon-data-center-infrastructure-deal.html" target="_blank" rel="noopener">CNBC →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://www.powermag.com/wp-content/uploads/2024/11/fig5-duane-arnold-nuclear-power-plant-nextera-energy-300x200.jpg" alt="爱奥瓦州杜安·阿诺德核电站" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">美国能源部完成19亿美元贷款交割以重启杜安·阿诺德核电站，615兆瓦电力由谷歌以25年协议购入</h2>
+            <div class="hl-meta"><span class="src">US DOE</span> · POWER Magazine · Utility Dive · Engadget · Gizmodo · 2026-09-08</div>
+            <p class="hl-desc">美国能源部下属「能源主导权融资办公室」9月8日宣布，对内克斯特拉能源（NextEra Energy）最高19亿美元的贷款完成财务交割，用于重启位于爱奥瓦州林恩县的杜安·阿诺德能源中心（Duane Arnold Energy Center）。该电站装机615兆瓦，2020年8月在一场阵风时速约140英里的强风灾害中冷却塔被毁后停运，此前已列入退役计划。内克斯特拉与Alphabet旗下谷歌签有25年购电协议，电力将供给其AI数据中心。项目目标为2029年第一季度商业运行，仍需美国核管理委员会（NRC）的许可批准。能源部称项目预计带来约1,500个建设期岗位与450个以上长期运营岗位，重启后发电量足以供应近50万户家庭。能源部副部长詹姆斯·P·丹利（James P. Danly）称：「让615兆瓦可靠的基荷发电重新上线，将拉低电价，同时支撑数千个美国就业岗位。」内克斯特拉董事长兼首席执行官约翰·凯彻姆（John Ketchum）称：「它显示美国能够在支持经济快速增长与电力需求上升的同时，帮助保持电价可负担。」能源主导权融资办公室主任格雷戈里·A·比尔德（Gregory A. Beard）称：「杜安·阿诺德正是那种有助于恢复美国核能领导地位、强化能源安全的投资。」交叉核验：US DOE 官方公告 · POWER Magazine · Utility Dive · Engadget · Gizmodo · Neutron Bytes</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">DOE Closes a $1.9 Billion Loan to Restart the Duane Arnold Nuclear Plant; Google Buys Its 615 MW on a 25-Year Deal</h2>
+            <div class="hl-meta"><span class="src">US DOE</span> · POWER Magazine · Utility Dive · Engadget · Gizmodo · 2026-09-08</div>
+            <p class="hl-desc">The US Department of Energy's Office of Energy Dominance Financing announced on September 8 the financial close of a loan of up to $1.9 billion to NextEra Energy to finance the restart of the Duane Arnold Energy Center in Linn County, Iowa. The 615 MW plant ceased operations in August 2020 after a windstorm with gusts of about 140 mph destroyed its cooling towers, and had already been slated for decommissioning. NextEra holds a 25-year power purchase agreement with Alphabet's Google, which will take the output for its AI data centres. Commercial operation is targeted for the first quarter of 2029, subject to licensing approvals from the US Nuclear Regulatory Commission. The DOE said the project is expected to create roughly 1,500 construction jobs and support more than 450 permanent operating positions, and that the restarted plant would generate enough electricity for nearly 500,000 homes. Deputy Secretary James P. Danly said: “Returning 615 megawatts of reliable baseload generation will drive down electricity costs, while supporting thousands of American jobs.” NextEra Chairman and CEO John Ketchum said: “It shows how America can support rapid economic growth and rising electricity demand while helping keep power affordable.” Gregory A. Beard, who heads the financing office, said: “Duane Arnold is exactly the kind of investment that will help restore American nuclear leadership, strengthen our energy security.” Cross-verified: US DOE announcement · POWER Magazine · Utility Dive · Engadget · Gizmodo · Neutron Bytes</p>
+          </div>
+          <a class="hl-link" href="https://www.energy.gov/articles/energy-department-closes-19-billion-loan-restart-duane-arnold-nuclear-plant" target="_blank" rel="noopener">US DOE →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://i.abcnewsfe.com/a/e27afa30-a90a-401b-873e-4c3ad5680616/nepal-main_1788342914571_hpMain_16x9.jpg" alt="尼泊尔洪水灾区" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">尼泊尔波特科西洪水死亡人数升至至少1,377人、失踪5,326人；政府称重建需40亿至50亿美元</h2>
+            <div class="hl-meta"><span class="src">The Kathmandu Post</span> · Reuters · Bloomberg · CNBC · ABC News · UNFPA · 2026-09-08</div>
+            <p class="hl-desc">《加德满都邮报》9月8日报道，8月26日兰塘里隆峰（Langtang Lirung）北坡冰川崩塌引发的波特科西（Bhotekoshi）洪水，已确认至少1,377人死亡、5,326人失踪、6,827人受伤，受灾区域包括拉苏瓦（Rasuwa）、努瓦科特（Nuwakot）与达丁（Dhading）等县。伤亡口径此前一直在变动：美国广播公司9月2日援引尼泊尔国家灾害管理局的数据为尼境内1,114人死亡、3,916人失踪，中国官方通报西藏一侧16人死亡、约546人失踪。重建资金方面，尼泊尔财政部长告诉路透社，重建约需40亿至50亿美元；国家计划委员会已启动灾后需求评估（PDNA），报告预计在五周内出台，并将作为一次捐助方会议的基础。尼方计划依据「气候变化加剧了此次洪水严重程度」的理由，向全球「损失与损害基金」（Loss and Damage Fund）申请支持——彭博社与《日本时报》指出，该基金新设、资金不足且尚未经过实际检验。基础设施方面，48座吊桥受损，其中28座需整体重建；政府初期划拨约650万美元。救援方面，累计超过13,583人获救，9月7日尼泊尔举行全国哀悼日。据美国广播公司报道，尼泊尔总理巴伦德拉·沙阿（Balendra Shah）表示：「我们正从搜救与救援物资分发，转向恢复重建。」交叉核验：The Kathmandu Post · Reuters · Bloomberg · CNBC · ABC News · The Japan Times · UNFPA</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Nepal's Bhotekoshi Flood Toll Rises to at Least 1,377 Dead and 5,326 Missing; Government Puts Rebuilding at $4–5 Billion</h2>
+            <div class="hl-meta"><span class="src">The Kathmandu Post</span> · Reuters · Bloomberg · CNBC · ABC News · UNFPA · 2026-09-08</div>
+            <p class="hl-desc">The Kathmandu Post reported on September 8 that the Bhotekoshi flood — set off on August 26 by a glacier collapse on the northern slopes of Langtang Lirung — has left at least 1,377 people confirmed dead, 5,326 missing and 6,827 injured, with damage concentrated in Rasuwa, Nuwakot and Dhading districts. The figures have shifted repeatedly: on September 2, ABC News cited Nepal's National Disaster Management Authority for 1,114 dead and 3,916 missing inside Nepal, while Chinese officials reported 16 dead and about 546 missing on the Tibetan side. On financing, Nepal's finance minister told Reuters that reconstruction would require roughly $4 billion to $5 billion. The National Planning Commission has begun a Post-Disaster Needs Assessment, with a report expected within five weeks that will form the basis for a donor conference. Kathmandu plans to seek support from the global Loss and Damage Fund on the grounds that climate change worsened the flood's severity; Bloomberg and The Japan Times note the fund is new, underfunded and untested. On infrastructure, 48 suspension bridges were damaged, 28 of which need full replacement, and the government initially allocated about $6.5 million. More than 13,583 people have been rescued in total, and Nepal observed a national day of mourning on September 7. ABC News quoted Prime Minister Balendra Shah as saying: “We are moving forward from search, rescue and relief distribution to rehabilitation.” Cross-verified: The Kathmandu Post · Reuters · Bloomberg · CNBC · ABC News · The Japan Times · UNFPA</p>
+          </div>
+          <a class="hl-link" href="https://kathmandupost.com/national/2026/09/08/nepal-looks-for-grants-for-flood-recovery-but-loans-may-be-unavoidable" target="_blank" rel="noopener">The Kathmandu Post →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://aje.news/wp-content/uploads/2026/09/2026-09-08T230056Z_1478579696_RC2AFNAQJA7C_RTRMADP_3_IRAN-CRISIS-USA-NAVY-CARRIERS-1788908805.jpg?resize=770%2C513&amp;quality=80" alt="波斯湾海域的美国海军舰艇" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label pol">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">五艘油轮换二十枚导弹：9月5日至9日的一条对等升级链</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera · Reuters · CBS News · NBC News · ABC News · CNBC · Just Security · Outlook India</span></div>
+            <div class="ft-desc">
+              <p><strong>时间线：从三艘到五艘</strong></p>
+              <p>9月5日，美国中央司令部（CENTCOM）称在伊朗伊斯兰革命卫队（IRGC）向两艘美国海军舰艇发射弹道导弹后，打击了三艘伊朗原油运输船，其中两艘被「永久瘫痪」、一艘被「彻底摧毁」。CENTCOM司令、海军上将布拉德·库珀（Brad Cooper）当时的表述为：「你们向我们两艘船开火，我们就以更高的经济代价回敬——干掉你们三艘。」9月6日，伊朗威胁将作出「更快、更强烈、更痛苦」的报复。9月7日，伊朗最高国家安全委员会秘书穆赫辛·礼萨伊（Mohsen Rezaei）表示德黑兰将在霍尔木兹海峡外划设海上「禁区」。9月8日，CENTCOM称在革命卫队两日内两次瞄准一艘美国海军舰艇后，击毁五艘与革命卫队关联的原油运输船。9月8日夜至9日晨，革命卫队向约旦阿兹拉克附近的美军基地发射20枚弹道导弹，并称袭击了霍尔木兹海峡附近10艘船只。</p>
+              <p><strong>这一轮的两组数字</strong></p>
+              <p>油轮一侧：五艘，四艘在阿曼湾、一艘在哈尔克岛附近；半岛电视台列出的船名为Kaviz、Charminar、Horizon 1、Riesco与Derya。CENTCOM称在击毁前已指示船员弃船，并称这些船属于「为革命卫队及其地区代理人提供资金的数十亿美元影子网络」。导弹一侧：20枚，约旦称拦截18枚、两枚落于无人区，无人员伤亡；革命卫队称摧毁了美军战机机库，一名美国官员称袭击「无效」。</p>
+              <p><strong>海峡与油价</strong></p>
+              <p>据哥伦比亚广播公司，霍尔木兹海峡通行量降至5月以来最低，日均约10艘，其中周六仅2艘、周日6艘，战前基准约为每日130艘。布伦特原油9月8日报每桶97.54美元，盘中触及99.46美元；10月交割的WTI在92美元上方。作为对比，7月初布伦特约为72美元。美国常规汽油全国均价为每加仑4.15美元。</p>
+              <p><strong>同期的制裁与外交动作</strong></p>
+              <p>据路透社，美国财政部发布36项与伊朗相关的制裁，涉及航空等领域，目标之一是使马汉航空（Mahan Air）停飞；英国宣布将立法加强对伊制裁，限制其金融渠道与飞机降落权。韩国总统李在明与法国总统马克龙就海峡航行自由方面的合作进行了讨论，双方讨论的是合作而非派兵。</p>
+              <p><strong>相互矛盾的说法</strong></p>
+              <p>革命卫队称袭击了两艘美国驱逐舰（伊方标明为DDG-119与DDG-53）；CENTCOM否认美军驱逐舰遭击中。革命卫队还称在海峡入口处捕获一艘美国无人潜航器，五角大楼的回应是该航行器「一天多以前就已发生故障」。伊朗国家媒体称对约旦基地的打击造成重大损失，美方称其无效。以上两组说法目前均无独立第三方核实。</p>
+              <p><strong>可核验的部分与不可核验的部分</strong></p>
+              <p>可核验的是：CENTCOM就击毁五艘船发布了正式声明；约旦官方公布了20枚来袭、拦截18枚的数字；油价与海峡通行量有市场与航运数据支持。不可核验的是：被击毁船只的所有权链条与「影子船队」归属的具体证据、约旦基地的实际受损程度、以及双方关于击中对方舰艇的相互指控。伊方所称「禁区」的坐标与生效时间截至本报截稿仍未公布。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Five Tankers for Twenty Missiles: A Tit-for-Tat Chain from September 5 to 9</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera · Reuters · CBS News · NBC News · ABC News · CNBC · Just Security · Outlook India</span></div>
+            <div class="ft-desc">
+              <p><strong>Timeline: from three to five</strong></p>
+              <p>On September 5, US Central Command said it struck three Iranian crude carriers after the Islamic Revolutionary Guard Corps (IRGC) fired ballistic missiles at two US Navy warships, describing two of the vessels as “permanently disabled” and one as “completely destroyed.” CENTCOM commander Admiral Brad Cooper said at the time: “If you shoot at two of our ships, we will impose an even higher economic cost — taking out three of yours.” On September 6, Iran threatened a “faster, more intense and more painful” retaliation. On September 7, Mohsen Rezaei, secretary of Iran's Supreme National Security Council, said Tehran would designate a maritime “exclusion zone” outside the Strait of Hormuz. On September 8, CENTCOM said it destroyed five IRGC-linked crude carriers after the Guard twice targeted a US Navy warship within two days. Overnight into September 9, the IRGC fired 20 ballistic missiles at a US base near Al Azraq, Jordan, and said it had attacked 10 vessels near the strait.</p>
+              <p><strong>The two sets of numbers in this round</strong></p>
+              <p>On the tanker side: five vessels, four in the Gulf of Oman and one near Kharg Island, named by Al Jazeera as the Kaviz, Charminar, Horizon 1, Riesco and Derya. CENTCOM said crews were directed to abandon ship before the strikes and described the vessels as part of “a multibillion-dollar shadow network that funds the IRGC and its regional proxies.” On the missile side: 20 launched, with Jordan saying 18 were intercepted and two fell in unpopulated areas with no casualties. The IRGC said it destroyed hangars used by US fighter jets; a US official called the strikes ineffective.</p>
+              <p><strong>The strait and the oil price</strong></p>
+              <p>According to CBS News, traffic through the Strait of Hormuz fell to its lowest level since May at about 10 ships a day — two vessels passed on Saturday and six on Sunday — against a pre-war baseline of roughly 130 a day. Brent traded at $97.54 a barrel on September 8 after touching $99.46, and WTI for October delivery held above $92. For comparison, Brent was around $72 in early July. The US national average for regular gasoline stood at $4.15 a gallon.</p>
+              <p><strong>Sanctions and diplomacy over the same days</strong></p>
+              <p>Reuters reported that the US Treasury issued 36 Iran-related sanctions covering aviation and other sectors, one aim being to ground Mahan Air, and that Britain announced legislation to tighten Iran sanctions by restricting financial access and aircraft landing rights. South Korean President Lee Jae Myung and French President Emmanuel Macron discussed cooperation on freedom of navigation in the strait; what they discussed was cooperation, not troop deployment.</p>
+              <p><strong>Conflicting claims</strong></p>
+              <p>The IRGC said it hit two US destroyers, identified by Iran as DDG-119 and DDG-53; CENTCOM denied that any US destroyer was struck. The Guard also said it captured an uncrewed US submarine drone at the entrance to the strait; the Pentagon said the vehicle “malfunctioned more than a day ago.” Iranian state media said the strike on the Jordanian base caused significant damage, which the US disputes. Neither set of claims has been independently verified.</p>
+              <p><strong>What can and cannot be verified</strong></p>
+              <p>Verifiable: CENTCOM issued a formal statement on the destruction of five vessels; Jordan published the figures of 20 incoming and 18 intercepted; oil prices and strait traffic are supported by market and shipping data. Not verifiable: the ownership chain of the struck vessels and the specific evidence for “shadow fleet” attribution, the actual damage at the Jordanian base, and the reciprocal claims about hitting each other's warships. The coordinates and effective date of Iran's stated “exclusion zone” had not been published as this issue closed.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">俄罗斯新罗西斯克遇无人机袭击致4死29伤，俄国防部称一夜击落596架无人机</h4>
+            <div class="ni-meta"><span class="src">TASS · The Moscow Times · Reuters</span> · 2026-09-09</div>
+            <p class="ni-desc">俄罗斯克拉斯诺达尔边疆区新罗西斯克9月8日夜至9日晨遭无人机袭击。据边疆区行政长官韦尼阿明·孔德拉季耶夫（Veniamin Kondratyev）与俄卫生部部长助理阿列克谢·库兹涅佐夫（Alexey Kuznetsov），4人死亡（含1名儿童）、29人受伤，其中28人住院、3人伤情严重。市长安德烈·克拉夫琴科（Andrei Kravchenko）称无人机残片落在多家企业厂区与一栋住宅楼附近；塔斯社通报3栋独立住宅、5栋公寓楼、1座东正教教堂与1所幼儿园受损。俄国防部称，自莫斯科时间9月8日20时至9日8时，在俄各地与克里米亚上空共击落596架乌克兰固定翼无人机。新罗西斯克是俄罗斯石油、石油制品与粮食出口的主要口岸，十余个俄罗斯地区实施了飞行限制。同期，俄军无人机袭击乌克兰敖德萨州的乌摩边境口岸，造成2人死亡、至少3人受伤。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Drone Attack on Russia's Novorossiysk Kills Four and Wounds 29; Moscow Says It Downed 596 Drones Overnight</h4>
+            <div class="ni-meta"><span class="src">TASS · The Moscow Times · Reuters</span> · 2026-09-09</div>
+            <p class="ni-desc">Novorossiysk, in Russia's Krasnodar region, was hit by drones overnight from September 8 into September 9. According to regional governor Veniamin Kondratyev and Alexey Kuznetsov, an aide to Russia's health minister, four people were killed, including a child, and 29 were wounded, with 28 hospitalised and three in serious condition. Mayor Andrei Kravchenko said drone debris fell on the premises of several businesses and close to a residential building; TASS reported damage to three private houses, five apartment buildings, an Orthodox church and a kindergarten. Russia's Defence Ministry said 596 Ukrainian fixed-wing drones were shot down over Russian regions and Crimea between 8 p.m. Moscow time on September 8 and 8 a.m. on September 9. Novorossiysk is a principal outlet for Russian oil, petroleum products and grain exports, and flight restrictions were imposed across more than a dozen Russian regions. Separately, a Russian drone attack on the Ukraine-Moldova border crossing in Odesa region killed two and wounded at least three.</p>
+          </div>
+          <a class="ni-link" href="https://tass.com/politics/2184643" target="_blank" rel="noopener">TASS →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">匈牙利驱逐10名俄罗斯外交官，俄方称将作出「严厉而痛苦」的回应</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · The Moscow Times · Euronews · Meduza</span> · 2026-09-08</div>
+            <p class="ni-desc">匈牙利9月8日要求10名俄罗斯外交官离境。匈牙利外长阿妮塔·奥尔班（Anita Orban）称，这些人「在匈牙利从事的活动，依《维也纳公约》对外交官而言是不可接受的」，并称此决定是为保护「匈牙利的安全与主权」，不意味着与俄罗斯「断绝外交关系」；匈方未回应所涉行为是否属间谍活动的问询。俄罗斯外交部发言人玛丽亚·扎哈罗娃（Maria Zakharova）称俄将作出「严厉而痛苦」的回应。报道指出，俄罗斯入侵乌克兰后欧洲多国驱逐了俄外交官，而匈牙利在此之前一例未驱逐；此举发生在2026年春季匈牙利政府更迭、匈俄关系明显降温之后。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Hungary Expels 10 Russian Diplomats; Moscow Promises a “Harsh and Painful” Response</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · The Moscow Times · Euronews · Meduza</span> · 2026-09-08</div>
+            <p class="ni-desc">Hungary on September 8 ordered 10 Russian diplomats to leave the country. Foreign Minister Anita Orban said they “were engaged in activities in Hungary that are unacceptable for diplomats under the Vienna Convention,” and that the decision to protect “Hungary's security and sovereignty” did not mean Budapest was “breaking off diplomatic relations with Russia”; the government did not respond to questions about whether the alleged conduct involved espionage. Russian Foreign Ministry spokeswoman Maria Zakharova said Moscow would deliver a “harsh and painful” response. Reports noted that while many European states expelled Russian diplomats after the invasion of Ukraine, Hungary had expelled none until now; the move follows a change of government in the spring of 2026 and a marked cooling in Hungarian-Russian relations.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/8/hungary-expels-russian-diplomats-over-unacceptable-activities" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">德国宣布从本国库存向乌克兰交付「爱国者」PAC-2拦截弹，称俄方冬季空袭可能加剧</h4>
+            <div class="ni-meta"><span class="src">Reuters · Al Arabiya · Ukrainska Pravda · U.S. News</span> · 2026-09-08</div>
+            <p class="ni-desc">德国国防部长鲍里斯·皮斯托里乌斯（Boris Pistorius）9月8日在一场支持乌克兰国家的视频会议上表示，德国将从本国库存中「紧急交付」额外的「爱国者」PAC-2拦截弹，并警告随着冬季临近，俄罗斯可能加强对乌克兰基础设施的空袭。皮斯托里乌斯未说明交付数量，同时表示德国将扩大空空导弹交付，并继续提供无人机与远程弹药。乌克兰国防部长叶夫亨尼·赫马拉（Yevhenii Khmara）表示，基辅正在签约采购约1,000枚「爱国者」导弹，但多数要在未来数年才能交付，因此呼吁盟国先从现有库存中调拨，乌方以后续交付予以补充。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Germany to Send Patriot PAC-2 Interceptors to Ukraine from National Stocks, Warning of a Harsher Russian Winter Air Campaign</h4>
+            <div class="ni-meta"><span class="src">Reuters · Al Arabiya · Ukrainska Pravda · U.S. News</span> · 2026-09-08</div>
+            <p class="ni-desc">German Defence Minister Boris Pistorius said on September 8, at a videoconference of countries supporting Ukraine, that Germany would “deliver urgently” additional Patriot PAC-2 interceptor missiles from its own stocks, warning that Russia was likely to intensify its air campaign against Ukrainian infrastructure as winter approaches. Pistorius did not say how many missiles would be provided, and added that Germany would expand deliveries of air-to-air missiles and continue supplying drones and long-range ammunition. Ukrainian Defence Minister Yevhenii Khmara said Kyiv is contracting for about 1,000 Patriot missiles but that most would only be shipped in the coming years, urging allies to draw on existing stocks now, with Ukraine replacing them from future deliveries.</p>
+          </div>
+          <a class="ni-link" href="https://english.alarabiya.net/News/world/2026/09/08/germany-to-deliver-more-patriot-missiles-from-its-stocks-to-ukraine-pistorius-says" target="_blank" rel="noopener">Al Arabiya →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">波黑驱逐两名塞尔维亚外交官，暂停签署区域合作协定，抗议贝尔格莱德为姆拉迪奇举行公开葬礼</h4>
+            <div class="ni-meta"><span class="src">Reuters · ANSA · EUToday</span> · 2026-09-08</div>
+            <p class="ni-desc">波斯尼亚和黑塞哥维那9月8日宣布将塞尔维亚驻萨拉热窝使馆两名外交官列为不受欢迎的人，并暂停签署一项区域合作协定。波黑外长埃尔梅丁·科纳科维奇（Elmedin Konaković）在临时记者会上宣布该决定，两人分别为塞尔维亚国防代表与塞尔维亚情报机构顾问。波黑还从其驻贝尔格莱德使馆撤回了大部分工作人员。前波黑塞族军队将领拉特科·姆拉迪奇（Ratko Mladić）8月27日在海牙去世，此前他因在萨拉热窝围城与1995年斯雷布雷尼察至少8,000名穆斯林被杀事件中的角色，被判种族灭绝、战争罪与危害人类罪并服无期徒刑。数千人9月7日在贝尔格莱德参加其葬礼，塞尔维亚政府官员亦在其中。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Bosnia Expels Two Serbian Diplomats and Suspends a Regional Accord Over Belgrade's Public Funeral for Mladić</h4>
+            <div class="ni-meta"><span class="src">Reuters · ANSA · EUToday</span> · 2026-09-08</div>
+            <p class="ni-desc">Bosnia and Herzegovina declared two diplomats at Serbia's embassy in Sarajevo persona non grata on September 8 and suspended plans to sign a regional cooperation accord. Foreign Minister Elmedin Konaković announced the decision at an extraordinary news conference; the two are Serbia's defence representative and an adviser to the Serbian intelligence service. Bosnia also withdrew most staff from its embassy in Belgrade. Ratko Mladić, the former Bosnian Serb military commander, died on August 27 in The Hague, where he had been serving a life sentence for genocide, war crimes and crimes against humanity over the siege of Sarajevo and the 1995 killing of at least 8,000 Muslims at Srebrenica. Thousands attended his funeral in Belgrade on September 7, with Serbian government officials among the mourners.</p>
+          </div>
+          <a class="ni-link" href="https://www.ansa.it/nuova_europa/en/news/countries/bosnia/2026/09/08/bosnia-expels-two-serbian-diplomats-after-mladics-funeral_a60151c9-f3ed-4b44-be1e-adaf0040797f.html" target="_blank" rel="noopener">ANSA →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://imgproxy.divecdn.com/xpCYIPQnX3wOQD_bJpqEuygGy9y5tbMcgBqF5g8Znvs/g:ce/rs:fill:1200:675:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9EQUVDLmpwZw==.webp" alt="为AI数据中心供电的电站" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label tec">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">推理芯片与它的电：9月8日被同时锁定的两种产能</h3>
+            <div class="ft-meta"><span class="src">综合信源：CNBC · Bloomberg · Reuters · TipRanks · Quartz · DigiTimes · TechCrunch · US DOE · POWER Magazine · Utility Dive</span></div>
+            <div class="ft-desc">
+              <p><strong>同一天的两份合约</strong></p>
+              <p>9月8日有两条互相咬合的消息：高通与亚马逊云科技（AWS）就多代定制AI推理芯片达成合作；美国能源部为重启一座615兆瓦核电站完成19亿美元贷款交割，该电站的全部电力已由谷歌以25年购电协议买走。一边锁定算力，一边锁定电力，两者的合约期限都以十年计。</p>
+              <p><strong>一、超大规模厂商的自研清单</strong></p>
+              <p>谷歌的TPU与亚马逊的Trainium／Inferentia是既有路径。Meta方面，据路透社与CNBC报道，其自研加速器项目MTIA规划了四代产品，第四代代号「Iris」由博通（Broadcom）协助设计、台积电制造，计划自2026年9月投产；据内部备忘录，该芯片在约六周内完成关键测试，快于同类芯片通常需要数月的验证周期。算力目标上，Meta称2026年上线7吉瓦，2027年翻倍至14吉瓦，并已就内存、存储与光学设备签订长期供货。高通此次是首次拿下西方超大规模云厂商的数据中心订单。</p>
+              <p><strong>二、高通这笔交易的结构</strong></p>
+              <p>值得注意的不是金额而是结构。根据监管文件，高通向亚马逊发行认股权证，可按每股161.26美元购买2,500万股，对应约40亿美元；其中375万股基于初始采购承诺立即归属，其余按商业承诺分批归属，归属上限挂钩至多600亿美元的采购规模，权证可无现金行权、2036年到期。也就是说，供应商把自己的股权作为客户下单的对价之一，客户下单越多、拿到的股权越多。技术侧的两个口径是：推理专用硅片，以及速率达每秒1.6太比特的集群内光互连。高通称芯片已在生产，收入自2027财年第一财季（2026年12月季度）起确认。</p>
+              <p><strong>三、电力这一侧</strong></p>
+              <p>杜安·阿诺德能源中心2020年8月因强风灾害损毁冷却塔而停运，此前已列入退役计划。按能源部与《POWER》杂志的口径，内克斯特拉能源获得最高19亿美元贷款，目标2029年第一季度商业运行，仍需核管理委员会批准；615兆瓦的产出由Alphabet旗下谷歌以25年购电协议买走，用于AI数据中心。这是一座已停运六年的机组，因数据中心需求而被重新接入规划。</p>
+              <p><strong>四、国家层面的算力账</strong></p>
+              <p>作为背景：中国工业和信息化部本周发布信息通信业「十五五」规划，提出2030年智能算力达到9,800 EFLOPS，为当前水平的四倍以上，并提出2026至2030年信息基础设施累计投资3.8万亿元人民币（约5,320亿美元）；据报道，截至6月底中国智能算力为2,185 EFLOPS，7月底约为2,450 EFLOPS，规划强调使用国产处理器。</p>
+              <p><strong>五、尚不可核验的部分</strong></p>
+              <p>高通与AWS的芯片型号、部署时间表与产能规模均未公布；600亿美元是权证归属的挂钩上限，不是已签订的采购合同金额。Meta的「Iris」投产进度来自内部备忘录与供应链报道，Meta未就良率或出货量作公开披露。杜安·阿诺德的重启时间取决于核管理委员会的审批，目前没有最终时间表。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Inference Chips and Their Electricity: Two Kinds of Capacity Locked In on September 8</h3>
+            <div class="ft-meta"><span class="src">Sources: CNBC · Bloomberg · Reuters · TipRanks · Quartz · DigiTimes · TechCrunch · US DOE · POWER Magazine · Utility Dive</span></div>
+            <div class="ft-desc">
+              <p><strong>Two contracts on the same day</strong></p>
+              <p>Two interlocking items landed on September 8: Qualcomm agreed with Amazon Web Services on multiple generations of custom AI inference silicon, and the US Department of Energy reached financial close on a $1.9 billion loan to restart a 615 MW nuclear plant whose entire output has already been bought by Google under a 25-year power purchase agreement. Compute on one side, electricity on the other — both contracted on timescales measured in decades.</p>
+              <p><strong>1. The hyperscalers' in-house silicon list</strong></p>
+              <p>Google's TPU and Amazon's Trainium and Inferentia are the established path. At Meta, Reuters and CNBC report that the in-house MTIA accelerator programme spans four planned generations; the fourth, code-named Iris, was designed with help from Broadcom and is to be built by TSMC, with production planned from September 2026. According to an internal memo, the chip completed critical testing in roughly six weeks, faster than the multi-month validation typical for comparable parts. On capacity, Meta says it will bring 7 gigawatts online in 2026 and double that to 14 gigawatts in 2027, and has signed long-term supply agreements for memory, storage and optical equipment. Qualcomm's agreement is its first data-centre win with a Western hyperscaler.</p>
+              <p><strong>2. The structure of Qualcomm's deal</strong></p>
+              <p>What stands out is the structure rather than the headline number. Per regulatory filings, Qualcomm issued Amazon warrants for 25 million shares at $161.26 each, worth about $4 billion. Of those, 3.75 million vested immediately against initial purchase commitments; the rest vest against further commercial commitments, with vesting capped against as much as $60 billion in orders. The warrant allows cashless exercise and expires in 2036. In effect, the supplier offers its own equity as part of the consideration for the customer's orders: the more the customer buys, the more equity it earns. On the technical side, the two stated elements are inference-specific silicon and in-cluster optical interconnect at up to 1.6 terabits per second. Qualcomm says the chips are already in production, with revenue beginning in its fiscal first quarter of 2027 — the December 2026 quarter.</p>
+              <p><strong>3. The electricity side</strong></p>
+              <p>The Duane Arnold Energy Center shut down in August 2020 after a windstorm destroyed its cooling towers, and had been slated for decommissioning. According to the DOE and POWER Magazine, NextEra Energy secured a loan of up to $1.9 billion, targets commercial operation in the first quarter of 2029 and still needs Nuclear Regulatory Commission approval; the 615 MW output goes to Alphabet's Google under a 25-year power purchase agreement for AI data centres. A unit idle for six years has been written back into the plan because of data-centre demand.</p>
+              <p><strong>4. The state-level compute ledger</strong></p>
+              <p>For context: China's Ministry of Industry and Information Technology published its 15th Five-Year Plan for the information and communications industry this week, targeting 9,800 EFLOPS of intelligent computing capacity by 2030 — more than four times the current level — and 3.8 trillion yuan (about $532 billion) of cumulative investment in information infrastructure from 2026 to 2030. Reported capacity stood at 2,185 EFLOPS at the end of June and about 2,450 EFLOPS at the end of July, and the plan emphasises domestically produced processors.</p>
+              <p><strong>5. What is not yet verifiable</strong></p>
+              <p>Neither the part numbers nor the deployment schedule nor the volume of the Qualcomm-AWS silicon has been disclosed; the $60 billion figure is the ceiling against which the warrant vests, not the value of signed purchase contracts. Meta's Iris production timing rests on an internal memo and supply-chain reporting, and Meta has made no public disclosure on yields or shipment volumes. Duane Arnold's restart date depends on NRC review, and no final timeline has been set.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">苹果「Surprise and Shine」发布会定于太平洋时间9月9日10时举行，本报截稿时尚未开始</h4>
+            <div class="ni-meta"><span class="src">Apple · MacRumors · 9to5Mac · AppleInsider</span> · 2026-08-26</div>
+            <p class="ni-desc">苹果8月26日公布秋季发布会，主题为「Surprise and Shine」，时间为太平洋时间9月9日上午10时（北京时间9月10日凌晨1时），地点为加州库比蒂诺的苹果园区。这是苹果官方已确认的信息。至于将发布哪些产品，苹果本身未公开说明；媒体的预期集中在iPhone 18 Pro系列与首款折叠屏iPhone，但机型名称、规格与价格在发布会开始前均属未经证实的传闻，本报不予转述为事实。本报按北京时间9月9日21时截稿，发布会尚未开始，相关内容将于下一期核验后报道。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Apple's “Surprise and Shine” Event Is Set for 10 a.m. Pacific on September 9; It Had Not Begun as This Issue Closed</h4>
+            <div class="ni-meta"><span class="src">Apple · MacRumors · 9to5Mac · AppleInsider</span> · 2026-08-26</div>
+            <p class="ni-desc">Apple announced its autumn event on August 26 under the tagline “Surprise and Shine,” scheduled for 10 a.m. Pacific on September 9 — 1 a.m. Beijing time on September 10 — at the Apple Park campus in Cupertino, California. Those are the details Apple itself has confirmed. Apple has not said publicly what it will announce; press expectations centre on the iPhone 18 Pro line and a first foldable iPhone, but model names, specifications and prices remain unverified rumour until the event begins, and this bulletin does not repeat them as fact. This issue closed at 9 p.m. Beijing time on September 9, before the event started; the substance will be reported next issue, once verified.</p>
+          </div>
+          <a class="ni-link" href="https://www.macrumors.com/2026/08/26/apple-iphone-event-2026/" target="_blank" rel="noopener">MacRumors →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">Meta 自研AI加速器「Iris」定于9月投产，目标2027年算力达14吉瓦</h4>
+            <div class="ni-meta"><span class="src">Reuters · CNBC · TechCrunch · DigiTimes</span> · 2026-09-08</div>
+            <p class="ni-desc">据路透社报道并经CNBC、TechCrunch转述，Meta计划自2026年9月起量产其自研AI加速器，代号「Iris」，属于其MTIA（Meta训练与推理加速器）项目规划的四代产品之一，由博通（Broadcom）协助设计、台积电制造。据内部备忘录，该芯片在约六周内完成关键测试，未出现重大问题，快于同类芯片通常数月的验证周期。算力方面，Meta称2026年上线7吉瓦，2027年翻倍至14吉瓦，并已就内存、存储与光学设备锁定长期供货。Meta未就该芯片的良率与出货量作公开披露。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Meta's In-House AI Accelerator “Iris” Enters Production in September, With a 14-Gigawatt Target for 2027</h4>
+            <div class="ni-meta"><span class="src">Reuters · CNBC · TechCrunch · DigiTimes</span> · 2026-09-08</div>
+            <p class="ni-desc">Reuters reported, as relayed by CNBC and TechCrunch, that Meta plans to begin mass production of its in-house AI accelerator from September 2026. The chip, code-named Iris, is one of four planned generations under Meta's Training and Inference Accelerator (MTIA) programme; it was designed with help from Broadcom and is to be manufactured by TSMC. According to an internal memo, it completed critical testing in about six weeks without major issues, faster than the multi-month validation typical for comparable parts. On capacity, Meta says it will bring 7 gigawatts online in 2026 and double that to 14 gigawatts in 2027, and has locked in long-term supplies of memory, storage and optical equipment. Meta has made no public disclosure of the chip's yields or shipment volumes.</p>
+          </div>
+          <a class="ni-link" href="https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/" target="_blank" rel="noopener">TechCrunch →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">Anthropic 研究员雅各布·考克森辞职，称两家公司「正冲向可自我改进的超级智能」</h4>
+            <div class="ni-meta"><span class="src">The Wall Street Journal · Newsweek · Business Standard · Interesting Engineering</span> · 2026-09-09</div>
+            <p class="ni-desc">据《华尔街日报》报道，27岁的Anthropic研究员雅各布·考克森（Jacob Coxon）辞职，理由是担忧该公司与同业正在竞相构建「可能无法控制」的AI系统。考克森数学专业出身，工作内容是以大量数据训练新模型，今年早前从OpenAI转入Anthropic。他向《华尔街日报》表示：「我们正走在这些最激进情形中的许多条路上——到明年年底，事情可能就已经失控。」他称自己当初选择Anthropic是因为该公司以模型安全工作著称，并在X上宣布辞职时写道：「两家公司都没有在负责任地行事。它们正直奔可自我改进的超级智能，拿我们的生命做赌注。」本报未获得Anthropic对此的公开回应。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Anthropic Researcher Jacob Coxon Resigns, Saying Two Companies Are “Racing Straight to Self-Improving Superintelligence”</h4>
+            <div class="ni-meta"><span class="src">The Wall Street Journal · Newsweek · Business Standard · Interesting Engineering</span> · 2026-09-09</div>
+            <p class="ni-desc">The Wall Street Journal reported that Jacob Coxon, a 27-year-old researcher at Anthropic, has resigned over concerns that the company and its competitors are racing to build AI systems they “may not be able to control.” Coxon, who studied mathematics and whose work involved training new models on large volumes of data, had moved to Anthropic from OpenAI earlier this year. He told the Journal: “We're on track for a lot of the most aggressive of these scenarios where by the end of next year things could be out of control already.” He said he had joined Anthropic because of its reputation for model-safety work, and wrote on X in announcing his resignation: “Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives.” This bulletin has not obtained a public response from Anthropic.</p>
+          </div>
+          <a class="ni-link" href="https://www.business-standard.com/technology/artificial-intelligence/anthropic-researcher-quits-over-fears-of-out-of-control-ai-artificial-intelligence-systems-126090900370_1.html" target="_blank" rel="noopener">Business Standard →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">小米在中国大陆发布18 Fold折叠屏手机，搭载自研玄戒O3处理器，起售价10,999元</h4>
+            <div class="ni-meta"><span class="src">Engadget · Android Authority · PhoneArena · SoyaCincau</span> · 2026-09-08</div>
+            <p class="ni-desc">小米9月8日在中国大陆发布折叠屏手机小米18 Fold，采用自研玄戒O3（Xring O3）处理器，内屏7.68英寸、外屏5.38英寸，配徕卡三摄，起售价10,999元人民币，据报道9月10日上午10时开售，该机型仅在中国大陆销售。此前该机已在2026年柏林国际消费电子展（IFA）上公开亮相。小米称玄戒O3性能优于高通骁龙8 Elite Gen 5；本报未获得独立第三方基准测试对该说法的核实。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Xiaomi Launches the 18 Fold in Mainland China With Its In-House Xring O3 Chip, Starting at 10,999 Yuan</h4>
+            <div class="ni-meta"><span class="src">Engadget · Android Authority · PhoneArena · SoyaCincau</span> · 2026-09-08</div>
+            <p class="ni-desc">Xiaomi launched the 18 Fold in mainland China on September 8. The foldable uses the company's in-house Xring O3 processor and pairs a 7.68-inch inner display with a 5.38-inch outer screen and a Leica triple camera. It starts at 10,999 yuan, with sales reported to begin at 10 a.m. on September 10, and is being sold only in mainland China. The device had earlier been shown publicly at IFA 2026 in Berlin. Xiaomi says the Xring O3 outperforms Qualcomm's Snapdragon 8 Elite Gen 5; this bulletin has not obtained independent third-party benchmarks verifying that claim.</p>
+          </div>
+          <a class="ni-link" href="https://www.engadget.com/2252401/xiaomi-18-fold-hands-on-ifa-2026/" target="_blank" rel="noopener">Engadget →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://aje.news/wp-content/uploads/2026/09/2026-09-01T102008Z_2457438_RC25ANACGFQO_RTRMADP_3_NEPAL-FLOODS-1788258112.jpg?resize=770%2C513&amp;quality=80" alt="尼泊尔波特科西流域的洪水灾区" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label env">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">兰塘里隆掉下来的那块冰：波特科西洪水两周后的核算、归因与预警</h3>
+            <div class="ft-meta"><span class="src">综合信源：The Kathmandu Post · Bloomberg · The Japan Times · CNN · Al Jazeera · ABC News · CNBC · SciDev.Net · Down To Earth · ICIMOD · UNFPA</span></div>
+            <div class="ft-desc">
+              <p><strong>8月26日发生了什么</strong></p>
+              <p>8月26日，尼泊尔拉苏瓦（Rasuwa）县的伦德（Lhende）—波特科西（Bhotekoshi）河谷发生破坏性洪水。据卫星影像分析，尼中边境附近高海拔处一大块冰川与周围岩体崩落，冰、雪与碎屑倾入河谷。维基百科汇总的技术描述为：一块约0.2平方公里（49英亩）的冰岩体在约5.2公里海拔处断裂，下落约1.2公里，形成强大的碎屑流；被记录到的地震信号来自崩塌本身，而非由地震触发。碎屑流沿河向下推进达100公里，有遗体在下游240公里的印度境内被发现。</p>
+              <p><strong>卫星记录里的前史</strong></p>
+              <p>同一河系在2025年7月8日已发生过一次性质不同的事件。据Sentinel-2影像，西藏一侧普日普（Purepu）冰川的冰面湖自2025年3月起形成并扩大，到7月7日合并湖面约0.75平方公里；7月8日湖面骤减、冰面出现排水特征，支持「冰面湖快速排水导致下游洪水」的判断。当时受影响的包括道路、桥梁、水电站与拉苏瓦加迪（Rasuwagadhi）陆港。同一走廊两年两次洪水，但两次的物理过程并不相同。</p>
+              <p><strong>伤亡与损失的口径变化</strong></p>
+              <p>灾情数字一直在变动：8月28日半岛电视台报道近470人死亡；9月1日死亡人数越过1,000人；9月2日美国广播公司援引尼泊尔国家灾害管理局为尼境内1,114人死亡、3,916人失踪；9月8日《加德满都邮报》报道至少1,377人死亡、5,326人失踪、6,827人受伤。西藏一侧，中国官方通报16人死亡、约546人失踪，维基百科汇总的9月5至6日数字为43人死亡、519人失踪。累计救援超过13,583人，9月4日至5日有两名幸存者从水电站隧道中被救出；至9月4日，多数通信基站恢复；9月7日尼泊尔举行全国哀悼日。</p>
+              <p><strong>归因：已确定的与仍在调查的</strong></p>
+              <p>国际山地综合发展中心（ICIMOD）表示，伦德河的冰崩是嫌疑触发因素，但确切的事件顺序以及气候变化在此次灾害中的作用仍在调查中。ICIMOD 2026年的评估显示，兴都库什—喜马拉雅地区冰川在1990年至2020年间面积损失约12%，冰损速率自2000年以来翻了一倍；随着冰川退缩，新湖可能形成，坡体失去冰的支撑，冻土也可能变得不稳定。特里布万大学地质灾害专家巴桑塔·拉杰·阿迪卡里（Basanta Raj Adhikari）称8月26日的洪水在当地前所未见，并称其释放的能量超过广岛原子弹。雷丁大学的莉兹·斯蒂芬斯（Liz Stephens）将此类事件描述为「包括滑坡、雪崩与冰湖溃决洪水在内的复杂灾害链」。ICIMOD减灾专家萨斯瓦塔·桑亚尔（Saswata Sanyal）称：「随着本地区灾害风险的性质迅速变化，减灾战略已不能再孤立地评估单一灾种。」尼泊尔卫星科学家伊什法克·艾哈迈德（Ishfaq Ahmad）指出，危险冰川湖可以借卫星影像识别，但由于触发过程迅速，锁定溃决的确切时刻仍然困难。</p>
+              <p><strong>预警与那四座冰川湖</strong></p>
+              <p>尼泊尔正在推进名为「GLOF Sanjeevani」的项目，为科西与甘达基流域四座高风险冰川湖降低水位：索卢坤布的Lumding Tsho与Hongu-2、桑库瓦萨巴的Lower Barun、马囊的Thulagi（Dona）。项目总预算约5,000万美元，其中绿色气候基金拨款3,616万美元，另有1,380万美元来自政府与合作方，覆盖山区约230万人。四座湖出自ICIMOD与联合国开发计划署2020年的一份报告，该报告在尼泊尔、西藏与印度共标出47座高风险湖，其中尼泊尔境内21座。研究这些湖泊的科学家认为，按目前设计难以让下游聚落变得安全：计划的降幅为3米，参照的是2000年措罗湖（Tsho Rolpa）与2016年伊姆贾（Imja）两次工程；研究者尼特什·卡德卡（Nitesh Khadka）表示：「花数百万美元把一个湖的水位降低两米或四米，作用非常有限。」多位专家建议至少降低10至20米，并强调最重要的一环是早期预警系统与实地观测。截至《加德满都邮报》9月6日报道，工程尚未开工，2026年的工作是聘请咨询方与开展环境评估，细化设计仍待完成。</p>
+              <p><strong>钱从哪里来</strong></p>
+              <p>尼泊尔财政部长告诉路透社，重建约需40亿至50亿美元；国家计划委员会已启动灾后需求评估，报告预计五周内出台，并作为捐助方会议的基础。尼方计划向全球「损失与损害基金」申请支持，理由是气候变化加剧了此次洪水的严重程度。彭博社与《日本时报》指出，这将是对这一新设机制的一次实际检验——该基金资金不足且尚未经过检验，而尼泊尔是亚洲最贫困的国家之一。《加德满都邮报》9月8日的报道指出，尼方希望获得赠款，但贷款可能难以避免。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">The Ice That Fell from Langtang Lirung: Accounting, Attribution and Early Warning Two Weeks After the Bhotekoshi Flood</h3>
+            <div class="ft-meta"><span class="src">Sources: The Kathmandu Post · Bloomberg · The Japan Times · CNN · Al Jazeera · ABC News · CNBC · SciDev.Net · Down To Earth · ICIMOD · UNFPA</span></div>
+            <div class="ft-desc">
+              <p><strong>What happened on August 26</strong></p>
+              <p>On August 26 a destructive flood swept the Lhende-Bhotekoshi corridor in Nepal's Rasuwa district. Satellite imagery analysis indicates that a large section of glacier and surrounding rock broke away at high altitude near the Nepal-China border, sending ice, snow and debris into the valley. A technical description compiled on Wikipedia puts it this way: a piece of ice and rock of about 0.2 square kilometres (49 acres) detached at roughly 5.2 kilometres elevation and fell some 1.2 kilometres, generating a powerful debris flow; the seismic signal that was recorded came from the collapse itself rather than from an earthquake that triggered it. The debris flow travelled up to 100 kilometres downstream, and bodies were recovered 240 kilometres away in India.</p>
+              <p><strong>The prior history in the satellite record</strong></p>
+              <p>The same river system produced a different kind of event on July 8, 2025. According to Sentinel-2 imagery, supraglacial ponds began forming on the Purepu Glacier on the Tibetan side in March 2025 and expanded, reaching a combined lake area of about 0.75 square kilometres by July 7; on July 8 the lake area fell sharply and drainage features became visible on the glacier surface, supporting the conclusion that rapid drainage of the supraglacial lake caused the downstream flood. Roads, bridges, hydroelectric plants and the Rasuwagadhi dry port were affected then. Two floods in two years in the same corridor — but not by the same physical process.</p>
+              <p><strong>How the casualty figures have moved</strong></p>
+              <p>The numbers have shifted repeatedly. On August 28 Al Jazeera reported nearly 470 dead; by September 1 the toll passed 1,000; on September 2 ABC News cited Nepal's National Disaster Management Authority for 1,114 dead and 3,916 missing inside Nepal; on September 8 The Kathmandu Post reported at least 1,377 dead, 5,326 missing and 6,827 injured. On the Tibetan side, Chinese officials reported 16 dead and about 546 missing, while figures compiled on Wikipedia for September 5-6 give 43 dead and 519 missing. More than 13,583 people have been rescued in total; two survivors were pulled from hydropower tunnels on September 4 and 5; most telecommunications towers had been restored by September 4; and Nepal observed a national day of mourning on September 7.</p>
+              <p><strong>Attribution: what is settled and what is still under investigation</strong></p>
+              <p>The International Centre for Integrated Mountain Development (ICIMOD) says an ice avalanche in the Lhende Khola is the suspected trigger, but that the precise sequence of events and the role of climate change in this particular disaster remain under investigation. ICIMOD's 2026 assessment found that glaciers across the Hindu Kush Himalaya lost about 12% of their area between 1990 and 2020, with the rate of ice loss doubling since 2000; as glaciers retreat, new lakes can form, slopes lose the support ice provided, and frozen ground can become unstable. Basanta Raj Adhikari, a geohazard specialist at Tribhuvan University, described the August 26 flood as unprecedented locally and said the energy released exceeded that of the Hiroshima atomic bomb. Liz Stephens of the University of Reading described such events as “complex chains of hazards, including landslides, avalanches and glacial lake outburst floods.” Saswata Sanyal, an ICIMOD disaster-risk reduction specialist, said: “With the nature of disaster risks rapidly mutating in the region, disaster risk reduction strategies can no longer evaluate hazards in isolation.” Ishfaq Ahmad, a satellite scientist in Nepal, notes that dangerous glacial lakes can be identified from satellite imagery but that pinpointing the moment of failure remains difficult because triggers act quickly.</p>
+              <p><strong>Early warning and those four glacial lakes</strong></p>
+              <p>Nepal is advancing a project called GLOF Sanjeevani to lower water levels at four high-risk glacial lakes in the Koshi and Gandaki basins: Lumding Tsho and Hongu-2 in Solukhumbu, Lower Barun in Sankhuwasabha and Thulagi (Dona) in Manang. The budget is about $50 million, of which $36.16 million is a Green Climate Fund grant and $13.8 million comes from the government and partners, with roughly 2.3 million people in mountain areas as intended beneficiaries. The four lakes were flagged in a 2020 ICIMOD-UNDP report that identified 47 high-risk lakes across Nepal, Tibet and India, 21 of them in Nepal. Scientists who have studied these lakes argue the work as designed will not make downstream settlements safe: the planned drawdown is 3 metres, modelled on the earlier projects at Tsho Rolpa in 2000 and Imja in 2016. Researcher Nitesh Khadka said: “Spending millions to lower a lake by two or four metres achieves very little.” Specialists recommend at least 10 to 20 metres, and stress that the single most important element is an early warning system backed by field observation. As of The Kathmandu Post's September 6 report, construction had not begun; 2026 is being spent appointing consultants and conducting environmental assessments, with refined designs still pending.</p>
+              <p><strong>Where the money comes from</strong></p>
+              <p>Nepal's finance minister told Reuters that reconstruction will require roughly $4 billion to $5 billion. The National Planning Commission has begun a Post-Disaster Needs Assessment, with a report expected within five weeks to serve as the basis for a donor conference. Kathmandu plans to apply to the global Loss and Damage Fund on the grounds that climate change worsened the flood's severity. Bloomberg and The Japan Times note that this will be a live test of that new mechanism — the fund is underfunded and untested, and Nepal is one of Asia's poorest countries. The Kathmandu Post reported on September 8 that Nepal wants grants, but that loans may be unavoidable.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">格陵兰彼得曼冰川崩解出76平方公里冰岛，为2012年以来最大；后续两块约97与87平方公里</h4>
+            <div class="ni-meta"><span class="src">ESA · NASA Earth Observatory · ScienceDaily · Phys.org</span> · 2026-09-04</div>
+            <p class="ni-desc">据欧洲空间局（ESA），格陵兰西北部彼得曼冰川（Petermann Glacier）的浮冰舌于8月4日断裂出一块面积76平方公里、厚度最高约150米的桌状冰山（「冰岛」），为该冰川2012年以来最大一次浮冰损失，也是北极自2020年以来最显著的崩解事件。该事件由渥太华大学冰川学博士生亚当·加尔博（Adam Garbo）在哨兵-1号（Sentinel-1）雷达影像中发现，监测团队还包括斯特灵、兰卡斯特、利兹三所英国大学与加拿大冰情服务局的研究者。加尔博表示：「我们多年来一直预期这次断裂，真正看到它发生仍然令人震动。」ESA指出，随着已存在多年的裂隙继续扩展，另有两块面积约97平方公里与87平方公里的浮冰舌可能脱离。9月4日的后续报道显示，该冰岛在撞上乔岛（Joe Island）后未解体，卫星正跟踪其沿内尔斯海峡漂移。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Greenland's Petermann Glacier Sheds a 76-Square-Kilometre Ice Island, Its Largest Loss Since 2012; Two More of About 97 and 87 km² May Follow</h4>
+            <div class="ni-meta"><span class="src">ESA · NASA Earth Observatory · ScienceDaily · Phys.org</span> · 2026-09-04</div>
+            <p class="ni-desc">According to the European Space Agency, a 76-square-kilometre tabular iceberg — an “ice island” up to about 150 metres thick — broke away from the floating tongue of the Petermann Glacier in northwest Greenland on August 4. It is the glacier's largest loss of floating ice since 2012 and the most significant Arctic calving event since 2020. The break was spotted by Adam Garbo, a glaciology doctoral student at the University of Ottawa, in Sentinel-1 radar imagery; the monitoring team also includes researchers from the universities of Stirling, Lancaster and Leeds in the UK and the Canadian Ice Service. Garbo said: “We've anticipated this break for years, and seeing it finally happen is remarkable.” ESA notes that two further sections of about 97 and 87 square kilometres could detach as rifts that have been developing for years continue to propagate. Follow-up reporting on September 4 said the ice island struck Joe Island without breaking apart, and satellites are tracking its drift through Nares Strait.</p>
+          </div>
+          <a class="ni-link" href="https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1/Sentinel-1_captures_major_ice_loss_from_Greenland_glacier" target="_blank" rel="noopener">ESA →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">世界气象组织：厄尔尼诺将增强至「非常强」，持续至2027年2月的概率接近100%</h4>
+            <div class="ni-meta"><span class="src">WMO · Al Jazeera · UN News · weather.com</span> · 2026-09-03</div>
+            <p class="ni-desc">世界气象组织（WMO）9月3日表示，厄尔尼诺现象已在赤道太平洋中东部确立，预计在未来数月进一步增强，在2026年年底前后达到「非常强」强度后见顶。WMO全球生产中心的预报显示，厄尔尼诺持续至2026年12月—2027年2月的概率接近100%。WMO秘书长塞莱斯特·绍洛（Celeste Saulo）在日内瓦向记者表示：「如果这一路径持续下去，它可能强于我们开始监测以来的任何一次——也就是说，字面意义上超出我们过去四十年使用的图表范围。」WMO称，此前从未就厄尔尼诺或拉尼娜发布过如此明确的预报。就2026年9月至11月，WMO多模式预报显示几乎所有陆地区域气温高于常年的可能性上升，降水分布呈现对强厄尔尼诺的典型大气响应。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">WMO: El Niño Is Forecast to Reach “Very Strong” Intensity, With a Near-100% Chance of Persisting Through February 2027</h4>
+            <div class="ni-meta"><span class="src">WMO · Al Jazeera · UN News · weather.com</span> · 2026-09-03</div>
+            <p class="ni-desc">The World Meteorological Organization said on September 3 that El Niño is firmly established in the central-eastern equatorial Pacific and is forecast to strengthen further in the coming months, reaching very strong intensity before peaking around the end of 2026. Forecasts from WMO Global Producing Centres indicate a nearly 100% probability that the event will persist through December 2026 to February 2027. WMO Secretary-General Celeste Saulo told reporters in Geneva: “If this trajectory continues, it may be stronger than anything since our monitoring began — so literally off the charts we have used for the past four decades.” The WMO said it had never before issued such an unequivocal forecast for El Niño or La Niña. For September to November 2026, WMO multi-model forecasts show an increased likelihood of above-normal temperatures across almost all land areas, with rainfall patterns showing a pronounced and classic atmospheric response to a strong Pacific El Niño.</p>
+          </div>
+          <a class="ni-link" href="https://wmo.int/news/media-centre/el-nino-set-become-very-strong-raising-risks-of-extreme-weather-2027" target="_blank" rel="noopener">WMO →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">喀拉喀托之子火山喷发，火山灰升至约14.6公里；巴厘岛机场108架次航班取消或调整</h4>
+            <div class="ni-meta"><span class="src">The Bali Times · Business Today · Wego · The Traveler</span> · 2026-09-07</div>
+            <p class="ni-desc">位于爪哇与苏门答腊之间巽他海峡的喀拉喀托之子（Anak Krakatau）火山于9月4日晚活动增强后喷发，伴有轰鸣、震动与熔岩喷泉；卫星数据显示火山灰升至海平面以上约14.6公里。该火山9月4日至5日的喷发导致雅加达机场关闭至9月7日上午8时59分。巴厘岛伍拉·莱国际机场在9月6日上午7时至9月7日上午11时之间，共有108架次航班取消或调整时刻，主要涉及雅加达与万隆航线；机场本身保持开放，国内与国际航班运营及旅客服务正常。喀拉喀托之子距巴厘岛以西约1,200公里，巴厘岛本身位于火山灰区之外，受影响原因是大量飞往巴厘岛的国内航班经由雅加达中转。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Anak Krakatau Erupts, Sending Ash to About 14.6 km; 108 Flights at Bali's Airport Cancelled or Rescheduled</h4>
+            <div class="ni-meta"><span class="src">The Bali Times · Business Today · Wego · The Traveler</span> · 2026-09-07</div>
+            <p class="ni-desc">Anak Krakatau, in the Sunda Strait between Java and Sumatra, erupted after activity intensified late on September 4, accompanied by roaring sounds, vibrations and lava fountains; satellite data showed volcanic ash rising to about 14.6 kilometres above sea level. The eruptions of September 4 and 5 closed Jakarta's airports until 8:59 a.m. on September 7. At Bali's I Gusti Ngurah Rai International Airport, 108 flights were cancelled or rescheduled between 7 a.m. on September 6 and 11 a.m. on September 7, mostly on Jakarta and Bandung routes; the airport itself stayed open, with domestic and international operations and passenger services continuing normally. Anak Krakatau lies roughly 1,200 kilometres west of Bali, which sits outside the ash zone; the disruption reached it because a large share of domestic traffic into Bali connects through Jakarta.</p>
+          </div>
+          <a class="ni-link" href="https://thebalitimes.com/the-island/108-flights-affected-at-bali-airport-as-volcanic-ash-disrupts-air-travel/" target="_blank" rel="noopener">The Bali Times →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">第31届联合国气候变化大会定于11月9日至20日在安塔利亚举行，候任主席国土耳其此前公布2035年电气化等目标</h4>
+            <div class="ni-meta"><span class="src">UNFCCC · Climate Home News · Practical Action</span> · 2026-06-09</div>
+            <p class="ni-desc">第31届联合国气候变化大会（COP31）将于2026年11月9日至20日在土耳其安塔利亚举行。据《联合国气候变化框架公约》秘书处的公告，候任主席国土耳其已于6月9日在德国波恩的联合国6月气候会议期间公布其「全球气候行动议程」的一批新目标，包括：将电力在最终能源需求中的占比从目前略高于20%提高到2035年的35%；到2035年将全球废弃物增长减半；以及在建筑部门将能源消费强度至少降低25%的韧性城市目标。土方将COP31定位为「以落实为重心」的一届大会。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">COP31 Is Set for November 9-20 in Antalya; Incoming Turkish Presidency Earlier Published 2035 Electrification and Other Targets</h4>
+            <div class="ni-meta"><span class="src">UNFCCC · Climate Home News · Practical Action</span> · 2026-06-09</div>
+            <p class="ni-desc">The 31st UN Climate Change Conference (COP31) will be held in Antalya, Türkiye, from November 9 to 20, 2026. According to the UNFCCC secretariat, the incoming Turkish presidency published a set of new targets under its Global Climate Action Agenda on June 9, during the UN June Climate Meetings in Bonn, Germany. They include raising the share of final energy demand met by electricity from just over 20% today to 35% by 2035, halving the growth in global waste by 2035, and a resilient-cities target of cutting energy consumption intensity in the building sector by at least 25%. Ankara has framed COP31 as an implementation-focused conference.</p>
+          </div>
+          <a class="ni-link" href="https://unfccc.int/news/cop31-presidency-announces-new-targets-on-global-electrification-cutting-waste-resilient-cities" target="_blank" rel="noopener">UNFCCC →</a>
+        </div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+})();
+</script>
+
+</body>
+</html>
