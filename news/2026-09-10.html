@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-10</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:300px;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:340px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:40%;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+
+/* 图片：完整显示，不裁切。点一下看大图 */
+.hl .hl-img,.ft .ft-img{cursor:zoom-in}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:24px;cursor:zoom-out}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+.lbx .lbx-tip{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+@media print{.lbx{display:none!important}}
+</style>
+<!-- share:start -->
+<meta name="description" content="胡塞武装夺取红海港口城市摩卡与祖盖尔岛，向曼德海峡推进；一周交战已致500余人死亡；国际原子能机构理事会以23票赞成、3票反对、8票弃权，20年来首次将伊朗提交联合国安理会；布伦特原油9月9日结算价报每桶101.21美元，为5月22日以来最高；9月10日盘中续涨">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.006 · 2026-09-10 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="胡塞武装夺取红海港口城市摩卡与祖盖尔岛，向曼德海峡推进；一周交战已致500余人死亡；国际原子能机构理事会以23票赞成、3票反对、8票弃权，20年来首次将伊朗提交联合国安理会；布伦特原油9月9日结算价报每桶101.21美元，为5月22日以来最高；9月10日盘中续涨">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-10.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.euronews.com/articles/stories/09/90/85/08/1536x864_cmsv2_5265a0b1-49f4-5b63-9e41-9da0c8c97776-9908508.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.006 · 2026-09-10 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="胡塞武装夺取红海港口城市摩卡与祖盖尔岛，向曼德海峡推进；一周交战已致500余人死亡；国际原子能机构理事会以23票赞成、3票反对、8票弃权，20年来首次将伊朗提交联合国安理会；布伦特原油9月9日结算价报每桶101.21美元，为5月22日以来最高；9月10日盘中续涨">
+<meta name="twitter:image" content="https://images.euronews.com/articles/stories/09/90/85/08/1536x864_cmsv2_5265a0b1-49f4-5b63-9e41-9da0c8c97776-9908508.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.006 · 2026-09-10 · 陆先生日报 | Luxiansheng Daily","description":"胡塞武装夺取红海港口城市摩卡与祖盖尔岛，向曼德海峡推进；一周交战已致500余人死亡；国际原子能机构理事会以23票赞成、3票反对、8票弃权，20年来首次将伊朗提交联合国安理会；布伦特原油9月9日结算价报每桶101.21美元，为5月22日以来最高；9月10日盘中续涨","datePublished":"2026-09-10","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-10.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://images.euronews.com/articles/stories/09/90/85/08/1536x864_cmsv2_5265a0b1-49f4-5b63-9e41-9da0c8c97776-9908508.jpg"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.006</div>
+    <div>2026.09.10 THURSDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">9月10日，两条全球航运咽喉同时成为焦点。也门胡塞武装当日夺取红海港口城市摩卡（Mocha）与祖盖尔岛（Zuqar Island），向曼德海峡（Bab el-Mandeb）推进；在另一端，美国与伊朗围绕霍尔木兹海峡的互攻延续，布伦特原油9月9日结算价报每桶101.21美元，为5月22日以来最高。国际原子能机构（IAEA）理事会9月9日以23票赞成、3票反对、8票弃权通过决议，20年来首次将伊朗核问题提交联合国安理会。科技方面，谷歌宣布未来两年在芬兰投入至少130亿欧元建设人工智能基础设施，并就洛维萨（Loviisa）核电站签下长期购电协议，为其在美国境外的首笔核电交易。气候方面，哥白尼气候变化服务（C3S）9月10日发布月度公报：2026年8月全球地表平均气温16.96摄氏度，与2023年7月并列为有记录以来最热月份，较工业化前水平高出1.65摄氏度。</p>
+    <p class="en-content" lang="en">Two of the world's shipping chokepoints were in focus on September 10. Yemen's Houthis seized the Red Sea port city of Mocha and Zuqar Island and pushed toward the Bab el-Mandeb strait; at the other end of the Arabian Peninsula, the exchange of attacks between the United States and Iran around the Strait of Hormuz continued, and Brent crude settled at $101.21 a barrel on September 9, its highest since May 22. On September 9 the board of the International Atomic Energy Agency voted 23 in favour, three against and eight abstaining to report Iran to the UN Security Council, the first such referral in 20 years. In technology, Google said it would invest at least €13 billion in AI infrastructure in Finland over two years and signed a long-term power purchase agreement covering the Loviisa nuclear plant, its first nuclear deal outside the United States. On climate, the Copernicus Climate Change Service published its monthly bulletin on September 10: the global average surface air temperature in August 2026 was 16.96°C, tying July 2023 as the warmest month on record and standing 1.65°C above the pre-industrial level.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl">
+        <img class="hl-img" src="https://images.euronews.com/articles/stories/09/90/85/08/1536x864_cmsv2_5265a0b1-49f4-5b63-9e41-9da0c8c97776-9908508.jpg" alt="也门红海沿岸" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">胡塞武装夺取红海港口城市摩卡与祖盖尔岛，向曼德海峡推进；一周交战已致500余人死亡</h2>
+            <div class="hl-meta"><span class="src">Euronews (AFP)</span> · Reuters · South China Morning Post · The Media Line · The New Arab · 2026-09-10</div>
+            <p class="hl-desc">也门胡塞武装9月10日夺取红海港口城市摩卡（Mocha／Mokha），并向曼德海峡（Bab el-Mandeb）方向推进。据一名也门军方消息人士，胡塞武装另在「火箭弹袭击与用船只运送战斗人员实施的地面进攻」后占领了祖盖尔岛（Zuqar Island）；目击者称见到胡塞武装人员进入市区并高呼其政治口号。路透社援引三名也门政府方面消息人士称，胡塞武装人员已进入摩卡并控制该市，政府军及其盟友正南撤至直接位于海峡沿岸、与丕林岛（Perim Island）隔海相望的杜巴卜（Dhubab）。摩卡此前由也门国际承认的政府控制，自8月初起持续遭袭——数日内有超过25枚导弹落入该市，港口作业因此中断。摩卡位于曼德海峡以北不足50英里处。关于丕林岛，有未经证实的报道称胡塞武装人员已于9月10日傍晚登岛。也门政府军少将萨迪克·杜维德（Sadeq Duwaid）称：「胡塞民兵企图在曼德海峡沿岸建立存在，并把该地区变成类似霍尔木兹海峡的局面。」交战规模方面，胡塞武装上周对沙特支持的政府军发动大规模攻势，沙特方面以约40架次空袭回应，覆盖多个省份；据法新社统计，上周以来的战斗已造成500余人死亡，其中多数为作战人员。人道方面，数百名妇女儿童9月10日离开摩卡，前往政府控制的拉赫季（Lahj）与亚丁（Aden）省。曼德海峡经红海与苏伊士运河连接亚洲与欧洲，与霍尔木兹海峡合计承担全球每日石油运输量的四分之一、以及接近三分之一的海运贸易量。也门内战于7月重启敌对状态，起因是胡塞武装不顾沙特对也门领空的管控让一架伊朗飞机降落，利雅得随后空袭了机场。交叉核验：Euronews (AFP) · Reuters · South China Morning Post · The Media Line · The New Arab · Daily Sabah · Times of Israel</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Houthis Seize the Red Sea Port of Mocha and Zuqar Island, Pushing Toward Bab el-Mandeb; More Than 500 Killed in a Week of Fighting</h2>
+            <div class="hl-meta"><span class="src">Euronews (AFP)</span> · Reuters · South China Morning Post · The Media Line · The New Arab · 2026-09-10</div>
+            <p class="hl-desc">Yemen's Houthis captured the Red Sea port city of Mocha on September 10 and advanced toward the Bab el-Mandeb strait. According to a Yemeni military source, the group also took Zuqar Island after “rocket attacks and a ground assault carried out using boats transporting fighters”; witnesses said they saw Houthi fighters entering the city chanting the movement's political slogan. Reuters, citing three Yemeni government sources, reported that Houthi forces had entered Mocha and taken control of it, and that government forces and their allies were relocating south to Dhubab, which sits directly on the strait across from Perim Island. Mocha had been held by Yemen's internationally recognised government and had been under sustained attack since early August, when more than 25 missiles struck it within days and port operations halted. The city lies less than 50 miles north of Bab el-Mandeb. Unconfirmed reports said Houthi forces landed on Perim Island by the evening of September 10. Major-General Sadeq Duwaid of the Yemeni government forces said: “The Houthi militia seeks to establish a presence along the shores of the Bab al-Mandeb Strait and transform the area into a situation resembling that of the Strait of Hormuz.” On the scale of the fighting, the Houthis launched a large-scale offensive last week against Saudi-backed government forces, and Saudi forces responded with roughly 40 airstrikes across several governorates; an AFP tally puts the death toll since last week at more than 500, mostly combatants. Hundreds of women and children left Mocha on September 10 for the government-held provinces of Lahj and Aden. Bab el-Mandeb links Asia to Europe via the Red Sea and the Suez Canal; together with the Strait of Hormuz it carries a quarter of daily petroleum shipments and close to a third of global maritime trade. Yemen's civil war returned to open hostilities in July, when the Houthis allowed an Iranian aircraft to land in defiance of Saudi control of Yemeni airspace and Riyadh retaliated by striking the airport. Cross-verified: Euronews (AFP) · Reuters · South China Morning Post · The Media Line · The New Arab · Daily Sabah · Times of Israel</p>
+          </div>
+          <a class="hl-link" href="https://www.euronews.com/2026/09/10/houthis-seize-red-sea-port-city-in-push-to-seize-bab-el-mandeb" target="_blank" rel="noopener">Euronews →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://s.france24.com/media/display/6eb43d34-ac6c-11f1-9b5c-005056bf30b7/w:1024/p:16x9/3d533023f53a583071e9fceb6251d5b234b134f8.jpg" alt="国际原子能机构理事会会场" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">国际原子能机构理事会以23票赞成、3票反对、8票弃权，20年来首次将伊朗提交联合国安理会</h2>
+            <div class="hl-meta"><span class="src">France 24 (AFP)</span> · AP News · The Globe and Mail · ABC News · The Jerusalem Post · 2026-09-09</div>
+            <p class="hl-desc">国际原子能机构（IAEA）由35国组成的理事会9月9日通过决议，就核不遵约问题将伊朗提交联合国安理会，表决结果为23票赞成、3票反对、8票弃权，投反对票的是俄罗斯、中国与尼日尔。决议由英国、法国、德国与美国共同提交，要求「机构总干事向联合国安全理事会与联合国大会报告」伊朗问题。这是20年来伊朗首次因未履行核报告义务被提交安理会。触发事由是伊朗在一项长期调查中未予配合——调查涉及监察员在伊朗多个未申报地点检测到的铀痕迹。背景方面，自2025年6月以色列与美国对伊朗核设施发动打击以来，IAEA一直被拒绝进入伊朗的关键核设施；另有设施在2026年2月28日爆发的冲突中受损。伊朗常驻IAEA代表礼萨·纳贾菲（Reza Najafi）称，该决议「是在美国及其盟友的政治压力下通过的」，并称其「完全适得其反」。分析人士阿里·瓦埃兹（Ali Vaez）就后续影响表示：「归根结底，这是一次徒劳的操作。」多家报道指出，鉴于俄罗斯与中国在安理会拥有否决权、可以阻止针对德黑兰的制裁，此举在实际效果上主要具有象征意义。交叉核验：France 24 (AFP) · AP News · The Globe and Mail · ABC News · The Jerusalem Post · Military.com</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">IAEA Board Reports Iran to the UN Security Council by 23 Votes to 3 With 8 Abstentions, the First Referral in 20 Years</h2>
+            <div class="hl-meta"><span class="src">France 24 (AFP)</span> · AP News · The Globe and Mail · ABC News · The Jerusalem Post · 2026-09-09</div>
+            <p class="hl-desc">The 35-member board of governors of the International Atomic Energy Agency voted on September 9 to refer Iran to the UN Security Council over nuclear non-compliance. The resolution passed with 23 votes in favour, three against and eight abstentions; Russia, China and Niger voted against. It was submitted by Britain, France, Germany and the United States, and requests that the agency's director general report Iran to both the Security Council and the UN General Assembly. It is the first time in 20 years that Iran has been referred to the Council for failing to meet its nuclear reporting obligations. The trigger was Iran's failure to cooperate with a long-running investigation into uranium traces detected by inspectors at several undeclared sites in the country. On background, the IAEA has been denied access to key Iranian nuclear facilities since June 2025, when Israel and the United States struck nuclear sites; further facilities were damaged in the conflict that erupted on February 28, 2026. Iran's representative to the IAEA, Reza Najafi, said the resolution “was passed under political pressure from the US and its allies” and called it “completely counterproductive.” On its likely effect, the analyst Ali Vaez said: “Ultimately, though, it is an exercise in futility.” Multiple outlets noted that because Russia and China hold vetoes on the Security Council and can block sanctions against Tehran, the move is largely symbolic in practical terms. Cross-verified: France 24 (AFP) · AP News · The Globe and Mail · ABC News · The Jerusalem Post · Military.com</p>
+          </div>
+          <a class="hl-link" href="https://www.france24.com/en/live-news/20260909-iaea-board-refers-iran-to-un-security-council" target="_blank" rel="noopener">France 24 →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://images.rigzone.com/images/news/articles/Oil-Closes-at-Highest-Level-in-4-Months-184581-582x327.webp" alt="原油市场" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">布伦特原油9月9日结算价报每桶101.21美元，为5月22日以来最高；9月10日盘中续涨</h2>
+            <div class="hl-meta"><span class="src">Rigzone</span> · Reuters · EnergyNow · CNBC · Fortune · 2026-09-10</div>
+            <p class="hl-desc">布伦特原油9月9日结算价报每桶101.21美元，单日上涨3.4%，为5月22日以来最高；同日西德克萨斯中质原油（WTI）结算价报每桶96.05美元，同为5月22日以来最高。9月10日盘中继续走高，各家报价口径不一：有报道称布伦特早盘报101.52美元，Rigzone在其9月10日稿件中给出的即时报价为布伦特104.56美元、WTI 99.23美元，均涨3.31%，另有报道称美东时间上午8时布伦特达105.20美元。推动因素方面，美国中央司令部（CENTCOM）确认在阿曼湾与哈尔克岛附近击毁五艘伊朗油轮，市场对霍尔木兹海峡供应中断的担忧随之升温；欧洲新闻台另将9月10日站上100美元关口归因于胡塞武装对沙特石油设施的袭击。摩纳克萨（Monaxa）风险主管阿尔乔姆·巴库舍夫（Artem Bakushev）称：「随着中东紧张局势升级、市场对主要能源航运路线的担忧加剧，布伦特原油升破100美元，结算价接近每桶101.21美元。」渣打银行能源研究主管艾米莉·阿什福德（Emily Ashford）称：「美伊冲突持续僵持意味着油价正逐步走高，其间因消息面出现急涨急跌。」需要说明的是，各家媒体对9月10日盘中价位的口径存在明显差异，本报同时列出而不作取舍。交叉核验：Rigzone · Reuters · EnergyNow · CNBC · Fortune · Transport Topics · Euronews</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Brent Settles at $101.21 a Barrel on September 9, the Highest Since May 22; Gains Extend on September 10</h2>
+            <div class="hl-meta"><span class="src">Rigzone</span> · Reuters · EnergyNow · CNBC · Fortune · 2026-09-10</div>
+            <p class="hl-desc">Brent crude settled at $101.21 a barrel on September 9, up 3.4% on the day and its highest close since May 22. West Texas Intermediate settled the same day at $96.05, also its highest since May 22. Prices rose further during September 10, though quoted levels differ between outlets: some reported Brent at $101.52 in early trading, Rigzone's September 10 article carried live quotes of $104.56 for Brent and $99.23 for WTI, both up 3.31%, and other reports put Brent at $105.20 as of 8 a.m. Eastern Time. On the drivers, US Central Command confirmed the destruction of five Iranian tankers in the Gulf of Oman and near Kharg Island, sharpening concern about supply disruption around the Strait of Hormuz; Euronews separately attributed the move above $100 on September 10 to Houthi attacks on Saudi oil infrastructure. Artem Bakushev, head of risk at Monaxa, said: “Brent crude moved above $100 and settled near $101.21 per barrel as escalating Middle East tensions intensified fears surrounding major energy shipping routes.” Emily Ashford, head of energy research at Standard Chartered Bank, said: “An ongoing stalemate in the U.S.-Iran conflict means oil prices are gradually grinding higher, punctuated by sharp up and downside moves on headlines.” Reported intraday levels for September 10 diverge materially between outlets; this issue lists them side by side rather than choosing between them. Cross-verified: Rigzone · Reuters · EnergyNow · CNBC · Fortune · Transport Topics · Euronews</p>
+          </div>
+          <a class="hl-link" href="https://www.rigzone.com/news/oil_closes_at_highest_level_in_4_months-10-sep-2026-184581-article/" target="_blank" rel="noopener">Rigzone →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://wehco.media.clients.ellingtoncms.com/imports/adg/photos/213619368_2026-09-09T070006Z_508084734_RC29YJAZO42K_RTRMADP_3_ALPHABET-AI-FINLAND_t1200.JPG?57a0c2296240c280e9492005c3cad63e7cbe80f4" alt="谷歌在芬兰的AI基础设施投资" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">谷歌宣布两年内在芬兰投资至少130亿欧元建AI基础设施，并购入洛维萨核电站最多五成产能</h2>
+            <div class="hl-meta"><span class="src">Reuters</span> · Bloomberg · Business Recorder · Tech Times · Arkansas Democrat-Gazette · 2026-09-10</div>
+            <p class="hl-desc">Alphabet旗下谷歌宣布，未来两年在芬兰投资至少130亿欧元（约151亿美元）建设人工智能基础设施，为其在欧洲规模最大的一笔投资。该计划包括在芬兰北部新建三座数据中心，当地冬季气温可低至零下10摄氏度以下。配套的电力安排是与北欧公用事业公司富腾（Fortum Oyj）达成的长期购电协议：谷歌将购入洛维萨（Loviisa）核电站最多50%的产能，使该电站得以运行至其运营许可到期的2050年。彭博社称该协议为20年期，商业记录报（援引路透社）与《科技时报》称为22年期，本报同时列出两种口径。彭博社另称，这是欧洲首例此类协议，将撬动维持该核电站长期运行所需的约10亿欧元投资。谷歌总裁兼首席投资官露丝·波拉特（Ruth Porat）称：「我们把这叫做BYOP——自带电力。这是谷歌在美国境外的首笔核能交易。」背景方面，Alphabet已将其全球年度投资规模上调至1,950亿至2,050亿美元，以应对不断扩张的AI算力需求；报道指出，北欧地区因气候寒冷有利于散热、且可接入可再生能源电网，已吸引微软与字节跳动等公司布局。交叉核验：Reuters · Bloomberg · Business Recorder · Tech Times · Arkansas Democrat-Gazette · Technology.org · Geo.tv</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Google to Invest at Least €13 Billion in Finnish AI Infrastructure Over Two Years and Buy Up to Half the Output of the Loviisa Nuclear Plant</h2>
+            <div class="hl-meta"><span class="src">Reuters</span> · Bloomberg · Business Recorder · Tech Times · Arkansas Democrat-Gazette · 2026-09-10</div>
+            <p class="hl-desc">Alphabet's Google said it will invest at least €13 billion (about $15.1 billion) in AI infrastructure in Finland over the next two years, its largest European investment. The plan includes three new data centres in the north of the country, where winter temperatures can fall well below minus 10°C. The accompanying power arrangement is a long-term purchase agreement with the Nordic utility Fortum Oyj under which Google will buy as much as 50% of the capacity of the Loviisa nuclear plant, allowing it to run to the end of its operating licence in 2050. Bloomberg describes the agreement as running 20 years, while Business Recorder (citing Reuters) and Tech Times put it at 22; both figures are given here. Bloomberg also reported that it is the first agreement of its kind in Europe and will help unlock roughly €1 billion of investment needed to keep the plant running for decades. Ruth Porat, Google's president and chief investment officer, said: “We call this BYOP, bring your own power. This is Google's first nuclear energy deal outside of the United States.” On background, Alphabet has raised its global annual investment to $195–205 billion to meet expanding AI computing demand, and reporting notes that the Nordic region has attracted companies including Microsoft and ByteDance because its cold climate aids cooling and its grids offer access to renewable power. Cross-verified: Reuters · Bloomberg · Business Recorder · Tech Times · Arkansas Democrat-Gazette · Technology.org · Geo.tv</p>
+          </div>
+          <a class="hl-link" href="https://www.brecorder.com/news/40438771/google-to-invest-usd15bn-in-ai-infrastructure-buy-nuclear-power-in-finland" target="_blank" rel="noopener">Business Recorder →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://climate.copernicus.eu/sites/default/files/styles/og_image/public/2026-09/C3S_Bulletin_PR_202608_map_sst_anomalies_and_extremes_1.png?itok=-HpkA_68" alt="2026年8月全球海表温度距平分布图" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">哥白尼：2026年8月全球平均气温16.96摄氏度，与2023年7月并列史上最热月份，较工业化前高1.65摄氏度</h2>
+            <div class="hl-meta"><span class="src">Copernicus C3S</span> · Euronews · Travel Tomorrow · Sunday Guardian · 2026-09-10</div>
+            <p class="hl-desc">欧盟哥白尼气候变化服务（C3S）9月10日发布月度气候公报。2026年8月全球地表平均气温为16.96摄氏度，较1991至2020年同期均值高0.85摄氏度，较1850至1900年工业化前基准高1.65摄氏度，与2023年7月并列为ERA5数据集中有记录以来最热的月份。这也是自2025年11月以来首个超过1.5摄氏度阈值的月份。海洋方面，60°S至60°N的极地外海域月平均海表温度为21.07摄氏度，为8月最高纪录，并与2024年3月并列为所有月份中的最高值；单日全球极地外海表温度最高值达21.11摄氏度。热带太平洋、大西洋沿岸与地中海西部出现破纪录海温。季节尺度上，2026年6月至8月为全球有记录以来并列最热的夏季，与2024年持平；西欧录得有记录以来最热的夏季，超过2003年，而欧洲陆地整体为第三热，位列2024年与2022年之后。海冰方面，8月北极海冰范围为有记录以来第12低，南极海冰范围为第4低。欧洲中期天气预报中心（ECMWF）气候战略负责人萨曼莎·伯吉斯（Samantha Burgess）称：「2026年8月是全球气候记录中值得注意的一个月……标志着全球气温重返1.5摄氏度以上。」交叉核验：Copernicus C3S 官方公报 · Euronews · Travel Tomorrow · Sunday Guardian · YubaNet · World Today Journal</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Copernicus: August 2026 Averaged 16.96°C Globally, Tying July 2023 as the Hottest Month on Record at 1.65°C Above Pre-Industrial</h2>
+            <div class="hl-meta"><span class="src">Copernicus C3S</span> · Euronews · Travel Tomorrow · Sunday Guardian · 2026-09-10</div>
+            <p class="hl-desc">The EU's Copernicus Climate Change Service published its monthly climate bulletin on September 10. The global average surface air temperature in August 2026 was 16.96°C, 0.85°C above the 1991–2020 average for the month and 1.65°C above the 1850–1900 pre-industrial baseline, tying July 2023 as the warmest month on record in the ERA5 dataset. It was also the first month to exceed the 1.5°C threshold since November 2025. At sea, the monthly average sea surface temperature over the extra-polar ocean between 60°S and 60°N was 21.07°C — the highest on record for August and the joint highest for any month, tied with March 2024 — while the highest daily global extra-polar sea surface temperature reached 21.11°C. Record-high sea surface temperatures occurred in the tropical Pacific, along the Atlantic coast and in the western Mediterranean. Seasonally, June to August 2026 was the joint warmest such period on record globally, level with 2024; Western Europe recorded its warmest summer on record, surpassing 2003, while Europe as a landmass had its third warmest, behind 2024 and 2022. Arctic sea ice extent ranked 12th lowest for August and Antarctic sea ice extent ranked 4th lowest. Samantha Burgess, Strategic Lead for Climate at the European Centre for Medium-Range Weather Forecasts, said: “August 2026 was a remarkable month in the global climate record … marking the return of global temperatures above 1.5°C.” Cross-verified: Copernicus C3S bulletin · Euronews · Travel Tomorrow · Sunday Guardian · YubaNet · World Today Journal</p>
+          </div>
+          <a class="hl-link" href="https://climate.copernicus.eu/copernicus-august-was-worlds-joint-hottest-month-record-pushing-global-temperatures-back-above" target="_blank" rel="noopener">Copernicus →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/canvas/2026/09/10/36023025-5e93-4475-a017-356b35b3a0bd_8b2c93d5.jpg?itok=9of-CFtL&amp;v=1789044842" alt="也门西海岸局势" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label pol">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">两个海峡同时收紧：从霍尔木兹到曼德的一周</h3>
+            <div class="ft-meta"><span class="src">综合信源：Euronews (AFP) · Reuters · France 24 (AFP) · Arab News · The Media Line · Rigzone · CNBC · South China Morning Post</span></div>
+            <div class="ft-desc">
+              <p><strong>时间线：9月8日至9月10日</strong></p>
+              <p>9月8日，美国中央司令部（CENTCOM）称击毁五艘与伊朗伊斯兰革命卫队关联的原油运输船。同日，胡塞武装袭击沙特哈米斯穆谢特（Khamis Mushait）的一处空军基地以及邻近城市的石油设施，致73人受伤，为对沙特规模最大的袭击之一。9月9日，IAEA理事会以23票赞成、3票反对、8票弃权将伊朗提交联合国安理会；同日布伦特原油结算价报每桶101.21美元，为5月22日以来最高；巴基斯坦向伊朗转达沙特方面的警告。9月10日，胡塞武装夺取摩卡与祖盖尔岛，向曼德海峡推进；原油续涨。</p>
+              <p><strong>两个咽喉的量级</strong></p>
+              <p>曼德海峡经红海与苏伊士运河连接亚洲与欧洲。据欧洲新闻台，曼德海峡与霍尔木兹海峡合计承担全球每日石油运输量的四分之一，以及接近三分之一的海运贸易量。摩卡位于曼德海峡以北不足50英里；胡塞武装的下一批目标是直接位于海峡沿岸的杜巴卜与丕林岛，也门政府军已南撤至杜巴卜。截至发稿，丕林岛是否已被登陆仅有未经证实的报道。</p>
+              <p><strong>被牵动的第三方：巴基斯坦、沙特、土耳其</strong></p>
+              <p>据路透社独家报道，巴基斯坦已向伊朗转达沙特的警告，要求约束胡塞武装。巴基斯坦国防部长赫瓦贾·阿西夫（Khawaja Asif）称，袭击若外溢至沙特境内，可能触发利雅得、安卡拉与伊斯兰堡之间的联合安全安排，并表示：「对一国的侵略将被视为对三国的侵略。」该安排依据三国上月签署的《麦加联合防御协定》；报道同时指出，巴基斯坦军方可在沙特境内提供军事技术支持或地面与空中支援，但没有直接在境外参与作战行动的计划。伊朗方面否认控制胡塞武装。</p>
+              <p><strong>核问题这一条线</strong></p>
+              <p>IAEA的决议由英、法、德、美共同提交，要求总干事向安理会与联合国大会报告伊朗问题，起因是伊朗在涉及未申报地点铀痕迹的长期调查中未予配合。自2025年6月以色列与美国对伊朗核设施发动打击后，IAEA一直被拒绝进入关键设施。多家报道指出，由于俄中拥有否决权，该决议在制裁层面难有实际效果。</p>
+              <p><strong>价格这一条线</strong></p>
+              <p>布伦特原油9月9日结算价101.21美元、WTI 96.05美元，均为5月22日以来最高。9月10日盘中报价各家差异明显，从101.52美元到105.20美元不等。渣打银行能源研究主管艾米莉·阿什福德将走势描述为「逐步走高，其间因消息面出现急涨急跌」。</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：IAEA公布了表决结果；油价有交易所结算数据；胡塞武装夺取摩卡一事有也门军方消息人士、三名政府方面消息人士与现场目击者三条独立线索。不可核验的是：丕林岛的实际控制状态、双方伤亡数字的独立核实（500余人死亡为法新社统计口径）、以及《麦加联合防御协定》在何种具体条件下会被启动——三国均未公布协定文本。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Two Straits Tighten at Once: From Hormuz to Bab el-Mandeb in a Week</h3>
+            <div class="ft-meta"><span class="src">Sources: Euronews (AFP) · Reuters · France 24 (AFP) · Arab News · The Media Line · Rigzone · CNBC · South China Morning Post</span></div>
+            <div class="ft-desc">
+              <p><strong>Timeline: September 8 to September 10</strong></p>
+              <p>On September 8, US Central Command said it destroyed five crude carriers linked to Iran's Islamic Revolutionary Guard Corps. The same day, the Houthis struck an air base at Khamis Mushait in Saudi Arabia and oil infrastructure in nearby cities, wounding 73 people in one of the largest attacks on the kingdom. On September 9, the IAEA board referred Iran to the UN Security Council by 23 votes to three with eight abstentions; Brent settled at $101.21 a barrel, its highest since May 22; and Pakistan relayed a Saudi warning to Iran. On September 10, the Houthis took Mocha and Zuqar Island and pushed toward Bab el-Mandeb, and crude extended its gains.</p>
+              <p><strong>The scale of the two chokepoints</strong></p>
+              <p>Bab el-Mandeb links Asia to Europe through the Red Sea and the Suez Canal. According to Euronews, Bab el-Mandeb and the Strait of Hormuz together carry a quarter of daily petroleum shipments and close to a third of global maritime trade. Mocha lies less than 50 miles north of Bab el-Mandeb; the Houthis' next objectives are Dhubab and Perim Island, both directly on the strait, and Yemeni government forces have pulled back south to Dhubab. As this issue closed, reports that Perim Island had been landed on remained unconfirmed.</p>
+              <p><strong>Third parties drawn in: Pakistan, Saudi Arabia, Turkey</strong></p>
+              <p>In an exclusive report, Reuters said Pakistan had passed a Saudi warning to Iran to rein in the Houthis. Pakistani Defence Minister Khawaja Asif said attacks spilling into the kingdom could trigger a joint security arrangement involving Riyadh, Ankara and Islamabad, stating: “An aggression on one country will be considered an aggression on all three countries.” The arrangement rests on the Mecca Joint Defence Pact signed by the three states last month; reporting also notes that Pakistan's military can provide military and technical support, or ground and air support, inside Saudi territory, but has no plans to join combat operations abroad directly. Iran denies that it controls the Houthis.</p>
+              <p><strong>The nuclear thread</strong></p>
+              <p>The IAEA resolution, submitted by Britain, France, Germany and the United States, requires the director general to report Iran to the Security Council and the General Assembly. It follows Iran's failure to cooperate with a long-running investigation into uranium traces at undeclared sites. The agency has been denied access to key facilities since Israeli and US strikes on Iranian nuclear sites in June 2025. Multiple outlets note that Russian and Chinese vetoes make sanctions unlikely to follow.</p>
+              <p><strong>The price thread</strong></p>
+              <p>Brent settled at $101.21 and WTI at $96.05 on September 9, both the highest since May 22. Quoted intraday levels for September 10 differ markedly between outlets, ranging from $101.52 to $105.20. Emily Ashford, head of energy research at Standard Chartered, described the move as prices “gradually grinding higher, punctuated by sharp up and downside moves on headlines.”</p>
+              <p><strong>What can and cannot be verified</strong></p>
+              <p>Verifiable: the IAEA published its vote; oil prices rest on exchange settlement data; the capture of Mocha is supported by three independent strands — a Yemeni military source, three government sources and eyewitnesses on the ground. Not verifiable: who actually controls Perim Island; independent confirmation of casualty figures (the toll of more than 500 is an AFP tally); and the precise conditions under which the Mecca Joint Defence Pact would be activated, as none of the three signatories has published the text.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">以色列空袭加沙北部拜特拉希亚，一家四口遇难，含8岁与12岁两名女童</h4>
+            <div class="ni-meta"><span class="src">AP News · Reuters · Haaretz · Cyprus Mail</span> · 2026-09-10</div>
+            <p class="ni-desc">9月10日，以色列空袭击中加沙地带北部一处住宅，一名男子、其妻子与两个女儿遇难。据加沙地带卫生部门与希法医院（Al-Shifa Hospital），四名遇难者为穆阿明·艾哈迈德（Moamen Ahmad）、其妻哈宁·萨利赫（Haneen Saleh），以及12岁的拉娜（Lana）与8岁的巴娜（Bana）。报道称以军过去两日加强了对房屋的轰炸，袭击范围包括拜特拉希亚（Beit Lahiya）与贾巴利亚难民营；以方表示其部队打击了加沙三个区域内的哈马斯武器存放点。背景方面，2025年10月由美国斡旋的停火协议中止了大规模战斗，但未终止以军空袭，通往永久和平的步骤进展有限。据加沙地带卫生官员，停火生效以来已有超过1,300名巴勒斯坦人死亡，其中多数为平民；以色列军方称有四名以军士兵死亡。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Israeli Strike on Beit Lahiya in Northern Gaza Kills a Family of Four, Including Girls Aged 8 and 12</h4>
+            <div class="ni-meta"><span class="src">AP News · Reuters · Haaretz · Cyprus Mail</span> · 2026-09-10</div>
+            <p class="ni-desc">An Israeli airstrike hit a house in the northern Gaza Strip on September 10, killing a man, his wife and their two daughters. According to Gaza health officials and Al-Shifa Hospital, the four were Moamen Ahmad, his wife Haneen Saleh, and their daughters Lana, 12, and Bana, 8. Reporting said the Israeli military had escalated its bombardment of houses over the previous two days, with strikes hitting Beit Lahiya and the Jabalia refugee camp; Israel said its forces struck Hamas weapons storage sites in three areas of Gaza. On background, a US-brokered ceasefire in October 2025 halted large-scale fighting but has not ended Israeli strikes, and there has been little progress toward permanent peace. Gaza health officials say more than 1,300 Palestinians, mostly civilians, have been killed since the ceasefire took effect; the Israeli military says four of its soldiers have been killed.</p>
+          </div>
+          <a class="ni-link" href="https://www.local10.com/news/world/2026/09/10/israeli-strike-in-gaza-kills-4-including-children-and-other-mideast-developments/" target="_blank" rel="noopener">AP News →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">内塔尼亚胡访问以军控制下的叙利亚黑门山地区，叙利亚与卡塔尔提出谴责</h4>
+            <div class="ni-meta"><span class="src">SANA · Enab Baladi · Doha News · Middle East Monitor</span> · 2026-09-09</div>
+            <p class="ni-desc">以色列总理本雅明·内塔尼亚胡（Benjamin Netanyahu）9月9日进入叙利亚境内的黑门山（Mount Hermon）地区，随行者包括国防部长伊斯拉埃尔·卡茨（Israel Katz）与以军副总参谋长塔米尔·亚代（Tamir Yadai）少将。内塔尼亚胡在访问中称：「从黑门山峰顶到雅尔穆克河，整个区域都在我们控制之下。我们不会允许任何恐怖武装在我们边境立足。」叙利亚外交部称此行为「挑衅之举，是对叙利亚主权、领土完整与国际法的公然侵犯」，并呼吁联合国、国际组织与有影响力的国家承担责任。卡塔尔称此行是「对兄弟国家阿拉伯叙利亚共和国主权的公然侵犯、对国际法的明目张胆的违反，以及对地区安全的严重威胁」，并要求国际社会紧急行动，促使以色列遵守国际决议，特别是1974年《脱离接触协议》。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Netanyahu Visits Israeli-Held Mount Hermon Inside Syria; Damascus and Doha Condemn the Trip</h4>
+            <div class="ni-meta"><span class="src">SANA · Enab Baladi · Doha News · Middle East Monitor</span> · 2026-09-09</div>
+            <p class="ni-desc">Israeli Prime Minister Benjamin Netanyahu entered Syrian territory in the Mount Hermon area on September 9, accompanied by Defence Minister Israel Katz and the IDF's deputy chief of staff, Major-General Tamir Yadai. During the visit Netanyahu said: “We control the entire area from the summit of Mount Hermon to the Yarmouk. We will not allow any terrorist army to establish itself on our border.” Syria's Foreign Ministry called the visit a “provocative step and a flagrant violation of Syria's sovereignty, territorial integrity, and international law,” and called on the United Nations, international organisations and influential states to assume their responsibilities. Qatar called it “a blatant violation of the sovereignty of the fraternal Syrian Arab Republic, a flagrant breach of international law, and a serious threat to regional security,” and urged urgent international action to compel Israel to comply with international resolutions, particularly the 1974 Disengagement of Forces Agreement.</p>
+          </div>
+          <a class="ni-link" href="https://www.middleeastmonitor.com/20260910-syria-condemns-netanyahus-illegal-entry-into-its-territory-on-mount-hermon/" target="_blank" rel="noopener">Middle East Monitor →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">俄军无人机袭击乌克兰苏梅一处购物中心，2人死亡、约20人受伤</h4>
+            <div class="ni-meta"><span class="src">Kyiv Independent · Reuters · Kyiv Post · Ukrinform</span> · 2026-09-09</div>
+            <p class="ni-desc">9月9日晚约20时，一架俄军无人机击中乌克兰苏梅市中心的Manufaktura购物中心，造成一名21岁男性与一名女性死亡，至少20人受伤，其中4人伤情严重。袭击发生时正值居民下班与购物返家时段。苏梅市军事管理局局长谢尔希·克里沃舍延科（Serhii Kryvosheienko）称，俄方选择在大量平民聚集于该区域时发动打击。伤亡数字在报道初期存在出入：部分信源最初通报3人死亡、14人受伤，乌克兰国家通讯社Ukrinform即采用该口径；苏梅州州长奥列赫·赫里霍罗夫（Oleh Hryhorov）此后将死亡人数更正为2人。基辅独立报另称受伤者中包括3名儿童。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Russian Drone Hits a Shopping Centre in Sumy, Ukraine, Killing Two and Wounding About 20</h4>
+            <div class="ni-meta"><span class="src">Kyiv Independent · Reuters · Kyiv Post · Ukrinform</span> · 2026-09-09</div>
+            <p class="ni-desc">A Russian drone struck the Manufaktura shopping centre in central Sumy at around 8 p.m. on September 9, killing a 21-year-old man and a woman and wounding at least 20 people, four of them seriously. The strike came as residents were returning home from work and shopping. Serhii Kryvosheienko, head of the Sumy City Military Administration, said Russia struck at a time when large numbers of civilians were in the area. Casualty figures diverged in early reporting: some sources initially reported three killed and 14 wounded, the figure carried by the Ukrainian state agency Ukrinform, before regional governor Oleh Hryhorov corrected the death toll to two. The Kyiv Independent additionally reported that three children were among the wounded.</p>
+          </div>
+          <a class="ni-link" href="https://kyivindependent.com/deadly-russian-drone-strike-targets-sumy-shopping-center-killing-2-injuring-20-including-3-children/" target="_blank" rel="noopener">Kyiv Independent →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">巴基斯坦向伊朗转达沙特警告：胡塞袭击若外溢，可能触发《麦加联合防御协定》</h4>
+            <div class="ni-meta"><span class="src">Reuters · Arab News · The Media Line · Türkiye Today</span> · 2026-09-09</div>
+            <p class="ni-desc">据路透社独家报道，巴基斯坦已向伊朗转达沙特方面的警告，要求约束其也门盟友胡塞武装，以避免危机进一步升级。巴基斯坦国防部长赫瓦贾·阿西夫（Khawaja Asif）称，袭击若外溢至沙特境内，可能触发利雅得、安卡拉与伊斯兰堡三方的联合安全安排，并表示：「对一国的侵略将被视为对三国的侵略。」该安排依据三国上月签署的《麦加联合防御协定》（Mecca Joint Defence Pact）。触发事由是胡塞武装9月8日袭击沙特哈米斯穆谢特（Khamis Mushait）一处空军基地及邻近城市的石油设施，造成73人受伤，为对沙特规模最大的袭击之一。报道同时指出，巴基斯坦军方可在沙特境内提供军事与技术支持、或地面与空中支援，但没有直接在境外参与作战行动的计划。伊朗方面否认控制胡塞武装。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Pakistan Passes a Saudi Warning to Iran: Houthi Attacks Spilling Over Could Trigger the Mecca Joint Defence Pact</h4>
+            <div class="ni-meta"><span class="src">Reuters · Arab News · The Media Line · Türkiye Today</span> · 2026-09-09</div>
+            <p class="ni-desc">In an exclusive report, Reuters said Pakistan had delivered a Saudi warning to Iran to rein in its Houthi allies in Yemen, in a coordinated effort to keep the crisis from spiralling. Pakistani Defence Minister Khawaja Asif said attacks spilling into the kingdom could trigger a joint security arrangement involving Riyadh, Ankara and Islamabad, saying: “An aggression on one country will be considered an aggression on all three countries.” The arrangement rests on the Mecca Joint Defence Pact signed by the three states last month. The trigger was a Houthi attack on September 8 against an air base at Khamis Mushait and oil infrastructure in nearby Saudi cities, which wounded 73 people in one of the largest attacks on the kingdom. Reporting also notes that Pakistan's military can provide military and technical support, or ground and air support, within Saudi territory, but has no plans to join combat operations abroad directly. Iran denies controlling the Houthis.</p>
+          </div>
+          <a class="ni-link" href="https://www.arabnews.pk/pakistan/pakistan-warns-iran-to-rein-in-houthis-as-riyadh-strikes-back-3000825" target="_blank" rel="noopener">Arab News →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://media.datacenterdynamics.com/media/images/images_5_Bk1GUcS.2e16d0ba.fill-1200x630.jpg" alt="数据中心机房" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label tec">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">AI 基建的两张账单：一张给电，一张给芯片</h3>
+            <div class="ft-meta"><span class="src">综合信源：Reuters · Bloomberg · Business Recorder · CNBC · TechNode · DigiTimes · Datacenterdynamics · South China Morning Post · US DOE</span></div>
+            <div class="ft-desc">
+              <p><strong>电这一张：从爱奥瓦到芬兰</strong></p>
+              <p>9月8日，美国能源部宣布对内克斯特拉能源（NextEra Energy）最高19亿美元的贷款完成财务交割，用于重启爱奥瓦州615兆瓦的杜安·阿诺德核电站；该电站的电力由谷歌以25年购电协议买断，供其AI数据中心，目标2029年第一季度商业运行。两天后的9月10日，谷歌宣布未来两年在芬兰投资至少130亿欧元（约151亿美元），在芬兰北部新建三座数据中心，并与富腾（Fortum Oyj）签下长期协议，购入洛维萨核电站最多50%产能，使其运行至2050年运营许可到期。协议年限各家口径不一：彭博社称20年，商业记录报与《科技时报》称22年。谷歌总裁兼首席投资官露丝·波拉特（Ruth Porat）将这种模式称为「BYOP——自带电力」，并称这是谷歌在美国境外的首笔核能交易。彭博社称该协议为欧洲首例，将撬动约10亿欧元投资。</p>
+              <p><strong>为什么是核电，为什么是北欧</strong></p>
+              <p>Alphabet已将全球年度投资规模上调至1,950亿至2,050亿美元。报道指出，北欧对数据中心的吸引力在于两点：冬季气温可低至零下10摄氏度以下，有利于散热；电网可接入可再生能源。微软与字节跳动此前已在该区域布局。就洛维萨这一具体案例而言，谷歌的长期购电承诺同时解决了运营方的一个问题——维持该电站长期运行所需的资本投入。</p>
+              <p><strong>芯片这一张：西侧与东侧</strong></p>
+              <p>西侧，高通9月8日宣布与AWS跨多代定制芯片合作，重点为推理工作负载，并向亚马逊发行可购买2,500万股、行权价每股161.26美元的认股权证，归属条件挂钩至多600亿美元的采购规模。东侧，京东云9月9日宣布将建设一座10万卡规模的GPU集群，全部采用摩尔线程（Moore Threads）芯片，用于大模型训练、推理与具身智能、机器人负载；这是中国主要云厂商首次在该量级上部署国产GPU，且建立在双方已运营的一座万卡集群基础上，为十倍扩容。摩尔线程由前英伟达高管张建中于2020年创办，2025年12月在上海证券交易所科创板上市。</p>
+              <p><strong>政策给出的数字</strong></p>
+              <p>中国工业和信息化部9月7日发布的「十五五」规划提出，到2030年智能算力达到9,800 EFLOPS，2026至2030年信息基础设施累计投资3.8万亿元人民币（约5,320亿美元）。作为对照，2025年该指标为1,590 EFLOPS；截至2026年6月底，中国FP16精度下的智能算力为2,185 EFLOPS，同比增长177%。规划要求「有序部署」万卡及10万卡以上的智算集群，并要求加大对国产算力芯片的适配力度。</p>
+              <p><strong>尚待观察的部分</strong></p>
+              <p>三件事目前没有独立第三方数据支撑：摩尔线程就10万卡集群给出的扩展效率指标（《科技时报》9月10日指出该指标未经独立审计）、洛维萨协议的具体电价条款（未披露）、以及各国规划中算力目标与实际交付之间的差距。谷歌与富腾均未披露购电价格。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Two Bills for AI Infrastructure: One for Power, One for Silicon</h3>
+            <div class="ft-meta"><span class="src">Sources: Reuters · Bloomberg · Business Recorder · CNBC · TechNode · DigiTimes · Datacenterdynamics · South China Morning Post · US DOE</span></div>
+            <div class="ft-desc">
+              <p><strong>The power bill: from Iowa to Finland</strong></p>
+              <p>On September 8, the US Department of Energy announced financial close on a loan of up to $1.9 billion to NextEra Energy to restart the 615 MW Duane Arnold nuclear plant in Iowa; Google has contracted for its output under a 25-year power purchase agreement to serve AI data centres, with commercial operation targeted for the first quarter of 2029. Two days later, on September 10, Google said it would invest at least €13 billion (about $15.1 billion) over two years in Finland, building three data centres in the north of the country, and signed a long-term agreement with Fortum Oyj to take up to 50% of the capacity of the Loviisa nuclear plant, keeping it running to the end of its operating licence in 2050. Outlets differ on the term: Bloomberg reports 20 years, while Business Recorder and Tech Times say 22. Ruth Porat, Google's president and chief investment officer, called the model “BYOP, bring your own power,” and said it was Google's first nuclear deal outside the United States. Bloomberg described it as the first agreement of its kind in Europe and said it would unlock roughly €1 billion of investment.</p>
+              <p><strong>Why nuclear, and why the Nordics</strong></p>
+              <p>Alphabet has raised its global annual investment to $195–205 billion. Reporting points to two draws for data centres in the Nordics: winter temperatures well below minus 10°C, which help with cooling, and grid access to renewable power. Microsoft and ByteDance already operate in the region. In the Loviisa case specifically, Google's long-term purchase commitment also resolves a problem for the operator — the capital needed to keep the plant running for decades.</p>
+              <p><strong>The silicon bill: west and east</strong></p>
+              <p>In the West, Qualcomm said on September 8 that it would work with AWS across multiple generations of custom silicon focused on inference workloads, issuing Amazon warrants for 25 million shares at $161.26 each, vesting against as much as $60 billion in purchases. In the East, JD Cloud announced on September 9 that it will build a 100,000-GPU cluster running entirely on Moore Threads chips for large-model training and inference and for embodied-AI and robotics workloads. It is the first deployment of domestic GPUs at that scale by a major Chinese cloud provider, and a tenfold scale-up of a 10,000-GPU cluster the two companies already operate together. Moore Threads was founded in 2020 by former Nvidia executive Zhang Jianzhong and listed on the Shanghai Stock Exchange's STAR Market in December 2025.</p>
+              <p><strong>The numbers policy has put on paper</strong></p>
+              <p>China's Ministry of Industry and Information Technology published its 15th Five-Year Plan on September 7, targeting 9,800 EFLOPS of intelligent computing capacity by 2030 and 3.8 trillion yuan (about $532 billion) in cumulative information-infrastructure investment over 2026–2030. For comparison, the 2025 figure was 1,590 EFLOPS, and China's intelligent computing capacity at FP16 precision reached 2,185 EFLOPS by the end of June 2026, up 177% year on year. The plan calls for the “orderly deployment” of clusters of 10,000 cards and of 100,000 or more, and for greater effort to adapt infrastructure to home-grown chips.</p>
+              <p><strong>What remains open</strong></p>
+              <p>Three items lack independent third-party data: the scaling-efficiency figure Moore Threads gives for the 100,000-GPU cluster, which Tech Times noted on September 10 has not been independently audited; the pricing terms of the Loviisa agreement, which were not disclosed; and the gap between national compute targets and actual delivery. Neither Google nor Fortum disclosed the price of the power.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">OpenAI称其内部模型解出纳维-斯托克斯千禧年难题，同期出现署名与优先权争议</h4>
+            <div class="ni-meta"><span class="src">Nature · Quanta Magazine · Axios · CNN · Quartz</span> · 2026-09-08</div>
+            <p class="ni-desc">OpenAI 9月8日宣布，其一套能力显著强于GPT-6 Astra的内部模型生成了纳维-斯托克斯（Navier–Stokes）千禧年大奖难题的一个解。据报道，该系统调用至多10,000个并行智能体、运行约88小时，算力成本达数百万美元，产出一份解析证明以及一份Lean形式化验证，内容为：一团初始光滑且静止的流体可以在有限时间内发展出奇点。该结果已在Lean中通过形式化检验。争议在于优先权与署名：OpenAI的公告发布于纽约大学数学家特里斯坦·巴克马斯特（Tristan Buckmaster）宣布相关成果的约12小时之后——巴克马斯特与Anthropic研究员莱文特·阿尔珀格（Levent Alpöge）此前已就若干密切相关的问题工作近一年，并借助了包括OpenAI在内的多种AI模型。巴克马斯特表示，他尚未看到OpenAI的证明，不清楚其模型做了什么，也不知道自己的数据是否被使用，并明确表示「不指控任何人」，同时承认对其在研工作可能被使用一事存有疑虑。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">OpenAI Says an Internal Model Solved the Navier–Stokes Millennium Prize Problem, Amid a Dispute Over Credit and Priority</h4>
+            <div class="ni-meta"><span class="src">Nature · Quanta Magazine · Axios · CNN · Quartz</span> · 2026-09-08</div>
+            <p class="ni-desc">OpenAI announced on September 8 that an internal model significantly more capable than GPT-6 Astra had produced a solution to the Navier–Stokes Millennium Prize Problem. According to reports, the system ran up to 10,000 agents in parallel for about 88 hours, at a compute cost running into the millions of dollars, and produced an analytical proof together with a Lean formalisation showing that an initially smooth fluid at rest can develop a singularity in finite time. The result has been formally checked in Lean. The dispute concerns priority and credit: OpenAI's announcement came roughly 12 hours after New York University mathematician Tristan Buckmaster announced related results. Buckmaster and Anthropic researcher Levent Alpöge had worked for nearly a year on several closely related problems with the help of various AI models, including OpenAI's. Buckmaster said he had not seen OpenAI's proof, did not know what its model had done, and did not know whether his data had been used, stating explicitly that he was “not accusing anyone of anything” while acknowledging concern that his work in progress could have been used.</p>
+          </div>
+          <a class="ni-link" href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" target="_blank" rel="noopener">Quanta Magazine →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">京东云宣布建设10万卡GPU集群，全部采用摩尔线程国产芯片</h4>
+            <div class="ni-meta"><span class="src">TechNode · DigiTimes · Datacenterdynamics · Global Times</span> · 2026-09-09</div>
+            <p class="ni-desc">京东旗下云计算业务京东云9月9日宣布，将建设一座10万卡规模的GPU集群，全部由北京芯片企业摩尔线程（Moore Threads）供货。这是中国主要云服务商首次在该量级上部署国产GPU。该集群围绕摩尔线程的全功能GPU构建，用于大模型训练、推理，以及具身智能与机器人相关负载。此次合作建立在双方已共同运营的一座万卡集群基础之上，规模为十倍扩容，意味着相关基础设施至少已在有限的生产环境中经过压力测试。摩尔线程由前英伟达高管张建中于2020年创办，2025年12月在上海证券交易所科创板上市。需要说明的是，《科技时报》9月10日报道指出，摩尔线程就10万卡规模给出的扩展效率指标尚无独立审计方予以验证。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">JD Cloud Plans a 100,000-GPU Cluster Built Entirely on Domestic Moore Threads Chips</h4>
+            <div class="ni-meta"><span class="src">TechNode · DigiTimes · Datacenterdynamics · Global Times</span> · 2026-09-09</div>
+            <p class="ni-desc">JD Cloud, the cloud computing arm of JD.com, announced on September 9 that it will build a 100,000-GPU cluster supplied entirely by the Beijing chipmaker Moore Threads. It is the first deployment of domestic GPUs at that scale by a major Chinese cloud provider. The cluster is built around Moore Threads' full-featured GPUs and is intended for large-model training and inference and for embodied-AI and robotics workloads. The partnership builds on a 10,000-GPU cluster the two companies already operate together, making it a tenfold scale-up of infrastructure that has been stress-tested in at least limited production. Moore Threads was founded in 2020 by former Nvidia executive Zhang Jianzhong and listed on the Shanghai Stock Exchange's STAR Market in December 2025. Tech Times reported on September 10 that the scaling-efficiency figure Moore Threads gives for the 100,000-GPU scale has not been verified by any independent auditor.</p>
+          </div>
+          <a class="ni-link" href="https://technode.com/2026/09/09/jd-cloud-moore-threads-100000-gpu-computing-cluster/" target="_blank" rel="noopener">TechNode →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">中国工信部「十五五」规划：2030年智能算力目标9,800 EFLOPS，五年信息基础设施投资3.8万亿元</h4>
+            <div class="ni-meta"><span class="src">South China Morning Post · DigiTimes · Unite.AI · Pandaily</span> · 2026-09-07</div>
+            <p class="ni-desc">中国工业和信息化部9月7日发布「十五五」规划，提出到2030年智能算力达到9,800 EFLOPS，并计划在2026至2030年间累计投入3.8万亿元人民币（约5,320亿美元）用于信息基础设施建设。目标表中，2030年的9,800 EFLOPS对应2025年的1,590 EFLOPS；另据报道，截至2026年6月底，中国在FP16精度下的智能算力已达2,185 EFLOPS，同比增长177%。规划要求「有序部署」万卡级以及10万卡及以上规模的智算集群，并配套建设面向不同应用场景的推理算力设施，同时要求加大基础设施对国产算力芯片的适配力度。规划另在通信政策部分要求加强高端光电芯片的研发。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">China's MIIT Five-Year Plan Targets 9,800 EFLOPS of Intelligent Compute by 2030 and 3.8 Trillion Yuan in Infrastructure Investment</h4>
+            <div class="ni-meta"><span class="src">South China Morning Post · DigiTimes · Unite.AI · Pandaily</span> · 2026-09-07</div>
+            <p class="ni-desc">China's Ministry of Industry and Information Technology published its 15th Five-Year Plan on September 7, setting a target of 9,800 EFLOPS of intelligent computing capacity by 2030 and calling for 3.8 trillion yuan (about $532 billion) in cumulative information-infrastructure investment over 2026–2030. In the plan's target table, the 2030 goal of 9,800 EFLOPS is set against 1,590 EFLOPS recorded for 2025; separate reporting puts China's intelligent computing capacity at FP16 precision at 2,185 EFLOPS by the end of June 2026, up 177% year on year. The plan calls for the “orderly deployment” of intelligent computing clusters of 10,000 graphics cards and of 100,000 or more, alongside inference computing facilities tailored to different applications, and for greater effort to adapt infrastructure to home-grown computing chips. In its communications policy section it also calls for strengthened research and development of high-end optoelectronic chips.</p>
+          </div>
+          <a class="ni-link" href="https://www.scmp.com/tech/policy/article/3366733/china-targets-fourfold-boost-ai-computing-capacity-2030-major-tech-push" target="_blank" rel="noopener">South China Morning Post →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://cdn.unenvironment.org/styles/article_billboard_image/s3/2026-09/20260625_UNEPDecade%20on%20Ecosystem%20Restoration_Brazilian%20Cerrado_Todd%20Brown_141-1.jpg?h=5bfc47c8&amp;itok=nUlMEZD8" alt="生态系统恢复" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label env">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">1.5摄氏度：8月的观测数据与联合国的「过冲」报告，同一个月里的两份文件</h3>
+            <div class="ft-meta"><span class="src">综合信源：Copernicus C3S · UNEP · AFP (phys.org) · Business Standard · The National · Engineering &amp; Technology · Euronews · UN News</span></div>
+            <div class="ft-desc">
+              <p><strong>两份文件，相隔八天</strong></p>
+              <p>9月2日，联合国环境规划署（UNEP）发布题为《限制过冲》（Limiting Overshoot）的报告，结论是：目前已不存在可将全球升温控制在1.5摄氏度以下的可信科学路径。9月10日，欧盟哥白尼气候变化服务（C3S）发布8月月度公报：8月全球地表平均气温较工业化前基准高1.65摄氏度，为2025年11月以来首个越过1.5摄氏度线的月份。前者是关于未来路径的评估，后者是关于单月的观测——两者是不同性质的陈述，本报分开列出。</p>
+              <p><strong>观测端：8月的具体数字</strong></p>
+              <p>2026年8月全球地表平均气温16.96摄氏度，较1991至2020年同期均值高0.85摄氏度，与2023年7月并列为ERA5数据集中最热月份。海洋方面，60°S至60°N极地外海域月平均海表温度21.07摄氏度，为8月最高值，并与2024年3月并列为所有月份最高；单日最高值21.11摄氏度。破纪录海温出现在热带太平洋、大西洋沿岸与地中海西部。季节尺度上，6月至8月为全球并列最热夏季（与2024年持平）；西欧为有记录以来最热夏季，超过2003年；欧洲陆地整体为第三热。北极海冰8月范围为第12低，南极为第4低。</p>
+              <p><strong>评估端：UNEP说了什么</strong></p>
+              <p>UNEP的结论是，即便在最好的情景下，全球升温峰值也将达到约1.8摄氏度。报告提出的路径被称为「过冲—达峰—回落」（overshoot, peak, and decline），即在承认越过1.5摄氏度已不可避免的前提下，尽可能压低过冲的幅度与持续时间，并争取尽早回到该阈值以下。报告强调，要回到阈值以下，既需要温室气体排放的快速下降，也需要对已存在于大气中的二氧化碳进行大规模移除。</p>
+              <p><strong>两个概念需要区分</strong></p>
+              <p>《巴黎协定》的1.5摄氏度目标指的是长期平均温升，而非单一月份或单一年份的数值。C3S报告的是2026年8月这一个月的观测值；UNEP评估的是长期路径。8月越过1.5摄氏度不等于《巴黎协定》目标已在协定定义上被突破，但C3S指出这是自2025年11月以来的首次回归。C3S将8月海温偏高归因于化石燃料燃烧带来的全球增温，以及赤道太平洋在强厄尔尼诺条件下海表温度的快速上升。</p>
+              <p><strong>本报不做的判断</strong></p>
+              <p>报告与观测均未给出具体年份的越线时点，本报亦不对此作推测。UNEP所述「回落」所依赖的大规模碳移除，其可行规模与成本在报告中未给出确定结论。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">1.5°C: August's Observations and the UN's Overshoot Report, Two Documents in One Month</h3>
+            <div class="ft-meta"><span class="src">Sources: Copernicus C3S · UNEP · AFP (phys.org) · Business Standard · The National · Engineering &amp; Technology · Euronews · UN News</span></div>
+            <div class="ft-desc">
+              <p><strong>Two documents, eight days apart</strong></p>
+              <p>On September 2, the UN Environment Programme released a report titled Limiting Overshoot, concluding that there are no longer any plausible scientific pathways that keep global warming below 1.5°C. On September 10, the EU's Copernicus Climate Change Service published its August bulletin: the global average surface air temperature for the month was 1.65°C above the pre-industrial baseline, the first month above the 1.5°C line since November 2025. The first is an assessment of future pathways; the second is an observation of a single month. They are different kinds of statement, and are listed separately here.</p>
+              <p><strong>The observations: August in figures</strong></p>
+              <p>August 2026 averaged 16.96°C globally, 0.85°C above the 1991–2020 average for the month, tying July 2023 as the warmest month in the ERA5 dataset. At sea, the monthly average sea surface temperature over the extra-polar ocean between 60°S and 60°N was 21.07°C, the highest for any August and the joint highest for any month, tied with March 2024; the highest single-day value was 21.11°C. Record sea surface temperatures occurred in the tropical Pacific, along the Atlantic coast and in the western Mediterranean. Seasonally, June to August was the joint warmest summer globally, level with 2024; Western Europe had its warmest summer on record, surpassing 2003; and Europe as a landmass had its third warmest. Arctic sea ice extent was the 12th lowest for August, Antarctic the fourth lowest.</p>
+              <p><strong>The assessment: what UNEP said</strong></p>
+              <p>UNEP concluded that even under the best case, global temperatures would peak at around 1.8°C. The pathway it sets out is called “overshoot, peak, and decline”: accepting that crossing 1.5°C is now unavoidable, then minimising the magnitude and duration of the overshoot and returning below the threshold as soon as possible. The report stresses that returning below it requires both rapid reductions in greenhouse gas emissions and large-scale removal of carbon dioxide already in the atmosphere.</p>
+              <p><strong>Two concepts that need separating</strong></p>
+              <p>The 1.5°C goal in the Paris Agreement refers to long-term average warming, not the value for a single month or year. C3S reports an observation for the month of August 2026; UNEP assesses long-term pathways. A single month above 1.5°C does not mean the Paris target has been breached as the agreement defines it, though C3S notes it is the first such return since November 2025. C3S attributes August's elevated ocean temperatures to global heating from burning fossil fuels and to rapidly rising sea surface temperatures in the equatorial Pacific under strong El Niño conditions.</p>
+              <p><strong>What this issue does not conclude</strong></p>
+              <p>Neither the report nor the observations name a specific year for crossing the threshold, and this issue does not speculate on one. The feasible scale and cost of the large-scale carbon removal on which UNEP's “decline” depends are not settled in the report.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">联合国环境规划署报告：已无可信路径将升温控制在1.5摄氏度以下，最好情景峰值约1.8摄氏度</h4>
+            <div class="ni-meta"><span class="src">UNEP · AFP · Business Standard · The National</span> · 2026-09-02</div>
+            <p class="ni-desc">联合国环境规划署（UNEP）9月2日发布《限制过冲》（Limiting Overshoot）报告，结论是目前已不存在可将全球升温控制在1.5摄氏度以下的可信科学路径，世界将在未来数年内越过《巴黎协定》所设定的较工业化前水平升温1.5摄氏度的阈值。报告称，即便在最好的情景下，全球升温峰值也将达到约1.8摄氏度。报告提出的应对路径为「过冲—达峰—回落」（overshoot, peak, and decline），即尽可能压低过冲的幅度与持续时间，并争取尽早回到阈值以下；报告强调，回到阈值以下既需要温室气体排放快速下降，也需要对已存在于大气中的二氧化碳实施大规模移除。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">UNEP Report: No Plausible Pathway Left to Hold Warming Below 1.5°C; Best Case Peaks Near 1.8°C</h4>
+            <div class="ni-meta"><span class="src">UNEP · AFP · Business Standard · The National</span> · 2026-09-02</div>
+            <p class="ni-desc">The UN Environment Programme published a report titled Limiting Overshoot on September 2, concluding that there are no longer plausible scientific pathways to keep global warming below 1.5°C and that the world will cross the Paris Agreement's threshold of 1.5°C above pre-industrial levels within the next few years. The report says that even under the best case, global temperatures would peak at around 1.8°C. The pathway it proposes is “overshoot, peak, and decline” — minimising the magnitude and duration of the overshoot and returning below the threshold as soon as possible. It stresses that returning below the threshold requires both rapid cuts in greenhouse gas emissions and large-scale removal of carbon dioxide already in the atmosphere.</p>
+          </div>
+          <a class="ni-link" href="https://www.unep.org/news-and-stories/press-release/unep-world-set-cross-15degc-global-warming-can-still-limit-adapt-and" target="_blank" rel="noopener">UNEP →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">台风「苏迪罗」引发中国东南沿海强降雨，福建近60万人转移</h4>
+            <div class="ni-meta"><span class="src">Reuters · Global Times · Dawn · Azernews</span> · 2026-09-04</div>
+            <p class="ni-desc">2026年第18号台风「苏迪罗」（Saudel）9月3日在福建漳浦县登陆，为其在中国的第三次登陆；此前已于8月28日两次登陆浙江。福建近60万名居民从沿海及其他高风险区域转移；江西53个县另有约12.8万人受灾。强降雨在城乡多地引发洪涝，车辆被淹，一栋三层砖砌建筑倒塌；福建福鼎市消防人员在齐腰深的洪水中转移老人。莆田市木兰溪穿城而过，洪水漫过主要公路，桥梁结构受损，居民楼被淹。中国自然资源部就次生灾害发出提示，称近期降雨已使部分河流超过警戒水位、低洼社区被淹，滑坡风险较高。台风此后已被降格，但洪涝与内涝风险仍在持续。同期，菲律宾也持续受季风降雨影响。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Typhoon Saudel Brings Torrential Rain to China's Southeast Coast; Nearly 600,000 Evacuated in Fujian</h4>
+            <div class="ni-meta"><span class="src">Reuters · Global Times · Dawn · Azernews</span> · 2026-09-04</div>
+            <p class="ni-desc">Typhoon Saudel, the 18th typhoon of 2026, made landfall in Zhangpu County, Fujian province, on September 3, its third landfall in China after two in neighbouring Zhejiang on August 28. Nearly 600,000 residents were evacuated from coastal and other high-risk areas of Fujian, and about 128,000 more people across 53 counties in Jiangxi were affected. The rainfall triggered flooding in urban and rural areas, submerging vehicles and collapsing a three-storey brick building; firefighters in Fuding, Fujian, waded through waist-deep water to carry elderly residents to safety. In Putian, where the Mulan River runs through the city centre, floodwaters spilled over main highways, damaged bridge structures and inundated residential buildings. China's Ministry of Natural Resources warned of a high risk of secondary disasters such as landslides, saying recent rains had already pushed rivers above warning levels and flooded low-lying communities. The typhoon has since been downgraded, but flooding and waterlogging risks persist. Over the same period, the Philippines continued to be affected by monsoon rains.</p>
+          </div>
+          <a class="ni-link" href="https://www.globaltimes.cn/page/202609/1369831.shtml" target="_blank" rel="noopener">Global Times →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">哥伦比亚7.4级地震经济损失估为95.7亿美元，死亡人数各方口径为289至314人</h4>
+            <div class="ni-meta"><span class="src">CNBC · Bloomberg · CNN · Philippine News Agency</span> · 2026-09-08</div>
+            <p class="ni-desc">8月10日清晨袭击哥伦比亚西部的7.4级地震为该国数十年来最强地震。据哥伦比亚总统阿韦拉多·德拉埃斯普列利亚（Abelardo de la Espriella）8月18日给出的初步估计，此次地震造成95.7亿美元经济损失。伤亡数字随统计时点变动且各方口径不一：一份统计为289人死亡、4,187人受伤、143人失踪，菲律宾通讯社此后报道的死亡人数为314人；地震当日CNN报道的死亡人数为132人，8月10日CNBC报道超过250人，彭博社8月12日报道超过200人。受灾最重的是哥伦比亚的「咖啡三角」产区——一片多山、植被茂密且具有文化重要性的区域，对该国经济有支撑作用，当地大量建筑部分或完全损毁。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Colombia's Magnitude 7.4 Earthquake Put at $9.57 Billion in Economic Losses; Death Tolls Range from 289 to 314</h4>
+            <div class="ni-meta"><span class="src">CNBC · Bloomberg · CNN · Philippine News Agency</span> · 2026-09-08</div>
+            <p class="ni-desc">The magnitude 7.4 earthquake that struck western Colombia early on August 10 was the most powerful to hit the country in decades. According to a preliminary estimate given by President Abelardo de la Espriella on August 18, it caused $9.57 billion in economic losses. Casualty figures have shifted with the reporting date and differ between sources: one tally gives 289 dead, 4,187 injured and 143 missing, while the Philippine News Agency later reported 314 dead. On the day of the quake CNN reported 132 dead; CNBC reported more than 250 on August 10 and Bloomberg more than 200 on August 12. The worst damage was in Colombia's coffee axis, a mountainous, densely vegetated and culturally significant region that supports the national economy, where many buildings were partly or completely destroyed.</p>
+          </div>
+          <a class="ni-link" href="https://www.cnbc.com/2026/09/08/natural-disasters-month-review-earthquake-volcano-flood.html" target="_blank" rel="noopener">CNBC →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">哥白尼公报同时录得海冰与夏季数据：南极海冰8月范围为第4低，西欧夏季创纪录</h4>
+            <div class="ni-meta"><span class="src">Copernicus C3S · Euronews · YubaNet</span> · 2026-09-10</div>
+            <p class="ni-desc">除月度气温外，哥白尼气候变化服务9月10日的公报还给出了海冰与季节尺度数据。海冰方面，2026年8月北极海冰范围在有记录以来的8月中排第12低，南极海冰范围排第4低。季节方面，2026年6月至8月为全球有记录以来并列最热的三个月，与2024年持平；西欧因热浪持续时间长且到来偏早，录得有记录以来最热的夏季，超过此前由2003年保持的纪录；欧洲陆地整体则为第三热，位列2024年与2022年之后。海洋方面，8月极地外海域（60°S至60°N）月平均海表温度21.07摄氏度，与2024年3月并列为所有月份最高纪录，单日全球极地外海表温度最高值达21.11摄氏度，破纪录区域包括热带太平洋、大西洋沿岸与地中海西部。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Copernicus Bulletin Also Logs Sea Ice and Summer Data: Antarctic Sea Ice Fourth Lowest for August, Western Europe's Hottest Summer</h4>
+            <div class="ni-meta"><span class="src">Copernicus C3S · Euronews · YubaNet</span> · 2026-09-10</div>
+            <p class="ni-desc">Alongside the monthly temperature figures, the Copernicus Climate Change Service bulletin of September 10 reported sea ice and seasonal data. On sea ice, Arctic extent in August 2026 ranked 12th lowest for the month on record and Antarctic extent ranked fourth lowest. Seasonally, June to August 2026 was the joint warmest such period on record globally, level with 2024. Western Europe, with prolonged and early heatwaves, recorded its warmest summer on record, surpassing the previous mark set in 2003, while Europe as a landmass had its third warmest, behind 2024 and 2022. At sea, the extra-polar ocean between 60°S and 60°N averaged 21.07°C in August, the joint highest monthly figure on record alongside March 2024, and the highest daily global extra-polar sea surface temperature reached 21.11°C, with record areas including the tropical Pacific, the Atlantic coast and the western Mediterranean.</p>
+          </div>
+          <a class="ni-link" href="https://climate.copernicus.eu/copernicus-august-was-worlds-joint-hottest-month-record-pushing-global-temperatures-back-above" target="_blank" rel="noopener">Copernicus →</a>
+        </div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
+  // 点图看大图（原图通常比版面里的大得多）
+  var lbx = document.createElement('div');
+  lbx.className = 'lbx';
+  lbx.innerHTML = '<img alt=""><div class="lbx-tip">点击任意处关闭 · Click anywhere to close</div>';
+  document.body.appendChild(lbx);
+  var lbxImg = lbx.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IMG' && /\b(hl-img|ft-img)\b/.test(t.className || '') && t.naturalWidth > 0) {
+      lbxImg.src = t.currentSrc || t.src;
+      lbx.classList.add('on');
+    } else if (lbx.classList.contains('on')) {
+      lbx.classList.remove('on');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lbx.classList.remove('on');
+  });
+})();
+</script>
+
+</body>
+</html>
