@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-12</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:300px;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:340px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:40%;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+
+/* 图片：完整显示，不裁切。点一下看大图 */
+.hl .hl-img,.ft .ft-img{cursor:zoom-in}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:24px;cursor:zoom-out}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+.lbx .lbx-tip{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+@media print{.lbx{display:none!important}}
+</style>
+<!-- share:start -->
+<meta name="description" content="胡塞武装夺取曼德海峡中的迈永岛，也门红海海岸线全线易手；金砖国家在新德里通过《新德里宣言》，呼吁中东「最大限度克制」并要求保护国际原子能机构保障监督下的核设施；燧原科技登陆科创板：发行价142.18元，首日收报396.16元、涨178.6%，募资61.2亿元">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.008 · 2026-09-12 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="胡塞武装夺取曼德海峡中的迈永岛，也门红海海岸线全线易手；金砖国家在新德里通过《新德里宣言》，呼吁中东「最大限度克制」并要求保护国际原子能机构保障监督下的核设施；燧原科技登陆科创板：发行价142.18元，首日收报396.16元、涨178.6%，募资61.2亿元">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-12.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3156x1775+0+164/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F57%2Fc8%2Fe9490d254a34bb6bd250e9b4d8f9%2Fap26253315512845.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.008 · 2026-09-12 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="胡塞武装夺取曼德海峡中的迈永岛，也门红海海岸线全线易手；金砖国家在新德里通过《新德里宣言》，呼吁中东「最大限度克制」并要求保护国际原子能机构保障监督下的核设施；燧原科技登陆科创板：发行价142.18元，首日收报396.16元、涨178.6%，募资61.2亿元">
+<meta name="twitter:image" content="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3156x1775+0+164/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F57%2Fc8%2Fe9490d254a34bb6bd250e9b4d8f9%2Fap26253315512845.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.008 · 2026-09-12 · 陆先生日报 | Luxiansheng Daily","description":"胡塞武装夺取曼德海峡中的迈永岛，也门红海海岸线全线易手；金砖国家在新德里通过《新德里宣言》，呼吁中东「最大限度克制」并要求保护国际原子能机构保障监督下的核设施；燧原科技登陆科创板：发行价142.18元，首日收报396.16元、涨178.6%，募资61.2亿元","datePublished":"2026-09-12","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-12.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3156x1775+0+164/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F57%2Fc8%2Fe9490d254a34bb6bd250e9b4d8f9%2Fap26253315512845.jpg"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.008</div>
+    <div>2026.09.12 SATURDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">9月12日，也门胡塞武装在此前夺取祖盖尔岛与穆哈港之后，进一步控制曼德海峡中的迈永岛（又称丕林岛），也门红海海岸线全线易手；同一天，金砖国家领导人在新德里通过《新德里宣言》，就中东局势呼吁「最大限度克制」，并要求保护国际原子能机构保障监督下的核设施。科技方面，燧原科技9月11日登陆上海证券交易所科创板，首日收盘报396.16元，较142.18元的发行价上涨178.6%，中国「国产GPU四小龙」至此全部上市。环境方面，国际鸟盟9月11日在内罗毕发布《世界鸟类状况2026》，在1,843个迁徙鸟类物种中，45%数量下降、200种面临灭绝威胁；《环境研究快报》9月10日刊发的一项研究测算，冻土、湿地、内陆水体与野火的增温反馈可能在本世纪额外带来0.2至0.4摄氏度升温。本期另有联合国安理会苏丹制裁延期、Positron完成8.75亿美元融资、佐治亚电力1,137兆瓦光伏购电协议获批等快讯。</p>
+    <p class="en-content" lang="en">On September 12, Yemen's Houthi forces took Mayun Island, also known as Perim, inside the Bab el-Mandeb Strait, after earlier seizing Zuqar Island and the port of Mokha; the whole of Yemen's Red Sea coastline has changed hands. The same day, BRICS leaders meeting in New Delhi adopted the New Delhi Declaration, calling for &ldquo;maximum restraint&rdquo; in the Middle East and for the protection of nuclear facilities under International Atomic Energy Agency safeguards. In technology, Enflame listed on the Shanghai Stock Exchange's STAR Market on September 11, closing its first day at 396.16 yuan, 178.6 per cent above its 142.18-yuan offer price, completing the listing of all four of China's so-called domestic GPU &ldquo;little dragons.&rdquo; In environment, BirdLife International released State of the World's Birds 2026 in Nairobi on September 11: of 1,843 migratory species assessed, 45 per cent are declining and 200 are threatened with extinction. A study published in Environmental Research Letters on September 10 estimates that warming-induced emissions from permafrost, wetlands, inland waters and wildfires could add 0.2 to 0.4 degrees Celsius of warming this century. Also in this issue: the UN Security Council's one-month rollover of Sudan sanctions, Positron's $875 million raise, and approval of 1,137 megawatts of solar power purchase agreements in Georgia.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl">
+        <img class="hl-img" src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3156x1775+0+164/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F57%2Fc8%2Fe9490d254a34bb6bd250e9b4d8f9%2Fap26253315512845.jpg" alt="曼德海峡" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">胡塞武装夺取曼德海峡中的迈永岛，也门红海海岸线全线易手</h2>
+            <div class="hl-meta"><span class="src">NPR</span> · Euronews · Al Jazeera · NBC News · 2026-09-12</div>
+            <p class="hl-desc">据NPR报道，也门胡塞武装于9月12日控制了曼德海峡（Bab el-Mandeb）中的迈永岛（Mayun，又称丕林岛 Perim），也门国际承认政府的一名高级军官与一名胡塞官员均确认了这一消息；据欧洲新闻台，政府军撤出后胡塞武装推进至该岛。迈永岛为面积约13平方公里的火山岛，位于曼德海峡最狭窄处，将海峡分为两条航道（半岛电视台）。本轮推进的时间顺序为：9月10日夺取红海群岛中最大的祖盖尔岛（Zuqar）并攻击穆哈；9月11日占领穆哈港（Mokha）、杜巴布镇（Dhubab）与穆拉德村（Murad）；9月12日控制迈永岛。据欧洲新闻台，本轮攻势已致超过500人死亡，联合国移民机构统计约有4.6万人流离失所，另有2,000多名政府军士兵被围困在哈尼什群岛。NPR报道称，沙特阿拉伯在一条主要输油管道遭受攻击后出于预防将其关闭。航运背景方面，据欧洲新闻台，全球约三分之一的集装箱运量经由红海，霍尔木兹海峡与曼德海峡合计承担超过25%的海运原油与成品油贸易。半岛电视台引述索福安中心（Soufan Center）高级主任卡罗琳·罗斯（Caroline Rose）表示，胡塞武装现在「具备在其意愿下关闭曼德海峡任何海上交通的实际能力」。交叉核验：NPR · Euronews · Al Jazeera · NBC News</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Houthi Forces Take Mayun Island Inside the Bab el-Mandeb; the Whole of Yemen's Red Sea Coastline Changes Hands</h2>
+            <div class="hl-meta"><span class="src">NPR</span> · Euronews · Al Jazeera · NBC News · 2026-09-12</div>
+            <p class="hl-desc">NPR reported that Yemen's Houthi forces took control on September 12 of Mayun Island, also known as Perim, inside the Bab el-Mandeb Strait; a senior military official with Yemen's internationally recognised government and a Houthi official both confirmed the capture. Euronews reported that Houthi fighters advanced onto the island after government forces withdrew. Mayun is a volcanic island of about 13 square kilometres at the narrowest part of the strait, dividing it into two shipping lanes, according to Al Jazeera. The sequence of the advance was: on September 10 the Houthis took Zuqar, the largest island of the Red Sea archipelago, and attacked Mokha; on September 11 they took the port of Mokha, the town of Dhubab and the village of Murad; and on September 12 they took Mayun. According to Euronews, the offensive has killed more than 500 people, the UN migration agency counts roughly 46,000 displaced, and more than 2,000 government troops are besieged on the Hanish islands. NPR reported that Saudi Arabia shut down a major oil pipeline as a precaution after it came under attack. On shipping, Euronews noted that nearly one-third of the world's container traffic passes through the Red Sea, and that the Strait of Hormuz and Bab el-Mandeb together account for more than 25 per cent of seaborne crude oil and petroleum product trade. Al Jazeera quoted Caroline Rose, a senior director at the Soufan Center, as saying the group now &ldquo;has the real capability to shut down any maritime traffic through Bab al-Mandeb if they want to.&rdquo; Cross-verified: NPR · Euronews · Al Jazeera · NBC News</p>
+          </div>
+          <a class="hl-link" href="https://www.npr.org/2026/09/12/g-s1-143044/yemens-houthis-capture-red-sea-island" target="_blank" rel="noopener">NPR →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://www.tribuneindia.com/sortd-service/imaginary/v22-01/jpg/large/high?url=dGhldHJpYnVuZS1zb3J0ZC1wcm8tcHJvZC1zb3J0ZC9tZWRpYTlkYjk5NjAwLWFlOWQtMTFmMS1iN2M0LWQ5MzYzYTY1OTBjNy5qcGc=" alt="金砖峰会" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">金砖国家在新德里通过《新德里宣言》，呼吁中东「最大限度克制」并要求保护国际原子能机构保障监督下的核设施</h2>
+            <div class="hl-meta"><span class="src">The National</span> · The Tribune (India) · ANI · The Statesman · 2026-09-12</div>
+            <p class="hl-desc">金砖国家领导人9月12日在新德里举行的峰会上一致通过《新德里宣言》。关于中东局势，宣言称「我们对中东／西亚地区紧张局势的持续升级深表关切」，并呼吁「保持最大限度克制，避免采取可能进一步恶化局势的行动」，同时要求保护平民与民用基础设施，主张以对话和外交实现地区和平。关于核设施，宣言称「我们对故意攻击民用基础设施及处于国际原子能机构全面保障监督下的和平核设施的行为深表关切，这违反了国际法与国际原子能机构的相关决议」，并称「核保障监督、核安全与核安保必须始终得到维护，包括在武装冲突中，以保护人民与环境免受伤害」。据《民族报》（The National），出席本次峰会的包括东道国印度总理纳伦德拉·莫迪（Narendra Modi）、中国国家主席习近平、俄罗斯总统弗拉基米尔·普京、伊朗总统马苏德·佩泽希齐扬（Masoud Pezeshkian）与阿布扎比王储谢赫·哈立德·本·穆罕默德（Sheikh Khaled bin Mohamed）。金砖机制现有11个成员国，合计约占全球名义GDP的25%与全球人口的约一半。宣言另就核裁军与不扩散、多边主义与全球南方代表性作出表述。交叉核验：The National · The Tribune（India） · ANI · The Statesman</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">BRICS Adopts the New Delhi Declaration, Calling for &ldquo;Maximum Restraint&rdquo; in the Middle East and Protection of IAEA-Safeguarded Nuclear Facilities</h2>
+            <div class="hl-meta"><span class="src">The National</span> · The Tribune (India) · ANI · The Statesman · 2026-09-12</div>
+            <p class="hl-desc">BRICS leaders unanimously adopted the New Delhi Declaration at their summit in New Delhi on September 12. On the Middle East, the declaration says the bloc expresses &ldquo;deep concern over the continued escalation of tensions in Middle East/West Asia&rdquo; and calls &ldquo;for exercising maximum restraint, as well as avoiding actions that could further aggravate the situation,&rdquo; while urging protection of civilians and civilian infrastructure and greater use of dialogue and diplomacy. On nuclear facilities, it says: &ldquo;We express serious concern over deliberate attacks on civilian infrastructure and peaceful nuclear facilities under full safeguards of the International Atomic Energy Agency, in violation of international law and relevant resolutions of the IAEA,&rdquo; adding that &ldquo;nuclear safeguards, safety and security must always be upheld, including in armed conflicts, to protect people and the environment from harm.&rdquo; According to The National, those attending included the host, Indian Prime Minister Narendra Modi, Chinese President Xi Jinping, Russian President Vladimir Putin, Iranian President Masoud Pezeshkian and Abu Dhabi Crown Prince Sheikh Khaled bin Mohamed. BRICS now has 11 members, together accounting for about 25 per cent of world nominal GDP and roughly half the world's population. The declaration also addresses nuclear disarmament and non-proliferation, multilateralism and representation for the Global South. Cross-verified: The National · The Tribune (India) · ANI · The Statesman</p>
+          </div>
+          <a class="hl-link" href="https://www.thenationalnews.com/news/2026/09/12/brics-agrees-joint-declaration-calling-for-maximum-restraint-in-middle-east/" target="_blank" rel="noopener">The National →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://hermes.media.static.aol.com/media/2026/09/11/0e267090-ba55-317b-9e81-9cb28b174795/933a1400-6796-476a-a7a1-a7be5a13c3f9.jpg" alt="燧原科技上市" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">燧原科技登陆科创板：发行价142.18元，首日收报396.16元、涨178.6%，募资61.2亿元</h2>
+            <div class="hl-meta"><span class="src">CNBC</span> · Nikkei Asia · AOL/Yahoo Finance · 新浪财经 · IT之家 · 2026-09-11</div>
+            <p class="hl-desc">腾讯投资的AI芯片公司燧原科技（Enflame）9月11日在上海证券交易所科创板上市。据新浪财经与IT之家，发行价为每股142.18元人民币，发行股数43,035,173股；据CNBC与日经亚洲，本次IPO募集61.2亿元人民币（约9.12亿美元）。上市当日，该股开盘报410元（较发行价上涨188%），盘中最高触及460元（上涨223%），收盘报396.16元，较发行价上涨178.6%。各家媒体标题引用的涨幅口径不一：日经亚洲报为179%（对应收盘价），CNBC报为206%，雅虎财经报为「超过220%」（对应盘中最高价）。据CNBC，该股网上申购阶段散户认购订单超过可供股数的6,000倍，公司其后向该部分调配了更多股份。燧原科技成立于2018年3月，截至上市时尚未盈利，上市后纳入科创成长层。据CNBC与日经亚洲，燧原是中国「国产GPU四小龙」中最后一家上市的公司，另外三家为摩尔线程（Moore Threads）、沐曦（MetaX）与壁仞科技（Biren），前两家于2025年上市，壁仞于2026年1月上市。公司表示募集资金将用于下一代AI芯片的研发与产业化。交叉核验：CNBC · Nikkei Asia · AOL/Yahoo Finance · 新浪财经 · IT之家</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Enflame Lists on the STAR Market: Offered at 142.18 Yuan, Closes Its First Day at 396.16 Yuan, Up 178.6 Per Cent, After Raising 6.12 Billion Yuan</h2>
+            <div class="hl-meta"><span class="src">CNBC</span> · Nikkei Asia · AOL/Yahoo Finance · Sina Finance · ITHome · 2026-09-11</div>
+            <p class="hl-desc">Enflame, a Tencent-backed AI chip company, listed on the Shanghai Stock Exchange's STAR Market on September 11. According to Sina Finance and ITHome, the offer price was 142.18 yuan per share for 43,035,173 shares; CNBC and Nikkei Asia reported that the IPO raised 6.12 billion yuan (about $912 million). On the day, the stock opened at 410 yuan, 188 per cent above the offer price, touched an intraday high of 460 yuan, 223 per cent above the offer, and closed at 396.16 yuan, 178.6 per cent above the offer price. Outlets cited different percentage figures in their headlines: Nikkei Asia reported 179 per cent, which corresponds to the close; CNBC reported 206 per cent; and Yahoo Finance reported &ldquo;over 220 per cent,&rdquo; which corresponds to the intraday high. According to CNBC, the retail tranche drew orders for more than 6,000 times the shares available before the company reallocated additional stock to it. Enflame was founded in March 2018 and was not yet profitable at the time of listing; it was admitted to the STAR Market's growth tier. CNBC and Nikkei Asia describe Enflame as the last of China's four &ldquo;little dragons&rdquo; of domestic GPU design to go public, the others being Moore Threads, MetaX and Biren Technology; the first two listed in 2025 and Biren in January 2026. The company said proceeds would fund development and commercialisation of its next-generation AI chips. Cross-verified: CNBC · Nikkei Asia · AOL/Yahoo Finance · Sina Finance · ITHome</p>
+          </div>
+          <a class="hl-link" href="https://www.cnbc.com/2026/09/11/chinese-nvidia-rival-enflame-stock-market-debut-ai.html" target="_blank" rel="noopener">CNBC →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2026/09/11125304/Image_5_Lesser-and-Greater-Flamingos-at-Lake-Natron-%E2%94%AC%D0%B9-Akshita-Rabdiya.jpg" alt="迁徙鸟类" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">国际鸟盟《世界鸟类状况2026》：1,843个迁徙物种中45%数量下降，200种面临灭绝威胁</h2>
+            <div class="hl-meta"><span class="src">BirdLife International</span> · Mongabay · The Express Tribune · EnviroNews · Mail &amp; Guardian · 2026-09-11</div>
+            <p class="hl-desc">国际鸟盟（BirdLife International）9月11日在肯尼亚内罗毕举行的全球迁飞区峰会（Global Flyways Summit）上发布《世界鸟类状况2026》报告。这是该系列的第六版，也是首次以迁徙鸟类与其依赖的迁飞路线为主题。报告评估的1,843个迁徙物种中，45%的全球种群数量处于下降，30%稳定，14%增长，其余11%趋势不明。受灭绝威胁的有200种（占1,843种的约11%），其中32种为极危（CR）、57种为濒危（EN）、111种为易危（VU）。下降最为明显的是依赖海洋与滨海湿地的物种；在四大陆基迁飞区中，东亚—澳大拉西亚迁飞区的下降物种占比最高，达53%。威胁因素方面，入侵物种与疾病影响139个受威胁物种，农业与气候变化各影响103个，狩猎与诱捕影响99个，污染影响96个。据Mongabay，仅有9%的迁徙物种在全年生活史周期中获得充分保护，而非迁徙物种这一比例为45%。报告呼吁加强国际合作，保护与修复栖息地、制止非法杀戮、减少渔业造成的海鸟死亡、控制入侵物种。交叉核验：BirdLife International · Mongabay · The Express Tribune · EnviroNews · Mail &amp; Guardian</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">BirdLife's State of the World's Birds 2026: 45 Per Cent of 1,843 Migratory Species Are Declining and 200 Are Threatened With Extinction</h2>
+            <div class="hl-meta"><span class="src">BirdLife International</span> · Mongabay · The Express Tribune · EnviroNews · Mail &amp; Guardian · 2026-09-11</div>
+            <p class="hl-desc">BirdLife International released State of the World's Birds 2026 on September 11 at the Global Flyways Summit in Nairobi, Kenya. It is the sixth edition of the series and the first devoted to migratory birds and the flyways they depend on. Of the 1,843 migratory species assessed, 45 per cent have declining global populations, 30 per cent are stable, 14 per cent are increasing and the trends of the remaining 11 per cent are unknown. Two hundred species, about 11 per cent of the 1,843, are threatened with extinction: 32 classified as critically endangered, 57 as endangered and 111 as vulnerable. The steepest declines were recorded among species dependent on marine and coastal wetlands; among the four major land-based flyway systems, the East Asian-Australasian Flyway had the highest proportion of declining species, at 53 per cent. On threats, invasive species and disease affect 139 threatened species, agriculture and climate change 103 each, hunting and trapping 99, and pollution 96. According to Mongabay, only 9 per cent of migratory species are adequately protected across their full annual cycle, against 45 per cent of non-migratory species. The report calls for stronger international cooperation to protect and restore habitats, prevent illegal killing, reduce seabird deaths caused by fishing and control invasive species. Cross-verified: BirdLife International · Mongabay · The Express Tribune · EnviroNews · Mail &amp; Guardian</p>
+          </div>
+          <a class="hl-link" href="https://news.mongabay.com/2026/09/migratory-bird-species-increasingly-at-risk-report-finds-but-there-is-still-hope/" target="_blank" rel="noopener">Mongabay →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://gizmodo.com/app/uploads/2026/09/amazon-rainforest-wildfire-1200x675.jpg" alt="气候反馈" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">《环境研究快报》研究：冻土、湿地、内陆水体与野火的增温反馈，可能使本世纪升温再增0.2至0.4摄氏度</h2>
+            <div class="hl-meta"><span class="src">Environmental Research Letters</span> · Phys.org · CBC News · Gizmodo · EurekAlert · 2026-09-10</div>
+            <p class="hl-desc">一项于9月10日发表在《环境研究快报》（Environmental Research Letters）第21卷第17期的研究测算，由升温诱发的自然源温室气体排放，可能在本世纪内额外带来约0.2至0.4摄氏度（0.4至0.7华氏度）的升温，相当于将2020年以后的人为升温放大20%至30%。论文题为「Projected amplification of global warming by warming-induced greenhouse gas emissions」。据Phys.org与EurekAlert，该研究是迄今将四类主要反馈——多年冻土融化、野火、湿地与内陆水体——合并量化的最大规模尝试。机制包括：升温后湿地与湖泊释放甲烷，多年冻土融化释放二氧化碳与甲烷，以及气候驱动的野火烧掉森林中储存的碳。作者指出，这些排放在当前大多数气候模型与情景设定中尚未得到表达，并表示更快的减排会降低这类反馈的风险。据CBC与Gizmodo，论文作者来自斯坦福大学、Spark Climate Solutions、美国环境保护基金会（Environmental Defense Fund）与Woodwell气候研究中心等机构。交叉核验：Environmental Research Letters（IOPscience） · Phys.org · CBC News · Gizmodo · EurekAlert</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Study in Environmental Research Letters: Feedbacks From Permafrost, Wetlands, Inland Waters and Wildfire Could Add 0.2 to 0.4C of Warming This Century</h2>
+            <div class="hl-meta"><span class="src">Environmental Research Letters</span> · Phys.org · CBC News · Gizmodo · EurekAlert · 2026-09-10</div>
+            <p class="hl-desc">A study published on September 10 in Environmental Research Letters, Volume 21, Number 17, estimates that warming-induced greenhouse gas emissions from natural sources could add roughly 0.2 to 0.4 degrees Celsius (0.4 to 0.7 degrees Fahrenheit) of warming this century, amplifying post-2020 anthropogenic warming by 20 to 30 per cent. The paper is titled &ldquo;Projected amplification of global warming by warming-induced greenhouse gas emissions.&rdquo; According to Phys.org and EurekAlert, it is the largest effort to date to quantify the combined effect of four major feedbacks: permafrost thaw, wildfires, wetlands and inland waters. The mechanisms include methane released by warming wetlands and lakes, carbon dioxide and methane released by thawing permafrost, and emissions from climate-driven wildfires burning carbon stored in forests. The authors say these emissions are largely unrepresented in current climate models and scenarios, and that faster emissions reductions would reduce the feedback risk. According to CBC and Gizmodo, the authors are affiliated with institutions including Stanford University, Spark Climate Solutions, the Environmental Defense Fund and the Woodwell Climate Research Center. Cross-verified: Environmental Research Letters (IOPscience) · Phys.org · CBC News · Gizmodo · EurekAlert</p>
+          </div>
+          <a class="hl-link" href="https://iopscience.iop.org/article/10.1088/1748-9326/ae9e24" target="_blank" rel="noopener">IOPscience →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://www.thestatesman.com/wp-content/uploads/2026/09/BRICS-Summit-_20260912_175600_0000.webp" alt="金砖新德里峰会" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label pol">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">十一个成员、四分之一的GDP与一份协商一致的文件：新德里金砖峰会的时间线与文本</h3>
+            <div class="ft-meta"><span class="src">综合信源：The National · The Tribune（India） · ANI · The Statesman · The News Mill · LatestLY · BRICS Information Centre（多伦多大学）</span></div>
+            <div class="ft-desc">
+              <p><strong>时间线：从喀山到新德里</strong></p>
+              <p>2024年10月，金砖第十六次峰会在俄罗斯喀山举行。2025年7月6日至7日，第十七次峰会在巴西里约热内卢举行，发布《里约热内卢宣言》（文本见多伦多大学金砖信息中心存档）。2026年由印度担任主席国，峰会主题为「Building for Resilience, Innovation, Cooperation and Sustainability」。2026年9月12日，第十八次峰会在新德里举行，一致通过《新德里宣言》；据报道，9月13日另安排了一场面向伙伴国与外延邀请国的公开会议。</p>
+              <p><strong>文本写了什么</strong></p>
+              <p>中东部分：宣言对「中东／西亚地区紧张局势的持续升级」表达深切关切，呼吁「最大限度克制」与避免恶化局势的行动，要求保护平民与民用基础设施，并主张更多运用对话与外交。核设施部分：对「故意攻击民用基础设施及处于国际原子能机构全面保障监督下的和平核设施」表示严重关切，并称核保障监督、核安全与核安保「必须始终得到维护，包括在武装冲突中」。核裁军部分：据ANI与《政治家报》（The Statesman），宣言对核冲突风险上升表示关切，呼吁加强裁军、军备控制与核不扩散方面的努力，重申支持无核武器区，并强调加快建立中东无核武器及其他大规模杀伤性武器区的进程。此外，宣言还涉及谴责恐怖主义、多边主义、全球南方的代表性与和平解决争端。</p>
+              <p><strong>背景：扩员后的体量与当下的市场条件</strong></p>
+              <p>据《民族报》，金砖机制已从巴西、俄罗斯、印度、中国、南非五国扩展到现在的11个成员国，合计约占全球名义GDP的25%与全球人口的约50%。本次峰会召开时的市场背景是：国际油价处于每桶100美元上方，霍尔木兹海峡航运接近停滞。本报9月10日那期已报道，布伦特原油9月9日结算价报每桶101.21美元，为5月22日以来最高。</p>
+              <p><strong>领导人说了什么</strong></p>
+              <p>据《民族报》，印度总理莫迪在峰会上提出要把「特权的金字塔」转变为「伙伴关系的平台」；中国国家主席习近平称中东战事有悖于「国际社会的共同利益」。本报不对上述表述作出评价，仅引述其原文口径。</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：宣言的通过日期（9月12日）、地点（新德里）与上述引号内文字，在《民族报》《印度论坛报》、ANI与《政治家报》的报道中一致；成员国数量与出席领导人名单有多家报道支持。不可核验的是：宣言的磋商过程。金砖以协商一致方式通过文件，部分媒体提及成员国在中东问题上立场存在差异，但本报未能取得谈判过程的一手材料，因此不就分歧的具体内容作出陈述。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Eleven Members, a Quarter of World GDP and One Consensus Document: A Timeline and Text Reading of the New Delhi BRICS Summit</h3>
+            <div class="ft-meta"><span class="src">Sources: The National · The Tribune (India) · ANI · The Statesman · The News Mill · LatestLY · BRICS Information Centre (University of Toronto)</span></div>
+            <div class="ft-desc">
+              <p><strong>Timeline: from Kazan to New Delhi</strong></p>
+              <p>The 16th BRICS summit was held in Kazan, Russia, in October 2024. The 17th was held in Rio de Janeiro, Brazil, on July 6-7, 2025, and produced the Rio de Janeiro Declaration, whose text is archived by the BRICS Information Centre at the University of Toronto. India chairs the grouping in 2026 under the theme &ldquo;Building for Resilience, Innovation, Cooperation and Sustainability.&rdquo; On September 12, 2026, the 18th summit convened in New Delhi and unanimously adopted the New Delhi Declaration; reports indicate that an open session with partner countries and outreach invitees was scheduled for September 13.</p>
+              <p><strong>What the text says</strong></p>
+              <p>On the Middle East, the declaration expresses deep concern over &ldquo;the continued escalation of tensions in Middle East/West Asia,&rdquo; calls for &ldquo;maximum restraint&rdquo; and for avoiding actions that could aggravate the situation, urges protection of civilians and civilian infrastructure, and advocates greater use of dialogue and diplomacy. On nuclear facilities, it expresses serious concern over &ldquo;deliberate attacks on civilian infrastructure and peaceful nuclear facilities under full safeguards of the International Atomic Energy Agency&rdquo; and states that nuclear safeguards, safety and security &ldquo;must always be upheld, including in armed conflicts.&rdquo; On disarmament, according to ANI and The Statesman, the declaration voices concern over growing risks of nuclear conflict, calls for stronger disarmament, arms control and non-proliferation efforts, reaffirms support for nuclear-weapon-free zones and stresses accelerating work toward a Middle East zone free of nuclear weapons and other weapons of mass destruction. The text also addresses condemnation of terrorism, multilateralism, representation for the Global South and peaceful settlement of disputes.</p>
+              <p><strong>Background: size after enlargement, and market conditions</strong></p>
+              <p>According to The National, BRICS has grown from the original five &mdash; Brazil, Russia, India, China and South Africa &mdash; to 11 members, together accounting for about 25 per cent of world nominal GDP and roughly 50 per cent of the world's population. The summit convened with international oil prices above $100 a barrel and shipping through the Strait of Hormuz near a standstill. As this publication reported in its September 10 issue, Brent crude settled at $101.21 a barrel on September 9, its highest since May 22.</p>
+              <p><strong>What the leaders said</strong></p>
+              <p>According to The National, Prime Minister Modi told the summit that the &ldquo;pyramid of privilege&rdquo; should be transformed into a &ldquo;platform of partnership,&rdquo; and President Xi Jinping said the war in the Middle East runs counter to the &ldquo;common interests of the international community.&rdquo; This publication offers no assessment of those statements and reproduces them as reported.</p>
+              <p><strong>What is and is not verifiable</strong></p>
+              <p>Verifiable: the date of adoption (September 12), the venue (New Delhi) and the quoted text, which are consistent across The National, The Tribune, ANI and The Statesman; the membership count and the list of attending leaders are supported by multiple reports. Not verifiable: the negotiating process behind the declaration. BRICS adopts documents by consensus, and some outlets have referred to differences among members on the Middle East, but this publication has not obtained primary material on the talks and therefore makes no claim about the substance of any disagreement.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">安理会一致通过2828号决议，苏丹制裁与武器禁运延长一个月至10月9日</h4>
+            <div class="ni-meta"><span class="src">UN Meetings Coverage · The Washington Post · Arab News · Anadolu Agency · Radio Tamazuj</span> · 2026-09-11</div>
+            <p class="ni-desc">联合国安理会9月11日一致通过美国起草的第2828号决议，依据《联合国宪章》第七章行事，将苏丹制裁机制（含武器禁运、定向旅行禁令与资产冻结）延长一个月至10月9日，并将相关专家小组的授权延长至11月9日。全部15个理事国投赞成票。该制裁机制设立于2005年，武器禁运适用于在达尔富尔活动的行为体。据联合国会议报道，美国代表在会上称「对这一授权作长期技术性延期不是一个选项」，并主张将武器禁运范围从达尔富尔扩大至苏丹全境、将列名标准扩展至冲突相关性暴力等情形；俄罗斯代表则表示「不会允许哪怕一丝扩大」相关限制措施。本次表决被各方描述为短期技术性延期，以便为进一步谈判留出时间。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Security Council Unanimously Adopts Resolution 2828, Rolling Over Sudan Sanctions and the Arms Embargo for One Month to October 9</h4>
+            <div class="ni-meta"><span class="src">UN Meetings Coverage · The Washington Post · Arab News · Anadolu Agency · Radio Tamazuj</span> · 2026-09-11</div>
+            <p class="ni-desc">The UN Security Council unanimously adopted US-drafted Resolution 2828 on September 11, acting under Chapter VII of the UN Charter, extending the Sudan sanctions regime &mdash; comprising an arms embargo, targeted travel bans and asset freezes &mdash; by one month to October 9, and extending the mandate of the associated Panel of Experts to November 9. All 15 members voted in favour. The regime was established in 2005, and the arms embargo applies to actors operating in Darfur. According to the UN's meetings coverage, the US representative said that &ldquo;a long-term technical rollover of this mandate is not an option&rdquo; and argued for widening the arms embargo from Darfur to all of Sudan and broadening the listing criteria to cover matters including conflict-related sexual violence; the Russian representative said Moscow &ldquo;will not allow even a hint of broadening&rdquo; of the measures. The vote was described as a short-term technical rollover intended to leave room for further negotiation.</p>
+          </div>
+          <a class="ni-link" href="https://press.un.org/en/2026/sc16450.doc.htm" target="_blank" rel="noopener">UN Meetings Coverage →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">金砖宣言就核裁军与无核武器区作出表述，呼吁加快建立中东无大规模杀伤性武器区</h4>
+            <div class="ni-meta"><span class="src">ANI · The Statesman · The News Mill · LatestLY</span> · 2026-09-12</div>
+            <p class="ni-desc">除中东克制与核设施保护之外，9月12日通过的《新德里宣言》还就核问题作出单独表述。据ANI与《政治家报》，宣言对核冲突风险上升表示关切，呼吁加强裁军、军备控制与核不扩散方面的努力，以促进全球稳定与国际和平安全；重申支持无核武器区，并强调应加快推进建立中东无核武器及其他大规模杀伤性武器区的进程。宣言为协商一致通过，本报未能获得文本磋商过程的一手材料。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">BRICS Declaration Addresses Nuclear Disarmament and Nuclear-Weapon-Free Zones, Urging Faster Progress Toward a Middle East WMD-Free Zone</h4>
+            <div class="ni-meta"><span class="src">ANI · The Statesman · The News Mill · LatestLY</span> · 2026-09-12</div>
+            <p class="ni-desc">Beyond the passages on restraint in the Middle East and the protection of nuclear facilities, the New Delhi Declaration adopted on September 12 contains a separate section on nuclear matters. According to ANI and The Statesman, the declaration expresses concern over growing risks of nuclear conflict and calls for stronger efforts on disarmament, arms control and nuclear non-proliferation to promote global stability and international peace and security; it reaffirms support for nuclear-weapon-free zones and stresses the importance of accelerating efforts to establish a zone free of nuclear weapons and other weapons of mass destruction in the Middle East. The declaration was adopted by consensus; this publication has not obtained primary material on how the text was negotiated.</p>
+          </div>
+          <a class="ni-link" href="https://aninews.in/news/national/general-news/brics-declaration-calls-for-stronger-nuclear-disarmament-non-proliferation-efforts20260912174627/" target="_blank" rel="noopener">ANI →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">也门本轮战事人道数据：逾500人死亡、约4.6万人流离失所，2,000多名政府军被围哈尼什群岛</h4>
+            <div class="ni-meta"><span class="src">Euronews · NPR · Al Jazeera · 国际移民组织（IOM）</span> · 2026-09-12</div>
+            <p class="ni-desc">据欧洲新闻台，胡塞武装向也门红海海岸推进的本轮攻势已造成超过500人死亡；联合国移民机构统计约有4.6万人流离失所；另有2,000多名也门国际承认政府的军人被围困在哈尼什（Hanish）群岛。同期，沙特阿拉伯对胡塞控制区域保持每日空袭。多家报道将本轮冲突升级的起点追溯至2026年7月——胡塞方面允许一架伊朗飞机降落，沙特随后对一座机场实施了报复性打击。上述伤亡与流离数字为欧洲新闻台与国际移民组织口径，本报未能独立核实。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Humanitarian Figures From Yemen's Latest Offensive: More Than 500 Dead, About 46,000 Displaced, and 2,000-Plus Government Troops Besieged on the Hanish Islands</h4>
+            <div class="ni-meta"><span class="src">Euronews · NPR · Al Jazeera · International Organization for Migration</span> · 2026-09-12</div>
+            <p class="ni-desc">According to Euronews, the Houthi advance along Yemen's Red Sea coastline has killed more than 500 people; the UN migration agency counts roughly 46,000 displaced; and more than 2,000 troops of Yemen's internationally recognised government are besieged on the Hanish islands. Over the same period, Saudi Arabia has conducted daily strikes on Houthi-held areas of Yemen. Multiple reports trace the current escalation to July 2026, when the Houthis allowed an Iranian aircraft to land and Saudi Arabia subsequently struck an airport in retaliation. The casualty and displacement figures above are as reported by Euronews and the International Organization for Migration; this publication could not independently verify them.</p>
+          </div>
+          <a class="ni-link" href="https://www.euronews.com/2026/09/12/houthis-seize-yemeni-island-in-bab-el-mandeb-taking-control-of-the-strait" target="_blank" rel="noopener">Euronews →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">挪威阿斯特丽德公主去世，享年94岁，距其兄长哈拉尔国王国葬仅两天</h4>
+            <div class="ni-meta"><span class="src">ABC News (Australia) · UPI · HOLA · 挪威王室</span> · 2026-09-11</div>
+            <p class="ni-desc">挪威王室宣布，阿斯特丽德公主（Princess Astrid, Mrs. Ferner）9月11日在睡梦中去世，享年94岁。她是已故国王哈拉尔五世的姐姐。她最后一次公开露面是在本周三的奥斯陆大教堂，出席哈拉尔国王的国葬。哈拉尔五世于上月去世，享年89岁，在位逾35年。阿斯特丽德公主今年3月曾接受肺炎治疗，王室未公布具体死因。据报道，她担任王室工作成员逾75年，并曾在14年间履行挪威「第一女士」的职责。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Norway's Princess Astrid Dies at 94, Two Days After the Funeral of Her Brother King Harald</h4>
+            <div class="ni-meta"><span class="src">ABC News (Australia) · UPI · HOLA · Norwegian Royal Court</span> · 2026-09-11</div>
+            <p class="ni-desc">The Norwegian Royal Court announced that Princess Astrid, Mrs. Ferner, died in her sleep on September 11 at the age of 94. She was the elder sister of the late King Harald V. Her last public appearance was on Wednesday at Oslo Cathedral, where she attended the king's funeral. King Harald died last month at 89, after more than 35 years on the throne. The princess was treated for pneumonia in March of this year; the court did not disclose a cause of death. According to reports, she had been a working member of the royal family for more than 75 years and served as Norway's first lady for 14 years.</p>
+          </div>
+          <a class="ni-link" href="https://www.abc.net.au/news/2026-09-11/norway-princess-astrid-dies-aged-94/107145428" target="_blank" rel="noopener">ABC News →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://images.siliconangle.com/blogs.dir/1/files/2026/09/Positron.png" alt="AI芯片" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label tec">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">两个窗口，两种账本：中国芯片公司的上市窗口与美国推理芯片的融资窗口</h3>
+            <div class="ft-meta"><span class="src">综合信源：CNBC · Nikkei Asia · 新浪财经 · IT之家 · SiliconANGLE · Quartz · PR Newswire · AOL/Yahoo Finance</span></div>
+            <div class="ft-desc">
+              <p><strong>时间线：2025年至2026年9月11日</strong></p>
+              <p>2025年，摩尔线程（Moore Threads）与沐曦（MetaX）先后上市。2026年1月，壁仞科技（Biren）上市。2026年2月，美国推理芯片公司Positron完成B轮融资，投后估值约10亿美元。2026年9月9日，燧原科技公告将于9月11日登陆科创板，发行价142.18元／股。2026年9月10日，Positron宣布完成8.75亿美元C轮融资，投后估值50亿美元。2026年9月11日，燧原科技上市首日，开盘410元、盘中最高460元、收盘396.16元。</p>
+              <p><strong>一边是二级市场：四家公司全部上市</strong></p>
+              <p>据CNBC与日经亚洲，燧原科技是中国「国产GPU四小龙」中最后一家完成上市的公司。具体数字为：发行价142.18元／股，发行43,035,173股，募集61.2亿元人民币（约9.12亿美元）；首日收盘396.16元，较发行价上涨178.6%；网上申购阶段散户认购订单超过可供股数的6,000倍。公司成立于2018年3月，上市时尚未盈利，纳入科创成长层。多家媒体将这一轮上市与美国对华芯片出口管制下中国本土AI芯片需求的上升联系在一起。</p>
+              <p><strong>另一边是一级市场：用LPDDR5X替掉HBM</strong></p>
+              <p>据SiliconANGLE、Quartz与公司新闻稿，Positron本轮融资分两笔：3.75亿美元C轮（投前估值35亿美元），由NEA、Atreides、Valor、Andra Capital与SemiAnalysis Capital共同领投；以及最高5亿美元的C-1轮，由网景（Netscape）联合创始人吉姆·克拉克（Jim Clark）打底。技术路线上，其Asimov芯片不使用高带宽内存（HBM），改用LPDDR5X，单die配备288GB至2,304GB内存，功耗约400瓦，采用台积电N3P工艺，计划2026年底流片、2027年下半年量产。配套的Titan系统将4至8颗Asimov组成单个节点，公司称其面向16万亿参数模型与1,000万token上下文窗口。融资用途包括Asimov流片、一座2兆瓦工程数据中心与仿真平台的建设，以及Titan的量产爬坡。</p>
+              <p><strong>两个数字的尺度</strong></p>
+              <p>燧原科技本次IPO募集61.2亿元人民币（约9.12亿美元）；Positron本轮融资8.75亿美元。两者分属公开市场与私募市场，资金性质不同。本报不就估值与投资价值作任何判断。</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：燧原的发行价、发行股数与上市日期来自新浪财经与IT之家对上市公告的报道，开盘与收盘价格来自AOL／雅虎财经；以收盘价除以发行价得到的涨幅与日经亚洲的口径一致。口径存在差异的是各家标题引用的涨幅：CNBC作206%，雅虎财经作「超过220%」，日经亚洲先后作179%与188%——后两者分别对应收盘价与开盘价，取数时点不同。Positron的Asimov与Titan均尚未量产，上述规格与时间表为公司口径，本报无法独立验证。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Two Windows, Two Kinds of Ledger: A Listing Window in China and a Funding Window for US Inference Silicon</h3>
+            <div class="ft-meta"><span class="src">Sources: CNBC · Nikkei Asia · Sina Finance · ITHome · SiliconANGLE · Quartz · PR Newswire · AOL/Yahoo Finance</span></div>
+            <div class="ft-desc">
+              <p><strong>Timeline: 2025 to September 11, 2026</strong></p>
+              <p>Moore Threads and MetaX listed during 2025. Biren Technology listed in January 2026. In February 2026 the US inference chip company Positron closed a Series B that left it with a post-money valuation of about $1 billion. On September 9, 2026 Enflame announced it would list on the STAR Market on September 11 at 142.18 yuan a share. On September 10, 2026 Positron announced an $875 million Series C at a $5 billion post-money valuation. On September 11, 2026 Enflame opened at 410 yuan, touched 460 yuan intraday and closed at 396.16 yuan.</p>
+              <p><strong>One side is the public market: all four are now listed</strong></p>
+              <p>According to CNBC and Nikkei Asia, Enflame is the last of China's four &ldquo;little dragons&rdquo; of domestic GPU design to go public. The figures: an offer price of 142.18 yuan per share for 43,035,173 shares, raising 6.12 billion yuan (about $912 million); a first-day close of 396.16 yuan, 178.6 per cent above the offer price; and a retail tranche that drew orders for more than 6,000 times the shares available. The company was founded in March 2018, was not yet profitable at listing, and was admitted to the STAR Market's growth tier. Several outlets connected the listing to rising demand for domestic AI chips in China under US export controls.</p>
+              <p><strong>The other side is the private market: LPDDR5X instead of HBM</strong></p>
+              <p>According to SiliconANGLE, Quartz and the company's own release, Positron's round came in two tranches: a $375 million Series C at a $3.5 billion pre-money valuation, co-led by NEA, Atreides, Valor, Andra Capital and SemiAnalysis Capital; and a Series C-1 of up to $500 million anchored by Netscape co-founder Jim Clark. On the technical side, its Asimov chip forgoes high-bandwidth memory in favour of LPDDR5X, with 288GB to 2,304GB per die and power draw of about 400 watts, built on TSMC's N3P process, taping out at the end of 2026 for production in the second half of 2027. The accompanying Titan system combines four to eight Asimov chips into a single node, which the company says is aimed at 16-trillion-parameter models and 10-million-token context windows. Proceeds are earmarked for the Asimov tapeout, a 2-megawatt engineering data centre and emulation platform, and the Titan production ramp.</p>
+              <p><strong>The scale of the two numbers</strong></p>
+              <p>Enflame's IPO raised 6.12 billion yuan (about $912 million); Positron's round was $875 million. The two belong to public and private markets respectively and are different kinds of capital. This publication makes no judgment about valuation or investment merit.</p>
+              <p><strong>What is and is not verifiable</strong></p>
+              <p>Verifiable: Enflame's offer price, share count and listing date come from the listing announcement as reported by Sina Finance and ITHome, and the opening and closing prices from AOL/Yahoo Finance; dividing the close by the offer price yields a figure consistent with Nikkei Asia's. Where accounts diverge is the percentage each outlet put in its headline: CNBC reported 206 per cent, Yahoo Finance &ldquo;over 220 per cent,&rdquo; and Nikkei Asia 179 per cent and 188 per cent at different points &mdash; the latter two corresponding to the close and the open, taken at different moments in the session. Positron's Asimov and Titan are not yet in production; the specifications and schedule above are the company's own and could not be independently verified.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">Positron完成8.75亿美元C轮融资，投后估值50亿美元</h4>
+            <div class="ni-meta"><span class="src">SiliconANGLE · Quartz · PR Newswire · Semiconductor Digest</span> · 2026-09-10</div>
+            <p class="ni-desc">美国AI推理芯片公司Positron于9月10日宣布完成8.75亿美元融资，投后估值50亿美元，约为其2026年2月B轮后10亿美元估值的五倍。本轮分两笔：3.75亿美元C轮，投前估值35亿美元，由NEA、Atreides、Valor、Andra Capital与SemiAnalysis Capital共同领投；以及最高5亿美元的C-1轮，由网景联合创始人吉姆·克拉克打底。公司称资金将用于Asimov芯片流片、一座2兆瓦工程数据中心与仿真平台的建设，以及Titan系统的量产爬坡。Asimov以LPDDR5X替代HBM，单die 288GB至2,304GB，采用台积电N3P工艺，计划2026年底流片、2027年下半年量产。产品规格与时间表均为公司口径。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Positron Closes an $875 Million Series C at a $5 Billion Post-Money Valuation</h4>
+            <div class="ni-meta"><span class="src">SiliconANGLE · Quartz · PR Newswire · Semiconductor Digest</span> · 2026-09-10</div>
+            <p class="ni-desc">The US AI inference chip company Positron announced on September 10 that it had raised $875 million at a $5 billion post-money valuation, roughly five times the $1 billion valuation it carried after its Series B in February 2026. The round came in two tranches: a $375 million Series C at a $3.5 billion pre-money valuation, co-led by NEA, Atreides, Valor, Andra Capital and SemiAnalysis Capital; and a Series C-1 of up to $500 million anchored by Netscape co-founder Jim Clark. The company said the money would fund the tapeout of its Asimov chip, a 2-megawatt engineering data centre and emulation platform, and the production ramp of its Titan system. Asimov uses LPDDR5X in place of HBM, with 288GB to 2,304GB per die, is built on TSMC's N3P process and is scheduled to tape out at the end of 2026 for production in the second half of 2027. The product specifications and schedule are the company's own.</p>
+          </div>
+          <a class="ni-link" href="https://siliconangle.com/2026/09/10/chipmaker-positron-nabs-875m-to-speed-up-inference-with-consumer-grade-memory/" target="_blank" rel="noopener">SiliconANGLE →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">Anthropic发布威胁情报报告，称七类滥用场景中出现多智能体自动化攻击</h4>
+            <div class="ni-meta"><span class="src">Anthropic · TechNode Global · FoneArena</span> · 2026-09-10</div>
+            <p class="ni-desc">Anthropic于9月10日发布报告《Detecting and countering misuse of AI: September 2026》，涵盖2025年12月至2026年8月期间处置的案例，分为网络行动、影响力行动、监控、诈骗与欺诈、生物滥用、常规武器开发与模型蒸馏七类。报告列举的数字包括：代号GTG-20006的行动针对「超过20个不同机构」，含政府部门与国防实体；GTG-50014从一家技术供应商窃取「超过1TB数据」；GTG-54002在虚构媒体上发布「至少8,913篇文章、约20种语言」；GTG-84005运营「约1,000个虚假X（推特）账号」；一起入侵从「一个被窃的开发者令牌升级到完全管理员控制」用时约三小时；一起供应链攻击波及「约200个」下游客户机构。上述均为Anthropic的自述口径，涉及的具体受害者与归因本报无法独立核实。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Anthropic Publishes a Threat Intelligence Report Describing Multi-Agent Automation Across Seven Categories of Misuse</h4>
+            <div class="ni-meta"><span class="src">Anthropic · TechNode Global · FoneArena</span> · 2026-09-10</div>
+            <p class="ni-desc">Anthropic published &ldquo;Detecting and countering misuse of AI: September 2026&rdquo; on September 10, covering operations disrupted between December 2025 and August 2026 across seven harm areas: cyber operations, influence operations, surveillance, scams and fraud, biological misuse, conventional weapons development and model distillation. Figures cited in the report include: an operation tracked as GTG-20006 targeting &ldquo;more than 20 distinct organizations,&rdquo; including government ministries and defence entities; GTG-50014 exfiltrating &ldquo;more than a terabyte of data&rdquo; from one technology provider; GTG-54002 publishing &ldquo;at least 8,913 articles in about 20 languages&rdquo; across fabricated outlets; GTG-84005 running &ldquo;roughly a thousand fake X/Twitter social media accounts&rdquo;; one intrusion escalating &ldquo;from a single stolen developer token to full administrative control&rdquo; in roughly three hours; and a supply-chain compromise reaching &ldquo;roughly 200&rdquo; downstream customer organisations. All of the above is Anthropic's own account; this publication could not independently verify the victims named or the attributions made.</p>
+          </div>
+          <a class="ni-link" href="https://www.anthropic.com/threat-intelligence-report-september-2026" target="_blank" rel="noopener">Anthropic →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">Sakana AI发布Fugu Max与Fugu Ultra v2，以路由开权重模型池的方式定价</h4>
+            <div class="ni-meta"><span class="src">Sakana AI · MarkTechPost · DataNorth</span> · 2026-09-10 / 09-11</div>
+            <p class="ni-desc">日本公司Sakana AI发布两款编排模型：Fugu Max与Fugu Ultra v2。两者共用同一套编排架构，对外提供单一的、兼容OpenAI接口的API，内部将任务路由到一组开权重模型与专用模型（包括NVIDIA Nemotron系列）。定价方面，Fugu Max为每百万输入token 2美元、每百万输出token 6美元，Sakana称其输出价格比Sonnet 5、GPT-5.6 Terra与Kimi K3低40%至60%；Fugu Ultra v2为输入5美元、输出30美元、缓存输入0.5美元，上下文超过272,000 token后分别升至10美元、45美元与1.00美元。发布日期口径不一：MarkTechPost标为9月10日，Sakana官方页面与部分媒体标为9月11日。性能与成本对比为公司自述口径。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Sakana AI Releases Fugu Max and Fugu Ultra v2, Priced Around Routing Over a Pool of Open-Weight Models</h4>
+            <div class="ni-meta"><span class="src">Sakana AI · MarkTechPost · DataNorth</span> · 2026-09-10 / 09-11</div>
+            <p class="ni-desc">The Japanese company Sakana AI released two orchestration models, Fugu Max and Fugu Ultra v2. Both share the same orchestration architecture: a single OpenAI-compatible API that internally routes each task across a pool of open-weight and specialist models, including NVIDIA's Nemotron series. On pricing, Fugu Max costs $2 per million input tokens and $6 per million output tokens, which Sakana says is 40 to 60 per cent cheaper on output than Sonnet 5, GPT-5.6 Terra and Kimi K3; Fugu Ultra v2 costs $5 per million input tokens, $30 per million output tokens and $0.50 per million cached input tokens, rising to $10, $45 and $1.00 respectively above 272,000 tokens of context. Accounts of the release date differ: MarkTechPost dated it September 10, while Sakana's own page and several outlets dated it September 11. The performance and cost comparisons are the company's own.</p>
+          </div>
+          <a class="ni-link" href="https://sakana.ai/fugu-max-release/" target="_blank" rel="noopener">Sakana AI →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">蚂蚁国际、万事达与Visa启动「Know-Your-Agent」互操作框架</h4>
+            <div class="ni-meta"><span class="src">Ant International · PYMNTS · TNGlobal · Biometric Update</span> · 2026-09-10</div>
+            <p class="ni-desc">蚂蚁国际（Ant International）、万事达（Mastercard）与Visa于9月10日宣布，就面向智能体商业的「Know-Your-Agent」（KYA）互操作框架展开合作，目标是让卡组织、数字钱包、智能体平台与市场平台之间能够相互识别受信任的AI代理程序，减少重复的身份验证。框架要打通的是三套现有协议：Visa的Trusted Agent Protocol（TAP）、万事达的Verifiable Intent与蚂蚁国际的Agentic Mobile Protocol（AMP）。发布方引用的预测称，到2030年AI智能体将编排全球3万亿至5万亿美元的消费商业。据报道，该框架目前仍处于开发阶段，尚未成为三家已经部署的技术标准。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Ant International, Mastercard and Visa Begin Work on a &ldquo;Know-Your-Agent&rdquo; Interoperability Framework</h4>
+            <div class="ni-meta"><span class="src">Ant International · PYMNTS · TNGlobal · Biometric Update</span> · 2026-09-10</div>
+            <p class="ni-desc">Ant International, Mastercard and Visa announced on September 10 that they would collaborate on a &ldquo;Know-Your-Agent&rdquo; (KYA) interoperability framework for agentic commerce, intended to let card networks, digital wallets, agent platforms and marketplaces recognise trusted AI agents across ecosystems and reduce duplicative identity verification. The framework aims to bridge three existing protocols: Visa's Trusted Agent Protocol (TAP), Mastercard's Verifiable Intent and Ant International's Agentic Mobile Protocol (AMP). The announcement cited a projection that AI agents will orchestrate $3 trillion to $5 trillion of global consumer commerce by 2030. According to reports, the framework remains under development and is not yet a deployed technical standard across the three networks.</p>
+          </div>
+          <a class="ni-link" href="https://www.ant-intl.com/en/news/detail/?id=ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce" target="_blank" rel="noopener">Ant International →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://i.tribune.com.pk/media/images/birds-pex1789153861-0/birds-pex1789153861-0-640x480.webp" alt="迁徙鸟类" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label env">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">一条迁飞路线上的三件事：数据、宣言与钱</h3>
+            <div class="ft-meta"><span class="src">综合信源：BirdLife International · Mongabay · The Express Tribune · EnviroNews · Mail &amp; Guardian · Time News · Gozo News</span></div>
+            <div class="ft-desc">
+              <p><strong>一、数据：1,843个物种的一次盘点</strong></p>
+              <p>国际鸟盟9月11日在内罗毕发布的《世界鸟类状况2026》，是该系列的第六版，也是首次专门处理迁徙鸟类。评估的1,843个迁徙物种中，45%数量下降，30%稳定，14%增长，11%趋势不明。受灭绝威胁的200种中，32种极危、57种濒危、111种易危。在四大陆基迁飞区中，东亚—澳大拉西亚迁飞区的下降物种占比最高，为53%。</p>
+              <p><strong>二、一个结构性缺口：保护必须覆盖整条路线</strong></p>
+              <p>据Mongabay，仅有9%的迁徙物种在全年生活史周期（繁殖地、越冬地与沿途停歇地）中均获得充分保护，而非迁徙物种的这一比例为45%。这是迁徙物种与定居物种在保护上的关键区别：一条路线上任何一环失守，整条路线上的保护投入都会被抵消。报告还指出，超过一半已评估的关键生物多样性区域状况较差或极差，Mongabay给出的数字为58%。威胁因素的分布为：入侵物种与疾病影响139个受威胁物种，农业与气候变化各103个，狩猎与诱捕99个，污染96个。</p>
+              <p><strong>三、宣言与钱：内罗毕峰会上的承诺</strong></p>
+              <p>会上签署了《内罗毕迁飞路线宣言》（Nairobi Flyways Declaration），签署方包括政府、科学家、非政府组织与金融机构，内容为加强跨境保护合作。资金方面：据Mongabay，亚洲开发银行承诺30亿美元，用于东亚—澳大拉西亚迁飞区的湿地保护；据EnviroNews，自2021年以来开发性金融机构共动员超过60亿美元的保护资金。2026年6月，全球环境基金（GEF）批准了全球迁飞路线赠款机制，提供897万美元直接赠款与1.07亿美元共同融资，用于900万公顷湿地的保护与修复，估计惠及约33万人。</p>
+              <p><strong>四、一个反向案例</strong></p>
+              <p>报告并非只有下降曲线。据Mongabay，埃及秃鹫在巴尔干地区的种群在一项国际保护行动后出现回升。报告提出的措施清单包括：保护与修复栖息地、制止非法杀戮、减少渔业造成的海鸟死亡、控制入侵物种，以及使农业、林业与基础设施对野生动物更安全。</p>
+              <p><strong>五、可核验与不可核验</strong></p>
+              <p>可核验的是：45%、30%、14%、11%四项相加为100%；32、57与111相加为200，与「约11%」的表述一致；上述数字在国际鸟盟发布稿与多家转载报道中一致。需要区分的是：Mongabay另提到一个与「11%」并列的绝对数1,256种，但该数字适用的是国际自然保护联盟红色名录上超过11,000种鸟类的整体，而非本报告专门评估的迁徙物种，两者不应混用。不可核验的是：本报未能直接读取报告全文PDF（国际鸟盟站点对本报的请求返回403），上述数据均来自其发布稿与各媒体的转述。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Three Things on One Flyway: The Data, the Declaration and the Money</h3>
+            <div class="ft-meta"><span class="src">Sources: BirdLife International · Mongabay · The Express Tribune · EnviroNews · Mail &amp; Guardian · Time News · Gozo News</span></div>
+            <div class="ft-desc">
+              <p><strong>1. The data: a stocktake of 1,843 species</strong></p>
+              <p>State of the World's Birds 2026, released by BirdLife International in Nairobi on September 11, is the sixth edition of the series and the first devoted to migratory birds. Of the 1,843 migratory species assessed, 45 per cent are declining, 30 per cent are stable, 14 per cent are increasing and 11 per cent have unknown trends. Of the 200 species threatened with extinction, 32 are critically endangered, 57 endangered and 111 vulnerable. Among the four major land-based flyway systems, the East Asian-Australasian Flyway has the highest share of declining species, at 53 per cent.</p>
+              <p><strong>2. A structural gap: protection has to cover the whole route</strong></p>
+              <p>According to Mongabay, only 9 per cent of migratory species are adequately protected across their full annual cycle &mdash; breeding grounds, wintering grounds and stopover sites &mdash; against 45 per cent of non-migratory species. This is the key difference between migratory and resident birds in conservation terms: a gap at any one link on a route cancels out protection spending along the rest of it. The report also finds that more than half of assessed Key Biodiversity Areas are in poor or very poor condition, a figure Mongabay puts at 58 per cent. The distribution of threats: invasive species and disease affect 139 threatened species, agriculture and climate change 103 each, hunting and trapping 99, and pollution 96.</p>
+              <p><strong>3. The declaration and the money: commitments at the Nairobi summit</strong></p>
+              <p>The Nairobi Flyways Declaration was signed at the summit by governments, scientists, NGOs and financial institutions, committing them to stronger cross-border conservation cooperation. On finance: according to Mongabay, the Asian Development Bank pledged $3 billion toward wetland protection in the East Asian-Australasian Flyway; according to EnviroNews, development banks have mobilised more than $6 billion in conservation finance since 2021. In June 2026 the Global Environment Facility approved the Global Flyways Grant Mechanism, providing $8.97 million in direct grants and $107 million in co-financing for conservation and restoration across nine million hectares of wetlands, benefiting an estimated 330,000 people.</p>
+              <p><strong>4. One case running the other way</strong></p>
+              <p>The report is not only declining curves. According to Mongabay, the Egyptian vulture population in the Balkans has been recovering following an international conservation effort. The measures the report proposes include protecting and restoring habitats, preventing illegal killing, reducing seabird deaths caused by fishing, controlling invasive species, and making agriculture, forestry and infrastructure safer for wildlife.</p>
+              <p><strong>5. What is and is not verifiable</strong></p>
+              <p>Verifiable: 45, 30, 14 and 11 per cent sum to 100; 32 plus 57 plus 111 equals 200, consistent with the &ldquo;about 11 per cent&rdquo; description; and these figures are consistent across BirdLife's own release and multiple secondary reports. A distinction worth drawing: Mongabay also cites an absolute figure of 1,256 species alongside an 11 per cent share, but that number applies to the more than 11,000 bird species on the IUCN Red List as a whole, not to the migratory species assessed in this report; the two should not be conflated. Not verifiable: this publication could not read the full report PDF directly &mdash; BirdLife's site returned a 403 to our request &mdash; so the data above come from its press release and from secondary reporting.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">地球拯救奖与埃克塞特大学发布《积极临界点》报告，梳理51个解决方案领域</h4>
+            <div class="ni-meta"><span class="src">University of Exeter · The Earthshot Prize · Phys.org · Euronews</span> · 2026-09-11</div>
+            <p class="ni-desc">地球拯救奖（The Earthshot Prize）与英国埃克塞特大学Green Futures Solutions团队发布报告《Positive Tipping Points: Accelerating system change to repair our planet》，识别出51个可能在未来五年内触发快速变化的解决方案领域，覆盖自然保护与修复、清洁空气、海洋复苏、无废弃世界与气候五大方向。报告在蒂姆·兰顿（Tim Lenton）教授的临界点研究基础上扩展，指出清洁电力是「杠杆效应最大」的转型，商品供应链改造、家庭清洁能源与海洋保护区则属于可能影响多个系统的干预措施；全球南方的投资缺口被列为阻碍因素。地球拯救奖首席执行官杰森·瑙夫（Jason Knauf）称该研究「给了我们乐观的理由」。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The Earthshot Prize and the University of Exeter Publish a &ldquo;Positive Tipping Points&rdquo; Report Mapping 51 Solution Areas</h4>
+            <div class="ni-meta"><span class="src">University of Exeter · The Earthshot Prize · Phys.org · Euronews</span> · 2026-09-11</div>
+            <p class="ni-desc">The Earthshot Prize and the University of Exeter's Green Futures Solutions team published &ldquo;Positive Tipping Points: Accelerating system change to repair our planet,&rdquo; identifying 51 solution areas that could trigger rapid change within the next five years across the five Earthshots: protect and restore nature, clean our air, revive our oceans, build a waste-free world and fix our climate. The report extends the tipping-point research of Professor Tim Lenton, singling out clean electricity as the transition with the &ldquo;greatest leverage effect,&rdquo; and naming commodity supply-chain transformation, clean household energy and marine protected areas among the interventions with potential to influence multiple systems; the Global South investment gap is listed as a barrier. Earthshot Prize chief executive Jason Knauf said the research &ldquo;gives us reasons for optimism.&rdquo;</p>
+          </div>
+          <a class="ni-link" href="https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/the-new-tipping-points-playbook-the-earthshot-prize-and-the-university-of-exeter-reveal-how-to-make-environmental-repair-unstoppable/" target="_blank" rel="noopener">University of Exeter →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">佐治亚电力1,137兆瓦光伏购电协议获州公共事业委员会批准</h4>
+            <div class="ni-meta"><span class="src">PR Newswire · PV Tech · Power Technology · Georgia Power</span> · 2026-09-10</div>
+            <p class="ni-desc">美国佐治亚电力（Georgia Power）9月10日宣布，已获佐治亚州公共事业委员会（PSC）批准1,137兆瓦新增光伏购电协议（PPA），来自CARES 2023与CARES 2025两轮招标。公司称，其中2023年招标期的采购规模为公司史上单次最大的光伏采购。CARES项目由佐治亚州公共事业委员会与公司共同设计，允许符合条件的订阅客户按比例认购可再生能源项目的发电量。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Georgia Power Wins Regulatory Approval for 1,137 MW of Solar Power Purchase Agreements</h4>
+            <div class="ni-meta"><span class="src">PR Newswire · PV Tech · Power Technology · Georgia Power</span> · 2026-09-10</div>
+            <p class="ni-desc">Georgia Power announced on September 10 that the Georgia Public Service Commission had approved 1,137 megawatts of new solar power purchase agreements, procured through the CARES 2023 and CARES 2025 requests for proposals. The company said the procurement under the 2023 programme period was the largest single solar procurement in its history. The CARES programme, developed with the Georgia PSC, allows eligible subscribers to buy a pro-rata share of the output of renewable resources.</p>
+          </div>
+          <a class="ni-link" href="https://www.prnewswire.com/news-releases/georgia-power-receives-approval-for-1-137-mw-of-new-solar-power-purchase-agreements-through-cares-program-302874678.html" target="_blank" rel="noopener">PR Newswire →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">沃尔沃集团宣布在瑞典马里斯塔德建70兆瓦／260兆瓦时储能园区，预计2027年投运</h4>
+            <div class="ni-meta"><span class="src">PR Newswire · Automotive World · Nordic Property News · TimesLIVE</span> · 2026-09-10</div>
+            <p class="ni-desc">沃尔沃集团（Volvo Group）9月10日宣布，将在瑞典西部马里斯塔德（Mariestad）建设一座能源园区，初期包含约70兆瓦／260兆瓦时的电池储能设施，公司称将成为瑞典最大的能源园区之一。园区分两条路径推进：大型电池储能设施用于支撑区域电网稳定，以及一个用于开发与测试新型能源方案的试验台。公司预计园区在2027年投入运行；附近规划中的电池电芯工厂计划在2030年之后投产。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Volvo Group to Build a 70MW/260MWh Energy Park in Mariestad, Sweden, Targeting 2027 Operation</h4>
+            <div class="ni-meta"><span class="src">PR Newswire · Automotive World · Nordic Property News · TimesLIVE</span> · 2026-09-10</div>
+            <p class="ni-desc">Volvo Group announced on September 10 that it will build an energy park in Mariestad in western Sweden, initially comprising a battery storage facility of about 70MW/260MWh, which the company says will make it one of the largest energy parks in Sweden. The park will be developed along two tracks: the large-scale battery storage facility, to support grid stability in the region, and a test bed for developing and testing new energy solutions. The company expects the park to become operational during 2027; a battery cell production plant planned nearby is scheduled to begin production after 2030.</p>
+          </div>
+          <a class="ni-link" href="https://www.prnewswire.com/news-releases/volvo-group-announces-energy-park-initiative-as-next-step-in-mariestad-302874888.html" target="_blank" rel="noopener">PR Newswire →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">巴西亚马逊毁林警报面积降至2,874平方公里，为2013年以来最低</h4>
+            <div class="ni-meta"><span class="src">Mongabay · Observatório do Clima · edie</span> · 2026-08（数据期间 2025-08 至 2026-07）</div>
+            <p class="ni-desc">巴西国家空间研究院（INPE）DETER系统数据显示，2025年8月至2026年7月的十二个月内，亚马逊地区毁林警报面积为2,874平方公里，较上一周期下降36%，比前十年均值低55.6%；若并入更早的DETER数据，这是2013年以来的最低值。该下降与巴西近年加强执法、监测与土著领地保护的进程同期发生。需要注意的是，「警报面积」是卫星近实时监测指标，与年度毁林率的官方统计（PRODES）口径不同，两者不应直接比较。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Deforestation Alerts in the Brazilian Amazon Fall to 2,874 Square Kilometres, the Lowest Since 2013</h4>
+            <div class="ni-meta"><span class="src">Mongabay · Observatório do Clima · edie</span> · 2026-08 (data period 2025-08 to 2026-07)</div>
+            <p class="ni-desc">Data from the DETER system run by Brazil's National Institute for Space Research (INPE) show 2,874 square kilometres under deforestation alerts in the Amazon over the twelve months from August 2025 to July 2026, down 36 per cent from the previous period and 55.6 per cent below the preceding ten-year average; including earlier DETER data, it is the lowest total since 2013. The decline coincides with Brazil's recent strengthening of enforcement, monitoring and protection of Indigenous territories. Note that &ldquo;alert area&rdquo; is a near-real-time satellite monitoring measure and is defined differently from the official annual deforestation rate (PRODES); the two should not be compared directly.</p>
+          </div>
+          <a class="ni-link" href="https://news.mongabay.com/2026/08/amazon-deforestation-alerts-fall-to-lowest-level-since-2013-brazilian-data-show/" target="_blank" rel="noopener">Mongabay →</a>
+        </div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
+  // 点图看大图（原图通常比版面里的大得多）
+  var lbx = document.createElement('div');
+  lbx.className = 'lbx';
+  lbx.innerHTML = '<img alt=""><div class="lbx-tip">点击任意处关闭 · Click anywhere to close</div>';
+  document.body.appendChild(lbx);
+  var lbxImg = lbx.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IMG' && /\b(hl-img|ft-img)\b/.test(t.className || '') && t.naturalWidth > 0) {
+      lbxImg.src = t.currentSrc || t.src;
+      lbx.classList.add('on');
+    } else if (lbx.classList.contains('on')) {
+      lbx.classList.remove('on');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lbx.classList.remove('on');
+  });
+})();
+</script>
+
+</body>
+</html>
