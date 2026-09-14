@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-14</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:300px;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:340px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:40%;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+
+/* 图片：完整显示，不裁切。点一下看大图 */
+.hl .hl-img,.ft .ft-img{cursor:zoom-in}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:24px;cursor:zoom-out}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+.lbx .lbx-tip{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+@media print{.lbx{display:none!important}}
+</style>
+<!-- share:start -->
+<meta name="description" content="阿曼宣布塞拉莱地区会议推迟，霍尔木兹海峡临时通航方案未能提交海合会；「限速」呼吁后的第一个交易日：软银跌10.7%，韩国综指收跌3.3%，纳指期货跌1.6%；印尼渡轮「室女座运输8号」在爪哇海倾覆，载243人，至9月14日仍有129人失踪">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.010 · 2026-09-14 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="阿曼宣布塞拉莱地区会议推迟，霍尔木兹海峡临时通航方案未能提交海合会；「限速」呼吁后的第一个交易日：软银跌10.7%，韩国综指收跌3.3%，纳指期货跌1.6%；印尼渡轮「室女座运输8号」在爪哇海倾覆，载243人，至9月14日仍有129人失踪">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-14.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.aljazeera.com/wp-content/uploads/2026/09/GettyImages-2294401911-1-1789387255.jpg?resize=1920%2C1440">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.010 · 2026-09-14 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="阿曼宣布塞拉莱地区会议推迟，霍尔木兹海峡临时通航方案未能提交海合会；「限速」呼吁后的第一个交易日：软银跌10.7%，韩国综指收跌3.3%，纳指期货跌1.6%；印尼渡轮「室女座运输8号」在爪哇海倾覆，载243人，至9月14日仍有129人失踪">
+<meta name="twitter:image" content="https://www.aljazeera.com/wp-content/uploads/2026/09/GettyImages-2294401911-1-1789387255.jpg?resize=1920%2C1440">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.010 · 2026-09-14 · 陆先生日报 | Luxiansheng Daily","description":"阿曼宣布塞拉莱地区会议推迟，霍尔木兹海峡临时通航方案未能提交海合会；「限速」呼吁后的第一个交易日：软银跌10.7%，韩国综指收跌3.3%，纳指期货跌1.6%；印尼渡轮「室女座运输8号」在爪哇海倾覆，载243人，至9月14日仍有129人失踪","datePublished":"2026-09-14","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-14.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://www.aljazeera.com/wp-content/uploads/2026/09/GettyImages-2294401911-1-1789387255.jpg?resize=1920%2C1440"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.010</div>
+    <div>2026.09.14 MONDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">本报9月13日那期预告的塞拉莱会谈没有开成。阿曼外交大臣巴德尔·布赛迪9月13日在社交平台X上宣布，原定9月14日在塞拉莱举行的地区会议推迟；截至9月14日，未公布新日期。巴林此前表示不出席，沙特阿拉伯提交了修正案。另一条线上，达里奥·阿莫代伊9月12日那篇呼吁全行业限速的长文，在9月14日亚洲开盘后转为价格：软银集团跌10.7%，韩国综合股价指数收跌3.3%，美股期货三大合约齐跌；同一周末，山姆·奥尔特曼向《财富》确认OpenAI今年不上市。印度尼西亚方面，载有243人的「室女座运输8号」9月13日凌晨在爪哇海马萨伦博海域倾覆，至9月14日仍有129人失踪，17艘舰艇与飞机投入搜救。菲律宾棉兰老穆斯林自治区9月14日举行史上第一次议会选举，投票在多起枪击与爆炸事件中进行。大西洋飓风季则在9月12日创下卫星时代「最晚首个飓风」纪录——整季至今一个飓风都没有。以下各条均标注信源，本报不就任何一方的政策作出评价，也不预测事件走向。</p>
+    <p class="en-content" lang="en">The Salalah talks flagged in this publication's September 13 issue did not take place. Oman's foreign minister, Badr Albusaidi, announced on X on September 13 that the regional meeting set for September 14 in Salalah had been postponed; as of September 14 no new date had been published. Bahrain had said it would not attend, and Saudi Arabia submitted amendments. On a separate track, the long essay Dario Amodei published on September 12 calling for an industry-wide slowdown turned into prices when Asian markets opened on September 14: SoftBank Group fell 10.7 per cent, South Korea's Kospi closed down 3.3 per cent, and all three major US futures contracts declined. Over the same weekend Sam Altman told Fortune that OpenAI would not go public this year. In Indonesia, the Virgo Transport 8, carrying 243 people, overturned in the Masalembo waters of the Java Sea in the early hours of September 13; 129 people were still missing on September 14, with 17 ships and aircraft committed to the search. The Bangsamoro Autonomous Region in Muslim Mindanao held its first parliamentary election on September 14, with voting taking place amid several shootings and an explosion. And on September 12 the Atlantic hurricane season set a satellite-era record for the latest first hurricane — the season has yet to produce one. Sources are given for every item below. This publication offers no assessment of any party's policy and makes no prediction about how events will unfold.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl">
+        <img class="hl-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/GettyImages-2294401911-1-1789387255.jpg?resize=1920%2C1440" alt="霍尔木兹海峡航运" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">阿曼宣布塞拉莱地区会议推迟，霍尔木兹海峡临时通航方案未能提交海合会</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · CNN · Bloomberg · Oman Observer · Middle East Monitor · 2026-09-14</div>
+            <p class="hl-desc">原定9月14日在阿曼南部城市塞拉莱举行的地区外长会议已推迟。据半岛电视台与CNN报道，阿曼外交大臣巴德尔·布赛迪（Badr Albusaidi）9月13日在社交平台X上写道：「出于凝聚共识的考虑，原定明日在塞拉莱举行的地区会议已推迟。」截至9月14日，未公布新的会期。这本应是2026年2月美以对伊朗开战以来，海湾阿拉伯国家合作委员会六国外长与伊朗高级官员的首次会晤，伊朗外交部长阿巴斯·阿拉格齐（Abbas Araghchi）与伊拉克代表原定出席。据半岛电视台，巴林此前已表示不参加，理由是在伊朗自2月以来的袭击之后出席相当于「绥靖」（appeasement）；沙特阿拉伯则要求推迟，并对伊朗—阿曼方案提交了修正案，据CNN与Axios报道，利雅得担心相关措辞会「确立一种利雅得无法接受的新现状」。半岛电视台援引伊朗外交部发言人埃斯梅尔·巴加埃（Esmaeil Baghaei）称：「我们将与阿曼协商，在下一步决定如何宣布或登记该协议。」本报未取得会议文本，不就推迟原因作出超出上述表态之外的陈述。交叉核验：Al Jazeera · CNN · Bloomberg · Oman Observer</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Oman Postpones the Salalah Regional Meeting, Leaving the Interim Hormuz Shipping Plan Unpresented to the GCC</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · CNN · Bloomberg · Oman Observer · Middle East Monitor · 2026-09-14</div>
+            <p class="hl-desc">The regional foreign ministers' meeting set for September 14 in the southern Omani city of Salalah has been postponed. According to Al Jazeera and CNN, Oman's foreign minister, Badr Albusaidi, wrote on X on September 13: "In the interests of consensus the regional meeting set for tomorrow in Salalah has been postponed." No new date had been announced as of September 14. It would have been the first meeting between the foreign ministers of the six Gulf Cooperation Council states and a senior Iranian official since the United States and Israel went to war with Iran in February 2026; Iranian Foreign Minister Abbas Araghchi and Iraqi representatives had been due to attend. Al Jazeera reported that Bahrain had already said it would not take part, on the grounds that attending after Iran's attacks since February would amount to "appeasement," and that Saudi Arabia requested the postponement and submitted amendments to the Iran-Oman proposal; CNN and Axios reported Riyadh's concern that the wording would "establish a new status quo which would be unacceptable to Riyadh." Al Jazeera quoted Iranian foreign ministry spokesman Esmaeil Baghaei as saying: "In consultation with Oman, in the next step, we will make a decision on how to announce or register the agreement." This publication has not obtained the text under discussion and makes no statement about the reasons for the postponement beyond those quoted above. Cross-verified: Al Jazeera · CNN · Bloomberg · Oman Observer</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news-analysis/2026/9/14/temporary-hormuz-solution-deferred-as-iran-arab-summit-falls-through" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://i.abcnewsfe.com/a/60835682-12dc-4b4c-a209-4f45cbeeaee3/wirestory_0b44bfb43960c6ae850567c0c4e5003a_16x9.jpg?w=1600" alt="亚洲股市交易屏幕" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">「限速」呼吁后的第一个交易日：软银跌10.7%，韩国综指收跌3.3%，纳指期货跌1.6%</h2>
+            <div class="hl-meta"><span class="src">AP（经 ABC News）</span> · Nikkei Asia · Yahoo Finance · CNN Business · 2026-09-14</div>
+            <p class="hl-desc">据美联社（经ABC新闻转发）9月14日报道，日经225指数收报63,492.99点，跌0.8%；韩国综合股价指数收报6,684.37点，跌3.3%；OpenAI投资方软银集团跌10.7%。美股期货方面，标普500期货跌0.7%、道指期货跌0.2%、纳斯达克期货跌1.6%；英伟达跌2.7%，英特尔跌近6%。据《日经亚洲》与News On Japan，SK海力士跌6.4%、三星电子跌4.1%、铠侠控股跌6.4%、东京电子跌1%。触发因素为本报9月13日那期已报道的两件事：Anthropic首席执行官达里奥·阿莫代伊（Dario Amodei）9月12日发表约3,800字长文，呼吁全行业放慢前沿模型推进速度以留出安全验证时间；OpenAI首席执行官山姆·奥尔特曼（Sam Altman）随后表态支持，并向《财富》确认公司今年不进行首次公开募股。同日能源与汇率方面（美联社口径）：布伦特原油每桶107.37美元，涨2.6%；美国原油每桶102.39美元，涨2.3%；美元兑日元报154.48，欧元兑美元报1.1547。本报仅记录价格与当事人公开表态，不作任何投资相关判断。交叉核验：AP · Nikkei Asia · Yahoo Finance · CNN Business</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">The First Trading Day After the Slowdown Call: SoftBank Down 10.7%, the Kospi Down 3.3%, Nasdaq Futures Down 1.6%</h2>
+            <div class="hl-meta"><span class="src">AP (via ABC News)</span> · Nikkei Asia · Yahoo Finance · CNN Business · 2026-09-14</div>
+            <p class="hl-desc">The Associated Press, carried by ABC News on September 14, reported the Nikkei 225 closing at 63,492.99, down 0.8 per cent, and South Korea's Kospi at 6,684.37, down 3.3 per cent, with SoftBank Group — an OpenAI investor — down 10.7 per cent. In US futures, the S&amp;P 500 contract was down 0.7 per cent, the Dow contract down 0.2 per cent and the Nasdaq contract down 1.6 per cent; Nvidia fell 2.7 per cent and Intel nearly 6 per cent. Nikkei Asia and News On Japan reported SK Hynix down 6.4 per cent, Samsung Electronics down 4.1 per cent, Kioxia Holdings down 6.4 per cent and Tokyo Electron down 1 per cent. The trigger was the pair of events reported in this publication's September 13 issue: Anthropic chief executive Dario Amodei published an essay of roughly 3,800 words on September 12 calling on the industry to slow the advance of frontier models to leave time for safety work, and OpenAI chief executive Sam Altman then backed the call and told Fortune his company would not hold an initial public offering this year. On energy and currencies the same day, on AP's figures: Brent crude at $107.37 a barrel, up 2.6 per cent; US crude at $102.39, up 2.3 per cent; the dollar at 154.48 yen and the euro at $1.1547. This publication records prices and public statements only, and offers no investment judgement of any kind. Cross-verified: AP · Nikkei Asia · Yahoo Finance · CNN Business</p>
+          </div>
+          <a class="hl-link" href="https://abcnews.com/Business/wireStory/asian-shares-mixed-openai-investor-softbank-shares-plunge-136415006" target="_blank" rel="noopener">ABC News / AP →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/AFP__20260913__C86N7RH__v1__HighRes__IndonesiaAccidentFerry-1789277750.jpg?resize=1920%2C1440" alt="印度尼西亚渡轮事故搜救" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">印尼渡轮「室女座运输8号」在爪哇海倾覆，载243人，至9月14日仍有129人失踪</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · AP（经 NPR） · ABC News · 2026-09-14</div>
+            <p class="hl-desc">据半岛电视台，载客渡轮「室女座运输8号」（Virgo Transport 8）9月12日从东爪哇省泗水（Surabaya）驶往南加里曼丹省马辰（Banjarmasin），船上共243人，其中乘客213人、船员30人。据美联社，船长在9月13日凌晨发出遇险呼叫，称船体在最高约3米的涌浪中倾斜；当地时间凌晨2时前后失去联系，约两小时后当局接到该船在爪哇海马萨伦博（Masalembo）海域倾覆的消息，位置距马辰约148公里（92英里）。截至9月14日，美联社报道至少6人死亡、108人获救、129人失踪；半岛电视台9月13日的数字为6人死亡、107人获救、130人失踪。马辰搜救办公室负责人伊·普图·苏达雅纳（I Putu Sudayana）对半岛电视台表示：「这对船只来说极其危险。连我们那艘40米长的国家搜救局船只都面临很大风险。」幸存者、随车前往的巴士司机艾哈迈德·绍迪（Ahmad Saudi）向美联社描述，船上似乎超载，许多乘客只能睡在走廊和公共区域，船体在毫无预兆的情况下突然倾斜。当局正在调查天气与可能的技术故障，事故原因尚未确定。交叉核验：Al Jazeera · AP · ABC News</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">The Ferry Virgo Transport 8 Overturns in the Java Sea With 243 Aboard; 129 Still Missing on September 14</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · AP (via NPR) · ABC News · 2026-09-14</div>
+            <p class="hl-desc">According to Al Jazeera, the passenger ferry Virgo Transport 8 left Surabaya in East Java province on September 12 bound for Banjarmasin in South Kalimantan, carrying 243 people — 213 passengers and 30 crew. The Associated Press reported that the captain issued a distress call in the early hours of September 13 saying the vessel was listing in swells of up to three metres; contact was lost at about 2am local time, and roughly two hours later authorities were told the ship had overturned in the Masalembo waters of the Java Sea, about 148 kilometres (92 miles) from Banjarmasin. As of September 14, AP reported at least six dead, 108 rescued and 129 missing; Al Jazeera's September 13 figures were six dead, 107 rescued and 130 missing. I Putu Sudayana, head of the search-and-rescue office in Banjarmasin, told Al Jazeera: "It is extremely risky for vessels. Even our Basarnas vessel, which is 40 metres long, is at great risk." A survivor, bus driver Ahmad Saudi, told AP the ferry appeared overcrowded, with many passengers sleeping in hallways and common areas, and that it listed suddenly without warning. Authorities are examining the weather and possible technical failure; the cause has not been determined. Cross-verified: Al Jazeera · AP · ABC News</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/13/one-dead-102-rescued-after-indonesian-ferry-goes-missing-in-java-sea" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/AP26256139332764-1789342518.jpg?resize=1920%2C1440" alt="菲律宾棉兰老穆斯林自治区议会选举投票" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">菲律宾棉兰老穆斯林自治区举行首次议会选举，239万选民争夺80个议席</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Philippine Daily Inquirer · Rappler · 菲律宾通讯社 · 2026-09-14</div>
+            <p class="hl-desc">菲律宾棉兰老穆斯林自治区（BARMM）9月14日举行史上第一次议会选举。据《菲律宾每日询问报》，登记选民239.3万人，全区设1,186个投票中心、5,212个并组票站；选民需作出八项选择——一个地区政党、一名选区代表和六名界别代表。议会共80席，由40名政党代表、32名选区代表和8名界别代表（移住社群、妇女、青年、传统领袖与教长）组成。老弱及孕妇优先投票于上午5时开始，普通投票时间为上午7时至晚7时（格林尼治时间11时），据半岛电视台，部分票站因开门延迟延至晚9时。投票期间发生多起暴力事件：据半岛电视台与《询问报》，9月13日晚哥打巴托市一处学校票站附近发生枪击，3人死亡、15人受伤；9月14日上午7时该市再度发生枪击，4人受伤，其中包括一名警员；另有一枚土制炸弹在携带者手中爆炸致其受伤。据《询问报》，巴西兰省马卢索镇68个票站中有36个发现预先填涂的选票，需重新印制。该自治区依据2014年和平协议于2019年设立，取代摩洛伊斯兰解放阵线（MILF）主导的过渡机构；半岛电视台称，自1970年代以来当地冲突已造成约15万人死亡。本报未取得计票结果，不对选举结果作任何推断。交叉核验：Al Jazeera · Philippine Daily Inquirer · Rappler</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">The Philippines' Bangsamoro Region Holds Its First Parliamentary Election: 2.39 Million Voters, 80 Seats</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Philippine Daily Inquirer · Rappler · Philippine News Agency · 2026-09-14</div>
+            <p class="hl-desc">The Bangsamoro Autonomous Region in Muslim Mindanao (BARMM) held its first parliamentary election on September 14. According to the Philippine Daily Inquirer, 2.393 million voters were registered across 1,186 voting centres and 5,212 clustered precincts, and each voter made eight choices — one regional political party, one district representative and six sectoral representatives. The parliament has 80 seats: 40 party representatives, 32 district representatives and eight sectoral representatives drawn from settler communities, women, youth, traditional leaders and the ulama. Priority voting for older people, persons with disabilities and pregnant women opened at 5am, with regular voting from 7am to 7pm (11:00 GMT); Al Jazeera reported that some precincts stayed open until 9pm because of late openings. Several violent incidents were recorded. Al Jazeera and the Inquirer reported a shooting near a school polling station in Cotabato City on the night of September 13 that killed three people and wounded 15, a second shooting in the city at about 7am on September 14 that wounded four including a police officer, and an improvised bomb that injured the person carrying it. The Inquirer reported that pre-shaded ballots were found in 36 of 68 precincts in Maluso, Basilan, requiring reprints. The region was created in 2019 under a 2014 peace deal, replacing the transition body led by the Moro Islamic Liberation Front; Al Jazeera puts the local conflict's death toll since the 1970s at about 150,000. This publication has not obtained the count and draws no inference about the outcome. Cross-verified: Al Jazeera · Philippine Daily Inquirer · Rappler</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/14/philippines-muslim-majority-bangsamoro-region-votes-for-first-parliament" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://media.cnn.com/api/v1/images/stellar/prod/ap26239555193205.jpg?c=16x9&amp;q=w_800,c_fill" alt="大西洋热带风暴卫星云图" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">大西洋飓风季9月12日创卫星时代「最晚首个飓风」纪录，整季至今零飓风</h2>
+            <div class="hl-meta"><span class="src">CNN</span> · ABC News · weather.com · Newsweek · 2026-09-12 / 2026-09-14</div>
+            <p class="hl-desc">据CNN，截至9月12日大西洋尚未生成任何飓风，刷新了卫星时代「首个飓风出现最晚」的纪录；CNN称此时距本季开始已103天。据ABC新闻，此前的纪录日期为9月11日，由2002年的「古斯塔夫」（Gustav）与2013年的「温贝托」（Humberto）共同保持；ABC所引卫星纪录起始年份为1966年。本季大西洋迄今共生成5个获命名风暴——Arthur、Bertha、Cristobal、Dolly、Edouard——全部停留在热带风暴级别。ABC援引美国国家海洋和大气管理局（NOAA）数据称，常年到9月10日的平均值为8个命名风暴、3个飓风。weather.com称这是1950年以来最不活跃的开局。NOAA首席季节性飓风预报员马修·罗森克兰斯（Matthew Rosencrans）表示：「厄尔尼诺会加大热带大西洋的垂直风切变，信号在加勒比海上空最强。」迈阿密大学的安迪·黑泽尔顿（Andy Hazelton）对ABC说：「太平洋的活跃程度与2015年这类此前的极强厄尔尼诺事件相当」，并称「一旦出现极窄的窗口，仍可能有系统生成，各方应保持警惕」。本报只记录观测与预报机构的公开数据，不作气候归因判断。交叉核验：CNN · ABC News · weather.com · Newsweek</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">On September 12 the Atlantic Set a Satellite-Era Record for the Latest First Hurricane — and Still Has None</h2>
+            <div class="hl-meta"><span class="src">CNN</span> · ABC News · weather.com · Newsweek · 2026-09-12 / 2026-09-14</div>
+            <p class="hl-desc">According to CNN, no hurricane had formed in the Atlantic as of September 12, setting a satellite-era record for the latest first hurricane of a season; CNN put the figure at 103 days into the season. ABC News reported that the previous record date was September 11, shared by Gustav in 2002 and Humberto in 2013, and dated the satellite record it cites to 1966. The Atlantic has produced five named storms so far this season — Arthur, Bertha, Cristobal, Dolly and Edouard — all of which stayed at tropical-storm strength. Citing the National Oceanic and Atmospheric Administration, ABC gave the long-term average by September 10 as eight named storms and three hurricanes. Weather.com called it the least active start since 1950. Matthew Rosencrans, NOAA's lead seasonal hurricane forecaster, said: "El Nino increases vertical wind shear over the tropical Atlantic, with the strongest signal over the Caribbean." Andy Hazelton of the University of Miami told ABC that "the activity in the Pacific is fairly similar to previous very strong El Nino events like 2015," and that "folks should stay vigilant in case a system does find a very narrow window." This publication records the published data of observing and forecasting agencies only, and makes no attribution judgement. Cross-verified: CNN · ABC News · weather.com · Newsweek</p>
+          </div>
+          <a class="hl-link" href="https://www.cnn.com/2026/09/12/weather/el-nino-hurricane-storm-atlantic-record-climate" target="_blank" rel="noopener">CNN →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/2026-09-12T083435Z_365207060_RC2JHNATPGAI_RTRMADP_3_IRAN-CRISIS-SAUDI-PIPELINE-SATELLITE-BEFORE-AFTER-1789207310.jpg?resize=1200%2C675" alt="沙特东西输油管道卫星影像对比" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label pol">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">塞拉莱那张没摊开的海图：一份临时通航方案，和它在9月13日被推迟的四天</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera · CNN · Bloomberg · Oman Observer（援引《金融时报》） · Middle East Monitor · Semafor · AP · S&amp;P Global</span></div>
+            <div class="ft-desc">
+              <p><strong>方案本身</strong></p>
+              <p>据半岛电视台9月14日的报道，原定在塞拉莱提交的是一份「临时」安排，不是重开霍尔木兹海峡。其要点为：为商船设立临时进出走廊，入境航道走伊朗水域，出境航道主要走阿曼水域；设立自愿性通行费，用于助航、环境保护与搜救；精确的海图与航路细节原定在会上分发。伊朗方面反复强调，这不等于海峡全面重开。据阿曼《观察家报》援引《金融时报》，德黑兰与马斯喀特此前已就该临时安排达成一致，其有效期至伊朗与海湾邻国就该水道的未来地位达成协议为止。</p>
+              <p><strong>四天时间线</strong></p>
+              <p>9月10日至11日：多架无人机袭击沙特阿拉伯东西输油管道，据Semafor与半岛电视台，该管道随后关闭；据CNBC，这条绕开霍尔木兹海峡的旁路涉及全球约4%的石油供应。9月11日：《金融时报》报道海湾国家考虑于下周与伊朗会面，彭博社同日报道称会议可能安排在塞拉莱。同期，胡塞武装控制也门穆哈港，据标普全球，穆哈及附近迈永岛的易手削弱了沙特红海出口通道的韧性。9月13日：巴林表态不出席；沙特阿拉伯提交修正案并要求推迟；阿曼外交大臣布赛迪当日在X上宣布会议推迟。9月14日：半岛电视台报道，会议未设新日期。</p>
+              <p><strong>三方各自的表述</strong></p>
+              <p>伊朗外交部发言人巴加埃称：「我们将与阿曼协商，在下一步决定如何宣布或登记该协议。」据半岛电视台，伊朗方面将推迟归因于沙特的反对，但未说明细节。据CNN与Axios，沙特的顾虑在于方案措辞可能「确立一种利雅得无法接受的新现状」。巴林的公开理由是，在伊朗自2月以来的袭击之后出席相当于「绥靖」。据半岛电视台援引的报道，巴林还提出，霍尔木兹海峡应当在不设歧视、不收费、不需许可的前提下保持开放。</p>
+              <p><strong>背景：这是2月以来的第一次</strong></p>
+              <p>据阿曼《观察家报》援引《金融时报》，这原本将是2026年2月美国与以色列对伊朗开战以来，海合会六国外长与伊朗高级官员的首次会晤；阿拉格齐上一次出席海合会层级的会议是2024年10月在多哈。伊朗自2026年2月28日起对正常商业通航关闭霍尔木兹海峡。据美联社9月14日的市场报道，布伦特原油当日报每桶107.37美元。</p>
+              <p><strong>分析引述与本报立场</strong></p>
+              <p>半岛电视台援引国际危机组织中东与北非项目副主任阿里·瓦埃兹（Ali Vaez）的分析称：「地区认可面越广，美国就越难把这一安排斥为伊朗的单方面强加。」这是被引述的第三方观点，不代表本报判断。可核验的是上述日期、当事方公开表态原文与已公布的价格数据；不可核验的是塞拉莱会议的完整议程、参会名单与新会期。本报不预测会谈是否重启，也不评价任何一方的政策。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">The Chart That Was Never Unrolled at Salalah: An Interim Shipping Plan, and the Four Days That Ended in Postponement</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera · CNN · Bloomberg · Oman Observer (citing the Financial Times) · Middle East Monitor · Semafor · AP · S&amp;P Global</span></div>
+            <div class="ft-desc">
+              <p><strong>What was on the table</strong></p>
+              <p>According to Al Jazeera on September 14, what was to be tabled at Salalah was an "interim" arrangement, not a reopening of the Strait of Hormuz. Its elements: temporary entry and exit corridors for commercial vessels, with the inbound lane running through Iranian waters and the outbound lane mostly through Omani waters; voluntary tolls to fund navigation aids, environmental protection and search-and-rescue; and precise maps and route details to be distributed at the meeting. Iran repeatedly stressed that this would not amount to a full reopening. The Oman Observer, citing the Financial Times, reported that Tehran and Muscat had already agreed the interim arrangement, to run until Iran and its Gulf neighbours settle the waterway's future status.</p>
+              <p><strong>Four days</strong></p>
+              <p>September 10-11: drones struck Saudi Arabia's East-West crude pipeline, which was then shut, according to Semafor and Al Jazeera; CNBC reported that the Hormuz bypass carries the equivalent of about 4 per cent of global oil supply. September 11: the Financial Times reported that Gulf states were weighing a meeting with Iran the following week, and Bloomberg reported the same day that it might be held in Salalah. Over the same period Houthi forces took the Yemeni port of Mokha; S&amp;P Global assessed that the changes of hands at Mokha and nearby Mayun island erode the resilience of Saudi Arabia's Red Sea export route. September 13: Bahrain said it would not attend; Saudi Arabia submitted amendments and asked for a postponement; Oman's foreign minister, Albusaidi, announced the postponement on X that day. September 14: Al Jazeera reported that no new date had been set.</p>
+              <p><strong>What each side said</strong></p>
+              <p>Iranian foreign ministry spokesman Baghaei said: "In consultation with Oman, in the next step, we will make a decision on how to announce or register the agreement." According to Al Jazeera, Iran attributed the postponement to Saudi objection without giving details. CNN and Axios reported that Riyadh's concern was that the wording would "establish a new status quo which would be unacceptable to Riyadh." Bahrain's stated reason was that attending after Iran's attacks since February would amount to "appeasement"; reporting cited by Al Jazeera added that Bahrain had argued Hormuz should be open without discrimination, fees or permits.</p>
+              <p><strong>Background: the first since February</strong></p>
+              <p>According to the Oman Observer, citing the Financial Times, this would have been the first meeting between GCC foreign ministers and a senior Iranian official since the United States and Israel went to war with Iran in February 2026; Araghchi last attended a GCC-level gathering in Doha in October 2024. Iran has kept the Strait of Hormuz closed to normal commercial traffic since February 28, 2026. In AP's market report of September 14, Brent crude stood at $107.37 a barrel.</p>
+              <p><strong>A cited analysis, and this publication's position</strong></p>
+              <p>Al Jazeera quoted Ali Vaez, deputy director of the Middle East and North Africa programme at the Crisis Group: "The broader the regional buy-in, the harder it becomes for the US to dismiss the arrangement as an Iranian diktat." That is a third-party view, quoted as such, and not a judgement of this publication. Verifiable: the dates above, the quoted statements of the parties, and the published price data. Not verifiable: the full agenda of the Salalah meeting, its participant list, and any new date. This publication does not predict whether the talks will resume and offers no assessment of any party's policy.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">第十八次金砖峰会在新德里闭幕，《新德里宣言》以协商一致方式通过</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · Eurasia Review · Business Today</span> · 2026-09-14</div>
+            <p class="ni-desc">据半岛电视台，第十八次金砖国家峰会于9月12日至13日在新德里举行，中国国家主席习近平、俄罗斯总统弗拉基米尔·普京、印度总理纳伦德拉·莫迪等11个成员国领导人出席；《新德里宣言》在首日以协商一致方式通过。半岛电视台归纳的要点包括：就中东局势呼吁「最大限度克制」，但未点名美国、以色列或伊朗，与上一年的明确谴责措辞不同；涉乌克兰部分使用「对话、磋商与外交」的一般性表述，未直接提及该冲突；就巴勒斯坦问题表达强烈反对强迫迁移，并呼吁巴勒斯坦建国与获得联合国正式成员资格；谴责单边贸易措施但未点名美国。半岛电视台称，伊朗与阿拉伯联合酋长国这两个立场相对的成员国最终接受了「经过审慎一般化处理的措辞」。莫迪在会上表示：「金砖不针对任何人。」该电视台援引的数据为：11个成员国合计约占全球国内生产总值的40%、全球人口的近一半。本报未取得宣言全文与磋商过程的一手材料。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The 18th BRICS Summit Closes in New Delhi With the Declaration Adopted by Consensus</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · Eurasia Review · Business Today</span> · 2026-09-14</div>
+            <p class="ni-desc">According to Al Jazeera, the 18th BRICS summit ran in New Delhi on September 12-13, attended by leaders of the 11 member states including Chinese President Xi Jinping, Russian President Vladimir Putin and Indian Prime Minister Narendra Modi; the New Delhi Declaration was adopted by consensus on the first day. The points Al Jazeera drew out: on the Middle East, a call for "maximum restraint" that named neither the United States, nor Israel, nor Iran — a departure from the explicit condemnation in last year's text; on Ukraine, generic language about "dialogue, consultation and diplomacy" without naming the conflict; on Palestine, strong opposition to forced displacement and a call for Palestinian statehood and full UN membership; and condemnation of unilateral trade measures without naming the United States. Al Jazeera reported that Iran and the United Arab Emirates, members on opposing sides of the Middle East conflict, ultimately accepted "carefully generalised language." Modi told the summit: "BRICS is not against anyone." The figures cited by the broadcaster: the 11-member bloc accounts for about 40 per cent of global GDP and nearly half the world's population. This publication has not obtained the full text of the declaration or primary material on the negotiations.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/13/brics-summit-2026-what-are-the-key-takeaways" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">巴林拒绝出席塞拉莱会谈，沙特阿拉伯对伊朗—阿曼方案提交修正案</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · CNN · Free Press Journal</span> · 2026-09-13</div>
+            <p class="ni-desc">据半岛电视台，原定出席9月14日塞拉莱会议的国家为伊朗、伊拉克、沙特阿拉伯、阿拉伯联合酋长国、卡塔尔、科威特与阿曼；巴林明确拒绝参加，其理由是在伊朗自2月以来的袭击之后出席相当于「绥靖」。同一报道称，沙特阿拉伯要求推迟会议，并对伊朗—阿曼提出的临时通航方案提交了修正案。据CNN与Axios的报道，利雅得担心该方案的措辞会「确立一种利雅得无法接受的新现状」。半岛电视台特别指出，报道中并未把这次推迟与近期胡塞武装及其他伊朗支持的武装对沙特境内的袭击直接关联起来。据同一报道，与会各方原本要在会上分发精确海图与航路细节。本报未取得修正案文本，也未取得巴林方面的完整声明原文。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Bahrain Declines to Attend the Salalah Talks; Saudi Arabia Files Amendments to the Iran-Oman Plan</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · CNN · Free Press Journal</span> · 2026-09-13</div>
+            <p class="ni-desc">According to Al Jazeera, the countries due at the September 14 meeting in Salalah were Iran, Iraq, Saudi Arabia, the United Arab Emirates, Qatar, Kuwait and Oman; Bahrain refused to take part, saying that attending after Iran's attacks since February would constitute "appeasement." The same report said Saudi Arabia requested the postponement and submitted amendments to the interim shipping plan proposed by Iran and Oman. CNN and Axios reported Riyadh's concern that the plan's wording would "establish a new status quo which would be unacceptable to Riyadh." Al Jazeera noted specifically that its reporting drew no direct link between the postponement and recent attacks on Saudi territory by the Houthis and other Iran-backed groups. The same report said participants had been due to receive precise maps and route details at the meeting. This publication has not obtained the text of the amendments or the full text of Bahrain's statement.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news-analysis/2026/9/14/temporary-hormuz-solution-deferred-as-iran-arab-summit-falls-through" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">美联社记录9月14日能源价格：布伦特原油107.37美元／桶，美国汽油均价4.32美元／加仑</h4>
+            <div class="ni-meta"><span class="src">AP（经 ABC News） · CNBC</span> · 2026-09-14</div>
+            <p class="ni-desc">据美联社9月14日发稿（经ABC新闻转发）：布伦特原油报每桶107.37美元，上涨2.6%；美国原油报每桶102.39美元，上涨2.3%；美国汽油全国均价为每加仑4.32美元，较前一周上涨16美分；柴油为每加仑6.23美元，隔夜上涨3美分。汇率方面，美元兑日元报154.48（前值153.58），欧元兑美元报1.1547（前值1.1598）。此前，据CNBC报道，沙特阿拉伯在东西输油管道遇袭后将其关闭，该管道是绕开霍尔木兹海峡的旁路，涉及全球约4%的石油供应；同一媒体9月13日报道，布伦特原油曾在管道关闭后升破每桶108美元。本报仅记录公开报价，不作价格走势预测，也不提供任何投资相关建议。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">AP's Energy Prices for September 14: Brent at $107.37 a Barrel, US Petrol at $4.32 a Gallon</h4>
+            <div class="ni-meta"><span class="src">AP (via ABC News) · CNBC</span> · 2026-09-14</div>
+            <p class="ni-desc">From the Associated Press wire of September 14, carried by ABC News: Brent crude at $107.37 a barrel, up 2.6 per cent; US crude at $102.39 a barrel, up 2.3 per cent; the US national average for petrol at $4.32 a gallon, 16 cents higher than a week earlier; and diesel at $6.23 a gallon, three cents higher overnight. On currencies, the dollar stood at 154.48 yen against 153.58, and the euro at $1.1547 against $1.1598. CNBC had earlier reported that Saudi Arabia shut its East-West crude pipeline after it was attacked; the line bypasses the Strait of Hormuz and carries the equivalent of about 4 per cent of global oil supply. The same outlet reported on September 13 that Brent had risen above $108 a barrel after the shutdown. This publication records published quotations only, makes no forecast of price movements and gives no investment advice of any kind.</p>
+          </div>
+          <a class="ni-link" href="https://abcnews.com/Business/wireStory/asian-shares-mixed-openai-investor-softbank-shares-plunge-136415006" target="_blank" rel="noopener">ABC News / AP →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">菲律宾选务：部分票站延至晚9时关闭，巴西兰省36个票站发现预先填涂选票</h4>
+            <div class="ni-meta"><span class="src">Philippine Daily Inquirer · Al Jazeera · Rappler</span> · 2026-09-14</div>
+            <p class="ni-desc">据《菲律宾每日询问报》，棉兰老穆斯林自治区9月14日的议会选举中，巴西兰省马卢索镇68个票站里有36个发现预先填涂的选票，需要重新印制；马京达瑙地区有重复投票的报告，拉瑙德尔苏尔省则有涉嫌冒用身份与核验不严的情况。据半岛电视台，部分票站因开门延迟，关闭时间由晚7时延至晚9时。菲律宾选举委员会主席乔治·加西亚（George Garcia）为当日选务的主要发言人。据《询问报》，摩洛伊斯兰解放阵线主席阿霍德·易卜拉欣（Ahod Ebrahim）、自治区过渡期首席部长阿卜杜勒拉乌夫·马卡夸（Abdulraof Macacua）等人当日投票。同一报道记录了至少七起暴力事件，包括哥打巴托市的两起枪击、一起土制炸弹爆炸，以及马京达瑙德尔苏尔省沙里夫·赛多纳·穆斯塔法镇一次导致投票中断的交火。本报未取得选举委员会对上述个案的最终认定。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Philippine Poll Administration: Some Precincts Stay Open Until 9pm; Pre-Shaded Ballots Found in 36 Precincts in Basilan</h4>
+            <div class="ni-meta"><span class="src">Philippine Daily Inquirer · Al Jazeera · Rappler</span> · 2026-09-14</div>
+            <p class="ni-desc">According to the Philippine Daily Inquirer, pre-shaded ballots were found in 36 of 68 precincts in Maluso, Basilan, during the September 14 Bangsamoro parliamentary election and had to be reprinted; there were reports of multiple voting in Maguindanao and of alleged identity theft and lax verification in Lanao del Sur. Al Jazeera reported that some precincts, having opened late, stayed open until 9pm rather than 7pm. George Garcia, chairman of the Commission on Elections, was the principal spokesman on the day's administration. The Inquirer reported that those voting included Moro Islamic Liberation Front chairman Ahod Ebrahim and the region's interim chief minister, Abdulraof Macacua. The same report logged at least seven violent incidents, among them two shootings in Cotabato City, an improvised bomb blast, and a firefight that interrupted voting in Shariff Saydona Mustapha, Maguindanao del Sur. This publication has not obtained the election commission's final findings on any of these cases.</p>
+          </div>
+          <a class="ni-link" href="https://www.inquirer.net/488668/live-updates-barmm-elections-sept-14-2026/" target="_blank" rel="noopener">Philippine Daily Inquirer →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://www.usnews.com/dims4/USNEWS/33064ca/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F4b%2F2fcd16ba7a6b62c77bec1a5394943e%2Ff4b2e19646cb4fdd929c7fbab840bbb9Anthropic_AI_Slowdown__7476.jpg" alt="人工智能行业限速讨论" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label tec">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">从一篇文章到一张报价单：9月12日至14日，「限速」主张如何走完从表态到定价的三天</h3>
+            <div class="ft-meta"><span class="src">综合信源：AP（经 ABC News） · Fortune · Bloomberg · Axios · Engadget · Nikkei Asia · Yahoo Finance · CNN Business · The Washington Post</span></div>
+            <div class="ft-desc">
+              <p><strong>9月12日：两份表态</strong></p>
+              <p>据《华盛顿邮报》与《美国新闻与世界报道》，Anthropic首席执行官达里奥·阿莫代伊9月12日发表长文，主张人工智能行业应放慢推进速度，让安全措施跟上；据Axios与Slashdot，该文约3,800字。本报9月13日那期已记录该文的标题与其中的承诺条款。同日，据《财富》杂志，OpenAI首席执行官山姆·奥尔特曼在专访中表示，公司今年不会进行首次公开募股，「考虑到安全方面正在发生的一切，现在上市是一个不明智的时机」；他并称公司「有很多事要做，比如应对安全与对齐所需要的这一时刻，以及行业与各国政府如何协作」。彭博社与Axios同日报道了这一决定，并指出上市被推迟至明年。据《赫芬顿邮报》，奥尔特曼在同一轮表态中称，即便只有10%的概率导致人类在本世纪末前灭绝，这一风险也是「不可接受的」。多家报道提到，此前数日有一名Anthropic员工因安全顾虑辞职。</p>
+              <p><strong>9月14日：亚洲开盘</strong></p>
+              <p>据美联社（经ABC新闻转发），日经225指数收报63,492.99点，跌0.8%；韩国综合股价指数收报6,684.37点，跌3.3%。软银集团跌10.7%——《日经亚洲》的标题口径为「暴跌11%」。据《日经亚洲》与News On Japan，SK海力士跌6.4%、三星电子跌4.1%、铠侠控股跌6.4%、东京电子跌1%。另据雅虎财经引用的盘前数据，英特尔与超威半导体（AMD）跌逾4%，美光跌3.9%，闪迪（SanDisk）跌4.5%，iShares半导体ETF跌2.8%，Roundhill存储ETF跌5%；该稿给出的首尔口径为三星跌3.8%、SK海力士跌逾5%、韩国综指跌3.6%。本报注意到，雅虎财经与美联社在三星、SK海力士与韩国综指上的百分比存在差异，可能源于取数时点不同（盘前对收盘）；两组数字均按原出处标注，本报不作合并。</p>
+              <p><strong>9月14日：美股期货与个股</strong></p>
+              <p>据美联社，标普500期货跌0.7%、道琼斯期货跌0.2%、纳斯达克期货跌1.6%；英伟达跌2.7%，英特尔跌近6%，博通、德州仪器与超威半导体同样下跌。同一报道记录的能源与汇率数据见本期政治板块快讯。</p>
+              <p><strong>这三天里什么没有改变</strong></p>
+              <p>截至本期发稿，本报未见任何一家公司公布具体的减速时间表、模型发布推迟公告或可核验的第三方评估安排落地。阿莫代伊与奥尔特曼的表态是主张与承诺，不是已执行的措施。同样，OpenAI推迟上市是公司自述的决定，本报未取得任何监管申报文件予以佐证。</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：上述文章的发表日期与篇幅口径、当事人向《财富》所作表述的原文、以及各交易所与通讯社公布的指数点位与涨跌幅。不可核验的是：股价变动与上述表态之间的因果关系。本报只记录时间先后与各家媒体的表述，不断言因果，不评估任何公司或技术的前景，也不提供任何投资相关建议。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">From an Essay to a Price Quote: How the Slowdown Argument Travelled From Statement to Market Between September 12 and 14</h3>
+            <div class="ft-meta"><span class="src">Sources: AP (via ABC News) · Fortune · Bloomberg · Axios · Engadget · Nikkei Asia · Yahoo Finance · CNN Business · The Washington Post</span></div>
+            <div class="ft-desc">
+              <p><strong>September 12: two statements</strong></p>
+              <p>According to The Washington Post and US News &amp; World Report, Anthropic chief executive Dario Amodei published an essay on September 12 arguing that the artificial-intelligence industry should slow its pace so that safety measures can catch up; Axios and Slashdot put its length at roughly 3,800 words. This publication's September 13 issue recorded the essay's title and the commitments it contained. The same day, Fortune reported that OpenAI chief executive Sam Altman said in an interview that his company would not hold an initial public offering this year, because "given everything happening with safety, right now would be an ill-advised moment to go public," and that OpenAI has "a lot of stuff to do, like meeting this moment of what is going to be required for safety and alignment, and how the industry and governments can work together." Bloomberg and Axios reported the decision the same day, noting the listing was pushed to next year. According to HuffPost, Altman said in the same round of comments that even a 10 per cent risk of AI causing human extinction by the end of the decade would be "unacceptable." Several outlets noted that an Anthropic employee had resigned days earlier over safety concerns.</p>
+              <p><strong>September 14: the Asian open</strong></p>
+              <p>The Associated Press, carried by ABC News, reported the Nikkei 225 closing at 63,492.99, down 0.8 per cent, and the Kospi at 6,684.37, down 3.3 per cent. SoftBank Group fell 10.7 per cent — Nikkei Asia's headline put it at 11 per cent. Nikkei Asia and News On Japan reported SK Hynix down 6.4 per cent, Samsung Electronics down 4.1 per cent, Kioxia Holdings down 6.4 per cent and Tokyo Electron down 1 per cent. Pre-market figures cited by Yahoo Finance had Intel and AMD down more than 4 per cent, Micron down 3.9 per cent, SanDisk down 4.5 per cent, the iShares Semiconductor ETF down 2.8 per cent and the Roundhill memory ETF down 5 per cent; that report gave Seoul figures of Samsung down 3.8 per cent, SK Hynix down more than 5 per cent and the Kospi down 3.6 per cent. This publication notes that Yahoo Finance and AP differ on the percentages for Samsung, SK Hynix and the Kospi, plausibly because the figures were taken at different points (pre-market against close); both sets are given as published and are not merged here.</p>
+              <p><strong>September 14: US futures and single stocks</strong></p>
+              <p>According to AP, the S&amp;P 500 futures contract was down 0.7 per cent, the Dow contract down 0.2 per cent and the Nasdaq contract down 1.6 per cent; Nvidia fell 2.7 per cent and Intel nearly 6 per cent, with Broadcom, Texas Instruments and AMD also declining. The energy and currency figures from the same report appear in this issue's politics briefs.</p>
+              <p><strong>What did not change over the three days</strong></p>
+              <p>As of this issue's deadline, this publication has seen no company publish a specific slowdown schedule, a deferred model release, or a verifiable third-party evaluation arrangement taking effect. The statements by Amodei and Altman are positions and pledges, not measures already carried out. Likewise, OpenAI's IPO delay is a decision the company describes itself; this publication has obtained no regulatory filing corroborating it.</p>
+              <p><strong>What is and is not verifiable</strong></p>
+              <p>Verifiable: the publication dates and reported length of the essay, the wording of the statements made to Fortune, and the index levels and percentage moves published by exchanges and wire services. Not verifiable: any causal relationship between the price moves and those statements. This publication records the sequence and the outlets' wording, asserts no causation, assesses no company's or technology's prospects, and gives no investment advice of any kind.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">奥尔特曼向《财富》确认OpenAI今年不上市，称现在是「不明智的时机」</h4>
+            <div class="ni-meta"><span class="src">Fortune · Bloomberg · Axios · Engadget</span> · 2026-09-12</div>
+            <p class="ni-desc">据《财富》杂志9月12日发表的专访，OpenAI首席执行官山姆·奥尔特曼表示公司今年不会进行首次公开募股：「考虑到安全方面正在发生的一切，现在上市是一个不明智的时机。」他并表示公司「有很多事要做，比如应对安全与对齐所需要的这一时刻，以及行业与各国政府如何协作」。彭博社的报道标题口径为「2026年不上市，上市不会早于2027年」；Axios与Engadget同日跟进，均将其归因于安全方面的考量。据《赫芬顿邮报》，奥尔特曼在同一轮表态中称，即便只有10%的概率导致人类在本世纪末前灭绝，这样的风险也是「不可接受的」。本报未取得OpenAI的任何监管申报文件，无法就上市时间表作独立核实，也不就该公司的估值或前景作任何陈述。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Altman Tells Fortune OpenAI Will Not Go Public This Year, Calling Now an "Ill-Advised Moment"</h4>
+            <div class="ni-meta"><span class="src">Fortune · Bloomberg · Axios · Engadget</span> · 2026-09-12</div>
+            <p class="ni-desc">In an interview published by Fortune on September 12, OpenAI chief executive Sam Altman said the company would not hold an initial public offering this year: "Given everything happening with safety, right now would be an ill-advised moment to go public." He added that OpenAI has "a lot of stuff to do, like meeting this moment of what is going to be required for safety and alignment, and how the industry and governments can work together." Bloomberg's headline framing was that there would be no IPO in 2026 and no listing before 2027; Axios and Engadget followed the same day, both attributing the decision to safety considerations. According to HuffPost, Altman said in the same round of comments that even a 10 per cent risk of AI causing human extinction by the end of the decade would be "unacceptable." This publication has obtained no regulatory filing from OpenAI, cannot independently verify the listing timetable, and makes no statement about the company's valuation or prospects.</p>
+          </div>
+          <a class="ni-link" href="https://fortune.com/2026/09/12/sam-altman-openai-ipo-delay-ill-advised-moment-safety-concerns/" target="_blank" rel="noopener">Fortune →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">亚洲存储与半导体股9月14日普跌：SK海力士跌6.4%，铠侠跌6.4%，三星电子跌4.1%</h4>
+            <div class="ni-meta"><span class="src">Nikkei Asia · News On Japan · AP（经 ABC News）</span> · 2026-09-14</div>
+            <p class="ni-desc">据《日经亚洲》与News On Japan，9月14日东京与首尔市场上与人工智能、半导体相关的个股普遍下跌：韩国存储芯片厂商SK海力士跌6.4%，三星电子跌4.1%；日本存储厂商铠侠控股跌6.4%，芯片设备厂商东京电子跌1%。News On Japan记录日经225指数收跌511.89点、报63,499点；美联社给出的收盘口径为63,492.99点、跌0.8%。本报按原出处分别标注这两个数字，不作合并。韩国方面，美联社记录韩国综合股价指数收报6,684.37点、跌3.3%，雅虎财经引用的口径为跌3.6%。本报仅记录已公布的行情数据，不作任何投资相关判断。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Asian Memory and Semiconductor Shares Fall on September 14: SK Hynix −6.4%, Kioxia −6.4%, Samsung −4.1%</h4>
+            <div class="ni-meta"><span class="src">Nikkei Asia · News On Japan · AP (via ABC News)</span> · 2026-09-14</div>
+            <p class="ni-desc">According to Nikkei Asia and News On Japan, AI- and semiconductor-linked shares fell broadly in Tokyo and Seoul on September 14: South Korean memory maker SK Hynix was down 6.4 per cent and Samsung Electronics 4.1 per cent, while Japan's Kioxia Holdings fell 6.4 per cent and chip-equipment maker Tokyo Electron 1 per cent. News On Japan recorded the Nikkei 225 closing 511.89 points lower at 63,499; the Associated Press gave the close as 63,492.99, down 0.8 per cent. This publication reports both figures as published by their respective sources and does not merge them. In Seoul, AP recorded the Kospi closing at 6,684.37, down 3.3 per cent, while the figure cited by Yahoo Finance was 3.6 per cent. This publication records published market data only and offers no investment judgement.</p>
+          </div>
+          <a class="ni-link" href="https://asia.nikkei.com/business/markets/softbank-group-plunges-11-after-openai-says-no-ipo-this-year" target="_blank" rel="noopener">Nikkei Asia →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">欧盟《芯片法案》首份评估报告9月20日到期，《芯片法案2.0》立法谈判目标定在2027年第二季度</h4>
+            <div class="ni-meta"><span class="src">EUR-Lex · 欧盟委员会「塑造欧洲数字未来」 · eeNews Europe · Bruegel</span> · 2026-09-14</div>
+            <p class="ni-desc">据欧盟法律数据库EUR-Lex的条文摘要，欧盟委员会须在2026年9月20日前向欧洲议会与理事会提交《芯片法案》条例的首份评估与审查报告。据eeNews Europe，委员会已于2026年6月提出《芯片法案2.0》，新措施的重点由此前的产能补贴转向需求侧、加快许可审批、设立战略项目与技术主权；欧盟机构将立法谈判的完成目标定在2027年第二季度，欧洲议会目前仍将该案列于准备阶段。据欧盟委员会「塑造欧洲数字未来」页面，委员会已于2026年7月批准德国为四座半导体工厂提供的6.59亿欧元国家援助。本报未取得评估报告的草案文本，不对其结论作任何预判。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The EU Chips Act's First Review Report Is Due September 20; Chips Act 2.0 Negotiations Targeted for Q2 2027</h4>
+            <div class="ni-meta"><span class="src">EUR-Lex · European Commission, Shaping Europe's Digital Future · eeNews Europe · Bruegel</span> · 2026-09-14</div>
+            <p class="ni-desc">According to the summary of the legislation on EUR-Lex, the European Commission must submit a first evaluation and review report on the Chips Act Regulation to the European Parliament and the Council by September 20, 2026. eeNews Europe reports that the Commission proposed a Chips Act 2.0 in June 2026, shifting the emphasis from production subsidies towards demand, faster permitting, strategic projects and technological sovereignty; EU institutions have set the second quarter of 2027 as the target for concluding negotiations, and the European Parliament still lists the file at the preparatory stage. The Commission's Shaping Europe's Digital Future pages record approval in July 2026 of €659 million in German state aid for four semiconductor facilities. This publication has not obtained a draft of the review report and makes no prediction about its conclusions.</p>
+          </div>
+          <a class="ni-link" href="https://digital-strategy.ec.europa.eu/en/policies/european-chips-act" target="_blank" rel="noopener">European Commission →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">追踪站Layoffs.fyi：至9月10日全年科技业裁员128,536人，已超过2025年全年</h4>
+            <div class="ni-meta"><span class="src">Business Standard · Layoffs.fyi（追踪站）</span> · 2026-09-11</div>
+            <p class="ni-desc">据《商业标准报》9月11日的行业汇总，2026年9月前十天全球科技业公布的裁员岗位超过6,300个，其中优步（Uber）约3,300个（约占其公司职能岗位的10%），另有贝宝（PayPal）、苹果、Zomato与甲骨文的裁员。该汇总引用第三方追踪站Layoffs.fyi的统计：截至9月10日，全年已有299家公司累计裁员128,536人，超过2025年全年总量。该稿将人工智能与自动化带来的岗位重新配置、以及成本控制列为报道中提及的主要原因。本报需说明：128,536这一数字来自Layoffs.fyi的自主统计口径，本报未独立核验其收录标准与去重方式，也未取得各公司的官方确认；上述归因系报道所引述，非本报判断。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Tracker Layoffs.fyi: 128,536 Tech Job Cuts Through September 10, Already Past All of 2025</h4>
+            <div class="ni-meta"><span class="src">Business Standard · Layoffs.fyi (tracker)</span> · 2026-09-11</div>
+            <p class="ni-desc">In an industry round-up published on September 11, Business Standard reported more than 6,300 tech roles cut worldwide in the first ten days of September 2026, led by Uber's roughly 3,300 corporate positions — about 10 per cent of that function — with further cuts at PayPal, Apple, Zomato and Oracle. The round-up cited the third-party tracker Layoffs.fyi, which counted 128,536 people cut across 299 companies so far in 2026 as of September 10, exceeding the whole of 2025. The report named reallocation driven by AI and automation, alongside cost discipline, as the reasons given. This publication notes that the figure of 128,536 comes from Layoffs.fyi's own count; we have not independently verified its inclusion criteria or de-duplication method, nor obtained confirmation from the companies named, and the attribution above is the report's, not this publication's.</p>
+          </div>
+          <a class="ni-link" href="https://layoffs.fyi/" target="_blank" rel="noopener">Layoffs.fyi →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://i.abcnewsfe.com/a/3d5fde26-6281-409f-bfea-5b6ac4ff1c54/Edouard-2-ht-gmh-260902_1788354649684_hpMain_16x9.jpg?w=1600" alt="热带风暴Edouard卫星云图" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label env">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">一个飓风都没有：把2026年大西洋的空白季，和一场创纪录的厄尔尼诺放在一起看</h3>
+            <div class="ft-meta"><span class="src">综合信源：CNN · ABC News · weather.com · Newsweek · Fox Weather · NOAA 地球物理流体动力学实验室（GFDL） · The Boston Globe</span></div>
+            <div class="ft-desc">
+              <p><strong>纪录本身</strong></p>
+              <p>据CNN，截至9月12日，2026年大西洋飓风季尚未生成任何飓风，这是卫星时代「首个飓风出现最晚」的新纪录；CNN称此时距开季已103天。据ABC新闻，之前的纪录日期为9月11日，由2002年的「古斯塔夫」与2013年的「温贝托」并列保持，其所引卫星纪录以1966年为起点。本季至今共5个获命名风暴：Arthur、Bertha、Cristobal、Dolly、Edouard，全部未达飓风强度。据weather.com，这是1950年以来最不活跃的开局。ABC援引NOAA数据称，常年到9月10日平均为8个命名风暴、3个飓风。</p>
+              <p><strong>机制：风切变</strong></p>
+              <p>据CNN，今夏大西洋「主要发展区」（从非洲沿岸延伸至加勒比海）的风切变达到纪录级别强度；该区域通常是8月中旬至10月初风暴的主要生成地。NOAA首席季节性飓风预报员马修·罗森克兰斯说：「厄尔尼诺会加大热带大西洋的垂直风切变，信号在加勒比海上空最强。」这是观测与预报机构给出的机制解释，本报照录，不作延伸推断。</p>
+              <p><strong>厄尔尼诺这一侧的数字</strong></p>
+              <p>据CNN气象记者玛丽·吉尔伯特（Mary Gilbert）9月14日的报道，本轮厄尔尼诺于2026年6月被宣布形成；截至9月14日，Niño 3.4区的「相对海洋尼诺指数」（RONI）达到较常年偏高2.0摄氏度（3.6华氏度），越过「极强」阈值，为该日历日期上有记录以来的最强值。同一报道称，NOAA给出的概率为：到年底，本轮事件有75%的可能成为1950年有记录以来的最强事件。RONI是2026年2月启用的口径，它从海温距平中扣除气候变化带来的背景增暖，用以衡量厄尔尼诺本身的「真实」强度。据福克斯天气，NOAA 9月预报给出今秋与冬季出现「超级厄尔尼诺」的概率为97%。据NOAA地球物理流体动力学实验室的9月预测，全部30个集合成员都显示本轮事件将「比肩甚至超过历史记录中最强的事件」，但该期预测的峰值强度较上月预测略有回落。</p>
+              <p><strong>另一侧：太平洋</strong></p>
+              <p>据ABC新闻，东太平洋今年已生成14个命名风暴与5个飓风，常年到此时的平均值为10个命名风暴与5个飓风。CNN此前在9月初的口径为13个命名风暴、4个飓风、2个大型飓风。两组数字统计时点不同，本报按原出处分别标注。CNN 9月14日的报道另记录：太平洋今年已生成16个风暴，其中2个达到五级；夏威夷在一个月内遭遇三个热带系统。迈阿密大学的安迪·黑泽尔顿对ABC说：「太平洋的活跃程度与2015年这类此前的极强厄尔尼诺事件相当。」他同时提醒：「一旦出现极窄的窗口，仍可能有系统生成，各方应保持警惕。」</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：上述风暴名称与数量、纪录日期、指数数值与各机构公布的概率区间——这些在CNN、ABC新闻、weather.com、福克斯天气与NOAA自身的发布中相互一致。不可核验的是：本季余下时间会不会出现飓风，以及厄尔尼诺峰值的最终数值。本报不作任何预测，也不就单一季节的统计结果作气候归因。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Not a Single Hurricane: Reading the Atlantic's Blank Season Alongside a Record El Niño</h3>
+            <div class="ft-meta"><span class="src">Sources: CNN · ABC News · weather.com · Newsweek · Fox Weather · NOAA Geophysical Fluid Dynamics Laboratory · The Boston Globe</span></div>
+            <div class="ft-desc">
+              <p><strong>The record</strong></p>
+              <p>According to CNN, as of September 12 the 2026 Atlantic hurricane season had produced no hurricane at all — a new satellite-era record for the latest first hurricane; CNN put it at 103 days into the season. ABC News reported that the previous record date was September 11, shared by Gustav in 2002 and Humberto in 2013, and dated the satellite record it cites to 1966. Five named storms have formed this season — Arthur, Bertha, Cristobal, Dolly and Edouard — none reaching hurricane strength. Weather.com called it the least active start since 1950. Citing NOAA, ABC gave the long-term average by September 10 as eight named storms and three hurricanes.</p>
+              <p><strong>The mechanism: wind shear</strong></p>
+              <p>According to CNN, wind shear across the Atlantic's main development region — running from the African coast to the Caribbean — reached record strength this summer; that region normally generates most storms from mid-August to early October. Matthew Rosencrans, NOAA's lead seasonal hurricane forecaster, said: "El Nino increases vertical wind shear over the tropical Atlantic, with the strongest signal over the Caribbean." That is the explanation given by the observing and forecasting agencies, recorded here without extension.</p>
+              <p><strong>The numbers on the El Niño side</strong></p>
+              <p>In a September 14 report by CNN meteorologist Mary Gilbert, this El Niño was declared in June 2026; as of September 14 the Relative Oceanic Niño Index for the Niño 3.4 region stood at 2.0C (3.6F) above average, crossing the "very strong" threshold and the highest on record for that calendar date. The same report gave NOAA's probability that the event will peak as the strongest since records began in 1950 at 75 per cent by the end of the year. RONI, adopted in February 2026, subtracts background warming from the sea-surface anomaly in order to measure El Niño's "true" strength. Fox Weather reported that NOAA's September outlook put the chance of a "super El Niño" this autumn and winter at 97 per cent. The September prediction from NOAA's Geophysical Fluid Dynamics Laboratory states that all 30 ensemble members show the event will "compete with, if not surpass, the strongest events in the historical record," while noting a slightly weaker predicted peak than the previous month's forecast.</p>
+              <p><strong>The other side: the Pacific</strong></p>
+              <p>According to ABC News, the eastern Pacific has produced 14 named storms and five hurricanes this year, against an average by this point of 10 named storms and five hurricanes. CNN's figures in early September were 13 named storms, four hurricanes and two major hurricanes. The two sets were compiled at different points and are given here as published. CNN's September 14 report also records 16 storms formed in the Pacific this year, two of them reaching Category 5, and three tropical systems affecting Hawaii within a month. Andy Hazelton of the University of Miami told ABC that "the activity in the Pacific is fairly similar to previous very strong El Nino events like 2015," adding that "folks should stay vigilant in case a system does find a very narrow window."</p>
+              <p><strong>What is and is not verifiable</strong></p>
+              <p>Verifiable: the storm names and counts, record dates, index values and probability ranges above, which are consistent across CNN, ABC News, weather.com, Fox Weather and NOAA's own publications. Not verifiable: whether a hurricane will form in the remainder of the season, and where this El Niño will ultimately peak. This publication makes no forecast and offers no climate attribution based on a single season's statistics.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">印尼搜救9月14日扩大：17艘舰艇与飞机投入，在最后已知位置周边扩大搜索范围</h4>
+            <div class="ni-meta"><span class="src">AP（经 NPR） · Al Jazeera · ABC News</span> · 2026-09-14</div>
+            <p class="ni-desc">据美联社（经NPR转发）9月14日报道，印度尼西亚方面当日加大了对「室女座运输8号」失踪者的搜救力度：来自军方、警方与其他机构的17艘舰艇和飞机投入搜寻129名失踪者，搜索范围在该船最后已知位置周边扩大。截至该报道，已有108人获救，6名遇难者遗体被找到。据半岛电视台，马辰搜救办公室负责人伊·普图·苏达雅纳称海况对搜救船只本身构成风险，事发海域涌浪高约2.5米；美联社援引船长遇险呼叫的说法为最高约3米。当局正在调查天气与可能的技术故障。本报未取得该船的适航与载客核定文件，对幸存者提及的超载说法不作事实认定。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Indonesia Widens the Search on September 14: 17 Ships and Aircraft Deployed Around the Last Known Position</h4>
+            <div class="ni-meta"><span class="src">AP (via NPR) · Al Jazeera · ABC News</span> · 2026-09-14</div>
+            <p class="ni-desc">The Associated Press, carried by NPR on September 14, reported that Indonesia intensified the search for those missing from the Virgo Transport 8 that day: 17 ships and aircraft from the military, the police and other agencies joined the effort to find 129 missing people, with the search area expanded around the vessel's last known position. As of that report, 108 people had been rescued and the bodies of six had been recovered. Al Jazeera quoted I Putu Sudayana, head of the Banjarmasin search-and-rescue office, saying sea conditions posed a risk to the rescue vessels themselves, with swells of about 2.5 metres; AP cited the captain's distress call describing waves of up to three metres. Authorities are examining the weather and possible technical failure. This publication has not obtained the ship's seaworthiness or passenger-capacity documentation and makes no finding on the overcrowding described by a survivor.</p>
+          </div>
+          <a class="ni-link" href="https://www.npr.org/2026/09/14/nx-s1-5968417/indonesia-search-missing-ferry" target="_blank" rel="noopener">NPR / AP →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">加州Lucas山火控制率升至20%，过火面积4,008英亩，湖县红旗警告凌晨2时解除</h4>
+            <div class="ni-meta"><span class="src">CAL FIRE · Redheaded Blackbelt · Action News Now · Daily Dispatch</span> · 2026-09-13 / 2026-09-14</div>
+            <p class="ni-desc">本报9月13日那期报道该火过火4,008英亩、控制率15%。据加州林业与消防局（CAL FIRE）索诺马—莱克—纳帕辖区的通报，以及Redheaded Blackbelt与Daily Dispatch的转述，Lucas山火过火面积维持在4,008英亩，控制率升至20%。通报称，消防人员在夜间推进顺利，在数个方向加固了隔离带，并继续扑灭余火、确保火势不越出既有控制线。湖县的红旗警告已于凌晨2时解除，救火力量正利用转好的气象条件作业。该火自9月10日在门多西诺县波特谷（Potter Valley）一带起火。本报未取得起火原因的官方调查结论。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">California's Lucas Fire Reaches 20 Per Cent Containment at 4,008 Acres; Lake County's Red Flag Warning Lifted at 2am</h4>
+            <div class="ni-meta"><span class="src">CAL FIRE · Redheaded Blackbelt · Action News Now · Daily Dispatch</span> · 2026-09-13 / 2026-09-14</div>
+            <p class="ni-desc">This publication's September 13 issue reported the fire at 4,008 acres and 15 per cent containment. According to CAL FIRE's Sonoma-Lake-Napa Unit, as relayed by Redheaded Blackbelt and Daily Dispatch, the Lucas Fire remains at 4,008 acres with containment now at 20 per cent. Crews made good progress overnight and strengthened containment lines in several areas, and continued working to extinguish hot spots and keep the fire within existing lines. The Red Flag Warning in Lake County was lifted at 2am, and crews are working in the improved conditions. The fire started on September 10 in the Potter Valley area of Mendocino County. This publication has not obtained an official finding on the cause.</p>
+          </div>
+          <a class="ni-link" href="https://www.fire.ca.gov/incidents/2026/9/10/lucas-fire" target="_blank" rel="noopener">CAL FIRE →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">CNN：Niño 3.4区RONI指数达偏高2.0摄氏度，为该日历日期上有记录以来最强</h4>
+            <div class="ni-meta"><span class="src">CNN · Fox Weather · NOAA 地球物理流体动力学实验室</span> · 2026-09-14</div>
+            <p class="ni-desc">据CNN气象记者玛丽·吉尔伯特9月14日的报道，Niño 3.4区的「相对海洋尼诺指数」（Relative Oceanic Niño Index，RONI）已达到较常年偏高2.0摄氏度（3.6华氏度），越过该指数的「极强」阈值，为该日历日期上有记录以来的最强值；本轮事件于2026年6月被宣布形成。RONI是2026年2月启用的统计口径，从海温距平中扣除气候变化带来的背景增暖，用于衡量事件本身的强度。NOAA给出的概率为：到年底，本轮事件有75%的可能成为1950年有记录以来最强的一次。据福克斯天气，NOAA 9月预报给出今秋与冬季出现「超级厄尔尼诺」的概率为97%。NOAA地球物理流体动力学实验室9月的预测显示，全部30个集合成员都指向一次历史级强度的事件，但该期预测的峰值较上月略有回落。本报不预测最终峰值数值。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">CNN: The Niño 3.4 RONI Reaches 2.0C Above Average, the Highest on Record for the Date</h4>
+            <div class="ni-meta"><span class="src">CNN · Fox Weather · NOAA Geophysical Fluid Dynamics Laboratory</span> · 2026-09-14</div>
+            <p class="ni-desc">In a September 14 report by CNN meteorologist Mary Gilbert, the Relative Oceanic Niño Index for the Niño 3.4 region has reached 2.0C (3.6F) above average, crossing the index's "very strong" threshold and the highest value on record for that calendar date; the event was declared in June 2026. RONI, adopted in February 2026, subtracts the background warming attributable to climate change from the sea-surface anomaly in order to gauge the event's own strength. NOAA's stated probability is that, by the end of the year, this event has a 75 per cent chance of becoming the strongest since records began in 1950. Fox Weather reported that NOAA's September outlook put the chance of a "super El Niño" this autumn and winter at 97 per cent. The September prediction from NOAA's Geophysical Fluid Dynamics Laboratory shows all 30 ensemble members pointing to a historically strong event, while the predicted peak is slightly lower than in the previous month's run. This publication makes no forecast of the final peak value.</p>
+          </div>
+          <a class="ni-link" href="https://kesq.com/cnn-weather-environment/2026/09/14/super-el-nino-is-actually-here-now-and-its-only-going-to-get-stronger/" target="_blank" rel="noopener">CNN →</a>
+        </div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
+  // 点图看大图（原图通常比版面里的大得多）
+  var lbx = document.createElement('div');
+  lbx.className = 'lbx';
+  lbx.innerHTML = '<img alt=""><div class="lbx-tip">点击任意处关闭 · Click anywhere to close</div>';
+  document.body.appendChild(lbx);
+  var lbxImg = lbx.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IMG' && /\b(hl-img|ft-img)\b/.test(t.className || '') && t.naturalWidth > 0) {
+      lbxImg.src = t.currentSrc || t.src;
+      lbx.classList.add('on');
+    } else if (lbx.classList.contains('on')) {
+      lbx.classList.remove('on');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lbx.classList.remove('on');
+  });
+})();
+</script>
+
+</body>
+</html>
