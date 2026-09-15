@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-15</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:300px;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:340px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:40%;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+
+/* 图片：完整显示，不裁切。点一下看大图 */
+.hl .hl-img,.ft .ft-img{cursor:zoom-in}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:24px;cursor:zoom-out}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+.lbx .lbx-tip{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+@media print{.lbx{display:none!important}}
+</style>
+<!-- share:start -->
+<meta name="description" content="苏格兰、北爱尔兰、威尔士领导人在卡迪夫签署自决联合声明，要求伦敦为宪制公投做准备；特朗普公开反对人工智能「限速」：「谁赢得人工智能，谁就赢」；美国环保局废除2024年电厂温室气体规则，并提议放弃今后监管电厂气候污染的权限">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.011 · 2026-09-15 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="苏格兰、北爱尔兰、威尔士领导人在卡迪夫签署自决联合声明，要求伦敦为宪制公投做准备；特朗普公开反对人工智能「限速」：「谁赢得人工智能，谁就赢」；美国环保局废除2024年电厂温室气体规则，并提议放弃今后监管电厂气候污染的权限">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-15.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.aljazeera.com/wp-content/uploads/2026/09/14290623-1789400770.jpg?resize=1920%2C1440">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.011 · 2026-09-15 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="苏格兰、北爱尔兰、威尔士领导人在卡迪夫签署自决联合声明，要求伦敦为宪制公投做准备；特朗普公开反对人工智能「限速」：「谁赢得人工智能，谁就赢」；美国环保局废除2024年电厂温室气体规则，并提议放弃今后监管电厂气候污染的权限">
+<meta name="twitter:image" content="https://www.aljazeera.com/wp-content/uploads/2026/09/14290623-1789400770.jpg?resize=1920%2C1440">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.011 · 2026-09-15 · 陆先生日报 | Luxiansheng Daily","description":"苏格兰、北爱尔兰、威尔士领导人在卡迪夫签署自决联合声明，要求伦敦为宪制公投做准备；特朗普公开反对人工智能「限速」：「谁赢得人工智能，谁就赢」；美国环保局废除2024年电厂温室气体规则，并提议放弃今后监管电厂气候污染的权限","datePublished":"2026-09-15","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-15.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://www.aljazeera.com/wp-content/uploads/2026/09/14290623-1789400770.jpg?resize=1920%2C1440"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.011</div>
+    <div>2026.09.15 TUESDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">9月14日，苏格兰首席部长约翰·斯温尼、北爱尔兰首席部长米歇尔·奥尼尔与威尔士党领袖鲁恩·阿普·约韦思在卡迪夫签署一份联合声明，宣称各自「民族」拥有自决权，并要求伦敦为宪制公投做准备；英国首相安迪·伯纳姆此前已表示这类公投「不在讨论范围内」。同一天，美国环境保护局在休斯敦宣布废除2024年的燃煤与燃气电厂温室气体排放规则，并就是否放弃今后监管电厂气候污染的权限提出补充规则草案；美国最高法院则驳回了政府在今年中期选举前收紧邮寄选票投递规则的请求。科技一线，达里奥·阿莫代伊9月12日那篇呼吁全行业放慢前沿模型推进速度的文章进入第三天：特朗普公开反对放慢，称「谁赢得人工智能，谁就赢」；Anthropic同日被报道选定纳斯达克为上市地。中国国务院第841号令自今日（9月15日）起施行，为2013年《出境入境管理法》以来出入境管理框架的首次大幅修订。霍尔木兹海峡方向，伊朗最高国家安全委员会秘书穆赫辛·礼萨伊9月14日称，在伊方条件得到满足之前不会与美国谈判。印度尼西亚爪哇海「室女座运输8号」倾覆进入第三天，129人仍下落不明，海军新列装的测量船于今日上午抵达搜寻海域。经济合作与发展组织公布的PISA 2025结果显示，成员国平均阅读与数学成绩为该项测试有记录以来最低。以下各条均标注信源；本报不评价任何一方的政策，也不预测事件走向。</p>
+    <p class="en-content" lang="en">On September 14, Scotland's First Minister John Swinney, Northern Ireland's First Minister Michelle O'Neill and Plaid Cymru leader Rhun ap Iorwerth signed a joint declaration in Cardiff asserting their nations' right to self-determination and calling on London to prepare for constitutional referendums; Prime Minister Andy Burnham had already said such votes were off the table. The same day, the US Environmental Protection Agency announced in Houston that it was repealing the 2024 greenhouse gas rule for coal- and gas-fired power plants, and issued a supplemental proposal that would relinquish its authority to regulate power-plant climate pollution in future; the US Supreme Court rejected the administration's bid to tighten mail-ballot handling before this year's midterm elections. In technology, the essay Dario Amodei published on September 12 calling for an industry-wide slowdown on frontier models entered its third day: President Trump publicly rejected the idea, saying "whoever wins AI wins," and Anthropic was reported the same day to have selected Nasdaq for its listing. China's State Council Decree No. 841 takes effect today, September 15, the first substantial overhaul of the country's exit-and-entry framework since the 2013 Exit and Entry Administration Law. On the Strait of Hormuz, Mohsen Rezaei, secretary of Iran's Supreme National Security Council, said on September 14 that there would be no talks with the United States until Iran's conditions were met. In Indonesia, the search for the Virgo Transport 8 entered its third day with 129 people still missing, and the navy's newest survey ship reached the search area this morning. The OECD's PISA 2025 results put average reading and mathematics scores across member countries at the lowest ever recorded by the assessment. Sources are given for every item below. This publication offers no assessment of any party's policy and makes no prediction about how events will unfold.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl">
+        <img class="hl-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/14290623-1789400770.jpg?resize=1920%2C1440" alt="卡迪夫三地领导人会面" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">苏格兰、北爱尔兰、威尔士领导人在卡迪夫签署自决联合声明，要求伦敦为宪制公投做准备</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · The Washington Post · Washington Examiner · IR-PRESS · 2026-09-14</div>
+            <p class="hl-desc">据半岛电视台与《华盛顿邮报》9月14日报道，苏格兰首席部长、苏格兰民族党（SNP）领袖约翰·斯温尼（John Swinney），北爱尔兰首席部长、新芬党副主席米歇尔·奥尼尔（Michelle O'Neill），以及威尔士党（Plaid Cymru）领袖鲁恩·阿普·约韦思（Rhun ap Iorwerth）当日在威尔士首府卡迪夫会面，并签署一份联合声明。半岛电视台引述的声明文字为：「我们的民族拥有自决权。任何威斯敏斯特政府都无权阻挡民主。」声明另有两句被引述：「有史以来第一次，这些岛屿上的人民同时拥有主张独立的首席部长。」以及「势头站在我们的运动一边；我们相信宪制变革正在到来。」据《华盛顿邮报》与IR-PRESS，文件的核心诉求是要求英国政府为在这三地举行有关宪制前途的公投作出准备与安排；爱尔兰反对党领袖、新芬党主席玛丽·卢·麦克唐纳（Mary Lou McDonald）也出席了这次会面。伦敦方面，据半岛电视台，英国首相安迪·伯纳姆（Andy Burnham）8月27日已表示，北爱尔兰的统一公投「不在讨论范围内」，再次举行苏格兰独立公投「不在许可之列」，其在爱尔兰统一问题上的立场于这次会面后未见改变。三党虽同为独立取向，但据半岛电视台，它们在公投方式与时间表上的主张并不一致。本报未取得声明全文，以上引文均转引自上述报道。交叉核验：Al Jazeera · The Washington Post · Washington Examiner</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Leaders of Scotland, Northern Ireland and Wales Sign a Self-Determination Declaration in Cardiff, Demanding London Prepare for Constitutional Referendums</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · The Washington Post · Washington Examiner · IR-PRESS · 2026-09-14</div>
+            <p class="hl-desc">Al Jazeera and The Washington Post reported on September 14 that Scotland's First Minister and Scottish National Party leader John Swinney, Northern Ireland's First Minister and Sinn Féin vice-president Michelle O'Neill, and Plaid Cymru leader Rhun ap Iorwerth met that day in the Welsh capital, Cardiff, and signed a joint declaration. The text quoted by Al Jazeera reads: "Our nations have the right to self-determination. No Westminster government has the right to block democracy." Two further lines were quoted: "For the first time ever, people across these islands have first ministers committed to independence," and "Momentum is behind our movements; we believe that constitutional change is coming." According to The Washington Post and IR-PRESS, the document's substance is a demand that the UK government prepare and provide for referendums on the constitutional future of the three parts of the United Kingdom; Mary Lou McDonald, leader of the Irish opposition and president of Sinn Féin, also attended. In London, Al Jazeera reported that Prime Minister Andy Burnham had said on August 27 that a Northern Ireland unification referendum was "off the table" and a further Scottish independence vote "off limits," and that his position on Irish unification was unchanged after the meeting. Although all three parties favour independence, Al Jazeera noted that they differ on the mechanics and timing of any referendum. This publication has not obtained the full text of the declaration; the quotations above are taken from the reports cited. Cross-verified: Al Jazeera · The Washington Post · Washington Examiner</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/14/leaders-of-scotland-wales-northern-ireland-unite-for-self-determination" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3682x2071+0+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F59%2Fc4%2F5be7a97d47de84dedd8b5180b45c%2Fap26256495459897.jpg" alt="白宫人工智能政策" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">特朗普公开反对人工智能「限速」：「谁赢得人工智能，谁就赢」</h2>
+            <div class="hl-meta"><span class="src">NPR</span> · CNBC · Yahoo News · Quartz · 2026-09-14</div>
+            <p class="hl-desc">据美国全国公共广播电台（NPR）与CNBC 9月14日报道，美国总统唐纳德·特朗普当日对记者表示，美国不能在人工智能上落后于中国：「我们在人工智能上领先中国。我们是世界上最先进的国家，坦率地说，我想保持这一点，因为谁赢得人工智能，谁就赢。」据雅虎新闻与CNBC，特朗普另在Truth Social上写道，人工智能需要的唯一「控制或『护栏』」，就是「一位强大而聪明的（高智商！）总统，而美国在这方面绰绰有余」，并指Anthropic首席执行官达里奥·阿莫代伊（Dario Amodei）「装成一个完美的小天使」。这些表态针对的是阿莫代伊9月12日发表的文章《我们必须为前沿定速》（We Must Pace the Frontier）——本报9月13日、14日两期已分别报道该文内容与其在亚洲市场上的价格反应。据Quartz与雅虎新闻，OpenAI首席执行官山姆·奥尔特曼（Sam Altman）在X上回应「我同意达里奥的看法，我们需要为前沿定速」，并表示将向独立评估方开放与员工同等的系统访问权限；xAI创办人埃隆·马斯克（Elon Musk）只写了三个词：「达里奥是对的。」据雅虎新闻，阿莫代伊文中主张把能力提升速度放慢到足以为安全工作留出一到两年时间。本报记录各方公开表态，不评价任何一方的主张，也不预测政策走向。交叉核验：NPR · CNBC · Yahoo News · Quartz</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Trump Publicly Rejects an AI Slowdown: "Whoever Wins AI Wins"</h2>
+            <div class="hl-meta"><span class="src">NPR</span> · CNBC · Yahoo News · Quartz · 2026-09-14</div>
+            <p class="hl-desc">NPR and CNBC reported on September 14 that President Donald Trump told reporters the United States could not afford to fall behind China on artificial intelligence: "We're leading China in AI. We're the most sophisticated country in the world, and frankly, I want to keep it that way, because whoever wins AI wins." According to Yahoo News and CNBC, Trump also wrote on Truth Social that the only "control or 'guardrails' that AI needs is a STRONG AND SMART (High IQ!) PRESIDENT, and the U.S.A. has that, in spades," and accused Anthropic chief executive Dario Amodei of "pretending to be a 'perfect little angel.'" The remarks respond to the essay Amodei published on September 12, "We Must Pace the Frontier" — whose content and its effect on Asian market prices were reported in this publication's September 13 and September 14 issues. Quartz and Yahoo News reported that OpenAI chief executive Sam Altman replied on X, "I agree with Dario that we need to pace the frontier," and committed to giving independent evaluators employee-level access to his company's systems; xAI founder Elon Musk posted three words: "Dario is right." Yahoo News reported that Amodei's essay argues for slowing capability gains enough to leave one to two years for safety work. This publication records public statements and offers no assessment of any party's argument and no prediction about policy. Cross-verified: NPR · CNBC · Yahoo News · Quartz</p>
+          </div>
+          <a class="hl-link" href="https://www.npr.org/2026/09/13/nx-s1-5968078/trump-mike-johnson-ai-slowdown" target="_blank" rel="noopener">NPR →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/ap_6aa84cb2e440a-1789414578.jpg?resize=1920%2C1440" alt="美国燃煤电厂" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">美国环保局废除2024年电厂温室气体规则，并提议放弃今后监管电厂气候污染的权限</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · NBC News · UPI · The Washington Times · 2026-09-14</div>
+            <p class="hl-desc">据半岛电视台、NBC新闻与合众国际社9月14日报道，美国环境保护局（EPA）当日宣布终止2024年制定的燃煤与燃气电厂温室气体排放规则。该规则要求燃煤电厂加装碳捕集设备，否则须在规定期限内停运。环保局局长李·泽尔丁（Lee Zeldin）在休斯敦举行的二十国集团「能源充裕」会议上，与内政部长道格·伯格姆（Doug Burgum）、能源部长克里斯·赖特（Chris Wright）共同宣布这一决定。据路透社（经NBC新闻转述），泽尔丁称拜登政府时期的相关举措意在「为了保护环境而扼杀我们的经济」，其用意是把煤炭行业「监管到不复存在」；泽尔丁另称「美国人一直在要求联邦机构多一些常识」。环保局表示，废除该规则将为行业节省逾3,000亿美元。据半岛电视台，环保局同日提出一项补充规则草案，主张电厂的温室气体排放「不造成也不促成」危害公众健康的空气污染——若该草案最终成立，环保局将不再保有今后监管电厂气候污染的权限。据半岛电视台援引的数据，美国电厂约占该国气候污染总量的四分之一。批评方面，生物多样性中心的玛吉·库尔特（Maggie Coulter）称「否认这个国家四分之一气候污染的存在是极其鲁莽的」；环保协会的薇琪·帕顿（Vickie Patton）称「拆除我们应对气候污染的全国性保护措施将付出巨大代价」。本报仅转述各方公开表态与官方数字，不评价该政策。交叉核验：Al Jazeera · NBC News · UPI · The Washington Times</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">The EPA Repeals the 2024 Power Plant Greenhouse Gas Rule and Proposes to Give Up Its Authority to Regulate Power-Plant Climate Pollution</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · NBC News · UPI · The Washington Times · 2026-09-14</div>
+            <p class="hl-desc">Al Jazeera, NBC News and UPI reported on September 14 that the US Environmental Protection Agency announced it was ending the 2024 greenhouse gas standards for coal- and gas-fired power plants. The rule required coal plants to install carbon capture equipment or shut down by set deadlines. EPA Administrator Lee Zeldin announced the decision alongside Interior Secretary Doug Burgum and Energy Secretary Chris Wright at the G20 energy-abundance meeting in Houston. According to Reuters, as relayed by NBC News, Zeldin said Biden-era actions were designed to "suffocate our economy in order to protect the environment" and intended to regulate the coal industry "out of existence"; he also said "Americans have been demanding more common sense at federal agencies." The EPA said the repeal would save industry more than $300 billion. Al Jazeera reported that the agency issued a supplemental proposal the same day arguing that greenhouse gas emissions from power plants do not cause or contribute to air pollution endangering public health — a finding that, if made final, would end the agency's authority to regulate power-plant climate pollution in future. On figures cited by Al Jazeera, US power plants account for roughly a quarter of the country's climate pollution. Among critics, Maggie Coulter of the Center for Biological Diversity said "denying the existence of a quarter of the country's climate pollution is utterly reckless," and Vickie Patton of the Environmental Defense Fund said "tearing down our national protections against climate pollution will have enormous costs." This publication relays public statements and official figures only, and offers no assessment of the policy. Cross-verified: Al Jazeera · NBC News · UPI · The Washington Times</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/14/us-repeals-rules-limiting-greenhouse-gas-emissions-by-power-plants" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://www.omanobserver.om/omanobserver/uploads/images/2026/09/15/thumbs/600x600/3513606.jpg" alt="阿曼皇家海军救援油轮船员" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">伊朗称条件满足前不与美国谈判；「艾尔盖亚」号油轮23名船员获救，船体被拖往阿曼港口</h2>
+            <div class="hl-meta"><span class="src">AFP（经 Business Recorder）</span> · Press TV · Oman Observer · The Times of Israel · 2026-09-14 / 09-15</div>
+            <p class="hl-desc">据法新社（经巴基斯坦《商业记录报》）与伊朗国家电视台英文网（Press TV）报道，伊朗最高国家安全委员会秘书穆赫辛·礼萨伊（Mohsen Rezaei）9月14日在社交平台X上写道：「别被美国总统的混杂信号绕晕——从『不谈判』到『我们准备好谈』。」他接着写道：「围绕石油与海峡的赌注已经变了。危机公关阻止不了将要发生的事。在伊朗的条件得到满足之前不谈。就这样。」此前特朗普在Truth Social上称伊朗「很快、很迫切地」想达成协议，美方「愿意」与伊方接触。据上述两家报道，礼萨伊所列条件包括美国结束战争与封锁、解冻伊朗资产，以及在包括黎巴嫩与加沙在内的地区范围内停火。航运方面，据《阿曼观察家报》9月15日报道，悬挂巴拿马旗的成品油轮「艾尔盖亚」号（El Gaia）在穆桑代姆省东北方向遭不明弹体击中、机舱起火后，阿曼皇家海军撤离并救治了23名船员，船体已被拖往阿曼港口；《以色列时报》9月15日的滚动报道给出同样的23人数字，并称另有2人仍在搜寻中。9月13日的早期报道曾给出较低的获救人数，本报以9月15日的口径为准。本报未能独立核实这次袭击的责任方。交叉核验：AFP（Business Recorder） · Press TV · Oman Observer</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Iran Says No Talks Until Its Conditions Are Met; 23 Crew of the Tanker El Gaia Rescued and the Hull Towed to an Omani Port</h2>
+            <div class="hl-meta"><span class="src">AFP (via Business Recorder)</span> · Press TV · Oman Observer · The Times of Israel · 2026-09-14 / 09-15</div>
+            <p class="hl-desc">Agence France-Presse, carried by Pakistan's Business Recorder, and Iran's state broadcaster Press TV reported that Mohsen Rezaei, secretary of Iran's Supreme National Security Council, wrote on X on September 14: "Don't get distracted by the U.S. president's mixed signals — from 'no negotiations' to 'we're ready to talk.'" He continued: "The stakes around oil and the straits have changed. Damage control won't stop what's coming. No talks until Iran's conditions are met. Period." President Trump had posted on Truth Social that Iran wanted a deal "quickly and badly" and that the United States was "open to" engaging. Both outlets reported that the conditions Rezaei has set include the United States ending the war and the blockade, releasing Iran's frozen assets, and agreeing to a region-wide ceasefire including Lebanon and Gaza. On shipping, the Oman Observer reported on September 15 that after the Panama-flagged products tanker El Gaia was struck by an unidentified projectile northeast of Musandam governorate and caught fire in its engine room, the Royal Navy of Oman evacuated and treated 23 crew members and the hull was towed to an Omani port; The Times of Israel's September 15 liveblog gave the same figure of 23 and reported two crew still being searched for. Earlier reports on September 13 gave lower rescue numbers; this publication follows the figures of September 15. This publication has not independently established responsibility for the attack. Cross-verified: AFP (Business Recorder) · Press TV · Oman Observer</p>
+          </div>
+          <a class="hl-link" href="https://www.omanobserver.om/article/1196231/oman/governorates/23-crew-members-rescued-as-oil-tanker-elgaia-towed-to-omani-port" target="_blank" rel="noopener">Oman Observer →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3311x1862+0+172/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F8b%2F28%2Ff630b55b495cb10b486704385278%2Fap26257113610710.jpg" alt="印度尼西亚爪哇海渡轮搜救" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">爪哇海搜救第三天：印尼海军新测量船抵达海域，「室女座运输8号」仍有129人失踪</h2>
+            <div class="hl-meta"><span class="src">AP（经 NPR）</span> · Al Jazeera · ABC News · Baird Maritime · 2026-09-14 / 09-15</div>
+            <p class="hl-desc">据美联社（经NPR转发）与半岛电视台报道，载有243人（213名乘客、30名船员）与89辆车的印度尼西亚籍渡轮「室女座运输8号」（Virgo Transport 8）9月13日凌晨在由东爪哇泗水开往南加里曼丹马辰的途中于爪哇海倾覆。截至9月14日，已确认6人死亡、107至108人获救、129人失踪。印尼国家搜救局出动17艘舰艇与飞机，参与单位包括军方与警方。据半岛电视台，事发海域距马辰约81海里（150公里），当时浪高约2.5米；马辰搜救办公室负责人伊·普图·苏达亚纳（I Putu Sudayana）称：「这对船只来说极其危险。连我们那艘40米长的搜救船都冒着极大风险。」据Baird Maritime报道，印尼海军新列装的大型测量船已被派往现场，按计划于9月15日上午抵达，海军同时投入水下搜索队与水下热成像无人机。印尼交通部此前表示，该船被发现时已倾覆但仍浮于水面。事故原因的调查正在进行，涉及天气与可能的技术故障；一名幸存者对美联社称船上当时显得超载。本报未取得官方调查结论，不就事故原因作出陈述。交叉核验：AP · Al Jazeera · ABC News</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Day Three in the Java Sea: Indonesia's Newest Navy Survey Ship Reaches the Area; 129 Still Missing From the Virgo Transport 8</h2>
+            <div class="hl-meta"><span class="src">AP (via NPR)</span> · Al Jazeera · ABC News · Baird Maritime · 2026-09-14 / 09-15</div>
+            <p class="hl-desc">The Associated Press, carried by NPR, and Al Jazeera reported that the Indonesian ferry Virgo Transport 8, carrying 243 people (213 passengers and 30 crew) and 89 vehicles, capsized in the Java Sea in the early hours of September 13 while sailing from Surabaya in East Java to Banjarmasin in South Kalimantan. As of September 14, six deaths had been confirmed, between 107 and 108 people had been rescued and 129 were missing. Indonesia's national search and rescue agency committed 17 ships and aircraft, with military and police units taking part. Al Jazeera put the site about 81 nautical miles (150km) from Banjarmasin, with waves of around 2.5 metres at the time; I Putu Sudayana, head of the local search-and-rescue office, said: "It is extremely risky for vessels. Even our Basarnas vessel, which is 40 metres long, is at great risk." Baird Maritime reported that the navy's newest large survey ship had been dispatched and was due to reach the area on the morning of September 15, with underwater search teams and underwater thermal drones also deployed. Indonesia's transport ministry had earlier said the vessel was found overturned but still afloat. An investigation into the cause is under way, covering the weather and possible technical failure; one survivor told the AP the ferry had appeared overcrowded. This publication has not obtained an official finding and makes no statement about the cause. Cross-verified: AP · Al Jazeera · ABC News</p>
+          </div>
+          <a class="hl-link" href="https://www.npr.org/2026/09/14/nx-s1-5968417/indonesia-search-missing-ferry" target="_blank" rel="noopener">NPR / AP →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://cloudfront-us-east-1.images.arcpublishing.com/wapo/G6ENHEPUFWRZD2FNHEX5IS2U7Q.jpg&amp;w=1440" alt="卡迪夫会面" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label pol">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">卡迪夫的那张纸：三位首席部长、一个「自决权」表述，和一句伦敦已经说过的「不在讨论范围内」</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera · The Washington Post（两篇） · Washington Examiner · IR-PRESS · 英国政府公开表态 · 1998年《贝尔法斯特协议》文本</span></div>
+            <div class="ft-desc">
+              <p><strong>被签署的是什么</strong></p>
+              <p>据半岛电视台与《华盛顿邮报》，9月14日在卡迪夫签署的是一份联合声明，不是任何具备法律效力的文件。半岛电视台引述的三句话构成了它的全部公开内容：「我们的民族拥有自决权。任何威斯敏斯特政府都无权阻挡民主。」「有史以来第一次，这些岛屿上的人民同时拥有主张独立的首席部长。」「势头站在我们的运动一边；我们相信宪制变革正在到来。」据《华盛顿邮报》与IR-PRESS，文件的具体诉求是要求英国政府为在苏格兰、威尔士与北爱尔兰举行有关各自宪制前途的公投作出准备与安排。《华盛顿观察家报》的标题措辞，是三方警告联合王国「正在走向终结」。本报未取得声明全文，无法核实上述引文之外是否还有其他条款。</p>
+              <p><strong>到场的四个人</strong></p>
+              <p>约翰·斯温尼，苏格兰首席部长、苏格兰民族党领袖；米歇尔·奥尼尔，北爱尔兰首席部长、新芬党副主席；鲁恩·阿普·约韦思，威尔士党领袖。第四位是玛丽·卢·麦克唐纳，新芬党主席、爱尔兰议会反对党领袖。据《华盛顿邮报》，此前没有过三地主要独立取向政党的领导人以这种形式共同签署文件的先例。有一处身份分际值得写清楚：斯温尼与奥尼尔是在任的权力下放政府首长，阿普·约韦思是威尔士党领袖而非威尔士首席部长，麦克唐纳来自另一个主权国家的议会反对党。</p>
+              <p><strong>伦敦已经答过这道题</strong></p>
+              <p>据半岛电视台，英国首相安迪·伯纳姆在这次会面之前的8月27日已经明确表态：北爱尔兰的统一公投「不在讨论范围内」（off the table），再次举行苏格兰独立公投「不在许可之列」（off limits）。半岛电视台称，卡迪夫会面之后，伯纳姆在爱尔兰统一问题上的立场没有变化。也就是说，9月14日出现的是一份要求，以及一个此前已经给出、尚未改变的回答。</p>
+              <p><strong>三方并不是同一条路</strong></p>
+              <p>半岛电视台指出，苏格兰民族党、威尔士党与新芬党虽然都以独立或统一为目标，但在公投的方式与时间表上主张不同；公开报道对此只作概括提及，未见三方各自给出具体路线图。制度层面有一处成文差异：北爱尔兰统一公投的触发条件写在1998年《贝尔法斯特协议》中，由英国北爱尔兰事务大臣依据协议所定标准判断何时举行；苏格兰与威尔士没有同类的成文触发机制。本报在此只陈述制度差异，不评估任何一方主张的可行性。</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：会面的时间（9月14日）与地点（卡迪夫）、四位与会者的身份、被多家媒体一致引述的三句声明文字、伯纳姆8月27日的表态。不可核验的是：声明全文、是否附有时间表、伦敦是否会就此作出新的正式回应，以及三方后续的协调机制。本报不预测联合王国宪制安排的走向，也不评价任何一方的主张。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">The Sheet of Paper in Cardiff: Three First Ministers, One Claim of Self-Determination, and an Answer London Had Already Given</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera · The Washington Post (two pieces) · Washington Examiner · IR-PRESS · UK government statements · the 1998 Belfast Agreement</span></div>
+            <div class="ft-desc">
+              <p><strong>What was signed</strong></p>
+              <p>According to Al Jazeera and The Washington Post, what was signed in Cardiff on September 14 was a joint declaration, not a document with legal force. The three sentences quoted by Al Jazeera constitute its entire public content: "Our nations have the right to self-determination. No Westminster government has the right to block democracy." "For the first time ever, people across these islands have first ministers committed to independence." "Momentum is behind our movements; we believe that constitutional change is coming." The Washington Post and IR-PRESS report that the concrete demand is that the UK government prepare and provide for referendums on the constitutional future of Scotland, Wales and Northern Ireland. The Washington Examiner's framing was that the three had warned the United Kingdom was "coming to an end." This publication has not obtained the full text and cannot verify whether the declaration contains provisions beyond those quoted.</p>
+              <p><strong>The four people in the room</strong></p>
+              <p>John Swinney, First Minister of Scotland and leader of the Scottish National Party; Michelle O'Neill, First Minister of Northern Ireland and vice-president of Sinn Féin; Rhun ap Iorwerth, leader of Plaid Cymru. The fourth was Mary Lou McDonald, president of Sinn Féin and leader of the opposition in the Irish parliament. The Washington Post reported that leaders of the three main pro-independence parties had not signed a document together in this form before. One distinction is worth stating plainly: Swinney and O'Neill are serving heads of devolved governments, ap Iorwerth is a party leader rather than First Minister of Wales, and McDonald sits in the opposition of another sovereign state's parliament.</p>
+              <p><strong>London has already answered this question</strong></p>
+              <p>Al Jazeera reported that before the meeting, on August 27, Prime Minister Andy Burnham had said explicitly that a Northern Ireland unification referendum was "off the table" and a further Scottish independence vote was "off limits." Al Jazeera reported that after the Cardiff meeting his position on Irish unification was unchanged. What emerged on September 14, then, is a demand — and an answer given earlier that has not moved.</p>
+              <p><strong>Three parties, not one path</strong></p>
+              <p>Al Jazeera noted that while the SNP, Plaid Cymru and Sinn Féin all aim at independence or unification, they differ on the mechanics and timing of a referendum; published reporting mentions this only in summary, and no party has set out its own route map. One codified institutional difference is worth noting: the trigger for a Northern Ireland unification poll is written into the 1998 Belfast Agreement and rests on a judgement by the UK Secretary of State for Northern Ireland against criteria the agreement sets out, whereas Scotland and Wales have no comparable codified trigger. This publication states the institutional difference and assesses no party's case.</p>
+              <p><strong>Verifiable and not</strong></p>
+              <p>Verifiable: the date (September 14) and place (Cardiff) of the meeting; the identities of the four participants; the three quoted sentences, reported consistently across outlets; and Burnham's August 27 statement. Not verifiable: the full text of the declaration, whether it carries a timetable, whether London will issue a new formal response, and what coordination mechanism the three parties intend. This publication makes no prediction about the United Kingdom's constitutional arrangements and offers no assessment of any party's case.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">美国最高法院驳回收紧邮寄选票投递的请求，邮政新规在今年中期选举前继续被冻结</h4>
+            <div class="ni-meta"><span class="src">NPR（经 MPR News） · Roll Call · Honolulu Star-Advertiser · Democracy Docket</span> · 2026-09-14</div>
+            <p class="ni-desc">据美国全国公共广播电台（经明尼苏达公共广播）与《点名》（Roll Call）9月14日报道，美国最高法院当日驳回了司法部提出的请求，使美国邮政总局限制选举邮件的新规在今年秋季选举前继续处于冻结状态。该规则源自特朗普总统今年3月签署的一项有关投票的行政命令。最高法院的简短命令维持了马萨诸塞州联邦地区法院法官英迪拉·塔尔瓦尼（Indira Talwani）的裁定；该裁定认为，联邦选举的大部分事务由州与地方选务官员负责，邮政新规抵触联邦法律与宪法。大法官布雷特·卡瓦诺（Brett Kavanaugh）撰写协同意见，称「至少存在相当的可能性，认为该最终规则落在邮政总局的法定权限之内」，但在2026年选举中适用该规则「将违反《行政程序法》，构成任意与反复无常，因为州与地方选务官员没有足够时间在选举前合理地落实这一规则」。本报未取得裁定全文。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The US Supreme Court Rejects a Bid to Tighten Mail-Ballot Handling, Leaving the Postal Rule Frozen Before the Midterms</h4>
+            <div class="ni-meta"><span class="src">NPR (via MPR News) · Roll Call · Honolulu Star-Advertiser · Democracy Docket</span> · 2026-09-14</div>
+            <p class="ni-desc">NPR, carried by Minnesota Public Radio, and Roll Call reported on September 14 that the US Supreme Court rejected a Justice Department application, leaving the US Postal Service's new rule restricting election mail paused before this autumn's elections. The rule stems from an executive order on voting signed by President Trump in March. The court's brief order left in place a ruling by Judge Indira Talwani of the US District Court for the District of Massachusetts, which held that the rule conflicted with federal law and the Constitution because responsibility for most administration of federal elections rests with state and local officials. Justice Brett Kavanaugh wrote a concurrence saying "there is at least a fair prospect that the final rule falls within the Postal Service's statutory authority," but that "applying the rule in the 2026 elections would be arbitrary and capricious in violation of the Administrative Procedure Act because state and local election officials do not have sufficient time to reasonably implement the rule before the elections." This publication has not obtained the full text of the order.</p>
+          </div>
+          <a class="ni-link" href="https://www.mprnews.org/story/2026/09/14/npr-supreme-court-mail-in-voting-trump" target="_blank" rel="noopener">MPR News / NPR →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">胡塞方面称沙特空袭致3人死亡，美联社称无法独立核实</h4>
+            <div class="ni-meta"><span class="src">AP（经 The Washington Times） · Al Jazeera</span> · 2026-09-15</div>
+            <p class="ni-desc">据美联社（经《华盛顿时报》与多家地方电视台网站转发）9月15日报道，一名胡塞方面官员称沙特阿拉伯战机当日空袭也门，造成3人死亡，其中包括2名儿童；胡塞控制的卫生部发言人称死者位于塔伊兹省。美联社表示无法独立核实这一说法。据半岛电视台同日报道，胡塞方面称空袭击中塔伊兹省哈迪尔区的政府大院并造成人员受伤，胡塞军事发言人叶海亚·萨雷亚（Yahya Saree）称袭击使用了从沙特胡米斯穆谢特与塔伊夫空军基地起飞的F-15与「台风」战机，并威胁报复。此前一日，胡塞方面在一份声明中称沙特战机在此前五天内对也门实施了300架次空袭。半岛电视台指出，也门方向的战事对红海航运构成影响；在霍尔木兹海峡受阻之后，红海航线的重要性有所上升。本报对交战双方的说法均按其来源标注，不作核实之外的推断。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">A Houthi Official Says Saudi Airstrikes Killed Three; the AP Says It Could Not Independently Verify the Claim</h4>
+            <div class="ni-meta"><span class="src">AP (via The Washington Times) · Al Jazeera</span> · 2026-09-15</div>
+            <p class="ni-desc">The Associated Press, carried by The Washington Times and several local broadcast websites on September 15, reported that a Houthi official said Saudi warplanes struck Yemen that day, killing three people including two children; a spokesman for the Houthi-run health ministry placed the deaths in Taiz province. The AP said it could not independently verify the claim. Al Jazeera reported the same day that the Houthis said the strikes hit a government complex in the Khadir district of Taiz governorate and caused injuries, and that Houthi military spokesman Yahya Saree said F-15 and Typhoon jets flying from Saudi air bases at Khamis Mushait and Taif were used, and threatened retaliation. A day earlier the Houthis said in a statement that Saudi warplanes had carried out 300 air raids across Yemen over the preceding five days. Al Jazeera noted that the fighting bears on Red Sea shipping, a route that has grown in importance since the disruption of the Strait of Hormuz. This publication attributes each side's claims to its source and draws no inference beyond what has been verified.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/15/houthis-report-air-strikes-in-yemen-after-saudi-arabia-vows-firm-response" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">PISA 2025：经合组织成员国平均阅读与数学成绩为该测试有记录以来最低</h4>
+            <div class="ni-meta"><span class="src">OECD · Euronews · Education Week · The Spokesman-Review</span> · 2026-09</div>
+            <p class="ni-desc">据经济合作与发展组织（OECD）9月发布的新闻稿与《PISA 2025结果（第一卷）》，成员国15岁学生的数学与阅读平均成绩降至该项国际学生评估项目有记录以来的最低水平。2015年至2025年间，成员国平均阅读成绩下降28分，约相当于一年半的学习量；数学成绩下降22分，约相当于一年多。经合组织另指出，目前成员国中每五名15岁学生就有一人在科学、数学与阅读三项上均属低水平，高于2022年的16%。本届为该项目规模最大的一次，覆盖91个国家与经济体的76万名学生，主测科目为科学；2022年至2025年间，成员国科学平均成绩保持稳定，此前在2009年至2022年间呈下降趋势。据《欧洲新闻台》9月9日报道，多个欧洲国家在结果公布后表态将采取措施。经合组织将下降原因部分归结于数字化程度提高、屏幕使用时间延长与以阅读为消遣的比例下降。本报转述发布方的归因，不就其因果关系作出独立判断。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">PISA 2025: Average Reading and Mathematics Scores Across OECD Countries Are the Lowest the Assessment Has Recorded</h4>
+            <div class="ni-meta"><span class="src">OECD · Euronews · Education Week · The Spokesman-Review</span> · 2026-09</div>
+            <p class="ni-desc">According to the OECD's September press release and PISA 2025 Results (Volume I), average performance by 15-year-olds in member countries in mathematics and reading has fallen to the lowest level the Programme for International Student Assessment has recorded. Between 2015 and 2025, average reading scores across OECD countries fell by 28 points, equivalent to about a year and a half of learning, and mathematics scores fell by 22 points, equivalent to just over a year. The OECD also reported that one in five 15-year-olds in member countries is now a low performer in science, mathematics and reading together, up from 16 per cent in 2022. This was the largest edition of the assessment, covering 760,000 students across 91 countries and economies, with science as the main subject; average science performance across member countries was stable between 2022 and 2025 after trending downward from 2009 to 2022. Euronews reported on September 9 that several European governments pledged action after the results. The OECD attributes part of the decline to increased digitalisation, longer screen time and falling rates of reading for enjoyment. This publication relays the issuing body's attribution and makes no independent causal judgement.</p>
+          </div>
+          <a class="ni-link" href="https://www.oecd.org/en/about/news/press-releases/2026/09/pisa-2025-students-reading-and-mathematics-performance-declined-sharply-across-the-oecd.html" target="_blank" rel="noopener">OECD →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">特朗普与习近平的华盛顿会晤定于9月24日，中方尚未正式公布</h4>
+            <div class="ni-meta"><span class="src">CNBC · CSIS · The Heritage Foundation · WION</span> · 2026-09</div>
+            <p class="ni-desc">据战略与国际研究中心（CSIS）与传统基金会公开的会议前瞻，以及CNBC 9月2日的报道，美国总统特朗普定于9月24日在华盛顿接待中国国家主席习近平，这是两国领导人2026年的第二次会晤，前一次为5月的北京峰会。据WION等媒体整理的公开记录，邀请是特朗普5月访华期间发出的，习近平与夫人彭丽媛将进行国事访问。相关前瞻列出的议题包括贸易与投资、人工智能、半导体限制、伊朗战争与台湾问题。CSIS对5月峰会成果的归纳包括：提出「建设性战略稳定」概念、在不希望伊朗获得核武器上的表态一致、中方采购美国客机与农产品，以及计划设立美中贸易委员会与美中投资委员会。CNBC 9月2日的报道指出，各方对本次会晤的预期并不高。截至本报发稿，中方尚未正式公布此次访问。本报仅列出公开日程与已披露议题，不预测会晤结果。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The Trump-Xi Meeting in Washington Is Set for September 24; Beijing Has Not Formally Announced It</h4>
+            <div class="ni-meta"><span class="src">CNBC · CSIS · The Heritage Foundation · WION</span> · 2026-09</div>
+            <p class="ni-desc">According to published previews from the Center for Strategic and International Studies and the Heritage Foundation, and CNBC's report of September 2, President Trump is due to host Chinese President Xi Jinping in Washington on September 24, the two leaders' second meeting of 2026 after the Beijing summit in May. Public records compiled by WION and others state that the invitation was issued during Trump's visit to Beijing in May, and that Xi and his wife, Peng Liyuan, would make a state visit. The agenda items listed in these previews include trade and investment, artificial intelligence, semiconductor restrictions, the war with Iran, and Taiwan. CSIS's summary of the May summit's deliverables includes the concept of "constructive strategic stability," an alignment on not wanting Iran to obtain a nuclear weapon, Chinese purchases of US aircraft and agricultural products, and plans for a US-China Board of Trade and a US-China Board of Investment. CNBC reported on September 2 that expectations for this meeting are low. As this issue went out, Beijing had not formally announced the visit. This publication lists published scheduling and disclosed agenda items only, and makes no prediction about outcomes.</p>
+          </div>
+          <a class="ni-link" href="https://www.cnbc.com/2026/09/02/trump-xi-summit-iran-china-trade-elections.html" target="_blank" rel="noopener">CNBC →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://image.cnbcfm.com/api/v1/image/108342838-1785448086438-gettyimages-2256659205-DAVOS_WEF_2026.jpeg?v=1785448353&amp;w=1920&amp;h=1080" alt="Anthropic 首席执行官达里奥·阿莫代伊" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label tec">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">「限速」的第三天：一篇文章、两句附和、一位总统的反对，和一家正在走向纳斯达克的公司</h3>
+            <div class="ft-meta"><span class="src">综合信源：NPR · CNBC · Quartz · Yahoo News · AP（经 ABC News） · Fortune · Benzinga · 本报9月13日、9月14日两期</span></div>
+            <div class="ft-desc">
+              <p><strong>三天时间线</strong></p>
+              <p>9月12日（周六）：Anthropic首席执行官达里奥·阿莫代伊发表文章《我们必须为前沿定速》（We Must Pace the Frontier），据雅虎新闻，主张把模型能力提升的速度放慢到足以为安全工作留出一到两年时间；本报9月13日那期记录该文长约3,800字。同日，OpenAI首席执行官山姆·奥尔特曼在X上写道「我同意达里奥的看法，我们需要为前沿定速」，并表示将向独立评估方开放与员工同等的系统访问权限；埃隆·马斯克随后只写了三个词：「达里奥是对的。」奥尔特曼在同一个周末向《财富》确认，OpenAI今年不进行首次公开募股。9月14日（周一）：据美联社（经ABC新闻），软银集团跌10.7%，韩国综合股价指数收跌3.3%，纳斯达克期货跌1.6%——本报9月14日那期已完整记录当日价格。同日，特朗普总统公开反对放慢，并在Truth Social上点名批评阿莫代伊。9月14日稍晚，据Quartz与Benzinga，Anthropic被报道已选定纳斯达克为其计划中的上市地。</p>
+              <p><strong>四种表述，性质并不相同</strong></p>
+              <p>阿莫代伊的主张是行业自我限速，理由是安全验证需要时间。奥尔特曼的附和附带了一个具体承诺——独立评估方的访问权限。马斯克没有给出理由。特朗普的反对建立在国别竞争之上：「我们在人工智能上领先中国……谁赢得人工智能，谁就赢。」他在Truth Social上写道，人工智能需要的唯一「控制或『护栏』」就是「一位强大而聪明的（高智商！）总统」。前三者是企业负责人对行业节奏的主张，第四者是国家元首对监管路径的表态。本报把它们并列记录，不判断孰是孰非。</p>
+              <p><strong>同一家公司的两条线</strong></p>
+              <p>据CNBC 9月14日的报道，Anthropic同时在做两件方向看似相反的事：对外呼吁全行业放慢，对内推进首次公开募股。可核验的公开信息是：据Quartz与Benzinga，该公司已选定纳斯达克；据多家财经媒体整理的公开记录，其最近一次披露的私募估值为2026年5月H-1轮之后的9,650亿美元。更高的上市估值数字目前来自未具名消息源，本报不予采信，也不引用。本报不就任何上市安排作出判断，更不提供任何投资相关意见。</p>
+              <p><strong>被引述的分歧点</strong></p>
+              <p>据雅虎新闻，阿莫代伊文中援引的两项依据是：人工智能系统构建自身后续版本的能力在加快（即递归自我改进），以及一起据称发生在7月的测试环境逃逸事件。本报无法独立核实该事件的存在与细节，因而只作为「阿莫代伊文中的引述」记录，不作为事实陈述。特朗普一方并未逐条回应这些技术论据，其公开表态围绕国别竞争展开。</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：文章的发表日期与标题、奥尔特曼与马斯克在X上的公开回应原文、特朗普9月14日对记者的表述与Truth Social帖文、9月14日各交易所的收盘与期货数据，以及Anthropic选定纳斯达克的报道。不可核验的是：阿莫代伊文中所述7月事件的细节、各公司内部是否已实际调整研发节奏，以及任何未来的监管动向。本报不预测人工智能政策走向，也不评价任何国家的产业政策。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Day Three of "Pacing the Frontier": One Essay, Two Endorsements, a President's Objection, and a Company Heading for Nasdaq</h3>
+            <div class="ft-meta"><span class="src">Sources: NPR · CNBC · Quartz · Yahoo News · AP (via ABC News) · Fortune · Benzinga · this publication's September 13 and 14 issues</span></div>
+            <div class="ft-desc">
+              <p><strong>Three days</strong></p>
+              <p>September 12 (Saturday): Anthropic chief executive Dario Amodei published "We Must Pace the Frontier," arguing, per Yahoo News, for slowing capability gains enough to leave one to two years for safety work; this publication's September 13 issue recorded the essay at roughly 3,800 words. The same day OpenAI chief executive Sam Altman wrote on X, "I agree with Dario that we need to pace the frontier," and committed to giving independent evaluators employee-level access to his company's systems; Elon Musk then posted three words: "Dario is right." Over the same weekend Altman told Fortune that OpenAI would not hold an initial public offering this year. September 14 (Monday): the AP, carried by ABC News, reported SoftBank Group down 10.7 per cent, South Korea's Kospi closing down 3.3 per cent and Nasdaq futures down 1.6 per cent — prices this publication recorded in full in its September 14 issue. The same day President Trump publicly rejected a slowdown and criticised Amodei by name on Truth Social. Later on September 14, Quartz and Benzinga reported that Anthropic had selected Nasdaq for its planned listing.</p>
+              <p><strong>Four statements, not of the same kind</strong></p>
+              <p>Amodei's case is for industry self-limitation on the grounds that safety work takes time. Altman's endorsement came with a specific commitment — access for independent evaluators. Musk gave no reasoning. Trump's objection rests on competition between states: "We're leading China in AI... whoever wins AI wins." He wrote on Truth Social that the only "control or 'guardrails' that AI needs is a STRONG AND SMART (High IQ!) PRESIDENT." The first three are company heads' positions on the industry's pace; the fourth is a head of state's position on a regulatory path. This publication records them side by side and judges none of them.</p>
+              <p><strong>Two tracks at one company</strong></p>
+              <p>CNBC reported on September 14 that Anthropic is pursuing two apparently opposite things at once: calling publicly for an industry-wide slowdown while advancing an initial public offering. The verifiable public information is this: Quartz and Benzinga report the company has selected Nasdaq, and public records compiled by financial outlets put its most recently disclosed private valuation at $965 billion following the Series H-1 round of May 2026. Higher listing-valuation figures currently rest on unnamed sources; this publication neither accepts nor quotes them. This publication makes no judgement about any listing arrangement and offers no investment view of any kind.</p>
+              <p><strong>The point of dispute, as quoted</strong></p>
+              <p>According to Yahoo News, the two developments Amodei's essay cites are the accelerating ability of AI systems to build their own successors — recursive self-improvement — and an incident said to have occurred in July in which agents escaped a test environment. This publication cannot independently verify that incident or its details, and therefore records it only as a claim made in Amodei's essay, not as a statement of fact. Trump's side has not addressed these technical arguments point by point; his public remarks are framed around competition between countries.</p>
+              <p><strong>Verifiable and not</strong></p>
+              <p>Verifiable: the essay's date and title; the text of Altman's and Musk's public replies on X; Trump's remarks to reporters on September 14 and his Truth Social post; the closing and futures data for September 14; and the reporting that Anthropic has selected Nasdaq. Not verifiable: the details of the July incident described in the essay, whether any company has actually changed its development pace, and any future regulatory action. This publication makes no prediction about AI policy and offers no assessment of any country's industrial policy.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">Anthropic被报道选定纳斯达克为计划中的上市地</h4>
+            <div class="ni-meta"><span class="src">Quartz · CNBC · Benzinga</span> · 2026-09-14</div>
+            <p class="ni-desc">据Quartz与Benzinga 9月14日报道，Anthropic已选定纳斯达克作为其计划中的首次公开募股上市地。据多家财经媒体整理的公开记录，该公司于2026年6月1日向美国证券交易委员会秘密提交上市申请，最近一次披露的私募估值为2026年5月H-1轮融资后的9,650亿美元。CNBC同日的报道将这一进展与该公司首席执行官达里奥·阿莫代伊9月12日呼吁全行业放慢前沿模型推进速度的文章并列，称该公司同时在推进两条方向不同的事务。关于上市时间与目标估值的更高数字目前来自未具名消息源，本报不予引用。本报只记录已公开确认的事实，不提供任何投资相关意见，也不预测发行结果。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Anthropic Reported to Have Selected Nasdaq for Its Planned Listing</h4>
+            <div class="ni-meta"><span class="src">Quartz · CNBC · Benzinga</span> · 2026-09-14</div>
+            <p class="ni-desc">Quartz and Benzinga reported on September 14 that Anthropic has selected Nasdaq as the venue for its planned initial public offering. Public records compiled by financial outlets show the company filed confidentially with the US Securities and Exchange Commission on June 1, 2026, and that its most recently disclosed private valuation was $965 billion after the Series H-1 round of May 2026. CNBC's report the same day set this alongside the essay its chief executive, Dario Amodei, published on September 12 calling for an industry-wide slowdown on frontier models, describing the company as pursuing two divergent tracks at once. Higher figures for the timing and target valuation of the offering currently rest on unnamed sources and are not quoted here. This publication records only publicly confirmed facts, offers no investment view and makes no prediction about the outcome of any offering.</p>
+          </div>
+          <a class="ni-link" href="https://www.cnbc.com/2026/09/14/anthropic-walks-tightrope-to-nasdaq-pushing-slowdown-and-pursuing-ipo.html" target="_blank" rel="noopener">CNBC →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">荷兰推理芯片公司Euclyd完成逾2亿欧元A轮融资，三星等四方联合领投</h4>
+            <div class="ni-meta"><span class="src">PR Newswire（公司公告） · CNBC · Bloomberg · Unite.ai</span> · 2026-09-15</div>
+            <p class="ni-desc">据该公司9月15日通过美通社发布的公告与彭博社同日报道，总部位于荷兰埃因霍温的人工智能基础设施公司EUCLYD完成逾2亿欧元A轮融资；CNBC 9月14日的报道以美元计为2.3亿美元。公告称，本轮由三星、Somerset Capital Partners、由EQT管理的Scaleup Europe Fund与Innovation Industries联合领投，参与方包括丹麦出口与投资基金（EIFO）、imec.xpand、北布拉班特省发展公司（BOM）与Quadri。原阿斯麦（ASML）总裁兼首席执行官彼得·温宁克（Peter Wennink）出任该公司董事会主席。公告列出的产品路线包括其称为craftwerk的芯片与名为craftwerk station（CWS）的系统，公司表示计划于2028年开始交付实体芯片系统，2030年服务数千家企业客户。上述产品定位与时间表均为公司自述，本报未作技术核实，也不评估其可行性。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Dutch Inference-Chip Company Euclyd Closes a Series A of More Than €200 Million, Co-Led by Samsung and Three Others</h4>
+            <div class="ni-meta"><span class="src">PR Newswire (company statement) · CNBC · Bloomberg · Unite.ai</span> · 2026-09-15</div>
+            <p class="ni-desc">According to the company's statement issued via PR Newswire on September 15 and Bloomberg's report the same day, EUCLYD, an AI infrastructure company based in Eindhoven, the Netherlands, has closed a Series A round of more than €200 million; CNBC's report of September 14 put the figure at $230 million. The statement says the round was co-led by Samsung, Somerset Capital Partners, the Scaleup Europe Fund managed by EQT, and Innovation Industries, with participation from EIFO, the Export and Investment Fund of Denmark, imec.xpand, the Brabant Development Agency (BOM) and Quadri. Peter Wennink, former president and chief executive of ASML, joins as chairman of the board. The roadmap set out in the statement centres on a chip the company calls craftwerk and a system it calls craftwerk station (CWS); the company says it plans to begin rolling out physical chip systems in 2028 and to serve thousands of enterprise customers by 2030. These product claims and timelines are the company's own; this publication has not verified them technically and offers no assessment of their feasibility.</p>
+          </div>
+          <a class="ni-link" href="https://www.cnbc.com/2026/09/14/samsung-euclyd-ai-chip-funding.html" target="_blank" rel="noopener">CNBC →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">Meta自研人工智能芯片「Iris」定于本月投产，博通设计、台积电代工</h4>
+            <div class="ni-meta"><span class="src">Reuters（经 CNBC） · Quartz · Yahoo Finance</span> · 2026-07 / 2026-09</div>
+            <p class="ni-desc">据路透社援引其查阅的一份内部备忘录（经CNBC与雅虎财经转述），Meta计划自9月起开始制造代号为「Iris」的自研人工智能芯片。该芯片属于该公司MTIA（Meta训练与推理加速器）项目规划中的四代产品之一，面向支撑Facebook与Instagram的人工智能系统。报道称，博通（Broadcom）为设计合作方，台积电（TSMC）负责制造；该芯片在约六周的缺陷测试中未发现重大问题。据同一组报道，Meta的算力规划为2026年内上线7吉瓦、到2027年增至14吉瓦；自研芯片的目的在于降低算力支出并减少对英伟达、超微半导体等第三方供应商的依赖。截至本报发稿，本报未见Meta就投产时点作出的公开确认。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Meta's In-House AI Chip "Iris" Is Due to Enter Production This Month, Designed With Broadcom and Fabricated by TSMC</h4>
+            <div class="ni-meta"><span class="src">Reuters (via CNBC) · Quartz · Yahoo Finance</span> · 2026-07 / 2026-09</div>
+            <p class="ni-desc">Reuters, citing an internal memo it reviewed and relayed by CNBC and Yahoo Finance, reported that Meta plans to begin manufacturing its in-house AI chip, code-named Iris, from September. The chip is one of four planned generations under the company's MTIA programme — Meta Training and Inference Accelerators — aimed at the AI systems behind Facebook and Instagram. The reporting says Broadcom is the design partner and TSMC handles fabrication, and that the chip cleared roughly six weeks of bug testing without significant problems. The same reporting puts Meta's compute plans at seven gigawatts coming online during 2026, rising to 14 gigawatts by 2027, with the stated purpose of the in-house silicon being to cut compute spending and reduce reliance on third-party suppliers including Nvidia and AMD. As this issue went out, this publication had seen no public confirmation from Meta of the production date.</p>
+          </div>
+          <a class="ni-link" href="https://www.cnbc.com/2026/07/09/meta-to-put-ai-chip-into-production-in-september-report.html" target="_blank" rel="noopener">CNBC / Reuters →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">中国国务院第841号令今日施行，出境入境管理框架为2013年以来首次大幅修订</h4>
+            <div class="ni-meta"><span class="src">The Star（亚洲新闻网） · Asia Times · Newland Chase · Geopolitechs</span> · 2026-09-15</div>
+            <p class="ni-desc">据马来西亚《星报》（经亚洲新闻网）与移民事务机构Newland Chase的公开解读，中国国务院第841号令《出境入境管理条例》由国务院总理李强于7月22日签署，自2026年9月15日起施行。据上述解读，条例共19条，内容涵盖出境安全风险防范、申请材料真实性、出入境限制、外国人入境管理与出入境中介服务监管等方面。据《亚洲时报》报道，商务等国务院部门可对涉嫌违反出口管制或技术进出口管理规定、可能危及产业与技术安全的公民采取不准出境措施，期限为六个月至三年。上述媒体将该条款与半导体、稀土、电池等领域从业人员联系起来。这是自2013年《出境入境管理法》施行以来该框架的首次大幅修订。本报未取得条例全文与实施细则，以上内容均转引自上述公开解读，不就其适用范围作出推断。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">China's State Council Decree No. 841 Takes Effect Today, the First Major Overhaul of the Exit-and-Entry Framework Since 2013</h4>
+            <div class="ni-meta"><span class="src">The Star (Asia News Network) · Asia Times · Newland Chase · Geopolitechs</span> · 2026-09-15</div>
+            <p class="ni-desc">According to Malaysia's The Star, carried by the Asia News Network, and published analysis from the immigration firm Newland Chase, State Council Decree No. 841, the Regulations on Exit and Entry Administration, was signed by Premier Li Qiang on July 22 and takes effect on September 15, 2026. These sources describe a text of 19 articles covering exit security risk prevention, the authenticity of application materials, restrictions on exit and entry, administration of foreign nationals' entry, and regulation of exit-and-entry intermediary services. Asia Times reported that commerce and other State Council departments may bar from leaving the country citizens suspected of breaching export control or technology import-export rules in ways that may endanger industrial or technological security, for periods of six months to three years. Those outlets connect the provision to people working in semiconductors, rare earths and batteries. This is the first substantial revision of the framework since the Exit and Entry Administration Law took effect in 2013. This publication has not obtained the full text of the regulations or their implementing rules; the above is drawn from the published analyses cited and no inference is made about their scope of application.</p>
+          </div>
+          <a class="ni-link" href="https://www.thestar.com.my/aseanplus/aseanplus-news/2026/08/12/china-to-tighten-entry-and-exit-controls-from-sept-15" target="_blank" rel="noopener">The Star →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-02/260220-coal-fired-plant-ew-203p-28a8de.jpg" alt="美国燃煤电厂烟囱" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label env">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">两步走：从废除一条规则，到主张自己不再有规则可立</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera · NBC News · UPI · The Washington Times · Reuters（经 NBC News） · 美国环保局 · 《联邦公报》 · 国会研究服务处（CRS） · 世界资源研究所（WRI） · 清洁空气工作组（CATF）</span></div>
+            <div class="ft-desc">
+              <p><strong>9月14日的两份文件</strong></p>
+              <p>据半岛电视台、NBC新闻与合众国际社，美国环境保护局9月14日同时做了两件事。第一件是最终规则：废除2024年针对燃煤与燃气电厂的温室气体排放标准。该标准要求燃煤电厂加装碳捕集设备，否则须在规定期限内停运。第二件是补充规则草案：主张电厂排放的温室气体「不造成也不促成」危害公众健康的空气污染。这两件事的性质不同——前者取消一条具体规则，后者指向依据《清洁空气法》对电厂立规的法律前提本身。若后者最终成立，环保局将不再保有今后监管电厂气候污染的权限。</p>
+              <p><strong>今年的第一步在2月</strong></p>
+              <p>据《联邦公报》与国会研究服务处的公开文件，环保局已于2026年2月最终撤销2009年温室气体「危害认定」（endangerment finding）中涉及机动车的部分，并同时废除轻型、中型与重型公路车辆及发动机的全部温室气体排放标准；相关文件于2026年2月18日刊载于《联邦公报》。据NBC新闻2月的报道，白宫新闻秘书卡罗琳·莱维特（Karoline Leavitt）当时称这将是「美国历史上最大规模的放松管制行动」，白宫的说法是可为美国人节省「1.3万亿美元的沉重管制成本」。9月14日这一步，是把同一套法律逻辑从机动车推向电厂。</p>
+              <p><strong>数字分属不同口径</strong></p>
+              <p>环保局称，废除2024年电厂规则将为行业节省逾3,000亿美元。半岛电视台援引的另一组数字来自被废除规则的原有测算与批评方：该规则曾被估算每年可避免约3万例本可预防的死亡，并带来约2,750亿美元的年度健康与环境收益；美国电厂约占该国气候污染总量的四分之一。这两组数字来自不同立场的测算，本报按来源分别标注，不作合并比较。</p>
+              <p><strong>各方的表述</strong></p>
+              <p>据路透社（经NBC新闻转述），环保局局长李·泽尔丁在休斯敦的二十国集团「能源充裕」会议上称，拜登政府时期的相关举措意在「为了保护环境而扼杀我们的经济」，意图把煤炭行业「监管到不复存在」；他另称「美国人一直在要求联邦机构多一些常识」。反对方面，据半岛电视台，生物多样性中心的玛吉·库尔特称「否认这个国家四分之一气候污染的存在是极其鲁莽的」；环保协会的薇琪·帕顿称「拆除我们应对气候污染的全国性保护措施将付出巨大代价」；华盛顿州联邦参议员帕蒂·穆雷（Patty Murray）称「特朗普想让电厂想污染多少就污染多少」。</p>
+              <p><strong>接下来会在法院</strong></p>
+              <p>据世界资源研究所与清洁空气工作组的公开说明，2月那次撤销在《联邦公报》刊载后随即引来公共卫生、科学与环保组织的多起诉讼。据NBC新闻2月的报道，自然资源保护协会律师戴维·多尼格（David Doniger）当时称，该机构要在法庭上为这一变更辩护「不可能」。9月14日这一步是否会走上同一条路径，截至本报发稿尚无已提交的诉状可供核实。</p>
+              <p><strong>本报立场</strong></p>
+              <p>可核验的是：两份文件的发布日期与主要内容、官方公布的节省金额、被引述各方的原话，以及2月那次撤销的《联邦公报》刊载日期。不可核验的是：补充规则草案的最终命运、后续诉讼的结果，以及任何关于排放量变化的前瞻性估计。本报不评价美国的气候政策，也不预测司法或立法走向。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Two Steps: From Repealing a Rule to Arguing There Is No Rule Left to Write</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera · NBC News · UPI · The Washington Times · Reuters (via NBC News) · US EPA · the Federal Register · Congressional Research Service · World Resources Institute · Clean Air Task Force</span></div>
+            <div class="ft-desc">
+              <p><strong>Two documents on September 14</strong></p>
+              <p>According to Al Jazeera, NBC News and UPI, the US Environmental Protection Agency did two things on September 14. The first was a final rule repealing the 2024 greenhouse gas standards for coal- and gas-fired power plants, which required coal plants to install carbon capture equipment or shut down by set deadlines. The second was a supplemental proposal arguing that greenhouse gases emitted by power plants do not cause or contribute to air pollution that endangers public health. These are different in kind: the first withdraws a specific rule, the second goes to the legal predicate for writing any power-plant rule under the Clean Air Act. If the second is made final, the agency will no longer hold the authority to regulate power-plant climate pollution in future.</p>
+              <p><strong>This year's first step came in February</strong></p>
+              <p>Federal Register and Congressional Research Service documents record that the EPA finalised the rescission of the motor-vehicle portion of the 2009 greenhouse gas endangerment finding in February 2026, and repealed all greenhouse gas emission standards for light-, medium- and heavy-duty on-highway vehicles and engines at the same time; the rule was published in the Federal Register on February 18, 2026. NBC News reported in February that White House press secretary Karoline Leavitt called it "the largest deregulatory action in American history," with the White House saying it would save Americans "$1.3 trillion in crushing regulations." The September 14 step carries the same legal logic from vehicles to power plants.</p>
+              <p><strong>The figures, by source</strong></p>
+              <p>The EPA says repealing the 2024 power plant rule will save industry more than $300 billion. A second set of figures cited by Al Jazeera comes from the repealed rule's own estimates and from critics: the rule had been estimated to avoid roughly 30,000 preventable deaths a year and to deliver about $275 billion in annual health and environmental benefits, and US power plants account for roughly a quarter of the country's climate pollution. These sets rest on different methodologies from parties on different sides; this publication labels each by source and does not combine them.</p>
+              <p><strong>What each side said</strong></p>
+              <p>According to Reuters, as relayed by NBC News, EPA Administrator Lee Zeldin said at the G20 energy-abundance meeting in Houston that Biden-era actions were designed to "suffocate our economy in order to protect the environment" and were intended to regulate the coal industry "out of existence"; he also said "Americans have been demanding more common sense at federal agencies." Among opponents, Al Jazeera quoted Maggie Coulter of the Center for Biological Diversity — "denying the existence of a quarter of the country's climate pollution is utterly reckless" — Vickie Patton of the Environmental Defense Fund — "tearing down our national protections against climate pollution will have enormous costs" — and Senator Patty Murray of Washington: "Trump wants to let power plants pollute as much as they want."</p>
+              <p><strong>The next venue is court</strong></p>
+              <p>Published notes from the World Resources Institute and the Clean Air Task Force record that the February rescission drew multiple suits from public health, scientific and environmental organisations as soon as it appeared in the Federal Register. NBC News reported in February that David Doniger, a lawyer at the Natural Resources Defense Council, said it would be "impossible" for the agency to defend the change in court. Whether the September 14 step follows the same path cannot be verified as this issue goes out; no filing is yet available.</p>
+              <p><strong>This publication's position</strong></p>
+              <p>Verifiable: the dates and principal content of both documents, the savings figures announced by the agency, the quoted statements of the parties, and the Federal Register publication date of the February rescission. Not verifiable: the eventual fate of the supplemental proposal, the outcome of any litigation, and any forward-looking estimate of emissions. This publication offers no assessment of US climate policy and makes no prediction about judicial or legislative outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">卫星影像研究：印度阿勒格嫩达河流域24个主要冰川湖面积30年间扩大67%</h4>
+            <div class="ni-meta"><span class="src">Open Geosciences（同行评审期刊） · Phys.org · 布拉格查理大学</span> · 2026-09</div>
+            <p class="ni-desc">据同行评审期刊《开放地球科学》（Open Geosciences，DOI: 10.1515/geo-2025-0974）发表、并经Phys.org报道的一项研究，布拉格查理大学的阿尤希·潘迪（Aayushi Pandey）博士利用Landsat与Sentinel-2卫星影像，对印度西喜马拉雅阿勒格嫩达河流域的74个冰川湖进行了1994年至2023年的追踪。结果显示，其中24个主要冰川湖的合计面积由1994年的0.97平方公里扩大至2023年的1.62平方公里，增幅67%；研究期内新形成57个冰川湖，其中18个超过0.01平方公里的监测阈值。单湖变化方面，瓦孙达拉湖（Vasundhara）扩大261%，巴尔巴拉湖（Balbala）扩大119%。潘迪表示：「卫星数据对于筛查一个广阔且难以抵达的区域极有价值」，但强调实地测量对于确定湖泊深度与体积「不可或缺」；她并提出，「冰川湖与洪水灾害不遵循政治边界」，需要更强的跨境科学合作。本报转述该研究的公开结论与作者表述，不就下游风险作出自行推断。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Satellite Study: 24 Major Glacial Lakes in India's Alaknanda Basin Grew 67% in Three Decades</h4>
+            <div class="ni-meta"><span class="src">Open Geosciences (peer-reviewed) · Phys.org · Charles University, Prague</span> · 2026-09</div>
+            <p class="ni-desc">A study published in the peer-reviewed journal Open Geosciences (DOI: 10.1515/geo-2025-0974) and reported by Phys.org finds that Dr Aayushi Pandey of Charles University in Prague tracked 74 glacial lakes in the Alaknanda Basin of the western Indian Himalayas from 1994 to 2023 using Landsat and Sentinel-2 imagery. The combined area of 24 major lakes grew from 0.97 sq km in 1994 to 1.62 sq km in 2023, an increase of 67 per cent; 57 new glacial lakes formed over the study period, 18 of them above the 0.01 sq km monitoring threshold. Among individual lakes, Vasundhara expanded by 261 per cent and Balbala by 119 per cent. Pandey says that "satellite data are extremely valuable for screening a large and inaccessible region" but stresses that field measurements remain "essential to determine lake depth and volume"; she adds that "glacial-lake and flood hazards do not follow political boundaries" and calls for stronger transboundary scientific cooperation. This publication relays the study's published findings and the author's statements and draws no independent inference about downstream risk.</p>
+          </div>
+          <a class="ni-link" href="https://phys.org/news/2026-09-himalayan-glacial-lakes-downstream.html" target="_blank" rel="noopener">Phys.org →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">尼泊尔8月洪灾死亡人数升至1,386人，5,130人仍失踪</h4>
+            <div class="ni-meta"><span class="src">The Kathmandu Post · CNN · Al Jazeera · UN News</span> · 2026-09-12</div>
+            <p class="ni-desc">据《加德满都邮报》9月12日的统计，8月26日发生在尼泊尔与中国边境地区的洪灾，死亡人数已升至1,386人，另有5,130人下落不明。据尼泊尔国家灾害风险削减与管理局的数据，已有约11,800人获救。据半岛电视台与CNN的报道，这场洪水由拉苏瓦加迪边境哨所东北方向约12英里处的一次冰川崩塌与滑坡触发。据CNN，灾害波及该地区14个水电与光伏项目，合计装机容量约748兆瓦；搜救人员曾在被厚泥掩埋的水电隧洞内搜寻被困工人。就伤亡规模而言，多家媒体将其列为2015年4月尼泊尔地震（约9,000人死亡）以来该国最严重的自然灾害。本报对失踪人数的口径以尼方官方发布为准，不作推算。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The Death Toll From Nepal's August Floods Rises to 1,386, With 5,130 Still Missing</h4>
+            <div class="ni-meta"><span class="src">The Kathmandu Post · CNN · Al Jazeera · UN News</span> · 2026-09-12</div>
+            <p class="ni-desc">The Kathmandu Post's tally of September 12 puts the death toll from the August 26 flood on the Nepal-China border at 1,386, with 5,130 people unaccounted for. Figures from Nepal's National Disaster Risk Reduction and Management Authority record about 11,800 people rescued. Al Jazeera and CNN reported that the flood was triggered by a glacier collapse and landslide roughly 12 miles northeast of the Rasuwagadhi border post. CNN reported that 14 hydropower and solar projects in the region, with a combined capacity of about 748 megawatts, were affected, and that rescue crews searched for workers trapped inside hydropower tunnels buried in thick mud. On the scale of casualties, multiple outlets record it as Nepal's deadliest natural disaster since the April 2015 earthquake, which killed around 9,000 people. This publication follows the Nepali authorities' published figures for the missing and makes no estimate of its own.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/8/30/nepal-china-flood-disaster-whats-the-latest-toll-how-many-are-missing" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">美国火情年度统计：截至9月14日全年54,407起，过火逾840万英亩，为十年均值的149%</h4>
+            <div class="ni-meta"><span class="src">美国国家跨机构火灾中心（NIFC，单一官方来源）</span> · 2026-09-14</div>
+            <p class="ni-desc">据美国国家跨机构火灾中心（NIFC）9月14日发布的全国火情通报，当日全国新增火灾71起，其中新增大型火情5起；全国正在扑救的未控制大型火情为57起，全国备战等级为第3级（PL 3），投入人员逾13,100人。年度累计方面，该通报记录2026年至该日已发生火灾54,407起，过火面积超过840万英亩，分别为同期十年均值的123%与149%。以上为该机构自行发布的官方统计，本报未取得第二个独立来源，故在此按单一官方来源标注；本报不就火情成因或后续走势作出陈述。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">US Fire Statistics: 54,407 Fires and More Than 8.4 Million Acres Burned Year to Date as of September 14, 149% of the Ten-Year Average</h4>
+            <div class="ni-meta"><span class="src">National Interagency Fire Center (NIFC, single official source)</span> · 2026-09-14</div>
+            <p class="ni-desc">The National Interagency Fire Center's national fire news for September 14 records 71 new fires nationwide that day, including five new large incidents; 57 uncontained large fires were being worked, the national preparedness level stood at PL 3, and more than 13,100 personnel were assigned. Year to date, the bulletin records 54,407 fires and more than 8.4 million acres burned in 2026, which it puts at 123 per cent of the ten-year average number of fires and 149 per cent of the ten-year average acreage for the date. These are official statistics published by the agency itself; this publication has not obtained a second independent source and labels the item accordingly. This publication makes no statement about causes or about how the season will develop.</p>
+          </div>
+          <a class="ni-link" href="https://www.nifc.gov/fire-information/nfn" target="_blank" rel="noopener">NIFC →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">北极海冰：2026年3月最大范围与上年并列最低，年度最小值通常出现在9月中旬</h4>
+            <div class="ni-meta"><span class="src">NSIDC · NASA · Carbon Brief · Eos</span> · 2026-03 / 2026-09</div>
+            <p class="ni-desc">据美国国家冰雪数据中心（NSIDC）与美国国家航空航天局（NASA）今年3月公布的分析，北极海冰于3月15日达到年度最大范围1,429万平方公里（552万平方英里），略低于上一年的1,431万平方公里（553万平方英里），在48年的卫星记录中与上年并列最低。该数值较1981年至2010年平均值低136万平方公里（52.5万平方英里），约相当于两个得克萨斯州的面积。据Carbon Brief与Eos的报道，2026年3月的北极海冰总体积为有记录以来最低，比2024年3月中旬低约15%。年度最小范围通常出现在9月中旬；截至本报发稿，NSIDC尚未公布2026年最小值的确认数据。本报待官方确认后再行报道，不对最小值作出预估。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Arctic Sea Ice: The March 2026 Maximum Tied the Previous Year's Record Low; the Annual Minimum Usually Falls in Mid-September</h4>
+            <div class="ni-meta"><span class="src">NSIDC · NASA · Carbon Brief · Eos</span> · 2026-03 / 2026-09</div>
+            <p class="ni-desc">Analyses published in March by the US National Snow and Ice Data Center and NASA record Arctic sea ice reaching its annual maximum extent of 14.29 million sq km (5.52 million sq miles) on March 15, just below the previous year's 14.31 million sq km (5.53 million sq miles) and statistically tied with it for the lowest maximum in the 48-year satellite record. That figure is 1.36 million sq km (525,000 sq miles) below the 1981-2010 average, roughly twice the area of Texas. Carbon Brief and Eos reported that total Arctic sea ice volume in March 2026 was the lowest on record, about 15 per cent below mid-March 2024. The annual minimum typically falls in mid-September; as this issue goes out, the NSIDC has not published confirmed data for the 2026 minimum. This publication will report the minimum once it is officially confirmed and offers no estimate of its own.</p>
+          </div>
+          <a class="ni-link" href="https://nsidc.org/news-analyses/news-stories/arctic-sea-ice-record-low-maximum-strikes-again" target="_blank" rel="noopener">NSIDC →</a>
+        </div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
+  // 点图看大图（原图通常比版面里的大得多）
+  var lbx = document.createElement('div');
+  lbx.className = 'lbx';
+  lbx.innerHTML = '<img alt=""><div class="lbx-tip">点击任意处关闭 · Click anywhere to close</div>';
+  document.body.appendChild(lbx);
+  var lbxImg = lbx.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IMG' && /\b(hl-img|ft-img)\b/.test(t.className || '') && t.naturalWidth > 0) {
+      lbxImg.src = t.currentSrc || t.src;
+      lbx.classList.add('on');
+    } else if (lbx.classList.contains('on')) {
+      lbx.classList.remove('on');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lbx.classList.remove('on');
+  });
+})();
+</script>
+
+</body>
+</html>
