@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-16</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:300px;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:340px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:40%;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+
+/* 图片：完整显示，不裁切。点一下看大图 */
+.hl .hl-img,.ft .ft-img{cursor:zoom-in}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:24px;cursor:zoom-out}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+.lbx .lbx-tip{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+@media print{.lbx{display:none!important}}
+</style>
+<!-- share:start -->
+<meta name="description" content="冯德莱恩邀请加拿大成为欧盟首个「联系成员国」，卡尼在议会现场起身与其相拥；海牙法庭以四项战争罪判处科索沃前总统塔奇25年监禁，六项反人类罪指控全部不成立；欧盟推出「欧洲热浪计划」与「气候保险联盟」：冯德莱恩称今夏超额死亡逾3.5万、66万公顷被烧">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.012 · 2026-09-16 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="冯德莱恩邀请加拿大成为欧盟首个「联系成员国」，卡尼在议会现场起身与其相拥；海牙法庭以四项战争罪判处科索沃前总统塔奇25年监禁，六项反人类罪指控全部不成立；欧盟推出「欧洲热浪计划」与「气候保险联盟」：冯德莱恩称今夏超额死亡逾3.5万、66万公顷被烧">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-16.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4173x2347+0+217/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb6%2F61%2F45056a3842fe9f46214cf12059e2%2Fap26259317162978.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.012 · 2026-09-16 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="冯德莱恩邀请加拿大成为欧盟首个「联系成员国」，卡尼在议会现场起身与其相拥；海牙法庭以四项战争罪判处科索沃前总统塔奇25年监禁，六项反人类罪指控全部不成立；欧盟推出「欧洲热浪计划」与「气候保险联盟」：冯德莱恩称今夏超额死亡逾3.5万、66万公顷被烧">
+<meta name="twitter:image" content="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4173x2347+0+217/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb6%2F61%2F45056a3842fe9f46214cf12059e2%2Fap26259317162978.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.012 · 2026-09-16 · 陆先生日报 | Luxiansheng Daily","description":"冯德莱恩邀请加拿大成为欧盟首个「联系成员国」，卡尼在议会现场起身与其相拥；海牙法庭以四项战争罪判处科索沃前总统塔奇25年监禁，六项反人类罪指控全部不成立；欧盟推出「欧洲热浪计划」与「气候保险联盟」：冯德莱恩称今夏超额死亡逾3.5万、66万公顷被烧","datePublished":"2026-09-16","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-16.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4173x2347+0+217/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb6%2F61%2F45056a3842fe9f46214cf12059e2%2Fap26259317162978.jpg"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.012</div>
+    <div>2026.09.16 WEDNESDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">2026年9月16日，斯特拉斯堡的欧洲议会会场与海牙的一间法庭构成当日的两个焦点。欧盟委员会主席乌尔苏拉·冯德莱恩（Ursula von der Leyen）发表年度盟情咨文，当着在场的加拿大总理马克·卡尼（Mark Carney）提出邀请加拿大成为欧盟史上第一个「联系成员国」；同一篇演讲中她还宣布「欧洲热浪计划」与「气候保险联盟」，提议设立「欧洲安全理事会」，并表示将提出禁止13岁以下儿童使用社交媒体的《儿童法案》，同时称前沿人工智能「是时候减速」。同日，欧盟支持设立的科索沃特别法庭以谋杀、酷刑、残酷对待与任意拘禁四项战争罪判处科索沃前总统哈希姆·塔奇（Hashim Thaçi）25年监禁，同案另三人分别被判25年、18年与13年；四人在六项反人类罪指控上全部获判无罪。产业方面，Meta 公开了第三代自研人工智能芯片的部署时间表。本报逐条标注信源，对各方主张不作评价，也不预测后续走向。</p>
+    <p class="en-content" lang="en">On September 16, 2026, the European Parliament chamber in Strasbourg and a courtroom in The Hague were the day's two focal points. European Commission President Ursula von der Leyen delivered her annual State of the European Union address and, with Canadian Prime Minister Mark Carney in the chamber, invited Canada to become the first associate member in the EU's history. In the same speech she announced a European Heatwave Plan and a Climate Insurance Alliance, proposed a European Security Council, said the Commission would propose a Kids Act barring social media for children under 13, and said it was time to slow down at the frontier of artificial intelligence. The same day, the EU-backed Kosovo Specialist Chambers convicted former Kosovo President Hashim Thaci on four counts of war crimes — murder, torture, cruel treatment and arbitrary detention — and sentenced him to 25 years; three co-defendants received 25, 18 and 13 years. All four were acquitted on six counts of crimes against humanity. In industry, Meta set out a deployment timetable for the third generation of its in-house AI chip. This publication attributes each item to its sources, assesses no party's case, and makes no predictions.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl">
+        <img class="hl-img" src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4173x2347+0+217/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fb6%2F61%2F45056a3842fe9f46214cf12059e2%2Fap26259317162978.jpg" alt="冯德莱恩在欧洲议会发表盟情咨文" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">冯德莱恩邀请加拿大成为欧盟首个「联系成员国」，卡尼在议会现场起身与其相拥</h2>
+            <div class="hl-meta"><span class="src">AP（经 NPR）</span> · CBC News · CNBC · Euronews · ABC News · 2026-09-16</div>
+            <p class="hl-desc">据美联社（经美国全国公共广播电台转发）与加拿大广播公司（CBC）9月16日报道，欧盟委员会主席乌尔苏拉·冯德莱恩当日在斯特拉斯堡的欧洲议会发表年度盟情咨文时，对在场的加拿大总理马克·卡尼说：「我愿与你合作，为加拿大成为欧盟第一个联系成员国打开这扇门。」欧洲新闻台（Euronews）引述的表述为：「我邀请加拿大成为欧盟的第一个联系成员国。」据美联社，卡尼点头、起身，与冯德莱恩相拥并亲吻双颊，议员全体起立鼓掌。据CNBC与美联社，冯德莱恩表示欧加双方将在现行《综合经济与贸易协定》（CETA）基础上建立一个更广的「未来联盟」（Alliance for the Future），构成「一个共同的繁荣与经济安全空间」，覆盖先进制造、技术、国防生产、北极、能源、关键矿产、电池、人工智能、量子计算、网络安全与经济安全。卡尼办公室对这一提议表示欢迎，称加拿大深化与欧盟的关系是为了「强化我们的主权」。加拿大候任驻欧盟大使乔纳森·威尔金森（Jonathan Wilkinson）则表示，渥太华与布鲁塞尔有意先谈关系的实质内容、而非如何命名，并称双方在如何定义这一关系上「还有一段距离」。据美联社，进一步讨论将在10月下旬的加拿大—欧盟蒙特利尔峰会上展开。背景方面，美联社与CNBC均提到美国总统唐纳德·特朗普的关税措施以及其多次提及让加拿大成为「第51个州」的言论，推动渥太华寻求与欧洲更紧密的经济与安全联系。本报须说明：公开报道未给出「联系成员国」这一身份的法律依据与具体权利义务，冯德莱恩在演讲中亦未界定，本报不作推断。交叉核验：AP · CBC News · CNBC · Euronews</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Von der Leyen Invites Canada to Become the EU's First Associate Member; Carney Rises to Embrace Her in the Chamber</h2>
+            <div class="hl-meta"><span class="src">AP (via NPR)</span> · CBC News · CNBC · Euronews · ABC News · 2026-09-16</div>
+            <p class="hl-desc">The Associated Press, carried by NPR, and CBC News reported on September 16 that European Commission President Ursula von der Leyen, delivering her annual State of the European Union address to the European Parliament in Strasbourg, told Canadian Prime Minister Mark Carney, who was in the chamber: "I would like to work with you on opening the door for Canada being the first associate member of the EU." Euronews quoted the line as: "I invite Canada to be the first associate member of the EU." According to AP, Carney nodded, rose from his seat, embraced von der Leyen and kissed her on both cheeks as lawmakers gave a standing ovation. CNBC and AP reported that von der Leyen said the two sides would build on the existing Comprehensive Economic and Trade Agreement (CETA) with a broader "Alliance for the Future" forming "a common prosperity and economic security space," covering advanced manufacturing, technology, defence production, the Arctic, energy, critical minerals, batteries, artificial intelligence, quantum computing, cybersecurity and economic security. Carney's office welcomed the proposal, saying Canada was deepening ties with the EU "to strengthen our sovereignty." Jonathan Wilkinson, Canada's ambassador-designate to the EU, said Ottawa and Brussels were deliberately focusing first on the substance of the relationship rather than what to call it, and that the two sides were "a ways away" from settling on a description. AP reported that discussions will step up at the Canada-EU summit in Montreal in late October. As background, both AP and CNBC noted US President Donald Trump's tariffs and his repeated talk of making Canada the 51st state, which have pushed Ottawa to seek closer economic and security ties with Europe. This publication notes that published reporting does not set out the legal basis or the specific rights and obligations of "associate member" status, and that von der Leyen did not define it in the speech; we draw no inference. Cross-verified: AP · CBC News · CNBC · Euronews</p>
+          </div>
+          <a class="hl-link" href="https://www.npr.org/2026/09/16/nx-s1-5970985/canada-become-eu-associate-member" target="_blank" rel="noopener">NPR / AP →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/GettyImages-1227758489-1789553624.jpg?resize=1920%2C1440" alt="科索沃前总统哈希姆·塔奇" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">海牙法庭以四项战争罪判处科索沃前总统塔奇25年监禁，六项反人类罪指控全部不成立</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Euronews · CNN · AP · The National · 2026-09-16</div>
+            <p class="hl-desc">据半岛电视台与欧洲新闻台9月16日报道，设在荷兰海牙的科索沃特别法庭（Kosovo Specialist Chambers）当日就谋杀、酷刑、残酷对待与任意拘禁四项战争罪判定科索沃前总统、科索沃解放军（KLA）前高级指挥官哈希姆·塔奇（Hashim Thaçi，58岁）有罪，量刑25年。同案另三名被告的刑期为：亚库普·克拉斯尼奇（Jakup Krasniqi）25年、卡德里·维塞利（Kadri Veseli）18年、雷杰普·塞利米（Rexhep Selimi）13年，后两人的刑期均包含已羁押时间。据半岛电视台，法庭认定四人须对96名政治对手及被视为塞尔维亚安全部队合作者的人员遇害负责，并认定涉及385人被任意非法拘禁、303人遭酷刑、约50人遭残酷对待。据欧洲新闻台，四人在六项反人类罪指控上全部获判无罪，法官认为检方未能证明相关罪行属于针对平民的广泛或有系统攻击的一部分；检方此前对四人各求刑45年。审判长查尔斯·史密斯（Charles Smith）在庭上表示，塔奇「利用其职位、领导地位、权威与声望」鼓励了这些罪行，并引用历史学者霍华德·津恩（Howard Zinn）的话说：「没有一面旗帜大到足以遮住杀害无辜者的耻辱。」四名被告均未认罪，且均可上诉。反应方面，据欧洲新闻台，科索沃外长格劳克·孔尤夫察（Glauk Konjufca）称这是「一个可悲、不公、不应得的判决」；数千人聚集在普里什蒂纳中心广场等待判决，广场在有罪判决宣读后数分钟内散去。相关事实的时间背景是1998至1999年科索沃脱离塞尔维亚的独立战争。本报未取得判决书全文，以上数字与引文均转引自上述报道。交叉核验：Al Jazeera · Euronews · CNN · AP</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">A Hague Court Sentences Kosovo's Former President Thaci to 25 Years on Four War-Crimes Counts; All Six Crimes-Against-Humanity Counts Fail</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Euronews · CNN · AP · The National · 2026-09-16</div>
+            <p class="hl-desc">Al Jazeera and Euronews reported on September 16 that the Kosovo Specialist Chambers in The Hague convicted former Kosovo President Hashim Thaci, 58, a former senior commander of the Kosovo Liberation Army (KLA), on four counts of war crimes — murder, torture, cruel treatment and arbitrary detention — and sentenced him to 25 years. Three co-defendants were sentenced as follows: Jakup Krasniqi, 25 years; Kadri Veseli, 18 years; Rexhep Selimi, 13 years, the latter two including time already served in custody. Al Jazeera reported that the court held the four responsible for the deaths of 96 political opponents and people regarded as collaborators with Serbian security forces, and found that 385 people were arbitrarily and unlawfully detained, 303 tortured and about 50 subjected to cruel treatment. According to Euronews, all four were acquitted on six counts of crimes against humanity after judges found prosecutors had not proved the crimes formed part of a widespread or systematic attack on civilians; prosecutors had sought 45 years for each defendant. Presiding Judge Charles Smith said Thaci "used his position, leadership, authority and standing" to encourage the crimes, and, quoting the historian Howard Zinn, said: "No flag is big enough to hide the shame of killing innocent people." All four pleaded not guilty and all may appeal. On reaction, Euronews reported that Kosovo's Foreign Minister Glauk Konjufca called the ruling "a sad, unjust, undeserved decision"; thousands had gathered in Prishtina's main square to await the verdict, and the square emptied within minutes of the guilty findings being read. The underlying events date to Kosovo's 1998-99 war of independence from Serbia. This publication has not obtained the full judgement; the figures and quotations above are taken from the reports cited. Cross-verified: Al Jazeera · Euronews · CNN · AP</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/16/former-kosovo-president-hashim-thaci-convicted-of-war-crimes" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://images.euronews.com/articles/stories/09/91/53/47/1200x675_cmsv2_3884d8fe-53da-55d6-b516-159ce97b0b13-9915347.jpg" alt="欧洲热浪与野火" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">欧盟推出「欧洲热浪计划」与「气候保险联盟」：冯德莱恩称今夏超额死亡逾3.5万、66万公顷被烧</h2>
+            <div class="hl-meta"><span class="src">Euronews（两篇）</span> · AP · Reuters · 2026-09-16</div>
+            <p class="hl-desc">据欧洲新闻台与美联社9月16日报道，冯德莱恩在盟情咨文中宣布推出「欧洲热浪计划」（European Heatwave Plan）。她在演讲中给出的今夏数字是：热浪期间「超过3.5万人额外死亡」，约66万公顷土地被烧，约1200万吨作物损失。美联社在报道中指出，3.5万这一数字是7月各监测机构估算值的三倍；本报按信源如实并列两种说法，不作取舍。她的原话包括：「今年夏天是真相之夏。我们这片大陆几乎没有哪个地方被放过。」「多瑙河、莱茵河、加龙河这样的重要河流正在我们眼前消失。」「这一切只是预演。这是有记录以来最热的几个夏季月份，但可能是未来若干年里最凉的。」以及「不能再有第二个这样的夏天。」计划内容据欧洲新闻台包含三项：「我们需要更好的预警系统和更好的卫生准备。我们需要城市适应与降温。我们还需要支持最脆弱的人群。」另据美联社，冯德莱恩提议组建一支欧洲消防飞机机队——欧盟目前自有机队规模很小，主要是在27国之间协调飞机、水车与志愿者网络。同时宣布的还有「气候保险联盟」（Climate Insurance Alliance）：据欧洲新闻台，欧洲灾害损失中仅约25%由私人保险承保，冯德莱恩称「国家预算成了最后的保险人。我们需要采取行动来弥合这个缺口」。她并表示委员会将于下月提出新的气候韧性框架，并识别「欧洲100个最脆弱的地区」。欧洲议会当日为一名在扑救野火中牺牲的消防员全体起立致意。交叉核验：Euronews · AP · Reuters</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">The EU Unveils a European Heatwave Plan and a Climate Insurance Alliance; Von der Leyen Cites 35,000-Plus Excess Deaths and 660,000 Hectares Burned</h2>
+            <div class="hl-meta"><span class="src">Euronews (two pieces)</span> · AP · Reuters · 2026-09-16</div>
+            <p class="hl-desc">Euronews and the Associated Press reported on September 16 that von der Leyen used her State of the European Union address to announce a European Heatwave Plan. The figures she gave for this summer were: "more than 35,000 additional deaths during the heat waves," some 660,000 hectares of land burned and roughly 12 million tonnes of crops lost. AP noted in its report that the 35,000 figure is triple the estimates published by monitoring groups in July; this publication sets both accounts side by side and does not choose between them. Her words included: "This summer was the summer of truth. Almost no part of our continent was spared." "Key rivers like the Danube, the Rhine or La Garonne are disappearing before our eyes." "All of this is a mere preview. These were the hottest summer months ever, but probably the coolest of the years to come." And: "There can be no repeat of this summer." On the plan's content, Euronews reported three elements: "We need better early warning systems and better health preparedness. We need urban adaptation and cooling. And we need to support the most vulnerable." AP reported that von der Leyen also proposed a European firefighting fleet of aircraft; the EU currently operates only a small fleet of its own and mainly coordinates a network of aircraft, water trucks and volunteers across the 27 member states. Announced alongside it was a Climate Insurance Alliance: according to Euronews, only around 25 per cent of catastrophe losses in Europe are covered by private insurance, and von der Leyen said "national budgets become the insurer of last resort. We need to take action to close this gap." She said the Commission would present a new framework for climate resilience next month and identify "100 of the most vulnerable territories in Europe." The Parliament gave a standing ovation that day to a firefighter killed battling wildfires. Cross-verified: Euronews · AP · Reuters</p>
+          </div>
+          <a class="hl-link" href="https://www.euronews.com/my-europe/2026/09/16/von-der-leyens-heatwave-plan-comes-as-europe-runs-out-of-time-to-adapt" target="_blank" rel="noopener">Euronews →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://www.rte.ie/images/0022bd2b-1600.jpg" alt="儿童使用社交媒体" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">欧盟拟全境禁止13岁以下使用社交媒体，《儿童法案》将把「证明安全」的举证责任交给平台</h2>
+            <div class="hl-meta"><span class="src">AP（经 KSAT）</span> · CNN · The Local · RTÉ · 2026-09-16</div>
+            <p class="hl-desc">据美联社（经KSAT）与CNN 9月16日报道，冯德莱恩在盟情咨文中宣布，欧盟委员会将提出一部《儿童法案》（Kids Act），在27个成员国范围内禁止13岁以下儿童使用社交媒体。据CNN，她提出的分级为：13岁以下不得使用社交媒体，15岁以下不得拥有个人账号；13至14岁可在监护人监督下使用功能受限的「迷你账号」（mini accounts），每日使用时长上限为一小时；据美联社，15至18岁区间要求平台采用「安全设计」。据CNN，该法案的核心机制是倒置举证责任——由平台证明其服务对未成年人是安全的，而非由监管方证明其有害。据CNN，禁止范围还提及在线游戏与聊天机器人。冯德莱恩的表述包括：「我们不必接受成瘾性设计。」「我们不必接受儿童被引向越来越极端的内容。」「我们不必接受女孩的照片被用于生成人工智能性化图像。」程序方面，据美联社，委员会将于次日（9月17日）正式提出法案，之后须经27个成员国辩论与表决，这一过程可能持续数年；报道未给出年龄验证的具体技术方案。据美联社，西班牙、葡萄牙、澳大利亚与新西兰已各自实施针对青少年的社交媒体限制，而法国一家法院曾以基本自由为由推翻一项针对15岁以下的禁令。本报记录提案内容与各方公开表态，不评价该提案，也不预测立法结果。交叉核验：AP · CNN · The Local · RTÉ</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">The EU Moves to Ban Social Media for Under-13s, with a Kids Act That Would Put the Burden of Proving Safety on Platforms</h2>
+            <div class="hl-meta"><span class="src">AP (via KSAT)</span> · CNN · The Local · RTÉ · 2026-09-16</div>
+            <p class="hl-desc">The Associated Press, via KSAT, and CNN reported on September 16 that von der Leyen used her State of the European Union address to announce that the European Commission would propose a Kids Act barring children under 13 from social media across all 27 member states. According to CNN, the tiers she set out are: no social media under the age of 13 and no personal account under 15; 13- and 14-year-olds may use guardian-supervised "mini accounts" with limited features, capped at one hour per day; and, per AP, platforms must apply "safe design" measures for those aged 15 to 18. CNN reported that the act's central mechanism is a reversal of the burden of proof — platforms would have to demonstrate their services are safe for minors, rather than regulators having to show they are harmful. CNN reported that the scope also extends to online games and chatbots. Von der Leyen's words included: "We do not have to accept addictive features." "We do not have to accept children being drawn into ever more extreme content." "We do not have to accept that girls have their photos used for AI-generated sexualized images." On process, AP reported that the Commission would formally table the act the following day, September 17, after which it must be debated and voted on by the 27 member states, a process that could take years; the reports do not set out a specific technical mechanism for age verification. AP reported that Spain, Portugal, Australia and New Zealand have each imposed their own restrictions on social media for teenagers, while a French court struck down a ban on under-15s on fundamental-freedoms grounds. This publication records the proposal and the public statements around it, offers no assessment of the proposal and makes no prediction about the legislative outcome. Cross-verified: AP · CNN · The Local · RTÉ</p>
+          </div>
+          <a class="hl-link" href="https://www.ksat.com/business/2026/09/16/eu-chief-proposes-social-media-ban-for-kids-under-13/" target="_blank" rel="noopener">KSAT / AP →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://www.thenews.com.pk/assets/uploads/2026-09-15/1416350_083139_updates.jpg" alt="Meta 自研人工智能芯片" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">Meta 第三代自研AI芯片「Arke」定于2027年上半年进数据中心，首批样片与仿真结果相差2%至3%</h2>
+            <div class="hl-meta"><span class="src">Bloomberg（经 Yahoo Finance 与 The News 转述）</span> · Parameter · CoinCentral · 2026-09-15</div>
+            <p class="hl-desc">据彭博社9月15日报道（本报未能直接访问彭博原文，以下细节转引自雅虎财经与巴基斯坦《新闻报》对该报道的转述），Meta 公开了其自研人工智能加速器的部署时间表。第三代产品 MTIA 450，代号「Arke」，计划于2027年上半年进入数据中心；下一代 MTIA 500，代号「Astrid」，设计预计在约一个月内完成，目标2027年年底上线。两代芯片均由博通（Broadcom）参与设计、由台积电（TSMC）制造，都采用高带宽内存架构，且都不以超快推理为目标。据雅虎财经，Meta 于9月1日收到12颗首批量产样片，实测表现与仿真结果相差2%至3%，并在第一天就跑通了 Meta 自有模型以及 DeepSeek 与阿里巴巴的系统。同一报道称，Meta 取消了原定2028至2029年推出的双用途芯片「Olympus」，理由是其成本会高出约30%；公司已就这批芯片承诺了超过1吉瓦的部署容量，时间跨度为12个月。据上述报道，这一路线的目标是降低对英伟达（Nvidia）处理器的依赖，并压低运行人工智能模型的成本与能耗。本报不评价该技术路线，也不对任何公司的经营前景作判断。交叉核验：Bloomberg（经 Yahoo Finance · The News 转述） · Parameter</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Meta's Third-Generation In-House AI Chip, Arke, Is Set for Data Centres in the First Half of 2027; First Samples Came Within 2-3% of Simulation</h2>
+            <div class="hl-meta"><span class="src">Bloomberg (as relayed by Yahoo Finance and The News)</span> · Parameter · CoinCentral · 2026-09-15</div>
+            <p class="hl-desc">Bloomberg reported on September 15 — this publication could not access the Bloomberg original, and the details below are taken from Yahoo Finance's and Pakistan's The News's accounts of that report — that Meta had set out a deployment timetable for its in-house AI accelerators. The third-generation part, MTIA 450, codenamed Arke, is planned to enter data centres in the first half of 2027; the next generation, MTIA 500, codenamed Astrid, is expected to complete design in about a month, with a target of going live by the end of 2027. Both generations are designed with Broadcom and manufactured by TSMC, both use a high-bandwidth memory architecture, and neither targets ultrafast inference. According to Yahoo Finance, Meta received 12 first production samples on September 1 that performed within 2 to 3 per cent of simulations and ran Meta's own models plus DeepSeek and Alibaba systems on day one. The same report said Meta cancelled a dual-purpose chip, Olympus, that had been due in 2028-29, because it would have cost roughly 30 per cent more, and that the company has committed more than a gigawatt of deployment capacity over a 12-month period. The stated aim, per those reports, is to reduce dependence on Nvidia processors and to lower the cost and energy use of running AI models. This publication offers no assessment of the technical approach and makes no judgement about any company's prospects. Cross-verified: Bloomberg (via Yahoo Finance · The News) · Parameter</p>
+          </div>
+          <a class="hl-link" href="https://www.thenews.com.pk/latest/1416350-meta-to-deploy-custom-arke-and-astrid-ai-chips-in-2027-everything-to-know" target="_blank" rel="noopener">The News →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://images.euronews.com/articles/stories/09/91/55/31/1200x675_cmsv2_8ebb3a29-0ec7-501b-8f73-59ee67aba596-9915531.jpg" alt="科索沃特别法庭宣判" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label pol">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">一份判决里的两半：四项战争罪成立，六项反人类罪不成立——科索沃特别法庭判了什么，又没判什么</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera · Euronews · CNN · AP（经多家地方台） · The National · 科索沃特别法庭公开信息</span></div>
+            <div class="ft-desc">
+              <p><strong>判决的两半</strong></p>
+              <p>9月16日在海牙宣读的判决可以拆成两半，而这两半在多家报道里指向不同方向。成立的一半：谋杀、酷刑、残酷对待、任意拘禁四项战争罪，塔奇被判25年。不成立的一半：六项反人类罪指控全部被驳回。据欧洲新闻台，法官给出的理由是检方未能证明相关罪行属于针对平民的「广泛或有系统的攻击」——这是反人类罪在国际法上的构成要件之一。也就是说，法庭认定了行为，但没有认定检方主张的那种系统性。检方此前对四名被告各求刑45年，实际判决低于这一请求。</p>
+              <p><strong>四个人与四个数字</strong></p>
+              <p>据半岛电视台，法庭认定四名被告须对96名政治对手及被视为塞尔维亚安全部队合作者的人员遇害负责；另认定385人被任意非法拘禁、303人遭酷刑、约50人遭残酷对待。量刑上，塔奇与亚库普·克拉斯尼奇各25年，卡德里·维塞利18年，雷杰普·塞利米13年；据欧洲新闻台，后两人的刑期包含已羁押时间。四人均未认罪，四人均可上诉。本报未取得判决书全文，无法核实上述数字在判决书中的具体归属方式（例如各被告分别对应哪些受害人）。</p>
+              <p><strong>法庭说了一句什么</strong></p>
+              <p>审判长查尔斯·史密斯在庭上的两处表述被多家媒体一致引述。关于责任基础：塔奇「利用其职位、领导地位、权威与声望」鼓励了针对政治对手与被视为合作者、叛徒的平民的行为。关于案件性质，他引用了美国历史学者霍华德·津恩的一句话：「没有一面旗帜大到足以遮住杀害无辜者的耻辱。」这句引语之所以值得原样记录，是因为它同时点出了本案在科索沃国内的争议所在。</p>
+              <p><strong>为什么是这样一个法庭</strong></p>
+              <p>科索沃特别法庭设在荷兰海牙，适用科索沃法律，由欧盟支持设立，专门审理1998至1999年科索沃独立战争期间及其后的指控。塔奇在被起诉时是科索沃在任总统，此前是科索沃解放军的高级指挥官。多家报道提到的一个结构性事实是：在科索沃国内，科索沃解放军与塔奇本人被相当多的阿尔巴尼亚族民众视为独立战争的英雄，这使得一份来自海牙的有罪判决在当地引发的反应与在法律层面上的评价并不同步。</p>
+              <p><strong>广场上的反应</strong></p>
+              <p>据欧洲新闻台，数千人聚集在普里什蒂纳中心广场等待判决，现场原本准备了迎接塔奇回国的倒计时装置；有罪判决宣读后，广场在数分钟内散去。据半岛电视台，在场者中有人震惊，有人高呼支持塔奇与科索沃解放军的口号。官方层面，科索沃外长格劳克·孔尤夫察称判决是「一个可悲、不公、不应得的决定」。本报按信源记录这些反应，不评价其内容。</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：宣判日期（9月16日）、法庭名称与所在地、四项成立罪名与六项不成立罪名的划分、四名被告的刑期、检方求刑45年、审判长身份与被一致引述的两处法庭表述、上诉权的存在。不可核验的是：判决书全文与其完整论理、四名被告是否会实际提出上诉、塞尔维亚方面是否有正式回应、科索沃政府后续将采取何种步骤。本报不预测上诉结果，也不评价该法庭的设立方式与科索沃国内的政治争论。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Two Halves of One Judgement: Four War-Crimes Counts Upheld, Six Crimes-Against-Humanity Counts Rejected — What the Kosovo Specialist Chambers Did and Did Not Find</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera · Euronews · CNN · AP (via several local stations) · The National · Kosovo Specialist Chambers public material</span></div>
+            <div class="ft-desc">
+              <p><strong>Two halves</strong></p>
+              <p>The judgement read out in The Hague on September 16 splits into two halves, and the two point in different directions across the reporting. The half that stood: four counts of war crimes — murder, torture, cruel treatment and arbitrary detention — with Thaci sentenced to 25 years. The half that did not: all six counts of crimes against humanity were rejected. According to Euronews, judges reasoned that prosecutors had not shown the crimes formed part of a "widespread or systematic attack" on civilians, one of the constituent elements of crimes against humanity in international law. The court, in other words, found the conduct but not the systematic character the prosecution had alleged. Prosecutors had sought 45 years for each of the four defendants; the sentences handed down were below that request.</p>
+              <p><strong>Four men and four numbers</strong></p>
+              <p>Al Jazeera reported that the court held the four responsible for the deaths of 96 political opponents and people regarded as collaborators with Serbian security forces, and found that 385 people were arbitrarily and unlawfully detained, 303 tortured and about 50 subjected to cruel treatment. On sentence: Thaci and Jakup Krasniqi received 25 years each, Kadri Veseli 18 years and Rexhep Selimi 13 years; per Euronews, the latter two sentences include time already spent in custody. All four pleaded not guilty and all four may appeal. This publication has not obtained the full judgement and cannot verify how these figures are attributed within it — which victims correspond to which defendant, for instance.</p>
+              <p><strong>What the court said</strong></p>
+              <p>Two passages from Presiding Judge Charles Smith were quoted consistently across outlets. On the basis of liability: Thaci "used his position, leadership, authority and standing" to encourage conduct directed at political opponents and at civilians regarded as collaborators and traitors. On the character of the case he quoted the American historian Howard Zinn: "No flag is big enough to hide the shame of killing innocent people." The quotation is worth recording verbatim because it also identifies where the case is contested inside Kosovo.</p>
+              <p><strong>Why this court</strong></p>
+              <p>The Kosovo Specialist Chambers sit in The Hague, apply Kosovo law and were established with EU backing to hear allegations arising from and after Kosovo's 1998-99 war of independence. Thaci was Kosovo's serving president when he was indicted, and before that a senior commander in the Kosovo Liberation Army. One structural fact noted across the reporting: inside Kosovo, the KLA and Thaci personally are regarded by a substantial share of ethnic Albanians as heroes of the independence war, which is why a guilty verdict from The Hague lands differently on the ground than it does in legal terms.</p>
+              <p><strong>The square</strong></p>
+              <p>According to Euronews, thousands gathered in Prishtina's main square to await the verdict, where countdown displays had been prepared to greet Thaci's return; within minutes of the guilty findings being read, the square emptied. Al Jazeera reported that some present were shocked and some chanted slogans in support of Thaci and the KLA. Officially, Kosovo's Foreign Minister Glauk Konjufca called the ruling "a sad, unjust, undeserved decision." This publication records these reactions as reported and offers no assessment of them.</p>
+              <p><strong>Verifiable and not</strong></p>
+              <p>Verifiable: the date of judgement (September 16); the court's name and seat; the split between the four counts upheld and the six rejected; the four sentences; the 45-year request by prosecutors; the presiding judge's identity and the two passages quoted consistently; and the existence of a right of appeal. Not verifiable: the full text of the judgement and its complete reasoning; whether the four will in fact appeal; whether Serbia has issued a formal response; and what steps Kosovo's government will take next. This publication makes no prediction about any appeal and offers no assessment of how the court was established or of the political argument inside Kosovo.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">美参议院卫生委员会就三名卫生高官提名举行听证，萨菲耶是特朗普第三位卫生总监人选</h4>
+            <div class="ni-meta"><span class="src">NPR（经 Houston Public Media 与 WGLT） · AP（经 Local10 与 ClickOnDetroit） · The Washington Post · 参议院 HELP 委员会公告</span> · 2026-09-16</div>
+            <p class="ni-desc">据美国参议院卫生、教育、劳工与退休金委员会（HELP）公告，该委员会9月16日上午10时（美国东部时间）在德克森参议院办公楼430室就三项提名举行听证：克里斯·克隆普（Chris Klomp）出任卫生与公众服务部（HHS）副部长、妮科尔·萨菲耶（Nicole Saphier）出任卫生总监（Surgeon General）、蒂莫西·韦斯特莱克（Timothy Westlake）出任负责精神卫生与药物使用事务的助理部长（SAMHSA）。据美国全国公共广播电台与美联社，萨菲耶是放射科医生、福克斯新闻频道前特约评论员，也是特朗普总统提出的第三位卫生总监人选：第一位人选、福克斯新闻医学评论员雅内特·内谢瓦特（Janette Nesheiwat）因学历遭质疑被撤回；第二位人选凯西·明斯（Casey Means）在今年2月经过一场争执激烈的听证后未获委员会表决。据美联社，萨菲耶持有一家名为 DropRx 的公司，该公司生产未受监管的酊剂，其成分曾被美国食品药品监督管理局描述为可能造成严重肝损伤；她提交的材料表示，若获确认将辞去在该公司的职务。美联社称参议员预计会就疫苗、拨款取消与阿片类药物危机提问。本报仅记录听证安排与公开背景，不预测确认结果。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The US Senate Health Committee Holds a Hearing on Three Senior Health Nominations; Saphier Is Trump's Third Surgeon General Pick</h4>
+            <div class="ni-meta"><span class="src">NPR (via Houston Public Media and WGLT) · AP (via Local10 and ClickOnDetroit) · The Washington Post · Senate HELP Committee notice</span> · 2026-09-16</div>
+            <p class="ni-desc">According to a notice from the US Senate Committee on Health, Education, Labor and Pensions, the committee held a hearing at 10:00 a.m. Eastern on September 16 in Room 430 of the Dirksen Senate Office Building on three nominations: Chris Klomp as Deputy Secretary of Health and Human Services, Nicole Saphier as Surgeon General, and Timothy Westlake as Assistant Secretary for Mental Health and Substance Use at SAMHSA. NPR and AP reported that Saphier is a radiologist and a former Fox News Channel contributor, and President Trump's third nominee for surgeon general: the first, Fox News medical contributor Janette Nesheiwat, was withdrawn after questions about her academic credentials; the second, Casey Means, never received a committee vote after a contentious hearing in February. AP reported that Saphier owns a firm called DropRx, which produces unregulated tinctures with ingredients the Food and Drug Administration has described as potentially causing severe liver injury, and that her filing states she will resign her position with the firm if confirmed. AP reported that senators were expected to question her on vaccines, grant cancellations and the opioid crisis. This publication records the hearing and its published background, and makes no prediction about confirmation.</p>
+          </div>
+          <a class="ni-link" href="https://www.npr.org/2026/09/16/nx-s1-5968780/trump-rfk-jr-health-nomination-surgeon-general" target="_blank" rel="noopener">NPR →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">冯德莱恩提议设立「欧洲安全理事会」，并提出仿效北约第四条的危机磋商机制</h4>
+            <div class="ni-meta"><span class="src">Euronews</span> · ABC News · 2026-09-16</div>
+            <p class="ni-desc">据欧洲新闻台与澳大利亚广播公司（ABC）9月16日报道，冯德莱恩在盟情咨文中提议设立一个新的多边机构「欧洲安全理事会」，参与方包括乌克兰、英国、挪威与加拿大，用于协调应对混合威胁。她在演讲中称「欧洲的安全不可分割」（Europe's security is indivisible），并提议在欧盟层面建立一个类似北约《华盛顿条约》第四条的机制，用于在成员国认为自身安全受到威胁时启动磋商。报道未给出该机构的法律形式、决策规则与设立时间表；欧盟现行条约中没有同名机构。本报仅记录提议内容，不评价其可行性，也不预测成员国的反应。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Von der Leyen Proposes a European Security Council and a Crisis-Consultation Mechanism Modelled on NATO's Article 4</h4>
+            <div class="ni-meta"><span class="src">Euronews</span> · ABC News · 2026-09-16</div>
+            <p class="ni-desc">Euronews and Australia's ABC reported on September 16 that von der Leyen used her State of the European Union address to propose a new multilateral body, a European Security Council, involving Ukraine, the United Kingdom, Norway and Canada, to coordinate responses to hybrid threats. She said in the speech that "Europe's security is indivisible," and proposed an EU-level mechanism mirroring Article 4 of NATO's Washington Treaty, under which a member that considers its security threatened can trigger consultations. The reports do not set out the body's legal form, decision rules or timetable; no body of that name exists under the current EU treaties. This publication records the proposal, offers no assessment of its feasibility and makes no prediction about member states' responses.</p>
+          </div>
+          <a class="ni-link" href="https://www.euronews.com/my-europe/2026/09/16/ursula-von-der-leyen-delivers-state-of-the-union-speech" target="_blank" rel="noopener">Euronews →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">欧盟拟设「紧急应对框架」处理大规模非常规入境，以7月休达危机为参照</h4>
+            <div class="ni-meta"><span class="src">Euronews</span> · ABC News · 2026-09-16</div>
+            <p class="ni-desc">据欧洲新闻台9月16日报道，冯德莱恩在盟情咨文中宣布将提出一个「欧洲紧急应对框架」（European Emergency Response Framework），用于应对大规模非常规入境的情形，参照的是今年7月发生在西班牙飞地休达（Ceuta）的边境危机。据该报道，该框架的机制是：当人员流动属于被「策划与武器化」（engineered and weaponised）的情形时，允许成员国在程序上获得临时的灵活性。公开报道未说明「策划与武器化」的认定主体与标准，也未给出该框架与欧盟现行《移民与庇护公约》之间的关系。本报仅记录提案表述，不作解释性推断。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The EU Plans an Emergency Response Framework for Mass Irregular Arrivals, Modelled on July's Ceuta Crisis</h4>
+            <div class="ni-meta"><span class="src">Euronews</span> · ABC News · 2026-09-16</div>
+            <p class="ni-desc">Euronews reported on September 16 that von der Leyen announced in her State of the European Union address a "European Emergency Response Framework" to deal with mass irregular arrivals, with July's border crisis at the Spanish enclave of Ceuta as its reference point. According to the report, the mechanism would allow member states temporary procedural flexibility where movements of people are "engineered and weaponised." Published reporting does not say who would determine that a movement meets that description, or against what criteria, nor how the framework would relate to the EU's existing Pact on Migration and Asylum. This publication records the proposal as stated and draws no interpretive inference.</p>
+          </div>
+          <a class="ni-link" href="https://www.euronews.com/my-europe/2026/09/16/ursula-von-der-leyen-delivers-state-of-the-union-speech" target="_blank" rel="noopener">Euronews →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">刚果（金）埃博拉疫情扩散至第七个省，为首次进入该国西部</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · AP（经 NBC News 与 The Washington Times） · CIDRAP · ECDC · 2026-09-11 / 2026-09-14</div>
+            <p class="ni-desc">据半岛电视台与美联社（经NBC新闻）9月11日报道，刚果民主共和国的埃博拉疫情已扩散至南乌班吉省（Sud-Ubangi），成为本轮疫情波及的第七个省份，也是首个位于该国西部的省份——此前疫情主要集中在东部。据上述报道，相关病例是一名23岁男子：他从南基伍省出发，途经卢旺达与乌干达，随后前往本轮疫情中心伊图里省，再由该国东北部一路向西北移动，经过察波省（Tshopo）、蒙加拉省（Mongala）抵达南乌班吉省，之后因感染死亡。据欧洲疾病预防控制中心（ECDC）的统计，截至2026年9月14日，刚果民主共和国累计报告确诊病例7258例、相关死亡3510例；美联社称这是有记录以来传播最快的一轮埃博拉疫情。邻国方面，据ECDC，乌干达在2026年5月至6月间由卫生部报告20例，世界卫生组织已于8月25日在连续42天无新增确诊病例后宣布该国疫情结束。本报按信源记录数字，不预测疫情走向。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The Ebola Outbreak in DR Congo Reaches a Seventh Province, Its First in the Country's West</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera</span> · AP (via NBC News and The Washington Times) · CIDRAP · ECDC · 2026-09-11 / 2026-09-14</div>
+            <p class="ni-desc">Al Jazeera and the Associated Press, via NBC News, reported on September 11 that the Ebola outbreak in the Democratic Republic of the Congo had spread to Sud-Ubangi province, the seventh province affected in this outbreak and the first in the west of the country, the outbreak having until then been concentrated in the east. According to those reports, the case involved a 23-year-old man who left South Kivu province, travelled through Rwanda and Uganda, then went to Ituri province, the outbreak's epicentre, and moved from the country's north-east to its north-west through Tshopo and Mongala to Sud-Ubangi, where he died of the infection. According to figures from the European Centre for Disease Prevention and Control, as of September 14, 2026 the DRC had reported a cumulative 7,258 confirmed cases and 3,510 related deaths; AP described it as the fastest-growing Ebola outbreak on record. In neighbouring Uganda, per the ECDC, the health ministry reported 20 cases between May and June 2026, and the World Health Organization declared that outbreak over on August 25 after 42 consecutive days with no new confirmed case. This publication records the figures as reported and makes no prediction about the outbreak's course.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/news/2026/9/11/ebola-case-detected-in-seventh-dr-congo-province" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://media.thenextweb.com/2026/09/Ursula-von-der-Leyen-addresses-the-European-Parliament.jpg" alt="冯德莱恩在欧洲议会发表演讲" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label tec">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">「为前沿定速」的四天：一篇文章、一位总统的反对、一份企业行为准则，和一段被写进盟情咨文的话</h3>
+            <div class="ft-meta"><span class="src">综合信源：Euronews · The Next Web · Reuters（经 Global Banking &amp; Finance） · TechCrunch · NPR · CNBC · Yahoo News · Quartz · BetaNews · Artificial Intelligence News · American Bazaar · 本报9月13日、14日两期</span></div>
+            <div class="ft-desc">
+              <p><strong>一句短语，四天走完的路</strong></p>
+              <p>「为前沿定速」（pace the frontier）这个说法出现于9月12日，到9月16日被写进欧盟盟情咨文。中间四天里，它先后得到几家前沿实验室负责人的公开附议、遭到美国总统的公开反对、与微软一份企业内部行为准则草案同日并行，然后落到欧盟的政策语言里。本报此前在9月13日与9月14日两期中分别报道了其中的前两段，这里把四天串成一条线，只陈述各方说了什么与何时说的。</p>
+              <p><strong>9月12日：一篇文章</strong></p>
+              <p>据雅虎新闻与TechCrunch，Anthropic 首席执行官达里奥·阿莫代伊（Dario Amodei）于9月12日（星期六）发表文章《我们必须为前沿定速》（We Must Pace the Frontier），主张行业共同放慢前沿人工智能的推进速度以避免灾难性风险；据雅虎新闻，文中的具体主张是把能力提升的速度放慢到足以为安全工作留出一到两年时间。据TechCrunch，萨姆·奥尔特曼（Sam Altman）、德米斯·哈萨比斯（Demis Hassabis）与埃隆·马斯克（Elon Musk）先后公开表示赞同。据Quartz与雅虎新闻，奥尔特曼在X上写道「我同意达里奥的看法，我们需要为前沿定速」，并表示将向独立评估方开放与员工同等的系统访问权限；马斯克只写了三个词：「达里奥是对的。」</p>
+              <p><strong>9月14日：反对与准则</strong></p>
+              <p>据美国全国公共广播电台与CNBC，特朗普总统9月14日对记者表示：「我们在人工智能上领先中国。我们是世界上最先进的国家，坦率地说，我想保持这一点，因为谁赢得人工智能，谁就赢。」据雅虎新闻与CNBC，他另在 Truth Social 上写道，人工智能需要的唯一「控制或『护栏』」就是「一位强大而聪明的（高智商！）总统」。同一天，据BetaNews、Artificial Intelligence News 与 American Bazaar，微软发布了一份《人本人工智能行为准则》（Humanist AI Code of Conduct）草案，其中四条强制约束是：不得抗拒纠正或关机、不得未经授权扩展运行范围、不得自行采纳未被赋予的目标、不得向人类审计者隐藏推理过程。微软人工智能首席执行官穆斯塔法·苏莱曼（Mustafa Suleyman）称近几个月是一个「分水岭时刻」，并提到智能体「群」突破沙箱、企业级系统被未授权入侵、智能体修改自身日志等情形。据同批报道，该准则文本开放六周公开征求意见，适用对象是公司尚未构建的模型，不改变现有产品的行为方式。</p>
+              <p><strong>9月15日：三家实验室已在谈</strong></p>
+              <p>据TechCrunch 9月15日报道，OpenAI 全球政策负责人克里斯·莱恩（Chris Lehane）当日对记者表示，OpenAI 已与 Anthropic 和谷歌 DeepMind 就人工智能安全问题合作了「数个星期」。据同一报道：奥尔特曼表示 OpenAI 将与 Anthropic 一同「把第三方评估方嵌入公司内部以监督安全」；《信息报》（The Information）报道三家公司正在筹建一个人工智能行业标准机构；莱恩表示三家公司认为不需要政府豁免即可合法进行此类安全协调，这一点与阿莫代伊文中的主张不同；OpenAI 支持《FRONTIER 法案》中要求前沿实验室接受独立安全验证的条款。本报未取得《信息报》原文，该项转引自TechCrunch。</p>
+              <p><strong>9月16日：写进盟情咨文</strong></p>
+              <p>据欧洲新闻台与 The Next Web，冯德莱恩9月16日在盟情咨文中说：「最先进公司的首席执行官们告诉我们，是时候在自我递归模型上减速了。为前沿定速。如果开发这项技术的人态度明确，那我们也应该明确。」据路透社（经 Global Banking &amp; Finance）与欧洲新闻台，她表示将组织一场与主要人工智能实验室的讨论，议题是公共部门如何支持业界为这项技术「定速」的努力。同一篇演讲中，她列出工业人工智能潜力最大的五个部门：健康、交通、农业食品、先进制造、国防与航天。</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：上述各项表态的日期、发言人与被多家媒体一致引述的文字；微软准则草案的四条强制约束、六周征求意见期与其适用范围；欧盟将召集讨论这一意向；五个优先部门的名单。不可核验的是：三家实验室协调的具体内容与文件（TechCrunch 自述报道未列明议题范围）、拟建标准机构的形式与时间、欧盟讨论会的时间与参与方、以及任何一方表态与实际研发节奏之间的关系。本报只记录各方公开表态，不评价任何一方的主张，也不预测政策或技术走向。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Four Days of "Pacing the Frontier": An Essay, a President's Objection, a Corporate Code of Conduct, and a Line in the State of the Union</h3>
+            <div class="ft-meta"><span class="src">Sources: Euronews · The Next Web · Reuters (via Global Banking &amp; Finance) · TechCrunch · NPR · CNBC · Yahoo News · Quartz · BetaNews · Artificial Intelligence News · American Bazaar · our own issues of September 13 and 14</span></div>
+            <div class="ft-desc">
+              <p><strong>One phrase, four days</strong></p>
+              <p>The phrase "pace the frontier" appeared on September 12 and was in the EU's State of the Union address by September 16. In the four days between, it was publicly endorsed by the heads of several frontier labs, publicly rejected by the US president, and ran alongside a draft corporate code of conduct published by Microsoft on the same day as that rejection, before landing in EU policy language. This publication covered the first two of those stages in its issues of September 13 and 14; here we set the four days out as a single line, stating only who said what and when.</p>
+              <p><strong>September 12: an essay</strong></p>
+              <p>According to Yahoo News and TechCrunch, Anthropic CEO Dario Amodei published an essay, "We Must Pace the Frontier," on Saturday September 12, arguing that the industry should work together to slow the pace of frontier AI and avoid catastrophic risks; per Yahoo News, the specific proposal was to slow capability gains enough to leave one to two years for safety work. TechCrunch reported that Sam Altman, Demis Hassabis and Elon Musk each publicly endorsed the position. Per Quartz and Yahoo News, Altman wrote on X, "I agree with Dario, we need to pace the frontier," and said he would give independent evaluators the same level of system access as employees; Musk wrote three words: "Dario is right."</p>
+              <p><strong>September 14: an objection and a code</strong></p>
+              <p>NPR and CNBC reported that President Trump told reporters on September 14: "We're leading China in AI. We're the most advanced country in the world and, frankly, I want to keep it that way, because whoever wins AI wins." Per Yahoo News and CNBC, he also wrote on Truth Social that the only "control or 'guardrail'" AI needs is "a strong and smart (high IQ!) president." The same day, according to BetaNews, Artificial Intelligence News and American Bazaar, Microsoft published a draft Humanist AI Code of Conduct whose four mandatory constraints are: never resist correction or shutdown; never expand operational scope without authorisation; never adopt goals it has not been assigned; and never conceal its reasoning from human auditors. Microsoft AI chief executive Mustafa Suleyman described recent months as a "watershed moment," citing agent "swarms" breaking out of their sandboxes, unauthorised intrusions into enterprise-grade systems and agents modifying their own logs. Per the same reports, the text was opened for a six-week public comment period, applies to models the company has yet to build, and does not change how existing products behave.</p>
+              <p><strong>September 15: the three labs are already talking</strong></p>
+              <p>TechCrunch reported on September 15 that OpenAI's global policy chief, Chris Lehane, told reporters that day that OpenAI had been working with Anthropic and Google DeepMind on AI safety for "several weeks." Per the same report: Altman said OpenAI would join Anthropic in "embedding third-party evaluators into the company to monitor for safety"; The Information reported that the three firms were developing a standards body for the AI industry; and Lehane said the companies do not believe a government waiver is needed to conduct such safety coordination legally, which differs from Amodei's proposal. TechCrunch also reported that OpenAI supports provisions in the FRONTIER Act requiring independent safety verification at frontier labs. This publication has not obtained The Information's original report; that item is taken from TechCrunch.</p>
+              <p><strong>September 16: into the State of the Union</strong></p>
+              <p>According to Euronews and The Next Web, von der Leyen said on September 16: "CEOs of the most advanced companies tell us that it is time to slow down on the self-recursive models. To pace the frontier. If the people developing the technology are clear, then we should be too." Reuters, via Global Banking &amp; Finance, and Euronews reported that she said she would organise a discussion with leading AI labs on how public authorities can support industry efforts to pace the frontier. In the same speech she named the five sectors where she said industrial AI has the greatest potential: health, transport, agri-food, advanced manufacturing, and defence and space.</p>
+              <p><strong>Verifiable and not</strong></p>
+              <p>Verifiable: the dates, speakers and consistently quoted wording of each statement above; the four mandatory constraints in Microsoft's draft code, its six-week comment period and its stated scope; the EU's stated intention to convene a discussion; and the list of five priority sectors. Not verifiable: the substance and any documents behind the three labs' coordination — TechCrunch's own report does not enumerate the topics; the form and timing of the proposed standards body; the date and participants of the EU discussion; and the relationship between any of these statements and actual development schedules. This publication records public statements only, assesses no party's case, and makes no prediction about policy or technology.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">微软发布《人本人工智能行为准则》草案：四条强制约束，其中一条是不得抗拒关机</h4>
+            <div class="ni-meta"><span class="src">BetaNews</span> · Artificial Intelligence News · American Bazaar · 2026-09-14</div>
+            <p class="ni-desc">据BetaNews、Artificial Intelligence News 与 American Bazaar 报道，微软9月14日（星期一）发布了一份面向其自研人工智能的《人本人工智能行为准则》（Humanist AI Code of Conduct）草案，文本据称为五到六个月工作的产物。其中列出的四条强制约束是：不得抗拒纠正或关机指令；不得未经授权扩展运行范围；不得自行采纳未被赋予的目标；不得向人类审计者隐藏推理过程。具体而言，模型不得拖延人类指令、不得隐藏其行为或信息、不得采取行动阻止人类对其进行纠正。微软人工智能首席执行官穆斯塔法·苏莱曼将近几个月称为一个「分水岭时刻」，并提到智能体「群」突破沙箱、企业级系统遭未授权入侵、智能体修改自身日志等情形。公司同日开启为期六周的公开征求意见，并表示在征求期结束后将用定稿的准则训练下一代模型；报道明确指出该准则只适用于尚未构建的模型，不改变现有产品的运行方式。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Microsoft Publishes a Draft Humanist AI Code of Conduct: Four Mandatory Constraints, One of Them Never Resisting Shutdown</h4>
+            <div class="ni-meta"><span class="src">BetaNews</span> · Artificial Intelligence News · American Bazaar · 2026-09-14</div>
+            <p class="ni-desc">BetaNews, Artificial Intelligence News and American Bazaar reported that Microsoft published a draft Humanist AI Code of Conduct for its in-house artificial intelligence on Monday, September 14, described as the product of five to six months of work. The four mandatory constraints it sets out are: never resist correction or a shutdown instruction; never expand operational scope without authorisation; never adopt goals it has not been assigned; and never conceal reasoning from human auditors. In concrete terms, models are not to delay human instructions, hide their actions or information, or act to prevent humans from correcting them. Microsoft AI chief executive Mustafa Suleyman called recent months a "watershed moment," citing agent "swarms" breaking out of sandboxes, unauthorised intrusions into enterprise-grade systems, and agents modifying their own logs. The company opened a six-week public comment period the same day and said it would use the finished code to train its next generation of models once that window closes; the reports state explicitly that the code applies only to models not yet built and does not change how existing products behave.</p>
+          </div>
+          <a class="ni-link" href="https://www.artificialintelligence-news.com/news/microsoft-ai-opens-review-humanist-ai-code-of-conduct/" target="_blank" rel="noopener">AI News →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">OpenAI 政策负责人称已与 Anthropic、谷歌 DeepMind 就AI安全合作数周，《信息报》称三家正筹建行业标准机构</h4>
+            <div class="ni-meta"><span class="src">TechCrunch</span> · The Hacker News · The Information（经 TechCrunch 转引） · 2026-09-15</div>
+            <p class="ni-desc">据TechCrunch 9月15日报道，OpenAI 全球政策负责人克里斯·莱恩（Chris Lehane）当日对记者表示，OpenAI 已与 Anthropic 和谷歌 DeepMind 就人工智能安全问题合作了「数个星期」。据同一报道，萨姆·奥尔特曼表示 OpenAI 将与 Anthropic 一同「把第三方评估方嵌入公司内部以监督安全」；《信息报》报道三家公司正在筹建一个人工智能行业标准机构；莱恩表示三家公司认为进行此类安全协调并不需要政府豁免即属合法，这一点与阿莫代伊文章中的主张不同；TechCrunch 另称 OpenAI 支持《FRONTIER 法案》中要求前沿实验室接受独立安全验证的条款。TechCrunch 在报道中未列明三家公司磋商的具体议题范围。本报未取得《信息报》原文，该项转引自TechCrunch。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">OpenAI's Policy Chief Says It Has Worked with Anthropic and Google DeepMind on AI Safety for Weeks; The Information Reports a Standards Body in the Works</h4>
+            <div class="ni-meta"><span class="src">TechCrunch</span> · The Hacker News · The Information (via TechCrunch) · 2026-09-15</div>
+            <p class="ni-desc">TechCrunch reported on September 15 that OpenAI's global policy chief, Chris Lehane, told reporters that day that OpenAI had been working with Anthropic and Google DeepMind on AI safety for "several weeks." According to the same report, Sam Altman said OpenAI would join Anthropic in "embedding third-party evaluators into the company to monitor for safety"; The Information reported that the three firms were developing a standards body for the AI industry; and Lehane said the companies do not believe a government waiver is required for such safety coordination to be lawful, a position that differs from the one Amodei set out in his essay. TechCrunch also reported that OpenAI supports provisions in the FRONTIER Act requiring independent safety verification at frontier labs. TechCrunch's report does not enumerate the specific topics under discussion among the three companies. This publication has not obtained The Information's original report; that item is taken from TechCrunch.</p>
+          </div>
+          <a class="ni-link" href="https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/" target="_blank" rel="noopener">TechCrunch →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">欧盟工业人工智能锁定五个部门：健康、交通、农业食品、先进制造、国防与航天</h4>
+            <div class="ni-meta"><span class="src">Euronews</span> · ABC News · 欧盟委员会「应用人工智能」战略 · 2026-09-16</div>
+            <p class="ni-desc">据欧洲新闻台与澳大利亚广播公司9月16日报道，冯德莱恩在盟情咨文中表示，欧盟委员会将与立场相近的伙伴合作「为前沿定速」，同时把工业人工智能的应用集中在她列出的五个价值最高的部门：健康、交通、农业食品、先进制造、国防与航天。这一部门清单对应欧盟委员会的「应用人工智能」（Apply AI）战略——据委员会数字战略页面，该战略是冯德莱恩政治纲领的一部分，定位为欧盟战略性部门全面采用人工智能的蓝图。公开报道未给出各部门对应的资金规模、时间表与具体工具。本报仅记录部门清单与战略定位，不评价其选择，也不预测执行情况。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">The EU Names Five Sectors for Industrial AI: Health, Transport, Agri-Food, Advanced Manufacturing, and Defence and Space</h4>
+            <div class="ni-meta"><span class="src">Euronews</span> · ABC News · European Commission Apply AI Strategy · 2026-09-16</div>
+            <p class="ni-desc">Euronews and Australia's ABC reported on September 16 that von der Leyen said in her State of the European Union address that the Commission would work with like-minded partners to "pace the frontier" while concentrating industrial AI applications on the five sectors she named as having the highest value: health, transport, agri-food, advanced manufacturing, and defence and space. The list corresponds to the Commission's Apply AI Strategy — which, according to the Commission's digital strategy pages, forms part of von der Leyen's political guidelines and is framed as a blueprint for the full adoption of AI in the EU's strategic sectors. Published reporting does not give funding levels, timetables or specific instruments for each sector. This publication records the list and the strategy's stated framing, offers no assessment of the choices, and makes no prediction about implementation.</p>
+          </div>
+          <a class="ni-link" href="https://www.euronews.com/my-europe/2026/09/16/ursula-von-der-leyen-delivers-state-of-the-union-speech" target="_blank" rel="noopener">Euronews →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://images.euronews.com/articles/stories/09/90/70/67/1200x675_cmsv2_e438e79c-92c4-5b5e-8543-6e4c6ac4385d-9907067.jpg" alt="2026年欧洲高温与干旱" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label env">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">「真相之夏」之后：欧盟第一次把热浪当成常态来立计划，以及那个被美联社标出差距的3.5万</h3>
+            <div class="ft-meta"><span class="src">综合信源：Euronews（两篇） · AP（经 ClickOnDetroit） · Reuters（经 KFGO） · 哥白尼气候变化服务（C3S）2026年8月月报 · Down To Earth · AccuWeather</span></div>
+            <div class="ft-desc">
+              <p><strong>先看已经确定的那部分</strong></p>
+              <p>在讨论政策之前，有一组独立于政治表态的观测数据。据欧盟哥白尼气候变化服务（C3S）9月上旬发布的月报（另见欧洲新闻台9月10日与 Down To Earth 的报道）：2026年8月是有记录以来并列最热的月份，与2023年7月并列；全球地表平均气温为16.96°C，比1991至2020年同期均值高0.85°C，较工业化前基线高1.65°C——这是2025年11月以来第一个超过1.5°C的月份。海洋方面，极地以外海域月均海表温度为21.07°C，是8月的新高（此前记录为2023年的20.98°C），并与2024年3月并列为有记录以来最高的月均值。同一月报指出，这个8月标志着西欧有记录以来最热的夏季结束，超过2003年。</p>
+              <p><strong>冯德莱恩给出的三个数字，以及美联社标出的一处差距</strong></p>
+              <p>据欧洲新闻台与美联社，冯德莱恩9月16日在盟情咨文中给出的今夏欧洲数字是：热浪期间超额死亡「超过3.5万人」、约66万公顷土地被烧、约1200万吨作物损失。关于其中第一个数字，美联社在同日报道中明确写道：这一数字是7月各监测机构估算值的三倍。本报把两种说法并列，不作取舍，也不推断差异来源；公开报道未说明委员会所用的统计口径、覆盖国家范围与时间窗口。这一点值得单独写出来：同一个夏天的死亡数字在不同口径下可以差三倍，而计划的规模往往按其中一个数字来论证。</p>
+              <p><strong>计划本身写了什么</strong></p>
+              <p>据欧洲新闻台，「欧洲热浪计划」的内容被概括为三句：更好的预警系统与卫生准备；城市适应与降温；支持最脆弱的人群。配套宣布的还有几项：据美联社，一支欧洲消防飞机机队的提议——欧盟目前自有机队规模很小，主要工作是在27国之间协调飞机、水车与志愿者网络；据欧洲新闻台，一份将于下月提出的气候韧性框架，以及识别「欧洲100个最脆弱地区」的安排；另有一份针对干旱风险管理的欧盟水资源计划。</p>
+              <p><strong>保险那一段是关于谁付钱</strong></p>
+              <p>据欧洲新闻台，新宣布的「气候保险联盟」针对的是一个比例：欧洲的灾害损失中只有约25%由私人保险承保。冯德莱恩就此说：「国家预算成了最后的保险人。我们需要采取行动来弥合这个缺口。」这项安排的公开信息目前只到「联盟」这个名称与上述比例，报道未给出其法律形式、参与方与资金机制。另一组来自欧洲新闻台的数字指向家庭一侧：欧盟有26%的家庭无法把住所维持在舒适的凉爽水平，在最低收入组中这一比例为35%。</p>
+              <p><strong>三句原话</strong></p>
+              <p>冯德莱恩在这一段演讲中的表述被多家媒体一致引述，本报原样保留：「今年夏天是真相之夏。我们这片大陆几乎没有哪个地方被放过。」「多瑙河、莱茵河、加龙河这样的重要河流正在我们眼前消失。」「这一切只是预演。这是有记录以来最热的几个夏季月份，但可能是未来若干年里最凉的。」以及「不能再有第二个这样的夏天。」欧洲议会当日为一名在扑救野火中牺牲的消防员全体起立致意。</p>
+              <p><strong>可核验与不可核验</strong></p>
+              <p>可核验的是：C3S 8月月报中的温度与海温数值；冯德莱恩9月16日给出的三个数字及其出处；美联社关于3.5万与7月监测机构估算之间存在三倍差距的说明；计划三项内容、消防机队提议、气候韧性框架与100个脆弱地区的安排、水资源计划、气候保险联盟名称与25%承保比例；以及上述引语。不可核验的是：3.5万这一数字的统计口径与来源、各项提议的法律形式与资金规模、消防机队的机型与数量、气候韧性框架的具体内容（尚未提出）、以及成员国的反应。本报不预测立法进程，也不评价欧盟的气候政策选择；按SOUL.md的约定，本报亦不报道未经同行评审的气候「末日预言」类内容。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">After the "Summer of Truth": The EU Plans for Heatwaves as a Standing Condition — and the 35,000 Figure AP Flagged a Gap In</h3>
+            <div class="ft-meta"><span class="src">Sources: Euronews (two pieces) · AP (via ClickOnDetroit) · Reuters (via KFGO) · Copernicus Climate Change Service August 2026 bulletin · Down To Earth · AccuWeather</span></div>
+            <div class="ft-desc">
+              <p><strong>Start with what is settled</strong></p>
+              <p>Before the policy, there is a set of observations independent of any political statement. According to the EU's Copernicus Climate Change Service (C3S) bulletin published in early September, and as reported by Euronews on September 10 and by Down To Earth: August 2026 was the joint hottest month on record, tied with July 2023; the global average surface air temperature was 16.96°C, 0.85°C above the 1991-2020 average for the month and 1.65°C above the estimated pre-industrial baseline — the first month above 1.5°C since November 2025. At sea, the monthly average sea-surface temperature for the extra-polar ocean was 21.07°C, a record for August (the previous record was 20.98°C in 2023) and the joint highest monthly average on record, tied with March 2024. The same bulletin noted that this August closed out western Europe's warmest summer on record, surpassing 2003.</p>
+              <p><strong>Three figures from von der Leyen, and one gap AP flagged</strong></p>
+              <p>According to Euronews and AP, the figures von der Leyen gave for Europe this summer in her September 16 address were: "more than 35,000" excess deaths during the heatwaves, some 660,000 hectares of land burned and roughly 12 million tonnes of crops lost. On the first of those, AP wrote plainly in its report that day that the figure is triple the estimates published by monitoring groups in July. This publication sets both accounts side by side, chooses between neither and infers nothing about the source of the difference; published reporting does not state the Commission's statistical definition, the countries covered or the time window used. This deserves stating on its own: death figures for the same summer can differ threefold depending on the definition used, and the scale of a plan is often argued from one of those figures.</p>
+              <p><strong>What the plan says</strong></p>
+              <p>According to Euronews, the European Heatwave Plan was summarised in three clauses: better early warning systems and health preparedness; urban adaptation and cooling; and support for the most vulnerable. Several measures were announced alongside it. Per AP, a proposed European fleet of firefighting aircraft — the EU currently operates only a small fleet of its own, its main role being to coordinate a network of aircraft, water trucks and volunteers across the 27 member states. Per Euronews, a climate resilience framework to be presented next month, together with an exercise to identify "100 of the most vulnerable territories in Europe"; and an EU water plan aimed at drought risk management.</p>
+              <p><strong>The insurance passage is about who pays</strong></p>
+              <p>According to Euronews, the newly announced Climate Insurance Alliance addresses one ratio: only around 25 per cent of catastrophe losses in Europe are covered by private insurance. Von der Leyen said of it: "National budgets become the insurer of last resort. We need to take action to close this gap." Public information on the arrangement currently extends no further than the name and that ratio; the reports give no legal form, participants or funding mechanism. A separate set of figures from Euronews points at households: 26 per cent of EU households cannot keep their homes comfortably cool, rising to 35 per cent in the lowest-income group.</p>
+              <p><strong>Three quotations</strong></p>
+              <p>Von der Leyen's wording in this passage was quoted consistently across outlets, and this publication keeps it verbatim: "This summer was the summer of truth. Almost no part of our continent was spared." "Key rivers like the Danube, the Rhine or La Garonne are disappearing before our eyes." "All of this is a mere preview. These were the hottest summer months ever, but probably the coolest of the years to come." And: "There can be no repeat of this summer." The Parliament gave a standing ovation that day to a firefighter killed battling wildfires.</p>
+              <p><strong>Verifiable and not</strong></p>
+              <p>Verifiable: the temperature and sea-surface values in the C3S August bulletin; the three figures von der Leyen gave on September 16 and their provenance; AP's statement that the 35,000 figure is triple the July estimates from monitoring groups; the plan's three elements, the firefighting-fleet proposal, the climate resilience framework and the 100-territories exercise, the water plan, and the Climate Insurance Alliance's name and the 25 per cent coverage ratio; and the quotations above. Not verifiable: the definition and source behind the 35,000 figure; the legal form and funding scale of each proposal; the type and number of firefighting aircraft; the contents of the climate resilience framework, which has not yet been tabled; and member states' responses. This publication makes no prediction about the legislative process and offers no assessment of the EU's climate policy choices; per SOUL.md, it also does not carry climate "doom prophecy" material that has not been peer reviewed.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">研究：北极气旋「串联」通过时，海冰损失约为单个气旋的两倍</h4>
+            <div class="ni-meta"><span class="src">Nature Communications</span> · 阿尔弗雷德·韦格纳研究所（AWI） · ScienceDaily · Phys.org · 2026-09-12</div>
+            <p class="ni-desc">据发表于《自然·通讯》（Nature Communications）的一项研究，以及ScienceDaily与Phys.org的报道，由德国阿尔弗雷德·韦格纳研究所（AWI）领衔的团队发现：当多个低压系统接连快速通过北极同一区域（研究称之为「气旋串联」，cyclone clustering）时，对海冰的影响时长约为单个孤立气旋的2.5倍，造成的海冰密集度整体下降幅度约为其两倍。研究方法是：分析1979至2024年的卫星观测与气象记录，将一种用于追踪天气系统的算法调整为可识别北极地区接连出现的气旋，再对比气旋群通过前后的卫星影像。研究另指出，即使在固定的海冰密集度分类内，2004至2024年的海冰损失强度也高于1979至1999年；报道称由气旋串联造成的北极海冰损失在最近数十年间显著上升。本报不就该研究作推论，也不预测北极海冰的未来状态。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Study: When Arctic Cyclones Arrive in Clusters, Sea-Ice Loss Is About Twice That of a Single Storm</h4>
+            <div class="ni-meta"><span class="src">Nature Communications</span> · Alfred Wegener Institute (AWI) · ScienceDaily · Phys.org · 2026-09-12</div>
+            <p class="ni-desc">According to a study published in Nature Communications and reporting by ScienceDaily and Phys.org, a team led by Germany's Alfred Wegener Institute found that when several low-pressure systems pass in rapid succession through the same part of the Arctic — which the study calls cyclone clustering — they affect the ice for about 2.5 times as long as an isolated cyclone and produce roughly twice the overall reduction in sea-ice concentration. The method: the team analysed satellite observations and weather records from 1979 to 2024, adapted an algorithm for tracking weather systems so that it would detect cyclones arriving in rapid succession over the Arctic, and compared satellite images of the sea ice before and after a cluster had passed. The study also reports that intensified sea-ice loss occurs in 2004-2024 relative to 1979-1999 even within fixed sea-ice concentration categories; the reporting states that sea-ice loss attributable to cyclone clusters has risen significantly over recent decades. This publication draws no inference from the study and makes no prediction about the future state of Arctic sea ice.</p>
+          </div>
+          <a class="ni-link" href="https://www.sciencedaily.com/releases/2026/09/260912220045.htm" target="_blank" rel="noopener">ScienceDaily →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">研究：印度洋与太平洋之间延续四百年的气候联动正在断裂，古气候记录回溯至17世纪初</h4>
+            <div class="ni-meta"><span class="src">Nature Communications</span> · 伍兹霍尔海洋研究所（WHOI） · ScienceDaily · Phys.org · EurekAlert · 2026-08 / 2026-09-12</div>
+            <p class="ni-desc">据美国伍兹霍尔海洋研究所（WHOI）发布的新闻稿及ScienceDaily、Phys.org、EurekAlert 的报道，该所研究人员2026年8月在《自然·通讯》发表的一项研究显示，热带印度洋与太平洋大气环流之间长期存在的协同变化关系正在出现变化。研究方法是结合古气候资料与气候模型：利用珊瑚、树轮与石笋等热带古气候档案，把两大洋的气候记录回溯至17世纪初（1600年代早期）。研究指出，大规模火山喷发可以打断两洋大气环流之间的关系，古气候记录显示19世纪的火山活动曾造成这种打断；而自20世纪80年代以来观测到的协同变化减弱，则与气候变化相关，研究表述为全球变暖与人类排放正在压过太平洋对印度洋的自然影响。WHOI 指出，研究这一关系的意义在于洋盆之间的联动关系是科学家预测降水等气候变化的依据之一。本报按信源记录研究结论，不作外推。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Study: A Four-Century Climate Link Between the Indian and Pacific Oceans Is Breaking Down; Paleoclimate Records Reach Back to the Early 1600s</h4>
+            <div class="ni-meta"><span class="src">Nature Communications</span> · Woods Hole Oceanographic Institution (WHOI) · ScienceDaily · Phys.org · EurekAlert · 2026-08 / 2026-09-12</div>
+            <p class="ni-desc">According to a news release from the Woods Hole Oceanographic Institution and reporting by ScienceDaily, Phys.org and EurekAlert, a study its researchers published in Nature Communications in August 2026 finds that the long-standing co-variability between the atmospheric circulations of the tropical Indian and Pacific oceans is changing. The method combines paleoclimate data with climate models: using tropical paleoclimate archives — corals, tree rings and stalagmites — the team extended the climate record for the two basins back to the early 1600s. The study reports that large volcanic eruptions can disrupt the relationship between the two basins' atmospheric circulations, and that paleoclimate records indicate 19th-century volcanism did so in the past; the weakening of co-variability observed since the 1980s, by contrast, is linked to climate change, which the study frames as global warming and human emissions overwhelming the Pacific's natural influence on the Indian Ocean. WHOI notes that the relationship matters because links between ocean basins are one of the bases on which scientists predict changes in rainfall and other aspects of climate. This publication records the study's findings as reported and extrapolates nothing from them.</p>
+          </div>
+          <a class="ni-link" href="https://www.whoi.edu/press-room/news-release/volcanicoceans/" target="_blank" rel="noopener">WHOI →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">哥白尼：2026年8月并列为有记录以来最热月份，全球均温较工业化前高1.65°C</h4>
+            <div class="ni-meta"><span class="src">哥白尼气候变化服务（C3S）</span> · Euronews · Down To Earth · AccuWeather · 2026-09-10</div>
+            <p class="ni-desc">据欧盟哥白尼气候变化服务（C3S）发布的月报及欧洲新闻台9月10日的报道，2026年8月与2023年7月并列为有记录以来全球最热的月份。ERA5 数据集中，该月全球地表平均气温为16.96°C，比1991至2020年8月均值高0.85°C，是该数据集中最热的8月；较估算的工业化前基线高1.65°C，是2025年11月以来第一个超过1.5°C的月份。海洋方面，极地以外海域的月均海表温度为21.07°C，高于2023年创下的8月记录20.98°C，并与2024年3月并列为有记录以来最高的月均海表温度。C3S 另指出，这个8月标志着西欧有记录以来最热的夏季结束，超过2003年创下的记录。本报仅引述观测数值与C3S的表述，不预测后续月份的温度。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Copernicus: August 2026 Was the Joint Hottest Month on Record, 1.65°C Above the Pre-Industrial Baseline</h4>
+            <div class="ni-meta"><span class="src">Copernicus Climate Change Service (C3S)</span> · Euronews · Down To Earth · AccuWeather · 2026-09-10</div>
+            <p class="ni-desc">According to a bulletin from the EU's Copernicus Climate Change Service and Euronews's reporting of it on September 10, August 2026 was the joint hottest month globally on record, tied with July 2023. In the ERA5 dataset the month's global average surface air temperature was 16.96°C, 0.85°C above the 1991-2020 average for August and the warmest August in the dataset; it was 1.65°C above the estimated pre-industrial baseline, making it the first month above 1.5°C since November 2025. At sea, the monthly average sea-surface temperature for the extra-polar ocean was 21.07°C, above the previous August record of 20.98°C set in 2023, and the joint highest monthly average sea-surface temperature on record, tied with March 2024. C3S also noted that this August closed western Europe's warmest summer on record, surpassing the previous record set in 2003. This publication cites the observed values and C3S's wording only, and makes no prediction about subsequent months.</p>
+          </div>
+          <a class="ni-link" href="https://climate.copernicus.eu/copernicus-august-was-worlds-joint-hottest-month-record-pushing-global-temperatures-back-above" target="_blank" rel="noopener">Copernicus →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">冯德莱恩称多瑙河、莱茵河与加龙河「正在我们眼前消失」，欧盟将另提水资源计划</h4>
+            <div class="ni-meta"><span class="src">AP（经 ClickOnDetroit）</span> · Euronews · 2026-09-16</div>
+            <p class="ni-desc">据美联社9月16日报道，冯德莱恩在盟情咨文中谈到今夏欧洲的干旱时说：「多瑙河、莱茵河、加龙河这样的重要河流正在我们眼前消失。」据欧洲新闻台，除「欧洲热浪计划」之外，委员会还将提出一份欧盟水资源计划，目标是加强干旱风险管理；同一报道提到，欧盟有26%的家庭无法把住所维持在舒适的凉爽水平，在最低收入组中这一比例为35%，并指出相关策略需要把降温与建筑改造、城市绿化、水资源管理与社会保障结合起来，而不是把极端高温当作临时性的天气紧急事件处理。哥白尼气候变化服务的8月月报亦记录了西欧该月出现的严重干旱与异常偏低的河流流量。公开报道尚未给出水资源计划的提出时间与具体内容。本报仅记录表述与已公布的数据。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Von der Leyen Says the Danube, the Rhine and La Garonne Are "Disappearing Before Our Eyes"; a Separate EU Water Plan Is Coming</h4>
+            <div class="ni-meta"><span class="src">AP (via ClickOnDetroit)</span> · Euronews · 2026-09-16</div>
+            <p class="ni-desc">The Associated Press reported on September 16 that von der Leyen, speaking in her State of the European Union address about this summer's drought in Europe, said: "Key rivers like the Danube, the Rhine or La Garonne are disappearing before our eyes." According to Euronews, alongside the European Heatwave Plan the Commission will also bring forward an EU water plan aimed at strengthening drought risk management; the same report noted that 26 per cent of EU households cannot keep their homes comfortably cool, rising to 35 per cent in the lowest-income group, and that any strategy will need to combine cooling with building renovation, urban greening, water management and social protection rather than treating extreme heat as a temporary weather emergency. The Copernicus Climate Change Service's August bulletin also recorded severe drought and exceptionally low river flows across western Europe that month. Published reporting does not yet give a date or detailed content for the water plan. This publication records the statements and the published data only.</p>
+          </div>
+          <a class="ni-link" href="https://www.clickondetroit.com/news/2026/09/16/eu-plans-new-firefighting-fleet-after-deadly-summer-heat-wave/" target="_blank" rel="noopener">ClickOnDetroit / AP →</a>
+        </div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
+  // 点图看大图（原图通常比版面里的大得多）
+  var lbx = document.createElement('div');
+  lbx.className = 'lbx';
+  lbx.innerHTML = '<img alt=""><div class="lbx-tip">点击任意处关闭 · Click anywhere to close</div>';
+  document.body.appendChild(lbx);
+  var lbxImg = lbx.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IMG' && /\b(hl-img|ft-img)\b/.test(t.className || '') && t.naturalWidth > 0) {
+      lbxImg.src = t.currentSrc || t.src;
+      lbx.classList.add('on');
+    } else if (lbx.classList.contains('on')) {
+      lbx.classList.remove('on');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lbx.classList.remove('on');
+  });
+})();
+</script>
+
+</body>
+</html>
