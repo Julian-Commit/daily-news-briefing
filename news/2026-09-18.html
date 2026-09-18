@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-18</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:300px;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:340px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:40%;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+
+/* 图片：完整显示，不裁切。点一下看大图 */
+.hl .hl-img,.ft .ft-img{cursor:zoom-in}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:24px;cursor:zoom-out}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+.lbx .lbx-tip{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+@media print{.lbx{display:none!important}}
+</style>
+<!-- share:start -->
+<meta name="description" content="伊朗革命卫队称在霍尔木兹海峡打击并扣押多哥籍油轮「Trend」，UKMTO的通报未指明船只；俄罗斯国家杜马选举9月18日开始三天投票，唯一公开反战的注册政党已被移出全国政党名单；欧盟委员会提出《欧盟儿童法案》：13岁以下禁用社交媒体，13至15岁每日一小时「迷你账户」，AI聊天机器人默认关闭">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.014 · 2026-09-18 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="伊朗革命卫队称在霍尔木兹海峡打击并扣押多哥籍油轮「Trend」，UKMTO的通报未指明船只；俄罗斯国家杜马选举9月18日开始三天投票，唯一公开反战的注册政党已被移出全国政党名单；欧盟委员会提出《欧盟儿童法案》：13岁以下禁用社交媒体，13至15岁每日一小时「迷你账户」，AI聊天机器人默认关闭">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-18.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/1789681569549-af31c5370b7f3e54.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.014 · 2026-09-18 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="伊朗革命卫队称在霍尔木兹海峡打击并扣押多哥籍油轮「Trend」，UKMTO的通报未指明船只；俄罗斯国家杜马选举9月18日开始三天投票，唯一公开反战的注册政党已被移出全国政党名单；欧盟委员会提出《欧盟儿童法案》：13岁以下禁用社交媒体，13至15岁每日一小时「迷你账户」，AI聊天机器人默认关闭">
+<meta name="twitter:image" content="https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/1789681569549-af31c5370b7f3e54.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.014 · 2026-09-18 · 陆先生日报 | Luxiansheng Daily","description":"伊朗革命卫队称在霍尔木兹海峡打击并扣押多哥籍油轮「Trend」，UKMTO的通报未指明船只；俄罗斯国家杜马选举9月18日开始三天投票，唯一公开反战的注册政党已被移出全国政党名单；欧盟委员会提出《欧盟儿童法案》：13岁以下禁用社交媒体，13至15岁每日一小时「迷你账户」，AI聊天机器人默认关闭","datePublished":"2026-09-18","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-18.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/1789681569549-af31c5370b7f3e54.jpg"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.014</div>
+    <div>2026.09.18 FRIDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">2026年9月18日，两条国际水道与两套针对未成年人的立法构成当日主线。伊朗伊斯兰革命卫队（IRGC）当日宣布，已在霍尔木兹海峡打击并扣押悬挂多哥国旗的油轮「Trend」，理由是该船试图「非法通行」；英国海事贸易行动办公室（UKMTO）此前报告在阿曼哈萨布东北16海里处发生一起「安全事件」，但未提供船只信息，两方表述并不完全对应。同日，意大利国防部长圭多·克罗塞托表示将不等欧盟共同决定、单独派军舰为本国商船护航曼德海峡；韩国总统李在明三次重申不向霍尔木兹派兵。政治面另一条线在莫斯科：俄罗斯国家杜马选举9月18日开始投票，为2022年全面入侵乌克兰以来的首次议会选举，唯一公开反战的注册政党亚博卢已被最高法院从全国政党名单中除名。科技面，欧盟委员会9月17日提出《欧盟儿童法案》（EU Kids Act），拟禁止13岁以下儿童使用社交媒体、为13至15岁设置每日一小时的「迷你账户」，并要求AI聊天机器人默认关闭；同一议题在美国走的是另一条路——美国全国公共广播电台（NPR）9月18日刊出调查报道，称由谷歌牵头的行业游说在多州聊天机器人安全立法中提供了条文模板与豁免条款。环境面，突尼斯首都突尼斯市遭暴雨侵袭，道路与住宅积水、电力与网络中断，中小学与大学停课；西班牙瓦伦西亚地区前一日的短时强降雨亦造成隧道与街道被淹。本报逐条标注信源，对各方主张不作评价，也不预测后续走向。</p>
+    <p class="en-content" lang="en">On September 18, 2026, two international waterways and two sets of rules aimed at minors framed the day. Iran's Islamic Revolutionary Guard Corps said it had struck and detained the Togo-flagged oil tanker Trend in the Strait of Hormuz for attempting what it called an "illegal passage"; the UK Maritime Trade Operations centre had earlier reported a "security incident" 16 nautical miles northeast of Khasab, Oman, without giving vessel details, so the two accounts do not map fully onto each other. The same day, Italian Defence Minister Guido Crosetto said Rome would not wait for a joint EU decision and would send warships to escort Italian merchant vessels through Bab al-Mandeb, while South Korean President Lee Jae Myung said three times that Seoul would not send troops to Hormuz. The day's other political thread ran through Moscow: voting opened on September 18 in Russia's State Duma election, the first parliamentary vote since the full-scale invasion of Ukraine in 2022, with Yabloko — the only registered party openly campaigning against the war — removed from the nationwide party-list ballot by the Supreme Court. In technology, the European Commission proposed the EU Kids Act on September 17, which would bar under-13s from social media, create parent-linked "mini accounts" with a one-hour daily cap for 13- to 15-year-olds, and require AI chatbots to be off by default; the same question is being settled differently in the United States, where NPR published an investigation on September 18 reporting that a Google-led industry lobbying effort supplied model language and exemptions to state chatbot-safety bills. On the environment, torrential rain flooded roads and homes in Tunis, disrupting power and internet and suspending school and university classes, a day after short, intense downpours flooded tunnels and streets in Spain's Valencia region. This publication attributes each item to its sources, assesses no party's case, and makes no predictions.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl">
+        <img class="hl-img" src="https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/1789681569549-af31c5370b7f3e54.jpg" alt="霍尔木兹海峡的油轮" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">伊朗革命卫队称在霍尔木兹海峡打击并扣押多哥籍油轮「Trend」，UKMTO的通报未指明船只</h2>
+            <div class="hl-meta"><span class="src">Arab News（法新社稿）</span> · Malay Mail（法新社稿） · Al Jazeera · Tasnim News Agency（伊朗官方） · Deccan Herald · 2026-09-18</div>
+            <p class="hl-desc">据法新社稿（经《阿拉伯新闻》Arab News与马来西亚《马来邮报》Malay Mail刊发）9月18日报道，伊朗伊斯兰革命卫队（Islamic Revolutionary Guard Corps，IRGC）当日发表声明称，悬挂多哥国旗的油轮「Trend」在船上起火后已被「打击并扣押」，理由是该船试图「非法通行」霍尔木兹海峡。伊朗官方塔斯尼姆通讯社（Tasnim）同日以「多哥籍油轮因非法通行霍尔木兹被击中」为题发布革命卫队海军的相同表述。与此并列的是另一套口径：据上述报道，英国海事贸易行动办公室（UK Maritime Trade Operations，UKMTO）在周四通报称，霍尔木兹海峡发生一起「安全事件」，位置在阿曼哈萨布（Khasab）东北16海里（29.6公里）处，但UKMTO未提供涉事船只的任何信息，因此无法确认其通报与伊朗方面的说法是否指同一艘船；部分通讯社的表述仍为「不明抛射物」击中船只。本报未取得船东、船级社或船旗国的确认，上述报道亦未给出船员伤亡与在船人数。事实背景方面，据法新社稿，自今年2月底美国与以色列对伊朗实施打击以来，德黑兰对该海峡形成事实上的封锁，并要求通行船只缴纳费用，对其认定绕开伊方指定航路的船只实施攻击。半岛电视台9月18日的滚动报道称，美国总统唐纳德·特朗普就是否对伊朗采取行动表示「任何事都可能发生」。本报记录各方公开表述与彼此不一致之处，不评价任何一方的主张，也不预测海峡局势或美方决定的走向。交叉核验：Arab News（法新社） · Malay Mail（法新社） · Al Jazeera · Tasnim</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Iran's Revolutionary Guard Says It Struck and Detained the Togo-Flagged Tanker Trend in the Strait of Hormuz; the UKMTO Report Names No Vessel</h2>
+            <div class="hl-meta"><span class="src">Arab News (AFP copy)</span> · Malay Mail (AFP copy) · Al Jazeera · Tasnim News Agency (Iranian state) · Deccan Herald · 2026-09-18</div>
+            <p class="hl-desc">An AFP dispatch, published by Arab News and Malaysia's Malay Mail on September 18, reported that Iran's Islamic Revolutionary Guard Corps said that day it had "targeted and detained" the Togo-flagged oil tanker Trend after a fire broke out on board, on the grounds that the vessel had attempted an "illegal passage" of the Strait of Hormuz. Iran's state-run Tasnim news agency carried the same IRGC Navy account the same day under the headline that a Togo-flagged oil tanker had been hit for illegal passage through Hormuz. A second account sits alongside it: according to those reports, the UK Maritime Trade Operations centre said on Thursday that a "security incident" had occurred in the Strait of Hormuz 16 nautical miles (29.6 km) northeast of Khasab, Oman, but the UKMTO gave no details of the vessel involved, so it cannot be confirmed that its notice and the Iranian claim refer to the same ship; some wire services still described the vessel as having been hit by an unknown projectile. This publication has obtained no confirmation from the owner, the classification society or the flag state, and the cited reports give no figures for crew casualties or the number of people on board. As background, the AFP dispatch states that since the United States and Israel struck Iran in late February, Tehran has imposed an effective blockade of the strait, wants to charge tolls for passage, and attacks ships it accuses of circumventing its preferred route. Al Jazeera's live coverage on September 18 reported that US President Donald Trump, asked about action against Iran, said "anything could happen." This publication records the public statements and the points on which they do not agree, assesses no party's case, and makes no prediction about the strait or any US decision. Cross-verified: Arab News (AFP) · Malay Mail (AFP) · Al Jazeera · Tasnim</p>
+          </div>
+          <a class="hl-link" href="https://www.arabnews.com/middle-east/irans-irgc-says-it-struck-togo-flagged-tanker-in-strait-of-hormuz-3002165" target="_blank" rel="noopener">Arab News / AFP →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://static.kyivpost.com/storage/2026/09/18/8557e30356d795df05e4af4c0c3d4d70.jpg" alt="俄罗斯国家杜马选举" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag pol">国际政治</span>
+          <div class="zh-content">
+            <h2 class="hl-title">俄罗斯国家杜马选举9月18日开始三天投票，唯一公开反战的注册政党已被移出全国政党名单</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Kyiv Post · The Moscow Times · European Platform for Democratic Elections · 2026-09-18</div>
+            <p class="hl-desc">据半岛电视台9月18日的选举说明，俄罗斯国家杜马（下院）选举于9月18日至20日投票，合格选民约1.11亿人。选举制度为并行制：450个席位中，225席按政党名单比例分配（门槛5%），另225席在单议席选区按相对多数决出；本次允许使用电子投票。据《基辅邮报》与欧洲民主选举平台（EPDE），这是俄罗斯2022年2月对乌克兰发动全面入侵以来的首次议会选举，也是首次有俄方占领的乌克兰地区居民参与投票。席位现状方面，据上述来源，统一俄罗斯党目前占有450席中的324席（72%），2021年曾赢得超过三分之二的席位。参选政党包括统一俄罗斯党、俄罗斯联邦共产党、自由民主党、公正俄罗斯党、新人党，以及共产主义者党、退休者党、绿党、直接民主党、祖国党等较小政党；据半岛电视台，以反战为竞选主张的亚博卢党已于8月被俄罗斯最高法院从政党名单选票上移除，只能参与单议席选区的竞选。半岛电视台引述政治分析人士亚历山大·布拉特尔斯基（Alexander Bratersky）称，若共产党取得第二名，将「表明选民对经济困难与生活水平下降感到愤怒」。据《基辅邮报》，俄罗斯总统弗拉基米尔·普京把此次投票表述为一次全国性的团结展示。本报记录制度安排、席位现状与各方公开表态，不评价任何一方的立场，也不预测投票结果。交叉核验：Al Jazeera · Kyiv Post · The Moscow Times · EPDE</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Russia's State Duma Election Opens a Three-Day Vote on September 18, with the Only Registered Antiwar Party Removed from the Nationwide Party List</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Kyiv Post · The Moscow Times · European Platform for Democratic Elections · 2026-09-18</div>
+            <p class="hl-desc">According to Al Jazeera's explainer of September 18, voting in Russia's State Duma election runs from September 18 to 20, with roughly 111 million eligible voters. The system is parallel voting: of 450 seats, 225 are allocated by proportional representation from party lists with a 5 percent threshold, and 225 are decided by plurality in single-mandate constituencies; electronic voting is permitted in this cycle. The Kyiv Post and the European Platform for Democratic Elections report that this is Russia's first parliamentary election since it launched the full-scale invasion of Ukraine in February 2022, and the first in which residents of Russian-occupied regions of Ukraine take part. On the current balance, those sources state that United Russia holds 324 of the 450 seats (72 percent) and won more than two-thirds in 2021. Parties on the ballot include United Russia, the Communist Party of the Russian Federation, the Liberal Democratic Party, A Just Russia and New People, along with smaller parties such as Communists of Russia, the Party of Pensioners, the Green Party, the Party of Direct Democracy and the Motherland Party. Al Jazeera reports that Yabloko, which campaigns on antiwar slogans, was removed from the party-list ballot by Russia's Supreme Court in August and can contest only single-mandate races. Al Jazeera quoted the political analyst Alexander Bratersky as saying that if the Communists finished second it would "suggest voters are angry about economic hardship and falling living standards." The Kyiv Post reports that President Vladimir Putin has framed the vote as a national demonstration of unity. This publication records the rules, the current seat distribution and the public statements, assesses no party's position, and makes no prediction about the result. Cross-verified: Al Jazeera · Kyiv Post · The Moscow Times · EPDE</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/18/russias-parliamentary-election-whos-on-the-ballot-and-why-it-matters" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://images.euronews.com/articles/stories/09/91/76/10/1200x675_cmsv2_c8801880-e44c-5762-b149-dd493a4d7f2e-9917610.jpg" alt="欧盟关于未成年人使用网络服务的立法提案" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">欧盟委员会提出《欧盟儿童法案》：13岁以下禁用社交媒体，13至15岁每日一小时「迷你账户」，AI聊天机器人默认关闭</h2>
+            <div class="hl-meta"><span class="src">UPI</span> · Euronews Next · Engadget · IAPP · Dataconomy · 2026-09-17</div>
+            <p class="hl-desc">据合众国际社（UPI）9月17日报道，欧盟委员会当日提出名为《欧盟儿童法案》（EU KIDS Act）的立法提案，由委员会主席乌尔苏拉·冯德莱恩（Ursula von der Leyen）公布。年龄门槛方面，据UPI、Euronews与Engadget，提案对13岁以下儿童设绝对禁止；13至15岁只能使用与家长或监护人主账户关联的「迷你账户」（mini accounts），限于适龄的社交媒体与视频分享平台，每日屏幕时间上限一小时，并限制与其他账户的接触；满15岁方可自行开设账户。功能限制方面，提案要求移除「成瘾性设计」，具体列举无限下滑（infinite scroll）、自动播放、参与奖励机制、把未成年人拖入有害内容「兔子洞」的推荐算法、睡眠时段的推送通知，以及陌生人的主动联系；默认设置须为私密资料页，并关闭定位、摄像头与麦克风权限。就AI而言，据UPI与Euronews，AI伴侣类聊天机器人必须默认关闭，且不得以培养情感依赖的方式互动；提案覆盖范围包括社交媒体、视频平台、游戏平台与AI聊天机器人。执行层面，应用商店与操作系统须落实年龄核验过滤，在线服务须通过欧盟年龄核验应用确认用户年龄，大型平台须向欧盟委员会与独立审计方提交合规方案。程序方面，据UPI与IAPP，该提案已提交欧洲议会与欧盟理事会，委员会表示希望尽快通过，公开报道未给出生效时间表。本报须说明：本报未取得立法文本，以上条款均转引自上述报道；本报不评价该提案，也不预测其在议会与理事会的进程。交叉核验：UPI · Euronews · Engadget · IAPP</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">The European Commission Proposes the EU Kids Act: No Social Media Under 13, One-Hour "Mini Accounts" for 13- to 15-Year-Olds, and AI Chatbots Off by Default</h2>
+            <div class="hl-meta"><span class="src">UPI</span> · Euronews Next · Engadget · IAPP · Dataconomy · 2026-09-17</div>
+            <p class="hl-desc">UPI reported on September 17 that the European Commission introduced that day a legislative proposal called the EU KIDS Act, announced by Commission President Ursula von der Leyen. On age thresholds, UPI, Euronews and Engadget report that the proposal sets an absolute bar for children under 13; 13- to 15-year-olds would be limited to "mini accounts" linked to a parent or guardian's main account, confined to age-appropriate social media and video-sharing platforms, capped at one hour of screen time a day and restricted in their contact with other accounts; only at 15 could a child open an account of their own. On product features, the proposal would require the removal of addictive design, listing infinite scroll, autoplay, engagement rewards, recommendation algorithms that pull minors into "rabbit holes" of harmful content, push notifications during sleeping hours, and unsolicited contact from strangers; default settings would have to be private profiles with location, camera and microphone access disabled. On AI, UPI and Euronews report that AI companion chatbots must be disabled by default and may not interact in ways that foster emotional dependency; the scope covers social media, video platforms, gaming platforms and AI chatbots. On enforcement, app stores and operating systems would have to apply age-assurance filters, online services would confirm age through an EU age-verification app, and large platforms would submit compliance plans to the Commission and to independent auditors. On process, UPI and the IAPP report that the proposal has been forwarded to the European Parliament and the Council, with the Commission saying swift adoption is essential; published reporting gives no date of entry into force. This publication notes that it has not obtained the legislative text and that the provisions above are taken from the cited reports. We do not assess the proposal and make no prediction about its passage. Cross-verified: UPI · Euronews · Engadget · IAPP</p>
+          </div>
+          <a class="hl-link" href="https://www.upi.com/Top_News/World-News/2026/09/17/EU-inveils-new-child-online-safety-law/9671789633313" target="_blank" rel="noopener">UPI →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3067x1725+717+186/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd5%2F09%2Fd81d1cb64598881b06a07e2c4faa%2F09-13-2026-jimena-peck-denver-editorial-photographer-0251.jpg" alt="美国各州的聊天机器人安全立法" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag tec">科技</span>
+          <div class="zh-content">
+            <h2 class="hl-title">NPR调查：谷歌牵头的行业游说参与起草美国多州聊天机器人安全法，同时推动豁免条款</h2>
+            <div class="hl-meta"><span class="src">NPR（原始调查报道，经 KPBS、STLPR、WYPR、WUSF 等公共广播成员台转载）</span> · 2026-09-18</div>
+            <p class="hl-desc">美国全国公共广播电台（NPR）9月18日刊出一篇调查报道，称一场由谷歌牵头的科技行业游说在美国多州的聊天机器人安全立法中提供了条文模板，同时推动写入豁免条款；报道称Meta与Roblox的游说人员也曾试图加入各自的措辞与豁免。就具体条文，报道列举：科罗拉多州众议院第26-1263号法案（HB 26-1263，2026年5月由州长贾里德·波利斯签署）排除了12类聊天机器人，包括面向开发者或研究人员的产品、商务与客户服务类产品、搜索引擎内置的聊天机器人，以及商务生产力工具；「另一软件应用、网页界面或计算机程序中的一项功能」这一表述出现在至少8个州的法案中；另有条文把适用对象限定为未成年「账户持有人」，据报道这可能使无须注册即可使用的产品不在适用范围内。报道还称，夏威夷以第248号法案（Act 248）形式在修订后通过，爱达荷、佐治亚、艾奥瓦、华盛顿、内布拉斯加与俄勒冈亦有法案完成立法，亚利桑那州州长凯蒂·霍布斯（Katie Hobbs，民主党）否决了该州法案。报道引述的具名人士包括：已故少女朱莉安娜（Juliana，2023年11月去世）的母亲辛西娅·蒙托亚（Cynthia Montoya，曾在科罗拉多州参议院作证）、社交媒体受害者法律中心律师劳拉·马尔克斯－加勒特（Laura Marquez-Garrett）、夏威夷州众议员特里什·拉奇卡（Trish La Chica），以及科罗拉多州法案发起人、州众议员肖恩·卡马乔（Sean Camacho）与共同发起人、州参议员约翰·卡森（John Carson）。回应方面，报道引述谷歌的声明称其「致力于支持既保护消费者又促进创新的、审慎有效的AI立法」，并称公司「积极与立法者、同业和社区倡导者合作，帮助塑造政策框架」；科罗拉多健康促进组织（Healthier Colorado）表示HB26-1263「不是伪装的行业法案」，而是经过「广泛、多元的利益相关方程序」；Meta与Roblox拒绝置评。本报须明确说明：这是NPR的原始调查报道，上述州法案文本、游说披露记录与内部沟通均由NPR查阅，本报未独立取得这些文件，各公共广播成员台的刊载属于NPR的同源转载，不构成独立核验。本报因此只转述报道内容与各方回应，不对指控作出判断。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">NPR Investigation: A Google-Led Lobbying Effort Helped Draft State Chatbot-Safety Laws in the US While Pushing for Exemptions</h2>
+            <div class="hl-meta"><span class="src">NPR (original investigation, syndicated by member stations including KPBS, STLPR, WYPR and WUSF)</span> · 2026-09-18</div>
+            <p class="hl-desc">NPR published an investigation on September 18 reporting that a technology-industry lobbying effort led by Google supplied model language to chatbot-safety bills in multiple US states while pushing to insert exemptions, and that lobbyists for Meta and Roblox also sought to add their own wording and carve-outs. On the specific provisions, the report states that Colorado House Bill 26-1263, signed by Governor Jared Polis in May 2026, excludes 12 categories of chatbot, among them products for developers or researchers, commerce and customer-service products, chatbots built into search engines, and business-productivity tools; that the phrase "a feature within another software application, web interface, or computer program" appears in at least eight states' bills; and that other language limits the laws to minor "account holders," which the report says could place products usable without registration outside their scope. The report also states that Hawaii enacted its measure as Act 248 after amendments, that bills were enacted in Idaho, Georgia, Iowa, Washington, Nebraska and Oregon, and that Arizona Governor Katie Hobbs, a Democrat, vetoed her state's bill. People named in the report include Cynthia Montoya, mother of Juliana, a teenager who died in November 2023, who testified before the Colorado Senate; Laura Marquez-Garrett, an attorney at the Social Media Victims Law Center; Hawaii state Representative Trish La Chica; and the Colorado bill's sponsor, state Representative Sean Camacho, with co-sponsor state Senator John Carson. On responses, the report quotes Google as saying it "is committed to supporting thoughtful, effective AI legislation that protects consumers while fostering innovation" and that it "actively collaborates with lawmakers, industry peers, and community advocates to help shape policy frameworks"; Healthier Colorado said HB26-1263 "is not an industry bill in disguise" and reflected "an extensive, diverse stakeholder process"; Meta and Roblox declined to comment. This publication states plainly that this is NPR's own investigation: the bill texts, lobbying disclosures and communications described were reviewed by NPR, this publication has not independently obtained them, and publication by public-radio member stations is syndication of the same report rather than independent verification. We therefore relay the reporting and the responses without judging the allegations.</p>
+          </div>
+          <a class="hl-link" href="https://www.npr.org/2026/09/18/nx-s1-5968878/ai-chatbots-safety-regulation-google" target="_blank" rel="noopener">NPR →</a>
+        </div>
+      </article>
+
+      <article class="hl">
+        <img class="hl-img" src="https://images.euronews.com/articles/stories/09/91/81/93/1024x538_cmsv2_38f285fd-0152-58e4-9c74-eef2d2e0ff7b-9918193.jpg" alt="突尼斯首都的暴雨积水" loading="lazy" onerror="this.style.display='none'">
+        <div class="hl-body">
+          <span class="hl-tag env">地理与环境</span>
+          <div class="zh-content">
+            <h2 class="hl-title">突尼斯首都暴雨成灾：道路与住宅积水、电力与网络中断，中小学与大学停课</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Arab News（法新社稿） · Africanews · 2026-09-18</div>
+            <p class="hl-desc">据半岛电视台9月18日报道，突尼斯首都突尼斯市及大突尼斯地区遭遇强降雨，道路无法通行、交通完全停滞，居民滞留数小时等候公共交通，电力与互联网服务中断，雨水进入住宅；当局在暴雨来临前不久宣布中小学停课。据《阿拉伯新闻》刊发的法新社稿，突尼斯多所大学的课程亦被暂停，部分地区伴有冰雹，强雷暴出现在一段极端高温之后。据半岛电视台，突尼斯国家气象研究所此前已就局地强雷暴发布预警，称降雨可能引发内涝并超出排水系统承载能力。规模与背景方面，据半岛电视台，大突尼斯地区人口接近300万，近年反复发生内涝；本次降雨距2026年1月首都及全国多地的严重降雨仅数月，那次降雨造成数人死亡与显著财产损失。治理进展方面，据半岛电视台，官员在8月的一次会议上要求清理排水管网并加快防洪工程，报道称全国有29个相关项目在建。该报道引述一名居民称：「每年我们都会被淹，即使雨量不大。」本报须说明：上述报道未给出本次降雨的具体雨量数据，也未给出本次事件的官方伤亡数字。本报记录灾情与官方措施，不评价任何一方，也不预测后续天气。交叉核验：Al Jazeera · Arab News（法新社） · Africanews</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h2 class="hl-title">Torrential Rain Floods Tunisia's Capital: Roads and Homes Under Water, Power and Internet Disrupted, Schools and Universities Suspended</h2>
+            <div class="hl-meta"><span class="src">Al Jazeera</span> · Arab News (AFP copy) · Africanews · 2026-09-18</div>
+            <p class="hl-desc">Al Jazeera reported on September 18 that heavy rain hit Tunis and the Greater Tunis region, making roads impassable and bringing traffic to a complete standstill, leaving residents stranded for hours waiting for public transport, disrupting power and internet services, and pushing water into homes; authorities announced the suspension of school classes shortly before it took effect. An AFP dispatch carried by Arab News reported that university classes were also suspended and that hail fell in some areas, with the severe thunderstorms arriving after a spell of extreme heat. According to Al Jazeera, Tunisia's National Institute of Meteorology had issued advance warnings of locally heavy thunderstorms with the potential to cause flooding and overwhelm drainage networks. On scale and background, Al Jazeera reports that the Greater Tunis region is home to nearly three million people and has flooded repeatedly in recent years, and that Thursday's rain came only months after severe rains in January 2026 across the capital and other parts of the country left several people dead and caused significant damage. On remediation, Al Jazeera reports that officials at a meeting in August called for drainage networks to be cleaned and flood-protection work accelerated, with 29 projects said to be under way nationwide. The report quotes a resident saying: "Every year, we end up flooded even when there is little rain." This publication notes that the cited reports give no rainfall measurements for this event and no official casualty figures for it. We record the damage and the official measures, assess no party, and make no weather forecast. Cross-verified: Al Jazeera · Arab News (AFP) · Africanews</p>
+          </div>
+          <a class="hl-link" href="https://www.aljazeera.com/news/2026/9/18/tunisia-floods-disrupt-capital-as-heavy-rain-traps-motorists-and-residents" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://www.malaymail.com/malaymail/uploads/images/2026/09/18/363136.jpg" alt="霍尔木兹海峡的航运" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label pol">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">两条海峡的同一天：霍尔木兹的又一次打击、曼德海峡的意大利军舰，与首尔的三次拒绝</h3>
+            <div class="ft-meta"><span class="src">综合信源：Al Jazeera（多篇，含9月18日滚动报道与经济版） · Arab News（法新社稿，两篇） · Malay Mail（法新社稿） · Tasnim News Agency · Daily Sabah · Baird Maritime · The Korea Herald · UPI · CNBC · CNN</span></div>
+            <div class="ft-desc">
+              <p><strong>先说清楚这一天发生了什么</strong></p>
+              <p>9月18日与霍尔木兹海峡相关的信息分两套。伊朗方面：革命卫队称已打击并扣押多哥籍油轮「Trend」，理由是「非法通行」，塔斯尼姆通讯社发布了革命卫队海军的同一表述。国际航运通报方面：英国海事贸易行动办公室在周四通报霍尔木兹海峡发生一起「安全事件」，位置在阿曼哈萨布东北16海里，但未提供船只信息。这两套信息是否指向同一艘船，公开报道没有给出确认；部分通讯社仍沿用「不明抛射物」的表述。本报把两套口径并列，不作合并。</p>
+              <p><strong>这条水道现在的通行规则</strong></p>
+              <p>据法新社稿（经《阿拉伯新闻》与《马来邮报》刊发），自2026年2月底美国与以色列对伊朗实施打击以来，德黑兰对霍尔木兹海峡形成事实上的封锁，并希望对通行船只收取费用，对其认定绕开伊方指定航路的船只实施攻击。这一点是理解近期所有单起事件的前提：争议的对象不只是某一艘船，而是谁来规定这条水道的通行条件。</p>
+              <p><strong>一条不完整的时间线</strong></p>
+              <p>本报只列出能在通讯社或主流媒体报道中查到的节点。8月18日，据半岛电视台，UKMTO通报一艘船在霍尔木兹海峡被「不明抛射物」击中。8月31日，据伊朗国际电视台引述UKMTO，一艘油轮在海峡附近被三枚抛射物击中。9月7日，据半岛电视台经济版，随着美伊在海峡的打击加剧，油价上涨。9月8日，据CNBC，在有报道称伊朗对美国海军舰艇实施了第二次未公开攻击后，油价升至每桶99美元。9月9日，据CNBC，布伦特原油突破每桶100美元。9月13日，据CNN与CNBC，UKMTO通报一艘船在海峡被击中；上述报道称一艘伊朗商船在格什姆岛（Qeshm）附近被击中，一人死亡。9月17日至18日，即本期头条所记的事件。需要说明：这条时间线不完整，多起事件的责任方在公开报道中没有确认，本报不把未确认的归因写成事实。</p>
+              <p><strong>同一天，另一条海峡</strong></p>
+              <p>据半岛电视台与《新沙巴日报》（Daily Sabah）9月18日报道，意大利国防部长圭多·克罗塞托（Guido Crosetto）宣布将派军舰为意大利商船在曼德海峡的通行提供保护，并明确罗马不会等待欧盟的共同决定。他表示「我们有能力保护这条通道」，并称罗马「不能让决策上的官僚延迟加剧一个已经复杂的局面」；据报道，他与意大利国防参谋长已商定动员海军准备「一切必要的措施」。背景方面，据上述报道，本月红海航运的担忧上升，原因是与伊朗结盟的胡塞武装已控制也门整个西海岸并占领了位置关键的岛屿，从而获得对该海峡几乎不受限制的接近能力。地理事实方面，曼德海峡连接红海与亚丁湾，是欧洲与亚洲之间最繁忙的航运走廊之一，也是往来苏伊士运河的石油、天然气与集装箱运输的关键通道。</p>
+              <p><strong>被要求出兵的首尔</strong></p>
+              <p>据半岛电视台、合众国际社与《韩国先驱报》9月18日报道，韩国总统李在明当日三次重申韩国不会向霍尔木兹海峡派兵。他表示：「不会有导致卷入冲突的派兵。不会有对战争的参与或介入。」据上述报道，美国政府约六个月前、即美伊开战后不久，首次提出希望韩国海军力量协助确保该海峡安全；近几周韩国国内出现反对派兵的抗议。同一场合，李在明还表示美国总统特朗普明确希望与平壤对话，并称此类会谈虽不确定但并非不可能。</p>
+              <p><strong>本报不做的三件事</strong></p>
+              <p>其一，不把伊朗方面的声明、UKMTO的通报与通讯社的「不明抛射物」表述合并成一个叙述；其二，不评价任何国家的军事部署或不部署决定；其三，不预测油价、海峡通行状况或美方是否采取行动。本报未取得任何一次事件的独立现场核实，上述内容均转引自所列信源。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Two Straits in One Day: Another Strike in Hormuz, Italian Warships for Bab al-Mandeb, and Three Refusals from Seoul</h3>
+            <div class="ft-meta"><span class="src">Sources: Al Jazeera (several pieces, including the September 18 live blog and its economy section) · Arab News (two AFP copies) · Malay Mail (AFP copy) · Tasnim News Agency · Daily Sabah · Baird Maritime · The Korea Herald · UPI · CNBC · CNN</span></div>
+            <div class="ft-desc">
+              <p><strong>What is actually established about the day</strong></p>
+              <p>The information about the Strait of Hormuz on September 18 comes in two sets. From Iran: the Revolutionary Guard said it had struck and detained the Togo-flagged tanker Trend for an "illegal passage," and the Tasnim news agency carried the same IRGC Navy account. From international shipping channels: the UK Maritime Trade Operations centre reported on Thursday a "security incident" in the strait 16 nautical miles northeast of Khasab, Oman, without details of the vessel. Published reporting does not confirm that the two refer to the same ship, and some wire services still describe the vessel as hit by an unknown projectile. This publication sets the two accounts side by side rather than merging them.</p>
+              <p><strong>Who sets the terms of passage now</strong></p>
+              <p>According to the AFP dispatch published by Arab News and Malay Mail, Tehran has imposed an effective blockade of the Strait of Hormuz since the United States and Israel struck Iran in late February 2026, wants to charge tolls for passage, and attacks ships it accuses of circumventing its preferred route. That is the premise for reading any single incident: what is contested is not only a particular vessel but who sets the conditions for using the waterway.</p>
+              <p><strong>An incomplete timeline</strong></p>
+              <p>This publication lists only points traceable to wire services or established outlets. August 18: Al Jazeera reported that the UKMTO said a vessel had been hit by an "unknown projectile" in the strait. August 31: Iran International, citing the UKMTO, reported a tanker struck by three projectiles near the strait. September 7: Al Jazeera's economy section reported oil prices surging as US-Iran strikes in the strait intensified. September 8: CNBC reported oil rising to $99 a barrel after a report that Iran had launched a second, undisclosed attack on US Navy ships. September 9: CNBC reported Brent crude topping $100 a barrel. September 13: CNN and CNBC reported that the UKMTO said a vessel had been struck in the strait; those reports said an Iranian commercial vessel was hit near Qeshm Island, killing one person. September 17-18: the events recorded in this issue's headlines. The timeline is incomplete, responsibility for several incidents is unconfirmed in published reporting, and this publication does not write unconfirmed attribution as fact.</p>
+              <p><strong>The same day, a second strait</strong></p>
+              <p>Al Jazeera and Daily Sabah reported on September 18 that Italian Defence Minister Guido Crosetto said Italy would deploy warships to protect the passage of Italian merchant vessels through Bab al-Mandeb, and that Rome would not wait for a joint EU decision. He said, "We have the capabilities to protect the passage," and that Rome "must not allow bureaucratic delays in decision-making to exacerbate an already complex situation"; according to the reports, he and Italy's chief of defence staff had agreed to mobilise the navy to prepare "whatever is necessary." As background, those reports state that concern over Red Sea shipping has risen this month because the Iran-aligned Houthis have brought the entire west coast of Yemen under their control and captured strategically located islands, giving them virtually unrestricted access to the strait. Geographically, Bab al-Mandeb links the Red Sea to the Gulf of Aden and is one of the busiest shipping corridors between Europe and Asia, and a critical route for oil, gas and container traffic to and from the Suez Canal.</p>
+              <p><strong>Seoul, asked to send ships</strong></p>
+              <p>Al Jazeera, UPI and The Korea Herald reported on September 18 that South Korean President Lee Jae Myung said three times that day that South Korea would not send troops to the Strait of Hormuz. He said: "There will be no dispatch of troops that will lead to involvement in a conflict. There will be no engagement or involvement in war." According to those reports, Washington first asked for South Korean naval assets to help secure the strait about six months ago, shortly after the US-Iran war began, and protests against a possible deployment have taken place in South Korea in recent weeks. At the same appearance, Lee said that President Trump clearly wants dialogue with Pyongyang and that such talks, while uncertain, were not impossible.</p>
+              <p><strong>Three things this publication does not do</strong></p>
+              <p>First, it does not merge the Iranian statements, the UKMTO notices and the wire services' "unknown projectile" formulation into a single narrative. Second, it does not assess any country's decision to deploy or not to deploy. Third, it makes no prediction about oil prices, the state of the strait, or whether the United States will act. This publication has no independent verification on the ground for any of these incidents; all of the above is drawn from the sources listed.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">意大利宣布不等欧盟共同决定，单独派军舰为本国商船护航曼德海峡</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · Daily Sabah · Baird Maritime · 法新社稿（经 Yahoo News）</span> · 2026-09-18</div>
+            <p class="ni-desc">据半岛电视台与《新沙巴日报》9月18日报道，意大利国防部长圭多·克罗塞托（Guido Crosetto）表示，意大利将派遣军舰确保本国商船安全通过曼德海峡，并明确罗马不会等待欧盟的共同决定。他称「我们有能力保护这条通道」，并警告若该水道变得无法通行，经济后果将十分严重；他还表示罗马「不能让决策上的官僚延迟加剧一个已经复杂的局面」。据报道，克罗塞托与意大利国防参谋长已商定动员海军准备「一切必要的措施」。背景方面，据上述报道，本月对红海航运的担忧上升，原因是与伊朗结盟的胡塞武装已控制也门整个西海岸并占领位置关键的岛屿。地理事实方面，曼德海峡连接红海与亚丁湾，是欧洲与亚洲之间最繁忙的航运走廊之一。本报记录公开表态与背景，不评价任何一方的军事决定，也不预测红海航运状况。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Italy Will Not Wait for a Joint EU Decision and Will Send Warships to Escort Its Merchant Vessels Through Bab al-Mandeb</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · Daily Sabah · Baird Maritime · AFP (via Yahoo News)</span> · 2026-09-18</div>
+            <p class="ni-desc">Al Jazeera and Daily Sabah reported on September 18 that Italian Defence Minister Guido Crosetto said Italy would deploy warships to ensure its commercial vessels could pass safely through Bab al-Mandeb, and that Rome would not wait for a joint European Union decision. He said, "We have the capabilities to protect the passage," warning that if the waterway became impassable the economic consequences would be severe, and that Rome "must not allow bureaucratic delays in decision-making to exacerbate an already complex situation." According to the reports, Crosetto and Italy's chief of defence staff had agreed to mobilise the navy to prepare "whatever is necessary." As background, those reports state that concern over Red Sea shipping rose this month because the Iran-aligned Houthis brought the entire west coast of Yemen under their control and captured strategically located islands. Geographically, Bab al-Mandeb links the Red Sea to the Gulf of Aden and is one of the busiest shipping corridors between Europe and Asia. This publication records the statements and the background, assesses no party's military decision, and makes no prediction about Red Sea shipping.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/economy/2026/9/18/italy-to-deploy-warships-to-protect-shipping-through-bab-al-mandeb" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">韩国总统李在明三次重申不向霍尔木兹派兵，并称特朗普明确希望与平壤对话</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · UPI · The Korea Herald · Korea JoongAng Daily · TRT World</span> · 2026-09-18</div>
+            <p class="ni-desc">据半岛电视台、合众国际社与《韩国先驱报》9月18日报道，韩国总统李在明当日在美方压力之下三次重申，韩国不会向霍尔木兹海峡派兵介入伊朗战事。他表示：「不会有导致卷入冲突的派兵。不会有对战争的参与或介入。」据上述报道，美国政府约六个月前、即美伊开战后不久，首次提出希望韩国提供海军力量协助确保该海峡安全；近几周韩国国内出现反对派兵的抗议。同一场合，李在明表示美国总统唐纳德·特朗普明确希望与朝鲜对话，并称此类会谈虽不确定但并非不可能。本报记录公开表态，不评价任何一方的立场，也不预测美朝或美韩磋商的走向。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">South Korea's President Lee Says Three Times That Seoul Will Not Send Troops to Hormuz, and That Trump Clearly Wants Talks with Pyongyang</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · UPI · The Korea Herald · Korea JoongAng Daily · TRT World</span> · 2026-09-18</div>
+            <p class="ni-desc">Al Jazeera, UPI and The Korea Herald reported on September 18 that South Korean President Lee Jae Myung, under US pressure, said three times that day that South Korea would not send troops to intervene militarily in the Iran war in the Strait of Hormuz. He said: "There will be no dispatch of troops that will lead to involvement in a conflict. There will be no engagement or involvement in war." According to those reports, Washington first asked for South Korean naval assets to help secure the strait about six months ago, shortly after the US-Iran war began, and protests against a possible deployment have taken place in South Korea in recent weeks. At the same appearance, Lee said that US President Donald Trump clearly wants dialogue with North Korea and that such talks, while uncertain, were not impossible. This publication records the public statements, assesses no party's position, and makes no prediction about US-North Korean or US-South Korean discussions.</p>
+          </div>
+          <a class="ni-link" href="https://www.koreaherald.com/article/10878676" target="_blank" rel="noopener">The Korea Herald →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">澳大利亚将拘留逾期滞留的短期签证持有者，边境部队增聘100名执法人员、新增250个拘留床位</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · Bangkok Post（法新社稿） · Malay Mail（法新社稿） · Asharq Al-Awsat（英文版）</span> · 2026-09-18</div>
+            <p class="ni-desc">据半岛电视台与《曼谷邮报》刊发的法新社稿9月18日报道，澳大利亚政府部长当日宣布，将开始拘留逾期滞留的旅游签证持有者，以形成劝阻效果，此举属于压低移民规模的新规。执行细节方面，据上述报道，澳大利亚边境部队（Australian Border Force）将增聘100名合规执法人员，工作对象是目前约7.7万名在澳无有效签证的居留者，措施为拘留或促其离境；同时将新增250个拘留床位，包括可能启用墨尔本一处原检疫设施。据报道，周四公布的一揽子改革还包括停止允许留学生家属随行、对打工度假签证引入抽签制。回应与争议方面，据上述报道，执政的工党否认收紧签证规则是对以大幅削减移民为主张的极右翼政党「一国党」（One Nation）支持率上升的回应；批评者认为拘留旅游者会损害澳大利亚形象并带来法律问题，旅游业界亦表达关切。本报记录政策内容与各方公开表态，不评价该政策，也不预测其实施效果。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Australia Will Detain Visitors Who Overstay Their Visas, Adding 100 Compliance Officers and 250 Detention Beds</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · Bangkok Post (AFP copy) · Malay Mail (AFP copy) · Asharq Al-Awsat (English)</span> · 2026-09-18</div>
+            <p class="ni-desc">Al Jazeera and an AFP dispatch carried by the Bangkok Post reported on September 18 that Australian government ministers announced that day that the country would begin detaining tourists who overstay their visas as a message of deterrence, under new rules aimed at reducing migration levels. On implementation, those reports state that the Australian Border Force will add 100 compliance officers to detain or encourage the departure of roughly 77,000 people currently living in Australia without a valid visa, and that 250 new detention beds will be created, including the possible use of a former quarantine facility in Melbourne. According to the reports, the package announced Thursday also ends the ability of family members to accompany international students and introduces ballots for working-holiday visas. On reaction, those reports state that the governing Labor party denies that it is tightening visa rules in response to the rise of the far-right One Nation party, which campaigns on drastically cutting migration, while critics argue that detaining tourists damages Australia's image and raises legal concerns, and the tourism industry has voiced concern. This publication records the policy and the public statements, does not assess the policy, and makes no prediction about its effects.</p>
+          </div>
+          <a class="ni-link" href="https://www.bangkokpost.com/world/3321950/australia-to-detain-tourists-who-overstay-visa-minister-says" target="_blank" rel="noopener">Bangkok Post / AFP →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">共和党众议员马西在众议院提出对国防部长赫格塞斯的8项弹劾条款，核心指控为违反《战争权力决议》</h4>
+            <div class="ni-meta"><span class="src">NPR · CBS News · Fox News · PBS NewsHour · C-SPAN · Newsweek</span> · 2026-09-15</div>
+            <p class="ni-desc">据美国全国公共广播电台（NPR）、哥伦比亚广播公司新闻（CBS News）与公共电视网新闻时间（PBS NewsHour）报道，肯塔基州共和党众议员托马斯·马西（Thomas Massie）于9月15日（周二）在众议院院会宣读了针对国防部长皮特·赫格塞斯（Pete Hegseth，现届政府称其为「战争部长」）的8项弹劾条款，核心指控为违反1973年《战争权力决议》——该决议是对总统未经立法机关同意进入武装冲突之权力的一项制约——具体涉及对伊朗的战事。据福克斯新闻，条款内容还包括：第四与第五条指控赫格塞斯未尽量减少平民伤亡并实施法外杀戮，后者指其「以未经授权的致命军事打击取代海上执法」，对加勒比海的疑似毒品走私者实施打击；第六条指控其以报复方式压制亚利桑那州民主党联邦参议员马克·凯利（Mark Kelly）的言论自由；第七条以「绑架一国主权领导人」为由，指控其在今年1月「绝对决心行动」（Operation Absolute Resolve）中的角色，该行动中美军特种部队在加拉加斯拘捕并带走了委内瑞拉前领导人尼古拉斯·马杜罗及其妻子西莉亚·弗洛雷斯。马西表示，提出这些条款是为了在历史上留下一个「标记」。据《新闻周刊》，一次由马西推动的表决此后被推迟。本报记录条款内容与程序进展，不评价任何指控的成立与否，也不预测众议院的后续处理。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Republican Rep. Massie Introduces Eight Articles of Impeachment Against Defense Secretary Hegseth, Centred on the War Powers Resolution</h4>
+            <div class="ni-meta"><span class="src">NPR · CBS News · Fox News · PBS NewsHour · C-SPAN · Newsweek</span> · 2026-09-15</div>
+            <p class="ni-desc">NPR, CBS News and PBS NewsHour reported that Representative Thomas Massie, a Kentucky Republican, read eight articles of impeachment against Defense Secretary Pete Hegseth — whom the current administration calls Secretary of War — on the House floor on Tuesday, September 15, with the central allegation being violations of the 1973 War Powers Resolution, which checks the president's power to enter armed conflict without the consent of the legislative branch, in connection with the war in Iran. According to Fox News, the articles also include: the fourth and fifth, accusing Hegseth of failing to minimise civilian casualties and of extrajudicial killing, the latter charging him with "replacing maritime law enforcement with unauthorized lethal military targeting of suspected drug traffickers" in strikes in the Caribbean Sea; the sixth, accusing him of using his authority to suppress the free speech of Senator Mark Kelly, an Arizona Democrat, in retaliation for a video; and the seventh, alleging the "Kidnapping of a Sovereign Foreign Leader" over his role in Operation Absolute Resolve, the January mission in which US Special Forces apprehended and removed former Venezuelan leader Nicolás Maduro and his wife Cilia Flores from Caracas. Massie said he introduced the articles to place a "marker" in history. Newsweek reported that a vote pushed by Massie was subsequently delayed. This publication records the content of the articles and the procedural state of play, does not assess whether any allegation is sustained, and makes no prediction about how the House will proceed.</p>
+          </div>
+          <a class="ni-link" href="https://www.npr.org/2026/09/15/g-s1-143407/massie-impeach-hegseth-iran" target="_blank" rel="noopener">NPR →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://images.contentstack.io/v3/assets/bltd4dd5b2d705252bc/blt03d9c5a4e01f334b/6aac0753a4ecdf7938ca935d/eu-commission-brussels-eu-012826.jpg" alt="布鲁塞尔的欧盟委员会" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label tec">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">谁在替未成年人和聊天机器人定规则：布鲁塞尔的一份提案，与美国各州法案里的豁免条款</h3>
+            <div class="ft-meta"><span class="src">综合信源：UPI · Euronews Next（两篇） · Engadget · IAPP · Dataconomy · NPR（原始调查报道，经多家公共广播成员台转载）</span></div>
+            <div class="ft-desc">
+              <p><strong>同一个问题，两天之内出现了两种答案</strong></p>
+              <p>9月17日与18日，「未成年人能以何种方式使用社交平台与AI聊天机器人」这个问题在大西洋两岸分别有了新的进展。欧盟走的是一部统一法规、事前义务的路线；美国走的是逐州立法、由定义与豁免条款决定适用范围的路线。本报把两者并列，是因为它们处理的是同一个对象，而落点很不一样。</p>
+              <p><strong>布鲁塞尔：一部法规，一套事前义务</strong></p>
+              <p>据合众国际社（UPI）、Euronews与Engadget，欧盟委员会9月17日提出《欧盟儿童法案》（EU KIDS Act），由委员会主席冯德莱恩公布。年龄门槛为三档：13岁以下绝对禁止使用社交媒体；13至15岁只能使用与家长或监护人主账户关联的「迷你账户」，限于适龄平台、每日屏幕时间上限一小时、限制与其他账户的接触；满15岁方可自行开设账户。产品设计层面，提案要求移除无限下滑、自动播放、参与奖励机制、把未成年人拖入有害内容「兔子洞」的推荐算法、睡眠时段推送与陌生人主动联系；默认设置须为私密资料页并关闭定位、摄像头与麦克风。就AI而言，据UPI与Euronews，AI伴侣类聊天机器人须默认关闭，且不得以培养情感依赖的方式互动。执行层面，应用商店与操作系统须落实年龄核验过滤，在线服务须通过欧盟年龄核验应用确认年龄，大型平台须向委员会与独立审计方提交合规方案。覆盖对象包括社交媒体、视频平台、游戏平台与AI聊天机器人。程序上，据UPI与IAPP，提案已提交欧洲议会与欧盟理事会，公开报道未给出生效时间表。</p>
+              <p><strong>美国各州：法条里的定义决定了谁被管</strong></p>
+              <p>据NPR 9月18日的调查报道，美国多州今年出现措辞相近的聊天机器人安全法案，而一场由谷歌牵头的行业游说在其中提供了条文模板并推动豁免；Meta与Roblox的游说人员亦试图加入各自的措辞。报道列举的豁免类型包括：面向开发者或研究人员的产品、商务与客户服务类产品、搜索引擎内置的聊天机器人、商务生产力工具，以及「另一软件应用、网页界面或计算机程序中的一项功能」——报道称后一表述出现在至少8个州的法案中。另有条文把适用对象限定为未成年「账户持有人」，据报道这可能使无须注册即可使用的产品不在适用范围内。立法结果方面，报道称科罗拉多州HB 26-1263于5月签署成法并排除了12类聊天机器人，夏威夷以第248号法案形式在修订后通过，爱达荷、佐治亚、艾奥瓦、华盛顿、内布拉斯加与俄勒冈亦有法案完成立法，亚利桑那州州长霍布斯否决了该州法案。</p>
+              <p><strong>一处必须说明的核验差别</strong></p>
+              <p>本报对上面两段材料的把握程度并不相同。欧盟提案部分由UPI、Euronews、Engadget、IAPP与Dataconomy等相互独立的报道交叉印证，条款内容一致。美国各州部分出自NPR一家的原始调查报道：州法案文本、游说披露记录与相关沟通由NPR查阅，本报未独立取得；各公共广播成员台的刊载属同源转载，不构成独立核验。因此本报对前者按已交叉核验的事实处理，对后者只转述报道内容与被点名一方的回应——谷歌称其「致力于支持既保护消费者又促进创新的、审慎有效的AI立法」，科罗拉多健康促进组织称该法案「不是伪装的行业法案」，Meta与Roblox拒绝置评。</p>
+              <p><strong>已经出现的反对论点</strong></p>
+              <p>据Euronews 9月18日另一篇报道，行业分析人士斯坦尼斯拉斯·马尔尚（Stanislas Marchand）称，若《欧盟儿童法案》要求推出单独的欧洲版产品并进行持续的合规评估，「美国的实验室可能会推迟在这里发布」，并称他的感觉是这会「进一步扩大跨大西洋的AI差距」。本报按其本来性质标注：这是一名分析人士的判断，不是研究结论或官方评估。</p>
+              <p><strong>本报的界限</strong></p>
+              <p>本报未取得欧盟立法文本，也未取得任何一州的法案原文与游说披露记录；以上条款、数字与引文均转引自所列信源。本报不评价这两种立法路径的优劣，不判断任何一方的动机，也不预测欧盟议会与理事会的处理结果或美国各州的后续立法。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">Who Writes the Rules for Minors and Chatbots: One Proposal in Brussels, and the Exemptions Inside US State Bills</h3>
+            <div class="ft-meta"><span class="src">Sources: UPI · Euronews Next (two pieces) · Engadget · IAPP · Dataconomy · NPR (original investigation, syndicated by public-radio member stations)</span></div>
+            <div class="ft-desc">
+              <p><strong>One question, two answers within two days</strong></p>
+              <p>On September 17 and 18, the question of how minors may use social platforms and AI chatbots advanced on both sides of the Atlantic. The European Union is taking the route of a single regulation with ex-ante obligations; the United States is taking the route of state-by-state legislation in which definitions and exemptions decide who is covered. This publication sets the two side by side because they address the same object and land in very different places.</p>
+              <p><strong>Brussels: one regulation, a set of ex-ante duties</strong></p>
+              <p>According to UPI, Euronews and Engadget, the European Commission proposed the EU KIDS Act on September 17, announced by Commission President Ursula von der Leyen. There are three age tiers: an absolute bar on social media for under-13s; for 13- to 15-year-olds, only "mini accounts" linked to a parent or guardian's main account, confined to age-appropriate platforms, capped at one hour of screen time a day and restricted in contact with other accounts; and own accounts only from 15. On product design, the proposal would require removal of infinite scroll, autoplay, engagement rewards, recommendation algorithms that pull minors into "rabbit holes" of harmful content, notifications during sleeping hours and unsolicited contact from strangers; defaults would be private profiles with location, camera and microphone off. On AI, UPI and Euronews report that AI companion chatbots must be off by default and may not interact in ways that foster emotional dependency. On enforcement, app stores and operating systems would apply age-assurance filters, online services would confirm age through an EU age-verification app, and large platforms would submit compliance plans to the Commission and to independent auditors. The scope covers social media, video platforms, gaming platforms and AI chatbots. On process, UPI and the IAPP report that the proposal has gone to the European Parliament and the Council; published reporting gives no date of entry into force.</p>
+              <p><strong>US states: the definitions decide who is covered</strong></p>
+              <p>According to NPR's investigation of September 18, similarly worded chatbot-safety bills appeared in multiple US states this year, and a Google-led industry lobbying effort supplied model language and pushed for exemptions, while lobbyists for Meta and Roblox also sought to insert their own wording. The exemption categories the report lists include products for developers or researchers, commerce and customer-service products, chatbots built into search engines, business-productivity tools, and "a feature within another software application, web interface, or computer program" — a phrase the report says appears in at least eight states' bills. Other language limits the laws to minor "account holders," which the report says could place products usable without registration outside their scope. On outcomes, the report states that Colorado's HB 26-1263 was signed into law in May and excludes 12 categories of chatbot, that Hawaii enacted its measure as Act 248 after amendments, that bills were enacted in Idaho, Georgia, Iowa, Washington, Nebraska and Oregon, and that Arizona Governor Katie Hobbs vetoed her state's bill.</p>
+              <p><strong>A difference in verification that has to be stated</strong></p>
+              <p>This publication's grip on the two halves above is not the same. The EU proposal is corroborated across independent reports from UPI, Euronews, Engadget, the IAPP and Dataconomy, which agree on the provisions. The US state material comes from a single outlet's original investigation: the bill texts, lobbying disclosures and communications were reviewed by NPR and have not been independently obtained by this publication, and publication by member stations is syndication of the same report, not independent verification. We therefore treat the former as cross-verified fact and, for the latter, relay only the reporting and the responses of those named — Google says it "is committed to supporting thoughtful, effective AI legislation that protects consumers while fostering innovation," Healthier Colorado says the bill "is not an industry bill in disguise," and Meta and Roblox declined to comment.</p>
+              <p><strong>An objection already on the record</strong></p>
+              <p>In a separate Euronews piece on September 18, the industry analyst Stanislas Marchand said that if the Kids Act requires separate European products and costly ongoing assessments, "US labs may delay launches here," adding that his feeling was that it "will further add to the transatlantic AI divide." This publication labels that for what it is: one analyst's judgment, not a research finding or an official assessment.</p>
+              <p><strong>The limits of this account</strong></p>
+              <p>This publication has not obtained the EU legislative text, nor the original text of any state bill or lobbying disclosure; the provisions, figures and quotations above are taken from the sources listed. We do not assess the merits of either legislative route, do not judge anyone's motives, and make no prediction about the Parliament and Council or about further legislation in the states.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">华为把昇腾960DT提前三个季度至2027年第一季度，并公布至2029年的芯片路线图</h4>
+            <div class="ni-meta"><span class="src">TechCrunch · Qz · The Tech Portal · Tech Times · 彭博社（经 Advisor Perspectives 转载）</span> · 2026-09-17</div>
+            <p class="ni-desc">据TechCrunch与Qz 9月17日报道，华为技术有限公司宣布将下一代AI芯片昇腾960DT（Ascend 960DT）的发布时间提前至2027年第一季度，比原定的2027年末提前三个季度；消息由华为轮值董事长徐直军（David Wang）在上海举行的华为全联接大会（Huawei Connect）上宣布。据上述报道，配套的昇腾960PR预计在2027年第三季度推出，比原计划提前一个季度；华为还表示计划在2028年推出昇腾970、2029年推出昇腾980，并称每一代的算力约为上一代的两倍。架构方面，据报道，华为试图通过其Peerium计算架构把数十万乃至上百万颗AI芯片组织成一台巨型计算机，该架构依赖华为用于连接处理器与内存、存储及网络硬件的UnifiedBus互连技术。本报记录公司公布的时间表与技术表述，不评价任何产品，不做性能比较，也不预测市场结果。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Huawei Pulls the Ascend 960DT Forward Three Quarters to Q1 2027 and Sets Out a Chip Roadmap to 2029</h4>
+            <div class="ni-meta"><span class="src">TechCrunch · Qz · The Tech Portal · Tech Times · Bloomberg (syndicated by Advisor Perspectives)</span> · 2026-09-17</div>
+            <p class="ni-desc">TechCrunch and Qz reported on September 17 that Huawei Technologies said it would release its next-generation AI chip, the Ascend 960DT, in the first quarter of 2027, three quarters earlier than the originally scheduled late 2027; the announcement was made by rotating chairman David Wang at the Huawei Connect summit in Shanghai. According to those reports, the companion Ascend 960PR is now expected in the third quarter of 2027, one quarter earlier than planned, and Huawei said it plans to release the Ascend 970 in 2028 and the Ascend 980 in 2029, with each generation roughly doubling the computing power of its predecessor. On architecture, the reports state that Huawei is seeking to organise hundreds of thousands and eventually millions of AI chips into a single large computer through its Peerium computing architecture, which relies on UnifiedBus, Huawei's interconnect technology for linking processors with memory, storage and networking hardware. This publication records the timetable and technical descriptions the company published, assesses no product, makes no performance comparison, and makes no prediction about market outcomes.</p>
+          </div>
+          <a class="ni-link" href="https://techcrunch.com/2026/09/17/huawei-plans-q1-2027-launch-of-new-ai-chip-as-it-takes-on-nvidia/" target="_blank" rel="noopener">TechCrunch →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">数据中心开发商Crusoe完成39亿美元F轮融资，估值309亿美元</h4>
+            <div class="ni-meta"><span class="src">GlobeNewswire（公司公告） · TechCrunch · The Next Web · Tech Startups · The Manila Times</span> · 2026-09-17</div>
+            <p class="ni-desc">据公司9月17日通过GlobeNewswire发布的公告，以及TechCrunch与The Next Web的报道，数据中心开发商Crusoe完成39亿美元F轮融资，估值达309亿美元。据上述报道，本轮由Atreides Management、Mubadala Capital与Valor Equity Partners共同领投，Founders Fund、新加坡政府投资公司（GIC）、英伟达、卡塔尔投资局（QIA）、Radical Ventures与TPG等参与投资。业务方面，据公司公告，Crusoe在美国制造名为Crusoe Spark的模块化数据中心，公司称该产品可扩展，并把现场建设周期从数年压缩到数周。本报记录融资金额、估值与投资方名单，不评价该公司或其估值，不做投资建议，也不预测行业走向。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Data-Centre Developer Crusoe Closes a $3.9 Billion Series F at a $30.9 Billion Valuation</h4>
+            <div class="ni-meta"><span class="src">GlobeNewswire (company release) · TechCrunch · The Next Web · Tech Startups · The Manila Times</span> · 2026-09-17</div>
+            <p class="ni-desc">According to the company's release issued through GlobeNewswire on September 17 and reports by TechCrunch and The Next Web, the data-centre developer Crusoe raised $3.9 billion in a Series F round at a valuation of $30.9 billion. Those reports state that the round was co-led by Atreides Management, Mubadala Capital and Valor Equity Partners, with participation from Founders Fund, GIC, Nvidia, the Qatar Investment Authority, Radical Ventures and TPG, among others. On the business, the company release states that Crusoe manufactures modular data centres called Crusoe Spark in the United States, and says the deployments are scalable and shorten field construction from years to weeks. This publication records the amount, the valuation and the list of investors, does not assess the company or its valuation, offers no investment advice, and makes no prediction about the sector.</p>
+          </div>
+          <a class="ni-link" href="https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/" target="_blank" rel="noopener">TechCrunch →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">英伟达、谷歌与Emerald AI成立「AI能源管理联盟」，谷歌承诺1吉瓦可削减负荷</h4>
+            <div class="ni-meta"><span class="src">NVIDIA（公司博客） · SiliconANGLE · Engadget · Axios · Dataconomy</span> · 2026-09-16</div>
+            <p class="ni-desc">据英伟达公司博客与SiliconANGLE、Engadget的报道，英伟达、谷歌与软件公司Emerald AI于9月16日（周三）宣布成立「AI能源管理联盟」（AI Energy Management Alliance，AEMA），目标是推动数据中心根据电网状况动态调整用电。据上述报道，所谓「弹性数据中心」指的是在电网紧张时降低取电的设施：运营方可以把AI训练任务安排在非高峰时段、改用现场电池供电，或在电力公司难以满足居民用电需求时把储存的电力回送电网。规模方面，据报道，该联盟汇集了20家来自AI与能源领域的公司与机构，包括Anthropic、电网企业National Grid与AES，以及发电企业Constellation、NRG和RWE。具体承诺方面，据报道，谷歌承诺1吉瓦的可削减需求；英伟达、Digital Realty与Emerald AI计划于今年内在美国弗吉尼亚州启用一处100兆瓦的用电可调AI设施。本报记录联盟构成与公开承诺，不评价其效果，也不预测电网或数据中心用电的走向。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Nvidia, Google and Emerald AI Launch an AI Energy Management Alliance; Google Pledges 1 GW of Reducible Demand</h4>
+            <div class="ni-meta"><span class="src">NVIDIA (company blog) · SiliconANGLE · Engadget · Axios · Dataconomy</span> · 2026-09-16</div>
+            <p class="ni-desc">According to Nvidia's company blog and reports by SiliconANGLE and Engadget, Nvidia, Google and the software company Emerald AI announced on Wednesday, September 16, the launch of the AI Energy Management Alliance (AEMA), aimed at advancing data centres that dynamically manage their electricity use in response to grid conditions. Those reports describe a flexible data centre as a facility that cuts its power draw when the grid is under strain: operators can schedule AI training runs away from peak demand, draw power from on-site batteries instead of the grid, or inject stored electricity back into the grid when a utility is struggling to meet consumer demand. On scale, the reports state that the alliance brings together 20 companies and organisations across the AI and energy sectors, including Anthropic, the utilities National Grid and AES, and the power producers Constellation, NRG and RWE. On specific commitments, the reports state that Google has pledged 1 GW of reducible demand, and that Nvidia, Digital Realty and Emerald AI plan to switch on a 100 MW power-flexible AI facility in Virginia later this year. This publication records the membership and the public commitments, does not assess their effect, and makes no prediction about grids or data-centre electricity use.</p>
+          </div>
+          <a class="ni-link" href="https://siliconangle.com/2026/09/17/nvidia-google-and-emerald-ai-launch-flexible-data-center-consortium/" target="_blank" rel="noopener">SiliconANGLE →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">Snap面向消费者开售AR眼镜Specs，售价2195美元，首批产量上限10万台</h4>
+            <div class="ni-meta"><span class="src">Social Media Today · Road to VR · Dataconomy · TechBriefly</span> · 2026-09-16</div>
+            <p class="ni-desc">据Social Media Today与Road to VR报道，Snap于9月16日开始以2195美元的价格销售其AR眼镜Specs，这是该款独立混合现实设备的消费者版发布。硬件参数方面，据上述报道，该设备视场角为51度，采用Snap自研的LCoS显示面板，支持1600万色，并搭载两颗高通骁龙处理器，其中一颗专用于计算机视觉、另一颗用于运行AR体验；设备内置名为Specs Intelligence的AI服务，Snap称其为「预判式AI服务」，用于协助用户处理不同任务。销售安排方面，据报道，美国、英国与法国的用户可以2195美元预订（其中200美元为可退定金），发货自今年秋季开始；Snap将首批产量上限设为10万台，在美国的蜂窝网络服务与Verizon绑定。本报记录产品参数与售价，不评价该产品，也不预测销量。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Snap Puts Its Specs AR Glasses on Sale to Consumers at $2,195, Capping the First Run at 100,000 Units</h4>
+            <div class="ni-meta"><span class="src">Social Media Today · Road to VR · Dataconomy · TechBriefly</span> · 2026-09-16</div>
+            <p class="ni-desc">Social Media Today and Road to VR reported that Snap began selling its AR-enabled Specs glasses on September 16 for $2,195, the consumer launch of its standalone mixed-reality device. On hardware, those reports state that the device has a 51-degree field of view, uses Snap's own LCoS display panel with 16 million colours, and carries two Qualcomm Snapdragon processors, one dedicated to computer vision and the other to running AR experiences; it includes an AI service called Specs Intelligence, which Snap describes as an "anticipatory AI service" intended to help users manage different tasks. On availability, the reports state that customers in the United States, the United Kingdom and France can pre-order at $2,195 with a $200 refundable deposit, with shipping starting this autumn, and that Snap capped first-run production at 100,000 units and tied cellular service in the US to Verizon. This publication records the specifications and the price, does not assess the product, and makes no prediction about sales.</p>
+          </div>
+          <a class="ni-link" href="https://www.socialmediatoday.com/news/snap-launches-ar-specs/830613/" target="_blank" rel="noopener">Social Media Today →</a>
+        </div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft">
+        <img class="ft-img" src="https://hongkongfp.com/wp-content/uploads/2026/09/climatechangeflood.jpg" alt="尼泊尔洪灾现场" loading="lazy" onerror="this.style.display='none'">
+        <div class="ft-body">
+          <span class="ft-label env">深度解读 · IN-DEPTH</span>
+          <div class="zh-content">
+            <h3 class="ft-title">「复合型危机」是怎么被拆开的：尼泊尔—西藏8月26日洪灾的归因研究说了什么、又明确没说什么</h3>
+            <div class="ft-meta"><span class="src">综合信源：法新社稿（经 Hong Kong Free Press 刊发） · Al Jazeera · Geographical · The Japan Times · Insurance Journal · Gulf News</span></div>
+            <div class="ft-desc">
+              <p><strong>先厘清事件本身</strong></p>
+              <p>据半岛电视台与法新社稿，2026年8月26日，喜马拉雅山脉朗唐力戎峰（Langtang Lirung）峰顶附近的冰体与岩壁发生崩塌。据半岛电视台引述的研究，约1.1亿立方米的岩石与冰体落入下方谷地，引发的暴洪以每小时177公里（110英里）以上的速度推进。这不是一场典型意义上的「暴雨成灾」，而是一次地表物质的大规模位移与随之而来的洪水。</p>
+              <p><strong>归因研究的结论：不是单一极端天气</strong></p>
+              <p>据法新社稿与半岛电视台，研究组织「世界天气归因」（World Weather Attribution，WWA）于9月17日（周四）发布对该事件的分析，结论是这场灾难并非由单一极端天气事件造成，而是一场由长期增温、冰川退缩、永冻土消融与地质不稳定叠加而成的「复合型危机」。机制方面，据法新社稿，研究者认为持续增温抬高了喜马拉雅地区的冰点高度，使冰体与山地永冻土暴露在更高海拔、更长时段的消融条件下，从而削弱了山体坡面的稳定性。</p>
+              <p><strong>研究给出的几组数字</strong></p>
+              <p>据法新社稿与半岛电视台，报告称2026年7月与8月是当地有记录以来最热的月份；在洪灾发生前的数日里，气温高出30年平均值5摄氏度。另据法新社稿，2025年末的大量降雪在崩塌前增加了融水量。研究同时指出一个不确定项：2015年的7.8级地震可能进一步削弱了该处坡面，但其确切贡献仍不确定。</p>
+              <p><strong>研究者的表述</strong></p>
+              <p>据法新社稿，帝国理工学院气候科学教授、WWA共同创办人弗雷德里克·奥托（Friederike Otto）表示：「毫无疑问，气候变化是驱动因素之一」，并称「这些事件与人类引起的气候变化有明确关联，也明确带来了不可避免的损失与损害」。乌得勒支大学山地水文学者瓦尔特·伊默泽尔（Walter Immerzeel）表示，该地区正在经历「根本性的、不可逆的转变」，冰川退缩与永冻土退化正在削弱山体稳定性。</p>
+              <p><strong>伤亡数字（两国分列）</strong></p>
+              <p>据法新社稿，尼泊尔方面已寻回1403具遗体（其中105具已确认身份），另有6150人失踪；中国西藏自治区方面报告43人死亡、519人失踪。两地合计为1446人死亡、6669人失踪。本报按信源原始口径分列，不做合并取整。</p>
+              <p><strong>这类研究能做什么、不能做什么</strong></p>
+              <p>本报须说明归因研究的边界。对热浪这类单一气象变量事件，归因研究通常能给出「在有无人类影响的两种气候下发生概率相差多少倍」的量化结论。而本次事件涉及冰体崩塌、岩体力学与地震史的叠加，报告自身即以「复合型危机」表述，并明确把2015年地震的贡献列为不确定项——也就是说，它建立的是驱动因素的关联与机制，而不是一个单一的概率倍数。据《Geographical》，该研究对尼泊尔的气候资金主张具有意义，尼泊尔正以此支持其恢复重建资金的请求。本报记录这一用途，不评价任何一方的主张。</p>
+              <p><strong>本报的界限</strong></p>
+              <p>本报未取得WWA报告全文，以上结论、数字与引文均转引自所列报道；本报不评价任何国家的气候政策，不预测损失与损害相关谈判的结果，也不就该地区未来是否会再次发生同类事件作出推断。</p>
+            </div>
+          </div>
+          <div class="en-content" lang="en">
+            <h3 class="ft-title">How a "Compound Crisis" Was Taken Apart: What the Attribution Study of the August 26 Nepal-Tibet Flood Says, and What It Explicitly Does Not</h3>
+            <div class="ft-meta"><span class="src">Sources: AFP copy (published by Hong Kong Free Press) · Al Jazeera · Geographical · The Japan Times · Insurance Journal · Gulf News</span></div>
+            <div class="ft-desc">
+              <p><strong>The event itself</strong></p>
+              <p>According to Al Jazeera and the AFP dispatch, ice and a rock wall near the summit of Langtang Lirung in the Himalayas collapsed on August 26, 2026. Al Jazeera, citing the study, reports that roughly 110 million cubic metres of rock and ice fell into the valley below, triggering flash floods that travelled at more than 177 kilometres per hour (110 mph). This was not a rainfall disaster in the ordinary sense but a large-scale displacement of material and the flooding that followed.</p>
+              <p><strong>The finding: not a single extreme weather event</strong></p>
+              <p>The AFP dispatch and Al Jazeera report that World Weather Attribution published its analysis of the event on Thursday, September 17, concluding that the disaster was not caused by a single extreme weather event but was a "compound crisis" shaped by long-term warming, glacier retreat, permafrost thaw and geological instability. On mechanism, the AFP dispatch reports that researchers found relentless warming had lifted the freezing level in the Himalayas, exposing ice and mountain permafrost to thaw at higher elevations and for longer, weakening mountain slopes.</p>
+              <p><strong>The numbers the study gives</strong></p>
+              <p>According to the AFP dispatch and Al Jazeera, the report says July and August 2026 were the warmest months on local record, and that temperatures in the several days before the collapse were 5°C above the 30-year average. The AFP dispatch also reports that heavy snowfall in late 2025 increased meltwater before the collapse. The study flags one uncertainty: the magnitude 7.8 earthquake of 2015 may have further weakened the slope, but its precise contribution remains uncertain.</p>
+              <p><strong>What the researchers said</strong></p>
+              <p>According to the AFP dispatch, Friederike Otto, professor of climate science at Imperial College London and a co-founder of World Weather Attribution, said: "There is no doubt that climate change is one of the drivers," adding that "these are the events that are clearly linked to human-induced climate change, and that clearly have unavoidable loss and damage." Walter Immerzeel, a mountain hydrologist at Utrecht University, said the region was undergoing "fundamental, irreversible shifts," with glacier retreat and permafrost degradation undermining stability.</p>
+              <p><strong>The toll, listed separately by country</strong></p>
+              <p>According to the AFP dispatch, Nepal has recovered 1,403 bodies, of which 105 have been identified, with 6,150 people missing; China's Tibet Autonomous Region has reported 43 dead and 519 missing. The combined figures are 1,446 dead and 6,669 missing. This publication lists the figures as the source gives them and does not merge or round them.</p>
+              <p><strong>What this kind of study can and cannot do</strong></p>
+              <p>The limits of attribution work should be stated. For events defined by a single meteorological variable, such as a heatwave, attribution studies can usually quantify how many times more likely the event was in a climate with human influence than in one without. This event combines an ice collapse, rock mechanics and seismic history; the report itself uses the phrase "compound crisis" and explicitly lists the 2015 earthquake's contribution as uncertain — that is, it establishes the drivers and the mechanism rather than a single probability ratio. According to Geographical, the study has significance for Nepal's climate-finance claims, with the country using it to support requests for recovery funds. This publication records that use and assesses no party's case.</p>
+              <p><strong>The limits of this account</strong></p>
+              <p>This publication has not obtained the full WWA report; the findings, figures and quotations above are taken from the reports cited. We do not assess any country's climate policy, make no prediction about loss-and-damage negotiations, and draw no inference about whether comparable events will recur in the region.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="ngrid"><div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">西班牙瓦伦西亚地区短时强降雨：托伦特半小时降71升/平方米，隧道与街道被淹，15人获救</h4>
+            <div class="ni-meta"><span class="src">Euronews（视频报道） · Al Jazeera · AVAMET（瓦伦西亚气象协会观测网，数据来源）</span> · 2026-09-17</div>
+            <p class="ni-desc">据Euronews 9月17日的报道，西班牙瓦伦西亚省西南侧、上韦尔塔（Horta Sud）地区的托伦特市（Torrent，人口约8.5万）当日遭遇强降雨。雨量方面，据瓦伦西亚气象协会观测网（AVAMET）的记录，该地累计降雨接近96升/平方米，其中71升/平方米集中在30分钟内落下，报道以「超过暴雨级」形容。灾情方面，据报道，街道被泥浆覆盖，多辆车受损或无法使用；中央公园（Parc Central）隧道被淹并有车辆被困；应急人员从一家快餐店内救出15名被困者；波约干河（Barranco del Poyo）水位显著上涨，而邻近的派波尔塔（Paiporta）在水位升高的情况下未被淹。预警方面，据报道，地区应急中心在当晚22时08分发出ES-Alert手机预警，提醒民众避免出行、远离河道与沟谷、在水位上涨时转移至高层；但有居民表示预警发出时街道、地下室与隧道已被淹没。背景方面，据报道，此次降雨发生在西班牙有记录以来最热的一个夏季之后，气象人员此前已就东部地区的强降雨风险发出提示。上述报道未给出本次事件的伤亡数字。本报记录观测数据与灾情，不评价预警机制，也不预测后续天气。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Short, Intense Rain in Spain's Valencia Region: 71 Litres per Square Metre in Half an Hour at Torrent, Tunnels and Streets Flooded, 15 Rescued</h4>
+            <div class="ni-meta"><span class="src">Euronews (video report) · Al Jazeera · AVAMET (Valencian meteorological association network, data source)</span> · 2026-09-17</div>
+            <p class="ni-desc">Euronews reported on September 17 that Torrent, a city of about 85,000 in the Horta Sud area southwest of Valencia, was hit by heavy rain that day. On rainfall, records from the AVAMET observation network show a total of nearly 96 litres per square metre, of which 71 litres per square metre fell within 30 minutes, described in the report as "more than torrential." On damage, the report states that streets were covered in mud with multiple vehicles damaged or rendered unusable; the Parc Central tunnel flooded, trapping vehicles; emergency crews rescued 15 people trapped inside a fast-food restaurant as water poured in; and the Barranco del Poyo ravine swelled significantly, while nearby Paiporta remained dry despite elevated water levels. On warnings, the report states that the regional emergency centre sent an ES-Alert to mobile phones at 22:08, urging people to avoid travel, stay away from streams and ravines and move to upper floors if water rose, but that residents said streets, basements and tunnels were already submerged by then. As background, the report notes that the downpour followed Spain's hottest summer on record and that meteorologists had warned of heavy-rainfall risk in eastern regions. The report gives no casualty figures for this event. This publication records the observations and the damage, does not assess the warning system, and makes no weather forecast.</p>
+          </div>
+          <a class="ni-link" href="https://www.euronews.com/video/2026/09/17/valencia-region-deluge-leaves-streets-covered-in-mud-and-vehicles-unusable-in-torrent" target="_blank" rel="noopener">Euronews →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">超高温岩体地热公司Mazama Energy融资1.35亿美元，此前在俄勒冈建成331摄氏度的工程地热系统</h4>
+            <div class="ni-meta"><span class="src">GlobeNewswire（公司公告） · TechCrunch · Canary Media · ThinkGeoEnergy · The Manila Times</span> · 2026-09-17</div>
+            <p class="ni-desc">据公司9月17日通过GlobeNewswire发布的公告，以及TechCrunch与Canary Media的报道，美国地热公司Mazama Energy获得1.35亿美元新资金，用于推进超高温岩体（superhot rock）地热的商业化开发。融资结构方面，据公司公告，本轮为超额认购的B轮，由约翰·阿诺德（John Arnold）创立的Centaurus Capital与Doerr Capital领投，康菲石油（ConocoPhillips）与壳牌风险投资（Shell Ventures）加入，Khosla Ventures与Gates Frontier继续追加投资。技术进展方面，据公司公告，Mazama保持着已建成工程地热系统（EGS）的最高温度记录：2025年在俄勒冈州纽贝里（Newberry）建成温度为331摄氏度（629华氏度）的工程地热系统，验证了储层构建、连通性与取热。据公告，其「雅典娜项目」（Project Athena）本月以15天钻至10350英尺，比2025年那口井快约80%，目标是再向下钻约1英里、达到400摄氏度（750华氏度）。资金用途为「刻瑞斯项目」（Project Ceres），推进超高温岩体中的水平井开发，目标为单井15兆瓦电力容量并在2027年发电；公司称其目标是在纽贝里一地获得超过10吉瓦电力资源潜力的独立认证。本报转述公司公告与报道中的技术数据，不评价该技术，不做投资建议，也不预测其商业化结果。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Superhot-Rock Geothermal Company Mazama Energy Raises $135 Million, After Building a 331°C Engineered System in Oregon</h4>
+            <div class="ni-meta"><span class="src">GlobeNewswire (company release) · TechCrunch · Canary Media · ThinkGeoEnergy · The Manila Times</span> · 2026-09-17</div>
+            <p class="ni-desc">According to the company's release issued through GlobeNewswire on September 17 and reports by TechCrunch and Canary Media, the US geothermal company Mazama Energy raised $135 million in new capital to accelerate commercial development of superhot-rock geothermal. On structure, the company release states that the round was an oversubscribed Series B led by Centaurus Capital, founded by John Arnold, and Doerr Capital, with ConocoPhillips and Shell Ventures joining and repeat investment from Khosla Ventures and Gates Frontier. On technical progress, the release states that Mazama holds the record for the hottest engineered geothermal system (EGS) ever built: in 2025 at Newberry, Oregon, it created an EGS at 331°C (629°F), proving reservoir creation, connectivity and heat recovery. According to the release, Project Athena reached a depth of 10,350 feet in 15 days this month, about 80 percent faster than the 2025 well, and is drilling roughly a mile further down toward 400°C (750°F). The funding is directed at Project Ceres, which will advance horizontal well development in superhot rock, aiming for 15 MWe per well and power generation by 2027; the company says it is targeting independent certification of more than 10 GWe of resource potential at Newberry alone. This publication relays the technical figures in the company release and the reports, does not assess the technology, offers no investment advice, and makes no prediction about commercialisation.</p>
+          </div>
+          <a class="ni-link" href="https://www.canarymedia.com/articles/geothermal/mazama-energy-raises-135m-oregon-geothermal" target="_blank" rel="noopener">Canary Media →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">阿尔及利亚山火后拟为纵火设死刑，国际特赦组织称此举是对人权的「严重打击」</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · 美联社（经 WTOP 与 ABC News 刊发） · The National · Amnesty International（机构声明）</span> · 2026-09-15</div>
+            <p class="ni-desc">据半岛电视台与美联社稿（经WTOP与ABC News刊发）报道，阿尔及利亚东北部的山火造成至少12人死亡、54人受伤，总统阿卜杜勒马吉德·特本（Abdelmadjid Tebboune）随后要求为故意纵火者设立死刑。据国际特赦组织的声明，特本于8月30日指示司法部长在9月15日前修订刑法，以「重新引入」对故意放火或教唆放火者的死刑；据半岛电视台与《国民报》（The National），这一要求的期限为9月15日提交修法方案。火情方面，据上述报道，在北非的一场异常热浪期间，民防部门在一天内记录到全国154起独立火情，其中贝贾亚省（Bejaia）一地就有36起。现行法律方面，据报道，故意放火目前最高可判30年监禁，情节加重者可判无限期监禁；阿尔及利亚刑法本已对若干罪行规定死刑，但该国自1993年以来未执行过死刑。反应方面，国际特赦组织称在停止执行死刑30年后再度威胁恢复执行，是对人权的「严重打击」。本报记录各方公开表态与现行法律状况，不评价任何国家的司法政策，也不预测修法结果。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Algeria Moves to Set the Death Penalty for Arson After Wildfires; Amnesty International Calls It a "Severe Blow" to Human Rights</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera · The Associated Press (published by WTOP and ABC News) · The National · Amnesty International (organisation statement)</span> · 2026-09-15</div>
+            <p class="ni-desc">Al Jazeera and an Associated Press dispatch published by WTOP and ABC News reported that wildfires in northeastern Algeria killed at least 12 people and injured 54, after which President Abdelmadjid Tebboune called for the death penalty for those who deliberately start forest fires. According to a statement by Amnesty International, Tebboune instructed the justice minister on August 30 to amend the penal code by September 15 to "reintroduce" the death penalty for intentionally starting or instigating fires; Al Jazeera and The National report that the deadline for submitting the amendment proposal was September 15. On the fires, those reports state that during an exceptional heatwave across North Africa, civil protection recorded 154 separate fires nationwide in a single day, 36 of them in Bejaia province alone. On the existing law, the reports state that intentionally setting forest fires currently carries up to 30 years in prison, with life imprisonment possible in aggravated cases, and that Algeria's penal code already allows the death penalty for several offences although the country has not carried one out since 1993. On reaction, Amnesty International said that threatening to resume executions after 30 years would be a "severe blow to human rights." This publication records the public statements and the state of the existing law, does not assess any country's judicial policy, and makes no prediction about the amendment.</p>
+          </div>
+          <a class="ni-link" href="https://www.amnesty.org/en/latest/news/2026/09/algeria-threats-to-resume-executions-after-30-years-severe-blow-to-human-rights/" target="_blank" rel="noopener">Amnesty International →</a>
+        </div>
+
+        <div class="ni">
+          <div class="zh-content">
+            <h4 class="ni-title">尼泊尔洪灾搜救持续：一处隧道内发现四具遗体</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera（视频新闻）</span> · 2026-09-17</div>
+            <p class="ni-desc">据半岛电视台9月17日的视频新闻，在8月26日尼泊尔洪灾之后持续进行的搜救工作中，救援人员在一处隧道内发现四具遗体。本条为单一信源报道，本报未取得第二家独立信源，亦未取得尼泊尔官方就该处搜救的通报，因此只转述报道所称的事实，不补充任何细节。此前该次灾难的伤亡数字见本期地理与环境板块的深度解读：据法新社稿，尼泊尔已寻回1403具遗体、6150人失踪，中国西藏自治区报告43人死亡、519人失踪。本报记录搜救进展，不预测搜救结果。</p>
+          </div>
+          <div class="en-content" lang="en">
+            <h4 class="ni-title">Search Continues After Nepal's Flood: Four Bodies Found in a Tunnel</h4>
+            <div class="ni-meta"><span class="src">Al Jazeera (video news)</span> · 2026-09-17</div>
+            <p class="ni-desc">According to an Al Jazeera video report on September 17, rescuers found four bodies inside a tunnel during the search that has continued since Nepal's flood of August 26. This item rests on a single source; this publication has not obtained a second independent source or an official Nepali statement on that search, and so relays only what the report states, without adding detail. The toll from the disaster appears in this issue's in-depth piece in the geography and environment section: per the AFP dispatch, Nepal has recovered 1,403 bodies with 6,150 people missing, and China's Tibet Autonomous Region has reported 43 dead and 519 missing. This publication records the progress of the search and makes no prediction about its outcome.</p>
+          </div>
+          <a class="ni-link" href="https://www.aljazeera.com/video/newsfeed/2026/9/17/four-bodies-found-in-nepal-tunnel-as-flood-search-continues" target="_blank" rel="noopener">Al Jazeera →</a>
+        </div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
+  // 点图看大图（原图通常比版面里的大得多）
+  var lbx = document.createElement('div');
+  lbx.className = 'lbx';
+  lbx.innerHTML = '<img alt=""><div class="lbx-tip">点击任意处关闭 · Click anywhere to close</div>';
+  document.body.appendChild(lbx);
+  var lbxImg = lbx.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IMG' && /\b(hl-img|ft-img)\b/.test(t.className || '') && t.naturalWidth > 0) {
+      lbxImg.src = t.currentSrc || t.src;
+      lbx.classList.add('on');
+    } else if (lbx.classList.contains('on')) {
+      lbx.classList.remove('on');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lbx.classList.remove('on');
+  });
+})();
+</script>
+
+</body>
+</html>
