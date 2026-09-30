@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-09-30</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:300px;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:340px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:40%;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+
+/* 图片：完整显示，不裁切。点一下看大图 */
+.hl .hl-img,.ft .ft-img{cursor:zoom-in}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:24px;cursor:zoom-out}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+.lbx .lbx-tip{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+@media print{.lbx{display:none!important}}
+</style>
+<!-- share:start -->
+<meta name="description" content="法国高中封锁抗议蔓延至全国：内政部称9月29日单日扣押440人，约400所中学受影响；特朗普与多家人工智能企业负责人在白宫签署自愿性「超级智能协定」，内容为内部控制、外部审计与董事会审查；飓风「波洛」残余致美国西南部洪灾：新墨西哥州麦克劳德坝面临溃决风险，五个社区先后疏散">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.025 · 2026-09-30 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="法国高中封锁抗议蔓延至全国：内政部称9月29日单日扣押440人，约400所中学受影响；特朗普与多家人工智能企业负责人在白宫签署自愿性「超级智能协定」，内容为内部控制、外部审计与董事会审查；飓风「波洛」残余致美国西南部洪灾：新墨西哥州麦克劳德坝面临溃决风险，五个社区先后疏散">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-09-30.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images.euronews.com/articles/stories/09/93/22/31/1536x864_cmsv2_9f36aa0c-db1c-5b80-aa4b-76ab998737e1-9932231.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.025 · 2026-09-30 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="法国高中封锁抗议蔓延至全国：内政部称9月29日单日扣押440人，约400所中学受影响；特朗普与多家人工智能企业负责人在白宫签署自愿性「超级智能协定」，内容为内部控制、外部审计与董事会审查；飓风「波洛」残余致美国西南部洪灾：新墨西哥州麦克劳德坝面临溃决风险，五个社区先后疏散">
+<meta name="twitter:image" content="https://images.euronews.com/articles/stories/09/93/22/31/1536x864_cmsv2_9f36aa0c-db1c-5b80-aa4b-76ab998737e1-9932231.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.025 · 2026-09-30 · 陆先生日报 | Luxiansheng Daily","description":"法国高中封锁抗议蔓延至全国：内政部称9月29日单日扣押440人，约400所中学受影响；特朗普与多家人工智能企业负责人在白宫签署自愿性「超级智能协定」，内容为内部控制、外部审计与董事会审查；飓风「波洛」残余致美国西南部洪灾：新墨西哥州麦克劳德坝面临溃决风险，五个社区先后疏散","datePublished":"2026-09-30","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-09-30.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://images.euronews.com/articles/stories/09/93/22/31/1536x864_cmsv2_9f36aa0c-db1c-5b80-aa4b-76ab998737e1-9932231.jpg"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.025</div>
+    <div>2026.09.30 WEDNESDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">9月30日，法国高中生的封锁抗议扩散至全国。法国内政部长努涅斯（Laurent Nuñez）称，9月29日全国有440人被扣押，其中约三分之二随后被置于刑事拘留，多数为未成年人；教育部门统计约400所中学受影响，48名执法人员受伤。华盛顿方面，美国总统特朗普与多位人工智能及科技企业负责人于9月29日在白宫签署一份自愿性文件《白宫超级智能协定》，内容为内部控制、独立外部审计与董事会层面的审查；特朗普称其「在道德上」具有约束力。美国西南部，飓风「波洛」（Polo）残余环流带来的强降雨使新墨西哥州多尼亚安娜县的麦克劳德坝（McLeod Dam）面临溃决风险，Garfield、Salem、Rincon、Hatch 与 Placitas 先后接到疏散令。另有两条：一架无人机于9月30日清晨5时43分进入摩尔多瓦领空并在阿内尼诺伊区上空爆炸，罗马尼亚有两架F-18战机升空；中国企业深度求索（DeepSeek）当日开源了与华为联合开发的昇腾芯片编程工具链。本期所有条目均标注信源与日期，数字按各信源原文口径记录，不作合并取整。</p>
+    <p class="en-content" lang="en">On September 30, the high-school blockade protests in France spread nationwide. Interior Minister Laurent Nuñez said 440 people were detained across the country on September 29, roughly two-thirds of whom were subsequently placed in police custody, most of them minors; education authorities counted about 400 secondary schools affected and 48 law-enforcement officers injured. In Washington, President Donald Trump and a group of artificial-intelligence and technology executives signed a voluntary document at the White House on September 29 titled the White House Accord on Superintelligence, setting out internal controls, independent external audits and board-level review; Trump said it is binding &ldquo;morally&rdquo;. In the U.S. Southwest, heavy rain from the remnants of Hurricane Polo put the McLeod Dam in Doña Ana County, New Mexico, at risk of failure, and evacuation orders were issued in turn for Garfield, Salem, Rincon, Hatch and Placitas. Two further items: a drone entered Moldovan airspace at about 5:43 a.m. on September 30 and exploded over the Anenii Noi district, with two F-18 fighter jets scrambled from Romania; and Chinese company DeepSeek open-sourced a toolchain, developed with Huawei, for programming Ascend chips. Every entry below carries its sources and dates, and figures are recorded as each source stated them, without merging or rounding.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl"><img class="hl-img" src="https://images.euronews.com/articles/stories/09/93/22/31/1536x864_cmsv2_9f36aa0c-db1c-5b80-aa4b-76ab998737e1-9932231.jpg" alt="法国高中生封锁抗议" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag pol">全球政治</span><div class="zh-content"><h2 class="hl-title">法国高中封锁抗议蔓延至全国：内政部称9月29日单日扣押440人，约400所中学受影响</h2><div class="hl-meta"><span class="src">半岛电视台</span> · 欧洲新闻台（Euronews） · 2026-09-29 至 2026-09-30</div><p class="hl-desc">据半岛电视台9月30日报道，法国内政部长努涅斯（Laurent Nuñez）表示，9月29日全国共有440人在与高中封锁相关的行动中被扣押，其中约三分之二随后被置于刑事拘留（garde à vue）。据半岛电视台援引教育部门数据，法国3700所高中中约有400所受到影响；当日有48名执法人员受伤，并记录到7起向警方投掷盐酸的事件。据欧洲新闻台9月29日报道，9月28日已有164人被捕、180所学校受影响。据欧洲新闻台，抗议最初出现在巴黎大区（Île-de-France）的中学，随后扩散至里尔、南特、马赛、波尔多、里昂、雷恩及塞纳-圣但尼等地。学生提出的诉求包括班级人数过多（半岛电视台记录为每班32至35人）、教师缺额、校舍条件不佳与课时过长；半岛电视台记录到的一块标语写着「早八点到晚六点。上课时间比睡觉还长」。据欧洲新闻台，法国总理勒科尔尼（Sébastien Lecornu）称「烟花、纵火、高中周边的暴力：没有任何理由让学生置身危险」；努涅斯称「我们不能容忍越轨行为」。据半岛电视台，此轮抗议与公共部门针对政府预算案的罢工同期发生，教师群体参与罢工的比例略高于11%。</p></div><div class="en-content" lang="en"><h2 class="hl-title">French High-School Blockades Spread Nationwide: Interior Ministry Says 440 Detained on September 29, About 400 Schools Affected</h2><div class="hl-meta"><span class="src">Al Jazeera</span> · Euronews · September 29&ndash;30, 2026</div><p class="hl-desc">Al Jazeera reported on September 30 that French Interior Minister Laurent Nuñez said 440 people were detained nationwide on September 29 in operations linked to high-school blockades, with roughly two-thirds subsequently placed in police custody (garde à vue). Citing education ministry figures, Al Jazeera said about 400 of France&rsquo;s 3,700 lycées were affected; 48 law-enforcement officers were injured that day, and seven incidents of hydrochloric acid being thrown at police were recorded. Euronews reported on September 29 that 164 people had already been arrested on September 28, with 180 schools affected. According to Euronews, the protests began at secondary schools in the Île-de-France region before spreading to Lille, Nantes, Marseille, Bordeaux, Lyon, Rennes and Seine-Saint-Denis. Students&rsquo; stated grievances include overcrowded classes (recorded by Al Jazeera as 32 to 35 pupils per class), teacher shortages, poor building conditions and long timetables; one placard recorded by Al Jazeera read: &ldquo;8am-6pm. More hours of lessons than sleep.&rdquo; Euronews quoted Prime Minister Sébastien Lecornu as saying: &ldquo;Fireworks, fires, violence near high schools: nothing justifies endangering students&rdquo;; Nuñez said, &ldquo;We cannot tolerate excesses.&rdquo; Al Jazeera reported that the protests coincided with a public-sector strike over the government&rsquo;s budget, with just over 11% of teaching staff taking part.</p></div></div></article><article class="hl"><img class="hl-img" src="https://images.euronews.com/articles/stories/09/93/30/48/1536x864_cmsv2_a7233cb2-7794-51ba-a3bb-a8e166e031d1-9933048.jpg" alt="白宫人工智能协定签署" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag tec">科技前沿</span><div class="zh-content"><h2 class="hl-title">特朗普与多家人工智能企业负责人在白宫签署自愿性「超级智能协定」，内容为内部控制、外部审计与董事会审查</h2><div class="hl-meta"><span class="src">美国全国公共广播电台（NPR，经 NPR Illinois 转载）</span> · 欧洲新闻台 · 美国广播公司（ABC News） · 2026-09-29 至 2026-09-30</div><p class="hl-desc">据 NPR（经 NPR Illinois 转载）与欧洲新闻台9月30日报道，美国总统特朗普9月29日在白宫与多位人工智能及科技企业负责人会面，并共同签署一份自愿性协定。据 ABC News，该文件全称为《白宫超级智能协定：关于前沿超级智能责任的联合承诺》（The White House Accord on Superintelligence: A Joint Commitment on Frontier SI Responsibilities），特朗普在活动中称其为一部「宪法」。据 NPR 与欧洲新闻台，协定包含三项内容：企业实施「稳健的内部控制」；与「独立外部审计方」合作评估这些控制是否有效；在各自董事会内设立委员会，负责审阅内部与外部审计报告。据 NPR 与欧洲新闻台记录的名单，签署与出席者包括 Anthropic 首席执行官阿莫代伊（Dario Amodei）、谷歌首席执行官皮查伊（Sundar Pichai）、Meta 首席执行官扎克伯格（Mark Zuckerberg）、OpenAI 总裁布罗克曼（Greg Brockman）、英伟达首席执行官黄仁勋（Jensen Huang）与马斯克（Elon Musk）；ABC News 另记录了 Palantir 的卡普（Alex Karp）与桑卡尔（Shyam Sankar）、亚马逊创始人贝索斯（Jeff Bezos）以及美国众议院议长约翰逊（Mike Johnson）出席。据 NPR，特朗普称「我认为我看到了极大程度的自我监管，他们明白自己必须自我监管」；在被问及协定是否具有约束力时，他称其「在道德上」具有约束力。据 ABC News，约翰逊称该文件是「一份原则声明……一份标准声明，是业界的自愿承诺」。据 NPR，南加州大学研究人员 Robin Jia 对依赖自我监管表示怀疑，称「随着模型变得更强，这类事情的后果只会更严重」。</p></div><div class="en-content" lang="en"><h2 class="hl-title">Trump and AI Company Leaders Sign a Voluntary &ldquo;Accord on Superintelligence&rdquo; at the White House: Internal Controls, External Audits and Board Review</h2><div class="hl-meta"><span class="src">NPR (via NPR Illinois)</span> · Euronews · ABC News · September 29&ndash;30, 2026</div><p class="hl-desc">NPR (via NPR Illinois) and Euronews reported on September 30 that U.S. President Donald Trump met artificial-intelligence and technology company leaders at the White House on September 29 and jointly signed a voluntary accord. ABC News reported the document&rsquo;s full title as &ldquo;The White House Accord on Superintelligence: A Joint Commitment on Frontier SI Responsibilities&rdquo;, and said Trump described it at the event as a &ldquo;constitution&rdquo;. According to NPR and Euronews, the accord contains three elements: companies implementing &ldquo;robust internal controls&rdquo;; partnering with an &ldquo;independent external auditor&rdquo; to assess whether those controls are working; and establishing a committee within each company&rsquo;s board of directors to review internal and external audit reports. The signatories and attendees recorded by NPR and Euronews include Anthropic CEO Dario Amodei, Google CEO Sundar Pichai, Meta CEO Mark Zuckerberg, OpenAI President Greg Brockman, Nvidia CEO Jensen Huang and Elon Musk; ABC News additionally recorded the attendance of Palantir&rsquo;s Alex Karp and Shyam Sankar, Amazon founder Jeff Bezos, and House Speaker Mike Johnson. NPR quoted Trump as saying: &ldquo;I think I&rsquo;m seeing tremendous self-policing. And they understand that they have to self-police.&rdquo; Asked whether the agreement is binding, he said it is &ldquo;morally&rdquo; binding. ABC News quoted Johnson as saying the document is &ldquo;a statement of principles&hellip;a statement of standards, commitments that are voluntary on behalf of the industry&rdquo;. NPR quoted Robin Jia, a researcher at the University of Southern California, as sceptical of relying on self-policing, saying that &ldquo;as the models get better, the consequences of such things are only going to get greater&rdquo;.</p></div></div></article><article class="hl"><img class="hl-img" src="https://npr.brightspotcdn.com/dims4/default/582f654/2147483647/strip/true/crop/1920x1008+0+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F1a%2Fc7%2Ff70f58774582928ce861ab173155%2Ffloodphoto0.jpg" alt="新墨西哥州洪水" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag env">地理与环境</span><div class="zh-content"><h2 class="hl-title">飓风「波洛」残余致美国西南部洪灾：新墨西哥州麦克劳德坝面临溃决风险，五个社区先后疏散</h2><div class="hl-meta"><span class="src">美国全国公共广播电台（NPR，经 WBGO 转载）</span> · KRWG 公共广播 · KVIA · 2026-09-29 至 2026-09-30</div><p class="hl-desc">据 NPR（经 WBGO 转载）9月30日报道，飓风「波洛」（Polo）的残余环流给美国西南部带来强降雨，道路被淹，新墨西哥州数个小镇因一座水坝可能溃决而疏散居民。据 KRWG 公共广播与 KVIA 报道，9月29日夜间，多尼亚安娜县（Doña Ana County）先后对 Garfield、Salem、Rincon、Hatch 与 Placitas 发出疏散令；据 KVIA，美国国家气象局因哈奇（Hatch）西北方的麦克劳德坝（McLeod Dam）可能溃决发布了突发洪水紧急警报（flash flood emergency），坝体运营方报告溃决「迫在眉睫」。据 KVIA，截至当晚11时，Salem、Hatch、Garfield 与 Placitas 的疏散令已解除，Rincon 仍处于疏散状态。据 NPR，「波洛」以每小时110英里（177公里）的最大持续风速登陆下加利福尼亚南州，越过加利福尼亚湾后向东北方向深入内陆并减弱为热带风暴。据 NPR，亚利桑那州凤凰城以西有人从翻覆车辆中获救，凤凰城以北一辆卡车被冲走；土地管理局报告该州东南部保护区出现严重积水与道路损毁。据 NPR，阿尔伯克基气象局气象学家格罗伊利希（Carter Greulich）表示「不要驶过被淹没的道路，远离干谷，尤其是在城区」。据 NPR，报道中没有人员死亡的记录。</p></div><div class="en-content" lang="en"><h2 class="hl-title">Remnants of Hurricane Polo Flood the U.S. Southwest: New Mexico&rsquo;s McLeod Dam at Risk of Failure, Five Communities Evacuated in Turn</h2><div class="hl-meta"><span class="src">NPR (via WBGO)</span> · KRWG Public Media · KVIA · September 29&ndash;30, 2026</div><p class="hl-desc">NPR, carried by WBGO on September 30, reported that the remnants of Hurricane Polo brought heavy rain to the U.S. Southwest, flooding roadways and forcing residents of several small New Mexico towns to evacuate over concerns that a dam could fail. KRWG Public Media and KVIA reported that on the night of September 29, Doña Ana County issued evacuation orders in turn for Garfield, Salem, Rincon, Hatch and Placitas. According to KVIA, the National Weather Service issued a flash flood emergency because the McLeod Dam northwest of Hatch was in danger of failing, with dam operators reporting failure was imminent. KVIA reported that by 11 p.m. the orders for Salem, Hatch, Garfield and Placitas had been lifted, while Rincon remained under evacuation. NPR reported that Polo struck Baja California Sur with maximum sustained winds of 110 mph (177 kph), crossed the Gulf of California and weakened to a tropical storm as it moved inland to the northeast. According to NPR, a person was rescued from an overturned vehicle west of Phoenix, Arizona, and a truck was swept away north of Phoenix; the Bureau of Land Management reported significant flooding and road damage in conservation areas in the state&rsquo;s southeast. NPR quoted Carter Greulich, a meteorologist with the weather service in Albuquerque: &ldquo;Don&rsquo;t drive through flooded roadways. Remain out of the arroyos, especially in our urban areas.&rdquo; No deaths were recorded in the report.</p></div></div></article><article class="hl"><img class="hl-img" src="https://mezha.net/eng/kd_image_generate/a9dbf4e3_russian_drone_crashes/3727197.jpg?ver=2.0.15" alt="摩尔多瓦无人机坠落现场" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag pol">全球政治</span><div class="zh-content"><h2 class="hl-title">俄军对乌大规模空袭期间一架无人机坠入摩尔多瓦境内爆炸，罗马尼亚出动两架F-18战机</h2><div class="hl-meta"><span class="src">基辅独立报（The Kyiv Independent）</span> · LIGA.net · Mezha · 2026-09-30</div><p class="hl-desc">据基辅独立报与 LIGA.net 9月30日报道，一架无人机当地时间9月30日清晨约5时43分进入摩尔多瓦领空，随后在阿内尼诺伊区（Anenii Noi）一座村庄附近坠落并爆炸；村名在基辅独立报记为 Hirbovat，在 LIGA.net 记为 Girbovets。据 LIGA.net 引述摩尔多瓦方面的说明，初步判断撞击与爆炸发生在距地面约40米高度、靠近一座通信天线处，在约265米半径范围内发现了多块无人机残片，通信服务未受影响。两家媒体均报道称，据初步信息无人员受伤。据基辅独立报，坠落地点距乌克兰敖德萨州边界约20公里。据基辅独立报引述乌克兰空军的数据，俄军当夜以188架无人机（其中86架为喷气动力型）以及「锆石」「缟玛瑙」和「伊斯坎德尔」导弹袭击乌克兰，乌方「击落或压制了5枚导弹和155架无人机」。据基辅独立报与 LIGA.net，罗马尼亚国防部确认，雷达探测到空中目标后有两架F-18战机升空；LIGA.net 记为西班牙空天军的F-18，战机在伊兹梅尔以东的乌克兰边境附近跟踪目标，罗马尼亚领空内未探测到飞行物。</p></div><div class="en-content" lang="en"><h2 class="hl-title">A Drone Crashes and Explodes Inside Moldova During a Large Russian Strike on Ukraine; Romania Scrambles Two F-18s</h2><div class="hl-meta"><span class="src">The Kyiv Independent</span> · LIGA.net · Mezha · September 30, 2026</div><p class="hl-desc">The Kyiv Independent and LIGA.net reported on September 30 that a drone entered Moldovan airspace at about 5:43 a.m. local time that morning and then fell and exploded near a village in the Anenii Noi district; the village is rendered as Hirbovat by the Kyiv Independent and as Girbovets by LIGA.net. Citing the Moldovan account, LIGA.net reported that preliminary findings indicate the point of impact and explosion was at a height of about 40 metres above ground level, near a communications antenna, with drone fragments found within a radius of about 265 metres and communication services unaffected. Both outlets reported that, according to preliminary information, no injuries occurred. The Kyiv Independent placed the site about 20 kilometres from the border with Ukraine&rsquo;s Odesa region. Citing Ukraine&rsquo;s air force, the Kyiv Independent reported that Russia attacked Ukraine overnight with 188 drones (86 of them jet-powered) along with Zircon, Onyx and Iskander missiles, and that Ukrainian forces &ldquo;shot down or suppressed 5 missiles and 155 drones&rdquo;. Both outlets reported that Romania&rsquo;s Defence Ministry confirmed two F-18 fighter jets were scrambled after radars detected an aerial target; LIGA.net identified them as F-18s of the Spanish Air and Space Force. The jets tracked the target near the Ukrainian border east of Izmail, and no object was detected inside Romanian airspace.</p></div></div></article><article class="hl"><img class="hl-img" src="https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/canvas/2026/09/30/3feceaaa-87be-45fd-8c00-2022e937ec81_716b10b5.jpg?itok=1fnRHRBR&amp;v=1790749867" alt="深度求索与华为昇腾芯片" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag tec">科技前沿</span><div class="zh-content"><h2 class="hl-title">深度求索开源与华为联合开发的昇腾芯片编程工具，核心组件 TileLang 被定位为英伟达 CUDA 的替代方案</h2><div class="hl-meta"><span class="src">南华早报（SCMP）</span> · 彭博社（经《自由今日大马》转载） · Techzine · DQIndia · 2026-09-30</div><p class="hl-desc">据南华早报9月30日报道，中国人工智能企业深度求索（DeepSeek）公开发布了与华为技术有限公司合作开发的软件工具，用于为华为昇腾（Ascend）系列人工智能芯片编程，并以开源方式免费提供。据南华早报与 Techzine，本次发布的组件共六个：TileLang、DeepGEMM、DeepEP、TileKernels、FlashMLA 与 DeepSelect。据 Techzine 与 DQIndia，TileLang 是一种面向人工智能芯片的开源编程语言，允许开发者在较高抽象层级上描述需要执行的计算，再由软件转译到底层硬件；DeepGEMM 负责矩阵运算，DeepEP 处理大模型负载下的分布式通信，TileKernels 覆盖向量计算与内存访问，FlashMLA 支持深度求索的注意力架构，DeepSelect 负责数据筛选。据彭博社（经《自由今日大马》9月30日转载），TileLang 被定位为英伟达 CUDA 的中国替代方案；报道并称昇腾 950 获得了针对性的性能优化，深度求索计划在内蒙古一处数据中心部署至少16万颗华为最强算力加速器。据 Techzine，双方还合作开发了一个由128颗昇腾 950 处理器组成的超节点，对计算分配与芯片间通信均作了优化。</p></div><div class="en-content" lang="en"><h2 class="hl-title">DeepSeek Open-Sources Ascend Programming Tools Built With Huawei; Core Component TileLang Is Positioned as an Alternative to Nvidia&rsquo;s CUDA</h2><div class="hl-meta"><span class="src">South China Morning Post</span> · Bloomberg (via Free Malaysia Today) · Techzine · DQIndia · September 30, 2026</div><p class="hl-desc">The South China Morning Post reported on September 30 that Chinese artificial-intelligence company DeepSeek publicly released software tools, developed with Huawei Technologies, for programming Huawei&rsquo;s Ascend AI chips, making them open-source and free to download. According to the SCMP and Techzine, six components were released: TileLang, DeepGEMM, DeepEP, TileKernels, FlashMLA and DeepSelect. Techzine and DQIndia describe TileLang as an open-source programming language for AI chips that lets developers specify computations at a higher level of abstraction while the software translates them to the underlying hardware; DeepGEMM handles matrix operations, DeepEP addresses distributed communication for large-model workloads, TileKernels covers vector computation and memory access, FlashMLA supports DeepSeek&rsquo;s attention architecture, and DeepSelect handles data filtering. Bloomberg, carried by Free Malaysia Today on September 30, reported that TileLang is positioned as China&rsquo;s answer to Nvidia&rsquo;s CUDA, that the Ascend 950 received specific performance optimisation, and that DeepSeek plans to deploy at least 160,000 of Huawei&rsquo;s most powerful accelerators at a data-centre facility in Inner Mongolia. Techzine reported that the two companies also worked on a supernode of 128 Ascend 950 processors, with both the distribution of computation and inter-chip communication optimised.</p></div></div></article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft"><img class="ft-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/afp_6abcd4466c4d-1790760006.jpg?resize=1920%2C1440" alt="法国学生抗议现场" loading="lazy" onerror="this.style.display='none'"><div class="ft-body"><span class="ft-label pol">深度解读 · IN-DEPTH</span><div class="zh-content"><h3 class="ft-title">从巴黎大区的十来处路障到全国440人被扣押：法国中学封锁潮的三日时间线与背景</h3><div class="ft-meta"><span class="src">半岛电视台</span> · 欧洲新闻台 · 法国内政部与教育部数据（经上述媒体转述） · 2026-09-28 至 2026-09-30</div><p class="ft-desc">【时间线】据欧洲新闻台9月29日报道，此轮抗议在9月最后一周从巴黎地区的高中开始。9月28日，据欧洲新闻台援引官方数据，全国有164人被捕，180所学校受到影响。9月29日，据同一报道，巴黎大区当天约有十处封锁点；同日，抗议扩散至里尔、南特、马赛、波尔多、里昂、雷恩以及塞纳-圣但尼等地。据半岛电视台9月30日报道，内政部长努涅斯（Laurent Nuñez）公布的9月29日全国扣押人数为440人，其中约三分之二随后被置于刑事拘留；教育部门统计受影响学校约400所，占法国3700所高中的一成略多。<br><br>【冲突与伤亡】据欧洲新闻台，部分封锁现场出现学生点燃垃圾桶、破坏公交候车亭、投掷抛射物并封堵校门的情况，警方使用了催泪瓦斯。据半岛电视台，9月29日有48名执法人员受伤，并记录到7起向警方投掷盐酸的事件；同日的报道另记录至少10名教师与数名学生受伤。<br><br>【学生诉求】据半岛电视台与欧洲新闻台，学生列出的问题包括班级人数过多（半岛电视台记录为每班32至35人）、教师缺额与代课不到位、校舍条件不佳（含教室过热）以及课时过长。半岛电视台记录到的一块标语写着「早八点到晚六点。上课时间比睡觉还长」。欧洲新闻台引述一名17岁抗议者的说法：「我们也是在支持我们的老师，他们的工作量相对于收入而言大得离谱。」<br><br>【背景】据半岛电视台，此轮中学抗议与公共部门针对政府预算案的罢工同期发生，该预算案包含540亿欧元削减与薪资冻结，教师群体参与罢工的比例略高于11%。据半岛电视台，教育工会 FSU 与中学生工会 Union Syndicale Lycéenne 对该运动表示支持。据欧洲新闻台，总理勒科尔尼（Sébastien Lecornu）警告示威升级将是「不负责任的」，并称「烟花、纵火、高中周边的暴力：没有任何理由让学生置身危险」；内政部长努涅斯批评部分抗议者蒙面到场并携带抛射物，称「我们不能容忍越轨行为」。据半岛电视台，反对派人物梅朗雄（Jean-Luc Mélenchon）指责政府手段粗暴；法国下一次总统选举定于2027年春季举行。</p></div><div class="en-content" lang="en"><h3 class="ft-title">From About Ten Blockades in the Paris Region to 440 Detained Nationwide: A Three-Day Timeline and the Background to France&rsquo;s School Blockades</h3><div class="ft-meta"><span class="src">Al Jazeera</span> · Euronews · French interior and education ministry figures (as reported by those outlets) · September 28&ndash;30, 2026</div><p class="ft-desc">[Timeline] Euronews reported on September 29 that the protests began at Paris-area high schools in the last week of September. On September 28, Euronews, citing official figures, reported 164 arrests nationwide and 180 schools affected. On September 29, the same report counted about ten blockade points in the Île-de-France region that day, with the protests spreading to Lille, Nantes, Marseille, Bordeaux, Lyon, Rennes and Seine-Saint-Denis. Al Jazeera reported on September 30 that Interior Minister Laurent Nuñez gave a nationwide figure of 440 detained on September 29, roughly two-thirds of whom were subsequently placed in police custody; education authorities counted about 400 schools affected, slightly more than one tenth of France&rsquo;s 3,700 lycées.<br><br>[Clashes and injuries] According to Euronews, at some blockades students set fire to rubbish bins, vandalised bus shelters, threw projectiles and blocked school entrances, and police used tear gas. Al Jazeera reported 48 law-enforcement officers injured on September 29 and seven recorded incidents of hydrochloric acid thrown at police; reporting from the same day also recorded at least 10 teachers and several students injured.<br><br>[Students&rsquo; grievances] Al Jazeera and Euronews list the problems students raised: overcrowded classes (recorded by Al Jazeera as 32 to 35 pupils per class), teacher shortages and unfilled absences, poor building conditions including overheated classrooms, and long timetables. One placard recorded by Al Jazeera read: &ldquo;8am-6pm. More hours of lessons than sleep.&rdquo; Euronews quoted a 17-year-old protester: &ldquo;We are also there to support our teachers who have a crazy amount of work compared to what they earn.&rdquo;<br><br>[Background] Al Jazeera reported that the school protests coincided with a public-sector strike over the government&rsquo;s budget, which contains &euro;54 billion in cuts and salary freezes, with just over 11% of teaching staff taking part. Al Jazeera reported that the FSU education union and the Union Syndicale Lycéenne supported the movement. Euronews reported that Prime Minister Sébastien Lecornu warned that escalating demonstrations would be &ldquo;irresponsible&rdquo; and said: &ldquo;Fireworks, fires, violence near high schools: nothing justifies endangering students.&rdquo; Interior Minister Nuñez criticised protesters who arrived with covered faces and projectiles, saying, &ldquo;We cannot tolerate excesses.&rdquo; Al Jazeera reported that opposition figure Jean-Luc Mélenchon accused the government of brutality. France&rsquo;s next presidential election is set for spring 2027.</p></div></div></article>
+      <div class="ngrid"><div class="ni"><div class="zh-content"><h4 class="ni-title">西班牙执政联盟就住房措施达成协议，拟将禁止驱逐住户的规定延续至2030年</h4><div class="ni-meta"><span class="src">NBC News</span> · The New Daily · Global Banking &amp; Finance Review · 德国之声（经 UA.News 转述） · 2026-09-29 至 2026-09-30</div><p class="ni-desc">据 NBC News 9月29日报道，西班牙执政联盟就一揽子住房措施达成协议，其中包括在2030年之前禁止驱逐住户，并将现有租约延续至2028年、限制投机性住房基金进入市场。据 NBC News，卫生大臣加西亚（Mónica García）表示政府意在「干预投机性住房市场，开始在普通民众与秃鹫基金之间取得平衡」；相关措施将分为两项法令，于周五提交议会表决。此轮政策讨论的起点是一起个案：据 NBC News，87岁的残障老人马里卡门·阿巴斯卡尔（Maricarmen Abascal）9月25日被人用担架抬出她居住了70年的马德里住所，引发抗议；买下该单元的投资基金曾将月租从500欧元上调至2650欧元，后降至1650欧元。据 NBC News，房产管理公司 Urbagestión 提出的初步协议为，她在八年内按养老金的约30%（约每月500欧元）支付租金，阿巴斯卡尔已接受该安排。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Spain&rsquo;s Governing Coalition Agrees Housing Measures, Proposing to Extend an Eviction Ban to 2030</h4><div class="ni-meta"><span class="src">NBC News</span> · The New Daily · Global Banking &amp; Finance Review · Deutsche Welle (via UA.News) · September 29&ndash;30, 2026</div><p class="ni-desc">NBC News reported on September 29 that Spain&rsquo;s governing coalition agreed a package of housing measures including a ban on evictions until 2030, the rollover of existing contracts until 2028, and restrictions on speculative housing funds. Health Minister Mónica García said the government intends to &ldquo;intervene in the speculative housing market and start striking a balance between ordinary citizens and vulture funds&rdquo;; the measures are to be divided into two decrees and voted on in parliament on Friday. The policy debate followed an individual case: according to NBC News, Maricarmen Abascal, an 87-year-old disabled woman, was removed on a stretcher on September 25 from the Madrid flat where she had lived for 70 years, triggering protests. The investment fund that bought the unit had raised the monthly rent from &euro;500 to &euro;2,650, later reducing it to &euro;1,650. NBC News reported that the management company Urbagestión offered a preliminary agreement under which she would pay about 30% of her pension (roughly &euro;500 a month) over eight years, and that Abascal accepted it.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">以军9月30日在加沙城的袭击，各信源记录的死亡人数为五至七人</h4><div class="ni-meta"><span class="src">半岛电视台</span> · 阿拉伯电视台英文版（Al Arabiya English） · 2026-09-30</div><p class="ni-desc">据半岛电视台9月30日报道，加沙地带当日有至少7名巴勒斯坦人在以色列的袭击中死亡、10余人受伤；其中6人死于以色列无人机对加沙城西南部塔勒哈瓦（Tal al-Hawa）一辆载客面包车的袭击，另有1名女性在加沙城希法医院附近一处住宅公寓遇袭时死亡。阿拉伯电视台英文版同日援引医护人员的说法，记录当日死亡人数为5人，并称对一辆车辆的空袭造成至少4人死亡、14人受伤，此前另一起针对公寓的空袭造成1名女性死亡。据半岛电视台，自2025年10月停火生效以来，加沙已有至少1431人死亡、5026人受伤；自2023年10月以来的战争死亡总数为至少74032人、受伤175142人。两家媒体对当日具体数字的记录不一致，本报按各自口径分别列出，不作合并。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Israeli Strikes in Gaza City on September 30: Sources Record Between Five and Seven Deaths</h4><div class="ni-meta"><span class="src">Al Jazeera</span> · Al Arabiya English · September 30, 2026</div><p class="ni-desc">Al Jazeera reported on September 30 that at least seven Palestinians were killed and more than ten wounded in Israeli attacks on the Gaza Strip that day: six were killed in an Israeli drone attack on a passenger van in Tal al-Hawa in south-western Gaza City, and one woman was killed when a residential apartment near al-Shifa Hospital in Gaza City was struck. Al Arabiya English, citing medics the same day, recorded five deaths, saying an air strike on a vehicle killed at least four people and wounded 14, following an earlier strike on an apartment that killed a woman. Al Jazeera reported that at least 1,431 people have been killed and 5,026 wounded in Gaza since the ceasefire took effect in October 2025, and that the war toll since October 2023 stands at at least 74,032 killed and 175,142 wounded. The two outlets&rsquo; figures for the day differ; both are listed here as reported, without being merged.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">委内瑞拉反对派支持者在加拉加斯等多地集会，要求马查多安全返回并举行总统选举</h4><div class="ni-meta"><span class="src">半岛电视台</span> · 美联社（经 WLRN 转载） · 南华早报 · 2026-09-27 至 2026-09-28</div><p class="ni-desc">据半岛电视台9月28日报道，委内瑞拉反对派领导人马查多（María Corina Machado）的数百名支持者上街，要求她安全返回并举行可能带来民主过渡的总统选举。据该报道，9月27日在加拉加斯，数百名身着天蓝色上衣（马查多所属「来吧委内瑞拉」党的代表色）的活动人士骑摩托车驶过首都主要街道，鸣笛并挥舞委内瑞拉国旗；瓦伦西亚、马拉开波和梅里达等州首府也举行了类似示威。美联社（经 WLRN 转载）与南华早报同期作了报道。据半岛电视台，马查多已流亡九个月，多次返回计划受阻；其所属政党称，她在此前的周一夜间三次尝试返回均未成功。反对派活动人士指责委内瑞拉政府阻挠其返回，当局否认这一说法。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Venezuelan Opposition Supporters Rally in Caracas and Other Cities, Demanding Machado&rsquo;s Safe Return and Presidential Elections</h4><div class="ni-meta"><span class="src">Al Jazeera</span> · The Associated Press (via WLRN) · South China Morning Post · September 27&ndash;28, 2026</div><p class="ni-desc">Al Jazeera reported on September 28 that hundreds of supporters of Venezuelan opposition leader María Corina Machado took to the streets to demand her safe return and presidential elections that could lead to a democratic transition. According to the report, in Caracas on September 27 hundreds of activists in sky-blue shirts &mdash; the colour of Machado&rsquo;s Vente Venezuela party &mdash; rode motorcycles along the capital&rsquo;s main avenues, honking and waving Venezuelan flags, with similar demonstrations in state capitals including Valencia, Maracaibo and Mérida. The Associated Press (via WLRN) and the South China Morning Post reported the same events. Al Jazeera reported that Machado has been in exile for nine months and that plans for her return have been thwarted several times; her party said she made three unsuccessful attempts to return on the Monday night. Opposition activists accuse the Venezuelan government of blocking her return, a claim the authorities deny.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">美国2026财年于9月30日结束，国会此前已通过延续至12月11日的临时拨款决议</h4><div class="ni-meta"><span class="src">美国社区学院受托人协会（ACCT）</span> · 联邦预算问责委员会（CRFB） · 2026-09-01 至 2026-09-30</div><p class="ni-desc">据美国社区学院受托人协会（ACCT）的记录，美国国会在9月30日这一2026财年结束日之前通过了一项临时拨款决议（continuing resolution），按2026财年现有水平将联邦拨款延续至2026年12月11日。据 ACCT，该法案在众议院以370票赞成、48票反对通过，在参议院以90票赞成、6票反对通过。联邦预算问责委员会（CRFB）此前发布的财政日程亦将9月30日列为2026财年拨款到期日。按此，2027财年的完整拨款安排需在12月11日之前另行表决。本条仅记录立法程序与日期。</p></div><div class="en-content" lang="en"><h4 class="ni-title">The U.S. 2026 Fiscal Year Ended on September 30; Congress Had Already Passed a Continuing Resolution Through December 11</h4><div class="ni-meta"><span class="src">Association of Community College Trustees (ACCT)</span> · Committee for a Responsible Federal Budget (CRFB) · September 1&ndash;30, 2026</div><p class="ni-desc">According to the Association of Community College Trustees (ACCT), the U.S. Congress passed a continuing resolution ahead of September 30, the end of fiscal year 2026, extending federal funding at existing FY2026 levels through December 11, 2026. ACCT recorded the bill passing the House by 370 votes to 48 and the Senate by 90 to 6. A fiscal calendar published earlier by the Committee for a Responsible Federal Budget also listed September 30 as the FY2026 appropriations deadline. Full FY2027 appropriations therefore require a separate vote before December 11. This entry records the legislative process and dates only.</p></div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft"><img class="ft-img" src="https://i.abcnewsfe.com/a/40eeecf0-94f5-493e-aa50-2c50aa77083f/donald-trump-14-gty-gmh-260929_1790711844533_hpMain_16x9.jpg" alt="白宫人工智能会议" loading="lazy" onerror="this.style.display='none'"><div class="ft-body"><span class="ft-label tec">深度解读 · IN-DEPTH</span><div class="zh-content"><h3 class="ft-title">《白宫超级智能协定》写了什么、谁签了字、质疑集中在哪里：多家报道的对照</h3><div class="ft-meta"><span class="src">美国全国公共广播电台（NPR，经 NPR Illinois 转载）</span> · 欧洲新闻台 · 美国广播公司（ABC News） · 2026-09-29 至 2026-09-30</div><p class="ft-desc">【文件】据 ABC News 9月29日报道，这份在白宫签署的文件全称为《白宫超级智能协定：关于前沿超级智能责任的联合承诺》（The White House Accord on Superintelligence: A Joint Commitment on Frontier SI Responsibilities）；报道称特朗普在活动中把它称作一部「宪法」。据 NPR 与欧洲新闻台，这是一份自愿性协定，不具备法律强制力。<br><br>【三项内容】据 NPR 与欧洲新闻台的一致记录，协定要求签署企业：其一，实施「稳健的内部控制」；其二，与「独立外部审计方」合作，评估这些控制是否切实发挥作用；其三，在各自董事会内设立委员会，负责审阅内部与外部审计出具的报告。欧洲新闻台另记录了一项表述，即协定内容未来存在被写入法律法规的可能；欧洲新闻台并指出，协定本身注明其中部分举措是相关企业已在采取的做法。<br><br>【出席与签署】据 NPR 与欧洲新闻台，签署人包括特朗普本人，以及 Anthropic 首席执行官阿莫代伊（Dario Amodei）、谷歌首席执行官皮查伊（Sundar Pichai）、Meta 首席执行官扎克伯格（Mark Zuckerberg）、OpenAI 总裁布罗克曼（Greg Brockman）、英伟达首席执行官黄仁勋（Jensen Huang）与马斯克（Elon Musk）。据 ABC News，出席者还包括 Palantir 的卡普（Alex Karp）与桑卡尔（Shyam Sankar）、亚马逊创始人贝索斯（Jeff Bezos），以及美国众议院议长约翰逊（Mike Johnson）。<br><br>【表态】据 NPR，特朗普称「我认为我看到了极大程度的自我监管，他们明白自己必须自我监管」；被问及协定是否具有约束力时，他答称「在道德上」具有约束力。NPR 另记录了他的一句表述：「我绝不会扼杀一项将比工业革命更重大的技术的发展。」据 NPR，特朗普还提到将有大约10人组成一个委员会来「监管整件事」。据 ABC News，约翰逊称该文件是「一份原则声明……一份标准声明，是业界的自愿承诺」。据欧洲新闻台，阿莫代伊在会上承认「这项技术存在非常现实的风险」。<br><br>【质疑】据 NPR，南加州大学研究人员 Robin Jia 对依靠自我监管的做法表示怀疑，并以近期的入侵事件为例称「随着模型变得更强，这类事情的后果只会更严重」。据欧洲新闻台，该协定不包含具有法律约束力的监管条款，而部分行业举报人此前主张的正是这类条款。CNN 与 The Hill 同期也报道了这次会面；本报在核验时无法直接打开这两家媒体的原文页面，故仅记录其报道存在，不引用其具体表述。</p></div><div class="en-content" lang="en"><h3 class="ft-title">What the White House Accord on Superintelligence Says, Who Signed It, and Where the Scepticism Lies: Several Reports Compared</h3><div class="ft-meta"><span class="src">NPR (via NPR Illinois)</span> · Euronews · ABC News · September 29&ndash;30, 2026</div><p class="ft-desc">[The document] ABC News reported on September 29 that the document signed at the White House is titled &ldquo;The White House Accord on Superintelligence: A Joint Commitment on Frontier SI Responsibilities&rdquo;, and said Trump described it at the event as a &ldquo;constitution&rdquo;. According to NPR and Euronews, it is a voluntary accord without legal force.<br><br>[Three elements] NPR and Euronews record the same three requirements for signatory companies: first, to implement &ldquo;robust internal controls&rdquo;; second, to partner with an &ldquo;independent external auditor&rdquo; to assess whether those controls are working; and third, to establish a committee within each company&rsquo;s board of directors to review the reports produced by internal and external auditors. Euronews additionally recorded language leaving open the possibility of future codification into laws and regulations, and noted the accord itself states that some of the measures it outlines are steps these companies are already taking.<br><br>[Attendance and signatories] According to NPR and Euronews, the signatories include Trump himself, Anthropic CEO Dario Amodei, Google CEO Sundar Pichai, Meta CEO Mark Zuckerberg, OpenAI President Greg Brockman, Nvidia CEO Jensen Huang and Elon Musk. ABC News reported that attendees also included Palantir&rsquo;s Alex Karp and Shyam Sankar, Amazon founder Jeff Bezos, and House Speaker Mike Johnson.<br><br>[Statements] NPR quoted Trump: &ldquo;I think I&rsquo;m seeing tremendous self-policing. And they understand that they have to self-police.&rdquo; Asked whether the agreement is binding, he said it is &ldquo;morally&rdquo; binding. NPR also recorded him saying: &ldquo;I will never stifle the growth of a technology that will be bigger than the industrial revolution.&rdquo; NPR reported that Trump suggested about 10 people would be named to a committee to &ldquo;watch over the whole enterprise&rdquo;. ABC News quoted Johnson calling the document &ldquo;a statement of principles&hellip;a statement of standards, commitments that are voluntary on behalf of the industry&rdquo;. Euronews reported that Amodei acknowledged at the meeting that &ldquo;the technology has very real risks&rdquo;.<br><br>[Scepticism] NPR quoted Robin Jia, a researcher at the University of Southern California, as sceptical of relying on self-policing, citing recent hacking incidents and saying that &ldquo;as the models get better, the consequences of such things are only going to get greater&rdquo;. Euronews noted the accord lacks the legally binding regulation that some industry whistleblowers have advocated. CNN and The Hill also reported on the meeting; this briefing could not open those two outlets&rsquo; article pages during verification, so their reporting is noted as existing but not quoted.</p></div></div></article>
+      <div class="ngrid"><div class="ni"><div class="zh-content"><h4 class="ni-title">OpenAI 在 DevDay 发布常驻智能体「dots」，随同公布二十余项更新</h4><div class="ni-meta"><span class="src">TechCrunch</span> · 9to5Mac · 9to5Google · CNBC · 2026-09-29</div><p class="ni-desc">据 TechCrunch 与 9to5Google 9月29日报道，OpenAI 在当日举行的年度开发者大会 DevDay 上发布了名为 dots 的「常驻」（always-on）人工智能智能体，运行在 ChatGPT 内部，用户可以为其指派任务。据 9to5Mac 与相关报道，每个 dot 运行于 GPT-6 Astra 模型，拥有各自的云端计算环境与浏览器，并可通过插件生态连接逾4000款应用；用户可经由 ChatGPT、Slack 或 Teams 与其交互。据报道，该功能面向 Pro 与 Business Premium 订阅用户推出，Enterprise、Edu 与 Healthcare 工作区需由管理员开启后方可使用。据 9to5Mac 与 CNBC，OpenAI 在本次大会上共公布了二十余项更新，另包括一款价格更低的模型、面向开发者的更快速度档位，以及 ChatGPT 付费方案的调整。</p></div><div class="en-content" lang="en"><h4 class="ni-title">OpenAI Launches &ldquo;dots&rdquo; Always-On Agents at DevDay, Alongside More Than 20 Other Updates</h4><div class="ni-meta"><span class="src">TechCrunch</span> · 9to5Mac · 9to5Google · CNBC · September 29, 2026</div><p class="ni-desc">TechCrunch and 9to5Google reported on September 29 that OpenAI used its annual DevDay developer conference that day to launch dots, &ldquo;always-on&rdquo; AI agents that live inside ChatGPT and can be assigned tasks. According to 9to5Mac and related reporting, each dot runs on the GPT-6 Astra model, has its own cloud computer and browser, and can connect to more than 4,000 apps through a plugin ecosystem; users can interact with them via ChatGPT, Slack or Teams. The feature is rolling out to Pro and Business Premium subscribers, while Enterprise, Edu and Healthcare workspaces can use it once an administrator enables it. 9to5Mac and CNBC reported that OpenAI made more than 20 announcements at the event in total, including a cheaper model, a faster speed tier for developers, and changes to ChatGPT&rsquo;s paid plans.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">美国政府上线 America.gov，聊天机器人由谷歌 Gemini 与 xAI 的 Grok 驱动</h4><div class="ni-meta"><span class="src">CNBC</span> · FedScoop · The Register · Quartz · 2026-09-29</div><p class="ni-desc">据 CNBC 与 FedScoop 9月29日报道，美国政府当日上线 America.gov，这是一个以人工智能聊天机器人为核心的门户网站，用于帮助民众查找信息并办理联邦事务。据 CNBC，美国首席设计官格比亚（Joe Gebbia）确认，该网站的聊天机器人由谷歌的 Gemini 和马斯克旗下 xAI 的 Grok 提供支持。据 FedScoop 与 The Register，政府方面称已将来自约29000个政府网站的信息汇入同一数据库，并把该平台描述为「政府事务的礼宾员」，目标是把找对机构、找对网站的负担从公众身上移开。据相关报道，参加当天启动活动的包括特朗普、副总统万斯（JD Vance）、国务卿鲁比奥（Marco Rubio）、医疗保险和医疗补助服务中心负责人奥兹（Mehmet Oz）、NASA 局长艾萨克曼（Jared Isaacman）与马斯克。</p></div><div class="en-content" lang="en"><h4 class="ni-title">The U.S. Government Launches America.gov, With Chatbots Powered by Google&rsquo;s Gemini and xAI&rsquo;s Grok</h4><div class="ni-meta"><span class="src">CNBC</span> · FedScoop · The Register · Quartz · September 29, 2026</div><p class="ni-desc">CNBC and FedScoop reported on September 29 that the U.S. government launched America.gov that day, a portal built around AI chatbots to help people find information and navigate federal services. CNBC reported that U.S. Chief Design Officer Joe Gebbia confirmed the site&rsquo;s chatbot is powered by Google&rsquo;s Gemini and Grok, the model from Elon Musk&rsquo;s xAI. FedScoop and The Register reported the administration&rsquo;s statement that information from about 29,000 government websites has been brought into a single database, and its description of the platform as a &ldquo;concierge to navigate government&rdquo;, with the aim of shifting the burden of finding the right agency or website away from the public. Those taking part in the launch event included Trump, Vice President JD Vance, Secretary of State Marco Rubio, Centers for Medicare and Medicaid Services Administrator Mehmet Oz, NASA Administrator Jared Isaacman and Elon Musk.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">SpaceX「星舰」第14次试飞首次进入地球轨道，并部署 Starlink 卫星</h4><div class="ni-meta"><span class="src">美国全国公共广播电台（NPR）</span> · Spaceflight Now · 2026-09-28</div><p class="ni-desc">据 NPR 9月28日报道，SpaceX「星舰」（Starship）的第14次飞行是该型运载器首次进入环绕地球的轨道，并在此次任务中部署了 Starlink 卫星。据 Spaceflight Now 9月28日的发射预告，本次任务为首批 Starlink V3 卫星的入轨发射。据 NPR，「星舰」对 SpaceX 的商业前景以及 NASA 的载人登月计划均有关键作用。本条仅记录已发生的飞行事实与两家媒体的表述，不对后续任务安排作推测。</p></div><div class="en-content" lang="en"><h4 class="ni-title">SpaceX&rsquo;s 14th Starship Flight Reaches Earth Orbit for the First Time and Deploys Starlink Satellites</h4><div class="ni-meta"><span class="src">NPR</span> · Spaceflight Now · September 28, 2026</div><p class="ni-desc">NPR reported on September 28 that the 14th flight of SpaceX&rsquo;s Starship was the first to send the vehicle into orbit around the Earth, and that it deployed Starlink satellites during the mission. Spaceflight Now&rsquo;s launch preview the same day described the mission as carrying the first Starlink V3 satellites to orbit. NPR noted that Starship is central both to SpaceX&rsquo;s commercial prospects and to NASA&rsquo;s plans to land humans on the Moon. This entry records only the flight as it occurred and the two outlets&rsquo; accounts, without speculating about subsequent missions.</p></div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft"><img class="ft-img" src="https://images.foxweather.com/static.foxweather.com/www.foxweather.com/content/uploads/2026/09/1024/512/gettyimages-2297178365.jpg?ve=1&amp;tl=1" alt="飓风波洛" loading="lazy" onerror="this.style.display='none'"><div class="ft-body"><span class="ft-label env">深度解读 · IN-DEPTH</span><div class="zh-content"><h3 class="ft-title">从下加利福尼亚到内布拉斯加：飓风「波洛」两次登陆之后，太平洋水汽如何被推向美国中部</h3><div class="ft-meta"><span class="src">美国全国公共广播电台（NPR，经 WBGO 转载）</span> · KRWG 公共广播 · KVIA · AccuWeather · FOX Weather · Yale Climate Connections · 2026-09-23 至 2026-09-30</div><p class="ft-desc">【时间线】据 Yale Climate Connections 9月23日的记录，「波洛」（Polo）当时已被列为对墨西哥构成强降雨威胁的飓风，同期太平洋上多个热带系统活跃。据 AccuWeather 与 FOX Weather 的报道，9月29日「波洛」以2级飓风强度登陆墨西哥下加利福尼亚半岛，造成断电，海水漫过沿岸防护设施；NPR 记录的登陆强度为最大持续风速每小时110英里（177公里），登陆地点为下加利福尼亚南州。据 FOX Weather，「波洛」随后越过加利福尼亚湾，于当日晚些时候在索诺拉州瓜伊马斯（Guaymas）附近以1级飓风强度二次登陆。据 NPR，系统此后向东北深入内陆并减弱为热带风暴。<br><br>【新墨西哥州】据 KRWG 公共广播与 KVIA 9月29日报道，当晚多尼亚安娜县（Doña Ana County）先后对 Garfield、Salem、Rincon、Hatch 与 Placitas 发出疏散令。据 KVIA，美国国家气象局因哈奇西北方的麦克劳德坝（McLeod Dam）可能溃决发布突发洪水紧急警报，坝体运营方报告溃决「迫在眉睫」；截至当晚11时，除 Rincon 外的疏散令已解除。据 NPR，新墨西哥州交通部门报告全州多处道路积水与路面碎屑。<br><br>【亚利桑那州与犹他州】据 NPR，凤凰城以西有人从翻覆车辆中获救，凤凰城以北一辆卡车被冲走；土地管理局报告该州东南部保护区出现严重积水与道路损毁。NPR 引述犹他州奥德维尔（Orderville）居民杜贝（Sabrina Dubay）的说法：「河水涌进来，绕着我们整栋房子打转。」<br><br>【向中部推进】据 FOX Weather 与相关气象报道，前飓风「奥达利斯」（Odalys）与「波洛」残留的热带水汽，叠加自美国西部东移的一道深槽，在美国中部形成一个含水量很高的混合型系统。据这些报道，9月29日至30日，内布拉斯加州东部与艾奥瓦州西部可能出现暴洪、城市内涝与河流洪水；据 NPR，得克萨斯州与俄克拉何马州自9月29日夜间起将迎来强降雨，科罗拉多、堪萨斯、内布拉斯加与艾奥瓦四州的洪水监视持续至周四。据报道，此前美国西南部已有多轮强降雨，多处地面水分接近饱和，抬高了暴洪风险。<br><br>【说明】本报按各信源原文口径分别记录风速、日期与地名，不对灾害规模作合并估算，也不对后续天气走向作预测。</p></div><div class="en-content" lang="en"><h3 class="ft-title">From Baja California to Nebraska: How Pacific Moisture Was Pushed Into the Central U.S. After Hurricane Polo&rsquo;s Two Landfalls</h3><div class="ft-meta"><span class="src">NPR (via WBGO)</span> · KRWG Public Media · KVIA · AccuWeather · FOX Weather · Yale Climate Connections · September 23&ndash;30, 2026</div><p class="ft-desc">[Timeline] Yale Climate Connections recorded on September 23 that Polo was then a hurricane posing a torrential-rain threat to Mexico, amid an active period of tropical systems in the Pacific. AccuWeather and FOX Weather reported that on September 29 Polo made landfall on Mexico&rsquo;s Baja California peninsula as a Category 2 hurricane, cutting power as the sea breached coastal defences; NPR recorded the landfall intensity as maximum sustained winds of 110 mph (177 kph), with landfall in Baja California Sur. FOX Weather reported that Polo then crossed the Gulf of California and made a second landfall later that day near Guaymas in Sonora as a Category 1 hurricane. NPR reported that the system subsequently moved inland to the northeast and weakened to a tropical storm.<br><br>[New Mexico] KRWG Public Media and KVIA reported on September 29 that Doña Ana County issued evacuation orders that night, in turn, for Garfield, Salem, Rincon, Hatch and Placitas. According to KVIA, the National Weather Service issued a flash flood emergency because the McLeod Dam northwest of Hatch was in danger of failing, with operators reporting imminent failure; by 11 p.m. all orders except Rincon had been lifted. NPR reported that the New Mexico Department of Transportation recorded flooded roads and debris on highways across the state.<br><br>[Arizona and Utah] NPR reported that a person was rescued from an overturned vehicle west of Phoenix and a truck was swept away north of Phoenix, while the Bureau of Land Management reported significant flooding and road damage in southeastern conservation areas. NPR quoted Sabrina Dubay, a resident of Orderville, Utah: &ldquo;The river came in and swept around the entirety of our house.&rdquo;<br><br>[Moving into the central states] FOX Weather and related forecast reporting described tropical moisture left by former hurricanes Odalys and Polo combining with a deep trough moving east out of the western United States to form a moisture-laden hybrid system over the central U.S. Those reports said flash and urban flooding, along with river flooding, was possible in eastern Nebraska and western Iowa on September 29 and 30. NPR reported heavy rain expected in Texas and Oklahoma from the night of September 29, with flood watches across Colorado, Kansas, Nebraska and Iowa through Thursday. Reporting noted that repeated heavy rain had already left ground conditions near saturation in parts of the Southwest, raising the flash-flood risk.<br><br>[Note] Wind speeds, dates and place names are recorded here as each source stated them; no combined estimate of the disaster&rsquo;s scale is offered, and no forecast of subsequent weather is made.</p></div></div></article>
+      <div class="ngrid"><div class="ni"><div class="zh-content"><h4 class="ni-title">印度北方邦连日强降雨与洪水致62人死亡，奥迪沙邦逾7.5万人转移</h4><div class="ni-meta"><span class="src">欧洲新闻台（Euronews）</span> · U.S. News · 华盛顿时报 · 半岛电视台 · 2026-09-27 至 2026-09-28</div><p class="ni-desc">据欧洲新闻台与 U.S. News 9月28日报道，印度北部北方邦（Uttar Pradesh）在连续三天强降雨引发的洪水中已有至少62人死亡。据邦政府数据，另有46人受伤、逾1000间房屋受损。据同期报道，印度东部奥迪沙邦（Odisha）有超过75000人被转移至安全地带。据报道，该邦部分地区（包括首府勒克瑙）的学校9月28日停课，救援队伍将受困居民从被淹区域转移；孟加拉湾上空的一个天气系统减弱后，降雨预计自当日起缓解。半岛电视台9月27日曾就印度与尼泊尔的洪水与滑坡作过统计，各信源的统计口径与截止时间不同，本报按各自原文记录。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Days of Heavy Rain and Flooding Kill 62 in India&rsquo;s Uttar Pradesh; More Than 75,000 Evacuated in Odisha</h4><div class="ni-meta"><span class="src">Euronews</span> · U.S. News · The Washington Times · Al Jazeera · September 27&ndash;28, 2026</div><p class="ni-desc">Euronews and U.S. News reported on September 28 that at least 62 people had been killed in flooding caused by three consecutive days of heavy rain in the northern Indian state of Uttar Pradesh. State government figures recorded 46 people injured and more than 1,000 houses damaged. Reporting from the same period said more than 75,000 people were moved to safer areas in the eastern state of Odisha. Schools were closed on September 28 in parts of the state including the capital Lucknow, and rescue teams moved residents out of flooded areas; rainfall was expected to ease from that day as a weather system over the Bay of Bengal weakened. Al Jazeera published its own count for floods and landslides in India and Nepal on September 27; sources use different counting methods and cut-off times, and each is recorded here as published.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">尼泊尔9月24日至28日强降雨引发数百起滑坡，各统计口径的死亡人数为15至21人</h4><div class="ni-meta"><span class="src">EOS 滑坡博客（The Landslide Blog）</span> · weather.com · 半岛电视台 · 2026-09-27 至 2026-09-28</div><p class="ni-desc">据 EOS《滑坡博客》的记录，2026年9月24日至28日期间，尼泊尔的强降雨共触发285起滑坡，造成15人死亡，另有3人失踪、3人受伤。据 weather.com 9月28日的报道，该国在周四至周日的天气相关事故中有21人死亡，5人失踪、5人受伤，洪水与滑坡损毁房屋194间；同一报道记录了数周强降雨期间超过300起滑坡。据半岛电视台9月27日报道，同期印度与尼泊尔均受灾。据 EOS 的记录，这场晚季风降雨同时影响了尼泊尔与印度锡金邦。各信源统计的时间窗口与口径不同，本报不作合并。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Heavy Rain in Nepal From September 24 to 28 Triggers Hundreds of Landslides; Death Tolls Range From 15 to 21 Across Counts</h4><div class="ni-meta"><span class="src">EOS, The Landslide Blog</span> · weather.com · Al Jazeera · September 27&ndash;28, 2026</div><p class="ni-desc">EOS&rsquo;s Landslide Blog recorded that heavy rainfall in Nepal between September 24 and 28, 2026 triggered 285 landslides, killing 15 people, with three missing and three injured. weather.com reported on September 28 that 21 people died in weather-related incidents from Thursday through Sunday, with five missing and five injured, and that floods and landslides damaged 194 houses; the same report recorded more than 300 landslides over weeks of heavy rain. Al Jazeera reported on September 27 that both India and Nepal were affected in the same period. EOS recorded that this late-monsoon rainfall event affected both Nepal and Sikkim in India. The sources use different time windows and counting methods, and the figures are not merged here.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">COP31 定于11月9日至20日在土耳其安塔利亚举行，澳大利亚担任谈判主席</h4><div class="ni-meta"><span class="src">E3G</span> · 联合国土耳其办事处 · 澳大利亚外交部长新闻稿 · 会议信息截至 2026-09-30</div><p class="ni-desc">据 E3G 与联合国土耳其办事处的公开信息，2026年联合国气候变化大会（COP31）将于2026年11月9日至20日在土耳其安塔利亚（Antalya）的会展中心举行。据澳大利亚外交部长黄英贤（Penny Wong）办公室发布的新闻稿，土耳其担任东道主，澳大利亚出任缔约方大会谈判主席，并与太平洋岛国伙伴共同主办会前领导人活动。据 E3G 与联合国土耳其办事处的材料，本届大会被候任主席方表述为一届「落实之 COP」与「面向未来的 COP」，列出的议题包括能源转型、具韧性的城市与基础设施、可持续农业、气候资金，以及对脆弱地区与生态系统的保护。相关筹备工作已于9月上旬展开。</p></div><div class="en-content" lang="en"><h4 class="ni-title">COP31 Set for November 9&ndash;20 in Antalya, Türkiye, With Australia Presiding Over Negotiations</h4><div class="ni-meta"><span class="src">E3G</span> · United Nations in Türkiye · Australian Foreign Minister&rsquo;s media release · Conference details as of September 30, 2026</div><p class="ni-desc">According to public information from E3G and the United Nations in Türkiye, the 2026 United Nations Climate Change Conference (COP31) will be held at the Expo Center in Antalya, Türkiye, from 9 to 20 November 2026. A media release from the office of Australian Foreign Minister Penny Wong states that Türkiye is the host while Australia takes the Presidency of the COP negotiations and co-hosts the pre-COP leaders&rsquo; event in partnership with the Pacific. Materials from E3G and the UN in Türkiye record the incoming presidency describing the gathering as both an &ldquo;Implementation COP&rdquo; and a &ldquo;COP of the Future&rdquo;, with listed priorities including the energy transition, resilient cities and infrastructure, sustainable agriculture, climate finance, and stronger protection for vulnerable regions and ecosystems. Preparatory work began in early September.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">国际能源署《2026全球能源评论》：2025年全球太阳能光伏新增装机首次超过600吉瓦</h4><div class="ni-meta"><span class="src">国际能源署（IEA）</span> · Energy Digital · 报告2026年4月发布，2026-09-30 复核</div><p class="ni-desc">据国际能源署（IEA）《2026全球能源评论》及其技术分册，2025年全球可再生能源新增装机同比增长16%，达到800吉瓦，为连续第23年创下扩张纪录。据 IEA，其中太阳能光伏新增装机同比增长约12%，首次超过600吉瓦，使全球累计光伏装机达到约2800吉瓦，成为装机规模最大的发电技术；风电年新增装机在2024年持平后增长近40%，创下约160吉瓦的纪录。据 IEA，2025年全球太阳能光伏发电量的同比增量为620太瓦时，高于2024年的450太瓦时；该报告并记录，2025年是有记录以来首次由一种可再生能源（太阳能）贡献全球能源需求增长中最大的单一份额。本条仅转述报告数据。</p></div><div class="en-content" lang="en"><h4 class="ni-title">IEA Global Energy Review 2026: Solar PV Capacity Additions Passed 600 GW for the First Time in 2025</h4><div class="ni-meta"><span class="src">International Energy Agency</span> · Energy Digital · Report published April 2026, re-checked September 30, 2026</div><p class="ni-desc">According to the International Energy Agency&rsquo;s Global Energy Review 2026 and its technology chapters, global renewable capacity additions rose 16% year on year in 2025 to 800 GW, the 23rd consecutive year of record expansion. The IEA reported that solar PV additions rose about 12% and surpassed 600 GW for the first time, bringing cumulative solar PV capacity to around 2,800 GW and making it the generation technology with the largest installed capacity globally; annual wind additions, flat in 2024, grew by nearly 40% to a record of around 160 GW. The IEA recorded that global solar PV generation increased by 620 TWh year on year in 2025, compared with 450 TWh in 2024, and that 2025 was the first year on record in which a renewable source &mdash; solar &mdash; contributed the largest single share of growth in global energy demand. This entry reproduces the report&rsquo;s figures only.</p></div></div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
+  // 点图看大图（原图通常比版面里的大得多）
+  var lbx = document.createElement('div');
+  lbx.className = 'lbx';
+  lbx.innerHTML = '<img alt=""><div class="lbx-tip">点击任意处关闭 · Click anywhere to close</div>';
+  document.body.appendChild(lbx);
+  var lbxImg = lbx.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IMG' && /\b(hl-img|ft-img)\b/.test(t.className || '') && t.naturalWidth > 0) {
+      lbxImg.src = t.currentSrc || t.src;
+      lbx.classList.add('on');
+    } else if (lbx.classList.contains('on')) {
+      lbx.classList.remove('on');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lbx.classList.remove('on');
+  });
+})();
+</script>
+
+</body>
+</html>
