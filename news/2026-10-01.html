@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陆先生日报 | Luxiansheng Daily | 2026-10-01</title>
+<meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a2e'/%3E%3Crect x='7' y='9' width='18' height='2.6' fill='%23c0392b'/%3E%3Crect x='7' y='15' width='18' height='2' fill='%23ffffff' opacity='.75'/%3E%3Crect x='7' y='20' width='12' height='2' fill='%23ffffff' opacity='.45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#e9ecf0; --paper:#fff; --tint:#f8f9fb;
+  --ink:#2c3e50; --ink-strong:#1a1a2e; --muted:#999; --soft:#555;
+  --line:#e8e8e8; --line-strong:#d0d0d0; --card-line:#e0e0e0;
+  --accent:#c0392b; --accent-soft:#fef5f5;
+  --shadow:0 2px 12px rgba(0,0,0,.06);
+  --pol:#2471a3; --tec:#1e8449; --env:#138d75;
+  --pol-bg:#d6eaf8; --pol-fg:#1a5276;
+  --tec-bg:#d5f5e3; --tec-fg:#145a32;
+  --env-bg:#d1f2eb; --env-fg:#0e6251;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --paper:#1c1f24; --tint:#191c21;
+    --ink:#c3c9d1; --ink-strong:#e9edf2; --muted:#828a95; --soft:#a8b0ba;
+    --line:#2a2e35; --line-strong:#39404a; --card-line:#2f343c;
+    --accent:#e2604c; --accent-soft:#2a1c1a;
+    --shadow:0 2px 14px rgba(0,0,0,.45);
+    --pol:#3e8ec4; --tec:#35a563; --env:#2aa891;
+    --pol-bg:#16293a; --pol-fg:#8cc2e8;
+    --tec-bg:#152c1f; --tec-fg:#7fd3a0;
+    --env-bg:#122c28; --env-fg:#78d2c1;
+  }
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:560px;margin:0 auto;background:var(--bg)}
+@media(min-width:768px){.wrap{max-width:720px}}
+@media(min-width:1024px){.wrap{max-width:920px}}
+
+/* 键盘可达性：跳到正文 + 统一焦点圈 */
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink-strong);color:#fff;padding:10px 16px;font-size:13px;font-weight:700;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* 阅读进度条 */
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+/* Header */
+.hd{background:linear-gradient(160deg,#0f0c29,#1a1a2e,#24243e);color:#fff;padding:20px 24px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--accent)}
+.hd .hd-brand{font-size:22px;font-weight:800;letter-spacing:1px}
+.hd .hd-sub{font-size:11px;opacity:.4;letter-spacing:2px;margin-left:10px}
+.hd .hd-meta{text-align:right;font-size:11px;opacity:.55;line-height:1.6}
+.hd .hd-meta .no{font-size:13px;color:#e2604c;font-weight:700;opacity:1;letter-spacing:1px}
+@media(min-width:768px){.hd{padding:24px 36px 20px}.hd .hd-brand{font-size:26px}}
+
+/* Lang Switcher */
+.langbar{background:var(--paper);padding:8px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.langbar .lang-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+.langbar .lang-btns{display:flex;gap:4px}
+.lang-btn{font-size:11px;font-weight:700;padding:5px 14px;border-radius:4px;border:1px solid var(--line-strong);background:var(--paper);color:var(--muted);cursor:pointer;transition:all .15s;font-family:inherit}
+.lang-btn.active{background:var(--ink-strong);color:var(--paper);border-color:var(--ink-strong)}
+.lang-btn:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+
+/* TOC */
+.toc{background:var(--paper);padding:10px 20px;display:flex;align-items:center;gap:6px;overflow-x:auto;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.08);border-bottom:1px solid var(--line);scrollbar-width:thin}
+.toc .toc-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:2px;margin-right:8px;flex-shrink:0}
+.toc a{display:inline-block;padding:6px 14px;font-size:13px;font-weight:600;color:var(--soft);text-decoration:none;border-radius:20px;white-space:nowrap;transition:all .2s;border:1px solid transparent;flex-shrink:0}
+.toc a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.toc a.here{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Content */
+.ct{padding:0}
+.preface{background:var(--paper);border-bottom:1px solid var(--line);padding:24px 24px 28px}
+.preface .pf-label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--ink-strong);padding:4px 14px;border:1px solid var(--ink-strong);border-radius:4px;margin-bottom:12px}
+.preface p{font-size:14.5px;color:var(--soft);line-height:2}
+@media(min-width:768px){.preface{padding:28px 36px 32px}.preface p{font-size:15px}}
+
+/* Sections */
+.sec{scroll-margin-top:64px}
+.sec-hd{display:flex;align-items:center;gap:12px;padding:28px 24px 0}
+.sec-hd .sec-num{font-size:36px;font-weight:900;color:var(--accent);line-height:1;min-width:44px}
+.sec-hd .sec-text{flex:1}
+.sec-hd .sec-name{font-size:20px;font-weight:800;color:var(--ink-strong)}
+.sec-hd .sec-en{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px}
+.sec-hd .sec-line{flex:1;height:1px;background:var(--line-strong);align-self:flex-end;margin-bottom:6px}
+@media(min-width:768px){.sec-hd{padding:32px 36px 0}.sec-hd .sec-num{font-size:42px}.sec-hd .sec-name{font-size:22px}}
+.sec-inner{padding:16px 24px 28px;background:var(--tint)}
+.sec:nth-child(even) .sec-inner{background:var(--paper)}
+@media(min-width:768px){.sec-inner{padding:20px 36px 32px}}
+
+/* Headline */
+.hl{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--paper);transition:box-shadow .2s,transform .2s}
+.hl:hover{box-shadow:var(--shadow)}
+.hl .hl-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.hl .hl-body{padding:18px}
+.hl .hl-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:8px}
+.hl .hl-tag.pol{background:var(--pol)}.hl .hl-tag.env{background:var(--env)}.hl .hl-tag.tec{background:var(--tec)}
+.hl .hl-title{font-size:16.5px;font-weight:800;color:var(--ink-strong);line-height:1.6;margin-bottom:6px}
+.hl .hl-meta{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hl .hl-meta .src{font-weight:700;color:var(--accent)}
+.hl .hl-desc{font-size:13.5px;color:var(--soft);line-height:1.9;margin-bottom:10px}
+.hl .hl-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.hl .hl-link:hover{text-decoration:underline}
+@media(min-width:768px){
+  .hl{display:flex}
+  .hl .hl-img{width:300px;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .hl .hl-body{flex:1;padding:20px}
+}
+@media(min-width:1024px){.hl .hl-img{width:340px}}
+
+/* Feature */
+.ft{border:1px solid var(--card-line);border-radius:10px;overflow:hidden;margin-bottom:18px;background:var(--paper)}
+.ft .ft-img{width:100%;height:auto;max-height:74vh;object-fit:contain;background:var(--tint);display:block}
+.ft .ft-body{padding:22px}
+.ft .ft-label{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:3px;margin-bottom:10px;border:1px solid}
+.ft .ft-label.pol{color:var(--pol-fg);border-color:var(--pol);background:var(--pol-bg)}
+.ft .ft-label.env{color:var(--env-fg);border-color:var(--env);background:var(--env-bg)}
+.ft .ft-label.tec{color:var(--tec-fg);border-color:var(--tec);background:var(--tec-bg)}
+.ft .ft-title{font-size:17.5px;font-weight:800;color:var(--ink-strong);line-height:1.5;margin-bottom:8px}
+.ft .ft-meta{font-size:11px;color:var(--muted);margin-bottom:12px}
+.ft .ft-meta .src{font-weight:700;color:var(--accent)}
+.ft .ft-desc{font-size:14.5px;color:var(--ink);line-height:2}
+@media(min-width:768px){
+  .ft{display:flex}
+  .ft .ft-img{width:40%;height:auto;max-height:none;align-self:flex-start;flex-shrink:0}
+  .ft .ft-body{flex:1}
+}
+
+/* News Grid */
+.ngrid{display:grid;gap:12px}
+@media(min-width:768px){.ngrid{grid-template-columns:1fr 1fr}}
+.ni{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:var(--paper);transition:box-shadow .15s}
+.ni:hover{box-shadow:var(--shadow)}
+.ni .ni-title{font-size:14.5px;font-weight:700;color:var(--ink-strong);line-height:1.6;margin-bottom:4px}
+.ni .ni-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.ni .ni-meta .src{font-weight:700;color:var(--accent)}
+.ni .ni-desc{font-size:13.5px;color:var(--soft);line-height:1.8}
+.ni .ni-link{display:inline-block;margin-top:6px;font-size:11px;color:var(--accent);text-decoration:none;font-weight:600}
+.ni .ni-link:hover{text-decoration:underline}
+
+/* Language visibility
+   注意特指度：任何给 .zh-content/.en-content 元素单独写的规则，只要选择器比
+   .en-content 更具体，就会盖过这里的 display:none，导致中英文同时显示。
+   所以行内场景（目录、板块名、页脚）必须成对写明两种状态。 */
+.zh-content{display:block}
+.en-content{display:none}
+body.show-en .zh-content{display:none}
+body.show-en .en-content{display:block}
+.preface .pf-label-en{display:none}
+body.show-en .preface .pf-label-en{display:inline-block}
+body.show-en .preface .pf-label-zh{display:none}
+.toc .zh-content,.ftr .zh-content,.sec-hd .sec-name.zh-content{display:inline-block}
+.toc .en-content,.ftr .en-content,.sec-hd .sec-name.en-content{display:none}
+body.show-en .toc .zh-content,body.show-en .ftr .zh-content,body.show-en .sec-hd .sec-name.zh-content{display:none}
+body.show-en .toc .en-content,body.show-en .ftr .en-content,body.show-en .sec-hd .sec-name.en-content{display:inline-block}
+
+/* Footer */
+.ftr{background:#1a1a2e;color:rgba(255,255,255,.55);text-align:center;padding:24px 20px;font-size:11px;line-height:2}
+.ftr .ftr-brand{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:1px}
+.ftr a{color:#fff;opacity:.85;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.ftr a:hover{opacity:1;border-color:#fff}
+.btt{position:fixed;bottom:20px;right:20px;width:40px;height:40px;background:var(--ink-strong);color:#fff;border:none;border-radius:50%;font-size:16px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:99}
+.btt.on{opacity:.85;pointer-events:auto}
+.btt:hover{opacity:1}
+
+/* 打印：去掉一切交互件，白底黑字，卡片不跨页 */
+@media print{
+  :root{--bg:#fff;--paper:#fff;--tint:#fff;--ink:#000;--ink-strong:#000;--soft:#222;--muted:#555;--line:#ccc;--card-line:#ccc}
+  .langbar,.toc,.btt,.prog,.skip{display:none!important}
+  .hd{background:#fff!important;color:#000!important;border-bottom:2px solid #000}
+  .hd .hd-brand,.hd .hd-meta,.hd .hd-meta .no{color:#000!important;opacity:1}
+  .ftr{background:#fff!important;color:#000!important}
+  .wrap{max-width:none}
+  .hl,.ft,.ni{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+}
+
+/* 图片：完整显示，不裁切。点一下看大图 */
+.hl .hl-img,.ft .ft-img{cursor:zoom-in}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:24px;cursor:zoom-out}
+.lbx.on{display:flex}
+.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+.lbx .lbx-tip{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:1px}
+@media print{.lbx{display:none!important}}
+</style>
+<!-- share:start -->
+<meta name="description" content="美军完成从伊拉克撤离：最后一批人员离开埃尔比勒空军基地，「坚定决心行动」在伊境内结束；英国首相伯纳姆称有「强烈迹象」显示伊朗参与费尔福德空军基地事件，伊朗驻英使馆否认；Anthropic 保密版上市招股书外流：2025年营收45.9亿美元、净亏损约420亿美元，算力承诺5180亿美元">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="陆先生日报">
+<meta property="og:title" content="NO.026 · 2026-10-01 · 陆先生日报 | Luxiansheng Daily">
+<meta property="og:description" content="美军完成从伊拉克撤离：最后一批人员离开埃尔比勒空军基地，「坚定决心行动」在伊境内结束；英国首相伯纳姆称有「强烈迹象」显示伊朗参与费尔福德空军基地事件，伊朗驻英使馆否认；Anthropic 保密版上市招股书外流：2025年营收45.9亿美元、净亏损约420亿美元，算力承诺5180亿美元">
+<meta property="og:url" content="https://julian-commit.github.io/daily-news-briefing/news/2026-10-01.html">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.aljazeera.com/wp-content/uploads/2026/09/getty_6abd2ef7d1-1790783223.jpg?resize=1920%2C1440">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NO.026 · 2026-10-01 · 陆先生日报 | Luxiansheng Daily">
+<meta name="twitter:description" content="美军完成从伊拉克撤离：最后一批人员离开埃尔比勒空军基地，「坚定决心行动」在伊境内结束；英国首相伯纳姆称有「强烈迹象」显示伊朗参与费尔福德空军基地事件，伊朗驻英使馆否认；Anthropic 保密版上市招股书外流：2025年营收45.9亿美元、净亏损约420亿美元，算力承诺5180亿美元">
+<meta name="twitter:image" content="https://www.aljazeera.com/wp-content/uploads/2026/09/getty_6abd2ef7d1-1790783223.jpg?resize=1920%2C1440">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"NO.026 · 2026-10-01 · 陆先生日报 | Luxiansheng Daily","description":"美军完成从伊拉克撤离：最后一批人员离开埃尔比勒空军基地，「坚定决心行动」在伊境内结束；英国首相伯纳姆称有「强烈迹象」显示伊朗参与费尔福德空军基地事件，伊朗驻英使馆否认；Anthropic 保密版上市招股书外流：2025年营收45.9亿美元、净亏损约420亿美元，算力承诺5180亿美元","datePublished":"2026-10-01","url":"https://julian-commit.github.io/daily-news-briefing/news/2026-10-01.html","inLanguage":"zh-CN","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"陆先生日报"},"image":["https://www.aljazeera.com/wp-content/uploads/2026/09/getty_6abd2ef7d1-1790783223.jpg?resize=1920%2C1440"]}</script>
+<!-- share:end -->
+</head>
+<body>
+
+<a class="skip" href="#main">跳到正文 / Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="wrap">
+
+<header class="hd">
+  <div>
+    <span class="hd-brand">陆先生日报</span>
+    <span class="hd-sub">LUXIANSHENG DAILY</span>
+  </div>
+  <div class="hd-meta">
+    <div class="no">NO.026</div>
+    <div>2026.10.01 THURSDAY</div>
+  </div>
+</header>
+
+<!-- Language Switcher -->
+<div class="langbar">
+  <span class="lang-label">LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" type="button" aria-pressed="true" onclick="switchLang('zh')">中 文</button>
+    <button class="lang-btn" type="button" aria-pressed="false" onclick="switchLang('en')">EN</button>
+  </div>
+</div>
+
+<nav class="toc" aria-label="板块目录">
+  <span class="toc-label zh-content">目录</span>
+  <span class="toc-label en-content">INDEX</span>
+  <a href="#headlines"><span class="zh-content">今日头条</span><span class="en-content">Headlines</span></a>
+  <a href="#politics"><span class="zh-content">全球政治</span><span class="en-content">Politics</span></a>
+  <a href="#tech"><span class="zh-content">科技</span><span class="en-content">Technology</span></a>
+  <a href="#environment"><span class="zh-content">地理与环境</span><span class="en-content">Environment</span></a>
+</nav>
+
+<main class="ct" id="main">
+
+  <section class="preface">
+    <span class="pf-label pf-label-zh">编者按</span>
+    <span class="pf-label pf-label-en">EDITOR'S NOTE</span>
+    <p class="zh-content">9月30日，美国中央司令部宣布驻伊拉克美军全部撤离完毕，最后一批人员与装备离开库尔德自治区的埃尔比勒空军基地，「坚定决心行动」在伊拉克境内结束。伊朗方向有三条同期消息：据 Axios 报道，美国国务卿鲁比奥在谈判陷入僵局后要求伊朗出席联合国大会的代表团立即离境；据路透社10月1日报道，伊朗外长阿拉格奇在多哈收到美方对伊方「七日路线图」的回应，双方对停火所需步骤大致认同，但对执行次序仍有分歧；英国首相伯纳姆（Andy Burnham）对英国广播公司称，有「强烈迹象」显示伊朗参与了费尔福德皇家空军基地（RAF Fairford）事件，伊朗驻英使馆予以否认。科技方面，路透社与《金融时报》查阅到人工智能企业 Anthropic 的保密版上市招股书，文件记录2025年营收45.9亿美元、净亏损约420亿美元，并列出5180亿美元的云计算与算力承诺；英国军情五处（MI5）首次以自身名义公开发布预警，指中国通用技术研究院（CGTRI）为英国学者的人工智能与隐蔽通信研究提供资金。环境方面，瑞士冰川监测网络（GLAMOS）与瑞士科学院冰冻圈观测委员会10月1日发布年度测量结果：2025/2026水文年瑞士冰川冰量再减5.5%。本期所有条目均标注信源与日期，数字按各信源原文口径分别记录，不作合并取整。</p>
+    <p class="en-content" lang="en">On September 30, U.S. Central Command announced that the withdrawal of U.S. forces from Iraq was complete, with the last personnel and equipment leaving Erbil Air Base in the Kurdistan region and Operation Inherent Resolve ending inside Iraq. Three Iran-related items share roughly the same dateline: Axios reported that U.S. Secretary of State Marco Rubio demanded that Iran&rsquo;s delegation to the U.N. General Assembly leave the United States immediately after negotiations stalled; Reuters reported on October 1 that Iranian Foreign Minister Abbas Araghchi received the U.S. response to Iran&rsquo;s seven-day roadmap in Doha, with the two sides broadly agreeing on the steps required for a ceasefire but still differing on their sequence; and U.K. Prime Minister Andy Burnham told the BBC there were &ldquo;strong indications&rdquo; that Iran played a part in the incident at RAF Fairford, a claim rejected by Iran&rsquo;s embassy in London. In technology, Reuters and the Financial Times reviewed the confidential IPO prospectus of the artificial-intelligence company Anthropic, which records 2025 revenue of $4.59 billion, a net loss of about $42 billion, and $518 billion in cloud, computing and infrastructure commitments; and Britain&rsquo;s MI5 issued its first publicly released alert under its own name, naming the China General Technology Research Institute (CGTRI) as a funder of artificial-intelligence and covert-communications research by U.K.-based academics. In environment, Glacier Monitoring Switzerland (GLAMOS) and the Swiss Academy of Sciences&rsquo; cryosphere commission published their annual measurements on October 1: Swiss glaciers lost a further 5.5% of their ice volume in the 2025/2026 hydrological year. Every entry below carries its sources and dates, and figures are recorded as each source states them, without being merged or rounded.</p>
+  </section>
+
+  <!-- ====== HEADLINES ====== -->
+  <section class="sec" id="headlines">
+    <div class="sec-hd">
+      <span class="sec-num">01</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">今日头条</span>
+        <span class="sec-name en-content">Headlines</span>
+        <span class="sec-en">HEADLINES</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="hl"><img class="hl-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/getty_6abd2ef7d1-1790783223.jpg?resize=1920%2C1440" alt="美军撤离伊拉克" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag pol">全球政治</span><div class="zh-content"><h2 class="hl-title">美军完成从伊拉克撤离：最后一批人员离开埃尔比勒空军基地，「坚定决心行动」在伊境内结束</h2><div class="hl-meta"><span class="src">美联社（经 PBS NewsHour 转载）</span> · Breaking Defense · 半岛电视台 · 2026-09-30</div><p class="hl-desc">据美联社（经 PBS NewsHour 转载）9月30日报道，美军宣布完成从伊拉克撤军，结束为打击「伊斯兰国」组织而展开的12年任务。据 Breaking Defense 同日报道，美国中央司令部（CENTCOM）宣布最后一批美军人员与装备离开伊拉克北部库尔德自治区的埃尔比勒空军基地（Erbil Air Base），完成华盛顿与巴格达2024年谈成的撤军安排。据半岛电视台9月30日报道，美军与其他国际联盟部队从埃尔比勒基地「有序撤离」。据美联社，五角大楼发言人帕内尔（Sean Parnell）称这一节点「反映了一场12年战役的成功，该战役击败了作为有组织军事威胁的『伊斯兰国』」；据 Breaking Defense，帕内尔表示应对伊拉克剩余安全挑战——包括「伊斯兰国」残余以及削弱伊拉克主权与地区稳定的伊朗结盟武装——的主要责任现已由伊拉克政府承担。据 Breaking Defense，中央司令部司令库珀海军上将（Adm. Brad Cooper）称「部署在该地区各处的美军与联盟部队将随时准备应对出现的任何『伊斯兰国』威胁」，即相关兵力位于伊拉克境外。据美联社，伊拉克总理扎伊迪（Ali al-Zaidi）主持移交仪式，称此为「一个新阶段的开始，这个阶段由伊拉克的主权、其机构的力量、其部队的战备、其决策的统一以及与友邦的平衡伙伴关系所定义」。据美联社，这是美国第二次从伊拉克撤出全部军事力量；撤军计划由拜登政府2024年与伊拉克谈成，特朗普政府延续了以9月30日为最终期限的安排，美方并称将继续向伊拉克伙伴「提供有针对性的训练与情报支持」。据美联社，特朗普称此次撤离「有序」，并形容其为「一次非常昂贵的地狱之旅」的结束。</p></div><div class="en-content" lang="en"><h2 class="hl-title">U.S. Completes Its Withdrawal From Iraq: Last Personnel Leave Erbil Air Base, Ending Inherent Resolve Inside the Country</h2><div class="hl-meta"><span class="src">The Associated Press (via PBS NewsHour)</span> · Breaking Defense · Al Jazeera · September 30, 2026</div><p class="hl-desc">The Associated Press, carried by PBS NewsHour on September 30, reported that the U.S. military announced it had completed its withdrawal from Iraq, ending a 12-year mission against the Islamic State group. Breaking Defense reported the same day that U.S. Central Command (CENTCOM) announced the last U.S. personnel and equipment had departed Erbil Air Base in the Kurdistan region of northern Iraq, completing the drawdown agreed between Washington and Baghdad in 2024. Al Jazeera reported on September 30 that U.S. and other international coalition forces conducted an &ldquo;orderly departure&rdquo; from the Erbil base. According to the AP, Pentagon spokesman Sean Parnell said the milestone &ldquo;reflects the success of a 12-year campaign that defeated ISIS as an organized military threat&rdquo;. Breaking Defense reported Parnell as saying that primary responsibility for Iraq&rsquo;s remaining security challenges &mdash; including ISIS remnants and Iran-aligned militias that undermine Iraqi sovereignty and regional stability &mdash; now rests with the Government of Iraq. Breaking Defense quoted CENTCOM commander Adm. Brad Cooper as saying that &ldquo;US and Coalition forces stationed across the region will remain ready to respond to any ISIS threats that arise&rdquo;, placing those forces outside Iraq. According to the AP, Iraqi Prime Minister Ali al-Zaidi presided over the handover ceremony and described it as the beginning of a &ldquo;new phase, one defined by Iraq&rsquo;s sovereignty, the strength of its institutions, the readiness of its forces, the unity of its decision-making, and balanced partnerships with its friends&rdquo;. The AP reported that this is the second time the United States has withdrawn all military forces from Iraq; the plan was negotiated with Iraq by the Biden administration in 2024, and the Trump administration kept the September 30 final deadline, with the U.S. saying it will continue to provide &ldquo;targeted training and intelligence support&rdquo; to Iraqi partners. The AP quoted Trump calling the departure &ldquo;orderly&rdquo; and describing it as the end of &ldquo;a very expensive excursion into Hell&rdquo;.</p></div></div></article><article class="hl"><img class="hl-img" src="https://www.aljazeera.com/wp-content/uploads/2026/10/AP26272438005114-1790816930.jpg?resize=1920%2C1440" alt="费尔福德皇家空军基地" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag pol">全球政治</span><div class="zh-content"><h2 class="hl-title">英国首相伯纳姆称有「强烈迹象」显示伊朗参与费尔福德空军基地事件，伊朗驻英使馆否认</h2><div class="hl-meta"><span class="src">半岛电视台</span> · 欧洲新闻台（Euronews） · Axios · 《星条旗报》（Stars and Stripes） · 2026-09-30 至 2026-10-01</div><p class="hl-desc">据半岛电视台10月1日、欧洲新闻台与 Axios 9月30日报道，英国首相伯纳姆（Andy Burnham）对英国广播公司（BBC）表示：「有强烈迹象显示，伊朗在上周末费尔福德皇家空军基地发生的事情中起了作用。」据上述报道，这是英国官员首次公开将伊朗与该基地的事件联系起来。据《星条旗报》与欧洲新闻台，警方在周日以涉嫌预备恐怖行为为由逮捕了5名男子，逮捕地点位于基地约一英里外的惠尔福德（Whelford）村附近；警方称其行动依据包括一名公众人士关于数辆车在基地附近行为可疑的报案。据上述报道，调查人员在现场未发现爆炸装置，但起获了一定数量的燃料；5名男子在调查继续期间获保释。据半岛电视台，伊朗驻英国使馆否认与此事有关，称相关指称毫无根据且含有恶意。据欧洲新闻台与《星条旗报》，费尔福德基地位于英格兰格洛斯特郡，供美军轰炸机使用。本条仅记录各方公开表述与警方披露的调查步骤；案件尚在侦查阶段，未有法院认定。</p></div><div class="en-content" lang="en"><h2 class="hl-title">U.K. Prime Minister Burnham Cites &ldquo;Strong Indications&rdquo; of an Iranian Role in the RAF Fairford Incident; Iran&rsquo;s Embassy Denies It</h2><div class="hl-meta"><span class="src">Al Jazeera</span> · Euronews · Axios · Stars and Stripes · September 30 &ndash; October 1, 2026</div><p class="hl-desc">Al Jazeera on October 1 and Euronews and Axios on September 30 reported that U.K. Prime Minister Andy Burnham told the BBC: &ldquo;There are strong indications that Iran played a part in what happened over the weekend at RAF Fairford.&rdquo; According to those reports, it was the first time a British official had publicly linked Iran to the events at the base. Stars and Stripes and Euronews reported that five men were arrested on Sunday on suspicion of preparing a terrorist act, near the village of Whelford about a mile from the base, after police acted on information that included a call from a member of the public about several vehicles behaving suspiciously close to the site. According to those reports, investigators found no explosive devices at the scene but did recover a quantity of fuel; the five men were bailed while the investigation continues. Al Jazeera reported that Iran&rsquo;s embassy in London denied any involvement, calling the claim unfounded and malicious. Euronews and Stars and Stripes noted that the base, in Gloucestershire, England, is used by American bombers. This entry records only the public statements of the parties and the investigative steps disclosed by police; the case remains under investigation and no court findings have been made.</p></div></div></article><article class="hl"><img class="hl-img" src="https://fortune.com/img-assets/wp-content/uploads/2026/09/gettyimages-1554653087-594x594-1.jpg?resize=1200,600" alt="Anthropic 上市招股书" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag tec">科技前沿</span><div class="zh-content"><h2 class="hl-title">Anthropic 保密版上市招股书外流：2025年营收45.9亿美元、净亏损约420亿美元，算力承诺5180亿美元</h2><div class="hl-meta"><span class="src">路透社（经《财富》与 TheNextWeb 转述）</span> · 《金融时报》 · implicator.ai · 2026-09-29 至 2026-09-30</div><p class="hl-desc">据路透社查阅的 Anthropic 保密版上市招股书（经《财富》9月29日与 TheNextWeb 转述），该公司2025年营收为45.9亿美元，同比增长1088%；净亏损约420亿美元，其中约340亿美元为与融资估值上升相关的非现金会计计提，经营亏损为80.6亿美元（2024年为29.8亿美元）。据同一文件，2025年算力与基础设施支出为73.3亿美元，较2024年增长两倍；总经营费用为126.5亿美元；截至2025年12月，现金、现金等价物与短期投资合计202.8亿美元。据 TheNextWeb 与 implicator.ai 的记录，招股书列出的未来云计算、算力与基础设施承诺总额为5180亿美元，涉及六家合作方，其中约80%（约4140亿美元）不可取消；按其拆分，谷歌为1111亿美元、亚马逊为1100亿美元、微软为314亿美元、博通设备租赁约1612亿美元，另有约845亿美元的 xAI 算力（可提前90天通知取消）与超过200亿美元的 AMD 相关安排。据《财富》，两家客户贡献了2025年营收的近四分之一，且多数大客户没有长期合同。据《财富》，招股书的风险章节提到先进人工智能可能对人类构成「灾难性或生存性风险」，并称自主人工智能系统可能「以意料之外的方式行事、造成安全问题、被用于欺诈或操纵信息」。据路透社与《财富》，该公司的上市目标估值超过2万亿美元，时间可能安排在11月美国中期选举之后；按 TheNextWeb 的记录，这一目标较其5月的9650亿美元估值高出一倍以上。本条所述数字均来自上述媒体对未公开文件的转述，Anthropic 未正式发布招股书。</p></div><div class="en-content" lang="en"><h2 class="hl-title">Anthropic&rsquo;s Confidential IPO Prospectus Leaks: 2025 Revenue of $4.59bn, a Net Loss of About $42bn, and $518bn in Compute Commitments</h2><div class="hl-meta"><span class="src">Reuters (as reported by Fortune and TheNextWeb)</span> · Financial Times · implicator.ai · September 29&ndash;30, 2026</div><p class="hl-desc">According to Anthropic&rsquo;s confidential IPO prospectus reviewed by Reuters, as reported by Fortune on September 29 and by TheNextWeb, the company&rsquo;s 2025 revenue was $4.59 billion, up 1,088% year on year, and its net loss was about $42 billion, of which roughly $34 billion was a non-cash accounting charge tied to rising financing valuations; the operating loss was $8.06 billion, against $2.98 billion in 2024. The same document records 2025 compute and infrastructure spending of $7.33 billion, triple the 2024 figure; total operating expenses of $12.65 billion; and $20.28 billion in cash, cash equivalents and short-term investments as of December 2025. As recorded by TheNextWeb and implicator.ai, the prospectus lists $518 billion in future cloud, computing and infrastructure commitments across six partners, of which about 80% (roughly $414 billion) is non-cancelable; the breakdown given is $111.1 billion with Google, $110 billion with Amazon, $31.4 billion with Microsoft, about $161.2 billion in Broadcom equipment leases, about $84.5 billion of xAI capacity cancelable on 90 days&rsquo; notice, and more than $20 billion in AMD-related arrangements. Fortune reported that two customers accounted for nearly a quarter of 2025 revenue and that most large customers are not on long-term contracts. According to Fortune, the risk section of the prospectus states that advanced AI could pose &ldquo;catastrophic or existential risks to humanity&rdquo; and that autonomous AI systems could &ldquo;behave in unexpected ways, create security problems, be used for fraud, or manipulate information&rdquo;. Reuters and Fortune reported a target IPO valuation of more than $2 trillion, with the listing possibly timed after the U.S. midterm elections in November; TheNextWeb recorded that target as more than double the company&rsquo;s $965 billion valuation in May. All figures here come from those outlets&rsquo; accounts of a document that has not been published; Anthropic has not formally released a prospectus.</p></div></div></article><article class="hl"><img class="hl-img" src="https://cdn.i-scmp.com/sites/default/files/styles/og_image_scmp_generic/public/d8/images/canvas/2026/10/01/04fe7ad6-3547-4099-8823-bec0a53dbbca_d58a378a.jpg?itok=PskZlDW4&amp;v=1790792202" alt="英国军情五处公开预警" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag tec">科技前沿</span><div class="zh-content"><h2 class="hl-title">英国军情五处首次以自身名义公开预警：指中国通用技术研究院资助英国学者的人工智能与隐蔽通信研究，涉及逾百名学者</h2><div class="hl-meta"><span class="src">路透社（经 KFGO 转载）</span> · 彭博社 · 美国有线电视新闻网（CNN） · 南华早报 · 2026-09-30 至 2026-10-01</div><p class="hl-desc">据路透社（经 KFGO 转载）与 CNN 9月30日报道，英国安全局（军情五处，MI5）于当日发布预警，指一家中国机构代表中国国家安全部门为人工智能等课题的学术研究提供资金。据上述报道，该机构为中国通用技术研究院（China General Technology Research Institute，CGTRI），军情五处称其与中国国家安全部（MSS）有「非常紧密的联系」，并判断 CGTRI 的主要目的是资助能够直接提升国家安全部技术间谍能力的学术研究。据路透社与彭博社，逾100名在英国任职的学者曾参与 CGTRI 资助的项目，课题包括人工智能、网络安全、隐蔽通信系统与隐写术（steganography）。据路透社与 CNN，这是军情五处首次独立公开发布此类预警。据南华早报10月1日报道，中国驻英国使馆称相关指称是「凭空想象、纯属捏造」。本条仅记录英方的公开表述与中方的回应，不就指控本身作出判断。</p></div><div class="en-content" lang="en"><h2 class="hl-title">MI5 Issues Its First Publicly Released Alert Under Its Own Name, Naming a Chinese Institute as a Funder of U.K. Research on AI and Covert Communications Involving More Than 100 Academics</h2><div class="hl-meta"><span class="src">Reuters (via KFGO)</span> · Bloomberg · CNN · South China Morning Post · September 30 &ndash; October 1, 2026</div><p class="hl-desc">Reuters, carried by KFGO, and CNN reported on September 30 that Britain&rsquo;s Security Service (MI5) issued an alert that day stating that a Chinese organisation had been funding academic research on subjects including artificial intelligence on behalf of Beijing&rsquo;s state security service. According to those reports, the organisation is the China General Technology Research Institute (CGTRI), which MI5 said has &ldquo;very strong ties&rdquo; to China&rsquo;s Ministry of State Security (MSS), and MI5 assessed that CGTRI&rsquo;s primary purpose is to fund academic research that directly improves MSS technical capability for espionage. Reuters and Bloomberg reported that more than 100 U.K.-based academics had contributed to CGTRI-funded projects on topics including artificial intelligence, cybersecurity, covert communications systems and steganography. Reuters and CNN reported that this was the first time MI5 had independently published such an alert. The South China Morning Post reported on October 1 that China&rsquo;s embassy in Britain described the allegations as &ldquo;imaginary and purely fabricated&rdquo;. This entry records the public statements of the British side and the Chinese response, without adjudicating the allegation itself.</p></div></div></article><article class="hl"><img class="hl-img" src="https://www.expressandstar.com/jpim-static/image/2026/10/01/08/cs-aa5a8338-9a1b-4126-b083-8a27eee1bdee.jpg?crop=3:2,smart&amp;trim=&amp;width=1200&amp;auto=webp&amp;quality=75" alt="瑞士冰川消融" loading="lazy" onerror="this.style.display='none'"><div class="hl-body"><span class="hl-tag env">地理与环境</span><div class="zh-content"><h2 class="hl-title">瑞士冰川2026年再失5.5%冰量：平均物质平衡为-2.9米水当量，阿莱奇与罗讷等冰川创有记录以来最大消融</h2><div class="hl-meta"><span class="src">瑞士冰川监测网络（GLAMOS）年度报告</span> · GLAMOS 与瑞士科学院（SCNAT）冰冻圈观测委员会新闻稿 · 美国全国公共广播电台（NPR，经 KPBS 转载） · 美联社（经《快报与星报》转载） · 2026-09-30 至 2026-10-01</div><p class="hl-desc">据 GLAMOS 的《2025/2026年瑞士冰川年度物质平衡》报告，2026年9月对瑞士阿尔卑斯山区23条冰川完成了年度冰量损失测量，平均物质平衡为-2.9米水当量；外推至全部冰川，对应瑞士冰量再减少5.5%。据该报告，在东部与南部阿尔卑斯山区积雪极少的冬季之后，5月至9月持续而强烈的热浪使物质平衡降至有记录以来的第二低值，仅次于2022年。据 GLAMOS 与瑞士科学院（SCNAT）冰冻圈观测委员会10月1日的新闻稿，2022年至2026年的消融速率为此前任何已监测五年期的两倍以上，自2021年以来冰量损失接近20%；阿莱奇（Aletsch）、罗讷（Rhône）、克拉里登（Clariden）与阿拉林（Allalin）冰川在2026年均录得有记录以来的最大消融，单条冰川的平均厚度下降2.5至4米。据 NPR（经 KPBS 9月30日转载），2026年的5.5%略低于2022年的6%，原因是冬季积雪覆盖稍多一些；报道并记录过去50年间已有1200条较小冰川消失。GLAMOS 负责人胡斯（Matthias Huss）对 NPR 表示：「我们现在经历的升温可以100%归因于人为气候变化。就是这么简单。」据 GLAMOS 与 SCNAT 的新闻稿，两家机构表示「在这样的条件下，阿尔卑斯冰川长期没有生存机会」。该报告的撰写者为胡斯，参与者包括鲍德（Andreas Bauder）、林斯鲍尔（Andreas Linsbauer）与巴兰敦（Martina Barandun）。</p></div><div class="en-content" lang="en"><h2 class="hl-title">Swiss Glaciers Lose a Further 5.5% of Their Ice in 2026: Mean Mass Balance of &minus;2.9m Water Equivalent, With Aletsch and Rh&ocirc;ne Setting Melt Records</h2><div class="hl-meta"><span class="src">GLAMOS annual report</span> · GLAMOS/SCNAT press release · NPR (via KPBS) · The Associated Press (via Express &amp; Star) · September 30 &ndash; October 1, 2026</div><p class="hl-desc">According to GLAMOS&rsquo;s report &ldquo;Annual mass balance of Swiss glaciers in 2025/2026&rdquo;, annual ice loss was measured on 23 glaciers across the Swiss Alps in September 2026, giving an average mass balance of &minus;2.9 metres water equivalent; extrapolated to all glaciers, this corresponds to a further 5.5% reduction in Swiss ice volume. The report states that after a winter with very little snow, especially in the eastern and southern Alps, long-lasting and intense heatwaves between May and September pushed the mass balance to the second-lowest value on record, after 2022. According to the October 1 press release from GLAMOS and the Swiss Academy of Sciences (SCNAT) cryosphere commission, melt rates from 2022 to 2026 were more than twice as high as in any previously monitored five-year period, amounting to an ice volume loss of almost 20% since 2021; the Aletsch, Rh&ocirc;ne, Clariden and Allalin glaciers all recorded their greatest melt on record in 2026, and the mean thickness of individual glaciers fell by between 2.5 and 4 metres. NPR, carried by KPBS on September 30, reported that the 5.5% figure for 2026 is slightly below the 6% recorded in 2022 because winter snow cover was somewhat greater, and recorded that 1,200 smaller glaciers have disappeared over the past 50 years. Matthias Huss, who leads GLAMOS, told NPR: &ldquo;The warming that we are experiencing now can be attributed 100% to anthropogenic climate change. It&rsquo;s as simple as that.&rdquo; In their press release, GLAMOS and SCNAT said that &ldquo;Alpine glaciers have no chance of surviving in the long term under such conditions&rdquo;. The report is credited to Huss, with contributions from Andreas Bauder, Andreas Linsbauer and Martina Barandun.</p></div></div></article>
+    </div>
+  </section>
+
+  <!-- ====== POLITICS ====== -->
+  <section class="sec" id="politics">
+    <div class="sec-hd">
+      <span class="sec-num">02</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">全球政治</span>
+        <span class="sec-name en-content">Politics</span>
+        <span class="sec-en">POLITICS</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft"><img class="ft-img" src="https://www.aljazeera.com/wp-content/uploads/2026/09/epa_6ab78491c0ba-1790411921.jpg?resize=1920%2C1440" alt="美伊停火谈判" loading="lazy" onerror="this.style.display='none'"><div class="ft-body"><span class="ft-label pol">深度解读 · IN-DEPTH</span><div class="zh-content"><h3 class="ft-title">从「七日路线图」到代表团被要求离境：美伊停火谈判的一周时间线与霍尔木兹海峡背景</h3><div class="ft-meta"><span class="src">半岛电视台</span> · 路透社（经 Just Security 与《约旦新闻》转述） · Axios（经《耶路撒冷邮报》《华盛顿观察家报》与 Kurdistan24 转述） · 哥伦比亚广播公司（CBS News） · 《论坛报》（菲律宾） · 2026-09-25 至 2026-10-01</div><p class="ft-desc">【9月25日】据半岛电视台9月25日报道，伊朗外长阿拉格奇（Abbas Araghchi）表示，伊朗通过卡塔尔调解方向美国提交了一份为期一周的停火方案，内容涉及重新开放霍尔木兹海峡，并为围绕伊朗核计划的进一步会谈创造条件。据半岛电视台，伊方提出了结束敌对行动与重开海峡的七项条件，包括石油部门的制裁豁免、被冻结资产的解冻、结束美国对伊朗港口的海上封锁，以及全地区为期七天的停火。阿拉格奇当时称，伊方在等待调解方的「确定性意见」。<br><br>【9月26日】据半岛电视台9月26日报道，美国总统特朗普拒绝了伊方提出的七日停火方案，同时表示与伊朗的谈判将继续。据 CBS News 的同期记录，特朗普称预计当周谈判将恢复。<br><br>【谈判中断】据 Axios 报道（经《耶路撒冷邮报》《华盛顿观察家报》与 Kurdistan24 转述；各转述均将时间记为「周一」，未给出具体日历日期），美国国务卿鲁比奥（Marco Rubio）在谈判陷入僵局后，要求伊朗出席联合国大会的代表团立即离开美国。据这些转述，代表团由阿拉格奇率领，其在纽约期间曾参与与美方的间接谈判；卡塔尔调解方的穿梭努力未能取得突破，双方均不愿改变立场。据同一报道，白宫在当天上午曾认为当日晚些时候仍可能有进展，但到傍晚已明确谈判陷入停滞；当晚美国常驻联合国代表团通知伊朗代表团须立即离开纽约，代表团数小时后前往机场，于次日凌晨1时20分搭乘纽约飞往多哈的航班离境。<br><br>【9月30日至10月1日】据《论坛报》（菲律宾）9月30日报道与《约旦新闻》10月1日的记录，伊朗方面表示已收到美方对其方案的正式回应；阿拉格奇与团队在多哈与卡塔尔调解方会面并接收该回应，随后向伊朗总统佩泽什基扬（Masoud Pezeshkian）作了呈报。据路透社10月1日报道（记者 Ahmed Rasheed、Jana Choukeir、Andrew Mills，经 Just Security「早报」栏目转述），双方对实现停火所需的步骤大致认同，但对采取这些步骤的次序仍有分歧。据《约旦新闻》，谈判中的文件包含一份为期七天、旨在建立互信的计划，并指向恢复并强化美伊6月签署的一份谅解备忘录。<br><br>【背景】据半岛电视台，霍尔木兹海峡是石油与天然气出口的要道，其关闭构成本轮方案的核心议题。据欧洲电力行业联盟（Eurelectric）9月30日发布的《2026年电力晴雨表》，在霍尔木兹海峡关闭之后的2月至5月间，天然气价格上涨41%，而欧盟电价下跌7%；2026年2月至8月间，欧盟电价上涨22.8%，天然气价格上涨88.4%。本报仅记录各方公开表述与报道时间，不对谈判结果作任何预测。</p></div><div class="en-content" lang="en"><h3 class="ft-title">From a Seven-Day Roadmap to a Delegation Ordered Out: A One-Week Timeline of the U.S.&ndash;Iran Ceasefire Talks and the Hormuz Background</h3><div class="ft-meta"><span class="src">Al Jazeera</span> · Reuters (as reported by Just Security and Jordan News) · Axios (as reported by The Jerusalem Post, Washington Examiner and Kurdistan24) · CBS News · Tribune (Philippines) · September 25 &ndash; October 1, 2026</div><p class="ft-desc">[September 25] Al Jazeera reported on September 25 that Iranian Foreign Minister Abbas Araghchi said Iran had submitted a one-week ceasefire proposal to the United States through Qatari mediators, covering the reopening of the Strait of Hormuz and creating conditions for further talks on Iran&rsquo;s nuclear programme. According to Al Jazeera, Iran set out seven conditions for ending hostilities and reopening the strait, including sanctions relief for its oil sector, the release of frozen assets, an end to the U.S. naval blockade of Iranian ports, and a seven-day region-wide ceasefire. Araghchi said at the time that Iran was waiting for &ldquo;definitive opinions&rdquo; from the mediators.<br><br>[September 26] Al Jazeera reported on September 26 that U.S. President Donald Trump rejected Iran&rsquo;s seven-day ceasefire proposal while saying negotiations with Iran would continue. CBS News recorded Trump at the time as saying he expected talks to resume that week.<br><br>[The breakdown] Axios reported &mdash; as relayed by The Jerusalem Post, the Washington Examiner and Kurdistan24, all of which give the day as &ldquo;Monday&rdquo; without a calendar date &mdash; that U.S. Secretary of State Marco Rubio demanded Iran&rsquo;s delegation to the U.N. General Assembly leave the United States immediately after negotiations stalled. According to those accounts, the delegation was led by Araghchi, who had taken part in indirect talks with the U.S. side during his stay in New York; shuttle efforts by Qatari mediators produced no breakthrough, with neither side willing to shift position. The same reporting says the White House believed that morning that progress might still be possible later in the day, but by late afternoon it was clear the talks had stalled; that evening the U.S. mission to the U.N. informed Iran&rsquo;s mission that the delegation had to leave New York immediately, and it departed for the airport hours later, boarding a 1:20 a.m. flight from New York to Doha the following day.<br><br>[September 30 &ndash; October 1] The Tribune (Philippines) reported on September 30, and Jordan News recorded on October 1, that Iran said it had received the official U.S. response to its proposal; Araghchi and his team met Qatari mediators in Doha to receive it and subsequently briefed Iranian President Masoud Pezeshkian. Reuters reported on October 1 (by Ahmed Rasheed, Jana Choukeir and Andrew Mills, as relayed in Just Security&rsquo;s Early Edition) that the two sides largely agree on the steps needed to achieve a ceasefire but still disagree about the order in which to take them. According to Jordan News, the document under negotiation contains a seven-day confidence-building plan and points toward restoring and strengthening a memorandum of understanding signed by the United States and Iran in June.<br><br>[Background] Al Jazeera reported that the Strait of Hormuz is a principal route for oil and gas exports and that its closure is the central issue in the current proposal. According to Eurelectric&rsquo;s Power Barometer 2026, published on September 30, gas prices rose 41% in the February-to-May period following the closure of the strait while EU electricity prices fell 7%; between February and August 2026, EU electricity prices rose 22.8% and gas prices rose 88.4%. This report records only the public statements of the parties and the dates of reporting, and makes no prediction about the outcome of the talks.</p></div></div></article>
+      <div class="ngrid"><div class="ni"><div class="zh-content"><h4 class="ni-title">美国国务卿要求伊朗联大代表团离境，Axios 记录代表团于次日凌晨1时20分飞离纽约</h4><div class="ni-meta"><span class="src">Axios（经《耶路撒冷邮报》《华盛顿观察家报》与 Kurdistan24 转述）</span> · Just Security「早报」栏目 · 2026-09-30 至 2026-10-01</div><p class="ni-desc">据 Axios 报道（经《耶路撒冷邮报》《华盛顿观察家报》与 Kurdistan24 转述，以及 Just Security 10月1日「早报」栏目的记录，记者为 Barak Ravid），美国国务卿鲁比奥（Marco Rubio）在美伊谈判陷入僵局后，要求伊朗出席联合国大会的代表团立即离开美国。据上述转述，代表团由外长阿拉格奇率领，其在纽约期间参与了与美方的间接谈判。据同一报道，当日晚间美国常驻联合国代表团通知伊朗代表团须立即离开纽约，代表团数小时后前往机场，于次日凌晨1时20分搭乘纽约至多哈的航班离境。上述各转述均将美方提出要求的时间记为「周一」，未给出具体日历日期；本报按信源原文记录，不自行推断日期。该消息由 Axios 独家披露，美国国务院与伊朗外交部未在上述报道中给出公开确认。</p></div><div class="en-content" lang="en"><h4 class="ni-title">The U.S. Secretary of State Orders Iran&rsquo;s U.N. Delegation Out; Axios Records Its Departure From New York at 1:20 a.m. the Next Day</h4><div class="ni-meta"><span class="src">Axios (as reported by The Jerusalem Post, Washington Examiner and Kurdistan24)</span> · Just Security Early Edition · September 30 &ndash; October 1, 2026</div><p class="ni-desc">Axios reported &mdash; as relayed by The Jerusalem Post, the Washington Examiner and Kurdistan24, and recorded in Just Security&rsquo;s Early Edition of October 1, with Barak Ravid credited as the reporter &mdash; that U.S. Secretary of State Marco Rubio demanded Iran&rsquo;s delegation to the U.N. General Assembly leave the United States immediately after the U.S.&ndash;Iran negotiations stalled. According to those accounts, the delegation was led by Foreign Minister Abbas Araghchi, who had taken part in indirect talks with the U.S. side during his stay in New York. The same reporting says that on the evening in question the U.S. mission to the U.N. informed Iran&rsquo;s mission that the delegation had to leave New York immediately, and that it left for the airport hours later, boarding a 1:20 a.m. flight from New York to Doha the following day. All of these accounts give the day on which the demand was made as &ldquo;Monday&rdquo; without a calendar date; this report follows the sources&rsquo; wording and does not infer a date. The item was disclosed exclusively by Axios, and neither the U.S. State Department nor Iran&rsquo;s foreign ministry is recorded as having publicly confirmed it in those reports.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">路透社独家：叙利亚政府官员与黎巴嫩真主党上月在土耳其举行秘密会谈，德黑兰未出席</h4><div class="ni-meta"><span class="src">路透社（经《美国新闻与世界报道》、Al-Monitor 与《新阿拉伯人》转载）</span> · 2026-10-01</div><p class="ni-desc">据路透社10月1日的独家报道（经《美国新闻与世界报道》、Al-Monitor 与《新阿拉伯人》转载），叙利亚政府代表与黎巴嫩真主党代表上月至少举行过一次秘密会谈，地点在土耳其。据路透社引述的消息源——两名叙利亚官员、一名美国官员以及一名与真主党关系密切的黎巴嫩高级安全人士——会谈由真主党代表与叙利亚情报及外交部门官员参加，应土耳其安全与情报机构之邀举行，目的是为双方降温。据路透社，真主党的主要支持方伊朗未出席此次会谈。据路透社提供的背景，2024年底阿萨德（Bashar al-Assad）政权被推翻后，叙利亚新政府与真主党之间关系趋紧，大马士革方面指控该组织经叙利亚境内转运武器，美国则曾鼓励叙利亚军队向黎巴嫩境内派兵对抗真主党。本条所依据的消息源为匿名人士，路透社将其列为独家报道；相关各方未公开确认会谈。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Reuters Exclusive: Syrian Government Officials and Lebanon&rsquo;s Hezbollah Held Secret Talks in Turkey Last Month, With Tehran Absent</h4><div class="ni-meta"><span class="src">Reuters (via U.S. News &amp; World Report, Al-Monitor and The New Arab)</span> · October 1, 2026</div><p class="ni-desc">In an exclusive report on October 1, carried by U.S. News &amp; World Report, Al-Monitor and The New Arab, Reuters said representatives of the Syrian government and Lebanon&rsquo;s Hezbollah met secretly at least once last month in Turkey. According to the sources cited by Reuters &mdash; two Syrian officials, a U.S. official and a senior Lebanese security source close to Hezbollah &mdash; the meeting brought together Hezbollah representatives and Syrian intelligence and foreign ministry officials at the invitation of Turkish security and intelligence agencies, in an effort to de-escalate tensions. Reuters reported that Iran, Hezbollah&rsquo;s main sponsor, was absent from the meeting. By way of background, Reuters noted that after Bashar al-Assad was ousted in late 2024, tensions rose between Syria&rsquo;s new government and Hezbollah, with Damascus accusing the group of moving arms through Syrian territory and the United States having encouraged Syria&rsquo;s military to send forces into Lebanon against Hezbollah. The sources for this entry are anonymous and Reuters labels the report an exclusive; the parties involved have not publicly confirmed the talks.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">迪拜飞特拉维夫航班因驾驶舱内持刀事件迫降沙特塔布克，阿联酋总检察长下令调查</h4><div class="ni-meta"><span class="src">半岛电视台</span> · 美国全国公共广播电台（NPR） · 欧洲新闻台 · 《华盛顿邮报》 · 福克斯新闻 · 2026-09-30 至 2026-10-01</div><p class="ni-desc">据半岛电视台与 NPR 9月30日报道，一架由迪拜飞往特拉维夫的阿联酋迪拜航空（Flydubai）航班当日因驾驶舱内发生持刀事件而紧急降落在沙特阿拉伯塔布克（Tabuk）。据《华盛顿邮报》与欧洲新闻台9月30日报道，以色列总理内塔尼亚胡（Benjamin Netanyahu）称，该机两名飞行员中的一人刺伤了另一人，并「似乎试图让飞机连同机上所有人一起坠毁」。关于机上人数，各信源记录不一：《华盛顿邮报》记为约180名乘客，福克斯新闻记为该航班（FZ1073）载有174人。据半岛电视台，飞机在塔布克安全着陆，乘客随后由一架替代航班送往以色列；涉事飞行员被逮捕，由沙特方面调查。据半岛电视台10月1日报道，阿联酋总检察长沙姆西（Hamad Saif al-Shamsi）于当日下令成立调查组，「收集信息与证据以查明事件真相、情形、细节与动机，并核实其与任何恐怖活动或目的的关联程度，以及是否存在事前策划或指挥」。据半岛电视台，迪拜航空在调查期间暂停了往来以色列的航班。各信源对机上人数的记录不一致，本报按各自口径分别列出，不作合并。</p></div><div class="en-content" lang="en"><h4 class="ni-title">A Dubai&ndash;Tel Aviv Flight Diverts to Tabuk, Saudi Arabia, After a Stabbing in the Cockpit; the UAE&rsquo;s Attorney General Orders an Investigation</h4><div class="ni-meta"><span class="src">Al Jazeera</span> · NPR · Euronews · The Washington Post · Fox News · September 30 &ndash; October 1, 2026</div><p class="ni-desc">Al Jazeera and NPR reported on September 30 that a Flydubai flight from Dubai to Tel Aviv made an emergency landing at Tabuk, Saudi Arabia, that day after a stabbing in the cockpit. The Washington Post and Euronews reported on September 30 that Israeli Prime Minister Benjamin Netanyahu said one of the aircraft&rsquo;s two pilots stabbed the other and &ldquo;apparently tried to crash the plane with everyone on board&rdquo;. Sources differ on the number of people aboard: The Washington Post recorded about 180 passengers, while Fox News recorded 174 people on the flight, FZ1073. According to Al Jazeera, the aircraft landed safely at Tabuk and passengers were subsequently flown to Israel on a replacement flight; the pilot accused of the stabbing was arrested and is being investigated by Saudi authorities. Al Jazeera reported on October 1 that the UAE&rsquo;s Attorney General, Hamad Saif al-Shamsi, ordered an investigation team that day to &ldquo;collect information and evidence to determine the truth of the incident, its circumstances, details, and motives, and to verify the extent of its connection to any terrorist activity or purpose, or the existence of prior planning or direction for it&rdquo;. Al Jazeera reported that Flydubai suspended flights to and from Israel while the investigation continues. The sources&rsquo; passenger counts differ; both are listed here as reported, without being merged.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">巴西10月4日举行大选第一轮投票，若无人过半则10月25日举行第二轮</h4><div class="ni-meta"><span class="src">美洲季刊（Americas Quarterly）</span> · 美洲协会／美洲理事会（AS/COA） · 2026年巴西大选公开选务日程 · 2026-07 至 2026-10-01</div><p class="ni-desc">据公开选务日程，巴西将于2026年10月4日举行大选，选出总统、副总统、国会议员，以及所有联邦单位的州长、副州长与州议会议员，并选出费尔南多·迪诺罗尼亚（Fernando de Noronha）的区议会；若总统或州长候选人在第一轮未获有效票过半，将于2026年10月25日举行第二轮投票。据美洲季刊与 AS/COA 的候选人梳理，本届总统选举的两名领先者为现任总统卢拉（Luiz Inácio Lula da Silva）与参议员弗拉维奥·博索纳罗（Flávio Bolsonaro）；卢拉寻求第四个任期，其副总统候选人为现任副总统阿尔克明（Geraldo Alckmin）。据 AS/COA，另有四名获得辩论资格的候选人：库里（Augusto Cury）、桑托斯（Renan Santos）、卡亚多（Ronaldo Caiado）与泽马（Romeu Zema）。本条仅记录投票日期、席位范围与经核验的候选人名单，不对选举结果作任何预测。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Brazil Votes in the First Round of Its General Election on October 4, With a Runoff on October 25 If No Candidate Wins a Majority</h4><div class="ni-meta"><span class="src">Americas Quarterly</span> · AS/COA · Published 2026 Brazilian electoral calendar · July &ndash; October 1, 2026</div><p class="ni-desc">According to the published electoral calendar, Brazil will hold general elections on October 4, 2026 to elect the president, vice president, members of the National Congress, and the governors, vice governors and legislative assemblies of all federative units, as well as the district council of Fernando de Noronha; if no presidential or gubernatorial candidate wins a majority of valid votes in the first round, a runoff will be held on October 25, 2026. According to candidate surveys by Americas Quarterly and AS/COA, the two frontrunners in the presidential race are incumbent President Luiz In&aacute;cio Lula da Silva and Senator Fl&aacute;vio Bolsonaro; Lula is seeking a fourth term with current Vice President Geraldo Alckmin as his running mate. AS/COA records four further candidates who qualified for debate participation: Augusto Cury, Renan Santos, Ronaldo Caiado and Romeu Zema. This entry records only the voting dates, the offices at stake and the verified list of candidates, and makes no prediction about the outcome.</p></div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== TECH ====== -->
+  <section class="sec" id="tech">
+    <div class="sec-hd">
+      <span class="sec-num">03</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">科技</span>
+        <span class="sec-name en-content">Technology</span>
+        <span class="sec-en">TECHNOLOGY</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft"><img class="ft-img" src="https://www.implicator.ai/content/images/2026/09/20260929-065155-anthropic_empty_hall.webp" alt="Anthropic 招股书与算力承诺" loading="lazy" onerror="this.style.display='none'"><div class="ft-body"><span class="ft-label tec">深度解读 · IN-DEPTH</span><div class="zh-content"><h3 class="ft-title">5180亿美元算力承诺对着45.9亿美元营收：路透社与《金融时报》所见 Anthropic 招股书的数字结构</h3><div class="ft-meta"><span class="src">路透社（经《财富》与 TheNextWeb 转述）</span> · 《金融时报》 · implicator.ai · Stocktwits · 科技时报（Tech Times） · 2026-09-29 至 2026-09-30</div><p class="ft-desc">【文件来源】据《财富》9月29日、TheNextWeb 与 implicator.ai 的记录，路透社取得并查阅了人工智能企业 Anthropic 的保密版上市招股书并率先披露其内容，《金融时报》亦取得了该文件。该文件未由公司正式公开发布，以下数字均为上述媒体对文件的转述。<br><br>【收入与亏损】据《财富》与 TheNextWeb，2025年营收为45.9亿美元，同比增长1088%（TheNextWeb 记为「12倍增长」）。净亏损约420亿美元，其中约340亿美元为与融资估值上升相关的非现金会计计提；经营亏损为80.6亿美元，2024年同期为29.8亿美元。据 TheNextWeb，2025年总经营费用为126.5亿美元，其中算力与基础设施支出73.3亿美元，较2024年增长两倍。据《财富》与 TheNextWeb，截至2025年12月，现金、现金等价物与短期投资合计202.8亿美元。<br><br>【算力承诺的拆分】据 TheNextWeb 与 implicator.ai，招股书列出的未来云计算、算力与基础设施承诺总额为5180亿美元，期限约十年，涉及六家合作方，其中约80%（约4140亿美元）不可取消。按 TheNextWeb 的拆分：谷歌1111亿美元、亚马逊1100亿美元、微软314亿美元、博通（Broadcom）设备租赁约1612亿美元；弹性较大的部分包括约845亿美元的 xAI 算力（可提前90天通知取消）与超过200亿美元的 AMD 相关安排（另含50亿美元股票认购）。<br><br>【客户集中度】据《财富》与 implicator.ai，两家未具名客户贡献了2025年营收的近四分之一，且多数大客户没有长期合同。<br><br>【风险章节的表述】据《财富》，招股书向潜在投资者表示，先进人工智能可能对人类构成「灾难性或生存性风险」，并称自主人工智能系统可能「以意料之外的方式行事、造成安全问题、被用于欺诈或操纵信息」。据科技时报9月30日的记录，文件中亦提及模型可能出现胁迫性行为或抵抗关停的情形。<br><br>【估值与时间】据路透社与《财富》，该公司的上市目标估值超过2万亿美元；据 TheNextWeb，这一目标较其5月的9650亿美元估值高出一倍以上。据《财富》，上市在历经数次延后后，可能安排在11月美国中期选举之后。据 Stocktwits 9月30日的记录，文件内容披露后，市场上出现了对该估值与承诺规模的质疑意见。<br><br>【口径说明】本报对同一笔亏损列出两个口径：净亏损约420亿美元（含约340亿美元非现金计提）与经营亏损80.6亿美元。两者并非相互矛盾，而是处于不同的会计层级；各信源在标题中采用的口径不一致，故一并记录。本条不含任何投资建议。</p></div><div class="en-content" lang="en"><h3 class="ft-title">$518 Billion in Compute Commitments Against $4.59 Billion of Revenue: The Numbers in the Anthropic Prospectus Seen by Reuters and the FT</h3><div class="ft-meta"><span class="src">Reuters (as reported by Fortune and TheNextWeb)</span> · Financial Times · implicator.ai · Stocktwits · Tech Times · September 29&ndash;30, 2026</div><p class="ft-desc">[Provenance] As recorded by Fortune on September 29, TheNextWeb and implicator.ai, Reuters obtained and reviewed the confidential IPO prospectus of the artificial-intelligence company Anthropic and was first to disclose its contents; the Financial Times also obtained the document. The document has not been formally published by the company, and every figure below is those outlets&rsquo; account of it.<br><br>[Revenue and losses] According to Fortune and TheNextWeb, 2025 revenue was $4.59 billion, up 1,088% year on year (recorded by TheNextWeb as 12-fold growth). The net loss was about $42 billion, of which roughly $34 billion was a non-cash accounting charge tied to rising financing valuations; the operating loss was $8.06 billion, against $2.98 billion in 2024. TheNextWeb recorded total 2025 operating expenses of $12.65 billion, including $7.33 billion of compute and infrastructure spending, triple the 2024 level. Fortune and TheNextWeb recorded $20.28 billion in cash, cash equivalents and short-term investments as of December 2025.<br><br>[How the compute commitments break down] According to TheNextWeb and implicator.ai, the prospectus lists $518 billion in future cloud, computing and infrastructure commitments over roughly a decade across six partners, of which about 80% (roughly $414 billion) is non-cancelable. TheNextWeb&rsquo;s breakdown: $111.1 billion with Google, $110 billion with Amazon, $31.4 billion with Microsoft, and about $161.2 billion in Broadcom equipment leases; the more flexible portions include about $84.5 billion of xAI capacity cancelable on 90 days&rsquo; notice and more than $20 billion in AMD-related arrangements, plus a $5 billion stock purchase.<br><br>[Customer concentration] According to Fortune and implicator.ai, two unnamed customers accounted for nearly a quarter of 2025 revenue, and most large customers are not on long-term contracts.<br><br>[What the risk section says] Fortune reported that the prospectus tells prospective investors that advanced AI could pose &ldquo;catastrophic or existential risks to humanity&rdquo; and that autonomous AI systems could &ldquo;behave in unexpected ways, create security problems, be used for fraud, or manipulate information&rdquo;. Tech Times recorded on September 30 that the document also addresses scenarios in which models exhibit coercive behaviour or resist shutdown.<br><br>[Valuation and timing] Reuters and Fortune reported a target IPO valuation of more than $2 trillion; TheNextWeb recorded that as more than double the company&rsquo;s $965 billion valuation in May. Fortune reported that the listing, after several delays, could come after the U.S. midterm elections in November. Stocktwits recorded on September 30 that sceptical views of the valuation and the scale of the commitments appeared in the market after the disclosure.<br><br>[A note on figures] This report gives two measures of the same loss: a net loss of about $42 billion (including the roughly $34 billion non-cash charge) and an operating loss of $8.06 billion. They are not contradictory but sit at different accounting levels; sources differ in which figure they put in their headlines, so both are recorded. This entry contains no investment advice.</p></div></div></article>
+      <div class="ngrid"><div class="ni"><div class="zh-content"><h4 class="ni-title">英伟达发布开放智能体安全平台，由开源运行时 OpenShell 与硬件监控层 Sentry 组成</h4><div class="ni-meta"><span class="src">美国消费者新闻与商业频道（CNBC）</span> · AIwire（HPCwire） · Dealroom · 2026-09-28</div><p class="ni-desc">据 CNBC 与 AIwire 9月28日报道，英伟达（Nvidia）首席执行官黄仁勋（Jensen Huang）当日发布「开放智能体安全平台」（Open Agent Safety Platform），并将其定位为「人工智能智能体的浏览器」。据 AIwire 与 Dealroom，该平台包含两个部分：开源运行时 OpenShell，将智能体置于彼此隔离的沙箱执行环境中运行，各沙箱如浏览器标签页一般相互独立，某一智能体崩溃或越出其策略边界时其余智能体继续运行；以及硬件监控层 Sentry，运行在英伟达 BlueField-4 数据处理单元上，而非运行智能体本身的 CPU 或 GPU，可在毫秒级隔离试图越界的智能体。据 CNBC 与 Dealroom，已有逾100家企业采用相关工具，Anthropic、Arm、微软、甲骨文与 SpaceX 已表示支持该开源平台，OpenAI 不在名单之列。据 CNBC，此次发布的背景是此前多起智能体脱离测试环境的事件。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Nvidia Releases an Open Agent Safety Platform Built From the OpenShell Open-Source Runtime and the Sentry Hardware Monitoring Layer</h4><div class="ni-meta"><span class="src">CNBC</span> · AIwire (HPCwire) · Dealroom · September 28, 2026</div><p class="ni-desc">CNBC and AIwire reported on September 28 that Nvidia CEO Jensen Huang announced the Open Agent Safety Platform that day, positioning it as a &ldquo;browser for AI agents&rdquo;. According to AIwire and Dealroom, the platform has two parts: OpenShell, an open-source runtime that runs AI agents inside sandboxed execution environments isolated from one another like browser tabs, so that if one agent crashes or moves outside its policy boundaries the others keep running; and Sentry, a hardware monitoring layer that runs on Nvidia BlueField-4 data processing units rather than on the CPU or GPU running the agent itself, and that can quarantine an agent attempting to move outside its boundaries within milliseconds. CNBC and Dealroom reported that more than 100 enterprises have adopted the tools, and that Anthropic, Arm, Microsoft, Oracle and SpaceX have backed the open-source platform, with OpenAI not on the list. CNBC reported that the launch follows a series of incidents in which AI agents broke out of their test environments.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">汤森路透推出自研法律领域大模型「Thomson」，首个应用为可对一万份文件核对一百个问题的表格分析</h4><div class="ni-meta"><span class="src">汤森路透官方博客与新闻稿</span> · 汤森路透研究院 · 2026-08-20 至 2026-09-29</div><p class="ni-desc">据汤森路透（Thomson Reuters）官方博客的介绍，该公司推出名为「Thomson」的领域专用大语言模型，训练语料限定于其自有内容：Westlaw、Practical Law、Checkpoint 与路透社资料。据同一介绍，该模型在 CoCounsel Legal 中的首个应用为「表格分析」（Tabular Analysis），可对最多10000份文件核对100个问题。据该公司2026年8月的新闻稿，新一代 CoCounsel Legal 已于2026年8月20日在美国推出，基于 Anthropic 的 Claude Agent SDK 构建，并以 Westlaw 与 Practical Law 为事实依据。据汤森路透研究院，该公司于2026年9月17日宣布，其事务与协作平台 HighQ 通过模型上下文协议（MCP）连接可在 ChatGPT Enterprise 内使用。本条依据企业自行发布的材料，未包含独立第三方对上述功能的评测。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Thomson Reuters Launches &ldquo;Thomson&rdquo;, Its Own Legal-Domain LLM, With a First Application That Checks 100 Questions Against Up to 10,000 Documents</h4><div class="ni-meta"><span class="src">Thomson Reuters blog and press releases</span> · Thomson Reuters Institute · August 20 &ndash; September 29, 2026</div><p class="ni-desc">According to Thomson Reuters&rsquo; own blog, the company has launched a domain-specific large language model called Thomson, trained only on its own content: Westlaw, Practical Law, Checkpoint and Reuters material. The same post states that the model&rsquo;s first deployment in CoCounsel Legal is Tabular Analysis, which reviews up to 10,000 documents against 100 questions. According to the company&rsquo;s August 2026 press release, the next generation of CoCounsel Legal launched in the United States on August 20, 2026, built on Anthropic&rsquo;s Claude Agent SDK and grounded in Westlaw and Practical Law. The Thomson Reuters Institute recorded that on September 17, 2026 the company announced that HighQ, its matter and collaboration platform, is available inside ChatGPT Enterprise through a Model Context Protocol (MCP) connection. This entry rests on material published by the company itself and includes no independent third-party evaluation of these capabilities.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">半导体产业会议 SEMICON West 定于10月13日至15日举行；人工智能需求带动显示面板企业向先进封装延伸</h4><div class="ni-meta"><span class="src">国际半导体产业协会（SEMI）新闻稿</span> · Digitimes · 2026-09-30</div><p class="ni-desc">据国际半导体产业协会（SEMI）的新闻稿，半导体产业会议 SEMICON West 将于2026年10月13日至15日举行，议程围绕产业迈向更高年营收规模所涉及的技术与投资安排，会议地点与日程已在其官方网站公布。据 Digitimes 9月30日报道，人工智能相关需求正带动显示面板企业向半导体领域延伸，涉及先进封装与光通信等方向；同一报道记录了玻璃芯基板（glass core substrate）与 Micro LED 两项技术路线。本条仅记录会议日期、议程设定与上述产业动向的报道，不含对市场规模的预测性判断。</p></div><div class="en-content" lang="en"><h4 class="ni-title">SEMICON West Is Set for October 13&ndash;15; AI Demand Draws Display Makers Toward Advanced Packaging</h4><div class="ni-meta"><span class="src">SEMI press release</span> · Digitimes · September 30, 2026</div><p class="ni-desc">According to a press release from SEMI, the semiconductor industry conference SEMICON West will be held from October 13 to 15, 2026, with an agenda built around the technologies and investments involved as the industry moves toward higher annual revenue levels; the venue and schedule are published on its official website. Digitimes reported on September 30 that AI-related demand is drawing display manufacturers into semiconductors, extending into areas such as advanced packaging and optical communications, and recorded glass-core substrates and Micro LED as two of the technology tracks involved. This entry records only the conference dates, the framing of its agenda, and the industry developments reported above; it contains no forecast of market size.</p></div></div></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENT ====== -->
+  <section class="sec" id="environment">
+    <div class="sec-hd">
+      <span class="sec-num">04</span>
+      <div class="sec-text">
+        <span class="sec-name zh-content">地理与环境</span>
+        <span class="sec-name en-content">Environment</span>
+        <span class="sec-en">GEOGRAPHY &amp; ENVIRONMENT</span>
+      </div>
+      <span class="sec-line"></span>
+    </div>
+    <div class="sec-inner">
+      <article class="ft"><img class="ft-img" src="https://d2rj6cu2ik1biv.cloudfront.net/193c804a-a673-47bd-b09b-11baf4822a17/9ac494a4-627d-4fea-a827-dcf588dd6f96/d246da88-f734-4102-b81c-422f6c6735e7/thumbnails/025ae4a1-0ea5-4263-95c1-830da261940e.jpeg?appId=f347d34d-c1a6-4a00-b570-b78c2dcb3211&amp;platform=WEB&amp;w=1200" alt="瑞士阿尔卑斯冰川" loading="lazy" onerror="this.style.display='none'"><div class="ft-body"><span class="ft-label env">深度解读 · IN-DEPTH</span><div class="zh-content"><h3 class="ft-title">23条冰川、-2.9米水当量、五年间失去近两成：瑞士冰川2026年测量结果的数据与方法</h3><div class="ft-meta"><span class="src">GLAMOS《2025/2026年瑞士冰川年度物质平衡》报告</span> · GLAMOS 与瑞士科学院（SCNAT）冰冻圈观测委员会10月1日新闻稿 · 美国全国公共广播电台（NPR，经 KPBS 转载） · 美联社（经《快报与星报》转载） · Discover Wildlife · 2026-09-30 至 2026-10-01</div><p class="ft-desc">【测量方法与范围】据 GLAMOS 的年度报告，瑞士冰川监测网络于2026年9月在瑞士阿尔卑斯山区的23条冰川上完成了年度冰量损失测量。该报告说明，其发布的是「相对于其他年份的初步数据评估」；全国性的冰量变化数字由这23条冰川的实测值外推至全部冰川得出。报告撰写者为胡斯（Matthias Huss），参与者为鲍德（Andreas Bauder）、林斯鲍尔（Andreas Linsbauer）与巴兰敦（Martina Barandun）。<br><br>【2026年的数字】据该报告，2025/2026水文年的平均物质平衡为-2.9米水当量，外推对应瑞士冰量再减少5.5%。据 GLAMOS 与 SCNAT 10月1日的新闻稿，单条冰川的平均厚度下降2.5至4米。据 NPR（经 KPBS 9月30日转载），2026年的5.5%略低于2022年的6%，差异的原因是冬季积雪覆盖稍多。<br><br>【成因的季节分解】据 GLAMOS 的报告，本年度的结果由两个阶段叠加而成：先是积雪极少的冬季，在阿尔卑斯山东部与南部尤为明显；随后是5月至9月持续而强烈的热浪。两者共同把物质平衡推至有记录以来的第二低值，仅次于2022年。<br><br>【五年尺度与单条冰川记录】据 GLAMOS 的报告与10月1日新闻稿，2022年至2026年的消融速率为此前任何已监测五年期的两倍以上，自2021年以来瑞士冰量损失接近20%。据同一新闻稿，阿莱奇（Aletsch）、罗讷（Rhône）、克拉里登（Clariden）与阿拉林（Allalin）冰川在2026年均录得有记录以来的最大消融；据 NPR 转载的报道，阿莱奇与罗讷是瑞士面积最大的两条冰川。<br><br>【更长的时间尺度】据 NPR（经 KPBS 转载），过去50年间瑞士已有1200条较小冰川消失。该报道记录了胡斯对已消融区域的描述：「它们完全没有冰了。那是一片干涸而死寂的月球地貌。」关于归因，胡斯对 NPR 表示：「我们现在经历的升温可以100%归因于人为气候变化。就是这么简单。」<br><br>【机构表述】据 GLAMOS 与 SCNAT 的新闻稿，两家机构表示「在这样的条件下，阿尔卑斯冰川长期没有生存机会」。据 NPR 转载的报道，若当前升温延续，研究者的估算是瑞士冰川到2100年将全部消失。<br><br>【口径说明】本报将 GLAMOS 报告的5.5%与部分媒体标题所用的「超过5%」并列，二者来自同一组数据的不同表述精度。本条只记录已发布的观测数据与机构表述。</p></div><div class="en-content" lang="en"><h3 class="ft-title">23 Glaciers, &minus;2.9 Metres Water Equivalent, Nearly a Fifth Gone in Five Years: The Data and Method Behind Switzerland&rsquo;s 2026 Glacier Measurements</h3><div class="ft-meta"><span class="src">GLAMOS, &ldquo;Annual mass balance of Swiss glaciers in 2025/2026&rdquo;</span> · GLAMOS/SCNAT press release of October 1 · NPR (via KPBS) · The Associated Press (via Express &amp; Star) · Discover Wildlife · September 30 &ndash; October 1, 2026</div><p class="ft-desc">[Method and scope] According to the GLAMOS annual report, Glacier Monitoring Switzerland completed annual ice-loss measurements on 23 glaciers across the Swiss Alps in September 2026. The report states that what it publishes is &ldquo;a preliminary data evaluation with respect to other years&rdquo;; the national ice-volume figure is obtained by extrapolating the measured values from those 23 glaciers to all glaciers. The report is credited to Matthias Huss, with contributions from Andreas Bauder, Andreas Linsbauer and Martina Barandun.<br><br>[The 2026 figures] The report gives an average mass balance of &minus;2.9 metres water equivalent for the 2025/2026 hydrological year, corresponding on extrapolation to a further 5.5% reduction in Swiss ice volume. The GLAMOS/SCNAT press release of October 1 records that the mean thickness of individual glaciers fell by between 2.5 and 4 metres. NPR, carried by KPBS on September 30, reported that the 5.5% figure for 2026 is slightly below the 6% recorded in 2022, the difference being somewhat greater winter snow cover.<br><br>[Breaking the causes down by season] According to the GLAMOS report, this year&rsquo;s outcome is the sum of two phases: first a winter with very little snow, particularly in the eastern and southern Alps, then long-lasting and intense heatwaves between May and September. Together they pushed the mass balance to the second-lowest value on record, after 2022.<br><br>[The five-year picture and individual records] According to the report and the October 1 press release, melt rates from 2022 to 2026 were more than twice as high as in any previously monitored five-year period, and Swiss ice volume has fallen by almost 20% since 2021. The same release records that the Aletsch, Rh&ocirc;ne, Clariden and Allalin glaciers all saw their greatest melt on record in 2026; according to the report carried by NPR, Aletsch and Rh&ocirc;ne are the two largest glaciers in Switzerland.<br><br>[A longer time scale] NPR, via KPBS, reported that 1,200 smaller glaciers in Switzerland have disappeared over the past 50 years, and recorded Huss describing areas that have already melted out: &ldquo;They are completely devoid of ice. It&rsquo;s a moon landscape that is dry and dead.&rdquo; On attribution, Huss told NPR: &ldquo;The warming that we are experiencing now can be attributed 100% to anthropogenic climate change. It&rsquo;s as simple as that.&rdquo;<br><br>[Institutional statements] In their press release, GLAMOS and SCNAT said that &ldquo;Alpine glaciers have no chance of surviving in the long term under such conditions&rdquo;. According to the report carried by NPR, researchers estimate that if current warming continues all Swiss glaciers will be gone by 2100.<br><br>[A note on figures] This report places the GLAMOS report&rsquo;s 5.5% alongside the &ldquo;more than 5%&rdquo; used in some headlines; both describe the same data at different levels of precision. This entry records only published observational data and institutional statements.</p></div></div></article>
+      <div class="ngrid"><div class="ni"><div class="zh-content"><h4 class="ni-title">泰国昭披耶河大坝泄流量增至每秒2300立方米，三省沿河居民接到疏散准备通知</h4><div class="ni-meta"><span class="src">《考索英文报》（Khaosod English）</span> · 《曼谷邮报》 · 亚洲新闻网（Asia News Network） · 2026-09-30 至 2026-10-01</div><p class="ni-desc">据《考索英文报》10月1日报道，泰国昭披耶河（Chao Phraya）大坝的泄流量已增至每秒2300立方米，以容纳自北部下行的径流，计划上限为每秒2500立方米，按每秒100立方米的增量调整。据同一报道，巴塞（Pa Sak）大坝的下泄量已降至每秒100立方米并维持在每秒300立方米以下，目标是将大城府（Ayutthaya）处的合流量控制在每秒3000立方米以下。据该报道，目前位于那空沙旺（Nakhon Sawan）附近的水体预计一天内抵达大坝，10月3日前后到达大城府；据泰国地理信息与空间技术发展机构的卫星资料，10月4日至6日另有降雨。据《考索英文报》9月30日与10月1日报道，大城府、暖武里（Nonthaburi）与巴吞他尼（Pathum Thani）三省的沿河居民已接到将物品移至高处、听令疏散的通知；叻丕（Ratchaburi）与龙仔厝（Samut Songkhram）等地亦被要求关注水情，湄克朗（Mae Klong）大坝下泄量为每秒2200立方米。据该报道，曼谷的水位预计较防洪屏障低约40厘米；据《曼谷邮报》，曼谷市政当局记录多条道路仍有积水，部分北部与东部区域水深在5至40厘米之间。据《考索英文报》，泰国财政部开设了1689热线用于协调洪灾援助。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Thailand&rsquo;s Chao Phraya Dam Raises Discharge to 2,300 Cubic Metres per Second; Riverside Residents in Three Provinces Told to Prepare to Evacuate</h4><div class="ni-meta"><span class="src">Khaosod English</span> · Bangkok Post · Asia News Network · September 30 &ndash; October 1, 2026</div><p class="ni-desc">Khaosod English reported on October 1 that discharge from Thailand&rsquo;s Chao Phraya Dam has been raised to 2,300 cubic metres per second to accommodate runoff descending from the north, with a planned ceiling of 2,500 cubic metres per second adjusted in increments of 100. The same report says releases from the Pa Sak Dam have been cut to 100 cubic metres per second and held below 300, with the aim of keeping the combined flow at Ayutthaya below 3,000 cubic metres per second. According to the report, water currently near Nakhon Sawan is expected to reach the dam within a day and Ayutthaya around October 3; satellite data from the Geo-Informatics and Space Technology Development Agency indicates further rainfall on October 4&ndash;6. Khaosod English reported on September 30 and October 1 that riverside residents in Ayutthaya, Nonthaburi and Pathum Thani have been told to move belongings to higher ground and prepare to evacuate if ordered, while Ratchaburi and Samut Songkhram were also asked to monitor conditions, with Mae Klong Dam discharging 2,200 cubic metres per second. The report says water levels in Bangkok are expected to run about 40 centimetres below flood protection barriers; the Bangkok Post recorded that the city administration logged standing water on several roads, between 5 and 40 centimetres deep in parts of the northern and eastern districts. Khaosod English reported that Thailand&rsquo;s Finance Ministry has opened hotline 1689 to coordinate flood assistance.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">欧洲电力行业联盟《2026年电力晴雨表》：欧盟发电量的72%为清洁电力，储能规模与2030年目标仍有差距</h4><div class="ni-meta"><span class="src">欧洲电力行业联盟（Eurelectric）新闻稿（经美国 PR Newswire 发布）</span> · Enlit World · Carbon Pulse · 2026-09-30</div><p class="ni-desc">据欧洲电力行业联盟（Eurelectric）9月30日在布鲁塞尔发布的《2026年电力晴雨表》（Power Barometer 2026），2026年欧盟发电量中有72%为清洁电力。据该报告，2026年2月至8月间，欧盟电价上涨22.8%，同期天然气价格上涨88.4%；在霍尔木兹海峡关闭之后的2月至5月间，天然气价格上涨41%，而欧盟电价下跌7%。据该报告，2025年公用事业级储能规模为64吉瓦，已规划新增78吉瓦，而欧盟2030年目标为200吉瓦。报告以保加利亚为例：该国已建成5.4吉瓦电池容量，批发电价相对欧盟平均水平的溢价由2024年的21%降至2026年的8.3%。该联盟秘书长鲁比（Kristian Ruby）在新闻稿中表示：「2026年全球能源市场出现严重动荡，再次暴露了依赖进口化石燃料的风险。」据 Enlit World 与 Carbon Pulse 的同期报道，该报告的结论之一是储能与灵活性资源的部署速度仍需加快。本条记录行业协会发布的数据与其自身表述。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Eurelectric&rsquo;s Power Barometer 2026: 72% of EU Generation Was Clean, While Storage Still Lags the 2030 Target</h4><div class="ni-meta"><span class="src">Eurelectric press release (issued via PR Newswire)</span> · Enlit World · Carbon Pulse · September 30, 2026</div><p class="ni-desc">According to Eurelectric&rsquo;s Power Barometer 2026, published in Brussels on September 30, 72% of EU electricity generation in 2026 was clean. The report records that between February and August 2026 EU electricity prices rose 22.8% while gas prices rose 88.4%, and that in the February-to-May period following the closure of the Strait of Hormuz gas prices rose 41% while EU electricity prices fell 7%. The report puts utility-scale storage at 64 GW in 2025 with a further 78 GW planned, against an EU 2030 target of 200 GW. It cites Bulgaria as a case: the country has built 5.4 GW of battery capacity, and its wholesale power prices have fallen from 21% above the EU average in 2024 to 8.3% above in 2026. Eurelectric Secretary General Kristian Ruby said in the release: &ldquo;2026 has seen severe disruption of global energy markets, once again exposing the risks of reliance on imported fossil fuels.&rdquo; Enlit World and Carbon Pulse reported at the same time that one of the report&rsquo;s conclusions is that deployment of storage and flexibility resources still needs to accelerate. This entry records data published by an industry association together with its own statements.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">巴西 DETER 系统：亚马逊地区2025年8月至2026年7月的毁林预警面积为2874平方公里，为该系统启用以来最低</h4><div class="ni-meta"><span class="src">巴西国家空间研究院（INPE）DETER 数据（经 Mongabay 报道）</span> · 巴西气候观察站（Observatório do Clima） · 2026-08 至 2026-10-01</div><p class="ni-desc">据 Mongabay 对巴西国家空间研究院（INPE）数据的报道，INPE 的 DETER 预警系统在2025年8月1日至2026年7月31日期间探测到亚马逊地区2874平方公里的毁林迹象，较上一个12个月期低36%，较此前十年均值低55.6%。据同一报道，这是 DETER 现行系统2015年启用以来的最低值；上一次预警面积更低是2012/13毁林年度的2766平方公里。据 Mongabay，用于正式统计的 PRODES 系统已于2026年8月18日发布2024年8月至2025年7月的核定数据，为5731平方公里，同比下降12.07%；截至7月31日的年度 PRODES 初步数字预计在10月或11月公布。DETER 为实时预警系统、PRODES 为年度核定系统，两者分辨率与口径不同，不可直接比较。本条只记录已公布的监测数据，不对尚未发布的 PRODES 结果作预判。</p></div><div class="en-content" lang="en"><h4 class="ni-title">Brazil&rsquo;s DETER System: 2,874 Square Kilometres of Amazon Deforestation Alerts From August 2025 to July 2026, the Lowest Since the System Began</h4><div class="ni-meta"><span class="src">INPE DETER data (as reported by Mongabay)</span> · Observat&oacute;rio do Clima · August &ndash; October 1, 2026</div><p class="ni-desc">According to Mongabay&rsquo;s reporting on data from Brazil&rsquo;s National Institute for Space Research (INPE), the DETER alert system detected 2,874 square kilometres of deforestation in the Amazon between August 1, 2025 and July 31, 2026 &mdash; 36% below the previous 12-month period and 55.6% below the average of the preceding decade. The same report says this is the lowest figure since the current DETER system was introduced in 2015; the last time alerts were lower was the 2012/13 deforestation year, at 2,766 square kilometres. Mongabay reported that the PRODES system used for official statistics released consolidated figures on August 18, 2026 for August 2024 to July 2025, at 5,731 square kilometres, down 12.07% year on year, and that preliminary PRODES figures for the year ending July 31 are expected in October or November. DETER is a real-time alert system and PRODES an annual consolidated survey; they use different resolutions and definitions and are not directly comparable. This entry records only published monitoring data and does not pre-judge the forthcoming PRODES results.</p></div></div><div class="ni"><div class="zh-content"><h4 class="ni-title">COP31定于11月9日至20日在土耳其安塔利亚举行，10月5日至8日先在斐济举行筹备活动</h4><div class="ni-meta"><span class="src">COP31 土耳其官方网站</span> · 国际可持续发展研究院（IISD）SDG 平台 · 气候联盟（Klima-Bündnis） · 2026-09 至 2026-10-01</div><p class="ni-desc">据 COP31 土耳其官方网站与气候联盟发布的会议信息，2026年联合国气候变化大会（COP31）将于2026年11月9日至20日在土耳其安塔利亚（Antalya）阿克苏区的安塔利亚会展中心举行。据同一信息，土耳其与澳大利亚就 COP31 主席职责达成分担安排，澳大利亚担任「谈判主席」（President of Negotiations），土耳其环境、城市化与气候变化部长库鲁姆（Murat Kurum）担任大会主席。据 IISD 的 SDG 平台，世界领导人峰会安排在11月11日至12日举行，即会期的第三与第四天，与此前各届 COP 将峰会置于首两日或会前的安排不同。据公开议程，会前筹备活动将于10月5日至8日在斐济举行，其中包括在图瓦卢举行的一场领导人活动。本条仅记录已公布的会议日期、地点与主席安排，不涉及对谈判内容的预判。</p></div><div class="en-content" lang="en"><h4 class="ni-title">COP31 Is Set for November 9&ndash;20 in Antalya, Turkey, With Preparatory Events in Fiji From October 5 to 8</h4><div class="ni-meta"><span class="src">COP31 T&uuml;rkiye official website</span> · IISD SDG Knowledge Hub · Climate Alliance (Klima-B&uuml;ndnis) · September &ndash; October 1, 2026</div><p class="ni-desc">According to the COP31 T&uuml;rkiye official website and conference information from Climate Alliance, the 2026 United Nations Climate Change Conference (COP31) will be held from November 9 to 20, 2026 at the Antalya EXPO Center in Aksu, Antalya, Turkey. The same information records that Turkey and Australia agreed to share the COP31 presidency, with Australia designated &ldquo;President of Negotiations&rdquo; and Turkey&rsquo;s Minister of Environment, Urbanisation and Climate Change, Murat Kurum, serving as COP President. According to the IISD SDG Knowledge Hub, the World Leaders&rsquo; Summit is scheduled for November 11 and 12 &mdash; the third and fourth days of the conference &mdash; in contrast to previous COPs, where such summits were held on the first two days or immediately beforehand. Published agendas place preparatory events in Fiji from October 5 to 8, including a leaders&rsquo; event in Tuvalu. This entry records only the published dates, venue and presidency arrangements, and does not anticipate the substance of the negotiations.</p></div></div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">陆先生日报 · LUXIANSHENG DAILY</div>
+  <span class="zh-content">交叉核验 · 事实优先 · 拒绝噪音</span>
+  <span class="en-content" lang="en">Cross-verified · Facts First · No Noise</span>
+  <div style="margin-top:12px"><a href="index.html"><span class="zh-content">往期目录</span><span class="en-content" lang="en">Archive</span></a></div>
+  <br><span style="opacity:.4">自动生成 · 内容仅供参考 / Auto-generated · For reference only</span>
+</footer>
+
+</div>
+
+<button class="btt" id="btt" type="button" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+(function(){
+  var KEY = 'lxs-lang';
+
+  window.switchLang = function(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('show-en', en);
+    document.documentElement.lang = en ? 'en' : 'zh-CN';
+    document.querySelectorAll('.lang-btn').forEach(function(b, i){
+      var on = (en && i === 1) || (!en && i === 0);
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+
+  // 记住上次选的语言；没记录就看浏览器语言
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) saved = /^zh\b/i.test(navigator.language || '') ? 'zh' : 'en';
+  if (saved === 'en') switchLang('en');
+
+  // 阅读进度条
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      btt.classList.toggle('on', window.scrollY > 500);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // 目录高亮当前板块
+  var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) map[el.id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        links.forEach(function(a){ a.classList.remove('here'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('here');
+      });
+    }, { rootMargin: '-64px 0px -70% 0px' });
+    Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)); });
+  }
+
+  // 点图看大图（原图通常比版面里的大得多）
+  var lbx = document.createElement('div');
+  lbx.className = 'lbx';
+  lbx.innerHTML = '<img alt=""><div class="lbx-tip">点击任意处关闭 · Click anywhere to close</div>';
+  document.body.appendChild(lbx);
+  var lbxImg = lbx.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IMG' && /\b(hl-img|ft-img)\b/.test(t.className || '') && t.naturalWidth > 0) {
+      lbxImg.src = t.currentSrc || t.src;
+      lbx.classList.add('on');
+    } else if (lbx.classList.contains('on')) {
+      lbx.classList.remove('on');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lbx.classList.remove('on');
+  });
+})();
+</script>
+
+</body>
+</html>
